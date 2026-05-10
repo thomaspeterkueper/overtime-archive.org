@@ -1,0 +1,143 @@
+---
+import LayoutBase from '../layouts/LayoutBase.astro';
+import DocumentCard from '../components/DocumentCard.astro';
+import { getCollection } from 'astro:content';
+
+const allDocs = await getCollection('documents');
+const recentDocs = allDocs.slice(0, 6);
+
+const seriesList = [
+  { code: 'SCI', label: 'Scientific', desc: 'Wissenschaftliche Grundlagen', count: 66 },
+  { code: 'TEC', label: 'Technical', desc: 'Technische Dokumentation', count: 35 },
+  { code: 'FND', label: 'Foundation', desc: 'Philosophische Fundamente', count: 30 },
+  { code: 'BIO', label: 'Biography', desc: 'Personendossiers', count: 31 },
+  { code: 'HIS', label: 'History', desc: 'Historische Rekonstruktionen', count: 9 },
+  { code: 'RED', label: 'Redacted', desc: '[ZUGANGSSTUFE 3+]', count: 23, restricted: true },
+];
+---
+
+<LayoutBase title="The Overtime Archive">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-grid-lines"></div>
+    <div class="hero-content">
+      <div class="hero-eyebrow fade-in">
+        Transmedia Archive · Est. 2025 · overtimearchive.org
+      </div>
+      <h1 class="hero-title fade-in-delay-1">
+        Das Archiv<br/>
+        <em>bewahrt</em>,<br/>
+        was vergessen wird.
+      </h1>
+      <p class="hero-subtitle fade-in-delay-2">
+        Ein transmediales Wissenssystem. Wissenschaft, Fiktion, Spekulation
+        — epistemisch markiert, archivarisch dokumentiert, narrativ verankert.
+        60.000 BCE bis 2500 CE.
+      </p>
+      <div class="hero-stats fade-in-delay-3">
+        <div class="stat-block">
+          <span class="stat-value">237</span>
+          <span class="stat-label">Dokumente</span>
+        </div>
+        <div class="stat-block">
+          <span class="stat-value">17+</span>
+          <span class="stat-label">Serien</span>
+        </div>
+        <div class="stat-block">
+          <span class="stat-value">12</span>
+          <span class="stat-label">Gesperrt</span>
+        </div>
+        <div class="stat-block">
+          <span class="stat-value">~62.500</span>
+          <span class="stat-label">Jahre Spanne</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- Series Overview -->
+  <section class="catalog-section">
+    <div class="catalog-header">
+      <div class="catalog-title">Dokumentenserien</div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1px;background:rgba(44,36,22,0.08);border:1px solid rgba(44,36,22,0.1)">
+      {seriesList.map(s => (
+        <a
+          href={`/katalog?serie=${s.code}`}
+          style={`
+            display:block;padding:1.5rem;background:var(--paper);
+            text-decoration:none;transition:background 0.2s;
+          `}
+          class="series-card-link"
+        >
+          <div style={`font-family:var(--font-mono);font-size:0.6rem;letter-spacing:0.2em;margin-bottom:0.5rem;color:${s.restricted ? 'var(--red-ink)' : 'var(--rust)'}`}>
+            OTA-{s.code}
+          </div>
+          <div style="font-family:var(--font-display);font-size:1.1rem;color:var(--ink);margin-bottom:0.3rem">
+            {s.label}
+          </div>
+          <div style="font-family:var(--font-mono);font-size:0.62rem;color:var(--ink-light)">
+            {s.desc}
+          </div>
+          <div style="font-family:var(--font-mono);font-size:0.6rem;color:var(--rust);margin-top:0.75rem">
+            {s.count} Dokumente
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <style>
+    .series-card-link:hover { background: rgba(139,69,19,0.08) !important; }
+  </style>
+
+  <div class="divider"></div>
+
+  <!-- Recent Documents -->
+  <section class="catalog-section">
+    <div class="catalog-header">
+      <div class="catalog-title">Zuletzt archiviert</div>
+      <a href="/katalog" style="font-family:var(--font-mono);font-size:0.62rem;letter-spacing:0.1em;color:var(--rust);text-decoration:none">
+        Alle Dokumente →
+      </a>
+    </div>
+
+    <div class="document-grid active">
+      {recentDocs.map(doc => (
+        <DocumentCard
+          signature={doc.data.signature}
+          title={doc.data.title}
+          summary={doc.data.summary}
+          series={doc.data.series}
+          year={doc.data.year}
+          language={doc.data.language}
+          epistemicStatus={doc.data.epistemicStatus}
+          accessLevel={doc.data.accessLevel}
+          status={doc.data.status}
+          slug={doc.slug}
+          redacted={doc.data.redacted ?? false}
+        />
+      ))}
+    </div>
+  </section>
+
+  <!-- Kurator note -->
+  <section class="catalog-section" style="max-width:72ch;margin-top:0">
+    <div class="kn-block">
+      <div class="kn-label">[KN-0.1] — Kuratorische Vorbemerkung</div>
+      <div class="kn-text">
+        Das OverTime Archive ist kein Museum. Es ist ein aktives Wissenssystem —
+        transmedialer Anker, wissenschaftliche Datenbank, narratives Fundament.
+        Jedes Dokument trägt einen epistemischen Status. Kein Anspruch bleibt
+        unmarkiert. Das Archiv dokumentiert. Es spekuliert nicht.
+      </div>
+      <div class="kn-sig">— T.P.K., OTA-BIO-0000</div>
+    </div>
+  </section>
+
+</LayoutBase>

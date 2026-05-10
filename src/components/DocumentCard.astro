@@ -1,0 +1,52 @@
+---
+interface Props {
+  signature: string;
+  title: string;
+  summary: string;
+  series: string;
+  year: number;
+  language: string;
+  epistemicStatus: string[];
+  accessLevel: number;
+  status: string;
+  slug: string;
+  redacted?: boolean;
+}
+
+const { signature, title, summary, series, year, language, epistemicStatus,
+        accessLevel, status, slug, redacted = false } = Astro.props;
+
+const href = redacted ? '/gesperrt' : `/dokument/${slug}`;
+---
+
+<a href={href} class:list={['document-card', { redacted }]} title={title}>
+  <div class="card-header">
+    <span class="card-signature">{signature}</span>
+    <span class="card-series-badge">{series}</span>
+  </div>
+
+  <div class="card-body">
+    {redacted ? (
+      <div style="text-align:center;padding:1rem 0">
+        <div style="font-family:var(--font-mono);font-size:0.65rem;color:var(--ink-faint);letter-spacing:0.1em;margin-bottom:0.5rem">[INHALT GESPERRT]</div>
+        <div class="redacted-stamp">REDACTED</div>
+      </div>
+    ) : (
+      <>
+        <div class="card-title">{title}</div>
+        <p class="card-summary">{summary}</p>
+      </>
+    )}
+  </div>
+
+  <div class="card-footer">
+    <div style="display:flex;gap:0.3rem;flex-wrap:wrap">
+      {epistemicStatus.slice(0, 3).map(es => (
+        <span class={`epistemic-tag ${es.replace('-Anker','Anker').replace('-','')}`}>[{es}]</span>
+      ))}
+    </div>
+    <span class="card-access-level">
+      {accessLevel > 0 ? `TIER-${accessLevel}` : `${year} · ${language}`}
+    </span>
+  </div>
+</a>

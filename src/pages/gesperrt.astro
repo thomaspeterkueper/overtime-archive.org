@@ -1,0 +1,39 @@
+---
+import LayoutBase from '../layouts/LayoutBase.astro';
+
+const accessLog = [
+  `> ZUGRIFFSVERSUCH PROTOKOLLIERT: ${new Date().toISOString()}`,
+  '> IP-KNOTEN: [VERSCHLEIERT]',
+  '> DOKUMENT-TIER: 3+',
+  '> ZUGANG: VERWEIGERT',
+  '> GRUND: UNZUREICHENDE AUTORISIERUNG',
+  '> DIESER VERSUCH WURDE VERMERKT.',
+];
+---
+
+<LayoutBase title="Zugang verweigert">
+  <div class="access-denied">
+    <div class="error-code">OTA-ERR-403 · ZUGANG VERWEIGERT</div>
+    <h1 class="error-title">Diese Aufzeichnung schweigt.</h1>
+    <p class="error-body">
+      Der Vermerk ist mit trockenem Blut besiegelt.<br/>
+      Du hast nicht die notwendige Zugangsstufe,<br/>
+      um diesen Teil des Archivs zu betreten.<br/><br/>
+      Manche Dokumente warten.<br/>
+      Auf die richtige Zeit. Auf den richtigen Leser.
+    </p>
+
+    <div class="access-log" aria-label="Zugriffsprotokoll">
+      {accessLog.map(line => <div>{line}</div>)}
+    </div>
+
+    <div style="margin-top:2.5rem;display:flex;gap:1.5rem">
+      <a href="/katalog" style="font-family:var(--font-mono);font-size:0.65rem;letter-spacing:0.12em;color:var(--rust-faint);text-decoration:none;border:1px solid rgba(139,69,19,0.3);padding:0.5rem 1rem;transition:all 0.2s">
+        ← Zurück zum Katalog
+      </a>
+      <a href="/" style="font-family:var(--font-mono);font-size:0.65rem;letter-spacing:0.12em;color:var(--ink-faint);text-decoration:none;border:1px solid rgba(139,69,19,0.15);padding:0.5rem 1rem;transition:all 0.2s">
+        Startseite
+      </a>
+    </div>
+  </div>
+</LayoutBase>

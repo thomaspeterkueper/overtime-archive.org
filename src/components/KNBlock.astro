@@ -1,0 +1,14 @@
+---
+interface Props {
+  id: string;  // e.g. "1.1"
+}
+const { id } = Astro.props;
+---
+
+<div class="kn-block">
+  <div class="kn-label">[KN-{id}] — Kuratorische Notiz</div>
+  <div class="kn-text">
+    <slot />
+  </div>
+  <div class="kn-sig">— T.P.K.</div>
+</div>

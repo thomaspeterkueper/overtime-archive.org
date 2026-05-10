@@ -1,0 +1,145 @@
+---
+import LayoutBase from '../layouts/LayoutBase.astro';
+import DocumentCard from '../components/DocumentCard.astro';
+import { getCollection } from 'astro:content';
+
+const allDocs = await getCollection('documents');
+allDocs.sort((a, b) => b.data.year - a.data.year);
+
+const series = [...new Set(allDocs.map(d => d.data.series))].sort();
+---
+
+<LayoutBase title="Katalog">
+  <section class="catalog-section" style="margin-top:2rem">
+
+    <div class="catalog-header">
+      <h1 style="font-family:var(--font-display);font-size:2rem;color:var(--ink);font-weight:700">
+        Dokumentenkatalog
+      </h1>
+      <div class="view-toggle">
+        <button class="view-btn active" id="btn-cards">[KARTEN]</button>
+        <button class="view-btn" id="btn-ascii">[ASCII]</button>
+      </div>
+    </div>
+
+    <!-- Series filters -->
+    <div class="series-filters">
+      <button class="series-btn active" data-series="ALL">ALLE</button>
+      {series.map(s => (
+        <button class="series-btn" data-series={s}>OTA-{s}</button>
+      ))}
+    </div>
+
+    <!-- Card view -->
+    <div class="document-grid active" id="view-cards">
+      {allDocs.map(doc => (
+        <DocumentCard
+          signature={doc.data.signature}
+          title={doc.data.title}
+          summary={doc.data.summary}
+          series={doc.data.series}
+          year={doc.data.year}
+          language={doc.data.language}
+          epistemicStatus={doc.data.epistemicStatus}
+          accessLevel={doc.data.accessLevel}
+          status={doc.data.status}
+          slug={doc.slug}
+          redacted={doc.data.redacted ?? false}
+          data-series={doc.data.series}
+        />
+      ))}
+    </div>
+
+    <!-- ASCII / Terminal view -->
+    <table class="document-table" id="view-ascii">
+      <thead>
+        <tr>
+          <th>SIGNATUR</th>
+          <th>TITEL</th>
+          <th>SERIE</th>
+          <th>JAHR</th>
+          <th>EPISTEMIC</th>
+          <th>STATUS</th>
+          <th>ZUGANG</th>
+        </tr>
+      </thead>
+      <tbody>
+        {allDocs.map(doc => (
+          <tr data-series={doc.data.series}>
+            <td class="sig">
+              {doc.data.redacted
+                ? <span style="color:var(--red-faint)">{doc.data.signature}</span>
+                : <a href={`/dokument/${doc.slug}`} class="table-link">{doc.data.signature}</a>
+              }
+            </td>
+            <td>
+              {doc.data.redacted
+                ? <span style="color:var(--red-faint)">[GESPERRT]</span>
+                : <a href={`/dokument/${doc.slug}`} class="table-link">{doc.data.title}</a>
+              }
+            </td>
+            <td style="color:var(--rust-faint)">{doc.data.series}</td>
+            <td>{doc.data.year}</td>
+            <td style="color:var(--ink-faint)">{doc.data.epistemicStatus.map(e => `[${e}]`).join(' ')}</td>
+            <td class={
+              doc.data.status === 'AKTIV' ? 'status-ok'
+              : doc.data.status === 'GESPERRT' ? 'status-red'
+              : 'status-amr'
+            }>{doc.data.status}</td>
+            <td style="color:var(--ink-faint)">
+              {doc.data.accessLevel === 0 ? 'PUBLIC' : `TIER-${doc.data.accessLevel}`}
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+
+  </section>
+</LayoutBase>
+
+<script>
+  // View toggle
+  const btnCards = document.getElementById('btn-cards');
+  const btnAscii = document.getElementById('btn-ascii');
+  const viewCards = document.getElementById('view-cards');
+  const viewAscii = document.getElementById('view-ascii');
+
+  btnCards?.addEventListener('click', () => {
+    viewCards?.classList.add('active');
+    viewCards?.classList.remove('hidden');
+    viewAscii?.classList.remove('active');
+    btnCards.classList.add('active');
+    btnAscii?.classList.remove('active');
+  });
+
+  btnAscii?.addEventListener('click', () => {
+    viewAscii?.classList.add('active');
+    viewCards?.classList.add('hidden');
+    viewCards?.classList.remove('active');
+    btnAscii.classList.add('active');
+    btnCards?.classList.remove('active');
+  });
+
+  // Series filter
+  document.querySelectorAll('.series-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.series-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const series = btn.getAttribute('data-series');
+
+      // Filter cards
+      document.querySelectorAll('#view-cards [data-series]').forEach(card => {
+        (card as HTMLElement).style.display =
+          (!series || series === 'ALL' || card.getAttribute('data-series') === series)
+            ? '' : 'none';
+      });
+
+      // Filter table rows
+      document.querySelectorAll('#view-ascii tr[data-series]').forEach(row => {
+        (row as HTMLElement).style.display =
+          (!series || series === 'ALL' || row.getAttribute('data-series') === series)
+            ? '' : 'none';
+      });
+    });
+  });
+</script>

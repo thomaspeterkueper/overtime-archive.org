@@ -1,0 +1,31 @@
+---
+import LayoutDocument from '../../layouts/LayoutDocument.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const docs = await getCollection('documents');
+  return docs.map(doc => ({
+    params: { slug: doc.id },
+    props: { doc },
+  }));
+}
+
+const { doc } = Astro.props;
+
+if (doc.data.redacted) {
+  return Astro.redirect('/gesperrt');
+}
+
+const allDocs = await getCollection('documents');
+const relatedDocs = (doc.data.relatedDocuments ?? []).map((sig: string) => {
+  const found = allDocs.find((d: any) => d.data.signature === sig);
+  if (!found) return null;
+  return { signature: found.data.signature, title: found.data.title, slug: found.id };
+}).filter(Boolean) as Array<{ signature: string; title: string; slug: string }>;
+
+const { Content } = await render(doc);
+---
+
+<LayoutDocument doc={doc} relatedDocs={relatedDocs}>
+  <Content />
+</LayoutDocument>

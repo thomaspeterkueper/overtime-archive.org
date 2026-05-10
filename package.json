@@ -1,0 +1,19 @@
+{
+  "name": "overtimearchive",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@astrojs/mdx": "^5.0.4",
+    "@fontsource/crimson-text": "^5.2.7",
+    "@fontsource/jetbrains-mono": "^5.2.8",
+    "@fontsource/playfair-display": "^5.2.8",
+    "astro": "^6.3.1"
+  }
+}

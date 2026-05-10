@@ -1,0 +1,20 @@
+---
+interface Props {
+  sig: string;       // e.g. "OTA-SCI-0059-2026-DE"
+  title: string;
+  summary?: string;
+  slug?: string;
+}
+
+const { sig, title, summary, slug } = Astro.props;
+const href = slug ? `/dokument/${slug}` : '#';
+---
+
+<a href={href} class="doc-link">
+  <slot />
+  <span class="doc-link-preview" role="tooltip">
+    <span class="preview-sig">{sig}</span>
+    <span>{title}</span>
+    {summary && <span style="display:block;margin-top:0.3rem;opacity:0.7;font-size:0.55rem">{summary}</span>}
+  </span>
+</a>

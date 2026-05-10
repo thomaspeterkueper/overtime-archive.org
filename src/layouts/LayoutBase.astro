@@ -1,0 +1,314 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title = 'The Overtime Archive', description = 'Ein transmediales Archiv menschlicher Zivilisation. 60.000 BCE – 2500 CE.' } = Astro.props;
+
+const epigraphs = [
+  { text: 'Das Archiv lügt nicht. Es schweigt nur an den falschen Stellen.', cite: 'T.P.Küper, KN-0.1' },
+  { text: 'Materie bewahrt, was Wissen verliert.', cite: 'OTA-FND-0026' },
+  { text: 'Genesis vor Narration. Immer.', cite: 'Grundprinzip des OTA' },
+  { text: 'Die Stille begann am 8. Juni 2087. Dauer: 42 Tage, 12 Stunden.', cite: 'OTA-HIS-0003' },
+  { text: 'Das Archiv dokumentiert. Es spekuliert nicht.', cite: 'OTA-ARC-0001' },
+  { text: 'Resonanz ist kein Zufall. Sie ist Selektion.', cite: 'OTA-FND-0003' },
+];
+const epigraph = epigraphs[Math.floor(Math.random() * epigraphs.length)];
+
+const navDE = [
+  { label: 'Katalog', labelEN: 'Catalogue', href: '/katalog' },
+  { label: 'Serien', labelEN: 'Series', href: '/serien' },
+  { label: 'Über das Archiv', labelEN: 'About', href: '/ueber' },
+  { label: 'Kurator', labelEN: 'Curator', href: '/kurator' },
+  { label: '[GESPERRT]', labelEN: '[RESTRICTED]', href: '/gesperrt', restricted: true },
+];
+
+const sidebarNav = [
+  { label: 'Startseite', labelEN: 'Home', href: '/', icon: '⌂' },
+  { label: 'Katalog', labelEN: 'Catalogue', href: '/katalog', icon: '◫' },
+  { label: 'Serien', labelEN: 'Series', href: '/serien', icon: '≡' },
+  { label: 'Kurator', labelEN: 'Curator', href: '/kurator', icon: '◎' },
+  { label: 'Über das Archiv', labelEN: 'About', href: '/ueber', icon: 'ℹ' },
+  { label: 'Impressum', labelEN: 'Legal', href: '/impressum', icon: '§' },
+];
+
+const currentPath = Astro.url.pathname;
+---
+
+<!DOCTYPE html>
+<html lang="de" id="html-root">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content={description} />
+  <title>{title} · The Overtime Archive</title>
+</head>
+<body>
+
+<!-- Terminal Intro -->
+<div id="terminal-intro" aria-hidden="true">
+  <div class="terminal-window">
+    <div class="terminal-titlebar">
+      <span style="width:8px;height:8px;border-radius:50%;background:#B0302A;display:inline-block"></span>
+      <span style="width:8px;height:8px;border-radius:50%;background:#C8923A;display:inline-block;margin:0 4px"></span>
+      <span style="width:8px;height:8px;border-radius:50%;background:#3D7A5A;display:inline-block"></span>
+      <span style="margin-left:1rem">OTA-ARCHIVE-ACCESS v0.92a</span>
+      <span style="margin-left:auto">overtimearchive.org</span>
+    </div>
+    <div class="terminal-body" id="terminal-body"></div>
+  </div>
+</div>
+
+<!-- Site Header -->
+<header class="site-header">
+  <a href="/" class="header-logo" aria-label="The Overtime Archive — Startseite">
+    <div class="logo-svg-wrap">
+      <svg width="56" height="56" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Outer ring: rotates slowly -->
+        <g class="logo-ring-outer">
+          <circle cx="60" cy="60" r="55" stroke="#F8F4EC" stroke-width="1.8"/>
+          <circle cx="60" cy="5" r="2.5" fill="#D4B87A" opacity="0.6"/>
+          <circle cx="60" cy="115" r="2.5" fill="#D4B87A" opacity="0.6"/>
+          <circle cx="5" cy="60" r="2.5" fill="#D4B87A" opacity="0.4"/>
+          <circle cx="115" cy="60" r="2.5" fill="#D4B87A" opacity="0.4"/>
+        </g>
+        <!-- Dotted inner square (static) -->
+        <rect x="32" y="32" width="56" height="56" stroke="#8B4513" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.25" transform="rotate(45 60 60)"/>
+        <!-- Hourglass: pulses -->
+        <g class="logo-hourglass">
+          <polygon points="60,32 43,52 77,52" fill="none" stroke="#8B4513" stroke-width="2.5"/>
+          <polygon points="60,88 43,68 77,68" fill="none" stroke="#8B4513" stroke-width="2.5"/>
+          <line x1="43" y1="52" x2="43" y2="68" stroke="#8B4513" stroke-width="2.5"/>
+          <line x1="77" y1="52" x2="77" y2="68" stroke="#8B4513" stroke-width="2.5"/>
+        </g>
+        <!-- Sand particles: drift -->
+        <g class="logo-sand">
+          <circle cx="58" cy="57" r="1.5" fill="#D4B87A" opacity="0.7"/>
+          <circle cx="62" cy="60" r="1.2" fill="#D4B87A" opacity="0.55"/>
+          <circle cx="59" cy="63" r="1" fill="#D4B87A" opacity="0.4"/>
+        </g>
+        <!-- Center dot: breathes -->
+        <circle cx="60" cy="60" r="2.5" fill="#8B4513" class="logo-center-dot"/>
+      </svg>
+    </div>
+    <div class="header-logo-text">
+      <span class="line1">THE OVERTIME ARCHIVE</span>
+      <span class="line2">overtimearchive.org · EST. 2025</span>
+    </div>
+  </a>
+
+  <div class="header-right">
+    <div class="header-status">
+      <span class="status-dot"></span>
+      <span data-de="SYSTEM ONLINE" data-en="SYSTEM ONLINE">SYSTEM ONLINE</span>
+      <span style="margin-left:0.6rem" data-de="TIER-0 ZUGANG" data-en="TIER-0 ACCESS">TIER-0 ZUGANG</span>
+    </div>
+
+    <!-- Language toggle -->
+    <div class="lang-toggle" role="group" aria-label="Sprache / Language">
+      <button class="lang-btn active" id="lang-de" onclick="setLang('de')">DE</button>
+      <button class="lang-btn" id="lang-en" onclick="setLang('en')">EN</button>
+    </div>
+
+    <nav class="header-nav" aria-label="Hauptnavigation">
+      {navDE.map(item => (
+        <a
+          href={item.href}
+          class:list={[{ active: currentPath.startsWith(item.href) && item.href !== '/' }, { restricted: item.restricted }]}
+          data-de={item.label}
+          data-en={item.labelEN}
+        >
+          {item.label}
+        </a>
+      ))}
+    </nav>
+  </div>
+</header>
+
+<!-- App Body: Sidebar + Main -->
+<div class="app-body">
+
+  <!-- Sidebar -->
+  <aside class="sidebar" aria-label="Navigation">
+
+    <div class="sidebar-section">
+      <div class="sidebar-label" data-de="Navigation" data-en="Navigation">Navigation</div>
+      <ul class="sidebar-nav">
+        {sidebarNav.map(item => (
+          <li>
+            <a
+              href={item.href}
+              class:list={[{ active: currentPath === item.href || (item.href !== '/' && currentPath.startsWith(item.href)) }]}
+              data-de={item.label}
+              data-en={item.labelEN}
+            >
+              <span class="icon">{item.icon}</span>
+              {item.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="sidebar-label" data-de="Zufallsdokument" data-en="Random Access">Zufallsdokument</div>
+      <button class="random-btn" id="random-access-btn" aria-label="Zufälliges Dokument öffnen">
+        RANDOM_ACCESS
+      </button>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="sidebar-label" data-de="Zuletzt geöffnet" data-en="Recently viewed">Zuletzt geöffnet</div>
+      <div class="sidebar-recent" id="sidebar-recent">
+        <div class="sidebar-empty" data-de="— noch keine Einträge —" data-en="— no entries yet —">— noch keine Einträge —</div>
+      </div>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="sidebar-label" data-de="Arbeitsmappe" data-en="Bookmarks">Arbeitsmappe</div>
+      <div class="sidebar-bookmarks" id="sidebar-bookmarks">
+        <div class="sidebar-empty" data-de="— keine Lesezeichen —" data-en="— no bookmarks —">— keine Lesezeichen —</div>
+      </div>
+    </div>
+
+  </aside>
+
+  <!-- Main -->
+  <main class="main-content" id="main-content">
+    <slot />
+  </main>
+
+</div>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="footer-left">
+    <div class="brand">THE OVERTIME ARCHIVE</div>
+    <div style="color:rgba(245,241,232,0.45)" data-de="Kurator: Thomas Peter Küper · OTA-BIO-0000" data-en="Curator: Thomas Peter Küper · OTA-BIO-0000">
+      Kurator: Thomas Peter Küper · OTA-BIO-0000
+    </div>
+    <div style="color:rgba(245,241,232,0.35)">overtimearchive.org · ota.space</div>
+    <div class="footer-links">
+      <a href="/ueber" data-de="Über das Archiv" data-en="About">Über das Archiv</a>
+      <a href="/protokolle" data-de="Protokolle" data-en="Protocols">Protokolle</a>
+      <a href="/impressum" data-de="Impressum & Datenschutz" data-en="Legal">Impressum & Datenschutz</a>
+      <a href="/kontakt" data-de="Kontakt" data-en="Contact">Kontakt</a>
+    </div>
+  </div>
+  <div class="footer-epigraph">
+    <p>„{epigraph.text}"</p>
+    <cite>— {epigraph.cite}</cite>
+  </div>
+</footer>
+
+</body>
+</html>
+
+<script>
+// ── Terminal intro ──
+(function() {
+  const intro = document.getElementById('terminal-intro');
+  const body  = document.getElementById('terminal-body');
+  if (!intro || !body) return;
+  if (sessionStorage.getItem('ota-intro-seen')) { intro.style.display = 'none'; return; }
+
+  document.body.style.overflow = 'hidden';
+  const lines = [
+    { t: '> CONNECTING TO OTA-ARCHIVE NODE 07...', c: 'prompt', d: 0 },
+    { t: '  HANDSHAKE OK · SSL/ARCHIV-CERT v4.1', c: 'output', d: 520 },
+    { t: '> LOADING DOCUMENT INDEX...', c: 'prompt', d: 1000 },
+    { t: '  237 DOKUMENTE GEFUNDEN', c: 'output', d: 1550 },
+    { t: '  12 UNTER ZUGANGSSTUFE 3 GESPERRT', c: 'warning', d: 1950 },
+    { t: '  3 VOLLSTÄNDIG GESCHWÄRZT', c: 'error', d: 2350 },
+    { t: '> TEMPORALE SPANNE: ~60.000 BCE — 2500 CE', c: 'output', d: 2900 },
+    { t: '> INITIALISIERUNG ABGESCHLOSSEN.', c: 'success', d: 3450 },
+    { t: '  WILLKOMMEN IM ARCHIV._', c: 'success', d: 3950 },
+  ];
+  lines.forEach(({ t, c, d }) => {
+    setTimeout(() => {
+      const el = document.createElement('div');
+      el.className = `terminal-line ${c}`;
+      el.style.opacity = '1';
+      body.appendChild(el);
+      let i = 0;
+      const iv = setInterval(() => { el.textContent += t[i] || ''; i++; if (i >= t.length) clearInterval(iv); }, 16);
+    }, d);
+  });
+  setTimeout(() => {
+    intro.style.transition = 'opacity 0.75s ease';
+    intro.style.opacity = '0';
+    setTimeout(() => {
+      intro.style.display = 'none';
+      document.body.style.overflow = '';
+      sessionStorage.setItem('ota-intro-seen', '1');
+    }, 750);
+  }, 5100);
+})();
+
+// ── Language toggle ──
+function setLang(lang) {
+  localStorage.setItem('ota-lang', lang);
+  document.getElementById('lang-de')?.classList.toggle('active', lang === 'de');
+  document.getElementById('lang-en')?.classList.toggle('active', lang === 'en');
+  document.getElementById('html-root')?.setAttribute('lang', lang);
+  document.querySelectorAll('[data-de][data-en]').forEach(el => {
+    el.textContent = lang === 'en' ? el.getAttribute('data-en') : el.getAttribute('data-de');
+  });
+}
+// Restore on load
+(function() {
+  const saved = localStorage.getItem('ota-lang') || 'de';
+  if (saved === 'en') setLang('en');
+})();
+
+// ── localStorage: recent + bookmarks ──
+function getRecent() { try { return JSON.parse(localStorage.getItem('ota-recent') || '[]'); } catch { return []; } }
+function getBookmarks() { try { return JSON.parse(localStorage.getItem('ota-bookmarks') || '[]'); } catch { return []; } }
+
+function renderSidebarList(containerId, items, emptyDE, emptyEN) {
+  const el = document.getElementById(containerId);
+  if (!el) return;
+  const lang = localStorage.getItem('ota-lang') || 'de';
+  if (!items.length) {
+    el.innerHTML = `<div class="sidebar-empty">${lang === 'en' ? emptyEN : emptyDE}</div>`;
+    return;
+  }
+  el.innerHTML = items.slice(0, 5).map(item => `
+    <div class="sidebar-item">
+      <a href="${item.href}" class="sig" style="color:var(--blue-faint);text-decoration:none">${item.sig}</a>
+      <span class="meta">${item.accessed || item.added || ''}</span>
+    </div>
+  `).join('');
+}
+
+function initSidebar() {
+  renderSidebarList('sidebar-recent', getRecent(), '— noch keine Einträge —', '— no entries yet —');
+  renderSidebarList('sidebar-bookmarks', getBookmarks(), '— keine Lesezeichen —', '— no bookmarks —');
+}
+
+// Track current page in recent
+function trackCurrentPage() {
+  const sig = document.querySelector('[data-signature]')?.getAttribute('data-signature');
+  const title = document.querySelector('[data-doc-title]')?.getAttribute('data-doc-title');
+  if (!sig) return;
+  const recent = getRecent().filter(r => r.sig !== sig);
+  const now = new Date();
+  const dateStr = `${now.getDate()}.${now.getMonth()+1}.${now.getFullYear()}`;
+  recent.unshift({ sig, title: title || sig, href: window.location.pathname, accessed: dateStr });
+  localStorage.setItem('ota-recent', JSON.stringify(recent.slice(0, 10)));
+}
+
+// Random access
+document.getElementById('random-access-btn')?.addEventListener('click', () => {
+  const slugs = window.__OTA_DOC_SLUGS__ || [];
+  if (slugs.length) {
+    const pick = slugs[Math.floor(Math.random() * slugs.length)];
+    window.location.href = `/dokument/${pick}`;
+  }
+});
+
+document.addEventListener('DOMContentLoaded', () => { initSidebar(); trackCurrentPage(); });
+</script>

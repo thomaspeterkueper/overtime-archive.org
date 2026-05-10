@@ -1,0 +1,155 @@
+---
+import LayoutBase from './LayoutBase.astro';
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  doc: CollectionEntry<'documents'>;
+  relatedDocs?: Array<{ signature: string; title: string; slug: string }>;
+}
+
+const { doc, relatedDocs = [] } = Astro.props;
+const { signature, title, series, version, year, language, epistemicStatus,
+        accessLevel, status, universe, summary, lastAccessed, relatedDocuments } = doc.data;
+
+const epistemicColors: Record<string, string> = {
+  R: '#4A7C59', T: '#888', H: '#C8923A', S: '#8B4513', F: '#B0302A', I: '#666', OFFEN: '#C8923A'
+};
+
+const today = new Date().toISOString().slice(0, 10);
+---
+
+<LayoutBase title={title}>
+  <div class="document-wrapper">
+
+    <!-- Left aside: metadata -->
+    <aside class="document-aside-left" aria-label="Dokumentmetadaten">
+      <div class="aside-meta-block">
+        <div><span class="label">SIGNATUR</span></div>
+        <div style="color:var(--rust-faint)">{signature}</div>
+        <br/>
+        <div><span class="label">VERSION</span></div>
+        <div>{version}</div>
+        <br/>
+        <div><span class="label">JAHR</span></div>
+        <div>{year}</div>
+        <br/>
+        <div><span class="label">SPRACHE</span></div>
+        <div>{language}</div>
+        <br/>
+        <div><span class="label">ZUGANG</span></div>
+        <div>TIER-{accessLevel}</div>
+        <br/>
+        <div><span class="label">STATUS</span></div>
+        <div style={`color:${status === 'AKTIV' ? '#4A7C59' : status === 'GESPERRT' ? '#B0302A' : '#C8923A'}`}>{status}</div>
+      </div>
+
+      {universe && universe.length > 0 && (
+        <div class="aside-meta-block">
+          <div><span class="label">UNIVERSUM</span></div>
+          {universe.map(u => <div>{u}</div>)}
+        </div>
+      )}
+
+      <div class="aside-meta-block" style="font-size:0.55rem;opacity:0.6">
+        <div>> ZULETZT AUFGERUFEN:</div>
+        <div>{today}</div>
+        {relatedDocuments && (
+          <>
+            <br/>
+            <div>> VERWEIST AUF:</div>
+            <div>{relatedDocuments.length} DOKUMENT{relatedDocuments.length !== 1 ? 'E' : ''}</div>
+          </>
+        )}
+      </div>
+    </aside>
+
+    <!-- Center: the paper document -->
+    <article class="document-paper fade-in">
+
+      <header class="doc-meta-header">
+        <div class="doc-signature">{signature}</div>
+        <h1 class="doc-title">{title}</h1>
+
+        <div class="doc-meta-grid">
+          <div class="meta-item">
+            <span class="meta-key">Serie</span>
+            <span class="meta-val">{series}</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-key">Version</span>
+            <span class="meta-val">{version}</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-key">Jahr</span>
+            <span class="meta-val">{year}</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-key">Sprache</span>
+            <span class="meta-val">{language}</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-key">Status</span>
+            <span class="meta-val" style={`color:${status === 'AKTIV' ? '#4A7C59' : '#B0302A'}`}>{status}</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-key">Zugangsstufe</span>
+            <span class="meta-val">TIER {accessLevel}</span>
+          </div>
+        </div>
+
+        <!-- Epistemic markers -->
+        <div style="display:flex;gap:0.4rem;flex-wrap:wrap;margin-top:1rem">
+          {epistemicStatus.map(es => (
+            <span class={`epistemic-tag ${es.replace('-','')}`}>[{es}]</span>
+          ))}
+        </div>
+
+        <!-- Abstract -->
+        <blockquote style="margin-top:1.5rem;font-style:italic;border-left:2px solid var(--paper-dark);padding:0.5rem 1rem;color:var(--ink-light);font-size:0.9rem">
+          {summary}
+        </blockquote>
+      </header>
+
+      <!-- Document content -->
+      <div class="doc-body">
+        <slot />
+      </div>
+
+      <!-- Document footer -->
+      <footer class="doc-footer">
+        <div class="doc-footer-row">
+          <span>{signature} · {version}</span>
+          <span>overtimearchive.org</span>
+          <span>CC BY-NC 4.0</span>
+        </div>
+
+        {relatedDocs.length > 0 && (
+          <div class="related-docs">
+            <div class="related-title">▸ Querverweise</div>
+            <ul class="related-list">
+              {relatedDocs.map(rd => (
+                <li class="related-item">
+                  <a href={`/dokument/${rd.slug}`} title={rd.title}>
+                    {rd.signature}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+
+        <div class="closing-mark">ᐃ</div>
+      </footer>
+
+    </article>
+
+    <!-- Right aside: navigation -->
+    <aside class="document-aside-right" aria-label="Dok-Navigation">
+      <div class="aside-meta-block">
+        <div><span class="label">SERIE</span></div>
+        <div style="color:var(--rust-faint)">{series}</div>
+      </div>
+    </aside>
+
+  </div>
+</LayoutBase>
