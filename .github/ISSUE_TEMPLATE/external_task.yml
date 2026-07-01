@@ -1,0 +1,60 @@
+name: External Task
+description: Request a required change in another Kueper project from OTA context
+title: "External Task: "
+labels:
+  - external-task
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template when OTA work requires a change in another project. Do not implement that external change inside OTA.
+  - type: dropdown
+    id: target
+    attributes:
+      label: Target project
+      options:
+        - kueper-knowledge-graph
+        - solarsciencefoundation / SSF
+        - noxiagame / NOXIA
+        - kueper.com
+    validations:
+      required: true
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - low
+        - normal
+        - high
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Source
+      description: OTA document, issue, pull request, or context that triggered this task
+      placeholder: OTA-SCI-0000-2026-DE
+    validations:
+      required: true
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: Short description of the requested external change
+    validations:
+      required: true
+  - type: textarea
+    id: reason
+    attributes:
+      label: Reason
+      description: Why OTA needs this external change
+    validations:
+      required: true
+  - type: textarea
+    id: proposed_change
+    attributes:
+      label: Proposed change
+      description: Describe the proposed record, relation, learning module, unlock, schema change, or publication change
+    validations:
+      required: true
