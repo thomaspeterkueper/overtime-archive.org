@@ -20,6 +20,7 @@ DOMAIN_RE = re.compile(
     r"((?:PHY|PHYS|GEO|AST|ASTRO|MATH|BIO|CHEM|HIS|PHIL|LANG|TOOL)-[A-Z][A-Z0-9]*(?:-[A-Z0-9]+)*)"
     r"(?![A-Z0-9:-])"
 )
+KD_RE = re.compile(r"KD:([A-Z]+-[A-Z0-9-]+):(N[1-4])")
 LEVEL_RE = re.compile(r"\bN[1-4]\b")
 
 KNOWN_PREFIXES = {
@@ -40,9 +41,17 @@ KNOWN_PREFIXES = {
 
 @dataclass
 class DomainRef:
-    domain_id: str
+    domain_code: str
     level: str = "N1"
     purpose: str = "read"
+
+    @property
+    def kd_id(self) -> str:
+        return f"KD:{self.domain_code}:{self.level}"
+
+    @property
+    def legacy_id(self) -> str:
+        return f"KNOW:{self.domain_code}"
 
 
 @dataclass
@@ -52,17 +61,20 @@ class DocumentReport:
     domains: dict[str, DomainRef] = field(default_factory=dict)
 
 
-def normalize_domain(raw: str) -> str | None:
+def normalize_domain_code(raw: str) -> str | None:
     value = raw.strip().upper()
     if value.startswith("KNOW:"):
         value = value.removeprefix("KNOW:")
+    if value.startswith("KD:"):
+        parts = value.split(":")
+        if len(parts) >= 2:
+            value = parts[1]
     if "-" not in value:
         return None
     prefix = value.split("-", 1)[0]
     if prefix not in KNOWN_PREFIXES:
         return None
-    normalized = value.replace(prefix + "-", KNOWN_PREFIXES[prefix] + "-", 1)
-    return "KNOW:" + normalized
+    return value.replace(prefix + "-", KNOWN_PREFIXES[prefix] + "-", 1)
 
 
 def purpose_for_line(line: str, current_section: str) -> str:
@@ -82,6 +94,15 @@ def extract_document(path: pathlib.Path) -> DocumentReport:
     for line in text.splitlines():
         if line.startswith("#"):
             current_section = line.strip("# ").strip()
+
+        kd_matches = KD_RE.findall(line)
+        for domain_code, level in kd_matches:
+            normalized = normalize_domain_code(domain_code)
+            if normalized:
+                purpose = purpose_for_line(line, current_section)
+                key = f"{normalized}:{level}:{purpose}"
+                report.domains[key] = DomainRef(domain_code=normalized, level=level, purpose=purpose)
+
         candidates = DOMAIN_RE.findall(line)
         if not candidates:
             continue
@@ -89,12 +110,12 @@ def extract_document(path: pathlib.Path) -> DocumentReport:
         level = level_match.group(0) if level_match else "N1"
         purpose = purpose_for_line(line, current_section)
         for candidate in candidates:
-            domain_id = normalize_domain(candidate)
-            if not domain_id:
+            domain_code = normalize_domain_code(candidate)
+            if not domain_code:
                 continue
-            key = f"{domain_id}:{purpose}"
+            key = f"{domain_code}:{level}:{purpose}"
             if key not in report.domains:
-                report.domains[key] = DomainRef(domain_id=domain_id, level=level, purpose=purpose)
+                report.domains[key] = DomainRef(domain_code=domain_code, level=level, purpose=purpose)
     return report
 
 
@@ -105,7 +126,7 @@ def build_report(reports: list[DocumentReport]) -> str:
     lines.append("")
     lines.append(f"Generated: {today}")
     lines.append("")
-    lines.append("This report is OTA-only. It detects references and proposes metadata mapping. It does not modify the Knowledge Graph, SSF, NOXIA, or kueper.com.")
+    lines.append("This report is OTA-only. It reports canonical KD IDs and keeps KNOW IDs only as legacy aliases.")
     lines.append("")
     lines.append("## Documents")
     lines.append("")
@@ -120,25 +141,25 @@ def build_report(reports: list[DocumentReport]) -> str:
             lines.append("Warning: no OTA document ID found.")
             lines.append("")
         if report.domains:
-            lines.append("| Domain | Level | Purpose |")
+            lines.append("| Canonical KD | Legacy alias | Purpose |")
             lines.append("|---|---|---|")
-            for domain in sorted(report.domains.values(), key=lambda d: (d.domain_id, d.purpose)):
-                lines.append(f"| `{domain.domain_id}` | {domain.level} | {domain.purpose} |")
+            for domain in sorted(report.domains.values(), key=lambda d: (d.kd_id, d.purpose)):
+                lines.append(f"| `{domain.kd_id}` | `{domain.legacy_id}` | {domain.purpose} |")
         else:
             lines.append("No knowledge-domain references found.")
         lines.append("")
 
-    all_domains = sorted({d.domain_id for r in reports for d in r.domains.values()})
-    lines.append("## Domain Inventory")
+    all_domains = sorted({d.kd_id for r in reports for d in r.domains.values()})
+    lines.append("## Canonical KD Inventory")
     lines.append("")
     for domain in all_domains:
         lines.append(f"- `{domain}`")
     lines.append("")
     lines.append("## Next Curator Checks")
     lines.append("")
-    lines.append("- Verify every detected `KNOW:*` ID against the Knowledge Graph export.")
+    lines.append("- Verify every detected `KD:*:*` ID against the Knowledge Graph export.")
+    lines.append("- Keep `KNOW:*` only as legacy aliases during migration.")
     lines.append("- Create an External Task for each missing KG record.")
-    lines.append("- Add `knowledge.domains` metadata to OTA documents after review.")
     lines.append("")
     return "\n".join(lines)
 
