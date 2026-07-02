@@ -1,0 +1,24 @@
+name: Validate OTA Metadata
+
+on:
+  pull_request:
+  push:
+    branches:
+      - master
+
+jobs:
+  validate-ota:
+    name: Validate OTA metadata
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Run OTA metadata validator
+        run: python tools/validate_ota_metadata.py .
