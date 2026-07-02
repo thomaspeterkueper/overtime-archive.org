@@ -15,7 +15,11 @@ import re
 from dataclasses import dataclass, field
 
 OTA_ID_RE = re.compile(r"OTA-[A-Z]+-[0-9]{4}-[0-9]{4}-[A-Z]{2}")
-KNOW_RE = re.compile(r"(?:KNOW:)?([A-Z]+-[A-Z0-9-]+)")
+DOMAIN_RE = re.compile(
+    r"(?<![A-Z0-9:-])(?:KNOW:)?"
+    r"((?:PHY|PHYS|GEO|AST|ASTRO|MATH|BIO|CHEM|HIS|PHIL|LANG|TOOL)-[A-Z][A-Z0-9]*(?:-[A-Z0-9]+)*)"
+    r"(?![A-Z0-9:-])"
+)
 LEVEL_RE = re.compile(r"\bN[1-4]\b")
 
 KNOWN_PREFIXES = {
@@ -51,7 +55,7 @@ class DocumentReport:
 def normalize_domain(raw: str) -> str | None:
     value = raw.strip().upper()
     if value.startswith("KNOW:"):
-        return value
+        value = value.removeprefix("KNOW:")
     if "-" not in value:
         return None
     prefix = value.split("-", 1)[0]
@@ -61,23 +65,36 @@ def normalize_domain(raw: str) -> str | None:
     return "KNOW:" + normalized
 
 
+def purpose_for_line(line: str, current_section: str) -> str:
+    if "erstellen" in current_section.lower() or "create" in current_section.lower():
+        return "create"
+    if "review" in current_section.lower() or "prüfen" in current_section.lower():
+        return "review"
+    return "read"
+
+
 def extract_document(path: pathlib.Path) -> DocumentReport:
     text = path.read_text(encoding="utf-8", errors="replace")
     doc_match = OTA_ID_RE.search(text)
     report = DocumentReport(path=path, document_id=doc_match.group(0) if doc_match else None)
 
+    current_section = ""
     for line in text.splitlines():
-        candidates = KNOW_RE.findall(line)
+        if line.startswith("#"):
+            current_section = line.strip("# ").strip()
+        candidates = DOMAIN_RE.findall(line)
         if not candidates:
             continue
         level_match = LEVEL_RE.search(line)
         level = level_match.group(0) if level_match else "N1"
+        purpose = purpose_for_line(line, current_section)
         for candidate in candidates:
             domain_id = normalize_domain(candidate)
             if not domain_id:
                 continue
-            if domain_id not in report.domains:
-                report.domains[domain_id] = DomainRef(domain_id=domain_id, level=level)
+            key = f"{domain_id}:{purpose}"
+            if key not in report.domains:
+                report.domains[key] = DomainRef(domain_id=domain_id, level=level, purpose=purpose)
     return report
 
 
@@ -105,7 +122,7 @@ def build_report(reports: list[DocumentReport]) -> str:
         if report.domains:
             lines.append("| Domain | Level | Purpose |")
             lines.append("|---|---|---|")
-            for domain in sorted(report.domains.values(), key=lambda d: d.domain_id):
+            for domain in sorted(report.domains.values(), key=lambda d: (d.domain_id, d.purpose)):
                 lines.append(f"| `{domain.domain_id}` | {domain.level} | {domain.purpose} |")
         else:
             lines.append("No knowledge-domain references found.")
