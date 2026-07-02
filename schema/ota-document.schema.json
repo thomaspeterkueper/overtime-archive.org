@@ -3,34 +3,12 @@
   "$id": "https://overtime-archive.org/schema/ota-document.schema.json",
   "title": "Overtime Archive Document Metadata",
   "type": "object",
-  "required": [
-    "id",
-    "title",
-    "language",
-    "status",
-    "kg",
-    "knowledge",
-    "entities",
-    "relations",
-    "sync"
-  ],
+  "required": ["id", "title", "language", "status", "kg", "knowledge", "entities", "relations", "sync"],
   "properties": {
-    "id": {
-      "type": "string",
-      "pattern": "^OTA-[A-Z]+-[0-9]{4}-[0-9]{4}-[A-Z]{2}$"
-    },
-    "title": {
-      "type": "string",
-      "minLength": 1
-    },
-    "language": {
-      "type": "string",
-      "enum": ["de", "en"]
-    },
-    "status": {
-      "type": "string",
-      "enum": ["draft", "review", "published", "archived"]
-    },
+    "id": { "type": "string", "pattern": "^OTA-[A-Z]+-[0-9]{4}-[0-9]{4}-[A-Z]{2}$" },
+    "title": { "type": "string", "minLength": 1 },
+    "language": { "type": "string", "enum": ["de", "en"] },
+    "status": { "type": "string", "enum": ["draft", "review", "published", "archived"] },
     "kg": {
       "type": "object",
       "required": ["schema", "master", "documentId", "graphId", "system", "sourceOfTruth"],
@@ -52,10 +30,11 @@
           "type": "array",
           "items": {
             "type": "object",
-            "required": ["id", "level", "purpose"],
+            "required": ["id", "purpose"],
             "properties": {
-              "id": { "type": "string", "pattern": "^KNOW:" },
-              "level": { "type": "string", "enum": ["N1", "N2", "N3", "N4"] },
+              "id": { "type": "string", "pattern": "^KD:[A-Z]+-[A-Z0-9-]+:N[1-4]$" },
+              "legacyId": { "type": "string", "pattern": "^KNOW:" },
+              "competencyId": { "type": "string", "pattern": "^CMP:" },
               "purpose": { "type": "string", "enum": ["read", "create", "review"] }
             },
             "additionalProperties": false
@@ -67,12 +46,7 @@
     "entities": {
       "type": "object",
       "required": ["mentions"],
-      "properties": {
-        "mentions": {
-          "type": "array",
-          "items": { "type": "string" }
-        }
-      },
+      "properties": { "mentions": { "type": "array", "items": { "type": "string" } } },
       "additionalProperties": false
     },
     "relations": {
