@@ -338,3 +338,43 @@ body {
   .footer-epigraph { text-align:left; }
   .header-nav { display:none; }
 }
+
+
+/* ── Epistemic status color badges ── */
+.epist-R { color: #4A7C59; }
+.epist-T { color: #888888; }
+.epist-H { color: #C8923A; }
+.epist-S { color: #8B4513; }
+.epist-F { color: #B0302A; }
+.epist-W { color: #2C5F8A; }
+.epist-I { color: #666666; }
+
+/* ── KG Domain badges ── */
+.kg-domain-badge {
+  font-family: var(--font-mono);
+  font-size: 0.48rem;
+  color: var(--blue-light);
+  border: 1px solid rgba(44,95,138,0.3);
+  padding: 0.08rem 0.3rem;
+  display: inline-block;
+  margin: 0.15rem 0.1rem 0;
+}
+
+/* ── Search input focus ── */
+#ota-search:focus, #catalog-search:focus {
+  border-color: var(--rust);
+  box-shadow: 0 0 0 2px rgba(139,69,19,0.12);
+}
+
+/* ── Result cards hover ── */
+.result-card:hover .result-title {
+  color: var(--rust);
+}
+
+/* ── Catalog search bar ── */
+#catalog-search:focus {
+  border-color: var(--rust);
+}
+
+/* ── More breathing room in grid ── */
+.catalog-section { padding: 0 1rem; }
