@@ -5,6 +5,9 @@ import { getCollection } from 'astro:content';
 
 const allDocs = await getCollection('documents');
 const recentDocs = allDocs.slice(0, 6);
+const totalDocs = allDocs.length;
+const seriesSet = new Set(allDocs.map(d => d.data.series));
+const restrictedCount = allDocs.filter(d => d.data.accessLevel > 0).length;
 
 const seriesList = [
   { code: 'SCI', label: 'Scientific', desc: 'Wissenschaftliche Grundlagen', count: 66 },
@@ -38,15 +41,15 @@ const seriesList = [
       </p>
       <div class="hero-stats fade-in-delay-3">
         <div class="stat-block">
-          <span class="stat-value">237</span>
+          <span class="stat-value">{totalDocs}</span>
           <span class="stat-label">Dokumente</span>
         </div>
         <div class="stat-block">
-          <span class="stat-value">17+</span>
+          <span class="stat-value">{seriesSet.size}</span>
           <span class="stat-label">Serien</span>
         </div>
         <div class="stat-block">
-          <span class="stat-value">12</span>
+          <span class="stat-value">{restrictedCount}</span>
           <span class="stat-label">Gesperrt</span>
         </div>
         <div class="stat-block">
