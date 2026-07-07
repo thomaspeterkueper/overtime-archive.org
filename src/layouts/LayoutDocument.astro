@@ -61,6 +61,27 @@ const today = new Date().toISOString().slice(0, 10);
           </>
         )}
       </div>
+    
+    <!-- KG Knowledge Domains -->
+    {doc.data.knowledge?.domains && doc.data.knowledge.domains.length > 0 && (
+      <div class="doc-aside-section" style="margin-top:1.5rem">
+        <div style="font-family:var(--font-mono);font-size:0.52rem;color:var(--rust);letter-spacing:0.15em;margin-bottom:0.6rem">KNOWLEDGE DOMAINS</div>
+        <div style="display:flex;flex-direction:column;gap:0.3rem">
+          {doc.data.knowledge.domains.map((d: any) => (
+            <a href={`/suche?domain=${d.id}`}
+               style="font-family:var(--font-mono);font-size:0.6rem;color:var(--blue-light);text-decoration:none;padding:0.2rem 0.4rem;border:1px solid rgba(44,95,138,0.25);display:flex;justify-content:space-between;align-items:center"
+               title={d.id}>
+              <span>{d.id}</span>
+              <span style="color:var(--ink-faint);font-size:0.5rem">{d.level || ''}</span>
+            </a>
+          ))}
+        </div>
+        <div style="font-family:var(--font-mono);font-size:0.48rem;color:var(--ink-faint);margin-top:0.4rem;line-height:1.4">
+          Knowledge Graph · kueper-knowledge-graph
+        </div>
+      </div>
+    )}
+
     </aside>
 
     <!-- Center: the paper document -->
@@ -149,6 +170,27 @@ const today = new Date().toISOString().slice(0, 10);
         <div><span class="label">SERIE</span></div>
         <div style="color:var(--rust-faint)">{series}</div>
       </div>
+    
+    <!-- KG Knowledge Domains -->
+    {doc.data.knowledge?.domains && doc.data.knowledge.domains.length > 0 && (
+      <div class="doc-aside-section" style="margin-top:1.5rem">
+        <div style="font-family:var(--font-mono);font-size:0.52rem;color:var(--rust);letter-spacing:0.15em;margin-bottom:0.6rem">KNOWLEDGE DOMAINS</div>
+        <div style="display:flex;flex-direction:column;gap:0.3rem">
+          {doc.data.knowledge.domains.map((d: any) => (
+            <a href={`/suche?domain=${d.id}`}
+               style="font-family:var(--font-mono);font-size:0.6rem;color:var(--blue-light);text-decoration:none;padding:0.2rem 0.4rem;border:1px solid rgba(44,95,138,0.25);display:flex;justify-content:space-between;align-items:center"
+               title={d.id}>
+              <span>{d.id}</span>
+              <span style="color:var(--ink-faint);font-size:0.5rem">{d.level || ''}</span>
+            </a>
+          ))}
+        </div>
+        <div style="font-family:var(--font-mono);font-size:0.48rem;color:var(--ink-faint);margin-top:0.4rem;line-height:1.4">
+          Knowledge Graph · kueper-knowledge-graph
+        </div>
+      </div>
+    )}
+
     </aside>
 
   </div>
