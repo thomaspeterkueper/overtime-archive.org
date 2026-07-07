@@ -1,0 +1,89 @@
+---
+import LayoutBase from '../layouts/LayoutBase.astro';
+import { getCollection } from 'astro:content';
+
+const allDocs = await getCollection('documents');
+
+const seriesData: Record<string, { docs: typeof allDocs, desc: string }> = {};
+const seriesDesc: Record<string, string> = {
+  SCI: 'Wissenschaftliche Grundlagen — peer-reviewed, empirisch verankert',
+  TEC: 'Technische Dokumentation — Systeme, Verfahren, Konstruktionsprinzipien',
+  FND: 'Philosophische und konzeptuelle Fundamente',
+  BIO: 'Personendossiers — Biografien realer und fiktiver Personen',
+  HIS: 'Historische Rekonstruktionen und Epochenanalysen',
+  RED: 'Redacted — Zugangsstufe 3+',
+  ARC: 'Archivrichtlinien und Governance',
+  NAR: 'Narrative Dokumente — Erzähltexte und Szenen',
+  ORG: 'Organisationen und Institutionen',
+  OBS: 'Beobachtungen und Feldberichte',
+  LSC: 'Leitmotiv-Schwefel-Kette — thematische Verbindungen',
+  MON: 'Monitor-Dokumente — laufende Beobachtungen',
+  KOM: 'Kommunikationsdokumente',
+  CUL: 'Kulturdokumente',
+  LIM: 'Grenzfälle und Ausnahmedokumente',
+};
+
+for (const doc of allDocs) {
+  if (!seriesData[doc.data.series]) {
+    seriesData[doc.data.series] = { docs: [], desc: seriesDesc[doc.data.series] ?? '' };
+  }
+  seriesData[doc.data.series].docs.push(doc);
+}
+
+const seriesSorted = Object.entries(seriesData).sort((a, b) => b[1].docs.length - a[1].docs.length);
+---
+
+<LayoutBase title="Serien — The Overtime Archive">
+  <div style="max-width:72ch;margin:3rem auto;padding:0 2rem">
+
+    <div style="font-family:var(--font-mono);font-size:0.62rem;color:var(--rust);letter-spacing:0.2em;margin-bottom:1rem">
+      OTA · DOKUMENTENSERIEN
+    </div>
+
+    <h1 style="font-family:var(--font-display);font-size:2rem;color:var(--ink);font-weight:700;margin-bottom:0.5rem">
+      Serien
+    </h1>
+    <p style="font-family:var(--font-serif);color:var(--ink-light);margin-bottom:2.5rem;font-size:1rem">
+      Das Archiv gliedert sich in thematische Dokumentserien. Jede Serie trägt einen Typcode,
+      der in der Signatur erscheint: <span style="font-family:var(--font-mono);color:var(--rust)">OTA-{SERIE}-{NNNN}-{JAHR}-{SPRACHE}</span>
+    </p>
+
+    <div style="display:grid;gap:1.5rem">
+      {seriesSorted.map(([code, data]) => (
+        <div style="background:var(--paper);padding:1.5rem 2rem;box-shadow:var(--shadow-paper)">
+          <div style="display:flex;align-items:baseline;gap:1rem;margin-bottom:0.5rem">
+            <span style="font-family:var(--font-mono);font-size:0.75rem;color:var(--rust);font-weight:500;letter-spacing:0.1em">
+              OTA-{code}
+            </span>
+            <span style="font-family:var(--font-mono);font-size:0.62rem;color:var(--ink-faint)">
+              {data.docs.length} Dokument{data.docs.length !== 1 ? 'e' : ''}
+            </span>
+          </div>
+          <div style="font-family:var(--font-serif);color:var(--ink);font-size:0.95rem;margin-bottom:0.75rem">
+            {data.desc || code}
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:0.4rem">
+            {data.docs.slice(0, 6).map(doc => (
+              <a href={`/dokument/${doc.slug}`}
+                 style="font-family:var(--font-mono);font-size:0.58rem;color:var(--rust);border:1px solid var(--paper-dark);padding:0.15rem 0.4rem;text-decoration:none;transition:background 0.15s"
+                 onmouseover="this.style.background='var(--paper-dark)'"
+                 onmouseout="this.style.background='transparent'">
+                {doc.data.signature}
+              </a>
+            ))}
+            {data.docs.length > 6 && (
+              <a href={`/katalog?serie=${code}`}
+                 style="font-family:var(--font-mono);font-size:0.58rem;color:var(--ink-faint);border:1px solid var(--paper-dark);padding:0.15rem 0.4rem;text-decoration:none">
+                +{data.docs.length - 6} weitere
+              </a>
+            )}
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <div style="font-family:var(--font-mono);font-size:0.55rem;color:var(--ink-faint);margin-top:3rem;text-align:center">
+      ᐃ THE OVERTIME ARCHIVE
+    </div>
+  </div>
+</LayoutBase>
