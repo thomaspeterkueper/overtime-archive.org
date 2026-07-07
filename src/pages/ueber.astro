@@ -1,0 +1,80 @@
+---
+import LayoutBase from '../layouts/LayoutBase.astro';
+import { getCollection } from 'astro:content';
+
+const allDocs = await getCollection('documents');
+const seriesCount = new Set(allDocs.map(d => d.data.series)).size;
+const years = allDocs.map(d => d.data.year);
+const minYear = Math.min(...years);
+const maxYear = Math.max(...years);
+---
+
+<LayoutBase title="Über das Archiv">
+  <div style="max-width:var(--content-width);margin:3rem auto;padding:0 2rem">
+
+    <div style="font-family:var(--font-mono);font-size:0.62rem;color:var(--rust);letter-spacing:0.2em;margin-bottom:1rem">
+      OTA-META · ÜBER DAS ARCHIV
+    </div>
+
+    <h1 style="font-family:var(--font-display);font-size:2rem;color:var(--ink);font-weight:700;margin-bottom:2rem">
+      Das OverTime Archive
+    </h1>
+
+    <div style="background:var(--paper);padding:2.5rem;box-shadow:var(--shadow-paper);font-family:var(--font-serif);font-size:1rem;line-height:1.85">
+
+      <p>
+        Das <strong>OverTime Archive</strong> ist ein transmediales Wissenssystem. Es dokumentiert
+        wissenschaftliche Grundlagen, historische Rekonstruktionen, philosophische Fundamente
+        und narrative Strukturen — epistemisch markiert und archivarisch geordnet.
+        Die Zeitspanne reicht von ~60.000 BCE bis 2500 CE.
+      </p>
+
+      <p style="margin-top:1.5rem">
+        Jedes Dokument trägt explizite epistemologische Marker:
+      </p>
+
+      <div style="margin:1.5rem 0;font-family:var(--font-mono);font-size:0.78rem;display:grid;gap:0.5rem">
+        {[
+          { tag: '[R]', color: '#4A7C59', label: 'Real — empirisch belegt, peer-reviewed' },
+          { tag: '[T]', color: '#888', label: 'Theoretisch — wissenschaftlich plausibel, nicht abschließend bestätigt' },
+          { tag: '[H]', color: '#C8923A', label: 'Hypothese — wissenschaftlich formulierbar, offen' },
+          { tag: '[S]', color: '#8B4513', label: 'Spekulativ — konzeptionell möglich, keine Evidenz' },
+          { tag: '[F]', color: '#B0302A', label: 'Fiktiv — kanonisches Element des Erzähluniversums' },
+          { tag: '[W]', color: '#2C5F8A', label: 'Werk-Setzung — Autorenscheidung, kanonisch' },
+          { tag: '[I]', color: '#666', label: 'Interpretativ — Schlussfolgerung aus vorhandenem Material' },
+        ].map(item => (
+          <div style="display:flex;gap:1rem;align-items:baseline">
+            <span style={`color:${item.color};font-weight:500;min-width:3.5rem`}>{item.tag}</span>
+            <span style="color:var(--ink-light);font-size:0.72rem">{item.label}</span>
+          </div>
+        ))}
+      </div>
+
+      <p style="margin-top:1.5rem">
+        Das Archiv ist gleichzeitig eine reale Wissensinfrastruktur und eine fiktive Institution.
+        In der Erzählung übernimmt das <em>OverTime Institute</em> das Archiv um das Jahr 2050.
+        In der Realität ist es das wissenschaftliche und narrative Fundament aller literarischen
+        Projekte von Thomas Peter Küper.
+      </p>
+
+      <div style="margin-top:2rem;padding:1.5rem;background:var(--paper-aged);font-family:var(--font-mono);font-size:0.7rem;border-left:3px solid var(--rust)">
+        <div style="color:var(--rust);margin-bottom:0.75rem;letter-spacing:0.1em">ARCHIVSTATISTIK</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.5rem;color:var(--ink)">
+          <div>Dokumente (online): <span style="color:var(--rust)">{allDocs.length}</span></div>
+          <div>Serien: <span style="color:var(--rust)">{seriesCount}</span></div>
+          <div>Ältestes Dokument: <span style="color:var(--rust)">{minYear} CE</span></div>
+          <div>Neuestes Dokument: <span style="color:var(--rust)">{maxYear} CE</span></div>
+          <div>Gesamt im Archiv: <span style="color:var(--rust)">~237</span></div>
+          <div>Zeitspanne: <span style="color:var(--rust)">~62.500 Jahre</span></div>
+        </div>
+      </div>
+
+      <p style="margin-top:2rem;font-size:0.9rem;color:var(--ink-light)">
+        Das Archiv ist kein abgeschlossenes Werk. Es wächst mit jedem Dokument —
+        und mit jedem, das noch nicht geschrieben ist.
+      </p>
+
+      <div style="text-align:center;margin-top:2rem;font-size:1.2rem;color:var(--rust)">ᐃ</div>
+    </div>
+  </div>
+</LayoutBase>
