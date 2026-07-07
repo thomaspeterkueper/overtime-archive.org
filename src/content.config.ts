@@ -18,6 +18,21 @@ const documents = defineCollection({
     tags: z.array(z.string()).optional(),
     relatedDocuments: z.array(z.string()).optional(),
     summary: z.string(),
+    kg: z.object({
+      schema: z.string().optional(),
+      master: z.string().optional(),
+      documentId: z.string().optional(),
+      graphId: z.string().optional(),
+      system: z.string().optional(),
+      sourceOfTruth: z.boolean().optional(),
+    }).optional(),
+    knowledge: z.object({
+      domains: z.array(z.object({
+        id: z.string(),
+        level: z.string().optional(),
+        purpose: z.string().optional(),
+      })).optional(),
+    }).optional(),
     lastAccessed: z.string().optional(),
     redacted: z.boolean().default(false),
     redactedReason: z.string().optional(),
