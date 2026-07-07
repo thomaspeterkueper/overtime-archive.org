@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════════
-   THE OVERTIME ARCHIVE — Global Styles v2.0
+   THE OVERTIME ARCHIVE — Global Styles v2.1
    ═══════════════════════════════════════════════════════════════ */
 
 @import '@fontsource/crimson-text/400.css';
@@ -15,7 +15,7 @@
   --ink-light:  #4A3728;
   --ink-faint:  #A89880;
   --paper:      #F8F4EC;
-  --paper-aged: #EDE8D8;
+  --paper-aged: #F0EBD8;
   --paper-dark: #D5CEBC;
   --rust:       #8B4513;
   --rust-light: #B0602A;
@@ -169,16 +169,16 @@ body {
 .series-btn:hover, .series-btn.active { background: rgba(44,95,138,0.08); border-color: var(--blue); color: var(--blue); }
 
 /* ── Document Cards ── */
-.document-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); gap: 1.1rem; }
+.document-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.4rem; }
 .document-grid.hidden { display: none; }
-.document-card { background: var(--paper); color: var(--ink); position: relative; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s, filter 0.2s; text-decoration: none; display: block; overflow: hidden; box-shadow: 0 2px 8px rgba(44,36,22,0.09); }
+.document-card { background: var(--paper); color: var(--ink); position: relative; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s, filter 0.2s; text-decoration: none; display: block; overflow: hidden; box-shadow: 0 1px 4px rgba(44,36,22,0.08), 0 2px 12px rgba(44,36,22,0.06); border: 1px solid rgba(44,36,22,0.08); }
 .document-card:hover { transform: translateY(-3px) rotate(0.2deg); box-shadow: var(--shadow-paper); filter: sepia(0.07); }
 .document-card.redacted { filter: grayscale(0.4); cursor: not-allowed; }
 .document-card.redacted:hover { transform: none; }
-.card-header { background: var(--ink); padding: 0.42rem 0.8rem; display: flex; justify-content: space-between; align-items: center; }
-.card-signature { font-family: var(--font-mono); font-size: 0.52rem; color: var(--blue-faint); letter-spacing: 0.07em; }
-.card-series-badge { font-family: var(--font-mono); font-size: 0.46rem; letter-spacing: 0.12em; padding: 0.08rem 0.3rem; border: 1px solid rgba(44,95,138,0.3); color: var(--blue-faint); }
-.card-body { padding: 0.85rem 0.85rem 0.6rem; }
+.card-header { background: var(--ink-light); padding: 0.42rem 0.8rem; display: flex; justify-content: space-between; align-items: center; border-top: 2px solid var(--rust); }
+.card-signature { font-family: var(--font-mono); font-size: 0.52rem; color: var(--rust-faint); letter-spacing: 0.07em; }
+.card-series-badge { font-family: var(--font-mono); font-size: 0.46rem; letter-spacing: 0.12em; padding: 0.08rem 0.3rem; border: 1px solid rgba(139,69,19,0.4); color: var(--rust-faint); }
+.card-body { padding: 1rem 1rem 0.7rem; }
 .card-title { font-family: var(--font-display); font-size: 0.88rem; font-weight: 700; color: var(--ink); line-height: 1.25; margin-bottom: 0.4rem; }
 .card-summary { font-family: var(--font-serif); font-size: 0.78rem; color: var(--ink-light); line-height: 1.45; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
 .card-footer { padding: 0.48rem 0.8rem; border-top: 1px solid rgba(44,36,22,0.07); display: flex; gap: 0.28rem; align-items: center; justify-content: space-between; flex-wrap: wrap; }
@@ -262,7 +262,7 @@ body {
 .doc-body p { margin-bottom:1.1rem; }
 .doc-body blockquote { border-left:3px solid var(--rust); margin:1.5rem 0; padding:.6rem 1.25rem; background:rgba(44,36,22,0.03); font-style:italic; color:var(--ink-light); }
 .doc-body table { width:100%; border-collapse:collapse; font-family:var(--font-mono); font-size:.76rem; margin:1.5rem 0; overflow-x:auto; display:block; }
-.doc-body th { background:var(--ink); color:var(--paper); padding:.38rem .7rem; text-align:left; font-weight:400; letter-spacing:.08em; white-space:nowrap; }
+.doc-body th { background:var(--ink-light); color:var(--paper-aged); padding:.38rem .7rem; text-align:left; font-weight:400; letter-spacing:.08em; white-space:nowrap; }
 .doc-body td { padding:.38rem .7rem; border-bottom:1px solid var(--paper-dark); color:var(--ink-light); }
 .doc-body tr:hover td { background:rgba(44,36,22,0.03); }
 
