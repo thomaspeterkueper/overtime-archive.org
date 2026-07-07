@@ -14,14 +14,14 @@ relatedDocuments: ["OTA-SCI-0045-2026-DE"]
 summary: "Nachtrag zu OTA-FND-0017: Die mitochondriale Haplogruppe L2a als dokumentierter Migrationskorridor von Nordostafrika über Jemen in den eurasischen Raum. Verbindet populationsgenetische Realfunde [R] mit der theoretischen Dvārakā-Brücken-Hypothese [T]. Zeittiefe ~40.000–60.000 BCE."
 kg:
   schema: "KXF-0.2"
-  master: "kueper-knowledge-graph"
+  master: kueper-knowledge-graph
   documentId: "OTA-FND-0017-NACHTRAG-2026-DE"
   graphId: "DOC:OTA:OTA-FND-0017-NACHTRAG-2026-DE"
-  system: "SYS:OTA:overtimearchive"
+  system: SYS:OTA:overtimearchive
   sourceOfTruth: false
 knowledge:
   domains:
-    - id: "KD:GEO:N1"
+    - id: "KD:GEO-PLANET:N1"
       level: "N1"
       purpose: read
 ---
