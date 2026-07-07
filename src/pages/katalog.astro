@@ -12,6 +12,14 @@ const series = [...new Set(allDocs.map(d => d.data.series))].sort();
 <LayoutBase title="Katalog">
   <section class="catalog-section" style="margin-top:2rem">
 
+    <!-- Inline-Suche im Katalog -->
+    <div style="margin-bottom:1.5rem;position:relative">
+      <input type="search" id="catalog-search" placeholder="Schnellsuche im Katalog…"
+        style="width:100%;padding:0.6rem 1rem 0.6rem 2.2rem;font-family:var(--font-mono);font-size:0.78rem;background:var(--paper);border:1px solid var(--paper-dark);color:var(--ink);outline:none;box-sizing:border-box"/>
+      <span style="position:absolute;left:0.7rem;top:50%;transform:translateY(-50%);color:var(--rust);font-size:0.85rem">⌕</span>
+      <a href="/suche" style="position:absolute;right:0.7rem;top:50%;transform:translateY(-50%);font-family:var(--font-mono);font-size:0.55rem;color:var(--rust);text-decoration:none">ERWEITERTE SUCHE →</a>
+    </div>
+
     <div class="catalog-header">
       <h1 style="font-family:var(--font-display);font-size:2rem;color:var(--ink);font-weight:700">
         Dokumentenkatalog
@@ -140,6 +148,19 @@ const series = [...new Set(allDocs.map(d => d.data.series))].sort();
           (!series || series === 'ALL' || row.getAttribute('data-series') === series)
             ? '' : 'none';
       });
+    });
+  });
+
+  // Katalog-Schnellsuche
+  document.getElementById('catalog-search')?.addEventListener('input', (e) => {
+    const q = (e.target as HTMLInputElement).value.toLowerCase().trim();
+    document.querySelectorAll('#view-cards [data-series]').forEach(card => {
+      const text = card.textContent?.toLowerCase() || '';
+      (card as HTMLElement).style.display = (!q || text.includes(q)) ? '' : 'none';
+    });
+    document.querySelectorAll('#view-ascii tr[data-series]').forEach(row => {
+      const text = row.textContent?.toLowerCase() || '';
+      (row as HTMLElement).style.display = (!q || text.includes(q)) ? '' : 'none';
     });
   });
 </script>
