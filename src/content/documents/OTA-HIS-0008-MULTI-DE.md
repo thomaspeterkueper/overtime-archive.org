@@ -1,5 +1,6 @@
 ---
 signature: "OTA-HIS-0008-MULTI-DE"
+canonicalId: "OTA-HIS-0008-2026-DE"
 title: "OTA-HIS-0008-MULTI-DE"
 series: "HIS"
 seriesNumber: 8
