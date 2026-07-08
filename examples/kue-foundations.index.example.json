@@ -1,0 +1,68 @@
+{
+  "schema": "KUE-FOUNDATION-INDEX-0.1",
+  "sourceSystem": "SYS:KUEPER:kueper-com",
+  "updated": "2026-07-08",
+  "documents": [
+    {
+      "id": "KUE-SCI-0064",
+      "title": "Das Hautmikrobiom",
+      "subtitle": "Systemcharakter, Störbarkeit, Reversibilität",
+      "summary": "Grundlagendokument zum Hautmikrobiom, zu antimikrobiellen Störungen, Barrierefunktion und reversiblen Systemeffekten.",
+      "keywords": "Hautmikrobiom Triclosan antimikrobiell Barrierefunktion Störung Reversibilität Selektionsdruck",
+      "kd": [
+        "KD:BIO-BASIC:N2",
+        "KD:BIO-EVOL:N1"
+      ],
+      "legacyKnowledgeIds": [
+        "KNOW:BIO-BASIC",
+        "KNOW:BIO-EVOL"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "KUE-SCI-0001",
+      "title": "AVI",
+      "summary": "Grundlagendokument zum AVI-Modell und seinen wissenschaftlich-philosophischen Bezügen.",
+      "keywords": "AVI Frequenz Physik Modell Resonanz",
+      "kd": [
+        "KD:PHYS-WAVE:N2",
+        "KD:PHIL-SCI:N2"
+      ],
+      "legacyKnowledgeIds": [
+        "KNOW:PHYS-WAVE",
+        "KNOW:PHIL-SCI"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "KUE-SCI-0012",
+      "title": "Frequenzbasierte Physik",
+      "summary": "Grundlagendokument zu frequenzbasierten physikalischen Modellen, Wellen, Resonanz und Feldbegriffen.",
+      "keywords": "Frequenz Physik Wellen Resonanz Feld Schwingung",
+      "kd": [
+        "KD:PHYS-WAVE:N2",
+        "KD:PHYS-EM:N1"
+      ],
+      "legacyKnowledgeIds": [
+        "KNOW:PHYS-WAVE",
+        "KNOW:PHYS-EM"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "KUE-PHI-0001",
+      "title": "Philosophische Motivationen des AVI-Modells",
+      "summary": "Philosophisches Grundlagendokument zu Motivationen und Deutungsrahmen des AVI-Modells.",
+      "keywords": "AVI Philosophie Wissenschaftstheorie Erkenntnistheorie Modell",
+      "kd": [
+        "KD:PHIL-SCI:N2",
+        "KD:PHIL-EPIST:N2"
+      ],
+      "legacyKnowledgeIds": [
+        "KNOW:PHIL-SCI",
+        "KNOW:PHIL-EPIST"
+      ],
+      "status": "published"
+    }
+  ]
+}
