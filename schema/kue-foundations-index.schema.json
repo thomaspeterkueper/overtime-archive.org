@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://overtime-archive.org/schema/kue-foundations-index.schema.json",
+  "title": "KUE Foundation Index for OTA",
+  "type": "object",
+  "required": ["schema", "sourceSystem", "documents"],
+  "properties": {
+    "schema": { "const": "KUE-FOUNDATION-INDEX-0.1" },
+    "sourceSystem": { "const": "SYS:KUEPER:kueper-com" },
+    "updated": { "type": "string" },
+    "documents": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "title"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^KUE-[A-Z]+-[0-9]{4}" },
+          "title": { "type": "string" },
+          "subtitle": { "type": "string" },
+          "summary": { "type": "string" },
+          "abstract": { "type": "string" },
+          "keywords": { "type": ["string", "array"] },
+          "kd": { "type": "array", "items": { "type": "string", "pattern": "^KD:" } },
+          "legacyKnowledgeIds": { "type": "array", "items": { "type": "string", "pattern": "^KNOW:" } },
+          "path": { "type": "string" },
+          "status": { "type": "string" }
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": false
+}
