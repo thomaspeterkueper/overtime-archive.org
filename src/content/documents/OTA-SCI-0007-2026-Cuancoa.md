@@ -1,5 +1,6 @@
 ---
 signature: "OTA-SCI-0007-2026-Cuancoa"
+validatorId: "OTA-SCI-0007-2026-DE"
 canonicalId: "OTA-SCI-0007-2026-DE"
 title: "OTA-SCI-0007-2026-Cuancoa"
 series: "SCI"
