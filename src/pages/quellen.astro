@@ -1,0 +1,250 @@
+---
+import LayoutBase from '../layouts/LayoutBase.astro';
+---
+
+<LayoutBase title="Literarische Quellensuche — The Overtime Archive">
+  <div style="max-width:var(--content-width);margin:2.5rem auto;padding:0 2rem">
+
+    <div style="font-family:var(--font-mono);font-size:0.62rem;color:var(--rust);letter-spacing:0.2em;margin-bottom:1rem">
+      OTA · LITERARISCHE QUELLENSUCHE
+    </div>
+
+    <h1 style="font-family:var(--font-display);font-size:1.8rem;color:var(--ink);font-weight:700;margin-bottom:0.5rem">
+      Quellen nach Projekt
+    </h1>
+    <p style="font-family:var(--font-serif);color:var(--ink-light);margin-bottom:2rem;font-size:0.95rem">
+      Zeigt wissenschaftliche Grundlagen <span style="color:#4A7C59">[R]</span>,
+      Theorien <span style="color:#888">[T]</span> und Hypothesen <span style="color:#C8923A">[H]</span>
+      hinter den Romanen — sowie kanonische Setzungen <span style="color:#2C5F8A">[W]</span> und narrative Inhalte <span style="color:#B0302A">[F]</span>.
+    </p>
+
+    <!-- Projekt-Filter -->
+    <div style="margin-bottom:1.5rem">
+      <div style="font-family:var(--font-mono);font-size:0.58rem;color:var(--rust);letter-spacing:0.12em;margin-bottom:0.6rem">PROJEKT WÄHLEN</div>
+      <div id="project-btns" style="display:flex;flex-wrap:wrap;gap:0.4rem">
+        <button class="proj-btn active" data-project="ALL"
+          style="font-family:var(--font-mono);font-size:0.65rem;padding:0.3rem 0.7rem;border:1px solid var(--rust);background:var(--rust);color:var(--paper);cursor:pointer">
+          ALLE PROJEKTE
+        </button>
+      </div>
+    </div>
+
+    <!-- Epistemik-Filter -->
+    <div style="margin-bottom:1.5rem;display:flex;flex-wrap:wrap;gap:0.4rem;align-items:center">
+      <span style="font-family:var(--font-mono);font-size:0.55rem;color:var(--rust);letter-spacing:0.1em;margin-right:0.4rem">FILTER:</span>
+      <button class="ef-btn active" data-epist="ALL" style="font-family:var(--font-mono);font-size:0.58rem;padding:0.2rem 0.5rem;border:1px solid var(--paper-dark);background:var(--ink-light);color:var(--paper);cursor:pointer">ALLE</button>
+      <button class="ef-btn" data-epist="R" style="font-family:var(--font-mono);font-size:0.58rem;padding:0.2rem 0.5rem;border:1px solid var(--paper-dark);background:transparent;color:#4A7C59;cursor:pointer">[R] Realwissenschaft</button>
+      <button class="ef-btn" data-epist="T" style="font-family:var(--font-mono);font-size:0.58rem;padding:0.2rem 0.5rem;border:1px solid var(--paper-dark);background:transparent;color:#888;cursor:pointer">[T] Theorie</button>
+      <button class="ef-btn" data-epist="F" style="font-family:var(--font-mono);font-size:0.58rem;padding:0.2rem 0.5rem;border:1px solid var(--paper-dark);background:transparent;color:#B0302A;cursor:pointer">[F] Kanon</button>
+      <button class="ef-btn" data-epist="W" style="font-family:var(--font-mono);font-size:0.58rem;padding:0.2rem 0.5rem;border:1px solid var(--paper-dark);background:transparent;color:#2C5F8A;cursor:pointer">[W] Werk-Setzung</button>
+    </div>
+
+    <!-- Freitextsuche -->
+    <div style="position:relative;margin-bottom:1.5rem">
+      <input type="search" id="q-search" placeholder="Stichwort, Thema, Charakter…"
+        style="width:100%;padding:0.6rem 1rem 0.6rem 2.2rem;font-family:var(--font-mono);font-size:0.8rem;background:var(--paper);border:1px solid var(--paper-dark);color:var(--ink);outline:none;box-sizing:border-box"/>
+      <span style="position:absolute;left:0.7rem;top:50%;transform:translateY(-50%);color:var(--rust)">⌕</span>
+    </div>
+
+    <!-- Ergebnisse -->
+    <div id="q-count" style="font-family:var(--font-mono);font-size:0.6rem;color:var(--ink-faint);margin-bottom:1rem"></div>
+    <div id="q-results" style="display:grid;gap:0.6rem"></div>
+    <div id="q-empty" style="display:none;font-family:var(--font-mono);font-size:0.75rem;color:var(--ink-faint);padding:2rem 0">Keine Dokumente für diese Auswahl.</div>
+
+  </div>
+</LayoutBase>
+
+<style>
+.proj-btn { font-family:var(--font-mono);font-size:0.62rem;padding:0.25rem 0.6rem;border:1px solid var(--paper-dark);background:transparent;color:var(--ink-faint);cursor:pointer;transition:all 0.15s }
+.proj-btn.active { border-color:var(--rust);background:var(--rust);color:var(--paper) }
+.ef-btn { transition:background 0.15s }
+.ef-btn.active { background:var(--ink-light) !important;color:var(--paper) !important }
+.q-card { background:var(--paper);padding:0.8rem 1rem;border:1px solid var(--paper-dark);border-left:3px solid var(--paper-dark);text-decoration:none;display:block;transition:border-left-color 0.15s }
+.q-card:hover { border-left-color:var(--rust) }
+.q-card-sig { font-family:var(--font-mono);font-size:0.55rem;color:var(--ink-faint);letter-spacing:0.06em }
+.q-card-title { font-family:var(--font-serif);font-size:0.95rem;color:var(--ink);margin:0.2rem 0 0.35rem;font-weight:600;line-height:1.4 }
+.q-card-summary { font-family:var(--font-serif);font-size:0.8rem;color:var(--ink-light);line-height:1.55 }
+.q-card-meta { display:flex;gap:0.4rem;margin-top:0.4rem;flex-wrap:wrap;align-items:center }
+.q-badge { font-family:var(--font-mono);font-size:0.48rem;padding:0.08rem 0.3rem;border:1px solid currentColor }
+#q-search:focus { border-color:var(--rust);outline:none }
+</style>
+
+<script>
+const PROJECTS: Record<string, {label: string, keywords: string[]}> = {
+  "ALL": { label: "Alle Projekte", keywords: [] },
+  "GEN_MARS": { label: "Generation Mars", keywords: ["generation mars","noxia","2087","2091","mars","ssep","ssf","große stille","solar science"] },
+  "HEXENTEICH": { label: "Kette vom Hexenteich", keywords: ["kette vom hexenteich","hexenteich","mia kowalski","oskar anton","leon brandt","yara demir"] },
+  "OTJIZE": { label: "OTJIZE", keywords: ["otjize","himba","ocker","uazuva","zuva","mikrobiom","triclosan","hautmikrobiom"] },
+  "GANDHAKA": { label: "GANDHAKA", keywords: ["gandhaka","kaia rune","omega","disulfidbrücke","biophysik","s-s"] },
+  "ZEREYA": { label: "Zereya-Saga", keywords: ["zereya","zereya bat rachael","soraya","anya","martha rachael","miriam rachael","lilith adar","lambda","λ"] },
+  "BAUMEISTER": { label: "Baumeister-Netzwerk", keywords: ["baumeister","göbekli tepe","bronzezeit","1200 bce","9500 bce","schrift","mesopotamien"] },
+  "NOXIA_CORE": { label: "NOXIA (Kern)", keywords: ["noxi","omnizedenz","χ-feld","avi","eigenzeit","iterius","eiqm","temenon","hexade"] },
+  "NICHTS_GEFRAGT": { label: "Nichts gefragt / Unasked", keywords: ["nichts gefragt","unasked"] },
+};
+
+const EPIST_COLORS: Record<string,string> = {
+  R:'#4A7C59', T:'#888', H:'#C8923A', S:'#8B4513', F:'#B0302A', W:'#2C5F8A', I:'#666'
+};
+
+const EPIST_BORDER: Record<string,string> = {
+  R:'#4A7C59', T:'#888888', H:'#C8923A', F:'#B0302A', W:'#2C5F8A', S:'#8B4513'
+};
+
+let allDocs: any[] = [];
+let activeProject = 'ALL';
+let activeEpist = 'ALL';
+let query = '';
+
+async function loadIndex() {
+  const res = await fetch('/api/search.json');
+  allDocs = await res.json();
+  buildProjectButtons();
+  render();
+}
+
+function buildProjectButtons() {
+  const container = document.getElementById('project-btns')!;
+  Object.entries(PROJECTS).forEach(([key, proj]) => {
+    if (key === 'ALL') return;
+    const count = key === 'ALL' ? allDocs.length : allDocs.filter(d => matchesProject(d, key)).length;
+    if (count === 0) return;
+    const btn = document.createElement('button');
+    btn.className = 'proj-btn';
+    btn.dataset.project = key;
+    btn.textContent = proj.label + ' (' + count + ')';
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.proj-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      activeProject = key;
+      render();
+    });
+    container.appendChild(btn);
+  });
+}
+
+function matchesProject(doc: any, projectKey: string): boolean {
+  if (projectKey === 'ALL') return true;
+  const proj = PROJECTS[projectKey];
+  if (!proj) return false;
+  const haystack = [
+    doc.sig, doc.title, doc.summary,
+    ...(doc.tags || [])
+  ].join(' ').toLowerCase();
+  return proj.keywords.some(kw => haystack.includes(kw.toLowerCase()));
+}
+
+function matchesEpist(doc: any): boolean {
+  if (activeEpist === 'ALL') return true;
+  return (doc.epist || []).includes(activeEpist);
+}
+
+function matchesQuery(doc: any): boolean {
+  if (!query) return true;
+  const q = query.toLowerCase();
+  const haystack = [doc.sig, doc.title, doc.summary, ...(doc.tags||[])].join(' ').toLowerCase();
+  return haystack.includes(q);
+}
+
+function primaryEpist(epist: string[]): string {
+  for (const e of ['R','T','H','W','S','F','I']) {
+    if (epist.includes(e)) return e;
+  }
+  return epist[0] || '?';
+}
+
+function render() {
+  const results = document.getElementById('q-results')!;
+  const empty = document.getElementById('q-empty')!;
+  const count = document.getElementById('q-count')!;
+
+  const filtered = allDocs
+    .filter(d => !d.restricted)
+    .filter(d => matchesProject(d, activeProject))
+    .filter(d => matchesEpist(d))
+    .filter(d => matchesQuery(d))
+    .sort((a, b) => {
+      // Realwissenschaft zuerst, dann Theorie, dann Rest
+      const rank = (e: string[]) => e.includes('R') ? 0 : e.includes('T') ? 1 : e.includes('H') ? 2 : e.includes('W') ? 3 : 4;
+      return rank(a.epist||[]) - rank(b.epist||[]) || b.year - a.year;
+    })
+    .slice(0, 100);
+
+  if (!filtered.length) {
+    results.innerHTML = '';
+    empty.style.display = 'block';
+    count.textContent = '';
+    return;
+  }
+
+  empty.style.display = 'none';
+  count.textContent = filtered.length + ' Quelle' + (filtered.length !== 1 ? 'n' : '');
+
+  // Gruppierung nach primärem epistemischem Marker
+  const groups: Record<string, any[]> = { R:[], T:[], H:[], W:[], S:[], F:[], other:[] };
+  filtered.forEach(d => {
+    const e = primaryEpist(d.epist || []);
+    if (groups[e]) groups[e].push(d);
+    else groups.other.push(d);
+  });
+
+  const groupLabels: Record<string, string> = {
+    R: 'Realwissenschaftliche Grundlagen',
+    T: 'Theoretische Grundlagen',
+    H: 'Hypothesen',
+    W: 'Werk-Setzungen',
+    S: 'Spekulative Grundlagen',
+    F: 'Kanonische Dokumente',
+    other: 'Weitere'
+  };
+
+  let html = '';
+  for (const [key, label] of Object.entries(groupLabels)) {
+    const group = groups[key];
+    if (!group || !group.length) continue;
+    const color = EPIST_COLORS[key] || '#888';
+    html += `<div style="margin-top:1.5rem;margin-bottom:0.5rem;font-family:var(--font-mono);font-size:0.58rem;color:${color};letter-spacing:0.1em;border-bottom:1px solid ${color}33;padding-bottom:0.3rem">[${key}] ${label.toUpperCase()} · ${group.length}</div>`;
+    group.forEach(doc => {
+      const epistBadges = (doc.epist||[]).map((e:string) =>
+        `<span class="q-badge" style="color:${EPIST_COLORS[e]||'#888'}">[${e}]</span>`
+      ).join('');
+      const tagBadges = (doc.tags||[]).slice(0,4).map((t:string) =>
+        `<span class="q-badge" style="color:var(--ink-faint);border-color:var(--paper-dark)">${t}</span>`
+      ).join('');
+      const borderColor = EPIST_BORDER[key] || 'var(--paper-dark)';
+      html += `<a href="/dokument/${doc.slug}" class="q-card" style="border-left-color:${borderColor}33">
+        <div class="q-card-sig">${doc.sig} · ${doc.year} · ${doc.lang || 'DE'}</div>
+        <div class="q-card-title">${doc.title !== doc.sig ? doc.title : (doc.summary?.slice(0,80)||doc.sig)}</div>
+        ${doc.summary ? `<div class="q-card-summary">${doc.summary.slice(0,150)}${doc.summary.length>150?'…':''}</div>` : ''}
+        <div class="q-card-meta">${epistBadges} ${tagBadges}</div>
+      </a>`;
+    });
+  }
+  results.innerHTML = html;
+}
+
+// Events
+document.querySelectorAll('.proj-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.proj-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    activeProject = (btn as HTMLElement).dataset.project || 'ALL';
+    render();
+  });
+});
+
+document.querySelectorAll('.ef-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.ef-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    activeEpist = (btn as HTMLElement).dataset.epist || 'ALL';
+    render();
+  });
+});
+
+document.getElementById('q-search')?.addEventListener('input', e => {
+  query = (e.target as HTMLInputElement).value.trim();
+  render();
+});
+
+loadIndex();
+</script>
