@@ -13,56 +13,63 @@ import LayoutBase from '../layouts/LayoutBase.astro';
       Archivsuche
     </h1>
 
-    <!-- Suchfeld -->
-    <div style="position:relative;margin-bottom:1.5rem">
-      <input
-        type="search"
-        id="ota-search"
-        placeholder="Signatur, Titel, Tags, Stichwort…"
-        autocomplete="off"
-        style="width:100%;padding:0.75rem 1rem 0.75rem 2.5rem;font-family:var(--font-mono);font-size:0.85rem;background:var(--paper);border:1px solid var(--paper-dark);color:var(--ink);outline:none;box-sizing:border-box"
-      />
-      <span style="position:absolute;left:0.8rem;top:50%;transform:translateY(-50%);color:var(--rust);font-family:var(--font-mono);font-size:0.9rem">⌕</span>
+    <div style="position:relative;margin-bottom:1.25rem">
+      <input type="search" id="ota-search" placeholder="Signatur, Titel, Tags, Stichwort…" autocomplete="off"
+        style="width:100%;padding:0.75rem 1rem 0.75rem 2.5rem;font-family:var(--font-mono);font-size:0.85rem;background:var(--paper);border:1px solid var(--paper-dark);color:var(--ink);outline:none;box-sizing:border-box"/>
+      <span style="position:absolute;left:0.8rem;top:50%;transform:translateY(-50%);color:var(--rust);font-size:0.9rem">⌕</span>
     </div>
 
-    <!-- Filter -->
-    <div id="filter-row" style="display:flex;flex-wrap:wrap;gap:0.4rem;margin-bottom:1.5rem">
-      <button class="sf-btn active" data-epist="ALL" style="font-family:var(--font-mono);font-size:0.6rem;padding:0.2rem 0.5rem;border:1px solid var(--paper-dark);background:var(--rust);color:var(--paper);cursor:pointer">ALLE</button>
+    <div id="filter-row" style="display:flex;flex-wrap:wrap;gap:0.4rem;margin-bottom:1.5rem;align-items:center">
+      <button class="sf-btn active" data-epist="ALL">ALLE</button>
       {["R","T","H","S","F","W"].map(e => (
-        <button class="sf-btn" data-epist={e} style="font-family:var(--font-mono);font-size:0.6rem;padding:0.2rem 0.5rem;border:1px solid var(--paper-dark);background:transparent;color:var(--ink-faint);cursor:pointer">[{e}]</button>
+        <button class="sf-btn" data-epist={e}>[{e}]</button>
       ))}
+      <label style="margin-left:auto;font-family:var(--font-mono);font-size:0.58rem;color:var(--ink-faint);display:flex;align-items:center;gap:0.4rem;cursor:pointer">
+        <input type="checkbox" id="show-restricted" style="accent-color:var(--rust)"/> GESPERRT ANZEIGEN
+      </label>
     </div>
 
-    <!-- Ergebnisse -->
     <div id="search-results" style="display:grid;gap:0.75rem"></div>
     <div id="search-empty" style="display:none;font-family:var(--font-mono);font-size:0.75rem;color:var(--ink-faint);padding:2rem 0">
       Keine Dokumente gefunden.
     </div>
     <div id="search-count" style="font-family:var(--font-mono);font-size:0.6rem;color:var(--ink-faint);margin-top:1rem"></div>
-
   </div>
 </LayoutBase>
 
 <style>
-  .sf-btn.active { background: var(--rust) !important; color: var(--paper) !important; }
-  .result-card { background:var(--paper);padding:0.9rem 1.1rem;border:1px solid var(--paper-dark);border-top:2px solid var(--ink-light);text-decoration:none;display:block;transition:border-color 0.15s }
-  .result-card:hover { border-top-color:var(--rust) }
-  .result-sig { font-family:var(--font-mono);font-size:0.58rem;color:var(--rust);letter-spacing:0.08em }
-  .result-title { font-family:var(--font-display);font-size:1rem;color:var(--ink);margin:0.25rem 0 0.4rem;font-weight:600 }
-  .result-summary { font-family:var(--font-serif);font-size:0.85rem;color:var(--ink-light);line-height:1.6 }
-  .result-meta { display:flex;gap:0.6rem;margin-top:0.5rem;flex-wrap:wrap }
-  .result-tag { font-family:var(--font-mono);font-size:0.52rem;color:var(--ink-faint);border:1px solid var(--paper-dark);padding:0.1rem 0.35rem }
-  .result-epist { font-family:var(--font-mono);font-size:0.52rem;color:var(--rust-faint) }
+.sf-btn {
+  font-family:var(--font-mono);font-size:0.6rem;padding:0.2rem 0.5rem;
+  border:1px solid var(--paper-dark);background:transparent;color:var(--ink-faint);cursor:pointer;
+}
+.sf-btn.active { background:var(--rust);color:var(--paper);border-color:var(--rust); }
+.result-card {
+  background:var(--paper);padding:0.9rem 1.1rem;
+  border:1px solid var(--paper-dark);border-top:2px solid var(--ink-light);
+  text-decoration:none;display:block;transition:border-color 0.15s;
+}
+.result-card:hover { border-top-color:var(--rust); }
+.result-card.restricted {
+  background:var(--paper-aged);border-top-color:var(--red-faint);opacity:0.7;
+}
+.result-sig { font-family:var(--font-mono);font-size:0.58rem;color:var(--rust);letter-spacing:0.08em }
+.result-title { font-family:var(--font-display);font-size:1rem;color:var(--ink);margin:0.25rem 0 0.4rem;font-weight:600 }
+.result-summary { font-family:var(--font-serif);font-size:0.85rem;color:var(--ink-light);line-height:1.6 }
+.result-meta { display:flex;gap:0.5rem;margin-top:0.5rem;flex-wrap:wrap;align-items:center }
+.result-tag { font-family:var(--font-mono);font-size:0.5rem;color:var(--ink-faint);border:1px solid var(--paper-dark);padding:0.08rem 0.3rem }
+.result-domain { font-family:var(--font-mono);font-size:0.5rem;color:var(--blue-light);border:1px solid rgba(44,95,138,0.25);padding:0.08rem 0.3rem }
+#ota-search:focus { border-color:var(--rust);outline:none;box-shadow:0 0 0 2px rgba(139,69,19,0.1) }
 </style>
 
 <script>
+const epist_colors: Record<string,string> = {
+  R:'#4A7C59',T:'#888',H:'#C8923A',S:'#8B4513',F:'#B0302A',W:'#2C5F8A',I:'#666'
+};
+
 let allDocs: any[] = [];
 let activeEpist = 'ALL';
 let query = '';
-
-const epist_colors: Record<string, string> = {
-  R: '#4A7C59', T: '#888', H: '#C8923A', S: '#8B4513', F: '#B0302A', W: '#2C5F8A', I: '#666'
-};
+let showRestricted = false;
 
 async function loadIndex() {
   const res = await fetch('/api/search.json');
@@ -73,9 +80,10 @@ async function loadIndex() {
 function score(doc: any): number {
   if (!query) return 1;
   const q = query.toLowerCase();
+  if (doc.restricted) return doc.sig.toLowerCase().includes(q) ? 0.5 : 0;
   const fields = [doc.sig, doc.title, doc.summary, ...(doc.tags||[]), ...(doc.domains||[])].join(' ').toLowerCase();
   if (doc.sig.toLowerCase().includes(q)) return 3;
-  if (doc.title.toLowerCase().includes(q)) return 2;
+  if ((doc.title||'').toLowerCase().includes(q)) return 2;
   return fields.includes(q) ? 1 : 0;
 }
 
@@ -85,43 +93,53 @@ function render() {
   const count = document.getElementById('search-count')!;
 
   const filtered = allDocs
-    .filter(d => !d.redacted)
-    .filter(d => activeEpist === 'ALL' || (d.epist || []).includes(activeEpist))
+    .filter(d => showRestricted ? true : !d.restricted)
+    .filter(d => activeEpist === 'ALL' || (d.epist||[]).includes(activeEpist))
     .map(d => ({ doc: d, s: score(d) }))
     .filter(x => x.s > 0)
-    .sort((a, b) => b.s - a.s || b.doc.year - a.doc.year)
-    .slice(0, 60);
+    .sort((a,b) => b.s - a.s || (b.doc.restricted ? -1 : 1) || b.doc.year - a.doc.year)
+    .slice(0, 80);
 
-  if (filtered.length === 0) {
+  if (!filtered.length) {
     results.innerHTML = '';
     empty.style.display = 'block';
     count.textContent = '';
     return;
   }
-
   empty.style.display = 'none';
-  count.textContent = `${filtered.length} Dokument${filtered.length !== 1 ? 'e' : ''} gefunden`;
+  count.textContent = filtered.length + ' Dokument' + (filtered.length !== 1 ? 'e' : '') + ' gefunden';
 
-  results.innerHTML = filtered.map(({ doc }) => {
-    const epistBadges = (doc.epist || []).map((e: string) =>
-      `<span class="result-epist" style="color:${epist_colors[e]||'#888'}">[${e}]</span>`
+  results.innerHTML = filtered.map(({doc}) => {
+    if (doc.restricted) {
+      return `<div class="result-card restricted">
+        <div class="result-sig">${doc.sig} · ${doc.year} · ${doc.lang}</div>
+        <div class="result-title" style="color:var(--red-faint)">[GESPERRT — TIER-${doc.access}]</div>
+        <div class="result-summary" style="color:var(--ink-faint);font-family:var(--font-mono);font-size:0.65rem">
+          Serie ${doc.series} · Zugang nicht freigegeben · KG-Authentifizierung erforderlich
+        </div>
+      </div>`;
+    }
+
+    const epistBadges = (doc.epist||[]).map((e:string) =>
+      `<span style="font-family:var(--font-mono);font-size:0.52rem;color:${epist_colors[e]||'#888'}">[${e}]</span>`
     ).join(' ');
-    const tags = (doc.tags || []).slice(0, 5).map((t: string) =>
+    const tags = (doc.tags||[]).slice(0,4).map((t:string) =>
       `<span class="result-tag">${t}</span>`
     ).join('');
-    const domains = (doc.domains || []).slice(0, 3).map((d: string) =>
-      `<span class="result-tag" style="color:var(--blue-light)">${d}</span>`
+    const domains = (doc.domains||[]).slice(0,3).map((d:string) =>
+      `<span class="result-domain">${d}</span>`
     ).join('');
+
     return `<a href="/dokument/${doc.slug}" class="result-card">
       <div class="result-sig">${doc.sig} · ${doc.year} · ${doc.lang}</div>
-      <div class="result-title">${doc.title !== doc.sig ? doc.title : (doc.summary?.slice(0,60) || doc.sig)}</div>
-      <div class="result-summary">${doc.summary?.slice(0, 140) || ''}${(doc.summary?.length || 0) > 140 ? '…' : ''}</div>
-      <div class="result-meta">${epistBadges}${tags}${domains}</div>
+      <div class="result-title">${doc.title !== doc.sig ? doc.title : (doc.summary?.slice(0,70)||doc.sig)}</div>
+      ${doc.summary ? `<div class="result-summary">${doc.summary.slice(0,150)}${doc.summary.length>150?'…':''}</div>` : ''}
+      <div class="result-meta">${epistBadges} ${tags} ${domains}</div>
     </a>`;
   }).join('');
 }
 
-document.getElementById('ota-search')?.addEventListener('input', (e) => {
+document.getElementById('ota-search')?.addEventListener('input', e => {
   query = (e.target as HTMLInputElement).value.trim();
   render();
 });
@@ -134,6 +152,19 @@ document.querySelectorAll('.sf-btn').forEach(btn => {
     render();
   });
 });
+
+document.getElementById('show-restricted')?.addEventListener('change', e => {
+  showRestricted = (e.target as HTMLInputElement).checked;
+  render();
+});
+
+// URL-Parameter auswerten (domain-Filter)
+const params = new URLSearchParams(window.location.search);
+const domainParam = params.get('domain');
+if (domainParam) {
+  const el = document.getElementById('ota-search') as HTMLInputElement;
+  if (el) { el.value = domainParam; query = domainParam; }
+}
 
 loadIndex();
 </script>
