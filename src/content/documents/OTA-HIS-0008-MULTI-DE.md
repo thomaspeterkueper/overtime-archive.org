@@ -1,5 +1,6 @@
 ---
 signature: "OTA-HIS-0008-MULTI-DE"
+validatorId: "OTA-HIS-0008-2026-DE"
 canonicalId: "OTA-HIS-0008-2026-DE"
 title: "OTA-HIS-0008-MULTI-DE"
 series: "HIS"
