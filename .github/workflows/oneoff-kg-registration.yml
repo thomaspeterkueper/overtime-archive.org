@@ -1,0 +1,31 @@
+name: One-off OTA KG Registration
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - tools/oneoff_kg_registration.py
+      - .github/workflows/oneoff-kg-registration.yml
+
+permissions:
+  contents: write
+
+jobs:
+  register:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - name: Add missing canonical KG metadata
+        run: python tools/oneoff_kg_registration.py
+      - name: Commit batch and remove one-off tooling
+        run: |
+          git config user.name "ota-maintenance-bot"
+          git config user.email "ota-maintenance-bot@users.noreply.github.com"
+          git rm tools/oneoff_kg_registration.py .github/workflows/oneoff-kg-registration.yml
+          git add -A
+          git diff --cached --quiet && exit 0
+          git commit -m "Complete OTA KG registration batch"
+          git push
