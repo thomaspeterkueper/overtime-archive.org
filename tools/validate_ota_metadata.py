@@ -7,7 +7,7 @@ import pathlib
 import re
 import sys
 
-OTA_ID = re.compile(r"OTA-[A-Z]+-[0-9]{4}-[0-9]{4}-[A-Z]{2}")
+OTA_ID = re.compile(r"OTA-[A-Z]+-[0-9]{4}-(?:[0-9]{4}|[0-9]+BCE|MULTI)-[A-Z]{2}")
 KD_ID = re.compile(r"KD:[A-Z]+-[A-Z0-9-]+:N[1-4]")
 PRIMARY_KNOW = re.compile(r"^\s*-?\s*id\s*:\s*KNOW:", re.MULTILINE)
 LOCAL_DOMAINS = re.compile(r"^\s*knowledgeDomains\s*:", re.MULTILINE)
@@ -28,7 +28,7 @@ def validate(path: pathlib.Path) -> list[str]:
     warnings: list[str] = []
 
     if path.name.startswith("OTA-") and not OTA_ID.search(text):
-        errors.append("filename looks like OTA document but no OTA ID was found")
+        errors.append("filename looks like OTA document but no canonical OTA signature was found")
     if LOCAL_DOMAINS.search(meta):
         errors.append("local knowledgeDomains definition is not allowed")
     if PRIMARY_KNOW.search(meta):
