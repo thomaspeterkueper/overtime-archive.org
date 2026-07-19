@@ -1,0 +1,30 @@
+name: One-off KG Registration Nonstandard Signatures
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - tools/oneoff_kg_nonstandard_signatures.py
+      - .github/workflows/oneoff-kg-nonstandard-signatures.yml
+
+permissions:
+  contents: write
+
+jobs:
+  register:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - run: python tools/oneoff_kg_nonstandard_signatures.py
+      - name: Commit and remove one-off tooling
+        run: |
+          git config user.name "ota-maintenance-bot"
+          git config user.email "ota-maintenance-bot@users.noreply.github.com"
+          git rm tools/oneoff_kg_nonstandard_signatures.py .github/workflows/oneoff-kg-nonstandard-signatures.yml
+          git add -A
+          git diff --cached --quiet && exit 0
+          git commit -m "Register OTA documents with nonstandard temporal signatures"
+          git push
