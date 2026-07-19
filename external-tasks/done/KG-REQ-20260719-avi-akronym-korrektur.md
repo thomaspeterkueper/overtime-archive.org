@@ -4,7 +4,7 @@ ID: REQ:L3:PENDING
 Requester: SYS:KUEPER:knowledge-graph
 Recipient: SYS:KUEPER:ota
 Request Type: correction
-Status: open
+Status: done
 Created: 2026-07-19
 Source: KG-REQ-20260715 (Kontrakomologie-Kanonisierung, D6)
 
@@ -77,3 +77,8 @@ Nicht blockierend. Die im ursprünglichen KG-Request zitierte Phrase („Astrono
 Variation von Invarianten") wurde beim Nachprüfen nicht gefunden — vermutlich eine
 weitere, andernorts entstandene Chatbot-Fehlauflösung, die nie ins Archiv gelangt ist.
 Der tatsächliche, im Archiv vorhandene Fehler ist „Adaptive Vakuum-Interaktion".
+
+
+## Erledigt (2026-07-19)
+
+Alle neun betroffenen OTA-Dokumente wurden auf die kanonische Auflösung `AVI = Axiomatisches Vakuum-Integral` korrigiert. In OTA-FND-0005 bleibt der historische v1.1-Fehlkorrekturvermerk als Revisionsgeschichte erhalten und wird durch einen neuen kanonischen Korrekturhinweis eingeordnet.
