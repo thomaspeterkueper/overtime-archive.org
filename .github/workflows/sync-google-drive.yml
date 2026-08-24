@@ -63,8 +63,8 @@ jobs:
         run: |
           rclone sync \
             "src/content/documents" \
-            "gdrive:KUEPER/OverTime Archive" \
-            --backup-dir "gdrive:KUEPER/_sync-history/OverTime Archive/${GITHUB_RUN_ID}" \
+            "gdrive:OTA/_GITHUB/overtime-archive" \
+            --backup-dir "gdrive:OTA/_GITHUB/_sync-history/overtime-archive/${GITHUB_RUN_ID}" \
             --max-delete 100 \
             --create-empty-src-dirs \
             --drive-skip-gdocs \
