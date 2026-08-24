@@ -1,4 +1,4 @@
-name: Validate OTA Metadata
+name: Validate OTA
 
 on:
   pull_request:
@@ -8,17 +8,29 @@ on:
 
 jobs:
   validate-ota:
-    name: Validate OTA metadata
+    name: Validate OTA metadata and links
     runs-on: ubuntu-latest
 
     steps:
       - name: Check out repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.x"
 
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: "24"
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
       - name: Run OTA metadata validator
         run: python tools/validate_ota_metadata.py .
+
+      - name: Build site and validate internal links
+        run: npm run verify
