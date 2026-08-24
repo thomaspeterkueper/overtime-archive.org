@@ -1,0 +1,30 @@
+---
+import LayoutBase from '../layouts/LayoutBase.astro';
+import { getCollection } from 'astro:content';
+
+const docs = (await getCollection('documents'))
+  .filter(doc => doc.data.series === 'ARC')
+  .sort((a, b) => a.data.signature.localeCompare(b.data.signature));
+---
+
+<LayoutBase title="Protokolle — The Overtime Archive">
+  <section class="catalog-section" style="max-width:72ch;margin:3rem auto">
+    <div style="font-family:var(--font-mono);font-size:0.62rem;color:var(--rust);letter-spacing:0.2em;margin-bottom:1rem">OTA · PROTOKOLLE</div>
+    <h1 style="font-family:var(--font-display);font-size:2rem;color:var(--ink);margin-bottom:0.75rem">Protokolle und Archivrichtlinien</h1>
+    <p style="font-family:var(--font-serif);color:var(--ink-light);line-height:1.7;margin-bottom:2rem">
+      Dieser Bereich bündelt die veröffentlichten Dokumente der Serie OTA-ARC. Sie beschreiben Archivregeln, Governance und kuratorische Verfahren des OverTime Archive.
+    </p>
+
+    <div style="display:grid;gap:0.75rem">
+      {docs.map(doc => (
+        <a href={`/dokument/${doc.id}`} style="display:block;background:var(--paper);border:1px solid var(--paper-dark);padding:1rem 1.2rem;text-decoration:none">
+          <div style="font-family:var(--font-mono);font-size:0.6rem;color:var(--rust);margin-bottom:0.35rem">{doc.data.signature}</div>
+          <div style="font-family:var(--font-display);font-size:1rem;color:var(--ink);font-weight:600">{doc.data.title}</div>
+          {doc.data.summary && <div style="font-family:var(--font-serif);font-size:0.86rem;color:var(--ink-light);margin-top:0.35rem;line-height:1.5">{doc.data.summary}</div>}
+        </a>
+      ))}
+    </div>
+
+    {docs.length === 0 && <p style="font-family:var(--font-mono);color:var(--ink-faint)">Derzeit sind keine öffentlichen OTA-ARC-Dokumente vorhanden.</p>}
+  </section>
+</LayoutBase>
