@@ -1,0 +1,71 @@
+name: Sync canonical documents to Google Drive
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - "src/content/documents/**"
+      - ".github/workflows/sync-google-drive.yml"
+  schedule:
+    - cron: "20 3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: google-drive-sync-overtime-archive
+  cancel-in-progress: true
+
+jobs:
+  sync:
+    name: Sync OverTime Archive documents
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Check Google Drive configuration
+        id: config
+        env:
+          RCLONE_CONFIG_CONTENT: ${{ secrets.RCLONE_CONFIG }}
+        shell: bash
+        run: |
+          if [ -z "$RCLONE_CONFIG_CONTENT" ]; then
+            echo "configured=false" >> "$GITHUB_OUTPUT"
+            echo "RCLONE_CONFIG is not configured yet; Drive sync is skipped."
+          else
+            echo "configured=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Install rclone
+        if: steps.config.outputs.configured == 'true'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y rclone
+
+      - name: Configure rclone
+        if: steps.config.outputs.configured == 'true'
+        env:
+          RCLONE_CONFIG_CONTENT: ${{ secrets.RCLONE_CONFIG }}
+        shell: bash
+        run: |
+          mkdir -p "$HOME/.config/rclone"
+          printf '%s\n' "$RCLONE_CONFIG_CONTENT" > "$HOME/.config/rclone/rclone.conf"
+          chmod 600 "$HOME/.config/rclone/rclone.conf"
+          rclone lsd gdrive: >/dev/null
+
+      - name: Sync canonical OTA documents
+        if: steps.config.outputs.configured == 'true'
+        shell: bash
+        run: |
+          rclone sync \
+            "src/content/documents" \
+            "gdrive:KUEPER/OverTime Archive" \
+            --backup-dir "gdrive:KUEPER/_sync-history/OverTime Archive/${GITHUB_RUN_ID}" \
+            --max-delete 100 \
+            --create-empty-src-dirs \
+            --drive-skip-gdocs \
+            --verbose
