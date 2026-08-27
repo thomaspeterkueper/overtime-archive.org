@@ -18,10 +18,19 @@ const sourceFiles = walk(src, file => /\.(astro|ts|tsx|js|mjs)$/.test(file));
 const legacyRefs = [];
 for (const file of sourceFiles) {
   const text = fs.readFileSync(file, 'utf8');
-  if (text.includes('doc.slug')) legacyRefs.push(path.relative(root, file));
+
+  // The legacy problem concerns Astro content collection entries, where doc.id
+  // must be used instead of doc.slug. Client-side <script> blocks consume the
+  // search API, whose DTO intentionally exposes a `slug` property populated
+  // from doc.id; those occurrences are valid and must not fail CI.
+  const serverSideText = file.endsWith('.astro')
+    ? text.replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, '')
+    : text;
+
+  if (serverSideText.includes('doc.slug')) legacyRefs.push(path.relative(root, file));
 }
 if (legacyRefs.length) {
-  console.error('Legacy Astro document identifier doc.slug found in:');
+  console.error('Legacy Astro content identifier doc.slug found in server-rendered source:');
   legacyRefs.forEach(file => console.error(`  - ${file}`));
   process.exit(1);
 }
