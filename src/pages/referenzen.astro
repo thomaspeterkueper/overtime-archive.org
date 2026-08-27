@@ -1,0 +1,88 @@
+---
+import LayoutBase from '../layouts/LayoutBase.astro';
+import index from '../data/internal-references.generated.json';
+
+const references = index.references as Array<{
+  source: string;
+  target: string;
+  status: string;
+  title: string;
+  description: string;
+  descriptionStatus?: string | null;
+  contexts: string[];
+}>;
+
+const grouped = new Map<string, typeof references>();
+for (const ref of references) {
+  if (!grouped.has(ref.target)) grouped.set(ref.target, []);
+  grouped.get(ref.target)!.push(ref);
+}
+
+const targets = [...grouped.entries()].sort(([a], [b]) => a.localeCompare(b));
+const unresolved = targets.filter(([, refs]) => refs.some(ref => ref.status !== 'resolved'));
+---
+
+<LayoutBase title="Referenzregister">
+  <section class="catalog-section" style="margin-top:2rem;max-width:1100px">
+    <div style="font-family:var(--font-mono);font-size:0.62rem;color:var(--rust);letter-spacing:0.18em;margin-bottom:0.8rem">
+      OTA · INTERNES REFERENZREGISTER
+    </div>
+    <h1 style="font-family:var(--font-display);font-size:2rem;color:var(--ink);margin-bottom:0.6rem">Referenzen</h1>
+    <p style="font-family:var(--font-serif);color:var(--ink-light);line-height:1.65;max-width:78ch">
+      Dieses Register erfasst Signaturverweise innerhalb des Archivs unabhängig davon, ob das Zieldokument bereits vorliegt.
+      Fehlende Ziele bleiben als offene Archivhinweise erhalten und können später gefunden, importiert oder erstellt werden.
+    </p>
+
+    <div style="display:flex;gap:1rem;flex-wrap:wrap;margin:1.5rem 0;font-family:var(--font-mono);font-size:0.65rem">
+      <span>{index.documents.length} vorhandene Dokumente</span>
+      <span>{targets.length} referenzierte Ziele</span>
+      <span style="color:var(--red-faint)">{unresolved.length} offene Ziele</span>
+    </div>
+
+    <h2 style="font-family:var(--font-display);font-size:1.35rem;margin:2rem 0 1rem">Offene Referenzen</h2>
+    <div style="display:grid;gap:0.8rem">
+      {unresolved.length === 0 ? (
+        <div style="font-family:var(--font-mono);font-size:0.7rem;color:var(--ink-faint)">Keine offenen Referenzen im aktuellen Build erkannt.</div>
+      ) : unresolved.map(([target, refs]) => {
+        const first = refs[0];
+        return (
+          <article style="border:1px solid var(--paper-dark);background:var(--paper);padding:1rem 1.2rem">
+            <div style="display:flex;gap:0.7rem;align-items:baseline;flex-wrap:wrap">
+              <span style="font-family:var(--font-mono);font-size:0.68rem;color:var(--rust)">{target}</span>
+              <span style="font-family:var(--font-mono);font-size:0.52rem;color:var(--red-faint)">[{first.status.toUpperCase()}]</span>
+            </div>
+            <div style="font-family:var(--font-display);font-size:1rem;color:var(--ink);margin-top:0.3rem">{first.title}</div>
+            {first.description && <p style="font-family:var(--font-serif);font-size:0.85rem;color:var(--ink-light);line-height:1.55;margin:0.35rem 0">{first.description}</p>}
+            {first.descriptionStatus && <div style="font-family:var(--font-mono);font-size:0.5rem;color:var(--ink-faint)">{first.descriptionStatus}</div>}
+            <div style="font-family:var(--font-mono);font-size:0.54rem;color:var(--ink-faint);margin-top:0.65rem">VERWENDET IN</div>
+            <div style="display:flex;gap:0.35rem;flex-wrap:wrap;margin-top:0.3rem">
+              {[...new Set(refs.map(ref => ref.source))].map(source => (
+                <span style="font-family:var(--font-mono);font-size:0.56rem;border:1px solid var(--paper-dark);padding:0.12rem 0.35rem">{source}</span>
+              ))}
+            </div>
+          </article>
+        );
+      })}
+    </div>
+
+    <h2 style="font-family:var(--font-display);font-size:1.35rem;margin:2.5rem 0 1rem">Alle referenzierten Ziele</h2>
+    <div style="overflow-x:auto">
+      <table class="document-table active" style="width:100%">
+        <thead><tr><th>ZIEL</th><th>STATUS</th><th>TITEL</th><th>QUELLEN</th></tr></thead>
+        <tbody>
+          {targets.map(([target, refs]) => {
+            const first = refs[0];
+            return (
+              <tr>
+                <td class="sig">{target}</td>
+                <td>{first.status}</td>
+                <td>{first.title}</td>
+                <td>{[...new Set(refs.map(ref => ref.source))].join(', ')}</td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+    </div>
+  </section>
+</LayoutBase>
