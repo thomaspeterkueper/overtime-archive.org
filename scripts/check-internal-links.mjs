@@ -60,9 +60,17 @@ function existsForPathname(pathname) {
 
 for (const file of htmlFiles) {
   const html = fs.readFileSync(file, 'utf8');
+
+  // Only validate href attributes that exist in the rendered DOM markup.
+  // Client-side scripts may contain HTML template strings such as
+  // href="/dokument/${doc.slug}"; these are resolved at runtime from API data
+  // and are not literal build-time links. Leaving script contents in the scan
+  // produces false positives such as /dokument/${e.slug}.
+  const renderedMarkup = html.replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, '');
+
   const hrefRegex = /href=["']([^"']+)["']/g;
   let match;
-  while ((match = hrefRegex.exec(html))) {
+  while ((match = hrefRegex.exec(renderedMarkup))) {
     const href = match[1].trim();
     if (!href.startsWith('/') || href.startsWith('//')) continue;
     const pathname = href.split('#')[0].split('?')[0];
