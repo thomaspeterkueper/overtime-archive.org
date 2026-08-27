@@ -1,5 +1,26 @@
 import { defineCollection, z } from 'astro:content';
 
+const relationType = z.enum([
+  'references',
+  'basis',
+  'prerequisite',
+  'extends',
+  'contradicts',
+  'supersedes',
+  'clarifies',
+  'related',
+]);
+
+const documentRelation = z.object({
+  target: z.string(),
+  relation: relationType.default('related'),
+  context: z.string().optional(),
+  // Only use these fallback fields when the target document is not yet present.
+  title: z.string().optional(),
+  description: z.string().optional(),
+  descriptionStatus: z.enum(['explicit', 'reconstructed', 'planned', 'uncertain']).optional(),
+});
+
 const documents = defineCollection({
   type: 'content',
   schema: z.object({
@@ -15,11 +36,18 @@ const documents = defineCollection({
     epistemicStatus: z.array(z.enum(['R', 'T', 'H', 'S', 'F', 'R-Anker', 'I', 'OFFEN'])),
     universe: z.array(z.string()).optional(), // NOXIA, NALGAE, HSS, etc.
     tags: z.array(z.string()).optional(),
-    relatedDocuments: z.array(z.string()).optional(), // array of signatures
+    // Backward compatible: old documents may still contain simple signature strings.
+    relatedDocuments: z.array(z.union([z.string(), documentRelation])).optional(),
     summary: z.string(),             // 1-2 sentence abstract
     lastAccessed: z.string().optional(),
     redacted: z.boolean().default(false),
     redactedReason: z.string().optional(),
+    knowledge: z.object({
+      domains: z.array(z.object({
+        id: z.string(),
+        level: z.string().optional(),
+      })).optional(),
+    }).optional(),
   }),
 });
 
