@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
-"""Validate OTA metadata conventions."""
+"""Validate canonical OTA document metadata conventions.
+
+Repository documentation, reports, examples and external task/request files are
+not canonical OTA documents and therefore must not be rejected for using
+historical or illustrative metadata conventions.
+"""
 from __future__ import annotations
 
 import argparse
@@ -12,6 +17,12 @@ KD_ID = re.compile(r"KD:[A-Z]+-[A-Z0-9-]+:N[1-4]")
 PRIMARY_KNOW = re.compile(r"^\s*-?\s*id\s*:\s*KNOW:", re.MULTILINE)
 LOCAL_DOMAINS = re.compile(r"^\s*knowledgeDomains\s*:", re.MULTILINE)
 BAD_PURPOSE = re.compile(r"purpose\s*:\s*(?!(read|create|review)\b)(\S+)")
+
+# The Astro content collection is the canonical website document corpus.  Other
+# repository areas (docs/, examples/, reports/, external-tasks/, …) may contain
+# specifications, examples, historical records or requests and are deliberately
+# outside canonical-document validation.
+CANONICAL_ROOT = pathlib.Path("src/content/documents")
 
 
 def frontmatter(text: str) -> str:
@@ -47,15 +58,23 @@ def validate(path: pathlib.Path) -> list[str]:
     return [f"ERROR: {path}: {e}" for e in errors] + [f"WARNING: {path}: {w}" for w in warnings]
 
 
+def is_canonical(path: pathlib.Path) -> bool:
+    """Return true only for files in the canonical Astro document collection."""
+    try:
+        path.resolve().relative_to(CANONICAL_ROOT.resolve())
+        return True
+    except ValueError:
+        return False
+
+
 def collect(items: list[str]) -> list[pathlib.Path]:
     files: list[pathlib.Path] = []
     for item in items:
         p = pathlib.Path(item)
         if p.is_dir():
-            files.extend(p.rglob("*.md"))
-            files.extend(p.rglob("*.yml"))
-            files.extend(p.rglob("*.yaml"))
-        elif p.suffix.lower() in {".md", ".yml", ".yaml"}:
+            candidates = list(p.rglob("*.md")) + list(p.rglob("*.yml")) + list(p.rglob("*.yaml"))
+            files.extend(candidate for candidate in candidates if is_canonical(candidate))
+        elif p.suffix.lower() in {".md", ".yml", ".yaml"} and is_canonical(p):
             files.append(p)
     return sorted(set(files))
 
@@ -64,14 +83,16 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("paths", nargs="*", default=["."])
     args = parser.parse_args()
+    files = collect(args.paths)
     messages: list[str] = []
-    for file in collect(args.paths):
+    for file in files:
         messages.extend(validate(file))
     for message in messages:
         print(message)
     if any(message.startswith("ERROR:") for message in messages):
         return 1
-    print("OTA metadata validation passed." if not messages else "OTA metadata validation completed with warnings.")
+    suffix = f" ({len(files)} canonical files checked)"
+    print(("OTA metadata validation passed." if not messages else "OTA metadata validation completed with warnings.") + suffix)
     return 0
 
 
