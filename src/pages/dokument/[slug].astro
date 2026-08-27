@@ -1,6 +1,7 @@
 ---
 import LayoutDocument from '../../layouts/LayoutDocument.astro';
 import { getCollection, render } from 'astro:content';
+import { resolveDocumentReferences } from '../../lib/references';
 
 export async function getStaticPaths() {
   const docs = await getCollection('documents');
@@ -17,11 +18,7 @@ if (doc.data.redacted) {
 }
 
 const allDocs = await getCollection('documents');
-const relatedDocs = (doc.data.relatedDocuments ?? []).map((sig: string) => {
-  const found = allDocs.find((d: any) => d.data.signature === sig);
-  if (!found) return null;
-  return { signature: found.data.signature, title: found.data.title, slug: found.id };
-}).filter(Boolean) as Array<{ signature: string; title: string; slug: string }>;
+const relatedDocs = resolveDocumentReferences(doc.data.relatedDocuments, allDocs);
 
 const { Content } = await render(doc);
 ---
