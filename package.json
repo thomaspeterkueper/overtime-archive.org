@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "astro build",
+    "references": "node scripts/build-reference-index.mjs",
+    "build": "npm run references && astro build",
     "check:links": "node scripts/check-internal-links.mjs",
     "verify": "npm run build && npm run check:links"
   },
