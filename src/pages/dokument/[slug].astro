@@ -6,7 +6,7 @@ import { resolveDocumentReferences } from '../../lib/references';
 export async function getStaticPaths() {
   const docs = await getCollection('documents');
   return docs.map(doc => ({
-    params: { slug: doc.id },
+    params: { slug: doc.slug },
     props: { doc },
   }));
 }
