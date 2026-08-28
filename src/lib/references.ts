@@ -73,7 +73,7 @@ export function resolveDocumentReferences(
         relation: rel.relation ?? 'related',
         context: rel.context,
         status: 'resolved' as const,
-        slug: found.slug,
+        slug: found.id,
       };
     }
 
