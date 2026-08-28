@@ -36,7 +36,19 @@ function contextFor(text, index, length) {
 }
 
 function baseSignature(signature) {
-  return signature.replace(/-(?:[0-9]{4}|[0-9]+BCE)(?:-(?:[A-Z]{2}|MULTI))?$/, '');
+  const parts = signature.split('-');
+  if (parts.length <= 3) return signature;
+  const language = parts.at(-1);
+  const temporal = language && /^(?:DE|EN|MULTI)$/.test(language) ? parts.at(-2) : parts.at(-1);
+  const hasLanguage = /^(?:DE|EN|MULTI)$/.test(language ?? '');
+  if (/^(?:[0-9]{4}|[0-9]+BCE)$/.test(temporal ?? '')) {
+    return parts.slice(0, hasLanguage ? -2 : -1).join('-');
+  }
+  return signature;
+}
+
+function baseId(signature) {
+  return signature.match(/^(OTA-[A-Z]+-[0-9]{4})(?:-|$)/)?.[1] ?? null;
 }
 
 function stripLanguage(signature) {
@@ -47,6 +59,7 @@ const files = walk(docsDir).filter(file => /\.(md|mdx)$/i.test(file));
 const documents = [];
 const bySignature = new Map();
 const byBaseSignature = new Map();
+const byBaseId = new Map();
 
 for (const file of files) {
   const text = fs.readFileSync(file, 'utf8');
@@ -61,9 +74,16 @@ for (const file of files) {
   };
   documents.push(doc);
   bySignature.set(signature, doc);
+
   const base = baseSignature(signature);
   if (!byBaseSignature.has(base)) byBaseSignature.set(base, []);
   byBaseSignature.get(base).push(doc);
+
+  const id = baseId(signature);
+  if (id) {
+    if (!byBaseId.has(id)) byBaseId.set(id, []);
+    byBaseId.get(id).push(doc);
+  }
 }
 
 let registry = [];
@@ -121,28 +141,33 @@ function classify(target, reg) {
     };
   }
 
+  // Bare OTA series/number references (for example OTA-SCI-0045) are common
+  // in the archive. Match them against the stable series/number prefix, not
+  // against temporal suffix stripping: the four-digit series number itself
+  // must never be mistaken for a year.
+  if (baseIdPattern.test(target)) {
+    const idCandidates = (byBaseId.get(target) ?? [])
+      .filter(doc => doc.signature !== target)
+      .map(doc => ({ signature: doc.signature, title: doc.title, file: doc.file }));
+    if (idCandidates.length === 1) {
+      return {
+        classification: 'base-id-resolved',
+        candidates: idCandidates,
+        resolvedTarget: idCandidates[0].signature,
+      };
+    }
+    if (idCandidates.length > 1) {
+      return {
+        classification: 'base-id-ambiguous',
+        candidates: idCandidates,
+        resolvedTarget: null,
+      };
+    }
+  }
+
   const candidates = (byBaseSignature.get(baseSignature(target)) ?? [])
     .filter(doc => doc.signature !== target)
     .map(doc => ({ signature: doc.signature, title: doc.title, file: doc.file }));
-
-  // Bare OTA series/number references (for example OTA-SCI-0045) are common
-  // in the archive. Resolve them only when the repository contains exactly
-  // one document under that base identifier. If several temporal, language,
-  // Nachtrag or other variants exist, the reference stays open.
-  if (baseIdPattern.test(target) && candidates.length === 1) {
-    return {
-      classification: 'base-id-resolved',
-      candidates,
-      resolvedTarget: candidates[0].signature,
-    };
-  }
-  if (baseIdPattern.test(target) && candidates.length > 1) {
-    return {
-      classification: 'base-id-ambiguous',
-      candidates,
-      resolvedTarget: null,
-    };
-  }
 
   if (candidates.length) {
     const sameTemporalDifferentLanguage = candidates.filter(candidate =>
