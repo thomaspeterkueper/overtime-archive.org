@@ -1,16 +1,31 @@
 ---
 import LayoutBase from './LayoutBase.astro';
+import '../styles/document-v3.css';
 import type { CollectionEntry } from 'astro:content';
 import type { ResolvedReference } from '../lib/references';
+
+interface QualityProfile {
+  extracted?: {
+    title?: string | null;
+    author?: string | null;
+    classification?: string | null;
+    excerpt?: string | null;
+  };
+  quality?: {
+    genericTitle?: boolean;
+    genericSummary?: boolean;
+  };
+}
 
 interface Props {
   doc: CollectionEntry<'documents'>;
   relatedDocs?: ResolvedReference[];
+  qualityProfile?: QualityProfile | null;
 }
 
-const { doc, relatedDocs = [] } = Astro.props;
+const { doc, relatedDocs = [], qualityProfile = null } = Astro.props;
 const { signature, title, series, version, year, language, epistemicStatus,
-        accessLevel, status, universe, summary, relatedDocuments } = doc.data;
+        accessLevel, status, universe, summary, tags } = doc.data;
 
 const relationLabels: Record<string, string> = {
   references: 'Verweist auf',
@@ -23,107 +38,160 @@ const relationLabels: Record<string, string> = {
   related: 'Verwandt',
 };
 
-const descriptionStatusLabels: Record<string, string> = {
-  explicit: 'überlieferte Beschreibung',
-  reconstructed: 'rekonstruierte Beschreibung',
-  planned: 'geplanter Inhalt',
-  uncertain: 'unsichere Rekonstruktion',
+const epistemicLabels: Record<string, string> = {
+  R: 'realwissenschaftlich / belegt',
+  H: 'Hypothese',
+  T: 'theoretisch',
+  S: 'spekulativ',
+  I: 'Interpretation',
+  F: 'fiktional',
+  W: 'Werk-Setzung',
+  OFFEN: 'offen',
 };
 
-const today = new Date().toISOString().slice(0, 10);
+const tokenLabels: Record<string, string> = {
+  PHYS: 'Physik', THERM: 'Thermodynamik', GEO: 'Geowissenschaften', PLANET: 'Planetologie',
+  PHIL: 'Philosophie', SCI: 'Wissenschaftstheorie', BIO: 'Biologie', CHEM: 'Chemie',
+  HIST: 'Geschichte', HIS: 'Geschichte', TECH: 'Technologie', TEC: 'Technologie',
+  LANG: 'Sprache', LING: 'Linguistik', SOC: 'Gesellschaft', CULT: 'Kultur',
+};
+
+function humanDomain(id: string) {
+  const core = id.replace(/^KD:/, '').replace(/:N\d+$/, '');
+  return core.split('-').map(token => tokenLabels[token] ?? token.charAt(0) + token.slice(1).toLowerCase()).join(' · ');
+}
+
+const displayTitle = qualityProfile?.quality?.genericTitle && qualityProfile?.extracted?.title
+  ? qualityProfile.extracted.title
+  : title;
+const author = qualityProfile?.extracted?.author ?? null;
+const classification = qualityProfile?.extracted?.classification ?? `${series}-Dokument`;
+const isGenericSummary = qualityProfile?.quality?.genericSummary ?? false;
+const statusLabel = status === 'AKTIV' ? 'Aktiv' : status.charAt(0) + status.slice(1).toLowerCase();
+const visibleRelations = relatedDocs.slice(0, 6);
 ---
 
-<LayoutBase title={title}>
-  <div class="document-wrapper">
-
-    <aside class="document-aside-left" aria-label="Dokumentmetadaten">
-      <div class="aside-meta-block">
-        <div><span class="label">SIGNATUR</span></div>
-        <div style="color:var(--rust-faint)">{signature}</div>
-        <br/>
-        <div><span class="label">VERSION</span></div>
-        <div>{version}</div>
-        <br/>
-        <div><span class="label">JAHR</span></div>
-        <div>{year}</div>
-        <br/>
-        <div><span class="label">SPRACHE</span></div>
-        <div>{language}</div>
-        <br/>
-        <div><span class="label">ZUGANG</span></div>
-        <div>TIER-{accessLevel}</div>
-        <br/>
-        <div><span class="label">STATUS</span></div>
-        <div style={`color:${status === 'AKTIV' ? '#4A7C59' : status === 'GESPERRT' ? '#B0302A' : '#C8923A'}`}>{status}</div>
+<LayoutBase title={displayTitle} description={summary}>
+  <div class="document-v3">
+    <aside class="document-v3-context" aria-label="Archivkontext">
+      <div>
+        <div class="context-kicker">Archivkontext</div>
       </div>
 
-      {universe && universe.length > 0 && (
-        <div class="aside-meta-block">
-          <div><span class="label">UNIVERSUM</span></div>
-          {universe.map(u => <div>{u}</div>)}
-        </div>
-      )}
-
-      <div class="aside-meta-block" style="font-size:0.55rem;opacity:0.6">
-        <div>&gt; ZULETZT AUFGERUFEN:</div>
-        <div>{today}</div>
-        {relatedDocuments && (
-          <>
-            <br/>
-            <div>&gt; VERWEIST AUF:</div>
-            <div>{relatedDocuments.length} DOKUMENT{relatedDocuments.length !== 1 ? 'E' : ''}</div>
-          </>
-        )}
-      </div>
+      <section class="context-card">
+        <div class="context-label">Einordnung</div>
+        <div class="context-value">{classification}</div>
+        <span class="context-code">{series} · {year} · {language}</span>
+      </section>
 
       {doc.data.knowledge?.domains && doc.data.knowledge.domains.length > 0 && (
-        <div class="doc-aside-section" style="margin-top:1.5rem">
-          <div style="font-family:var(--font-mono);font-size:0.52rem;color:var(--rust);letter-spacing:0.15em;margin-bottom:0.6rem">KNOWLEDGE DOMAINS</div>
-          <div style="display:flex;flex-direction:column;gap:0.3rem">
-            {doc.data.knowledge.domains.map((d: any) => (
-              <a href={`/suche?domain=${d.id}`}
-                 style="font-family:var(--font-mono);font-size:0.6rem;color:var(--blue-light);text-decoration:none;padding:0.2rem 0.4rem;border:1px solid rgba(44,95,138,0.25);display:flex;justify-content:space-between;align-items:center"
-                 title={d.id}>
-                <span>{d.id}</span>
-                <span style="color:var(--ink-faint);font-size:0.5rem">{d.level || ''}</span>
+        <section class="context-card">
+          <div class="context-label">Wissensdomänen</div>
+          <div style="display:grid;gap:0.7rem">
+            {doc.data.knowledge.domains.map((domain: any) => (
+              <a href={`/suche?domain=${domain.id}`} style="text-decoration:none">
+                <span class="context-value">{humanDomain(domain.id)}</span>
+                <span class="context-code">{domain.id}{domain.level ? ` · ${domain.level}` : ''}</span>
               </a>
             ))}
           </div>
-          <div style="font-family:var(--font-mono);font-size:0.48rem;color:var(--ink-faint);margin-top:0.4rem;line-height:1.4">
-            Knowledge Graph · kueper-knowledge-graph
-          </div>
+        </section>
+      )}
+
+      {universe && universe.length > 0 && (
+        <section class="context-card">
+          <div class="context-label">Universum / Kontext</div>
+          <div class="context-value">{universe.join(' · ')}</div>
+        </section>
+      )}
+
+      {tags && tags.length > 0 && (
+        <section class="context-card">
+          <div class="context-label">Schlagworte</div>
+          <div class="context-value" style="font-size:0.9rem">{tags.slice(0, 6).join(' · ')}</div>
+        </section>
+      )}
+
+      <section class="context-card">
+        <div class="context-label">Epistemische Einordnung</div>
+        <div style="display:grid;gap:0.45rem">
+          {epistemicStatus.map(es => (
+            <div>
+              <span class="context-value">[{es}] {epistemicLabels[es] ?? es}</span>
+            </div>
+          ))}
         </div>
+      </section>
+
+      {visibleRelations.length > 0 && (
+        <section class="context-card">
+          <div class="context-label">Beziehungen</div>
+          <div class="context-relations">
+            {visibleRelations.map(rd => rd.slug ? (
+              <a class="context-relation" href={`/dokument/${rd.slug}`}>
+                <span class="context-relation-kind">{relationLabels[rd.relation] ?? rd.relation}</span>
+                <span class="context-relation-title">{rd.title}</span>
+                <span class="context-code">{rd.signature}</span>
+              </a>
+            ) : (
+              <div class="context-relation">
+                <span class="context-relation-kind">{relationLabels[rd.relation] ?? rd.relation}</span>
+                <span class="context-relation-title">{rd.title}</span>
+                <span class="context-code">{rd.signature} · {rd.status}</span>
+              </div>
+            ))}
+          </div>
+        </section>
       )}
     </aside>
 
-    <article class="document-paper fade-in">
-      <header class="doc-meta-header">
-        <div class="doc-signature">{signature}</div>
-        <h1 class="doc-title">{title}</h1>
+    <article class="document-v3-paper fade-in" data-signature={signature} data-doc-title={displayTitle}>
+      <header class="document-v3-head">
+        <div class="document-v3-eyebrow">{series} · {classification} · {year}</div>
+        <h1 class="document-v3-title">{displayTitle}</h1>
+        {author && <div class="document-v3-author">{author}</div>}
 
-        <div class="doc-meta-grid">
-          <div class="meta-item"><span class="meta-key">Serie</span><span class="meta-val">{series}</span></div>
-          <div class="meta-item"><span class="meta-key">Version</span><span class="meta-val">{version}</span></div>
-          <div class="meta-item"><span class="meta-key">Jahr</span><span class="meta-val">{year}</span></div>
-          <div class="meta-item"><span class="meta-key">Sprache</span><span class="meta-val">{language}</span></div>
-          <div class="meta-item"><span class="meta-key">Status</span><span class="meta-val" style={`color:${status === 'AKTIV' ? '#4A7C59' : '#B0302A'}`}>{status}</span></div>
-          <div class="meta-item"><span class="meta-key">Zugangsstufe</span><span class="meta-val">TIER {accessLevel}</span></div>
-        </div>
-
-        <div style="display:flex;gap:0.4rem;flex-wrap:wrap;margin-top:1rem">
-          {epistemicStatus.map(es => (
-            <span class={`epistemic-tag ${es.replace('-','')}`}>[{es}]</span>
-          ))}
-        </div>
-
-        <blockquote style="margin-top:1.5rem;font-style:italic;border-left:2px solid var(--paper-dark);padding:0.5rem 1rem;color:var(--ink-light);font-size:0.9rem">
+        <div class:list={['document-v3-summary', { 'is-generic': isGenericSummary }] }>
           {summary}
-        </blockquote>
+          {isGenericSummary && <span class="document-v3-summary-note">Kurzbeschreibung im Bestand · redaktionell zu prüfen</span>}
+        </div>
+
+        <div class="document-v3-chips" aria-label="Dokumentmetadaten">
+          <span class="document-v3-chip">{year}</span>
+          <span class="document-v3-chip">{language}</span>
+          <span class="document-v3-chip">{series}</span>
+          <span class="document-v3-chip">TIER {accessLevel}</span>
+          <span class="document-v3-chip status">{statusLabel}</span>
+          {epistemicStatus.map(es => <span class="document-v3-chip epistemic">[{es}]</span>)}
+        </div>
+        <div class="document-v3-idline">{signature} · {version}</div>
+
+        {visibleRelations.length > 0 && (
+          <section class="archive-context" aria-label="Im Archivkontext">
+            <div class="archive-context-title">Im Archivkontext</div>
+            <div class="archive-context-list">
+              {visibleRelations.map(rd => (
+                <div class="archive-context-item">
+                  <span class="archive-context-kind">{relationLabels[rd.relation] ?? rd.relation}</span>
+                  <span>
+                    {rd.slug ? <a href={`/dokument/${rd.slug}`}>{rd.title}</a> : rd.title}
+                    <span class="context-code" style="display:inline;margin-left:0.45rem">{rd.signature}</span>
+                  </span>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
       </header>
 
       <div class="doc-body">
         <slot />
       </div>
+
+      <section class="epistemic-note" aria-label="Epistemische Fußnote">
+        <div class="epistemic-note-title">Epistemische Fußnote</div>
+        <p>Dieses Dokument verwendet die OTA-Markierungen {epistemicStatus.map(es => `[${es}]`).join(', ')}. {epistemicStatus.map(es => epistemicLabels[es]).filter(Boolean).join(' · ')}. Die Markierungen kennzeichnen Aussageebenen innerhalb des Archivs und sind keine Qualitätsnote.</p>
+      </section>
 
       <footer class="doc-footer">
         <div class="doc-footer-row">
@@ -131,70 +199,8 @@ const today = new Date().toISOString().slice(0, 10);
           <span>overtimearchive.org</span>
           <span>CC BY-NC 4.0</span>
         </div>
-
-        {relatedDocs.length > 0 && (
-          <section class="related-docs" aria-label="Dokumentbeziehungen">
-            <div class="related-title">▸ Dokumentbeziehungen</div>
-            <div style="display:grid;gap:0.8rem;margin-top:0.75rem">
-              {relatedDocs.map(rd => (
-                <article style="border:1px solid var(--paper-dark);padding:0.8rem 1rem;background:rgba(255,255,255,0.18)">
-                  <div style="display:flex;gap:0.6rem;align-items:baseline;flex-wrap:wrap">
-                    {rd.slug ? (
-                      <a href={`/dokument/${rd.slug}`} style="font-family:var(--font-mono);font-size:0.64rem;color:var(--rust);text-decoration:none">
-                        {rd.signature}
-                      </a>
-                    ) : (
-                      <span style="font-family:var(--font-mono);font-size:0.64rem;color:var(--rust-faint)">{rd.signature}</span>
-                    )}
-                    <span style="font-family:var(--font-mono);font-size:0.52rem;color:var(--ink-faint)">{relationLabels[rd.relation] ?? rd.relation}</span>
-                    {rd.status !== 'resolved' && (
-                      <span style="font-family:var(--font-mono);font-size:0.5rem;color:var(--red-faint)">[{rd.status.toUpperCase()}]</span>
-                    )}
-                  </div>
-                  <div style="font-family:var(--font-display);font-size:0.95rem;color:var(--ink);margin-top:0.25rem">{rd.title}</div>
-                  <div style="font-family:var(--font-serif);font-size:0.82rem;line-height:1.55;color:var(--ink-light);margin-top:0.3rem">{rd.description}</div>
-                  {rd.descriptionStatus && (
-                    <div style="font-family:var(--font-mono);font-size:0.48rem;color:var(--ink-faint);margin-top:0.35rem">
-                      {descriptionStatusLabels[rd.descriptionStatus] ?? rd.descriptionStatus}
-                    </div>
-                  )}
-                  {rd.context && rd.context !== rd.description && (
-                    <div style="font-family:var(--font-mono);font-size:0.52rem;color:var(--ink-faint);margin-top:0.35rem">Kontext: {rd.context}</div>
-                  )}
-                </article>
-              ))}
-            </div>
-          </section>
-        )}
-
         <div class="closing-mark">ᐃ</div>
       </footer>
     </article>
-
-    <aside class="document-aside-right" aria-label="Dok-Navigation">
-      <div class="aside-meta-block">
-        <div><span class="label">SERIE</span></div>
-        <div style="color:var(--rust-faint)">{series}</div>
-      </div>
-
-      {doc.data.knowledge?.domains && doc.data.knowledge.domains.length > 0 && (
-        <div class="doc-aside-section" style="margin-top:1.5rem">
-          <div style="font-family:var(--font-mono);font-size:0.52rem;color:var(--rust);letter-spacing:0.15em;margin-bottom:0.6rem">KNOWLEDGE DOMAINS</div>
-          <div style="display:flex;flex-direction:column;gap:0.3rem">
-            {doc.data.knowledge.domains.map((d: any) => (
-              <a href={`/suche?domain=${d.id}`}
-                 style="font-family:var(--font-mono);font-size:0.6rem;color:var(--blue-light);text-decoration:none;padding:0.2rem 0.4rem;border:1px solid rgba(44,95,138,0.25);display:flex;justify-content:space-between;align-items:center"
-                 title={d.id}>
-                <span>{d.id}</span>
-                <span style="color:var(--ink-faint);font-size:0.5rem">{d.level || ''}</span>
-              </a>
-            ))}
-          </div>
-          <div style="font-family:var(--font-mono);font-size:0.48rem;color:var(--ink-faint);margin-top:0.4rem;line-height:1.4">
-            Knowledge Graph · kueper-knowledge-graph
-          </div>
-        </div>
-      )}
-    </aside>
   </div>
 </LayoutBase>
