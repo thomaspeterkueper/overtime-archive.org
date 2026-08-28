@@ -137,3 +137,17 @@ const output = {
 fs.writeFileSync(outputPath, JSON.stringify(output, null, 2) + '\n');
 console.log(`Reference index generated: ${documents.length} documents, ${references.length} references, ${openTargets.length} open targets.`);
 console.log(`Open targets: ${classificationCounts.missing} missing, ${classificationCounts['variant-candidate']} variant candidates, ${classificationCounts.planned} planned, ${classificationCounts.uncertain} uncertain.`);
+
+const variantTargets = openTargets
+  .map(target => references.find(ref => ref.target === target))
+  .filter(ref => ref?.classification === 'variant-candidate')
+  .sort((a, b) => (b?.priority ?? 0) - (a?.priority ?? 0) || a.target.localeCompare(b.target));
+
+if (variantTargets.length) {
+  console.log('Variant candidates:');
+  for (const ref of variantTargets) {
+    const sources = [...new Set(references.filter(item => item.target === ref.target).map(item => item.source))];
+    const candidates = ref.candidates.map(candidate => `${candidate.signature} :: ${candidate.title}`).join(' | ');
+    console.log(`VARIANT\t${ref.target}\tpriority=${ref.priority}\tsources=${sources.join(',')}\tcandidates=${candidates}`);
+  }
+}
