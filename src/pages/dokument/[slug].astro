@@ -2,6 +2,7 @@
 import LayoutDocument from '../../layouts/LayoutDocument.astro';
 import { getCollection, render } from 'astro:content';
 import { resolveDocumentReferences } from '../../lib/references';
+import qualityIndex from '../../data/archive-quality.generated.json';
 
 export async function getStaticPaths() {
   const docs = await getCollection('documents');
@@ -19,10 +20,10 @@ if (doc.data.redacted) {
 
 const allDocs = await getCollection('documents');
 const relatedDocs = resolveDocumentReferences(doc.data.relatedDocuments, allDocs);
-
+const qualityProfile = qualityIndex.documents.find((item: any) => item.signature === doc.data.signature) ?? null;
 const { Content } = await render(doc);
 ---
 
-<LayoutDocument doc={doc} relatedDocs={relatedDocs}>
+<LayoutDocument doc={doc} relatedDocs={relatedDocs} qualityProfile={qualityProfile}>
   <Content />
 </LayoutDocument>
