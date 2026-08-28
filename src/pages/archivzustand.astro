@@ -1,95 +1,23 @@
 ---
 import LayoutBase from '../layouts/LayoutBase.astro';
 import qualityIndex from '../data/archive-quality.generated.json';
-
-const docs = qualityIndex.documents as Array<any>;
-const summary = qualityIndex.summary as any;
-const labels: Record<string,string> = {
-  SUBSTANZIELL: 'SUBSTANZIELL',
-  KURZ: 'KURZ',
-  FRAGMENT: 'FRAGMENT',
-};
-const flagLabels: Record<string,string> = {
-  GENERIC_TITLE: 'Titel generisch',
-  GENERIC_SUMMARY: 'Summary generisch',
-  RELATION_GAP: 'Relationen fehlen im Frontmatter',
-  NO_VISUAL: 'kein Visual',
-  NO_HEADINGS: 'keine Überschriften',
-  LOW_SUBSTANCE: 'geringer Textumfang',
-};
+const docs=qualityIndex.documents as Array<any>; const summary=qualityIndex.summary as any;
+const labels:Record<string,string>={SUBSTANZIELL:'SUBSTANZIELL',KURZ:'KURZ',FRAGMENT:'FRAGMENT'};
+const flagLabels:Record<string,string>={GENERIC_TITLE:'Titel generisch',GENERIC_SUMMARY:'Summary generisch',RELATION_GAP:'Relationen fehlen im Frontmatter',NO_VISUAL:'kein Visual',NO_HEADINGS:'keine Überschriften',LOW_SUBSTANCE:'geringer Textumfang'};
 ---
-
 <LayoutBase title="Archivzustand">
-  <section class="catalog-section" style="max-width:1200px;margin:0 auto;padding-top:2.5rem;padding-bottom:4rem">
-    <div style="font-family:var(--font-mono);font-size:0.62rem;color:var(--rust);letter-spacing:0.18em;margin-bottom:0.7rem">OTA · REDAKTIONELLE DIAGNOSTIK</div>
-    <h1 style="font-family:var(--font-display);font-size:2.2rem;line-height:1.1;margin-bottom:0.8rem">Archivzustand</h1>
-    <p style="font-family:var(--font-serif);font-size:1rem;line-height:1.65;color:var(--ink-light);max-width:78ch">Automatisch erzeugte Arbeitsansicht. Sie verändert keine kanonischen Dokumente. Die Einstufung basiert auf Strukturmerkmalen wie Textumfang, Überschriften, Summary- und Titelqualität sowie dokumentierten Beziehungen und dient ausschließlich der redaktionellen Priorisierung.</p>
-
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:0.8rem;margin:1.8rem 0 2.4rem">
-      <div class="quality-stat"><strong>{summary.documents}</strong><span>Dokumente</span></div>
-      <div class="quality-stat"><strong>{summary.substantial}</strong><span>substanziell</span></div>
-      <div class="quality-stat"><strong>{summary.short}</strong><span>kurz</span></div>
-      <div class="quality-stat"><strong>{summary.fragments}</strong><span>Fragmente</span></div>
-      <div class="quality-stat"><strong>{summary.genericTitles}</strong><span>generische Titel</span></div>
-      <div class="quality-stat"><strong>{summary.genericSummaries}</strong><span>generische Summary</span></div>
-      <div class="quality-stat"><strong>{summary.relationGaps}</strong><span>Relationslücken</span></div>
-    </div>
-
-    <div style="display:flex;gap:0.6rem;flex-wrap:wrap;margin-bottom:1.2rem">
-      <button class="quality-filter active" data-filter="ALL">ALLE</button>
-      <button class="quality-filter" data-filter="FRAGMENT">FRAGMENTE</button>
-      <button class="quality-filter" data-filter="GENERIC_TITLE">TITEL PRÜFEN</button>
-      <button class="quality-filter" data-filter="GENERIC_SUMMARY">SUMMARY PRÜFEN</button>
-      <button class="quality-filter" data-filter="RELATION_GAP">RELATIONEN PRÜFEN</button>
-    </div>
-
-    <div style="overflow-x:auto">
-      <table class="document-table active quality-table" style="width:100%">
-        <thead><tr><th>DOKUMENT</th><th>SUBSTANZ</th><th>WÖRTER</th><th>STRUKTUR</th><th>EXTRAHIERTE HINWEISE</th><th>PRÜFPUNKTE</th></tr></thead>
-        <tbody>
-          {docs.map(doc => (
-            <tr data-substance={doc.quality.substance} data-flags={(doc.quality.flags ?? []).join(' ')}>
-              <td style="min-width:220px">
-                <a href={`/dokument/${doc.file.replace(/\.(?:md|mdx)$/i,'').toLowerCase()}`} class="table-link">
-                  <span class="sig" style="display:block;color:var(--blue-light)">{doc.signature}</span>
-                  <span style="display:block;font-family:var(--font-serif);font-size:0.82rem;margin-top:0.2rem">{doc.canonical.title}</span>
-                </a>
-              </td>
-              <td><span class={`quality-badge ${doc.quality.substance.toLowerCase()}`}>{labels[doc.quality.substance] ?? doc.quality.substance}</span></td>
-              <td>{doc.metrics.words}</td>
-              <td style="white-space:nowrap">{doc.metrics.headings} H · {doc.metrics.images} V · {doc.metrics.inlineReferenceTargets} R</td>
-              <td style="min-width:260px">
-                {doc.extracted.title && <div><strong>Titel:</strong> {doc.extracted.title}</div>}
-                {doc.extracted.author && <div><strong>Autor:</strong> {doc.extracted.author}</div>}
-                {doc.extracted.classification && <div><strong>Typ:</strong> {doc.extracted.classification}</div>}
-                {!doc.extracted.title && !doc.extracted.author && !doc.extracted.classification && <span style="color:var(--ink-faint)">keine strukturierten Hinweise extrahiert</span>}
-              </td>
-              <td style="min-width:260px">
-                {(doc.quality.flags ?? []).map((flag: string) => <span class="quality-flag">{flagLabels[flag] ?? flag}</span>)}
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
-  </section>
-
-  <style>
-    .quality-stat{background:var(--paper);border:1px solid rgba(44,36,22,.1);padding:1rem;display:flex;flex-direction:column;gap:.2rem}.quality-stat strong{font-family:var(--font-display);font-size:1.6rem}.quality-stat span{font-family:var(--font-mono);font-size:.58rem;color:var(--ink-faint);text-transform:uppercase;letter-spacing:.1em}.quality-filter{font-family:var(--font-mono);font-size:.6rem;letter-spacing:.08em;padding:.45rem .7rem;border:1px solid rgba(44,36,22,.16);background:var(--paper);color:var(--ink-light);cursor:pointer}.quality-filter.active,.quality-filter:hover{border-color:var(--rust);color:var(--rust);background:rgba(139,69,19,.04)}.quality-badge{font-family:var(--font-mono);font-size:.58rem;padding:.18rem .35rem;border:1px solid rgba(44,36,22,.15)}.quality-badge.substanziell{color:var(--green-term);border-color:rgba(61,122,90,.25)}.quality-badge.kurz{color:var(--amber-term);border-color:rgba(200,146,58,.3)}.quality-badge.fragment{color:var(--red-ink);border-color:rgba(176,48,42,.25)}.quality-flag{display:inline-block;font-family:var(--font-mono);font-size:.54rem;margin:.12rem .18rem .12rem 0;padding:.12rem .3rem;background:rgba(139,69,19,.05);border:1px solid rgba(139,69,19,.12);color:var(--ink-light)}
-  </style>
-
-  <script>
-    const buttons = Array.from(document.querySelectorAll('.quality-filter'));
-    const rows = Array.from(document.querySelectorAll('.quality-table tbody tr'));
-    buttons.forEach(button => button.addEventListener('click', () => {
-      const filter = button.getAttribute('data-filter') || 'ALL';
-      buttons.forEach(item => item.classList.toggle('active', item === button));
-      rows.forEach(row => {
-        const substance = row.getAttribute('data-substance') || '';
-        const flags = row.getAttribute('data-flags') || '';
-        const visible = filter === 'ALL' || substance === filter || flags.split(' ').includes(filter);
-        row.style.display = visible ? '' : 'none';
-      });
-    }));
-  </script>
+<section class="catalog-section" style="max-width:1200px;margin:0 auto;padding:2.5rem 0 4rem">
+<div style="font-family:var(--font-mono);font-size:.62rem;color:var(--rust);letter-spacing:.18em;margin-bottom:.7rem">OTA · REDAKTIONELLE DIAGNOSTIK</div><h1 style="font-family:var(--font-display);font-size:2.2rem;line-height:1.1;margin-bottom:.8rem">Archivzustand</h1>
+<p style="font-family:var(--font-serif);font-size:1rem;line-height:1.65;color:var(--ink-light);max-width:82ch">Automatisch erzeugte Arbeitsansicht. Kandidaten werden ausschließlich aus vorhandenen Dokumentinhalten gewonnen. <strong>Sicher</strong> bedeutet mechanisch eindeutig extrahierbar; Summary-Kandidaten bleiben bewusst prüfpflichtig. Diese Seite verändert keine kanonischen Dokumente.</p>
+<div class="stats"><div><strong>{summary.documents}</strong><span>Dokumente</span></div><div><strong>{summary.safeTitleCandidates ?? 0}</strong><span>sichere Titelkandidaten</span></div><div><strong>{summary.summaryCandidates ?? 0}</strong><span>Summary-Kandidaten</span></div><div><strong>{summary.safeRelationCandidates ?? 0}</strong><span>sichere Relationskandidaten</span></div><div><strong>{summary.fragments}</strong><span>Fragmente</span></div></div>
+<div class="filters"><button class="quality-filter active" data-filter="ALL">ALLE</button><button class="quality-filter" data-filter="SAFE_TITLE">SICHERE TITEL</button><button class="quality-filter" data-filter="SUMMARY_CANDIDATE">SUMMARY-KANDIDATEN</button><button class="quality-filter" data-filter="SAFE_RELATION">RELATIONEN</button><button class="quality-filter" data-filter="FRAGMENT">FRAGMENTE</button></div>
+<div style="overflow-x:auto"><table class="document-table active quality-table" style="width:100%"><thead><tr><th>DOKUMENT</th><th>SUBSTANZ</th><th>METADATEN-KANDIDATEN</th><th>PRÜFPUNKTE</th></tr></thead><tbody>
+{docs.map(doc=><tr data-substance={doc.quality.substance} data-candidates={`${doc.candidates?.title?.safe?'SAFE_TITLE ':''}${doc.candidates?.summary?'SUMMARY_CANDIDATE ':''}${doc.candidates?.relations?.length?'SAFE_RELATION':''}`}>
+<td style="min-width:220px"><a href={`/dokument/${doc.file.replace(/\.(?:md|mdx)$/i,'').toLowerCase()}`} class="table-link"><span class="sig" style="display:block;color:var(--blue-light)">{doc.signature}</span><span style="display:block;font-family:var(--font-serif);font-size:.82rem;margin-top:.2rem">{doc.canonical.title}</span></a><small>{doc.metrics.words} Wörter · {doc.metrics.headings} H · {doc.metrics.inlineReferenceTargets} R</small></td>
+<td><span class={`quality-badge ${doc.quality.substance.toLowerCase()}`}>{labels[doc.quality.substance]??doc.quality.substance}</span></td>
+<td style="min-width:360px">{doc.candidates?.title&&<div class="candidate safe"><b>TITEL · SICHER</b><span>{doc.candidates.title.value}</span><small>Quelle: explizit beschriftetes Feld im Dokument</small></div>}{doc.candidates?.summary&&<div class="candidate review"><b>SUMMARY · PRÜFEN</b><span>{doc.candidates.summary.value}</span><small>Quelle: erster substanzieller Absatz; keine automatische Übernahme</small></div>}{doc.candidates?.relations?.length>0&&<div class="candidate safe"><b>RELATIONEN · SICHER EXTRAHIERBAR</b><span>{doc.candidates.relations.map((r:any)=>r.target).join(' · ')}</span><small>Quelle: explizite OTA-Signaturen im Dokumenttext</small></div>}{!doc.candidates?.count&&<span style="color:var(--ink-faint)">kein belastbarer Kandidat</span>}</td>
+<td style="min-width:230px">{(doc.quality.flags??[]).map((flag:string)=><span class="quality-flag">{flagLabels[flag]??flag}</span>)}</td></tr>)}
+</tbody></table></div></section>
+<style>.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:.8rem;margin:1.8rem 0 2rem}.stats>div{background:var(--paper);border:1px solid rgba(44,36,22,.1);padding:1rem;display:flex;flex-direction:column}.stats strong{font-family:var(--font-display);font-size:1.6rem}.stats span,.candidate small,td small{font-family:var(--font-mono);font-size:.55rem;color:var(--ink-faint)}.filters{display:flex;gap:.6rem;flex-wrap:wrap;margin-bottom:1.2rem}.quality-filter{font-family:var(--font-mono);font-size:.6rem;padding:.45rem .7rem;border:1px solid rgba(44,36,22,.16);background:var(--paper);cursor:pointer}.quality-filter.active,.quality-filter:hover{border-color:var(--rust);color:var(--rust)}.quality-badge{font-family:var(--font-mono);font-size:.58rem;padding:.18rem .35rem;border:1px solid rgba(44,36,22,.15)}.candidate{margin:0 0 .65rem;padding:.55rem .65rem;border-left:2px solid rgba(44,36,22,.2);display:flex;flex-direction:column;gap:.18rem}.candidate b{font-family:var(--font-mono);font-size:.56rem;letter-spacing:.06em}.candidate span{font-family:var(--font-serif);font-size:.82rem;line-height:1.4}.candidate.safe{border-left-color:var(--green-term)}.candidate.review{border-left-color:var(--amber-term)}.quality-flag{display:inline-block;font-family:var(--font-mono);font-size:.54rem;margin:.12rem;padding:.12rem .3rem;background:rgba(139,69,19,.05);border:1px solid rgba(139,69,19,.12)}</style>
+<script>const buttons=Array.from(document.querySelectorAll('.quality-filter'));const rows=Array.from(document.querySelectorAll('.quality-table tbody tr'));buttons.forEach(button=>button.addEventListener('click',()=>{const f=button.getAttribute('data-filter')||'ALL';buttons.forEach(x=>x.classList.toggle('active',x===button));rows.forEach(row=>{const s=row.getAttribute('data-substance')||'',c=row.getAttribute('data-candidates')||'';row.style.display=(f==='ALL'||s===f||c.split(' ').includes(f))?'':'none';});}));</script>
 </LayoutBase>
