@@ -19,7 +19,7 @@ export const GET: APIRoute = async () => {
       domains: restricted ? [] : ((doc.data.knowledge?.domains ?? []).map((d: any) => d.id)),
       access: doc.data.accessLevel ?? 0,
       status: doc.data.status,
-      slug: doc.slug,
+      slug: doc.id,
       restricted,
     };
   });
