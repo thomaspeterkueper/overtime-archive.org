@@ -7,6 +7,7 @@ const registryPath = path.join(root, 'src', 'data', 'reference-registry.json');
 const outputPath = path.join(root, 'src', 'data', 'internal-references.generated.json');
 
 const signaturePattern = /\bOTA-[A-Z]+-[0-9]{4}(?:-[A-Z0-9]+)*(?:-[0-9]{4}|-[0-9]+BCE)?(?:-[A-Z]{2}|-MULTI)?\b/g;
+const baseIdPattern = /^OTA-[A-Z]+-[0-9]{4}$/;
 
 function walk(dir) {
   if (!fs.existsSync(dir)) return [];
@@ -124,6 +125,25 @@ function classify(target, reg) {
     .filter(doc => doc.signature !== target)
     .map(doc => ({ signature: doc.signature, title: doc.title, file: doc.file }));
 
+  // Bare OTA series/number references (for example OTA-SCI-0045) are common
+  // in the archive. Resolve them only when the repository contains exactly
+  // one document under that base identifier. If several temporal, language,
+  // Nachtrag or other variants exist, the reference stays open.
+  if (baseIdPattern.test(target) && candidates.length === 1) {
+    return {
+      classification: 'base-id-resolved',
+      candidates,
+      resolvedTarget: candidates[0].signature,
+    };
+  }
+  if (baseIdPattern.test(target) && candidates.length > 1) {
+    return {
+      classification: 'base-id-ambiguous',
+      candidates,
+      resolvedTarget: null,
+    };
+  }
+
   if (candidates.length) {
     const sameTemporalDifferentLanguage = candidates.filter(candidate =>
       stripLanguage(candidate.signature) === stripLanguage(target)
@@ -160,7 +180,9 @@ const references = [...refs.values()].map(ref => {
   const analysis = classify(ref.target, reg);
   const resolvedDoc = analysis.resolvedTarget ? bySignature.get(analysis.resolvedTarget) : undefined;
   const sourceCount = sourceCountByTarget.get(ref.target)?.size ?? 0;
-  const status = resolvedDoc ? (analysis.classification === 'existing' ? 'resolved' : 'resolved-shorthand') : (reg?.status ?? 'unresolved');
+  const status = resolvedDoc
+    ? (analysis.classification === 'existing' ? 'resolved' : analysis.classification === 'base-id-resolved' ? 'resolved-base-id' : 'resolved-shorthand')
+    : (reg?.status ?? 'unresolved');
 
   return {
     ...ref,
@@ -181,6 +203,8 @@ const openTargets = [...new Set(references.filter(ref => !ref.status.startsWith(
 const allClassifications = [
   'missing',
   'shorthand-resolved',
+  'base-id-resolved',
+  'base-id-ambiguous',
   'language-ambiguous',
   'translation-missing',
   'temporal-mismatch',
@@ -208,8 +232,8 @@ const output = {
 
 fs.writeFileSync(outputPath, JSON.stringify(output, null, 2) + '\n');
 console.log(`Reference index generated: ${documents.length} documents, ${references.length} references, ${openTargets.length} open targets.`);
-console.log(`Mechanically resolved shorthand targets: ${classificationCounts['shorthand-resolved']}.`);
-console.log(`Open targets: ${classificationCounts.missing} missing, ${classificationCounts['language-ambiguous']} language-ambiguous, ${classificationCounts['translation-missing']} translation-missing, ${classificationCounts['temporal-mismatch']} temporal-mismatch, ${classificationCounts['temporal-ambiguous']} temporal-ambiguous, ${classificationCounts.underspecified} underspecified, ${classificationCounts['ambiguous-base']} ambiguous-base, ${classificationCounts.planned} planned, ${classificationCounts.uncertain} uncertain.`);
+console.log(`Mechanically resolved targets: ${classificationCounts['shorthand-resolved']} language-suffix shorthands, ${classificationCounts['base-id-resolved']} base identifiers.`);
+console.log(`Open targets: ${classificationCounts.missing} missing, ${classificationCounts['base-id-ambiguous']} base-id-ambiguous, ${classificationCounts['language-ambiguous']} language-ambiguous, ${classificationCounts['translation-missing']} translation-missing, ${classificationCounts['temporal-mismatch']} temporal-mismatch, ${classificationCounts['temporal-ambiguous']} temporal-ambiguous, ${classificationCounts.underspecified} underspecified, ${classificationCounts['ambiguous-base']} ambiguous-base, ${classificationCounts.planned} planned, ${classificationCounts.uncertain} uncertain.`);
 
 const reviewTargets = [...new Set(references.filter(ref => !ref.status.startsWith('resolved')).map(ref => ref.target))]
   .map(target => references.find(ref => ref.target === target))
