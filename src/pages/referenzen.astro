@@ -19,21 +19,16 @@ const targets = [...grouped.entries()];
 const unresolved = targets
   .filter(([, refs]) => refs.some(ref => !ref.status.startsWith('resolved')))
   .sort(([, a], [, b]) => (b[0].priority ?? 0) - (a[0].priority ?? 0) || a[0].target.localeCompare(b[0].target));
+const missingDocuments = targets
+  .filter(([, refs]) => refs[0]?.classification === 'missing')
+  .sort(([, a], [, b]) => (b[0].priority ?? 0) - (a[0].priority ?? 0) || a[0].target.localeCompare(b[0].target));
 const counts = index.summary?.classifications ?? {};
 const labels: Record<string,string> = {
-  missing: 'FEHLT',
-  existing: 'VORHANDEN',
-  'shorthand-resolved': 'KURZFORM AUFGELÖST',
-  'base-id-resolved': 'BASISSIGNATUR AUFGELÖST',
-  'base-id-ambiguous': 'BASISSIGNATUR MEHRDEUTIG',
-  'language-ambiguous': 'SPRACHE UNKLAR',
-  'translation-missing': 'SPRACHVERSION FEHLT',
-  'temporal-mismatch': 'ZEITMARKER ABWEICHEND',
-  'temporal-ambiguous': 'ZEITMARKER MEHRDEUTIG',
-  underspecified: 'UNTERBESTIMMT',
-  'ambiguous-base': 'MEHRDEUTIG',
-  planned: 'GEPLANT',
-  uncertain: 'UNKLAR',
+  missing: 'FEHLT', existing: 'VORHANDEN', 'shorthand-resolved': 'KURZFORM AUFGELÖST',
+  'base-id-resolved': 'BASISSIGNATUR AUFGELÖST', 'base-id-ambiguous': 'BASISSIGNATUR MEHRDEUTIG',
+  'language-ambiguous': 'SPRACHE UNKLAR', 'translation-missing': 'SPRACHVERSION FEHLT',
+  'temporal-mismatch': 'ZEITMARKER ABWEICHEND', 'temporal-ambiguous': 'ZEITMARKER MEHRDEUTIG',
+  underspecified: 'UNTERBESTIMMT', 'ambiguous-base': 'MEHRDEUTIG', planned: 'GEPLANT', uncertain: 'UNKLAR',
 };
 ---
 
@@ -41,66 +36,51 @@ const labels: Record<string,string> = {
   <section class="catalog-section" style="margin-top:2rem;max-width:1100px">
     <div style="font-family:var(--font-mono);font-size:0.62rem;color:var(--rust);letter-spacing:0.18em;margin-bottom:0.8rem">OTA · REFERENZ-WERKBANK</div>
     <h1 style="font-family:var(--font-display);font-size:2rem;color:var(--ink);margin-bottom:0.6rem">Referenzen</h1>
-    <p style="font-family:var(--font-serif);color:var(--ink-light);line-height:1.65;max-width:78ch">
-      Das Register erfasst Signaturverweise unabhängig davon, ob das Zieldokument bereits vorliegt. Eindeutige Kurzformen und reine Basissignaturen werden technisch aufgelöst, wenn im Archiv genau ein kanonisches Ziel existiert. Sobald mehrere Zeit-, Sprach-, Nachtrags- oder sonstige Varianten möglich sind, bleibt der Fall offen.
-    </p>
+    <p style="font-family:var(--font-serif);color:var(--ink-light);line-height:1.65;max-width:78ch">Das Register erfasst Signaturverweise unabhängig davon, ob das Zieldokument bereits vorliegt. Eindeutige Kurzformen und reine Basissignaturen werden technisch aufgelöst, wenn im Archiv genau ein kanonisches Ziel existiert. Sobald mehrere Varianten möglich sind, bleibt der Fall offen.</p>
 
     <div style="display:flex;gap:1rem;flex-wrap:wrap;margin:1.5rem 0;font-family:var(--font-mono);font-size:0.65rem">
-      <span>{index.documents.length} Dokumente</span>
-      <span>{targets.length} referenzierte Ziele</span>
-      <span>{unresolved.length} offene Ziele</span>
-      <span>{counts['shorthand-resolved'] ?? 0} Sprach-Kurzformen aufgelöst</span>
-      <span>{counts['base-id-resolved'] ?? 0} Basissignaturen aufgelöst</span>
-      <span>{counts.missing ?? 0} fehlen</span>
-      <span>{counts['base-id-ambiguous'] ?? 0} Basissignaturen mehrdeutig</span>
-      <span>{counts['translation-missing'] ?? 0} Sprachversionen fehlen</span>
-      <span>{(counts['temporal-mismatch'] ?? 0) + (counts['temporal-ambiguous'] ?? 0)} Zeitmarker-Fälle</span>
-      <span>{(counts['language-ambiguous'] ?? 0) + (counts.underspecified ?? 0) + (counts['ambiguous-base'] ?? 0)} weitere mehrdeutige Fälle</span>
+      <span>{index.documents.length} Dokumente</span><span>{targets.length} referenzierte Ziele</span><span>{unresolved.length} offene Ziele</span>
+      <span>{counts['shorthand-resolved'] ?? 0} Sprach-Kurzformen aufgelöst</span><span>{counts['base-id-resolved'] ?? 0} Basissignaturen aufgelöst</span>
+      <span>{missingDocuments.length} Dokumente zu suchen</span><span>{counts['base-id-ambiguous'] ?? 0} Basissignaturen mehrdeutig</span>
+      <span>{counts['translation-missing'] ?? 0} Sprachversionen fehlen</span><span>{(counts['temporal-mismatch'] ?? 0) + (counts['temporal-ambiguous'] ?? 0)} Zeitmarker-Fälle</span>
     </div>
 
-    <h2 style="font-family:var(--font-display);font-size:1.35rem;margin:2rem 0 1rem">Priorisierte offene Referenzen</h2>
-    <div style="display:grid;gap:0.8rem">
-      {unresolved.length === 0 ? <div>Keine offenen Referenzen.</div> : unresolved.map(([target, refs]) => {
+    <h2 id="fehlende-dokumente" style="font-family:var(--font-display);font-size:1.35rem;margin:2rem 0 0.4rem">Fehlende Dokumente · Suchliste</h2>
+    <p style="font-family:var(--font-serif);color:var(--ink-light);line-height:1.6;max-width:82ch;margin-bottom:1rem">Diese Liste enthält ausschließlich Referenzziele, für die derzeit kein kanonisches Dokument und kein eindeutiger Signaturkandidat gefunden wurde. Mehrdeutige Signaturen und fehlende Sprachfassungen stehen bewusst nicht hier. Sortiert wird nach der Zahl unabhängiger Quelldokumente: oben stehen die Funde, deren Wiederauffinden die meisten offenen Verweise schließen würde.</p>
+    <div style="overflow-x:auto"><table class="document-table active" style="width:100%"><thead><tr><th>SIGNATUR</th><th>PRIO</th><th>VERWENDET IN</th><th>SUCHHINWEIS / BELEGTEXT</th><th>STATUS</th></tr></thead><tbody>
+      {missingDocuments.map(([target, refs]) => {
         const first = refs[0];
         const sources = [...new Set(refs.map(ref => ref.source))];
-        return (
-          <article style="border:1px solid var(--paper-dark);background:var(--paper);padding:1rem 1.2rem">
-            <div style="display:flex;gap:0.7rem;align-items:baseline;flex-wrap:wrap">
-              <span style="font-family:var(--font-mono);font-size:0.68rem;color:var(--rust)">{target}</span>
-              <span style="font-family:var(--font-mono);font-size:0.52rem;color:var(--red-faint)">[{labels[first.classification ?? 'missing'] ?? first.classification}]</span>
-              <span style="font-family:var(--font-mono);font-size:0.52rem;color:var(--ink-faint)">PRIORITÄT {first.priority ?? sources.length} · {sources.length} QUELLEN</span>
-            </div>
-            <div style="font-family:var(--font-display);font-size:1rem;color:var(--ink);margin-top:0.3rem">{first.title}</div>
-            {first.description && <p style="font-family:var(--font-serif);font-size:0.85rem;color:var(--ink-light);line-height:1.55;margin:0.35rem 0">{first.description}</p>}
-            {first.candidates && first.candidates.length > 0 && (
-              <div style="margin-top:0.55rem;font-family:var(--font-mono);font-size:0.56rem;color:var(--ink-light)">
-                KANDIDATEN: {first.candidates.map(c => `${c.signature} — ${c.title}`).join(' · ')}
-              </div>
-            )}
-            <div style="font-family:var(--font-mono);font-size:0.54rem;color:var(--ink-faint);margin-top:0.65rem">VERWENDET IN</div>
-            <div style="display:flex;gap:0.35rem;flex-wrap:wrap;margin-top:0.3rem">
-              {sources.map(source => <span style="font-family:var(--font-mono);font-size:0.56rem;border:1px solid var(--paper-dark);padding:0.12rem 0.35rem">{source}</span>)}
-            </div>
-            {first.contexts?.[0] && <details style="margin-top:0.7rem"><summary style="font-family:var(--font-mono);font-size:0.54rem;cursor:pointer">BELEGTEXT ANZEIGEN</summary><p style="font-family:var(--font-serif);font-size:0.78rem;line-height:1.5">{first.contexts[0]}</p></details>}
-          </article>
-        );
+        const contexts = [...new Set(refs.flatMap(ref => ref.contexts ?? []))].slice(0, 3);
+        return <tr>
+          <td class="sig" style="white-space:nowrap">{target}</td>
+          <td>{sources.length}</td>
+          <td style="min-width:220px">{sources.join(' · ')}</td>
+          <td style="min-width:360px">
+            {first.description ? <div><strong>{first.descriptionStatus === 'canonical' ? 'Beschreibung:' : 'Hinweis:'}</strong> {first.description}</div> : null}
+            {contexts.length > 0 ? <details><summary style="cursor:pointer;font-family:var(--font-mono);font-size:0.56rem">{contexts.length} BELEGTEXT{contexts.length > 1 ? 'E' : ''}</summary>{contexts.map(context => <p style="font-family:var(--font-serif);font-size:0.76rem;line-height:1.45;margin:0.45rem 0">{context}</p>)}</details> : <span>Kein zusätzlicher Belegtext erfasst.</span>}
+          </td>
+          <td style="white-space:nowrap">ZU SUCHEN</td>
+        </tr>;
+      })}
+    </tbody></table></div>
+
+    <h2 style="font-family:var(--font-display);font-size:1.35rem;margin:2.5rem 0 1rem">Übrige offene Referenzen</h2>
+    <div style="display:grid;gap:0.8rem">
+      {unresolved.filter(([, refs]) => refs[0]?.classification !== 'missing').map(([target, refs]) => {
+        const first = refs[0]; const sources = [...new Set(refs.map(ref => ref.source))];
+        return <article style="border:1px solid var(--paper-dark);background:var(--paper);padding:1rem 1.2rem">
+          <div style="display:flex;gap:0.7rem;align-items:baseline;flex-wrap:wrap"><span style="font-family:var(--font-mono);font-size:0.68rem;color:var(--rust)">{target}</span><span style="font-family:var(--font-mono);font-size:0.52rem;color:var(--red-faint)">[{labels[first.classification ?? 'missing'] ?? first.classification}]</span><span style="font-family:var(--font-mono);font-size:0.52rem;color:var(--ink-faint)">{sources.length} QUELLEN</span></div>
+          {first.candidates && first.candidates.length > 0 && <div style="margin-top:0.55rem;font-family:var(--font-mono);font-size:0.56rem;color:var(--ink-light)">KANDIDATEN: {first.candidates.map(c => `${c.signature} — ${c.title}`).join(' · ')}</div>}
+          <div style="font-family:var(--font-mono);font-size:0.54rem;color:var(--ink-faint);margin-top:0.65rem">VERWENDET IN: {sources.join(' · ')}</div>
+          {first.contexts?.[0] && <details style="margin-top:0.7rem"><summary style="font-family:var(--font-mono);font-size:0.54rem;cursor:pointer">BELEGTEXT ANZEIGEN</summary><p style="font-family:var(--font-serif);font-size:0.78rem;line-height:1.5">{first.contexts[0]}</p></details>}
+        </article>;
       })}
     </div>
 
     <h2 style="font-family:var(--font-display);font-size:1.35rem;margin:2.5rem 0 1rem">Alle referenzierten Ziele</h2>
     <div style="overflow-x:auto"><table class="document-table active" style="width:100%"><thead><tr><th>ZIEL</th><th>STATUS</th><th>TITEL</th><th>QUELLEN</th></tr></thead><tbody>
-      {targets.sort(([a],[b]) => a.localeCompare(b)).map(([target, refs]) => {
-        const first=refs[0];
-        const sources=[...new Set(refs.map(r=>r.source))];
-        const statusLabel = first.status === 'resolved'
-          ? 'vorhanden'
-          : first.status === 'resolved-shorthand'
-            ? `Kurzform → ${first.resolvedTarget}`
-            : first.status === 'resolved-base-id'
-              ? `Basissignatur → ${first.resolvedTarget}`
-              : (labels[first.classification ?? 'missing'] ?? first.status);
-        return <tr><td class="sig">{target}</td><td>{statusLabel}</td><td>{first.title}</td><td>{sources.length}</td></tr>;
-      })}
+      {targets.sort(([a],[b]) => a.localeCompare(b)).map(([target, refs]) => { const first=refs[0]; const sources=[...new Set(refs.map(r=>r.source))]; const statusLabel = first.status === 'resolved' ? 'vorhanden' : first.status === 'resolved-shorthand' ? `Kurzform → ${first.resolvedTarget}` : first.status === 'resolved-base-id' ? `Basissignatur → ${first.resolvedTarget}` : (labels[first.classification ?? 'missing'] ?? first.status); return <tr><td class="sig">{target}</td><td>{statusLabel}</td><td>{first.title}</td><td>{sources.length}</td></tr>; })}
     </tbody></table></div>
   </section>
 </LayoutBase>
