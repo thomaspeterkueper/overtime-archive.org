@@ -52,7 +52,6 @@ const currentPath = Astro.url.pathname;
 </head>
 <body>
 
-<!-- Terminal Intro -->
 <div id="terminal-intro" aria-hidden="true">
   <div class="terminal-window">
     <div class="terminal-titlebar">
@@ -66,12 +65,10 @@ const currentPath = Astro.url.pathname;
   </div>
 </div>
 
-<!-- Site Header -->
 <header class="site-header">
   <a href="/" class="header-logo" aria-label="The Overtime Archive — Startseite">
     <div class="logo-svg-wrap">
       <svg width="56" height="56" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <!-- Outer ring: rotates slowly -->
         <g class="logo-ring-outer">
           <circle cx="60" cy="60" r="55" stroke="#F8F4EC" stroke-width="1.8"/>
           <circle cx="60" cy="5" r="2.5" fill="#D4B87A" opacity="0.6"/>
@@ -79,22 +76,18 @@ const currentPath = Astro.url.pathname;
           <circle cx="5" cy="60" r="2.5" fill="#D4B87A" opacity="0.4"/>
           <circle cx="115" cy="60" r="2.5" fill="#D4B87A" opacity="0.4"/>
         </g>
-        <!-- Dotted inner square (static) -->
         <rect x="32" y="32" width="56" height="56" stroke="#8B4513" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.25" transform="rotate(45 60 60)"/>
-        <!-- Hourglass: pulses -->
         <g class="logo-hourglass">
           <polygon points="60,32 43,52 77,52" fill="none" stroke="#8B4513" stroke-width="2.5"/>
           <polygon points="60,88 43,68 77,68" fill="none" stroke="#8B4513" stroke-width="2.5"/>
           <line x1="43" y1="52" x2="43" y2="68" stroke="#8B4513" stroke-width="2.5"/>
           <line x1="77" y1="52" x2="77" y2="68" stroke="#8B4513" stroke-width="2.5"/>
         </g>
-        <!-- Sand particles: drift -->
         <g class="logo-sand">
           <circle cx="58" cy="57" r="1.5" fill="#D4B87A" opacity="0.7"/>
           <circle cx="62" cy="60" r="1.2" fill="#D4B87A" opacity="0.55"/>
           <circle cx="59" cy="63" r="1" fill="#D4B87A" opacity="0.4"/>
         </g>
-        <!-- Center dot: breathes -->
         <circle cx="60" cy="60" r="2.5" fill="#8B4513" class="logo-center-dot"/>
       </svg>
     </div>
@@ -110,90 +103,52 @@ const currentPath = Astro.url.pathname;
       <span data-de="SYSTEM ONLINE" data-en="SYSTEM ONLINE">SYSTEM ONLINE</span>
       <span style="margin-left:0.6rem" data-de="TIER-0 ZUGANG" data-en="TIER-0 ACCESS">TIER-0 ZUGANG</span>
     </div>
-
-    <!-- Language toggle -->
     <div class="lang-toggle" role="group" aria-label="Sprache / Language">
       <button class="lang-btn active" id="lang-de" onclick="setLang('de')">DE</button>
       <button class="lang-btn" id="lang-en" onclick="setLang('en')">EN</button>
     </div>
-
     <nav class="header-nav" aria-label="Hauptnavigation">
       {navDE.map(item => (
-        <a
-          href={item.href}
-          class:list={[{ active: currentPath.startsWith(item.href) && item.href !== '/' }, { restricted: item.restricted }]}
-          data-de={item.label}
-          data-en={item.labelEN}
-        >
-          {item.label}
-        </a>
+        <a href={item.href} class:list={[{ active: currentPath.startsWith(item.href) && item.href !== '/' }, { restricted: item.restricted }]} data-de={item.label} data-en={item.labelEN}>{item.label}</a>
       ))}
     </nav>
   </div>
 </header>
 
-<!-- App Body: Sidebar + Main -->
 <div class="app-body">
-
-  <!-- Sidebar -->
   <aside class="sidebar" aria-label="Navigation">
-
     <div class="sidebar-section">
       <div class="sidebar-label" data-de="Navigation" data-en="Navigation">Navigation</div>
       <ul class="sidebar-nav">
         {sidebarNav.map(item => (
-          <li>
-            <a
-              href={item.href}
-              class:list={[{ active: currentPath === item.href || (item.href !== '/' && currentPath.startsWith(item.href)) }]}
-              data-de={item.label}
-              data-en={item.labelEN}
-            >
-              <span class="icon">{item.icon}</span>
-              {item.label}
-            </a>
-          </li>
+          <li><a href={item.href} class:list={[{ active: currentPath === item.href || (item.href !== '/' && currentPath.startsWith(item.href)) }]} data-de={item.label} data-en={item.labelEN}><span class="icon">{item.icon}</span>{item.label}</a></li>
         ))}
       </ul>
     </div>
 
     <div class="sidebar-section">
       <div class="sidebar-label" data-de="Zufallsdokument" data-en="Random Access">Zufallsdokument</div>
-      <button class="random-btn" id="random-access-btn" aria-label="Zufälliges Dokument öffnen">
-        RANDOM_ACCESS
-      </button>
+      <button class="random-btn" id="random-access-btn" aria-label="Zufälliges Dokument öffnen">RANDOM_ACCESS</button>
     </div>
 
     <div class="sidebar-section">
       <div class="sidebar-label" data-de="Zuletzt geöffnet" data-en="Recently viewed">Zuletzt geöffnet</div>
-      <div class="sidebar-recent" id="sidebar-recent">
-        <div class="sidebar-empty" data-de="— noch keine Einträge —" data-en="— no entries yet —">— noch keine Einträge —</div>
-      </div>
+      <div class="sidebar-recent" id="sidebar-recent"><div class="sidebar-empty" data-de="— noch keine Einträge —" data-en="— no entries yet —">— noch keine Einträge —</div></div>
     </div>
 
     <div class="sidebar-section">
       <div class="sidebar-label" data-de="Arbeitsmappe" data-en="Bookmarks">Arbeitsmappe</div>
-      <div class="sidebar-bookmarks" id="sidebar-bookmarks">
-        <div class="sidebar-empty" data-de="— keine Lesezeichen —" data-en="— no bookmarks —">— keine Lesezeichen —</div>
-      </div>
+      <div class="sidebar-bookmarks" id="sidebar-bookmarks"><div class="sidebar-empty" data-de="— keine Lesezeichen —" data-en="— no bookmarks —">— keine Lesezeichen —</div></div>
     </div>
-
   </aside>
 
-  <!-- Main -->
-  <main class="main-content" id="main-content">
-    <slot />
-  </main>
-
+  <main class="main-content" id="main-content"><slot /></main>
 </div>
 
-<!-- Footer -->
 <footer class="site-footer">
   <div class="footer-left">
     <div class="brand">THE OVERTIME ARCHIVE</div>
-    <div style="color:rgba(245,241,232,0.45)" data-de="Kurator: Thomas Peter Küper · OTA-BIO-0000" data-en="Curator: Thomas Peter Küper · OTA-BIO-0000">
-      Kurator: Thomas Peter Küper · OTA-BIO-0000
-    </div>
+    <div style="color:rgba(245,241,232,0.45)" data-de="Kurator: Thomas Peter Küper · OTA-BIO-0000" data-en="Curator: Thomas Peter Küper · OTA-BIO-0000">Kurator: Thomas Peter Küper · OTA-BIO-0000</div>
     <div style="color:rgba(245,241,232,0.35)">overtimearchive.org · ota.space</div>
     <div class="footer-links">
       <a href="/ueber" data-de="Über das Archiv" data-en="About">Über das Archiv</a>
@@ -202,23 +157,18 @@ const currentPath = Astro.url.pathname;
       <a href="/kontakt" data-de="Kontakt" data-en="Contact">Kontakt</a>
     </div>
   </div>
-  <div class="footer-epigraph">
-    <p>„{epigraph.text}"</p>
-    <cite>— {epigraph.cite}</cite>
-  </div>
+  <div class="footer-epigraph"><p>„{epigraph.text}"</p><cite>— {epigraph.cite}</cite></div>
 </footer>
 
 </body>
 </html>
 
 <script>
-// ── Terminal intro ──
 (function() {
   const intro = document.getElementById('terminal-intro');
   const body  = document.getElementById('terminal-body');
   if (!intro || !body) return;
   if (sessionStorage.getItem('ota-intro-seen')) { intro.style.display = 'none'; return; }
-
   document.body.style.overflow = 'hidden';
   const lines = [
     { t: '> CONNECTING TO OTA-ARCHIVE NODE 07...', c: 'prompt', d: 0 },
@@ -242,33 +192,20 @@ const currentPath = Astro.url.pathname;
     }, d);
   });
   setTimeout(() => {
-    intro.style.transition = 'opacity 0.75s ease';
-    intro.style.opacity = '0';
-    setTimeout(() => {
-      intro.style.display = 'none';
-      document.body.style.overflow = '';
-      sessionStorage.setItem('ota-intro-seen', '1');
-    }, 750);
+    intro.style.transition = 'opacity 0.75s ease'; intro.style.opacity = '0';
+    setTimeout(() => { intro.style.display = 'none'; document.body.style.overflow = ''; sessionStorage.setItem('ota-intro-seen', '1'); }, 750);
   }, 5100);
 })();
 
-// ── Language toggle ──
 function setLang(lang) {
   localStorage.setItem('ota-lang', lang);
   document.getElementById('lang-de')?.classList.toggle('active', lang === 'de');
   document.getElementById('lang-en')?.classList.toggle('active', lang === 'en');
   document.getElementById('html-root')?.setAttribute('lang', lang);
-  document.querySelectorAll('[data-de][data-en]').forEach(el => {
-    el.textContent = lang === 'en' ? el.getAttribute('data-en') : el.getAttribute('data-de');
-  });
+  document.querySelectorAll('[data-de][data-en]').forEach(el => { el.textContent = lang === 'en' ? el.getAttribute('data-en') : el.getAttribute('data-de'); });
 }
-// Restore on load
-(function() {
-  const saved = localStorage.getItem('ota-lang') || 'de';
-  if (saved === 'en') setLang('en');
-})();
+(function() { const saved = localStorage.getItem('ota-lang') || 'de'; if (saved === 'en') setLang('en'); })();
 
-// ── localStorage: recent + bookmarks ──
 function getRecent() { try { return JSON.parse(localStorage.getItem('ota-recent') || '[]'); } catch { return []; } }
 function getBookmarks() { try { return JSON.parse(localStorage.getItem('ota-bookmarks') || '[]'); } catch { return []; } }
 
@@ -276,16 +213,8 @@ function renderSidebarList(containerId, items, emptyDE, emptyEN) {
   const el = document.getElementById(containerId);
   if (!el) return;
   const lang = localStorage.getItem('ota-lang') || 'de';
-  if (!items.length) {
-    el.innerHTML = `<div class="sidebar-empty">${lang === 'en' ? emptyEN : emptyDE}</div>`;
-    return;
-  }
-  el.innerHTML = items.slice(0, 5).map(item => `
-    <div class="sidebar-item">
-      <a href="${item.href}" class="sig" style="color:var(--blue-faint);text-decoration:none">${item.sig}</a>
-      <span class="meta">${item.accessed || item.added || ''}</span>
-    </div>
-  `).join('');
+  if (!items.length) { el.innerHTML = `<div class="sidebar-empty">${lang === 'en' ? emptyEN : emptyDE}</div>`; return; }
+  el.innerHTML = items.slice(0, 5).map(item => `<div class="sidebar-item"><a href="${item.href}" class="sig" style="color:var(--blue-faint);text-decoration:none">${item.sig}</a><span class="meta">${item.accessed || item.added || ''}</span></div>`).join('');
 }
 
 function initSidebar() {
@@ -293,7 +222,6 @@ function initSidebar() {
   renderSidebarList('sidebar-bookmarks', getBookmarks(), '— keine Lesezeichen —', '— no bookmarks —');
 }
 
-// Track current page in recent
 function trackCurrentPage() {
   const sig = document.querySelector('[data-signature]')?.getAttribute('data-signature');
   const title = document.querySelector('[data-doc-title]')?.getAttribute('data-doc-title');
@@ -305,12 +233,21 @@ function trackCurrentPage() {
   localStorage.setItem('ota-recent', JSON.stringify(recent.slice(0, 10)));
 }
 
-// Random access
-document.getElementById('random-access-btn')?.addEventListener('click', () => {
-  const slugs = window.__OTA_DOC_SLUGS__ || [];
-  if (slugs.length) {
-    const pick = slugs[Math.floor(Math.random() * slugs.length)];
-    window.location.href = `/dokument/${pick}`;
+// Random access uses the same generated search index as catalogue/search links.
+document.getElementById('random-access-btn')?.addEventListener('click', async () => {
+  const button = document.getElementById('random-access-btn');
+  if (button) button.setAttribute('disabled', '');
+  try {
+    const response = await fetch('/api/search.json');
+    if (!response.ok) throw new Error(`search index ${response.status}`);
+    const docs = await response.json();
+    const candidates = docs.filter(doc => !doc.restricted && doc.slug);
+    if (!candidates.length) throw new Error('no public documents');
+    const pick = candidates[Math.floor(Math.random() * candidates.length)];
+    window.location.href = `/dokument/${pick.slug}`;
+  } catch (error) {
+    console.error('RANDOM_ACCESS failed', error);
+    if (button) button.removeAttribute('disabled');
   }
 });
 
