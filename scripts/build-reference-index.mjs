@@ -38,6 +38,10 @@ function baseSignature(signature) {
   return signature.replace(/-(?:[0-9]{4}|[0-9]+BCE)(?:-(?:[A-Z]{2}|MULTI))?$/, '');
 }
 
+function stripLanguage(signature) {
+  return signature.replace(/-(?:DE|EN|MULTI)$/, '');
+}
+
 const files = walk(docsDir).filter(file => /\.(md|mdx)$/i.test(file));
 const documents = [];
 const bySignature = new Map();
@@ -88,38 +92,106 @@ for (const ref of refs.values()) {
 }
 
 function classify(target, reg) {
-  if (bySignature.has(target)) return { classification: 'existing', candidates: [] };
-  if (reg?.status === 'planned') return { classification: 'planned', candidates: [] };
-  if (reg?.status === 'uncertain') return { classification: 'uncertain', candidates: [] };
+  if (bySignature.has(target)) {
+    return { classification: 'existing', candidates: [], resolvedTarget: target };
+  }
+  if (reg?.status === 'planned') return { classification: 'planned', candidates: [], resolvedTarget: null };
+  if (reg?.status === 'uncertain') return { classification: 'uncertain', candidates: [], resolvedTarget: null };
+
+  // A reference that is otherwise a complete signature but omits only the
+  // language suffix can be resolved mechanically when exactly one concrete
+  // language version exists. This is deliberately dynamic: if a second
+  // language version appears later, the shorthand becomes ambiguous again.
+  const languageExtensions = ['DE', 'EN', 'MULTI']
+    .map(language => bySignature.get(`${target}-${language}`))
+    .filter(Boolean);
+  if (languageExtensions.length === 1) {
+    return {
+      classification: 'shorthand-resolved',
+      candidates: languageExtensions,
+      resolvedTarget: languageExtensions[0].signature,
+    };
+  }
+  if (languageExtensions.length > 1) {
+    return {
+      classification: 'language-ambiguous',
+      candidates: languageExtensions,
+      resolvedTarget: null,
+    };
+  }
+
   const candidates = (byBaseSignature.get(baseSignature(target)) ?? [])
     .filter(doc => doc.signature !== target)
     .map(doc => ({ signature: doc.signature, title: doc.title, file: doc.file }));
-  if (candidates.length) return { classification: 'variant-candidate', candidates };
-  return { classification: 'missing', candidates: [] };
+
+  if (candidates.length) {
+    const sameTemporalDifferentLanguage = candidates.filter(candidate =>
+      stripLanguage(candidate.signature) === stripLanguage(target)
+    );
+    if (sameTemporalDifferentLanguage.length) {
+      return {
+        classification: 'translation-missing',
+        candidates,
+        resolvedTarget: null,
+      };
+    }
+
+    const targetHasTemporalMarker = /-(?:[0-9]{4}|[0-9]+BCE)-(?:DE|EN|MULTI)$/.test(target);
+    if (targetHasTemporalMarker) {
+      return {
+        classification: candidates.length === 1 ? 'temporal-mismatch' : 'temporal-ambiguous',
+        candidates,
+        resolvedTarget: null,
+      };
+    }
+
+    return {
+      classification: candidates.length === 1 ? 'underspecified' : 'ambiguous-base',
+      candidates,
+      resolvedTarget: null,
+    };
+  }
+
+  return { classification: 'missing', candidates: [], resolvedTarget: null };
 }
 
 const references = [...refs.values()].map(ref => {
-  const targetDoc = bySignature.get(ref.target);
   const reg = registryByTarget.get(ref.target);
   const analysis = classify(ref.target, reg);
+  const resolvedDoc = analysis.resolvedTarget ? bySignature.get(analysis.resolvedTarget) : undefined;
   const sourceCount = sourceCountByTarget.get(ref.target)?.size ?? 0;
+  const status = resolvedDoc ? (analysis.classification === 'existing' ? 'resolved' : 'resolved-shorthand') : (reg?.status ?? 'unresolved');
+
   return {
     ...ref,
-    status: targetDoc ? 'resolved' : (reg?.status ?? 'unresolved'),
+    status,
     classification: analysis.classification,
     candidates: analysis.candidates,
+    resolvedTarget: analysis.resolvedTarget,
     sourceCount,
-    priority: targetDoc ? 0 : sourceCount,
-    title: targetDoc?.title ?? reg?.title ?? ref.target,
-    description: targetDoc?.summary ?? reg?.description ?? '',
-    descriptionStatus: targetDoc ? 'canonical' : (reg?.descriptionStatus ?? null),
-    targetFile: targetDoc?.file ?? null,
+    priority: resolvedDoc ? 0 : sourceCount,
+    title: resolvedDoc?.title ?? reg?.title ?? ref.target,
+    description: resolvedDoc?.summary ?? reg?.description ?? '',
+    descriptionStatus: resolvedDoc ? 'canonical' : (reg?.descriptionStatus ?? null),
+    targetFile: resolvedDoc?.file ?? null,
   };
 }).sort((a, b) => b.priority - a.priority || a.target.localeCompare(b.target) || a.source.localeCompare(b.source));
 
-const openTargets = [...new Set(references.filter(ref => ref.status !== 'resolved').map(ref => ref.target))];
+const openTargets = [...new Set(references.filter(ref => !ref.status.startsWith('resolved')).map(ref => ref.target))];
+const allClassifications = [
+  'missing',
+  'shorthand-resolved',
+  'language-ambiguous',
+  'translation-missing',
+  'temporal-mismatch',
+  'temporal-ambiguous',
+  'underspecified',
+  'ambiguous-base',
+  'planned',
+  'uncertain',
+];
 const classificationCounts = Object.fromEntries(
-  ['missing', 'variant-candidate', 'planned', 'uncertain'].map(kind => [kind, openTargets.filter(target => references.find(ref => ref.target === target)?.classification === kind).length])
+  allClassifications.map(kind => [kind, [...new Set(references.filter(ref => ref.classification === kind).map(ref => ref.target))].length])
 );
 
 const output = {
@@ -127,7 +199,7 @@ const output = {
   documents: documents.sort((a, b) => a.signature.localeCompare(b.signature)),
   summary: {
     referenceCount: references.length,
-    openReferenceCount: references.filter(ref => ref.status !== 'resolved').length,
+    openReferenceCount: references.filter(ref => !ref.status.startsWith('resolved')).length,
     openTargetCount: openTargets.length,
     classifications: classificationCounts,
   },
@@ -136,18 +208,19 @@ const output = {
 
 fs.writeFileSync(outputPath, JSON.stringify(output, null, 2) + '\n');
 console.log(`Reference index generated: ${documents.length} documents, ${references.length} references, ${openTargets.length} open targets.`);
-console.log(`Open targets: ${classificationCounts.missing} missing, ${classificationCounts['variant-candidate']} variant candidates, ${classificationCounts.planned} planned, ${classificationCounts.uncertain} uncertain.`);
+console.log(`Mechanically resolved shorthand targets: ${classificationCounts['shorthand-resolved']}.`);
+console.log(`Open targets: ${classificationCounts.missing} missing, ${classificationCounts['language-ambiguous']} language-ambiguous, ${classificationCounts['translation-missing']} translation-missing, ${classificationCounts['temporal-mismatch']} temporal-mismatch, ${classificationCounts['temporal-ambiguous']} temporal-ambiguous, ${classificationCounts.underspecified} underspecified, ${classificationCounts['ambiguous-base']} ambiguous-base, ${classificationCounts.planned} planned, ${classificationCounts.uncertain} uncertain.`);
 
-const variantTargets = openTargets
+const reviewTargets = [...new Set(references.filter(ref => !ref.status.startsWith('resolved')).map(ref => ref.target))]
   .map(target => references.find(ref => ref.target === target))
-  .filter(ref => ref?.classification === 'variant-candidate')
+  .filter(Boolean)
   .sort((a, b) => (b?.priority ?? 0) - (a?.priority ?? 0) || a.target.localeCompare(b.target));
 
-if (variantTargets.length) {
-  console.log('Variant candidates:');
-  for (const ref of variantTargets) {
+if (reviewTargets.length) {
+  console.log('Open reference review queue:');
+  for (const ref of reviewTargets) {
     const sources = [...new Set(references.filter(item => item.target === ref.target).map(item => item.source))];
     const candidates = ref.candidates.map(candidate => `${candidate.signature} :: ${candidate.title}`).join(' | ');
-    console.log(`VARIANT\t${ref.target}\tpriority=${ref.priority}\tsources=${sources.join(',')}\tcandidates=${candidates}`);
+    console.log(`REVIEW\t${ref.classification}\t${ref.target}\tpriority=${ref.priority}\tsources=${sources.join(',')}\tcandidates=${candidates}`);
   }
 }
