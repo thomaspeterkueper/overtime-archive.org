@@ -44,7 +44,7 @@ const series = [...new Set(allDocs.map(d => d.data.series))].sort();
           epistemicStatus={doc.data.epistemicStatus}
           accessLevel={doc.data.accessLevel}
           status={doc.data.status}
-          slug={doc.slug}
+          slug={doc.id}
           redacted={doc.data.redacted ?? false}
           data-series={doc.data.series}
         />
@@ -56,8 +56,8 @@ const series = [...new Set(allDocs.map(d => d.data.series))].sort();
       <tbody>
         {allDocs.map(doc => (
           <tr data-series={doc.data.series}>
-            <td class="sig">{doc.data.redacted ? <span style="color:var(--red-faint)">{doc.data.signature}</span> : <a href={`/dokument/${doc.slug}`} class="table-link">{doc.data.signature}</a>}</td>
-            <td>{doc.data.redacted ? <span style="color:var(--red-faint)">[GESPERRT]</span> : <a href={`/dokument/${doc.slug}`} class="table-link">{doc.data.title}</a>}</td>
+            <td class="sig">{doc.data.redacted ? <span style="color:var(--red-faint)">{doc.data.signature}</span> : <a href={`/dokument/${doc.id}`} class="table-link">{doc.data.signature}</a>}</td>
+            <td>{doc.data.redacted ? <span style="color:var(--red-faint)">[GESPERRT]</span> : <a href={`/dokument/${doc.id}`} class="table-link">{doc.data.title}</a>}</td>
             <td style="color:var(--rust-faint)">{doc.data.series}</td>
             <td>{doc.data.year}</td>
             <td style="color:var(--ink-faint)">{doc.data.epistemicStatus.map(e => `[${e}]`).join(' ')}</td>
