@@ -64,7 +64,7 @@ const seriesSorted = Object.entries(seriesData).sort((a, b) => b[1].docs.length 
           </div>
           <div style="display:flex;flex-wrap:wrap;gap:0.4rem">
             {data.docs.slice(0, 6).map(doc => (
-              <a href={`/dokument/${doc.slug}`}
+              <a href={`/dokument/${doc.id}`}
                  style="font-family:var(--font-mono);font-size:0.58rem;color:var(--rust);border:1px solid var(--paper-dark);padding:0.15rem 0.4rem;text-decoration:none;transition:background 0.15s"
                  onmouseover="this.style.background='var(--paper-dark)'"
                  onmouseout="this.style.background='transparent'">
