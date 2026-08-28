@@ -4,6 +4,7 @@ import index from '../data/internal-references.generated.json';
 
 const references = index.references as Array<{
   source: string; target: string; status: string; classification?: string;
+  resolvedTarget?: string | null;
   title: string; description: string; descriptionStatus?: string | null;
   contexts: string[]; sourceCount?: number; priority?: number;
   candidates?: Array<{signature:string;title:string;file:string}>;
@@ -16,11 +17,21 @@ for (const ref of references) {
 }
 const targets = [...grouped.entries()];
 const unresolved = targets
-  .filter(([, refs]) => refs.some(ref => ref.status !== 'resolved'))
+  .filter(([, refs]) => refs.some(ref => !ref.status.startsWith('resolved')))
   .sort(([, a], [, b]) => (b[0].priority ?? 0) - (a[0].priority ?? 0) || a[0].target.localeCompare(b[0].target));
 const counts = index.summary?.classifications ?? {};
 const labels: Record<string,string> = {
-  missing: 'FEHLT', 'variant-candidate': 'VARIANTE?', planned: 'GEPLANT', uncertain: 'UNKLAR', existing: 'VORHANDEN'
+  missing: 'FEHLT',
+  existing: 'VORHANDEN',
+  'shorthand-resolved': 'KURZFORM AUFGELÖST',
+  'language-ambiguous': 'SPRACHE UNKLAR',
+  'translation-missing': 'SPRACHVERSION FEHLT',
+  'temporal-mismatch': 'ZEITMARKER ABWEICHEND',
+  'temporal-ambiguous': 'ZEITMARKER MEHRDEUTIG',
+  underspecified: 'UNTERBESTIMMT',
+  'ambiguous-base': 'MEHRDEUTIG',
+  planned: 'GEPLANT',
+  uncertain: 'UNKLAR',
 };
 ---
 
@@ -29,12 +40,18 @@ const labels: Record<string,string> = {
     <div style="font-family:var(--font-mono);font-size:0.62rem;color:var(--rust);letter-spacing:0.18em;margin-bottom:0.8rem">OTA · REFERENZ-WERKBANK</div>
     <h1 style="font-family:var(--font-display);font-size:2rem;color:var(--ink);margin-bottom:0.6rem">Referenzen</h1>
     <p style="font-family:var(--font-serif);color:var(--ink-light);line-height:1.65;max-width:78ch">
-      Das Register erfasst Signaturverweise unabhängig davon, ob das Zieldokument bereits vorliegt. Offene Ziele werden klassifiziert und nach Zahl ihrer unabhängigen Quelldokumente priorisiert. Varianten sind Kandidaten, keine automatische kanonische Zuordnung.
+      Das Register erfasst Signaturverweise unabhängig davon, ob das Zieldokument bereits vorliegt. Eindeutige Kurzformen, denen nur der Sprachsuffix fehlt und für die genau eine Sprachversion existiert, werden technisch aufgelöst. Alle zeitlich, sprachlich oder inhaltlich mehrdeutigen Fälle bleiben offen.
     </p>
 
     <div style="display:flex;gap:1rem;flex-wrap:wrap;margin:1.5rem 0;font-family:var(--font-mono);font-size:0.65rem">
-      <span>{index.documents.length} Dokumente</span><span>{targets.length} referenzierte Ziele</span><span>{unresolved.length} offene Ziele</span>
-      <span>{counts.missing ?? 0} fehlen</span><span>{counts['variant-candidate'] ?? 0} Variantenkandidaten</span><span>{counts.planned ?? 0} geplant</span><span>{counts.uncertain ?? 0} unklar</span>
+      <span>{index.documents.length} Dokumente</span>
+      <span>{targets.length} referenzierte Ziele</span>
+      <span>{unresolved.length} offene Ziele</span>
+      <span>{counts['shorthand-resolved'] ?? 0} Kurzformen aufgelöst</span>
+      <span>{counts.missing ?? 0} fehlen</span>
+      <span>{counts['translation-missing'] ?? 0} Sprachversionen fehlen</span>
+      <span>{(counts['temporal-mismatch'] ?? 0) + (counts['temporal-ambiguous'] ?? 0)} Zeitmarker-Fälle</span>
+      <span>{(counts['language-ambiguous'] ?? 0) + (counts.underspecified ?? 0) + (counts['ambiguous-base'] ?? 0)} weitere mehrdeutige Fälle</span>
     </div>
 
     <h2 style="font-family:var(--font-display);font-size:1.35rem;margin:2rem 0 1rem">Priorisierte offene Referenzen</h2>
@@ -53,7 +70,7 @@ const labels: Record<string,string> = {
             {first.description && <p style="font-family:var(--font-serif);font-size:0.85rem;color:var(--ink-light);line-height:1.55;margin:0.35rem 0">{first.description}</p>}
             {first.candidates && first.candidates.length > 0 && (
               <div style="margin-top:0.55rem;font-family:var(--font-mono);font-size:0.56rem;color:var(--ink-light)">
-                MÖGLICHE VORHANDENE VARIANTE: {first.candidates.map(c => `${c.signature} — ${c.title}`).join(' · ')}
+                KANDIDATEN: {first.candidates.map(c => `${c.signature} — ${c.title}`).join(' · ')}
               </div>
             )}
             <div style="font-family:var(--font-mono);font-size:0.54rem;color:var(--ink-faint);margin-top:0.65rem">VERWENDET IN</div>
@@ -68,7 +85,12 @@ const labels: Record<string,string> = {
 
     <h2 style="font-family:var(--font-display);font-size:1.35rem;margin:2.5rem 0 1rem">Alle referenzierten Ziele</h2>
     <div style="overflow-x:auto"><table class="document-table active" style="width:100%"><thead><tr><th>ZIEL</th><th>STATUS</th><th>TITEL</th><th>QUELLEN</th></tr></thead><tbody>
-      {targets.sort(([a],[b]) => a.localeCompare(b)).map(([target, refs]) => { const first=refs[0]; const sources=[...new Set(refs.map(r=>r.source))]; return <tr><td class="sig">{target}</td><td>{first.status === 'resolved' ? 'vorhanden' : (labels[first.classification ?? 'missing'] ?? first.status)}</td><td>{first.title}</td><td>{sources.length}</td></tr>; })}
+      {targets.sort(([a],[b]) => a.localeCompare(b)).map(([target, refs]) => {
+        const first=refs[0];
+        const sources=[...new Set(refs.map(r=>r.source))];
+        const statusLabel = first.status === 'resolved' ? 'vorhanden' : first.status === 'resolved-shorthand' ? `Kurzform → ${first.resolvedTarget}` : (labels[first.classification ?? 'missing'] ?? first.status);
+        return <tr><td class="sig">{target}</td><td>{statusLabel}</td><td>{first.title}</td><td>{sources.length}</td></tr>;
+      })}
     </tbody></table></div>
   </section>
 </LayoutBase>
