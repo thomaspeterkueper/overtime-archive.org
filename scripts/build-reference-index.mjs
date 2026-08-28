@@ -34,9 +34,14 @@ function contextFor(text, index, length) {
   return text.slice(start, end).replace(/\s+/g, ' ').trim();
 }
 
+function baseSignature(signature) {
+  return signature.replace(/-(?:[0-9]{4}|[0-9]+BCE)(?:-(?:[A-Z]{2}|MULTI))?$/, '');
+}
+
 const files = walk(docsDir).filter(file => /\.(md|mdx)$/i.test(file));
 const documents = [];
 const bySignature = new Map();
+const byBaseSignature = new Map();
 
 for (const file of files) {
   const text = fs.readFileSync(file, 'utf8');
@@ -51,12 +56,13 @@ for (const file of files) {
   };
   documents.push(doc);
   bySignature.set(signature, doc);
+  const base = baseSignature(signature);
+  if (!byBaseSignature.has(base)) byBaseSignature.set(base, []);
+  byBaseSignature.get(base).push(doc);
 }
 
 let registry = [];
-if (fs.existsSync(registryPath)) {
-  registry = JSON.parse(fs.readFileSync(registryPath, 'utf8'));
-}
+if (fs.existsSync(registryPath)) registry = JSON.parse(fs.readFileSync(registryPath, 'utf8'));
 const registryByTarget = new Map(registry.map(entry => [entry.target, entry]));
 
 const refs = new Map();
@@ -68,38 +74,66 @@ for (const file of files) {
     const target = match[0];
     if (target === sourceSignature) continue;
     const key = `${sourceSignature}=>${target}`;
-    if (!refs.has(key)) {
-      refs.set(key, {
-        source: sourceSignature,
-        target,
-        contexts: [],
-      });
-    }
+    if (!refs.has(key)) refs.set(key, { source: sourceSignature, target, contexts: [] });
     const entry = refs.get(key);
     const context = contextFor(text, match.index ?? 0, target.length);
     if (!entry.contexts.includes(context)) entry.contexts.push(context);
   }
 }
 
+const sourceCountByTarget = new Map();
+for (const ref of refs.values()) {
+  if (!sourceCountByTarget.has(ref.target)) sourceCountByTarget.set(ref.target, new Set());
+  sourceCountByTarget.get(ref.target).add(ref.source);
+}
+
+function classify(target, reg) {
+  if (bySignature.has(target)) return { classification: 'existing', candidates: [] };
+  if (reg?.status === 'planned') return { classification: 'planned', candidates: [] };
+  if (reg?.status === 'uncertain') return { classification: 'uncertain', candidates: [] };
+  const candidates = (byBaseSignature.get(baseSignature(target)) ?? [])
+    .filter(doc => doc.signature !== target)
+    .map(doc => ({ signature: doc.signature, title: doc.title, file: doc.file }));
+  if (candidates.length) return { classification: 'variant-candidate', candidates };
+  return { classification: 'missing', candidates: [] };
+}
+
 const references = [...refs.values()].map(ref => {
   const targetDoc = bySignature.get(ref.target);
   const reg = registryByTarget.get(ref.target);
+  const analysis = classify(ref.target, reg);
+  const sourceCount = sourceCountByTarget.get(ref.target)?.size ?? 0;
   return {
     ...ref,
     status: targetDoc ? 'resolved' : (reg?.status ?? 'unresolved'),
+    classification: analysis.classification,
+    candidates: analysis.candidates,
+    sourceCount,
+    priority: targetDoc ? 0 : sourceCount,
     title: targetDoc?.title ?? reg?.title ?? ref.target,
     description: targetDoc?.summary ?? reg?.description ?? '',
     descriptionStatus: targetDoc ? 'canonical' : (reg?.descriptionStatus ?? null),
     targetFile: targetDoc?.file ?? null,
   };
-}).sort((a, b) => a.target.localeCompare(b.target) || a.source.localeCompare(b.source));
+}).sort((a, b) => b.priority - a.priority || a.target.localeCompare(b.target) || a.source.localeCompare(b.source));
+
+const openTargets = [...new Set(references.filter(ref => ref.status !== 'resolved').map(ref => ref.target))];
+const classificationCounts = Object.fromEntries(
+  ['missing', 'variant-candidate', 'planned', 'uncertain'].map(kind => [kind, openTargets.filter(target => references.find(ref => ref.target === target)?.classification === kind).length])
+);
 
 const output = {
   generatedAt: new Date().toISOString(),
   documents: documents.sort((a, b) => a.signature.localeCompare(b.signature)),
+  summary: {
+    referenceCount: references.length,
+    openReferenceCount: references.filter(ref => ref.status !== 'resolved').length,
+    openTargetCount: openTargets.length,
+    classifications: classificationCounts,
+  },
   references,
 };
 
 fs.writeFileSync(outputPath, JSON.stringify(output, null, 2) + '\n');
-const unresolved = references.filter(ref => ref.status !== 'resolved').length;
-console.log(`Reference index generated: ${documents.length} documents, ${references.length} references, ${unresolved} unresolved/planned.`);
+console.log(`Reference index generated: ${documents.length} documents, ${references.length} references, ${openTargets.length} open targets.`);
+console.log(`Open targets: ${classificationCounts.missing} missing, ${classificationCounts['variant-candidate']} variant candidates, ${classificationCounts.planned} planned, ${classificationCounts.uncertain} uncertain.`);
