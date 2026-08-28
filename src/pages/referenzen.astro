@@ -24,6 +24,8 @@ const labels: Record<string,string> = {
   missing: 'FEHLT',
   existing: 'VORHANDEN',
   'shorthand-resolved': 'KURZFORM AUFGELÖST',
+  'base-id-resolved': 'BASISSIGNATUR AUFGELÖST',
+  'base-id-ambiguous': 'BASISSIGNATUR MEHRDEUTIG',
   'language-ambiguous': 'SPRACHE UNKLAR',
   'translation-missing': 'SPRACHVERSION FEHLT',
   'temporal-mismatch': 'ZEITMARKER ABWEICHEND',
@@ -40,15 +42,17 @@ const labels: Record<string,string> = {
     <div style="font-family:var(--font-mono);font-size:0.62rem;color:var(--rust);letter-spacing:0.18em;margin-bottom:0.8rem">OTA · REFERENZ-WERKBANK</div>
     <h1 style="font-family:var(--font-display);font-size:2rem;color:var(--ink);margin-bottom:0.6rem">Referenzen</h1>
     <p style="font-family:var(--font-serif);color:var(--ink-light);line-height:1.65;max-width:78ch">
-      Das Register erfasst Signaturverweise unabhängig davon, ob das Zieldokument bereits vorliegt. Eindeutige Kurzformen, denen nur der Sprachsuffix fehlt und für die genau eine Sprachversion existiert, werden technisch aufgelöst. Alle zeitlich, sprachlich oder inhaltlich mehrdeutigen Fälle bleiben offen.
+      Das Register erfasst Signaturverweise unabhängig davon, ob das Zieldokument bereits vorliegt. Eindeutige Kurzformen und reine Basissignaturen werden technisch aufgelöst, wenn im Archiv genau ein kanonisches Ziel existiert. Sobald mehrere Zeit-, Sprach-, Nachtrags- oder sonstige Varianten möglich sind, bleibt der Fall offen.
     </p>
 
     <div style="display:flex;gap:1rem;flex-wrap:wrap;margin:1.5rem 0;font-family:var(--font-mono);font-size:0.65rem">
       <span>{index.documents.length} Dokumente</span>
       <span>{targets.length} referenzierte Ziele</span>
       <span>{unresolved.length} offene Ziele</span>
-      <span>{counts['shorthand-resolved'] ?? 0} Kurzformen aufgelöst</span>
+      <span>{counts['shorthand-resolved'] ?? 0} Sprach-Kurzformen aufgelöst</span>
+      <span>{counts['base-id-resolved'] ?? 0} Basissignaturen aufgelöst</span>
       <span>{counts.missing ?? 0} fehlen</span>
+      <span>{counts['base-id-ambiguous'] ?? 0} Basissignaturen mehrdeutig</span>
       <span>{counts['translation-missing'] ?? 0} Sprachversionen fehlen</span>
       <span>{(counts['temporal-mismatch'] ?? 0) + (counts['temporal-ambiguous'] ?? 0)} Zeitmarker-Fälle</span>
       <span>{(counts['language-ambiguous'] ?? 0) + (counts.underspecified ?? 0) + (counts['ambiguous-base'] ?? 0)} weitere mehrdeutige Fälle</span>
@@ -88,7 +92,13 @@ const labels: Record<string,string> = {
       {targets.sort(([a],[b]) => a.localeCompare(b)).map(([target, refs]) => {
         const first=refs[0];
         const sources=[...new Set(refs.map(r=>r.source))];
-        const statusLabel = first.status === 'resolved' ? 'vorhanden' : first.status === 'resolved-shorthand' ? `Kurzform → ${first.resolvedTarget}` : (labels[first.classification ?? 'missing'] ?? first.status);
+        const statusLabel = first.status === 'resolved'
+          ? 'vorhanden'
+          : first.status === 'resolved-shorthand'
+            ? `Kurzform → ${first.resolvedTarget}`
+            : first.status === 'resolved-base-id'
+              ? `Basissignatur → ${first.resolvedTarget}`
+              : (labels[first.classification ?? 'missing'] ?? first.status);
         return <tr><td class="sig">{target}</td><td>{statusLabel}</td><td>{first.title}</td><td>{sources.length}</td></tr>;
       })}
     </tbody></table></div>
