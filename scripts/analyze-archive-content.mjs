@@ -4,209 +4,26 @@ import path from 'node:path';
 const ROOT = process.cwd();
 const DOCS_DIR = path.join(ROOT, 'src', 'content', 'documents');
 const OUT_FILE = path.join(ROOT, 'src', 'data', 'archive-quality.generated.json');
+const files = fs.readdirSync(DOCS_DIR).filter(name => /\.(?:md|mdx)$/i.test(name)).sort((a,b)=>a.localeCompare(b));
 
-const files = fs.readdirSync(DOCS_DIR)
-  .filter(name => /\.(?:md|mdx)$/i.test(name))
-  .sort((a, b) => a.localeCompare(b));
+function splitFrontmatter(raw){const m=raw.match(/^---\s*\r?\n([\s\S]*?)\r?\n---\s*\r?\n?/);return m?{frontmatter:m[1],body:raw.slice(m[0].length)}:{frontmatter:'',body:raw};}
+function scalar(fm,key){const m=fm.match(new RegExp(`^${key}:\\s*(.+?)\\s*$`,'m'));if(!m)return '';const v=m[1].trim();return ((v.startsWith('"')&&v.endsWith('"'))||(v.startsWith("'")&&v.endsWith("'")))?v.slice(1,-1):v;}
+function listBlock(fm,key){const lines=fm.split(/\r?\n/),start=lines.findIndex(l=>new RegExp(`^${key}:\\s*`).test(l));if(start<0)return[];const first=lines[start].replace(new RegExp(`^${key}:\\s*`),'').trim();if(first.startsWith('[')&&first.endsWith(']'))return first.slice(1,-1).split(',').map(v=>v.trim().replace(/^['"]|['"]$/g,'')).filter(Boolean);const values=[];for(let i=start+1;i<lines.length;i++){const line=lines[i];if(/^[A-Za-z][A-Za-z0-9_]*:\s*/.test(line))break;const item=line.match(/^\s*-\s*(?:target:\s*)?["']?([^"']+?)["']?\s*$/);if(item)values.push(item[1].trim());const target=line.match(/^\s+target:\s*["']?([^"']+?)["']?\s*$/);if(target)values.push(target[1].trim());}return values;}
+function normalizeLine(v){return v.replace(/\\\[/g,'[').replace(/\\\]/g,']').replace(/\s+/g,' ').trim();}
+function extractLabeled(body,labels){for(const label of labels){for(const pattern of [new RegExp(`^\\s*\\*\\*${label}\\*\\*\\s+(.*)$`,'im'),new RegExp(`^\\s*${label}\\s*[:：]\\s*(.*)$`,'im'),new RegExp(`^\\s*\\|?\\s*\\*\\*${label}\\*\\*\\s*\\|?\\s*(.*?)\\s*\\|?\\s*$`,'im')]){const m=body.match(pattern);if(m?.[1]){const v=normalizeLine(m[1]).replace(/^[-|]+|[-|]+$/g,'').trim();if(v&&v.length<240)return v;}}}return '';}
+function cleanBodyForWords(body){return body.replace(/```[\s\S]*?```/g,' ').replace(/!\[[^\]]*\]\([^)]*\)/g,' ').replace(/<[^>]+>/g,' ').replace(/https?:\/\/\S+/g,' ').replace(/[`*_>#|=~\\[\](){}]/g,' ').replace(/\bOTA-[A-Z]+-[A-Z0-9-]+\b/g,' ').replace(/\s+/g,' ').trim();}
+function words(t){return t?t.split(/\s+/).filter(Boolean):[];}
+function isGenericSummary(s,sig){s=s.trim();return !s||s===sig||/^(?:Wissenschaftliches|Technisches|Historisches|Narratives|Biografisches|Foundational) Dokument\b/i.test(s)||/^OTA-[A-Z]+-/i.test(s)||words(s).length<9;}
+function isGenericTitle(t,sig){t=t.trim();return !t||t===sig||/^OTA-[A-Z]+-[A-Z0-9-]+$/i.test(t);}
+function substantiveParagraph(body){const c=body.split(/\r?\n\s*\r?\n/).map(normalizeLine).filter(p=>p.length>=90).filter(p=>!/^[-| ]+$/.test(p)).filter(p=>!/^THE OVERTIME ARCHIVE$/i.test(p)).filter(p=>!/^OTA-[A-Z]+-/i.test(p)).filter(p=>!/^\*\*(?:DOC-ID|KLASSIFIZIERUNG|SUBJEKT|AUTOR|DATUM|STATUS|EPISTEMOLOGIE|QUERVERWEISE)\*\*/i.test(p));const first=c[0]??'';return first.length>360?`${first.slice(0,357).trim()}…`:first;}
+function cleanCandidate(v){return normalizeLine(v||'').replace(/^#+\s*/,'').replace(/^[-–—:| ]+|[-–—:| ]+$/g,'').trim();}
+function titleCandidate(v,sig){v=cleanCandidate(v);if(!v||v===sig||v.length<4||v.length>180||/^OTA-[A-Z]+-/i.test(v))return null;return v;}
+function summaryCandidate(v){v=cleanCandidate(v);if(!v||v.length<90||v.length>360)return null;if(/^\*\*(?:DOC-ID|KLASSIFIZIERUNG|SUBJEKT|AUTOR|DATUM|STATUS|EPISTEMOLOGIE|QUERVERWEISE)/i.test(v))return null;return v;}
 
-function splitFrontmatter(raw) {
-  const match = raw.match(/^---\s*\r?\n([\s\S]*?)\r?\n---\s*\r?\n?/);
-  return match ? { frontmatter: match[1], body: raw.slice(match[0].length) } : { frontmatter: '', body: raw };
-}
-
-function scalar(frontmatter, key) {
-  const match = frontmatter.match(new RegExp(`^${key}:\\s*(.+?)\\s*$`, 'm'));
-  if (!match) return '';
-  const value = match[1].trim();
-  if ((value.startsWith('"') && value.endsWith('"')) || (value.startsWith("'") && value.endsWith("'"))) {
-    return value.slice(1, -1);
-  }
-  return value;
-}
-
-function listBlock(frontmatter, key) {
-  const lines = frontmatter.split(/\r?\n/);
-  const start = lines.findIndex(line => new RegExp(`^${key}:\\s*`).test(line));
-  if (start < 0) return [];
-  const first = lines[start].replace(new RegExp(`^${key}:\\s*`), '').trim();
-  if (first.startsWith('[') && first.endsWith(']')) {
-    return first.slice(1, -1).split(',').map(v => v.trim().replace(/^['"]|['"]$/g, '')).filter(Boolean);
-  }
-  const values = [];
-  for (let i = start + 1; i < lines.length; i += 1) {
-    const line = lines[i];
-    if (/^[A-Za-z][A-Za-z0-9_]*:\s*/.test(line)) break;
-    const item = line.match(/^\s*-\s*(?:target:\s*)?["']?([^"']+?)["']?\s*$/);
-    if (item) values.push(item[1].trim());
-    const target = line.match(/^\s+target:\s*["']?([^"']+?)["']?\s*$/);
-    if (target) values.push(target[1].trim());
-  }
-  return values;
-}
-
-function normalizeLine(value) {
-  return value.replace(/\\\[/g, '[').replace(/\\\]/g, ']').replace(/\s+/g, ' ').trim();
-}
-
-function extractLabeled(body, labels) {
-  for (const label of labels) {
-    const patterns = [
-      new RegExp(`^\\s*\\*\\*${label}\\*\\*\\s+(.*)$`, 'im'),
-      new RegExp(`^\\s*${label}\\s*[:：]\\s*(.*)$`, 'im'),
-      new RegExp(`^\\s*\\|?\\s*\\*\\*${label}\\*\\*\\s*\\|?\\s*(.*?)\\s*\\|?\\s*$`, 'im'),
-    ];
-    for (const pattern of patterns) {
-      const match = body.match(pattern);
-      if (match?.[1]) {
-        const value = normalizeLine(match[1]).replace(/^[-|]+|[-|]+$/g, '').trim();
-        if (value && value.length < 240) return value;
-      }
-    }
-  }
-  return '';
-}
-
-function cleanBodyForWords(body) {
-  return body
-    .replace(/```[\s\S]*?```/g, ' ')
-    .replace(/!\[[^\]]*\]\([^)]*\)/g, ' ')
-    .replace(/<[^>]+>/g, ' ')
-    .replace(/https?:\/\/\S+/g, ' ')
-    .replace(/[`*_>#|=~\\[\](){}]/g, ' ')
-    .replace(/\bOTA-[A-Z]+-[A-Z0-9-]+\b/g, ' ')
-    .replace(/\s+/g, ' ')
-    .trim();
-}
-
-function words(text) {
-  return text ? text.split(/\s+/).filter(Boolean) : [];
-}
-
-function isGenericSummary(summary, signature) {
-  const s = summary.trim();
-  if (!s) return true;
-  if (s === signature) return true;
-  if (/^(?:Wissenschaftliches|Technisches|Historisches|Narratives|Biografisches|Foundational) Dokument\b/i.test(s)) return true;
-  if (/^OTA-[A-Z]+-/i.test(s)) return true;
-  return words(s).length < 9;
-}
-
-function isGenericTitle(title, signature) {
-  const t = title.trim();
-  return !t || t === signature || /^OTA-[A-Z]+-[A-Z0-9-]+$/i.test(t);
-}
-
-function substantiveParagraph(body) {
-  const candidates = body
-    .split(/\r?\n\s*\r?\n/)
-    .map(p => normalizeLine(p))
-    .filter(p => p.length >= 90)
-    .filter(p => !/^[-| ]+$/.test(p))
-    .filter(p => !/^THE OVERTIME ARCHIVE$/i.test(p))
-    .filter(p => !/^OTA-[A-Z]+-/i.test(p))
-    .filter(p => !/^\*\*(?:DOC-ID|KLASSIFIZIERUNG|SUBJEKT|AUTOR|DATUM|STATUS|EPISTEMOLOGIE|QUERVERWEISE)\*\*/i.test(p));
-  const first = candidates[0] ?? '';
-  return first.length > 360 ? `${first.slice(0, 357).trim()}…` : first;
-}
-
-const documents = files.map(file => {
-  const fullPath = path.join(DOCS_DIR, file);
-  const raw = fs.readFileSync(fullPath, 'utf8');
-  const { frontmatter, body } = splitFrontmatter(raw);
-
-  const signature = scalar(frontmatter, 'signature') || file.replace(/\.(?:md|mdx)$/i, '');
-  const title = scalar(frontmatter, 'title');
-  const summary = scalar(frontmatter, 'summary');
-  const series = scalar(frontmatter, 'series');
-  const year = scalar(frontmatter, 'year');
-  const language = scalar(frontmatter, 'language');
-  const related = listBlock(frontmatter, 'relatedDocuments');
-
-  const bodyWordCount = words(cleanBodyForWords(body)).length;
-  const headings = (body.match(/^#{1,4}\s+.+$/gm) ?? []).length;
-  const images = (body.match(/!\[[^\]]*\]\([^)]*\)/g) ?? []).length + (body.match(/<img\b/gi) ?? []).length;
-  const tables = (body.match(/^\s*\|.*\|\s*$/gm) ?? []).length > 1 ? 1 : 0;
-  const allRefs = [...body.matchAll(/\bOTA-[A-Z]+-[A-Z0-9-]+\b/g)].map(m => m[0]);
-  const referencedTargets = [...new Set(allRefs.filter(ref => ref !== signature))];
-
-  const extractedTitle = extractLabeled(body, ['SUBJEKT', 'TITEL', 'BETREFF', 'THEMA']);
-  const extractedAuthor = extractLabeled(body, ['AUTOR', 'AUTORIN', 'VERFASSER', 'VERFASSERIN']);
-  const extractedClassification = extractLabeled(body, ['KLASSIFIZIERUNG', 'DOKUMENTTYP', 'TYP']);
-  const genericTitle = isGenericTitle(title, signature);
-  const genericSummary = isGenericSummary(summary, signature);
-  const relationGap = related.length === 0 && referencedTargets.length > 0;
-
-  let substance = 'FRAGMENT';
-  if (bodyWordCount >= 1200 || (bodyWordCount >= 700 && headings >= 4)) substance = 'SUBSTANZIELL';
-  else if (bodyWordCount >= 350) substance = 'KURZ';
-
-  const flags = [];
-  if (genericTitle) flags.push('GENERIC_TITLE');
-  if (genericSummary) flags.push('GENERIC_SUMMARY');
-  if (relationGap) flags.push('RELATION_GAP');
-  if (images === 0) flags.push('NO_VISUAL');
-  if (headings === 0) flags.push('NO_HEADINGS');
-  if (bodyWordCount < 350) flags.push('LOW_SUBSTANCE');
-
-  let priority = 0;
-  if (genericTitle) priority += 4;
-  if (genericSummary) priority += 3;
-  if (relationGap) priority += 2;
-  if (bodyWordCount < 350) priority += 4;
-  else if (bodyWordCount < 700) priority += 2;
-  if (headings === 0) priority += 1;
-
-  return {
-    file,
-    signature,
-    series,
-    year,
-    language,
-    canonical: { title, summary, relatedCount: related.length },
-    extracted: {
-      title: extractedTitle || null,
-      author: extractedAuthor || null,
-      classification: extractedClassification || null,
-      excerpt: substantiveParagraph(body) || null,
-    },
-    metrics: {
-      words: bodyWordCount,
-      headings,
-      images,
-      tables,
-      inlineReferenceTargets: referencedTargets.length,
-    },
-    quality: {
-      substance,
-      genericTitle,
-      genericSummary,
-      relationGap,
-      flags,
-      priority,
-    },
-  };
-});
-
-documents.sort((a, b) => b.quality.priority - a.quality.priority || a.signature.localeCompare(b.signature));
-
-const summary = {
-  documents: documents.length,
-  substantial: documents.filter(d => d.quality.substance === 'SUBSTANZIELL').length,
-  short: documents.filter(d => d.quality.substance === 'KURZ').length,
-  fragments: documents.filter(d => d.quality.substance === 'FRAGMENT').length,
-  genericTitles: documents.filter(d => d.quality.genericTitle).length,
-  genericSummaries: documents.filter(d => d.quality.genericSummary).length,
-  relationGaps: documents.filter(d => d.quality.relationGap).length,
-  withoutVisuals: documents.filter(d => d.metrics.images === 0).length,
-};
-
-fs.mkdirSync(path.dirname(OUT_FILE), { recursive: true });
-fs.writeFileSync(OUT_FILE, `${JSON.stringify({ generatedAt: new Date().toISOString(), summary, documents }, null, 2)}\n`, 'utf8');
-
-console.log(`Archive quality: ${summary.documents} documents`);
-console.log(`  substantial: ${summary.substantial}`);
-console.log(`  short: ${summary.short}`);
-console.log(`  fragments: ${summary.fragments}`);
-console.log(`  generic titles: ${summary.genericTitles}`);
-console.log(`  generic summaries: ${summary.genericSummaries}`);
-console.log(`  relation gaps: ${summary.relationGaps}`);
+const documents=files.map(file=>{const raw=fs.readFileSync(path.join(DOCS_DIR,file),'utf8');const {frontmatter,body}=splitFrontmatter(raw);const signature=scalar(frontmatter,'signature')||file.replace(/\.(?:md|mdx)$/i,'');const title=scalar(frontmatter,'title'),summary=scalar(frontmatter,'summary'),series=scalar(frontmatter,'series'),year=scalar(frontmatter,'year'),language=scalar(frontmatter,'language'),related=listBlock(frontmatter,'relatedDocuments');const bodyWordCount=words(cleanBodyForWords(body)).length,headings=(body.match(/^#{1,4}\s+.+$/gm)??[]).length,images=(body.match(/!\[[^\]]*\]\([^)]*\)/g)??[]).length+(body.match(/<img\b/gi)??[]).length,tables=(body.match(/^\s*\|.*\|\s*$/gm)??[]).length>1?1:0;const allRefs=[...body.matchAll(/\bOTA-[A-Z]+-[A-Z0-9-]+\b/g)].map(m=>m[0]);const referencedTargets=[...new Set(allRefs.filter(ref=>ref!==signature))];const extractedTitle=extractLabeled(body,['SUBJEKT','TITEL','BETREFF','THEMA']),extractedAuthor=extractLabeled(body,['AUTOR','AUTORIN','VERFASSER','VERFASSERIN']),extractedClassification=extractLabeled(body,['KLASSIFIZIERUNG','DOKUMENTTYP','TYP']),excerpt=substantiveParagraph(body);const genericTitle=isGenericTitle(title,signature),genericSummary=isGenericSummary(summary,signature);const relationGap=referencedTargets.filter(r=>!related.includes(r));let substance='FRAGMENT';if(bodyWordCount>=1200||(bodyWordCount>=700&&headings>=4))substance='SUBSTANZIELL';else if(bodyWordCount>=350)substance='KURZ';const flags=[];if(genericTitle)flags.push('GENERIC_TITLE');if(genericSummary)flags.push('GENERIC_SUMMARY');if(relationGap.length)flags.push('RELATION_GAP');if(images===0)flags.push('NO_VISUAL');if(headings===0)flags.push('NO_HEADINGS');if(bodyWordCount<350)flags.push('LOW_SUBSTANCE');let priority=(genericTitle?4:0)+(genericSummary?3:0)+(relationGap.length?2:0)+(bodyWordCount<350?4:bodyWordCount<700?2:0)+(headings===0?1:0);
+const safeTitle=genericTitle?titleCandidate(extractedTitle,signature):null;const safeSummary=genericSummary?summaryCandidate(excerpt):null;const relationCandidates=relationGap.map(target=>({target,evidence:'inline-reference',safe:true}));const candidateCount=(safeTitle?1:0)+(safeSummary?1:0)+relationCandidates.length;
+return {file,signature,series,year,language,canonical:{title,summary,relatedCount:related.length},extracted:{title:extractedTitle||null,author:extractedAuthor||null,classification:extractedClassification||null,excerpt:excerpt||null},candidates:{title:safeTitle?{value:safeTitle,evidence:'explicit-labeled-field',safe:true}:null,summary:safeSummary?{value:safeSummary,evidence:'first-substantive-paragraph',safe:false}:null,relations:relationCandidates,count:candidateCount},metrics:{words:bodyWordCount,headings,images,tables,inlineReferenceTargets:referencedTargets.length},quality:{substance,genericTitle,genericSummary,relationGap:relationGap.length>0,flags,priority}};});
+documents.sort((a,b)=>b.quality.priority-a.quality.priority||a.signature.localeCompare(b.signature));
+const summary={documents:documents.length,substantial:documents.filter(d=>d.quality.substance==='SUBSTANZIELL').length,short:documents.filter(d=>d.quality.substance==='KURZ').length,fragments:documents.filter(d=>d.quality.substance==='FRAGMENT').length,genericTitles:documents.filter(d=>d.quality.genericTitle).length,genericSummaries:documents.filter(d=>d.quality.genericSummary).length,relationGaps:documents.filter(d=>d.quality.relationGap).length,withoutVisuals:documents.filter(d=>d.metrics.images===0).length,safeTitleCandidates:documents.filter(d=>d.candidates.title?.safe).length,summaryCandidates:documents.filter(d=>d.candidates.summary).length,safeRelationCandidates:documents.reduce((n,d)=>n+d.candidates.relations.length,0)};
+fs.mkdirSync(path.dirname(OUT_FILE),{recursive:true});fs.writeFileSync(OUT_FILE,`${JSON.stringify({generatedAt:new Date().toISOString(),summary,documents},null,2)}\n`,'utf8');
+console.log(`Archive quality: ${summary.documents} documents`);console.log(`  substantial: ${summary.substantial}`);console.log(`  short: ${summary.short}`);console.log(`  fragments: ${summary.fragments}`);console.log(`  generic titles: ${summary.genericTitles}`);console.log(`  generic summaries: ${summary.genericSummaries}`);console.log(`  relation gaps: ${summary.relationGaps}`);console.log(`  safe title candidates: ${summary.safeTitleCandidates}`);console.log(`  summary candidates (review): ${summary.summaryCandidates}`);console.log(`  safe relation candidates: ${summary.safeRelationCandidates}`);
