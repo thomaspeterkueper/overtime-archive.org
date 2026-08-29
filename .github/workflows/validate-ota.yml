@@ -34,3 +34,12 @@ jobs:
 
       - name: Build site and validate internal links
         run: npm run verify
+
+      - name: Publish archive quality report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ota-archive-quality
+          path: src/data/archive-quality.generated.json
+          if-no-files-found: error
+          retention-days: 30
