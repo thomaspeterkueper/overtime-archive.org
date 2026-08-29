@@ -84,14 +84,45 @@ function firstHeadingCandidate(body,sig){
 }
 function summaryCandidate(v){v=cleanCandidate(v);if(!v||v.length<90||v.length>360)return null;if(/^\*\*(?:DOC-ID|KLASSIFIZIERUNG|SUBJEKT|AUTOR|DATUM|STATUS|EPISTEMOLOGIE|QUERVERWEISE)/i.test(v))return null;return v;}
 
+const CROSS_REFERENCE_LABEL=/(?:QUERVERWEISE?|VERWANDTE(?:\s+DOKUMENTE)?|RELATED\s+DOCUMENTS?|SIEHE\s+AUCH|SEE\s+ALSO)/i;
+const BIBLIOGRAPHY_LABEL=/(?:REFERENZEN|LITERATUR|QUELLEN|BIBLIOGRAFIE|BIBLIOGRAPHY|REFERENCES|SOURCES|CITATIONS)/i;
+function classifyReferenceContexts(body,signature){
+  const lines=body.split(/\r?\n/);
+  const contexts=new Map();
+  let section='inline';
+  for(const line of lines){
+    const heading=line.match(/^#{1,6}\s+(.+)$/);
+    if(heading){
+      const name=normalizeLine(heading[1]);
+      section=CROSS_REFERENCE_LABEL.test(name)?'explicit-cross-reference':BIBLIOGRAPHY_LABEL.test(name)?'bibliography':'inline';
+    }
+    let lineContext=section;
+    const labelText=normalizeLine(line.replace(/^\s*[-*|]+\s*/,'').replace(/\*\*/g,''));
+    if(CROSS_REFERENCE_LABEL.test(labelText)&&/[:：]/.test(labelText))lineContext='explicit-cross-reference';
+    else if(BIBLIOGRAPHY_LABEL.test(labelText)&&/[:：]/.test(labelText))lineContext='bibliography';
+    for(const match of line.matchAll(/\bOTA-[A-Z]+-[A-Z0-9-]+\b/g)){
+      const target=match[0];
+      if(target===signature)continue;
+      if(!contexts.has(target))contexts.set(target,new Set());
+      contexts.get(target).add(lineContext);
+    }
+  }
+  return contexts;
+}
+function preferredReferenceContext(contexts){
+  if(contexts.has('explicit-cross-reference'))return 'explicit-cross-reference';
+  if(contexts.has('bibliography'))return 'bibliography';
+  return 'inline';
+}
+
 const documents=files.map(file=>{
   const raw=fs.readFileSync(path.join(DOCS_DIR,file),'utf8');
   const {frontmatter,body}=splitFrontmatter(raw);
   const signature=scalar(frontmatter,'signature')||file.replace(/\.(?:md|mdx)$/i,'');
   const title=scalar(frontmatter,'title'),summary=scalar(frontmatter,'summary'),series=scalar(frontmatter,'series'),year=scalar(frontmatter,'year'),language=scalar(frontmatter,'language'),related=listBlock(frontmatter,'relatedDocuments');
   const bodyWordCount=words(cleanBodyForWords(body)).length,headings=(body.match(/^#{1,4}\s+.+$/gm)??[]).length,images=(body.match(/!\[[^\]]*\]\([^)]*\)/g)??[]).length+(body.match(/<img\b/gi)??[]).length,tables=(body.match(/^\s*\|.*\|\s*$/gm)??[]).length>1?1:0;
-  const allRefs=[...body.matchAll(/\bOTA-[A-Z]+-[A-Z0-9-]+\b/g)].map(m=>m[0]);
-  const referencedTargets=[...new Set(allRefs.filter(ref=>ref!==signature))];
+  const referenceContexts=classifyReferenceContexts(body,signature);
+  const referencedTargets=[...referenceContexts.keys()];
   const extractedTitle=extractLabeled(body,['SUBJEKT','TITEL','BETREFF','THEMA']),extractedAuthor=extractLabeled(body,['AUTOR','AUTORIN','VERFASSER','VERFASSERIN']),extractedClassification=extractLabeled(body,['KLASSIFIZIERUNG','DOKUMENTTYP','TYP']),excerpt=substantiveParagraph(body);
   const genericTitle=isGenericTitle(title,signature),genericSummary=isGenericSummary(summary,signature);
   const relationGap=referencedTargets.filter(r=>!related.includes(r));
@@ -107,14 +138,19 @@ const documents=files.map(file=>{
   else if(genericTitle)titleReview={tier:'C',candidate:null,evidence:'editorial-decision-required'};
 
   const safeSummary=genericSummary?summaryCandidate(excerpt):null;
-  // An inline mention is evidence for a relation review, not sufficient evidence
-  // to mutate canonical relatedDocuments automatically.
-  const relationCandidates=relationGap.map(target=>({target,evidence:'inline-reference',safe:false}));
+  // Reference context improves review prioritization, but no context alone is
+  // sufficient evidence to mutate canonical relatedDocuments automatically.
+  const relationCandidates=relationGap.map(target=>{
+    const contexts=referenceContexts.get(target)??new Set(['inline']);
+    const context=preferredReferenceContext(contexts);
+    return {target,evidence:context,safe:false,contexts:[...contexts].sort()};
+  });
   const candidateCount=(safeTitle?1:0)+(derivedTitle?1:0)+(safeSummary?1:0)+relationCandidates.length;
   return {file,signature,series,year,language,canonical:{title,summary,relatedCount:related.length},extracted:{title:extractedTitle||null,author:extractedAuthor||null,classification:extractedClassification||null,excerpt:excerpt||null},titleReview,candidates:{title:safeTitle?{value:safeTitle,evidence:'explicit-labeled-field',safe:true}:null,derivedTitle:derivedTitle?{value:derivedTitle,evidence:'first-meaningful-heading',safe:false}:null,summary:safeSummary?{value:safeSummary,evidence:'first-substantive-paragraph',safe:false}:null,relations:relationCandidates,count:candidateCount},metrics:{words:bodyWordCount,headings,images,tables,inlineReferenceTargets:referencedTargets.length},quality:{substance,genericTitle,genericSummary,relationGap:relationGap.length>0,flags,priority}};
 });
 
 documents.sort((a,b)=>b.quality.priority-a.quality.priority||a.signature.localeCompare(b.signature));
+const allRelationCandidates=documents.flatMap(d=>d.candidates.relations);
 const summary={
   documents:documents.length,
   substantial:documents.filter(d=>d.quality.substance==='SUBSTANZIELL').length,
@@ -130,8 +166,11 @@ const summary={
   titleReviewOK:documents.filter(d=>d.titleReview.tier==='OK').length,
   safeTitleCandidates:documents.filter(d=>d.candidates.title?.safe).length,
   summaryCandidates:documents.filter(d=>d.candidates.summary).length,
-  relationCandidates:documents.reduce((n,d)=>n+d.candidates.relations.length,0),
-  safeRelationCandidates:documents.reduce((n,d)=>n+d.candidates.relations.filter(r=>r.safe).length,0)
+  relationCandidates:allRelationCandidates.length,
+  explicitCrossReferenceCandidates:allRelationCandidates.filter(r=>r.evidence==='explicit-cross-reference').length,
+  bibliographyRelationCandidates:allRelationCandidates.filter(r=>r.evidence==='bibliography').length,
+  inlineRelationCandidates:allRelationCandidates.filter(r=>r.evidence==='inline').length,
+  safeRelationCandidates:allRelationCandidates.filter(r=>r.safe).length
 };
 fs.mkdirSync(path.dirname(OUT_FILE),{recursive:true});
 fs.writeFileSync(OUT_FILE,`${JSON.stringify({generatedAt:new Date().toISOString(),summary,documents},null,2)}\n`,'utf8');
@@ -146,4 +185,7 @@ console.log(`  relation gaps: ${summary.relationGaps}`);
 console.log(`  safe title candidates: ${summary.safeTitleCandidates}`);
 console.log(`  summary candidates (review): ${summary.summaryCandidates}`);
 console.log(`  relation candidates (review): ${summary.relationCandidates}`);
+console.log(`    explicit cross-reference: ${summary.explicitCrossReferenceCandidates}`);
+console.log(`    bibliography/reference section: ${summary.bibliographyRelationCandidates}`);
+console.log(`    inline/body mention: ${summary.inlineRelationCandidates}`);
 console.log(`  safe relation candidates: ${summary.safeRelationCandidates}`);
