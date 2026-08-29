@@ -26,7 +26,7 @@ Die Pilotobjekte aus dem Schema als echte OTA-TEC-Dossiers verfassen und im Over
 
 ## Vorgehen
 
-- Dossiers nach `docs/ota-tec-object-dossier-schema.md` in `src/content/documents` anlegen; Dateiname = Signatur (`OTA-TEC-0001-2026-DE.md`).
+- Dossiers nach `docs/ota-tec-object-dossier-schema.md` in `src/content/documents` anlegen; Dateiname = Signatur (Platzhalter `OTA-TEC-<NNNN>-<YEAR>-DE.md` — die konkrete Signatur wird erst bei der Autorenschaft über die OTA/KG-Governance vergeben, nicht vorab festgelegt).
 - Die maschinenvalidierten Dossier-Felder (`objectClass`, `time`, `externalRefs`, `entities`, `relations`, `sync`) aus `src/content.config.ts` nutzen, damit sie in `entry.data` verfügbar sind.
 - OTA-Signaturen und fehlende fremde Identitäten über die bestehende OTA/KG-Governance vergeben; keine lokalen Aliasse erfinden.
 

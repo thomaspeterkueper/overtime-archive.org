@@ -36,7 +36,7 @@ The identity block must follow the OTA frontmatter contract. `src/content.config
 Machine-enforced by `astro build`:
 
 - the dossier fields below are part of the collection schema, so `astro build` validates their structure when present and exposes them on `entry.data` (the NOXIA integration target reads `externalRefs` from there; undeclared frontmatter keys are stripped by zod);
-- the entry id is derived from the file name, not from frontmatter. Author the dossier as `OTA-TEC-0001-2026-DE.md`; the `signature` value and the file name must match.
+- the entry id is derived from the file name, not from frontmatter. Author the dossier as `OTA-TEC-<NNNN>-<YEAR>-DE.md`; the concrete signature (series number and year) is assigned through the OTA/KG governance path when the dossier is authored (see § Pilot series), and the `signature` value and the file name must match.
 
 Governance-enforced (dossier authoring rule):
 
@@ -44,12 +44,14 @@ Governance-enforced (dossier authoring rule):
 
 Required dossier-specific metadata:
 
+The example below is a template, not an allocated document: `<NNNN>` and `<YEAR>` stand for the series number and year that the OTA/KG governance path assigns when the dossier is authored, and `seriesNumber` must be the next free number in the series.
+
 ```yaml
-signature: "OTA-TEC-0001-2026-DE"
+signature: "OTA-TEC-<NNNN>-<YEAR>-DE"
 title: <canonical dossier title>
 series: "TEC"
-seriesNumber: 1
-year: 2026
+seriesNumber: <next free in TEC series>
+year: <YEAR>
 language: "DE"
 version: "v1.0"
 status: "ENTWURF"
@@ -69,8 +71,8 @@ externalRefs:
 kg:
   schema: KXF-0.2
   master: kueper-knowledge-graph
-  documentId: "OTA-TEC-0001-2026-DE"
-  graphId: "DOC:OTA:OTA-TEC-0001-2026-DE"
+  documentId: "OTA-TEC-<NNNN>-<YEAR>-DE"
+  graphId: "DOC:OTA:OTA-TEC-<NNNN>-<YEAR>-DE"
   system: SYS:OTA:overtimearchive
   sourceOfTruth: false
 
