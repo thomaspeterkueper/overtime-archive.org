@@ -1,23 +1,74 @@
 ---
 import LayoutBase from '../layouts/LayoutBase.astro';
 import qualityIndex from '../data/archive-quality.generated.json';
-const docs=qualityIndex.documents as Array<any>; const summary=qualityIndex.summary as any;
+const docs=qualityIndex.documents as Array<any>;
+const summary=qualityIndex.summary as any;
 const labels:Record<string,string>={SUBSTANZIELL:'SUBSTANZIELL',KURZ:'KURZ',FRAGMENT:'FRAGMENT'};
 const flagLabels:Record<string,string>={GENERIC_TITLE:'Titel generisch',GENERIC_SUMMARY:'Summary generisch',RELATION_GAP:'Relationen fehlen im Frontmatter',NO_VISUAL:'kein Visual',NO_HEADINGS:'keine Überschriften',LOW_SUBSTANCE:'geringer Textumfang'};
+const tierLabels:Record<string,string>={A:'A · EXPLIZIT BELEGT',B:'B · ABLEITBAR',C:'C · REDAKTIONELL OFFEN',OK:'OK · TITEL VORHANDEN'};
 ---
 <LayoutBase title="Archivzustand">
-<section class="catalog-section" style="max-width:1200px;margin:0 auto;padding:2.5rem 0 4rem">
-<div style="font-family:var(--font-mono);font-size:.62rem;color:var(--rust);letter-spacing:.18em;margin-bottom:.7rem">OTA · REDAKTIONELLE DIAGNOSTIK</div><h1 style="font-family:var(--font-display);font-size:2.2rem;line-height:1.1;margin-bottom:.8rem">Archivzustand</h1>
-<p style="font-family:var(--font-serif);font-size:1rem;line-height:1.65;color:var(--ink-light);max-width:82ch">Automatisch erzeugte Arbeitsansicht. Kandidaten werden ausschließlich aus vorhandenen Dokumentinhalten gewonnen. <strong>Sicher</strong> bedeutet mechanisch eindeutig extrahierbar; Summary-Kandidaten bleiben bewusst prüfpflichtig. Diese Seite verändert keine kanonischen Dokumente.</p>
-<div class="stats"><div><strong>{summary.documents}</strong><span>Dokumente</span></div><div><strong>{summary.safeTitleCandidates ?? 0}</strong><span>sichere Titelkandidaten</span></div><div><strong>{summary.summaryCandidates ?? 0}</strong><span>Summary-Kandidaten</span></div><div><strong>{summary.safeRelationCandidates ?? 0}</strong><span>sichere Relationskandidaten</span></div><div><strong>{summary.fragments}</strong><span>Fragmente</span></div></div>
-<div class="filters"><button class="quality-filter active" data-filter="ALL">ALLE</button><button class="quality-filter" data-filter="SAFE_TITLE">SICHERE TITEL</button><button class="quality-filter" data-filter="SUMMARY_CANDIDATE">SUMMARY-KANDIDATEN</button><button class="quality-filter" data-filter="SAFE_RELATION">RELATIONEN</button><button class="quality-filter" data-filter="FRAGMENT">FRAGMENTE</button></div>
-<div style="overflow-x:auto"><table class="document-table active quality-table" style="width:100%"><thead><tr><th>DOKUMENT</th><th>SUBSTANZ</th><th>METADATEN-KANDIDATEN</th><th>PRÜFPUNKTE</th></tr></thead><tbody>
-{docs.map(doc=><tr data-substance={doc.quality.substance} data-candidates={`${doc.candidates?.title?.safe?'SAFE_TITLE ':''}${doc.candidates?.summary?'SUMMARY_CANDIDATE ':''}${doc.candidates?.relations?.length?'SAFE_RELATION':''}`}>
-<td style="min-width:220px"><a href={`/dokument/${doc.file.replace(/\.(?:md|mdx)$/i,'').toLowerCase()}`} class="table-link"><span class="sig" style="display:block;color:var(--blue-light)">{doc.signature}</span><span style="display:block;font-family:var(--font-serif);font-size:.82rem;margin-top:.2rem">{doc.canonical.title}</span></a><small>{doc.metrics.words} Wörter · {doc.metrics.headings} H · {doc.metrics.inlineReferenceTargets} R</small></td>
-<td><span class={`quality-badge ${doc.quality.substance.toLowerCase()}`}>{labels[doc.quality.substance]??doc.quality.substance}</span></td>
-<td style="min-width:360px">{doc.candidates?.title&&<div class="candidate safe"><b>TITEL · SICHER</b><span>{doc.candidates.title.value}</span><small>Quelle: explizit beschriftetes Feld im Dokument</small></div>}{doc.candidates?.summary&&<div class="candidate review"><b>SUMMARY · PRÜFEN</b><span>{doc.candidates.summary.value}</span><small>Quelle: erster substanzieller Absatz; keine automatische Übernahme</small></div>}{doc.candidates?.relations?.length>0&&<div class="candidate safe"><b>RELATIONEN · SICHER EXTRAHIERBAR</b><span>{doc.candidates.relations.map((r:any)=>r.target).join(' · ')}</span><small>Quelle: explizite OTA-Signaturen im Dokumenttext</small></div>}{!doc.candidates?.count&&<span style="color:var(--ink-faint)">kein belastbarer Kandidat</span>}</td>
-<td style="min-width:230px">{(doc.quality.flags??[]).map((flag:string)=><span class="quality-flag">{flagLabels[flag]??flag}</span>)}</td></tr>)}
+<section class="catalog-section archive-quality" style="max-width:1200px;margin:0 auto;padding:2.5rem 0 4rem">
+<div class="kicker">OTA · REDAKTIONELLE DIAGNOSTIK</div>
+<h1>Archivzustand</h1>
+<p class="intro">Automatisch erzeugte Arbeitsansicht für den vollständigen Bestand. Die Titelprüfung trennt jetzt alle Dokumente in <strong>A</strong> (explizit im Dokument belegt), <strong>B</strong> (aus einer vorhandenen Überschrift ableitbar), <strong>C</strong> (redaktionelle Entscheidung nötig) und <strong>OK</strong>. A-Fälle auf <code>master</code> werden nach erfolgreicher Validierung automatisch kanonisiert; B und C bleiben unangetastet.</p>
+
+<div class="stats">
+  <div><strong>{summary.documents}</strong><span>Dokumente</span></div>
+  <div><strong>{summary.titleReviewA ?? 0}</strong><span>A · automatisch offen</span></div>
+  <div><strong>{summary.titleReviewB ?? 0}</strong><span>B · prüfbare Titel</span></div>
+  <div><strong>{summary.titleReviewC ?? 0}</strong><span>C · redaktionell offen</span></div>
+  <div><strong>{summary.titleReviewOK ?? 0}</strong><span>Titel bereits OK</span></div>
+  <div><strong>{summary.genericTitles ?? 0}</strong><span>generische Titel</span></div>
+  <div><strong>{summary.summaryCandidates ?? 0}</strong><span>Summary-Kandidaten</span></div>
+  <div><strong>{summary.fragments}</strong><span>Fragmente</span></div>
+</div>
+
+<div class="filters">
+  <button class="quality-filter active" data-filter="ALL">ALLE</button>
+  <button class="quality-filter" data-filter="A">TITEL A</button>
+  <button class="quality-filter" data-filter="B">TITEL B</button>
+  <button class="quality-filter" data-filter="C">TITEL C</button>
+  <button class="quality-filter" data-filter="OK">TITEL OK</button>
+  <button class="quality-filter" data-filter="SUMMARY_CANDIDATE">SUMMARY-KANDIDATEN</button>
+  <button class="quality-filter" data-filter="SAFE_RELATION">RELATIONEN</button>
+  <button class="quality-filter" data-filter="FRAGMENT">FRAGMENTE</button>
+</div>
+
+<div style="overflow-x:auto"><table class="document-table active quality-table" style="width:100%"><thead><tr><th>DOKUMENT</th><th>TITELPRÜFUNG</th><th>SUBSTANZ</th><th>ARBEITSKANDIDATEN</th><th>PRÜFPUNKTE</th></tr></thead><tbody>
+{docs.map(doc=>{
+  const tier=doc.titleReview?.tier ?? (doc.quality.genericTitle?'C':'OK');
+  const candidate=doc.titleReview?.candidate;
+  const filters=`${tier} ${doc.candidates?.summary?'SUMMARY_CANDIDATE ':''}${doc.candidates?.relations?.length?'SAFE_RELATION':''}`;
+  return <tr data-substance={doc.quality.substance} data-filters={filters}>
+    <td style="min-width:220px"><a href={`/dokument/${doc.file.replace(/\.(?:md|mdx)$/i,'').toLowerCase()}`} class="table-link"><span class="sig">{doc.signature}</span><span class="canonical-title">{doc.canonical.title}</span></a><small>{doc.metrics.words} Wörter · {doc.metrics.headings} H · {doc.metrics.inlineReferenceTargets} R</small></td>
+    <td><span class={`tier tier-${tier.toLowerCase()}`}>{tierLabels[tier]??tier}</span>{candidate&&<span class="tier-candidate">{candidate}</span>}</td>
+    <td><span class={`quality-badge ${doc.quality.substance.toLowerCase()}`}>{labels[doc.quality.substance]??doc.quality.substance}</span></td>
+    <td style="min-width:350px">
+      {tier==='A'&&candidate&&<div class="candidate safe"><b>TITEL · A</b><span>{candidate}</span><small>explizit beschriftetes Feld; automatisch kanonisierbar</small></div>}
+      {tier==='B'&&candidate&&<div class="candidate review"><b>TITEL · B</b><span>{candidate}</span><small>vorhandene Überschrift; redaktionell prüfen</small></div>}
+      {tier==='C'&&<div class="candidate open"><b>TITEL · C</b><span>keine belastbare automatische Titelableitung</span><small>redaktionelle Entscheidung erforderlich</small></div>}
+      {doc.candidates?.summary&&<div class="candidate review"><b>SUMMARY · PRÜFEN</b><span>{doc.candidates.summary.value}</span><small>erster substanzieller Absatz; keine automatische Übernahme</small></div>}
+      {doc.candidates?.relations?.length>0&&<div class="candidate safe"><b>RELATIONEN · EXTRAHIERT</b><span>{doc.candidates.relations.map((r:any)=>r.target).join(' · ')}</span><small>Signaturen im Dokumenttext; Relationstyp noch nicht automatisch kanonisiert</small></div>}
+    </td>
+    <td style="min-width:230px">{(doc.quality.flags??[]).map((flag:string)=><span class="quality-flag">{flagLabels[flag]??flag}</span>)}</td>
+  </tr>;
+})}
 </tbody></table></div></section>
-<style>.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:.8rem;margin:1.8rem 0 2rem}.stats>div{background:var(--paper);border:1px solid rgba(44,36,22,.1);padding:1rem;display:flex;flex-direction:column}.stats strong{font-family:var(--font-display);font-size:1.6rem}.stats span,.candidate small,td small{font-family:var(--font-mono);font-size:.55rem;color:var(--ink-faint)}.filters{display:flex;gap:.6rem;flex-wrap:wrap;margin-bottom:1.2rem}.quality-filter{font-family:var(--font-mono);font-size:.6rem;padding:.45rem .7rem;border:1px solid rgba(44,36,22,.16);background:var(--paper);cursor:pointer}.quality-filter.active,.quality-filter:hover{border-color:var(--rust);color:var(--rust)}.quality-badge{font-family:var(--font-mono);font-size:.58rem;padding:.18rem .35rem;border:1px solid rgba(44,36,22,.15)}.candidate{margin:0 0 .65rem;padding:.55rem .65rem;border-left:2px solid rgba(44,36,22,.2);display:flex;flex-direction:column;gap:.18rem}.candidate b{font-family:var(--font-mono);font-size:.56rem;letter-spacing:.06em}.candidate span{font-family:var(--font-serif);font-size:.82rem;line-height:1.4}.candidate.safe{border-left-color:var(--green-term)}.candidate.review{border-left-color:var(--amber-term)}.quality-flag{display:inline-block;font-family:var(--font-mono);font-size:.54rem;margin:.12rem;padding:.12rem .3rem;background:rgba(139,69,19,.05);border:1px solid rgba(139,69,19,.12)}</style>
-<script>const buttons=Array.from(document.querySelectorAll('.quality-filter'));const rows=Array.from(document.querySelectorAll('.quality-table tbody tr'));buttons.forEach(button=>button.addEventListener('click',()=>{const f=button.getAttribute('data-filter')||'ALL';buttons.forEach(x=>x.classList.toggle('active',x===button));rows.forEach(row=>{const s=row.getAttribute('data-substance')||'',c=row.getAttribute('data-candidates')||'';row.style.display=(f==='ALL'||s===f||c.split(' ').includes(f))?'':'none';});}));</script>
+<style>
+.archive-quality .kicker{font-family:var(--font-mono);font-size:.62rem;color:var(--rust);letter-spacing:.18em;margin-bottom:.7rem}.archive-quality h1{font-family:var(--font-display);font-size:2.2rem;line-height:1.1;margin-bottom:.8rem}.intro{font-family:var(--font-serif);font-size:1rem;line-height:1.65;color:var(--ink-light);max-width:88ch}.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:.8rem;margin:1.8rem 0 2rem}.stats>div{background:var(--paper);border:1px solid rgba(44,36,22,.1);padding:1rem;display:flex;flex-direction:column}.stats strong{font-family:var(--font-display);font-size:1.6rem}.stats span,.candidate small,td small{font-family:var(--font-mono);font-size:.55rem;color:var(--ink-faint)}.filters{display:flex;gap:.6rem;flex-wrap:wrap;margin-bottom:1.2rem}.quality-filter{font-family:var(--font-mono);font-size:.6rem;padding:.45rem .7rem;border:1px solid rgba(44,36,22,.16);background:var(--paper);cursor:pointer}.quality-filter.active,.quality-filter:hover{border-color:var(--rust);color:var(--rust)}.sig{display:block;color:var(--blue-light)}.canonical-title{display:block;font-family:var(--font-serif);font-size:.82rem;margin-top:.2rem}.quality-badge,.tier{display:inline-block;font-family:var(--font-mono);font-size:.58rem;padding:.18rem .35rem;border:1px solid rgba(44,36,22,.15)}.tier-a{border-color:var(--green-term)}.tier-b{border-color:var(--amber-term)}.tier-c{border-color:var(--rust);color:var(--rust)}.tier-ok{opacity:.7}.tier-candidate{display:block;font-family:var(--font-serif);font-size:.74rem;line-height:1.35;margin-top:.35rem}.candidate{margin:0 0 .65rem;padding:.55rem .65rem;border-left:2px solid rgba(44,36,22,.2);display:flex;flex-direction:column;gap:.18rem}.candidate b{font-family:var(--font-mono);font-size:.56rem;letter-spacing:.06em}.candidate span{font-family:var(--font-serif);font-size:.82rem;line-height:1.4}.candidate.safe{border-left-color:var(--green-term)}.candidate.review{border-left-color:var(--amber-term)}.candidate.open{border-left-color:var(--rust)}.quality-flag{display:inline-block;font-family:var(--font-mono);font-size:.54rem;margin:.12rem;padding:.12rem .3rem;background:rgba(139,69,19,.05);border:1px solid rgba(139,69,19,.12)}
+</style>
+<script>
+const buttons=Array.from(document.querySelectorAll('.quality-filter'));
+const rows=Array.from(document.querySelectorAll('.quality-table tbody tr'));
+buttons.forEach(button=>button.addEventListener('click',()=>{
+  const f=button.getAttribute('data-filter')||'ALL';
+  buttons.forEach(x=>x.classList.toggle('active',x===button));
+  rows.forEach(row=>{
+    const substance=row.getAttribute('data-substance')||'';
+    const filters=(row.getAttribute('data-filters')||'').split(' ');
+    row.style.display=(f==='ALL'||substance===f||filters.includes(f))?'':'none';
+  });
+}));
+</script>
 </LayoutBase>
