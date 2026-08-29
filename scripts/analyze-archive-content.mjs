@@ -107,7 +107,9 @@ const documents=files.map(file=>{
   else if(genericTitle)titleReview={tier:'C',candidate:null,evidence:'editorial-decision-required'};
 
   const safeSummary=genericSummary?summaryCandidate(excerpt):null;
-  const relationCandidates=relationGap.map(target=>({target,evidence:'inline-reference',safe:true}));
+  // An inline mention is evidence for a relation review, not sufficient evidence
+  // to mutate canonical relatedDocuments automatically.
+  const relationCandidates=relationGap.map(target=>({target,evidence:'inline-reference',safe:false}));
   const candidateCount=(safeTitle?1:0)+(derivedTitle?1:0)+(safeSummary?1:0)+relationCandidates.length;
   return {file,signature,series,year,language,canonical:{title,summary,relatedCount:related.length},extracted:{title:extractedTitle||null,author:extractedAuthor||null,classification:extractedClassification||null,excerpt:excerpt||null},titleReview,candidates:{title:safeTitle?{value:safeTitle,evidence:'explicit-labeled-field',safe:true}:null,derivedTitle:derivedTitle?{value:derivedTitle,evidence:'first-meaningful-heading',safe:false}:null,summary:safeSummary?{value:safeSummary,evidence:'first-substantive-paragraph',safe:false}:null,relations:relationCandidates,count:candidateCount},metrics:{words:bodyWordCount,headings,images,tables,inlineReferenceTargets:referencedTargets.length},quality:{substance,genericTitle,genericSummary,relationGap:relationGap.length>0,flags,priority}};
 });
@@ -128,7 +130,8 @@ const summary={
   titleReviewOK:documents.filter(d=>d.titleReview.tier==='OK').length,
   safeTitleCandidates:documents.filter(d=>d.candidates.title?.safe).length,
   summaryCandidates:documents.filter(d=>d.candidates.summary).length,
-  safeRelationCandidates:documents.reduce((n,d)=>n+d.candidates.relations.length,0)
+  relationCandidates:documents.reduce((n,d)=>n+d.candidates.relations.length,0),
+  safeRelationCandidates:documents.reduce((n,d)=>n+d.candidates.relations.filter(r=>r.safe).length,0)
 };
 fs.mkdirSync(path.dirname(OUT_FILE),{recursive:true});
 fs.writeFileSync(OUT_FILE,`${JSON.stringify({generatedAt:new Date().toISOString(),summary,documents},null,2)}\n`,'utf8');
@@ -142,4 +145,5 @@ console.log(`  generic summaries: ${summary.genericSummaries}`);
 console.log(`  relation gaps: ${summary.relationGaps}`);
 console.log(`  safe title candidates: ${summary.safeTitleCandidates}`);
 console.log(`  summary candidates (review): ${summary.summaryCandidates}`);
+console.log(`  relation candidates (review): ${summary.relationCandidates}`);
 console.log(`  safe relation candidates: ${summary.safeRelationCandidates}`);
