@@ -14,7 +14,7 @@ import LayoutBase from '../layouts/LayoutBase.astro';
     </h1>
 
     <div style="position:relative;margin-bottom:1.25rem">
-      <input type="search" id="ota-search" placeholder="Signatur, Titel, Tags, Stichwort…" autocomplete="off"
+      <input type="search" id="ota-search" placeholder="Signatur, Titel, Ort, Person, Begriff, Volltext…" autocomplete="off"
         style="width:100%;padding:0.75rem 1rem 0.75rem 2.5rem;font-family:var(--font-mono);font-size:0.85rem;background:var(--paper);border:1px solid var(--paper-dark);color:var(--ink);outline:none;box-sizing:border-box"/>
       <span style="position:absolute;left:0.8rem;top:50%;transform:translateY(-50%);color:var(--rust);font-size:0.9rem">⌕</span>
     </div>
@@ -55,6 +55,7 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 .result-sig { font-family:var(--font-mono);font-size:0.58rem;color:var(--rust);letter-spacing:0.08em }
 .result-title { font-family:var(--font-display);font-size:1rem;color:var(--ink);margin:0.25rem 0 0.4rem;font-weight:600 }
 .result-summary { font-family:var(--font-serif);font-size:0.85rem;color:var(--ink-light);line-height:1.6 }
+.result-hit { font-family:var(--font-serif);font-size:0.82rem;color:var(--ink);line-height:1.55;margin-top:0.45rem;padding-left:0.65rem;border-left:2px solid var(--paper-dark) }
 .result-meta { display:flex;gap:0.5rem;margin-top:0.5rem;flex-wrap:wrap;align-items:center }
 .result-tag { font-family:var(--font-mono);font-size:0.5rem;color:var(--ink-faint);border:1px solid var(--paper-dark);padding:0.08rem 0.3rem }
 .result-domain { font-family:var(--font-mono);font-size:0.5rem;color:var(--blue-light);border:1px solid rgba(44,95,138,0.25);padding:0.08rem 0.3rem }
@@ -71,6 +72,23 @@ let activeEpist = 'ALL';
 let query = '';
 let showRestricted = false;
 
+function normalize(value: unknown): string {
+  return String(value ?? '')
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase();
+}
+
+function escapeHtml(value: unknown): string {
+  return String(value ?? '').replace(/[&<>'"]/g, ch => ({
+    '&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'
+  }[ch] || ch));
+}
+
+function terms(): string[] {
+  return normalize(query).split(/\s+/).filter(Boolean);
+}
+
 async function loadIndex() {
   const res = await fetch('/api/search.json');
   allDocs = await res.json();
@@ -79,12 +97,43 @@ async function loadIndex() {
 
 function score(doc: any): number {
   if (!query) return 1;
-  const q = query.toLowerCase();
-  if (doc.restricted) return doc.sig.toLowerCase().includes(q) ? 0.5 : 0;
-  const fields = [doc.sig, doc.title, doc.summary, ...(doc.tags||[]), ...(doc.domains||[])].join(' ').toLowerCase();
-  if (doc.sig.toLowerCase().includes(q)) return 3;
-  if ((doc.title||'').toLowerCase().includes(q)) return 2;
-  return fields.includes(q) ? 1 : 0;
+  const qs = terms();
+  if (!qs.length) return 1;
+  if (doc.restricted) {
+    const sig = normalize(doc.sig);
+    return qs.every(q => sig.includes(q)) ? 0.5 : 0;
+  }
+
+  const sig = normalize(doc.sig);
+  const title = normalize(doc.title);
+  const summary = normalize(doc.summary);
+  const metadata = normalize([...(doc.tags||[]), ...(doc.domains||[])].join(' '));
+  const body = normalize(doc.text);
+  const combined = [sig,title,summary,metadata,body].join(' ');
+  if (!qs.every(q => combined.includes(q))) return 0;
+
+  let s = 0;
+  for (const q of qs) {
+    if (sig.includes(q)) s += 8;
+    if (title.includes(q)) s += 5;
+    if (summary.includes(q)) s += 3;
+    if (metadata.includes(q)) s += 2;
+    if (body.includes(q)) s += 1;
+  }
+  return s;
+}
+
+function hitSnippet(doc: any): string {
+  if (!query || !doc.text) return '';
+  const text = String(doc.text);
+  const normalized = normalize(text);
+  const qs = terms();
+  const positions = qs.map(q => normalized.indexOf(q)).filter(n => n >= 0);
+  if (!positions.length) return '';
+  const pos = Math.min(...positions);
+  const start = Math.max(0, pos - 105);
+  const end = Math.min(text.length, pos + 230);
+  return `${start > 0 ? '…' : ''}${text.slice(start,end).trim()}${end < text.length ? '…' : ''}`;
 }
 
 function render() {
@@ -97,7 +146,7 @@ function render() {
     .filter(d => activeEpist === 'ALL' || (d.epist||[]).includes(activeEpist))
     .map(d => ({ doc: d, s: score(d) }))
     .filter(x => x.s > 0)
-    .sort((a,b) => b.s - a.s || (b.doc.restricted ? -1 : 1) || b.doc.year - a.doc.year)
+    .sort((a,b) => b.s - a.s || Number(a.doc.restricted)-Number(b.doc.restricted) || Number(b.doc.year||0)-Number(a.doc.year||0))
     .slice(0, 80);
 
   if (!filtered.length) {
@@ -112,28 +161,30 @@ function render() {
   results.innerHTML = filtered.map(({doc}) => {
     if (doc.restricted) {
       return `<div class="result-card restricted">
-        <div class="result-sig">${doc.sig} · ${doc.year} · ${doc.lang}</div>
-        <div class="result-title" style="color:var(--red-faint)">[GESPERRT — TIER-${doc.access}]</div>
+        <div class="result-sig">${escapeHtml(doc.sig)} · ${escapeHtml(doc.year)} · ${escapeHtml(doc.lang)}</div>
+        <div class="result-title" style="color:var(--red-faint)">[GESPERRT — TIER-${escapeHtml(doc.access)}]</div>
         <div class="result-summary" style="color:var(--ink-faint);font-family:var(--font-mono);font-size:0.65rem">
-          Serie ${doc.series} · Zugang nicht freigegeben · KG-Authentifizierung erforderlich
+          Serie ${escapeHtml(doc.series)} · Zugang nicht freigegeben · KG-Authentifizierung erforderlich
         </div>
       </div>`;
     }
 
     const epistBadges = (doc.epist||[]).map((e:string) =>
-      `<span style="font-family:var(--font-mono);font-size:0.52rem;color:${epist_colors[e]||'#888'}">[${e}]</span>`
+      `<span style="font-family:var(--font-mono);font-size:0.52rem;color:${epist_colors[e]||'#888'}">[${escapeHtml(e)}]</span>`
     ).join(' ');
     const tags = (doc.tags||[]).slice(0,4).map((t:string) =>
-      `<span class="result-tag">${t}</span>`
+      `<span class="result-tag">${escapeHtml(t)}</span>`
     ).join('');
     const domains = (doc.domains||[]).slice(0,3).map((d:string) =>
-      `<span class="result-domain">${d}</span>`
+      `<span class="result-domain">${escapeHtml(d)}</span>`
     ).join('');
+    const snippet = hitSnippet(doc);
 
-    return `<a href="/dokument/${doc.slug}" class="result-card">
-      <div class="result-sig">${doc.sig} · ${doc.year} · ${doc.lang}</div>
-      <div class="result-title">${doc.title !== doc.sig ? doc.title : (doc.summary?.slice(0,70)||doc.sig)}</div>
-      ${doc.summary ? `<div class="result-summary">${doc.summary.slice(0,150)}${doc.summary.length>150?'…':''}</div>` : ''}
+    return `<a href="/dokument/${encodeURIComponent(doc.slug)}" class="result-card">
+      <div class="result-sig">${escapeHtml(doc.sig)} · ${escapeHtml(doc.year)} · ${escapeHtml(doc.lang)}</div>
+      <div class="result-title">${escapeHtml(doc.title !== doc.sig ? doc.title : (doc.summary?.slice(0,70)||doc.sig))}</div>
+      ${doc.summary ? `<div class="result-summary">${escapeHtml(doc.summary.slice(0,150))}${doc.summary.length>150?'…':''}</div>` : ''}
+      ${snippet ? `<div class="result-hit">${escapeHtml(snippet)}</div>` : ''}
       <div class="result-meta">${epistBadges} ${tags} ${domains}</div>
     </a>`;
   }).join('');
@@ -158,12 +209,11 @@ document.getElementById('show-restricted')?.addEventListener('change', e => {
   render();
 });
 
-// URL-Parameter auswerten (domain-Filter)
 const params = new URLSearchParams(window.location.search);
-const domainParam = params.get('domain');
-if (domainParam) {
+const initialQuery = params.get('q') || params.get('domain');
+if (initialQuery) {
   const el = document.getElementById('ota-search') as HTMLInputElement;
-  if (el) { el.value = domainParam; query = domainParam; }
+  if (el) { el.value = initialQuery; query = initialQuery; }
 }
 
 loadIndex();
