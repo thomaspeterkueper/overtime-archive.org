@@ -3,218 +3,41 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 ---
 
 <LayoutBase title="Suche — The Overtime Archive">
-  <div style="max-width:var(--content-width);margin:2.5rem auto;padding:0 2rem">
+  <div class="search-shell">
+    <div class="search-kicker">OTA · ARCHIVSUCHE</div>
+    <h1>Archivsuche</h1>
+    <p class="search-intro">Durchsuche Signaturen, Dokumenttitel, Orte, Personen, Begriffe und den Volltext des öffentlichen Archivs.</p>
 
-    <div style="font-family:var(--font-mono);font-size:0.62rem;color:var(--rust);letter-spacing:0.2em;margin-bottom:1rem">
-      OTA · ARCHIVSUCHE
+    <div class="search-box">
+      <span>⌕</span>
+      <input type="search" id="ota-search" placeholder="z. B. Malta, Istanbul, Axis, Resonanz…" autocomplete="off" />
     </div>
 
-    <h1 style="font-family:var(--font-display);font-size:1.8rem;color:var(--ink);font-weight:700;margin-bottom:1.5rem">
-      Archivsuche
-    </h1>
-
-    <div style="position:relative;margin-bottom:1.25rem">
-      <input type="search" id="ota-search" placeholder="Signatur, Titel, Ort, Person, Begriff, Volltext…" autocomplete="off"
-        style="width:100%;padding:0.75rem 1rem 0.75rem 2.5rem;font-family:var(--font-mono);font-size:0.85rem;background:var(--paper);border:1px solid var(--paper-dark);color:var(--ink);outline:none;box-sizing:border-box"/>
-      <span style="position:absolute;left:0.8rem;top:50%;transform:translateY(-50%);color:var(--rust);font-size:0.9rem">⌕</span>
-    </div>
-
-    <div id="filter-row" style="display:flex;flex-wrap:wrap;gap:0.4rem;margin-bottom:1.5rem;align-items:center">
+    <div id="filter-row">
       <button class="sf-btn active" data-epist="ALL">ALLE</button>
-      {["R","T","H","S","F","W"].map(e => (
-        <button class="sf-btn" data-epist={e}>[{e}]</button>
-      ))}
-      <label style="margin-left:auto;font-family:var(--font-mono);font-size:0.58rem;color:var(--ink-faint);display:flex;align-items:center;gap:0.4rem;cursor:pointer">
-        <input type="checkbox" id="show-restricted" style="accent-color:var(--rust)"/> GESPERRT ANZEIGEN
-      </label>
+      {["R","T","H","S","F","W"].map(e => <button class="sf-btn" data-epist={e}>[{e}]</button>)}
+      <label class="restricted-toggle"><input type="checkbox" id="show-restricted"/> GESPERRT ANZEIGEN</label>
     </div>
 
-    <div id="search-results" style="display:grid;gap:0.75rem"></div>
-    <div id="search-empty" style="display:none;font-family:var(--font-mono);font-size:0.75rem;color:var(--ink-faint);padding:2rem 0">
-      Keine Dokumente gefunden.
-    </div>
-    <div id="search-count" style="font-family:var(--font-mono);font-size:0.6rem;color:var(--ink-faint);margin-top:1rem"></div>
+    <div class="result-head"><span id="search-count"></span><span id="query-label"></span></div>
+    <div id="search-results"></div>
+    <div id="search-empty">Keine Dokumente gefunden.</div>
   </div>
 </LayoutBase>
 
 <style>
-.sf-btn {
-  font-family:var(--font-mono);font-size:0.6rem;padding:0.2rem 0.5rem;
-  border:1px solid var(--paper-dark);background:transparent;color:var(--ink-faint);cursor:pointer;
-}
-.sf-btn.active { background:var(--rust);color:var(--paper);border-color:var(--rust); }
-.result-card {
-  background:var(--paper);padding:0.9rem 1.1rem;
-  border:1px solid var(--paper-dark);border-top:2px solid var(--ink-light);
-  text-decoration:none;display:block;transition:border-color 0.15s;
-}
-.result-card:hover { border-top-color:var(--rust); }
-.result-card.restricted {
-  background:var(--paper-aged);border-top-color:var(--red-faint);opacity:0.7;
-}
-.result-sig { font-family:var(--font-mono);font-size:0.58rem;color:var(--rust);letter-spacing:0.08em }
-.result-title { font-family:var(--font-display);font-size:1rem;color:var(--ink);margin:0.25rem 0 0.4rem;font-weight:600 }
-.result-summary { font-family:var(--font-serif);font-size:0.85rem;color:var(--ink-light);line-height:1.6 }
-.result-hit { font-family:var(--font-serif);font-size:0.82rem;color:var(--ink);line-height:1.55;margin-top:0.45rem;padding-left:0.65rem;border-left:2px solid var(--paper-dark) }
-.result-meta { display:flex;gap:0.5rem;margin-top:0.5rem;flex-wrap:wrap;align-items:center }
-.result-tag { font-family:var(--font-mono);font-size:0.5rem;color:var(--ink-faint);border:1px solid var(--paper-dark);padding:0.08rem 0.3rem }
-.result-domain { font-family:var(--font-mono);font-size:0.5rem;color:var(--blue-light);border:1px solid rgba(44,95,138,0.25);padding:0.08rem 0.3rem }
-#ota-search:focus { border-color:var(--rust);outline:none;box-shadow:0 0 0 2px rgba(139,69,19,0.1) }
+.search-shell{max-width:980px;margin:2.5rem auto;padding:0 2rem 4rem}.search-kicker{font-family:var(--font-mono);font-size:.62rem;color:var(--rust);letter-spacing:.2em;margin-bottom:.8rem}.search-shell h1{font-family:var(--font-display);font-size:2rem;color:var(--ink);margin:0 0 .45rem}.search-intro{font-family:var(--font-serif);color:var(--ink-light);font-size:.95rem;margin:0 0 1.5rem;max-width:700px;line-height:1.55}.search-box{position:relative;margin-bottom:1rem}.search-box span{position:absolute;left:1rem;top:50%;transform:translateY(-50%);color:var(--rust)}#ota-search{width:100%;padding:.9rem 1rem .9rem 2.7rem;font-family:var(--font-serif);font-size:1rem;background:var(--paper);border:1px solid var(--paper-dark);color:var(--ink);box-sizing:border-box}#ota-search:focus{border-color:var(--rust);outline:none;box-shadow:0 0 0 2px rgba(139,69,19,.08)}#filter-row{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:1.6rem;align-items:center}.sf-btn{font-family:var(--font-mono);font-size:.6rem;padding:.24rem .55rem;border:1px solid var(--paper-dark);background:transparent;color:var(--ink-faint);cursor:pointer}.sf-btn.active{background:var(--rust);color:var(--paper);border-color:var(--rust)}.restricted-toggle{margin-left:auto;font-family:var(--font-mono);font-size:.58rem;color:var(--ink-faint);display:flex;gap:.4rem;align-items:center}.restricted-toggle input{accent-color:var(--rust)}.result-head{display:flex;justify-content:space-between;gap:1rem;font-family:var(--font-mono);font-size:.58rem;color:var(--ink-faint);margin-bottom:.65rem;min-height:1em}#search-results{display:grid;gap:.7rem}.result-card{position:relative;background:rgba(255,255,255,.22);padding:1rem 1.15rem 1.05rem;border:1px solid var(--paper-dark);border-left:3px solid var(--ink-light);text-decoration:none;display:block;transition:border-color .15s,transform .15s,background .15s}.result-card:hover{border-left-color:var(--rust);background:rgba(255,255,255,.42);transform:translateX(2px)}.result-card.restricted{background:var(--paper-aged);border-left-color:var(--red-faint);opacity:.75}.result-top{display:flex;justify-content:space-between;gap:1rem;align-items:flex-start}.result-sig{font-family:var(--font-mono);font-size:.57rem;color:var(--rust);letter-spacing:.06em}.result-series{font-family:var(--font-mono);font-size:.52rem;color:var(--ink-faint);white-space:nowrap}.result-title{font-family:var(--font-display);font-size:1.15rem;line-height:1.25;color:var(--ink);margin:.3rem 0 .35rem;font-weight:650}.result-summary{font-family:var(--font-serif);font-size:.84rem;color:var(--ink-light);line-height:1.5;max-width:78ch}.result-hit{font-family:var(--font-serif);font-size:.84rem;color:var(--ink);line-height:1.55;margin-top:.55rem;padding:.45rem .65rem;border-left:2px solid var(--paper-dark);background:rgba(0,0,0,.018)}.result-hit-label{font-family:var(--font-mono);font-size:.48rem;letter-spacing:.1em;color:var(--rust);display:block;margin-bottom:.18rem}.result-meta{display:flex;gap:.38rem;margin-top:.65rem;flex-wrap:wrap;align-items:center}.result-tag,.result-domain{font-family:var(--font-mono);font-size:.49rem;padding:.08rem .3rem}.result-tag{color:var(--ink-faint);border:1px solid var(--paper-dark)}.result-domain{color:var(--blue-light);border:1px solid rgba(44,95,138,.25)}#search-empty{display:none;font-family:var(--font-mono);font-size:.75rem;color:var(--ink-faint);padding:2rem 0}@media(max-width:700px){.search-shell{padding:0 1rem 3rem}.result-top{display:block}.result-series{margin-top:.25rem}.restricted-toggle{width:100%;margin-left:0;margin-top:.4rem}}
 </style>
 
 <script>
-const epist_colors: Record<string,string> = {
-  R:'#4A7C59',T:'#888',H:'#C8923A',S:'#8B4513',F:'#B0302A',W:'#2C5F8A',I:'#666'
-};
-
-let allDocs: any[] = [];
-let activeEpist = 'ALL';
-let query = '';
-let showRestricted = false;
-
-function normalize(value: unknown): string {
-  return String(value ?? '')
-    .normalize('NFD')
-    .replace(/[\u0300-\u036f]/g, '')
-    .toLowerCase();
-}
-
-function escapeHtml(value: unknown): string {
-  return String(value ?? '').replace(/[&<>'"]/g, ch => ({
-    '&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'
-  }[ch] || ch));
-}
-
-function terms(): string[] {
-  return normalize(query).split(/\s+/).filter(Boolean);
-}
-
-async function loadIndex() {
-  const res = await fetch('/api/search.json');
-  allDocs = await res.json();
-  render();
-}
-
-function score(doc: any): number {
-  if (!query) return 1;
-  const qs = terms();
-  if (!qs.length) return 1;
-  if (doc.restricted) {
-    const sig = normalize(doc.sig);
-    return qs.every(q => sig.includes(q)) ? 0.5 : 0;
-  }
-
-  const sig = normalize(doc.sig);
-  const title = normalize(doc.title);
-  const summary = normalize(doc.summary);
-  const metadata = normalize([...(doc.tags||[]), ...(doc.domains||[])].join(' '));
-  const body = normalize(doc.text);
-  const combined = [sig,title,summary,metadata,body].join(' ');
-  if (!qs.every(q => combined.includes(q))) return 0;
-
-  let s = 0;
-  for (const q of qs) {
-    if (sig.includes(q)) s += 8;
-    if (title.includes(q)) s += 5;
-    if (summary.includes(q)) s += 3;
-    if (metadata.includes(q)) s += 2;
-    if (body.includes(q)) s += 1;
-  }
-  return s;
-}
-
-function hitSnippet(doc: any): string {
-  if (!query || !doc.text) return '';
-  const text = String(doc.text);
-  const normalized = normalize(text);
-  const qs = terms();
-  const positions = qs.map(q => normalized.indexOf(q)).filter(n => n >= 0);
-  if (!positions.length) return '';
-  const pos = Math.min(...positions);
-  const start = Math.max(0, pos - 105);
-  const end = Math.min(text.length, pos + 230);
-  return `${start > 0 ? '…' : ''}${text.slice(start,end).trim()}${end < text.length ? '…' : ''}`;
-}
-
-function render() {
-  const results = document.getElementById('search-results')!;
-  const empty = document.getElementById('search-empty')!;
-  const count = document.getElementById('search-count')!;
-
-  const filtered = allDocs
-    .filter(d => showRestricted ? true : !d.restricted)
-    .filter(d => activeEpist === 'ALL' || (d.epist||[]).includes(activeEpist))
-    .map(d => ({ doc: d, s: score(d) }))
-    .filter(x => x.s > 0)
-    .sort((a,b) => b.s - a.s || Number(a.doc.restricted)-Number(b.doc.restricted) || Number(b.doc.year||0)-Number(a.doc.year||0))
-    .slice(0, 80);
-
-  if (!filtered.length) {
-    results.innerHTML = '';
-    empty.style.display = 'block';
-    count.textContent = '';
-    return;
-  }
-  empty.style.display = 'none';
-  count.textContent = filtered.length + ' Dokument' + (filtered.length !== 1 ? 'e' : '') + ' gefunden';
-
-  results.innerHTML = filtered.map(({doc}) => {
-    if (doc.restricted) {
-      return `<div class="result-card restricted">
-        <div class="result-sig">${escapeHtml(doc.sig)} · ${escapeHtml(doc.year)} · ${escapeHtml(doc.lang)}</div>
-        <div class="result-title" style="color:var(--red-faint)">[GESPERRT — TIER-${escapeHtml(doc.access)}]</div>
-        <div class="result-summary" style="color:var(--ink-faint);font-family:var(--font-mono);font-size:0.65rem">
-          Serie ${escapeHtml(doc.series)} · Zugang nicht freigegeben · KG-Authentifizierung erforderlich
-        </div>
-      </div>`;
-    }
-
-    const epistBadges = (doc.epist||[]).map((e:string) =>
-      `<span style="font-family:var(--font-mono);font-size:0.52rem;color:${epist_colors[e]||'#888'}">[${escapeHtml(e)}]</span>`
-    ).join(' ');
-    const tags = (doc.tags||[]).slice(0,4).map((t:string) =>
-      `<span class="result-tag">${escapeHtml(t)}</span>`
-    ).join('');
-    const domains = (doc.domains||[]).slice(0,3).map((d:string) =>
-      `<span class="result-domain">${escapeHtml(d)}</span>`
-    ).join('');
-    const snippet = hitSnippet(doc);
-
-    return `<a href="/dokument/${encodeURIComponent(doc.slug)}" class="result-card">
-      <div class="result-sig">${escapeHtml(doc.sig)} · ${escapeHtml(doc.year)} · ${escapeHtml(doc.lang)}</div>
-      <div class="result-title">${escapeHtml(doc.title !== doc.sig ? doc.title : (doc.summary?.slice(0,70)||doc.sig))}</div>
-      ${doc.summary ? `<div class="result-summary">${escapeHtml(doc.summary.slice(0,150))}${doc.summary.length>150?'…':''}</div>` : ''}
-      ${snippet ? `<div class="result-hit">${escapeHtml(snippet)}</div>` : ''}
-      <div class="result-meta">${epistBadges} ${tags} ${domains}</div>
-    </a>`;
-  }).join('');
-}
-
-document.getElementById('ota-search')?.addEventListener('input', e => {
-  query = (e.target as HTMLInputElement).value.trim();
-  render();
-});
-
-document.querySelectorAll('.sf-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.querySelectorAll('.sf-btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    activeEpist = btn.getAttribute('data-epist') || 'ALL';
-    render();
-  });
-});
-
-document.getElementById('show-restricted')?.addEventListener('change', e => {
-  showRestricted = (e.target as HTMLInputElement).checked;
-  render();
-});
-
-const params = new URLSearchParams(window.location.search);
-const initialQuery = params.get('q') || params.get('domain');
-if (initialQuery) {
-  const el = document.getElementById('ota-search') as HTMLInputElement;
-  if (el) { el.value = initialQuery; query = initialQuery; }
-}
-
-loadIndex();
+const epist_colors: Record<string,string>={R:'#4A7C59',T:'#888',H:'#C8923A',S:'#8B4513',F:'#B0302A',W:'#2C5F8A',I:'#666'};
+let allDocs:any[]=[];let activeEpist='ALL';let query='';let showRestricted=false;
+function normalize(value:unknown):string{return String(value??'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase()}
+function escapeHtml(value:unknown):string{return String(value??'').replace(/[&<>'"]/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[ch]||ch))}
+function terms():string[]{return normalize(query).split(/\s+/).filter(Boolean)}
+async function loadIndex(){const res=await fetch('/api/search.json');allDocs=await res.json();render()}
+function score(doc:any):number{if(!query)return 1;const qs=terms();if(!qs.length)return 1;if(doc.restricted){const sig=normalize(doc.sig);return qs.every(q=>sig.includes(q))?.5:0}const sig=normalize(doc.sig),title=normalize(doc.displayTitle||doc.title),summary=normalize(doc.summary),metadata=normalize([...(doc.tags||[]),...(doc.domains||[])].join(' ')),body=normalize(doc.text),combined=[sig,title,summary,metadata,body].join(' ');if(!qs.every(q=>combined.includes(q)))return 0;let s=0;for(const q of qs){if(sig.includes(q))s+=8;if(title.includes(q))s+=6;if(summary.includes(q))s+=3;if(metadata.includes(q))s+=2;if(body.includes(q))s+=1}return s}
+function hitSnippet(doc:any):string{if(!query||!doc.text)return'';const text=String(doc.text),normalized=normalize(text),qs=terms(),positions=qs.map(q=>normalized.indexOf(q)).filter(n=>n>=0);if(!positions.length)return'';const pos=Math.min(...positions),start=Math.max(0,pos-85),end=Math.min(text.length,pos+190);return`${start>0?'…':''}${text.slice(start,end).trim()}${end<text.length?'…':''}`}
+function render(){const results=document.getElementById('search-results')!,empty=document.getElementById('search-empty')!,count=document.getElementById('search-count')!,label=document.getElementById('query-label')!;const filtered=allDocs.filter(d=>showRestricted?true:!d.restricted).filter(d=>activeEpist==='ALL'||(d.epist||[]).includes(activeEpist)).map(d=>({doc:d,s:score(d)})).filter(x=>x.s>0).sort((a,b)=>b.s-a.s||Number(a.doc.restricted)-Number(b.doc.restricted)||Number(b.doc.year||0)-Number(a.doc.year||0)).slice(0,80);label.textContent=query?`SUCHBEGRIFF · ${query.toUpperCase()}`:'';if(!filtered.length){results.innerHTML='';empty.style.display='block';count.textContent='';return}empty.style.display='none';count.textContent=filtered.length+' DOKUMENT'+(filtered.length!==1?'E':'');results.innerHTML=filtered.map(({doc})=>{if(doc.restricted)return`<div class="result-card restricted"><div class="result-top"><div class="result-sig">${escapeHtml(doc.sig)}</div><div class="result-series">${escapeHtml(doc.year)} · ${escapeHtml(doc.lang)}</div></div><div class="result-title" style="color:var(--red-faint)">[GESPERRT — TIER-${escapeHtml(doc.access)}]</div><div class="result-summary">Serie ${escapeHtml(doc.series)} · Zugang nicht freigegeben</div></div>`;const epist=(doc.epist||[]).map((e:string)=>`<span style="font-family:var(--font-mono);font-size:.52rem;color:${epist_colors[e]||'#888'}">[${escapeHtml(e)}]</span>`).join(' '),tags=(doc.tags||[]).slice(0,3).map((t:string)=>`<span class="result-tag">${escapeHtml(t)}</span>`).join(''),domains=(doc.domains||[]).slice(0,2).map((d:string)=>`<span class="result-domain">${escapeHtml(d)}</span>`).join(''),snippet=hitSnippet(doc),title=doc.displayTitle||doc.title||doc.sig;return`<a href="/dokument/${encodeURIComponent(doc.slug)}" class="result-card"><div class="result-top"><div class="result-sig">${escapeHtml(doc.sig)}</div><div class="result-series">${escapeHtml(doc.series)} · ${escapeHtml(doc.year)} · ${escapeHtml(doc.lang)}</div></div><div class="result-title">${escapeHtml(title)}</div>${doc.summary&&normalize(doc.summary)!==normalize(title)?`<div class="result-summary">${escapeHtml(doc.summary.slice(0,180))}${doc.summary.length>180?'…':''}</div>`:''}${snippet?`<div class="result-hit"><span class="result-hit-label">FUNDSTELLE</span>${escapeHtml(snippet)}</div>`:''}<div class="result-meta">${epist} ${tags} ${domains}</div></a>`}).join('')}
+document.getElementById('ota-search')?.addEventListener('input',e=>{query=(e.target as HTMLInputElement).value.trim();render()});document.querySelectorAll('.sf-btn').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.sf-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');activeEpist=btn.getAttribute('data-epist')||'ALL';render()}));document.getElementById('show-restricted')?.addEventListener('change',e=>{showRestricted=(e.target as HTMLInputElement).checked;render()});const params=new URLSearchParams(window.location.search),initialQuery=params.get('q')||params.get('domain');if(initialQuery){const el=document.getElementById('ota-search') as HTMLInputElement;if(el){el.value=initialQuery;query=initialQuery}}loadIndex();
 </script>
