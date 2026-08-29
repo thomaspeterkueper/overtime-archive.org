@@ -1,6 +1,6 @@
 ---
 signature: "OTA-HIS-0008-3500BCE-DE"
-title: "OTA-HIS-0008-3500BCE-DE"
+title: "Die Entstehung der Schrift: Von Proto-Schrift zu vollständigen Schriftsystemen"
 series: "HIS"
 seriesNumber: 8
 year: 3500

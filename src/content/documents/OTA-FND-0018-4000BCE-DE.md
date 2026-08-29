@@ -1,6 +1,6 @@
 ---
 signature: "OTA-FND-0018-4000BCE-DE"
-title: "OTA-FND-0018-4000BCE-DE"
+title: "Die Anunnaki-Verzerrung: Baumeister-Kontakt als transformierte Mythologie --- Ein ∇/ᐃ-Filtermodell"
 series: "FND"
 seriesNumber: 18
 year: 4000

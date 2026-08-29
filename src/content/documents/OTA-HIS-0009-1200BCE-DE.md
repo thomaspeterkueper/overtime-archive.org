@@ -1,6 +1,6 @@
 ---
 signature: "OTA-HIS-0009-1200BCE-DE"
-title: "OTA-HIS-0009-1200BCE-DE"
+title: "Der Verlust der Schrift: Schrift-Diaspora und die dunklen Jahrhunderte"
 series: "HIS"
 seriesNumber: 9
 year: 1200

@@ -1,6 +1,6 @@
 ---
 signature: "OTA-META-0001-2026-DE"
-title: "OTA-META-0001-2026-DE"
+title: "Quellenkritik im OverTime Archive: Prinzipien, Grenzen, Verfahren"
 series: "META"
 seriesNumber: 1
 year: 2026

@@ -1,6 +1,6 @@
 ---
 signature: "OTA-OBS-0007-1700BCE-DE"
-title: "OTA-OBS-0007-1700BCE-DE"
+title: "Die Phaistos-Scheibe: Artefakt, Enigma, Resonanzknoten"
 series: "OBS"
 seriesNumber: 7
 year: 2026
