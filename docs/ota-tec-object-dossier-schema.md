@@ -31,15 +31,23 @@ Additional descriptive tags may refine the class without creating new identity s
 
 ### 1. Document identity
 
-Use the normal OTA frontmatter contract from `docs/ota-document-frontmatter.md`.
+Use the OTA frontmatter contract: `src/content.config.ts` is the machine-validated contract enforced by `astro build` on every document in `src/content/documents`; `docs/ota-document-frontmatter.md` documents the governance conventions. The dossier-specific fields below extend the base contract additively.
 
 Required dossier-specific metadata:
 
 ```yaml
-id: <assigned OTA-TEC signature>
+signature: "OTA-TEC-0001-2026-DE"
+id: "OTA-TEC-0001-2026-DE"
 title: <canonical dossier title>
-language: de
-status: draft
+series: "TEC"
+seriesNumber: 1
+year: 2026
+language: "DE"
+version: "v1.0"
+status: "ENTWURF"
+accessLevel: 0
+epistemicStatus: ["R", "H", "S"]
+summary: <one-sentence dossier summary>
 objectClass: plant
 
 time:
@@ -51,12 +59,27 @@ externalRefs:
   ssfLearningModules: []
 
 kg:
-  schema: KXF-0.1
+  schema: KXF-0.2
   master: kueper-knowledge-graph
-  documentId: <same OTA signature>
-  graphId: <KG document ID when available>
+  documentId: "OTA-TEC-0001-2026-DE"
+  graphId: "DOC:OTA:OTA-TEC-0001-2026-DE"
   system: SYS:OTA:overtimearchive
   sourceOfTruth: false
+
+knowledge:
+  domains:
+    - id: "KD:PHYS-THERM:N1"
+      level: "N1"
+      purpose: read
+
+entities:
+  mentions: []
+
+relations:
+  requires: []
+  teaches: []
+  expands: []
+  cites: []
 
 sync:
   graphVersion: <version used during preparation>
