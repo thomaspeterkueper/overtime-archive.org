@@ -31,13 +31,21 @@ Additional descriptive tags may refine the class without creating new identity s
 
 ### 1. Document identity
 
-Use the OTA frontmatter contract: `src/content.config.ts` is the machine-validated contract enforced by `astro build` on every document in `src/content/documents`; `docs/ota-document-frontmatter.md` documents the governance conventions. The dossier-specific fields below extend the base contract additively.
+The identity block must follow the OTA frontmatter contract. `src/content.config.ts` is the machine-validated contract enforced by `astro build` on every document in `src/content/documents`; `docs/ota-document-frontmatter.md` documents the governance conventions. The dossier-specific fields below are declared additively in `src/content.config.ts`.
+
+Machine-enforced by `astro build`:
+
+- the dossier fields below are part of the collection schema, so `astro build` validates their structure when present and exposes them on `entry.data` (the NOXIA integration target reads `externalRefs` from there; undeclared frontmatter keys are stripped by zod);
+- the entry id is derived from the file name, not from frontmatter. Author the dossier as `OTA-TEC-0001-2026-DE.md`; the `signature` value and the file name must match.
+
+Governance-enforced (dossier authoring rule):
+
+- the dossier fields below are required for every dossier. The shared collection also contains legacy `TEC` documents without dossier metadata, so `astro build` does not reject their absence — a dossier that omits them is incomplete per this schema even though CI passes.
 
 Required dossier-specific metadata:
 
 ```yaml
 signature: "OTA-TEC-0001-2026-DE"
-id: "OTA-TEC-0001-2026-DE"
 title: <canonical dossier title>
 series: "TEC"
 seriesNumber: 1
