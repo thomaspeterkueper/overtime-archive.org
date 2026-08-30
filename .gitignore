@@ -6,6 +6,9 @@ node_modules/
 dist/
 build/
 
+# Build-generierte KG-Daten
+src/data/legal.generated.json
+
 # Systemdateien
 .DS_Store
 Thumbs.db
