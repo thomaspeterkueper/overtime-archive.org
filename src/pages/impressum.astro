@@ -9,6 +9,11 @@ import legal from '../data/legal.generated.json';
     <div style="font-family:var(--font-mono);font-size:0.62rem;color:var(--rust);letter-spacing:0.2em;margin-bottom:1.5rem">
       RECHTLICHE ANGABEN · KG LEGAL SSOT
     </div>
+    <nav aria-label="Rechtliche Dokumente" style="font-family:var(--font-mono);font-size:.72rem;margin-bottom:1.5rem;display:flex;gap:1.2rem;flex-wrap:wrap">
+      <a href="/impressum" style="color:var(--rust)">Impressum</a>
+      <a href="/datenschutz" style="color:var(--rust)">Datenschutz</a>
+      <a href="/nutzungsbedingungen" style="color:var(--rust)">Nutzungsbedingungen</a>
+    </nav>
     <LegalDocument title="Impressum" documentId={legal.imprint.id} status={legal.imprint.status} imprint={legal.imprint} />
     <p style="font-family:var(--font-mono);font-size:.68rem;margin-top:1rem;color:rgba(245,241,232,.6)">
       Build-Quelle: {legal.sourceRepository} · Hosting: {legal.hostingVerified}
