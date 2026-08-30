@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "references": "node scripts/build-reference-index.mjs",
-    "quality": "node scripts/analyze-archive-content.mjs",
+    "quality": "node scripts/analyze-archive-content.mjs && node scripts/annotate-relation-targets.mjs",
     "build": "npm run references && npm run quality && node scripts/build-site.mjs",
     "check:links": "node scripts/check-internal-links.mjs",
     "verify": "npm run build && npm run check:links"
