@@ -1,0 +1,83 @@
+---
+interface Props {
+  title: string;
+  documentId: string;
+  status: string;
+  markdown?: string;
+  imprint?: {
+    updated: string;
+    responsible: { name: string; address: string; email: string };
+  };
+}
+
+const { title, documentId, status, markdown, imprint } = Astro.props;
+const released = status === 'released' || status === 'canonical';
+
+function esc(value: string) {
+  return value.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;');
+}
+
+function inline(value: string) {
+  return esc(value)
+    .replace(/`([^`]+)`/g, '<code>$1</code>')
+    .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+}
+
+function markdownToHtml(source: string) {
+  const lines = source.split(/\r?\n/);
+  const out: string[] = [];
+  let listOpen = false;
+  const closeList = () => { if (listOpen) { out.push('</ul>'); listOpen = false; } };
+
+  for (const raw of lines) {
+    const line = raw.trim();
+    if (!line || line === '---') { closeList(); continue; }
+    if (line.startsWith('# ')) { closeList(); out.push(`<h1>${inline(line.slice(2))}</h1>`); continue; }
+    if (line.startsWith('## ')) { closeList(); out.push(`<h2>${inline(line.slice(3))}</h2>`); continue; }
+    if (line.startsWith('### ')) { closeList(); out.push(`<h3>${inline(line.slice(4))}</h3>`); continue; }
+    if (line.startsWith('> ')) { closeList(); out.push(`<blockquote>${inline(line.slice(2))}</blockquote>`); continue; }
+    if (line.startsWith('- ')) {
+      if (!listOpen) { out.push('<ul>'); listOpen = true; }
+      out.push(`<li>${inline(line.slice(2))}</li>`);
+      continue;
+    }
+    closeList();
+    out.push(`<p>${inline(line).replace(/  $/, '<br>')}</p>`);
+  }
+  closeList();
+  return out.join('\n');
+}
+
+const bodyHtml = markdown ? markdownToHtml(markdown) : '';
+---
+
+<section class="legal-sheet">
+  <div class="legal-meta">
+    <span>{documentId}</span>
+    <span class:list={[{ draft: !released }]}>{released ? status.toUpperCase() : `${status.toUpperCase()} · NICHT JURISTISCH FREIGEGEBEN`}</span>
+  </div>
+  {imprint ? (
+    <>
+      <h1>{title}</h1>
+      <p><strong>Verantwortlicher</strong></p>
+      <p>{imprint.responsible.name}<br />{imprint.responsible.address}<br />E-Mail: <a href={`mailto:${imprint.responsible.email}`}>{imprint.responsible.email}</a></p>
+      <p><strong>Stand:</strong> {imprint.updated}</p>
+      <p class="source-note">Diese Angaben werden beim Build aus der zentralen Legal-Registry des KUEPER Knowledge Graph bezogen.</p>
+    </>
+  ) : <div class="legal-markdown" set:html={bodyHtml} />}
+</section>
+
+<style>
+  .legal-sheet{background:var(--paper);color:var(--ink);padding:clamp(1.5rem,4vw,3rem);box-shadow:var(--shadow-paper);font-family:var(--font-serif);font-size:1rem;line-height:1.75}
+  .legal-meta{display:flex;gap:1rem;justify-content:space-between;flex-wrap:wrap;font-family:var(--font-mono);font-size:.65rem;letter-spacing:.08em;border-bottom:1px solid var(--paper-dark);padding-bottom:.75rem;margin-bottom:2rem}
+  .legal-meta .draft{color:var(--rust)}
+  .legal-sheet h1,.legal-sheet :global(h1){font-family:var(--font-display);font-size:2rem;margin:0 0 1.5rem}
+  .legal-sheet :global(h2){font-family:var(--font-display);font-size:1.35rem;margin:2rem 0 .7rem}
+  .legal-sheet :global(h3){font-family:var(--font-display);font-size:1.1rem;margin:1.5rem 0 .5rem}
+  .legal-sheet :global(p){margin:.7rem 0}
+  .legal-sheet :global(ul){padding-left:1.4rem;margin:.7rem 0}
+  .legal-sheet :global(blockquote){border-left:3px solid var(--rust);padding:.6rem 1rem;margin:1rem 0;background:rgba(139,69,19,.06)}
+  .legal-sheet :global(code){font-family:var(--font-mono);font-size:.85em}
+  .legal-sheet a,.legal-sheet :global(a){color:var(--rust)}
+  .source-note{font-size:.9rem;font-style:italic}
+</style>
