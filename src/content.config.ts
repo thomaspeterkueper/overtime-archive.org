@@ -56,6 +56,34 @@ const documents = defineCollection({
     lastAccessed: z.string().optional(),
     redacted: z.boolean().default(false),
     redactedReason: z.string().optional(),
+    // Dossier-specific fields for OTA-TEC technical object dossiers
+    // (docs/ota-tec-object-dossier-schema.md). Declared additively so astro
+    // build validates their structure and exposes them on entry.data;
+    // presence is a dossier-authoring (governance) requirement, not
+    // machine-required, because legacy TEC documents predate the schema.
+    objectClass: z.enum(['device', 'building', 'vehicle', 'plant', 'infrastructure']).optional(),
+    time: z.object({
+      context: z.string(),
+    }).optional(),
+    externalRefs: z.object({
+      noxiaObjects: z.array(z.string()),
+      noxiaUnlocks: z.array(z.string()),
+      ssfLearningModules: z.array(z.string()),
+    }).optional(),
+    entities: z.object({
+      mentions: z.array(z.string()),
+    }).optional(),
+    relations: z.object({
+      requires: z.array(z.string()),
+      teaches: z.array(z.string()),
+      expands: z.array(z.string()),
+      cites: z.array(z.string()),
+    }).optional(),
+    sync: z.object({
+      graphVersion: z.string(),
+      graphUpdated: z.string(),
+      exportedFrom: z.string(),
+    }).optional(),
   }),
 });
 
