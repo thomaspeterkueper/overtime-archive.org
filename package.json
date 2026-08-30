@@ -6,7 +6,8 @@
   "scripts": {
     "references": "node scripts/build-reference-index.mjs",
     "quality": "node scripts/analyze-archive-content.mjs",
-    "build": "npm run references && npm run quality && node scripts/build-site.mjs",
+    "legal:sync": "node scripts/sync-kg-legal.mjs",
+    "build": "npm run legal:sync && npm run references && npm run quality && node scripts/build-site.mjs",
     "check:links": "node scripts/check-internal-links.mjs",
     "verify": "npm run build && npm run check:links"
   },
