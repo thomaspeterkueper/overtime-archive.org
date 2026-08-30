@@ -35,10 +35,16 @@ Komponentendossiers bleiben in derselben fortlaufenden `OTA-TEC-XXXX`-Serie wie 
 ## Grundregeln
 
 1. Nach Kanonisierung einer Komponente werden ihre technischen Kenndaten nicht dauerhaft in mehreren Objekt-Dossiers dupliziert. Objekt-Dossiers referenzieren stattdessen über `USES_COMPONENT`.
-2. Konkrete Kenndatenkombinationen werden gemeinsam geprüft. Plausible Einzelwerte machen eine Kombination nicht automatisch realistisch oder intern geschlossen.
-3. Ein eigenes Komponentendossier ist sinnvoll, wenn eine Komponente mehrfach verwendet wird oder technisch/epistemisch komplex genug ist, um eine gesonderte Evidenz- und Konsistenzprüfung zu rechtfertigen.
-4. Einfache, einmalig verwendete und unstrittige Bauteile bleiben im Objekt-Dossier.
-5. `mappings.noxia.role: component` kennzeichnet die Consumer-Rolle; NOXIA bleibt Eigentümer seiner Spiel- und Balancingwerte.
+2. **Merksatz: Plausible Einzelwerte machen keine plausible Kombination.** Konkrete Kenndatenkombinationen werden als gemeinsames System geprüft. Einzeln realistische Werte dürfen nicht allein deshalb gemeinsam als `[R]` gelten.
+3. Fehlende reale Serienreferenz führt **nicht automatisch zu `[F]`**. Die Evidenzklassifikation unterscheidet mindestens:
+   - `[R]`: die konkrete Aussage oder Kenndatenkombination ist real belegt;
+   - `[H]`: die konkrete Realisierung ist nicht belegt, aber innerhalb bekannter Physik und belastbarer technischer Randbedingungen nachvollziehbar extrapolierbar;
+   - `[F]`: die Setzung wird für den Werkkanon benötigt, lässt sich aber derzeit nicht als belastbare technische Extrapolation begründen oder ist ausdrücklich fiktional gesetzt.
+   `[OFFEN]` bleibt zusätzlich bestehen, wenn die vorhandene Evidenz eine Einordnung noch nicht trägt.
+4. Eine `[H]`-Einordnung muss die tragende physikalisch-technische Handlungsschiene nennen, z. B. Zyklus, Kammerdruck, Expansionsverhältnis, Werkstoff-, Thermik-, Leistungs- oder Lebensdauergrenzen. „Zukünftige Technik“ allein ist keine Begründung.
+5. Ein eigenes Komponentendossier ist sinnvoll, wenn eine Komponente mehrfach verwendet wird oder technisch/epistemisch komplex genug ist, um eine gesonderte Evidenz- und Konsistenzprüfung zu rechtfertigen.
+6. Einfache, einmalig verwendete und unstrittige Bauteile bleiben im Objekt-Dossier.
+7. `mappings.noxia.role: component` kennzeichnet die Consumer-Rolle; NOXIA bleibt Eigentümer seiner Spiel- und Balancingwerte.
 
 ## Testfall
 
