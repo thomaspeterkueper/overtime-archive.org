@@ -1,0 +1,25 @@
+name: Apply CYGNUS dossier
+on:
+  push:
+    branches: [research/cygnus-ctv-tech-object]
+    paths: ['.tmp/cygnus-ctv.md.gz.b64','.github/workflows/apply-cygnus-dossier.yml']
+permissions:
+  contents: write
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: research/cygnus-ctv-tech-object
+      - name: Decode dossier
+        run: |
+          mkdir -p src/content/documents
+          base64 -d .tmp/cygnus-ctv.md.gz.b64 | gzip -d > src/content/documents/OTA-TEC-0082-2026-DE.md
+      - name: Commit dossier
+        run: |
+          git config user.name 'kueper-research-bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git add src/content/documents/OTA-TEC-0082-2026-DE.md
+          git commit -m 'TEC: add CYGNUS CTV technical object dossier'
+          git push origin HEAD:research/cygnus-ctv-tech-object
