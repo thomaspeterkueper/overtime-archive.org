@@ -5,6 +5,7 @@ target: SYS:KUEPER:ota
 priority: high
 type: world-technology-architecture
 created: 2026-08-30
+updated: 2026-08-30
 status: open
 affects: [OTA, NOXIA, KG]
 ---
@@ -19,7 +20,18 @@ Quelle im SSF-Repository:
 
 `docs/research/minimum-viable-mars-colony-497.md`
 
-SSF bleibt Source of Truth für die reale Evidenzbasis. OTA soll daraus jetzt die kanonische Welttechnik für Tharsis Hub ableiten. NOXIA-Objekte und Gameplay-Balancing sind ausdrücklich noch nicht festzulegen.
+SSF bleibt Source of Truth für die reale Evidenzbasis. OTA soll daraus die kanonische Welttechnik für Tharsis Hub ableiten. NOXIA-Objekte und Gameplay-Balancing sind ausdrücklich noch nicht festzulegen.
+
+## Aktualisierung 2026-08-30 — Einordnung in das kanonische OTA-TEC-Schema
+
+Seit Anlage dieses Requests ist `docs/ota-tec-object-dossier-schema.md` als kanonisches OTA-Schema für technische Objektdossiers integriert worden. Dieser Request wird deshalb **nicht** als Auftrag verstanden, sofort zahlreiche Einzelobjekte anzulegen.
+
+Die Bearbeitung erfolgt zweistufig:
+
+1. **Systemarchitektur Tharsis Hub** als übergeordnetes Architektur-/Anforderungsdokument. Dieses Dokument definiert Systemgrenzen, Funktionsketten, Medien- und Energieflüsse, Abhängigkeiten, Redundanzdomänen, räumliche Segmentierung und die technisch notwendigen Anlagenklassen.
+2. **OTA-TEC-Dossiers** werden erst danach für solche technischen Anlagen, Gebäude, Geräte, Fahrzeuge oder Infrastrukturen angelegt, die als eigenständige technische Objekte tatsächlich stabil genug definiert sind. Jedes Dossier folgt `docs/ota-tec-object-dossier-schema.md` und erhält Identitäten ausschließlich über den vorgesehenen OTA/KG-Governance-Pfad.
+
+Damit ist die Systemarchitektur die Quelle für die spätere Dossier-Zerlegung; die Dossiers dürfen die Koloniearchitektur nicht rückwärts durch zufällig zuerst modellierte Einzelobjekte bestimmen.
 
 ## SSF-Systemanker
 
@@ -43,24 +55,40 @@ Netto-Druckvolumen                 ~40.000–60.000 m3
 Nutzfläche druckbeaufschlagt       ~23.000–35.000 m2
 ```
 
-Die [SSF-Annahme]-Werte sind bewusst Architekturbereiche, keine realen NASA-Systemwerte und keine NOXIA-Spielwerte.
+Die `[SSF-Annahme]`-Werte sind bewusst Architekturbereiche, keine realen NASA-Systemwerte und keine NOXIA-Spielwerte.
 
-## In OTA zu entscheiden
+## Phase 1 — In OTA zuerst zu entscheiden
 
 Bitte zuerst **eine Systemarchitektur**, noch keine lange Liste einzelner Gebäudeobjekte, festlegen:
 
-1. Primärenergie: Kernspaltung, Solar+nuklearer Backup oder anderes Hybridmodell; Anzahl unabhängiger Erzeugungsstränge erst daraus ableiten.
+1. Primärenergie: Kernspaltung, Solar+nuklearer Backup oder anderes Hybridmodell; unabhängige Erzeugungsstränge und Black-Start-Fähigkeit erst daraus ableiten.
 2. Lokale Wasserquelle und kanonische Förder-/Aufbereitungslogik.
-3. O2-Erzeugung: Elektrolyse, CO2-Elektrolyse oder kombiniertes System.
-4. Grad lokaler Nahrungsproduktion im Startzustand.
+3. O2-Erzeugung: Elektrolyse, CO2-Elektrolyse oder kombiniertes System; Speichervorrat und Notversorgung als eigene Sicherheitsfunktion behandeln.
+4. Grad lokaler Nahrungsproduktion im Startzustand und Abgrenzung zwischen Nahrungsproduktion, Vorrat und Importabhängigkeit.
 5. Habitatbauweise: oberirdisch, regolithüberdeckt, teilunterirdisch oder gemischt.
-6. zentrale vs. verteilte ECLSS-Architektur.
-7. Segmentierung von Druck-, Brand- und Strahlenschutzzonen.
-8. Mediennetz: Strom, Daten, Wasser, Abwasser, O2/Prozessgase; kritische Routen müssen räumlich/technisch redundant sein.
-9. Mindestfunktion der medizinischen Infrastruktur.
+6. zentrale vs. verteilte ECLSS-Architektur; keine einzelne zentrale Anlage darf ohne begründete Fail-Safe-Architektur zum kolonieweiten Single Point of Failure werden.
+7. Segmentierung von Druck-, Brand-, Kontaminations- und Strahlenschutzzonen.
+8. Mediennetz: Strom, Daten, Wasser, Abwasser, O2/Prozessgase; kritische Routen müssen räumlich und technisch redundant sein.
+9. Mindestfunktion der medizinischen Infrastruktur einschließlich Isolation und Versorgung bei unterbrochener Außenlogistik.
 10. Oberflächenlogistik als Funktionsklassen: Rettung/Personen, Fracht, Bau/Erdbewegung, Wartung/Bergung, EVA-Unterstützung, Robotik.
 11. Werkstatt-/Ersatzteilstrategie und zulässiger Automatisierungs-/Fertigungsgrad.
 12. Erweiterungslogik: Welche Infrastruktur muss im staatlichen Startzustand bereits Überkapazität oder vorbereitete Anschlusspunkte besitzen?
+13. Systemweite Abwärme- und Wärmetransportarchitektur; thermische Abfuhr darf nicht nur als Eigenschaft einzelner Anlagen behandelt werden.
+14. Betriebszustände: Normalbetrieb, degradierter Betrieb, isolierter Sektor, Netzausfall/Black Start und 30-Tage-Resilienzfall.
+
+## Architekturmodell
+
+Das erste OTA-Dokument soll die Kolonie als gekoppeltes technisches System modellieren. Mindestens folgende Ebenen sind zu unterscheiden:
+
+- **Versorgung:** Primärenergie, Energiespeicherung, Wassergewinnung, Prozessgase, Nahrungsversorgung.
+- **Lebenserhaltung:** Atmosphäre, CO2-Abfuhr, O2-Bereitstellung, Wasserrecycling, Abwasser, Feuchte, thermische Kontrolle.
+- **Habitat:** Druckkörper, Schleusen, Wohn-/Arbeitsbereiche, Schutzräume, medizinische Bereiche, Lager.
+- **Industrie und Erhaltung:** Werkstätten, Ersatzteile, Fertigung, Rohstoff-/Materialumschlag, Reparatur.
+- **Netze:** elektrische Verteilung, Daten/Steuerung, Wasser/Abwasser, Gase, Wärme.
+- **Oberflächenbetrieb:** Personenrettung, Fracht, Bau, Wartung, EVA und Robotik.
+- **Sicherheit/Resilienz:** physisch getrennte Redundanzdomänen, Reserven, Brand-/Druck-/Kontaminationsgrenzen, Notbetrieb.
+
+Für jede Ebene sollen Funktion, wichtigste Inputs/Outputs, Abhängigkeiten und zulässige Ausfallfolgen beschrieben werden. Exakte technische Einzelparameter bleiben offen, wenn sie aus der Evidenz oder dem bestehenden Kanon nicht belastbar ableitbar sind.
 
 ## Modellierungsregel
 
@@ -80,17 +108,28 @@ Arbeitstitel:
 
 **Tharsis Hub — Minimum Viable Mars Colony: Systemanforderungen für 497 Bewohner**
 
-Das Dokument soll:
+Das Dokument ist bewusst **noch kein einzelnes OTA-TEC-Objektdossier**. Es soll:
 
 - die SSF-Evidenzwerte referenzieren, nicht duplizieren;
 - reale SSF-Anker klar von fiktionalen OTA-Festlegungen trennen;
+- die Systemgrenze der Startkolonie definieren;
 - eine funktionale Systemarchitektur und Abhängigkeitsstruktur definieren;
 - zentrale vs. dezentrale Systeme begründen;
+- Material-, Energie-, Wärme- und Informationsflüsse auf Systemebene beschreiben;
 - notwendige räumliche Trennung kritischer Redundanzen festlegen;
-- erst am Ende System-/Anlagenklassen identifizieren, aus denen später NOXIA-Objekte abgeleitet werden können.
+- degradierte Betriebszustände und kritische Ausfallketten benennen;
+- erst am Ende stabile System-/Anlagenklassen identifizieren, aus denen OTA-TEC-Dossiers und später NOXIA-Objekte abgeleitet werden können.
+
+## Phase 2 — Ableitung von OTA-TEC-Dossiers
+
+Nach Freigabe der Systemarchitektur wird eine **kleine, priorisierte** Dossierliste erstellt. Ein Dossier wird nur angelegt, wenn das technische Objekt eine klare Systemgrenze besitzt und mindestens Funktion, Hauptkomponenten, Flüsse, Interfaces, Betriebsgrößen, Ausfallmodi und reale technische Anker gemäß `docs/ota-tec-object-dossier-schema.md` sinnvoll dokumentierbar sind.
+
+Naheliegende Klassen sind beispielsweise Energieerzeugung/-verteilung, Wassergewinnung/-aufbereitung, ECLSS, thermische Infrastruktur, Druckhabitat, Luftschleusen und Oberflächenfahrzeuge. Diese Beispiele sind **keine vorweggenommene kanonische Objektliste**.
+
+Fehlende gemeinsame Identitäten werden nicht in OTA erfunden. Falls für ein Dossier eine stabile KG-/NOXIA-/SSF-Identität erforderlich ist, wird dafür ein External Task im zuständigen Repository angelegt.
 
 ## Danach
 
-Erst nach dieser OTA-Architektur soll ein Folgeauftrag an NOXIA die tatsächliche Startkolonie, Gebäudeanzahlen, Kapazitäten, Fahrzeuge, Straßen/Fahrwege und Medienverbindungen ableiten.
+Erst nach der OTA-Systemarchitektur soll ein Folgeauftrag an NOXIA die tatsächliche Startkolonie, Gebäudeanzahlen, Kapazitäten, Fahrzeuge, Straßen/Fahrwege und Medienverbindungen ableiten.
 
 KG erhält danach nur stabile Identitäten und Beziehungen der tatsächlich festgelegten Systeme, keine Kopie der wissenschaftlichen Tabellen oder des OTA-Loretexts.
