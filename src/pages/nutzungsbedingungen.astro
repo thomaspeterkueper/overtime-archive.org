@@ -1,0 +1,14 @@
+---
+import LayoutBase from '../layouts/LayoutBase.astro';
+import LegalDocument from '../components/LegalDocument.astro';
+import legal from '../data/legal.generated.json';
+---
+
+<LayoutBase title="Nutzungsbedingungen">
+  <div style="max-width:var(--content-width);margin:4rem auto;padding:0 2rem 6rem">
+    <div style="font-family:var(--font-mono);font-size:0.62rem;color:var(--rust);letter-spacing:0.2em;margin-bottom:1.5rem">
+      RECHTLICHE ANGABEN · KG LEGAL SSOT
+    </div>
+    <LegalDocument title="Nutzungsbedingungen" documentId={legal.terms.id} status={legal.terms.status} markdown={legal.terms.markdown} />
+  </div>
+</LayoutBase>
