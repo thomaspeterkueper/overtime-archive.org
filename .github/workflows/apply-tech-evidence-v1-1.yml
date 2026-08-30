@@ -16,7 +16,7 @@ jobs:
         with:
           ref: research/tech-evidence-v1-1-apply
       - name: Apply evidence migration
-        run: python3 tools/apply-tech-evidence-v1-1.py
+        run: python3 tools/apply-tech-evidence-v1-1b.py
       - name: Commit migrated dossiers
         run: |
           if git diff --quiet -- src/content/documents/OTA-TEC-0034-2026-DE.md src/content/documents/OTA-TEC-0036-2026-DE.md src/content/documents/OTA-TEC-0037-2026-DE.md; then
