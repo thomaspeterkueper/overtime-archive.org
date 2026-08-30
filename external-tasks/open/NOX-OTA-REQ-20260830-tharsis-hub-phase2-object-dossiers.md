@@ -5,6 +5,7 @@ target: SYS:KUEPER:ota
 priority: high
 type: technical-object-dossiers
 created: 2026-08-30
+updated: 2026-08-30
 status: open
 affects: [OTA, NOXIA, KG]
 requires: [OTA-TEC-0038-2026-DE]
@@ -17,6 +18,16 @@ requires: [OTA-TEC-0038-2026-DE]
 `OTA-TEC-0038-2026-DE` hat die kanonische Systemarchitektur für Tharsis Hub mit 497 Bewohnern und mindestens 30 Tagen Resilienz festgelegt. Jetzt müssen daraus die technischen Anlagen- und Infrastrukturklassen abgeleitet werden, bevor NOXIA konkrete Spielobjekte, Stückzahlen, Straßen und Layout festlegt.
 
 Die Dossiers sind nach dem kanonischen `docs/ota-tec-object-dossier-schema.md` zu erstellen. SSF bleibt Source of Truth für reale Evidenzwerte; OTA dokumentiert die Welttechnik; NOXIA bleibt Source of Truth für Spielobjekte und Balance; KG erhält stabile gemeinsame Identitäten und Beziehungen.
+
+## Evidenz-Update 2026-08-30
+
+Eine zusätzliche externe Recherche hat neue Anker und zugleich offene Diskrepanzen zu Energie, Thermalkontrolle, Habitat-NHV, O2/CO2 und Wasser-ISRU geliefert. Diese Angaben sind noch nicht kanonisch.
+
+SSF prüft sie im Auftrag:
+
+`thomaspeterkueper/solarsciencefoundation/external-tasks/open/NOX-SSF-REQ-20260830-external-mars-evidence-audit.md`
+
+Für die betroffenen Dossiers gilt: externe Zahlen nicht ungeprüft als OTA-Parameter übernehmen. Insbesondere Energie-Gesamtlast, Radiatorfläche/-temperatur, NHV vs. Bruttodruckvolumen, Wasser-ISRU-Systemgrenzen und maximale Druck-/Brandsegmentgröße bleiben bis zum SSF-Audit offen bzw. als Annahme gekennzeichnet. Dossiers dürfen parallel strukturell vorbereitet werden; die entsprechenden Dimensionierungswerte sollen nach dem Audit eingesetzt bzw. revidiert werden.
 
 ## Leitregel
 
