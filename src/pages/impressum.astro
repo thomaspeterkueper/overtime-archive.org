@@ -13,10 +13,49 @@ import legal from '../data/legal.generated.json';
       <a href="/impressum" style="color:var(--rust)">Impressum</a>
       <a href="/datenschutz" style="color:var(--rust)">Datenschutz</a>
       <a href="/nutzungsbedingungen" style="color:var(--rust)">Nutzungsbedingungen</a>
+      <a href="/ki-transparenz" style="color:var(--rust)">KI-Transparenz</a>
     </nav>
     <LegalDocument title="Impressum" documentId={legal.imprint.id} status={legal.imprint.status} imprint={legal.imprint} />
+    <section class="ota-disclosures" aria-labelledby="ota-disclosures-title">
+      <div class="ota-disclosures-head">
+        <h2 id="ota-disclosures-title">OTA-spezifische Hinweise</h2>
+        <span>OTA-EIGENE ANGABEN · overtimearchive.org</span>
+      </div>
+      <div class="ota-disclosures-body">
+        <p><strong>Haftungsausschluss</strong></p>
+        <p>
+          Die Inhalte des OverTime Archive sind — sofern nicht anders gekennzeichnet — fiktiver
+          Natur und dienen ausschließlich literarischen und künstlerischen Zwecken.
+          Dokumente mit dem Marker <code>[F]</code> (Fiktiv) sind erfundene Inhalte im Rahmen
+          des transmedialen Archivprojekts. Dokumente mit dem Marker <code>[R]</code> (Real)
+          basieren auf verifizierbaren wissenschaftlichen Quellen, die im jeweiligen Dokument
+          angegeben sind.
+        </p>
+        <p><strong>Urheberrecht</strong></p>
+        <p>
+          Alle Inhalte dieser Website — Texte, Dokumente, Grafiken, Strukturen — sind urheberrechtlich
+          geschützt. Verwertung außerhalb der Grenzen des Urheberrechts bedarf der schriftlichen
+          Zustimmung des Autors. Soweit die Inhalte nicht vom Betreiber erstellt wurden, werden
+          Urheberrechte Dritter beachtet.
+        </p>
+        <p>
+          Veröffentlichte Archivdokumente stehen, sofern nicht anders angegeben, unter
+          <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a>.
+        </p>
+      </div>
+    </section>
     <p style="font-family:var(--font-mono);font-size:.68rem;margin-top:1rem;color:rgba(245,241,232,.6)">
       Build-Quelle: {legal.sourceRepository} · Hosting: {legal.hostingVerified}
     </p>
   </div>
 </LayoutBase>
+
+<style>
+  .ota-disclosures{background:var(--paper);color:var(--ink);padding:clamp(1.5rem,4vw,3rem);box-shadow:var(--shadow-paper);margin-top:2rem;font-family:var(--font-serif);font-size:1rem;line-height:1.9}
+  .ota-disclosures-head{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;flex-wrap:wrap;border-bottom:1px solid var(--paper-dark);padding-bottom:.75rem;margin-bottom:1.5rem}
+  .ota-disclosures-head h2{font-family:var(--font-display);font-size:1.3rem;color:var(--ink);margin:0}
+  .ota-disclosures-head span{font-family:var(--font-mono);font-size:.62rem;letter-spacing:.08em;color:var(--rust)}
+  .ota-disclosures-body p{margin:.7rem 0}
+  .ota-disclosures-body code{font-family:var(--font-mono);font-size:.85em}
+  .ota-disclosures-body a{color:var(--rust)}
+</style>

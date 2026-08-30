@@ -14,6 +14,8 @@ Done — 2026-08-30
 - Die IDs `DOC:KUE:LEGAL-IMPRINT-DE`, `DOC:KUE:LEGAL-PRIVACY-DE` und `DOC:KUE:LEGAL-TERMS-DE` werden beim Build über `exports/document-references-0.1.json` aufgelöst.
 - Die dort referenzierten `sourcePath`-Dateien werden ausschließlich buildseitig aus `thomaspeterkueper/kueper-knowledge-graph` geladen.
 - Verantwortlichen-Platzhalter werden aus `registry/legal/impressum-master.json` ersetzt; OTA pflegt diese Daten nicht lokal.
+- OTA-spezifische Hinweise (Fiktivitäts-Haftungsausschluss mit `[F]`/`[R]`-Markern, Urheberrecht, CC BY-NC 4.0, KI-Transparenz-Link) sind OTA-eigene Angaben, keine zentralen Rechtstexte. Sie werden lokal gepflegt und auf `/impressum` als eigener Abschnitt unterhalb des KG-Impressums gerendert.
+- OTA-spezifische technische Fakten wurden als KG-Request zurückgemeldet (Requested Change 6): `external-tasks/open/KG-REQ-20260830-ota-legal-disclosures.md`.
 - Lokale Routen: `/impressum`, `/datenschutz`, `/nutzungsbedingungen`.
 - Privacy und Terms zeigen ihren KG-Status `draft_productive` ausdrücklich als **nicht juristisch freigegeben** an.
 - `src/data/legal.generated.json` ist Build-Artefakt und gitignored; keine Browser-Laufzeitabfrage an GitHub/KG.
