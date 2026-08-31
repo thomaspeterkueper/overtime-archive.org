@@ -1,6 +1,6 @@
 ---
 signature: "OTA-FND-0013A-2026-DE"
-title: "OTA-FND-0013A-2026-DE"
+title: "RKF-Messhandbuch (In-Universe)"
 series: "FND"
 seriesNumber: 13
 year: 2026
