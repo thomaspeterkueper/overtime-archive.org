@@ -36,5 +36,6 @@ jobs:
           git add scripts/analyze-archive-content.mjs
           git diff --cached --quiet && exit 0
           git commit -m 'Harden structural B-title classification'
+          git reset --hard HEAD
           git pull --rebase origin master
           git push origin HEAD:master
