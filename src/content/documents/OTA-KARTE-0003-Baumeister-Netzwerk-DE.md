@@ -1,6 +1,6 @@
 ---
 signature: "OTA-KARTE-0003-Baumeister-Netzwerk-DE"
-title: "OTA-KARTE-0003-Baumeister-Netzwerk-DE"
+title: "DAS GLOBALE BAUMEISTER-NETZWERK"
 series: "KARTE"
 seriesNumber: 3
 year: 2026

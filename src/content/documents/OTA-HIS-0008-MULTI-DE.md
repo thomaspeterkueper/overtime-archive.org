@@ -2,7 +2,7 @@
 signature: "OTA-HIS-0008-MULTI-DE"
 validatorId: "OTA-HIS-0008-2026-DE"
 canonicalId: "OTA-HIS-0008-2026-DE"
-title: "OTA-HIS-0008-MULTI-DE"
+title: "DIE ENTSTEHUNG DER SCHRIFT"
 series: "HIS"
 seriesNumber: 8
 year: 2026

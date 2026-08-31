@@ -1,6 +1,6 @@
 ---
 signature: "OTA-HIS-0006-9500BCE-DE"
-title: "OTA-HIS-0006-9500BCE-DE"
+title: "GÖBEKLI TEPE IM BAUMEISTER-KONTEXT"
 series: "HIS"
 seriesNumber: 6
 year: 2026

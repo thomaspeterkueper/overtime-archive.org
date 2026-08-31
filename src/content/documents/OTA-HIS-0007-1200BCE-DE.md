@@ -1,6 +1,6 @@
 ---
 signature: "OTA-HIS-0007-1200BCE-DE"
-title: "OTA-HIS-0007-1200BCE-DE"
+title: "DER BRONZEZEIT-KOLLAPS"
 series: "HIS"
 seriesNumber: 7
 year: 2026
