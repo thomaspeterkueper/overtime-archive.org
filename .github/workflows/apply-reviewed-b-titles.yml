@@ -1,0 +1,56 @@
+name: Apply reviewed B titles
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - '.github/workflows/apply-reviewed-b-titles.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - name: Apply reviewed titles only
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+
+          changes = {
+              'src/content/documents/OTA-FND-0013A-2026-DE.md': 'RKF-Messhandbuch (In-Universe)',
+              'src/content/documents/OTA-FND-0015-2026-DE.md': 'RKF: Epistemologische Schichtung',
+              'src/content/documents/OTA-FND-0016-2026-DE.md': 'SOL-HELIO-01 Kampagnenbericht',
+              'src/content/documents/OTA-SCI-0043-2026-DE.md': 'LLSVPs und die Kern-Mantel-Grenze: Strukturelle Grundlage der Geodynamo-Stabilität',
+              'src/content/documents/OTA-SCI-0038-2026-EN.md': 'Quantum-Geometric Portals in Loop Quantum Gravity: A Testable Framework for Macroscopic Correlations',
+          }
+
+          for filename, title in changes.items():
+              path = Path(filename)
+              text = path.read_text(encoding='utf-8')
+              signature = path.stem
+              pattern = rf'(?m)^title:\s*["\']?{re.escape(signature)}["\']?\s*$'
+              replacement = 'title: ' + repr(title).replace("'", '"')
+              updated, count = re.subn(pattern, replacement, text, count=1)
+              if count != 1:
+                  raise SystemExit(f'Expected one generic title in {filename}, found {count}')
+              path.write_text(updated, encoding='utf-8')
+          PY
+      - name: Validate metadata
+        run: python tools/validate_ota_metadata.py .
+      - name: Commit reviewed titles
+        run: |
+          if git diff --quiet -- src/content/documents; then
+            echo 'No reviewed title changes needed.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add src/content/documents
+          git commit -m 'Apply reviewed source-backed B titles'
+          git push
