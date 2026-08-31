@@ -1,0 +1,29 @@
+name: Repair OTA KG metadata
+on:
+  push:
+    paths:
+      - '.github/workflows/repair-ota-kg-system.yml'
+permissions:
+  contents: write
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - name: Restore full documents and fix KG system ids
+        shell: bash
+        run: |
+          set -euo pipefail
+          BASE=31b352c6a3a75911d970c8694d600c98e95d12b5
+          for f in src/content/documents/OTA-TEC-0082-2026-DE.md src/content/documents/OTA-TEC-0093-2026-DE.md; do
+            git show "$BASE:$f" > "$f"
+            sed -i 's/system: SYS:KUEPER:ota/system: SYS:OTA:overtimearchive/' "$f"
+          done
+          python tools/validate_ota_metadata.py .
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add src/content/documents/OTA-TEC-0082-2026-DE.md src/content/documents/OTA-TEC-0093-2026-DE.md
+          git commit -m 'Fix OTA KG system ids without altering document bodies'
+          git push
