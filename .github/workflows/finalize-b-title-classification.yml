@@ -1,5 +1,5 @@
 name: Finalize B-title classification
-on:
+'on':
   push:
     branches: [master]
     paths: ['.github/workflows/finalize-b-title-classification.yml']
@@ -32,9 +32,6 @@ jobs:
           if s.count(old)!=1:
               raise SystemExit(f'expected structural block once, got {s.count(old)}')
           s=s.replace(old,new)
-          # The RKF index has a signature H1 followed by a subordinate H2. Its H2 is
-          # not strong enough evidence for a canonical document title, so it must
-          # remain an explicit C decision rather than B.
           old2="""  if (genericTitle) {
     if (derivedTitle?.safe) titleReviewTier = 'A';
     else if (derivedTitle?.value) titleReviewTier = 'B';
