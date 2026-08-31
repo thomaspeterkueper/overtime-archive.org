@@ -1,0 +1,52 @@
+name: Apply reviewed B titles batch 2
+on:
+  push:
+    branches: [master]
+    paths:
+      - '.github/workflows/apply-reviewed-b-titles-2.yml'
+permissions:
+  contents: write
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: Apply source-backed titles
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re, json
+          changes = {
+            'OTA-FND-0024-2026-DE': 'DIE KETTE VOM HEXENTEICH',
+            'OTA-FND-0030-2026-DE': 'MATHEMATISCHE KANONIK DES NOXIA-UNIVERSUMS',
+            'OTA-MON-0002-2142-DE': 'TEMENON',
+            'OTA-OBS-0005-2026-DE': 'LOD-REVERSAL',
+            'OTA-ORG-0007-2031-DE': 'SOLAR SCIENCE FOUNDATION',
+            'OTA-SCI-0036-2026-DE': 'OMNIZEDENZ v2.3',
+            'OTA-SCI-0048-2031-DE': 'ΛAMBDA-HAPLOGRUPPE: KLINISCHE KODIERUNG 2031',
+            'OTA-TEC-0027-2091-DE': 'ASCE-SHUTTLE SYSTEM',
+            'OTA-TEC-0028-2025-DE': 'NANOSPIEGEL-METAMATERIAL-SYSTEME',
+            'OTA-TEC-0081-2026-DE': 'ARTEFAKTDOKUMENTATION: DIE BRONZESCHEIBE (YH-002)',
+            'OTA-RED-0021-2040-DE': 'ZHURONG + MSR = DEUTUNGSHOHEIT-SHIFT',
+            'OTA-SCI-0042-2026-DE': 'PHÄNOMENOLOGISCHE ERDBEBENTHEORIE UND DIE LOD-SEISMIZITÄTS-BRÜCKE',
+          }
+          root=Path('src/content/documents')
+          for sig,title in changes.items():
+            p=root/f'{sig}.md'
+            s=p.read_text(encoding='utf-8')
+            pat=rf'(?m)^title:\s*["\']?{re.escape(sig)}["\']?\s*$'
+            repl='title: '+json.dumps(title,ensure_ascii=False)
+            out,n=re.subn(pat,repl,s,count=1)
+            if n != 1: raise SystemExit(f'{sig}: expected generic title exactly once, got {n}')
+            p.write_text(out,encoding='utf-8')
+          PY
+      - name: Validate
+        run: python tools/validate_ota_metadata.py . && npm ci && npm run verify
+      - name: Commit
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add src/content/documents
+          git diff --cached --quiet && exit 0
+          git commit -m 'Apply second reviewed source-backed B title batch'
+          git push
