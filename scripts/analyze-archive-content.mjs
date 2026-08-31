@@ -44,7 +44,6 @@ function extractLabeled(body,labels){
       let m=lines[i].match(bold)||lines[i].match(plain);
       if(!m)continue;
       let value=m[1]??'';
-      // Pandoc-style table rows often wrap the value onto indented continuation lines.
       for(let j=i+1;j<lines.length;j++){
         const next=lines[j];
         if(!next.trim())break;
@@ -75,10 +74,16 @@ function validTitleCandidate(v,sig){
   if(/\*\*.*\*\*/.test(v))return null;
   return v;
 }
+function isStructuralHeading(v){
+  const s=cleanCandidate(v);
+  return /^(?:THE OVERTIME ARCHIVE|METADATEN|INHALT|EINLEITUNG|ZUSAMMENFASSUNG|ABSTRACT|CURATORIAL NOTE|ANHANG|VORBEMERKUNG|EPISTEMOLOGISCHE GEWICHTUNG)$/i.test(s)
+    || /^(?:TEIL|SECTION|KAPITEL|CHAPTER|MODUL|PROTOKOLL)\s+[A-Z0-9IVX]+\s*[:—–-]/i.test(s)
+    || /^(?:TEIL|SECTION|KAPITEL|CHAPTER|MODUL|PROTOKOLL)\s+[A-Z0-9IVX]+$/i.test(s);
+}
 function firstHeadingCandidate(body,sig){
   for(const m of body.matchAll(/^#{1,3}\s+(.+)$/gm)){
     const v=validTitleCandidate(m[1],sig);
-    if(v&&!/^(?:Inhalt|Einleitung|Zusammenfassung|Abstract|Curatorial Note|Anhang|Vorbemerkung)$/i.test(v))return v;
+    if(v&&!isStructuralHeading(v))return v;
   }
   return null;
 }
@@ -103,15 +108,13 @@ const documents=files.map(file=>{
   const derivedTitle=genericTitle&&!safeTitle?firstHeadingCandidate(body,signature):null;
   let titleReview={tier:'OK',candidate:null,evidence:'canonical-title'};
   if(genericTitle&&safeTitle)titleReview={tier:'A',candidate:safeTitle,evidence:'explicit-labeled-field'};
-  else if(genericTitle&&derivedTitle)titleReview={tier:'B',candidate:derivedTitle,evidence:'first-meaningful-heading'};
+  else if(genericTitle&&derivedTitle)titleReview={tier:'B',candidate:derivedTitle,evidence:'first-non-structural-heading'};
   else if(genericTitle)titleReview={tier:'C',candidate:null,evidence:'editorial-decision-required'};
 
   const safeSummary=genericSummary?summaryCandidate(excerpt):null;
-  // An inline mention is evidence for a relation review, not sufficient evidence
-  // to mutate canonical relatedDocuments automatically.
   const relationCandidates=relationGap.map(target=>({target,evidence:'inline-reference',safe:false}));
   const candidateCount=(safeTitle?1:0)+(derivedTitle?1:0)+(safeSummary?1:0)+relationCandidates.length;
-  return {file,signature,series,year,language,canonical:{title,summary,relatedCount:related.length},extracted:{title:extractedTitle||null,author:extractedAuthor||null,classification:extractedClassification||null,excerpt:excerpt||null},titleReview,candidates:{title:safeTitle?{value:safeTitle,evidence:'explicit-labeled-field',safe:true}:null,derivedTitle:derivedTitle?{value:derivedTitle,evidence:'first-meaningful-heading',safe:false}:null,summary:safeSummary?{value:safeSummary,evidence:'first-substantive-paragraph',safe:false}:null,relations:relationCandidates,count:candidateCount},metrics:{words:bodyWordCount,headings,images,tables,inlineReferenceTargets:referencedTargets.length},quality:{substance,genericTitle,genericSummary,relationGap:relationGap.length>0,flags,priority}};
+  return {file,signature,series,year,language,canonical:{title,summary,relatedCount:related.length},extracted:{title:extractedTitle||null,author:extractedAuthor||null,classification:extractedClassification||null,excerpt:excerpt||null},titleReview,candidates:{title:safeTitle?{value:safeTitle,evidence:'explicit-labeled-field',safe:true}:null,derivedTitle:derivedTitle?{value:derivedTitle,evidence:'first-non-structural-heading',safe:false}:null,summary:safeSummary?{value:safeSummary,evidence:'first-substantive-paragraph',safe:false}:null,relations:relationCandidates,count:candidateCount},metrics:{words:bodyWordCount,headings,images,tables,inlineReferenceTargets:referencedTargets.length},quality:{substance,genericTitle,genericSummary,relationGap:relationGap.length>0,flags,priority}};
 });
 
 documents.sort((a,b)=>b.quality.priority-a.quality.priority||a.signature.localeCompare(b.signature));
