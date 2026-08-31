@@ -34,14 +34,22 @@ Insbesondere:
 
 ## OTA-TEC-0090 — Mars-Fahrwege
 
-Bitte den Entwurf gegen `RES-20260831-TEC0090A` angleichen.
+Bitte den Entwurf gegen die **korrigierte R1-Fassung** von `RES-20260831-TEC0090A` angleichen.
+
+Die stärkste belastbare Aussage lautet nicht `Straße zuerst, Schiene später`, sondern: Die optimale Infrastruktur ist standort-, fahrzeug-, distanz-, last- und throughputabhängig; 2026 existiert kein belastbarer universeller Road-to-Rail-Crossover.
 
 Insbesondere:
-- Regolith-/Simulantengeotechnik und vorbereitete/verdichtete Trassen als Realanker erhalten.
-- Schienenvorteile nur last-, distanz- und betriebsspezifisch formulieren.
+- Regolith-/Simulantengeotechnik und vorbereitete/verdichtete Trassen als Realanker erhalten, aber einzelne Reibungswinkel, Kohäsions-, Penetrations- oder Tragfähigkeitswerte nicht als universelle Marswerte darstellen.
+- Verdichtung nur als boden-/fahrzeugabhängigen Mechanismus formulieren, nicht als pauschal quantifizierten Vorteil jeder Marsfahrbahn.
+- PAVER, Mason, Mikrowellensintern und verwandte Verfahren als Entwicklungs-/Demonstrationspfade behandeln; vielfach stammen die Anker aus lunar ausgerichteten Simulantenstudien und belegen keine qualifizierte Marsfahrbahn.
+- Laborfestigkeiten von Sinter-/Paving-Proben nicht als Trassen-Tragfähigkeit übernehmen.
+- Wiederholte Radlasten und Rutting/Trafficability als reale Terramechanik-Anker erhalten.
+- Die Angabe `900 Überfahrten` nicht dem GATOR-Datensatz zuschreiben; sie gehört im Research-Set zur separaten SpaceFactory/MTU-Demonstration.
+- Lunare Thermal-Cycle-Ergebnisse nur als Mechanismus-/Analoganker verwenden; keine quantitative Marsübertragung.
+- FLOAT und LunA-10 ausdrücklich als reale **Mond-Konzeptstudien** behandeln. Ihre Marsübertragung bleibt `[H]`.
+- Terrestrische Rail-vs.-Truck-Effizienzwerte nicht als Marsfaktor übernehmen. Schienenvorteile nur last-, distanz-, throughput-, bauenergie-, wartungs- und netzauslastungsspezifisch formulieren.
 - Keinen universellen Umschaltpunkt Piste -> Straße -> Schiene setzen.
 - Breite, Tragfähigkeit, Achslast, Bauenergie, Wartungsintervall, Schienenstandard und NOXIA-Balancing `[OFFEN]/[W]` lassen.
-- In-situ-Marswerte nicht aus einzelnen Standorten oder Simulanten planetenweit generalisieren.
 
 ## OTA-TEC-0091 — Utility Corridors
 
@@ -63,7 +71,7 @@ Bei einer OTA-Metadatenbereinigung bitte für alle drei Dokumente `kg.system: SY
 ## Abnahme
 
 Erledigt, wenn:
-1. die drei OTA-Entwürfe den jeweiligen Audits entsprechen,
+1. die drei OTA-Entwürfe den jeweiligen korrigierten Audits entsprechen,
 2. keine offenen Forschungswerte unmarkiert kanonisiert werden,
 3. KG-System-ID auf `SYS:KUEPER:ota` normalisiert ist,
 4. NOXIA aus den Dokumenten keine permanenten KG-/SSF-IDs oder wissenschaftlich unbelegten Balancingwerte ableitet.
