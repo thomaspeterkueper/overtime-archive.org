@@ -1,0 +1,36 @@
+{
+  "generatedAt": "2026-09-01T14:12:53.477Z",
+  "count": 5,
+  "references": [
+    {
+      "source": "src/content/documents/OTA-BIO-0000-2025-DE.md",
+      "reference": "media/d4d5ac9f708fc83b7c40e23009c05d9e010e7075.png",
+      "alt": "The OverTime Archive\nLogo",
+      "status": "missing"
+    },
+    {
+      "source": "src/content/documents/OTA-BIO-0001-2025-DE.md",
+      "reference": "media/d4d5ac9f708fc83b7c40e23009c05d9e010e7075.png",
+      "alt": "The OverTime Archive\nLogo",
+      "status": "missing"
+    },
+    {
+      "source": "src/content/documents/OTA-RED-0003-2091-DE.md",
+      "reference": "media/a5c75e489e4259f78e71465f5cefd55ab60f6b73.png",
+      "alt": "The OverTime Archive\nLogo",
+      "status": "missing"
+    },
+    {
+      "source": "src/content/documents/OTA-RED-0012-2171-DE.md",
+      "reference": "media/a5c75e489e4259f78e71465f5cefd55ab60f6b73.png",
+      "alt": "The OverTime Archive\nLogo",
+      "status": "missing"
+    },
+    {
+      "source": "src/content/documents/OTA-TEC-0023-2089-DE.md",
+      "reference": "media/a5c75e489e4259f78e71465f5cefd55ab60f6b73.png",
+      "alt": "The OverTime Archive\nLogo",
+      "status": "missing"
+    }
+  ]
+}
