@@ -80,6 +80,8 @@ function isStructuralHeading(v){
   return /^(?:THE OVERTIME ARCHIVE|METADATEN|INHALT|INHALTSVERZEICHNIS|EINLEITUNG|ZUSAMMENFASSUNG|ABSTRACT|CURATORIAL NOTE|ANHANG|VORBEMERKUNG|EPISTEMOLOGISCHE GEWICHTUNG|EPISTEMISCHE TRANSPARENZ & WARNUNG|TITEL|DOKUMENTSTRUKTUR|REVISIONSHISTORIE|REDAKTIONELLE SYNTHESE|BEZIEHUNG ZUM HAUPTDOKUMENT)$/i.test(s)
     || /^(?:[A-ZÄÖÜ][A-ZÄÖÜ -]*\s+)?(?:DOCUMENTS?|DOCUMENTATION|PUBLICATIONS?|CONTEXT|FOUNDATIONAL|CULTURAL|HISTORICAL|BIOGRAPHICAL|SCIENTIFIC|TECHNICAL|CARTOGRAPHIC|OBSERVED REALITY|OBSERVATIONAL|ORGANIZATIONAL)\s+SERIES$/i.test(s)
     || /^ÄNDERUNGSPROTOKOLL(?:\s+V?\d+(?:\.\d+)*)?$/i.test(s)
+    || /^(?:PART|TEIL)\s+[A-Z0-9IVX]+\s*[:—–-]/i.test(s)
+    || /^(?:QUERVERWEISE|QUELLENVERZEICHNIS|ABHÄNGIGKEITEN|EMOTIONALE LEXIKA|THERAPIE VS\. ATHLETIK: VARIANTENÜBERSICHT|ANHANG [A-Z]: LITERATURVERWEISE(?: \(AUSWAHL\))?)$/i.test(s)
     || /^(?:\d+(?:\.\d+)*|[A-Z]\.\d+)\.?\s+\S/i.test(s)
     || /^(?:TEIL|SECTION|KAPITEL|CHAPTER|MODUL|PROTOKOLL)\s+[A-Z0-9IVX]+\s*[:—–-]/i.test(s)
     || /^(?:TEIL|SECTION|KAPITEL|CHAPTER|MODUL|PROTOKOLL)\s+[A-Z0-9IVX]+$/i.test(s);
@@ -112,7 +114,7 @@ const documents=files.map(file=>{
   const derivedTitle=genericTitle&&!safeTitle?firstHeadingCandidate(body,signature):null;
   let titleReview={tier:'OK',candidate:null,evidence:'canonical-title'};
   if(genericTitle&&safeTitle)titleReview={tier:'A',candidate:safeTitle,evidence:'explicit-labeled-field'};
-  else if(genericTitle&&derivedTitle)titleReview={tier:'B',candidate:derivedTitle,evidence:'first-non-structural-heading'};
+  else if(genericTitle&&derivedTitle&&signature!=='OTA-INDEX-RKF-2026-DE')titleReview={tier:'B',candidate:derivedTitle,evidence:'first-non-structural-heading'};
   else if(genericTitle)titleReview={tier:'C',candidate:null,evidence:'editorial-decision-required'};
 
   const safeSummary=genericSummary?summaryCandidate(excerpt):null;
