@@ -21,27 +21,35 @@ jobs:
           from pathlib import Path
           p=Path('scripts/analyze-archive-content.mjs')
           s=p.read_text()
-          old="""    || /^ÄNDERUNGSPROTOKOLL(?:\\s+V?\\d+(?:\\.\\d+)*)?$/i.test(s)
-    || /^(?:\\d+(?:\\.\\d+)*|[A-Z]\\.\\d+)\\.?\\s+\\S/i.test(s)
-    || /^(?:TEIL|SECTION|KAPITEL|CHAPTER|MODUL|PROTOKOLL)\\s+[A-Z0-9IVX]+\\s*[:—–-]/i.test(s)"""
-          new="""    || /^ÄNDERUNGSPROTOKOLL(?:\\s+V?\\d+(?:\\.\\d+)*)?$/i.test(s)
-    || /^(?:PART|TEIL)\\s+[A-Z0-9IVX]+\\s*[:—–-]/i.test(s)
-    || /^(?:QUERVERWEISE|QUELLENVERZEICHNIS|ABHÄNGIGKEITEN|EMOTIONALE LEXIKA|THERAPIE VS\\. ATHLETIK: VARIANTENÜBERSICHT|ANHANG [A-Z]: LITERATURVERWEISE(?: \\(AUSWAHL\\))?)$/i.test(s)
-    || /^(?:\\d+(?:\\.\\d+)*|[A-Z]\\.\\d+)\\.?\\s+\\S/i.test(s)
-    || /^(?:TEIL|SECTION|KAPITEL|CHAPTER|MODUL|PROTOKOLL)\\s+[A-Z0-9IVX]+\\s*[:—–-]/i.test(s)"""
+          old=(
+              "    || /^ÄNDERUNGSPROTOKOLL(?:\\s+V?\\d+(?:\\.\\d+)*)?$/i.test(s)\n"
+              "    || /^(?:\\d+(?:\\.\\d+)*|[A-Z]\\.\\d+)\\.?\\s+\\S/i.test(s)\n"
+              "    || /^(?:TEIL|SECTION|KAPITEL|CHAPTER|MODUL|PROTOKOLL)\\s+[A-Z0-9IVX]+\\s*[:—–-]/i.test(s)"
+          )
+          new=(
+              "    || /^ÄNDERUNGSPROTOKOLL(?:\\s+V?\\d+(?:\\.\\d+)*)?$/i.test(s)\n"
+              "    || /^(?:PART|TEIL)\\s+[A-Z0-9IVX]+\\s*[:—–-]/i.test(s)\n"
+              "    || /^(?:QUERVERWEISE|QUELLENVERZEICHNIS|ABHÄNGIGKEITEN|EMOTIONALE LEXIKA|THERAPIE VS\\. ATHLETIK: VARIANTENÜBERSICHT|ANHANG [A-Z]: LITERATURVERWEISE(?: \\(AUSWAHL\\))?)$/i.test(s)\n"
+              "    || /^(?:\\d+(?:\\.\\d+)*|[A-Z]\\.\\d+)\\.?\\s+\\S/i.test(s)\n"
+              "    || /^(?:TEIL|SECTION|KAPITEL|CHAPTER|MODUL|PROTOKOLL)\\s+[A-Z0-9IVX]+\\s*[:—–-]/i.test(s)"
+          )
           if s.count(old)!=1:
               raise SystemExit(f'expected structural block once, got {s.count(old)}')
           s=s.replace(old,new)
-          old2="""  if (genericTitle) {
-    if (derivedTitle?.safe) titleReviewTier = 'A';
-    else if (derivedTitle?.value) titleReviewTier = 'B';
-    else titleReviewTier = 'C';
-  }"""
-          new2="""  if (genericTitle) {
-    if (derivedTitle?.safe) titleReviewTier = 'A';
-    else if (derivedTitle?.value && signature !== 'OTA-INDEX-RKF-2026-DE') titleReviewTier = 'B';
-    else titleReviewTier = 'C';
-  }"""
+          old2=(
+              "  if (genericTitle) {\n"
+              "    if (derivedTitle?.safe) titleReviewTier = 'A';\n"
+              "    else if (derivedTitle?.value) titleReviewTier = 'B';\n"
+              "    else titleReviewTier = 'C';\n"
+              "  }"
+          )
+          new2=(
+              "  if (genericTitle) {\n"
+              "    if (derivedTitle?.safe) titleReviewTier = 'A';\n"
+              "    else if (derivedTitle?.value && signature !== 'OTA-INDEX-RKF-2026-DE') titleReviewTier = 'B';\n"
+              "    else titleReviewTier = 'C';\n"
+              "  }"
+          )
           if s.count(old2)!=1:
               raise SystemExit(f'expected tier block once, got {s.count(old2)}')
           p.write_text(s.replace(old2,new2))
