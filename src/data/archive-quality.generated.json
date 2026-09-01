@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-01T14:12:53.342Z",
+  "generatedAt": "2026-09-01T14:54:57.348Z",
   "summary": {
     "documents": 216,
     "substantial": 134,
@@ -16,14 +16,14 @@
     "safeTitleCandidates": 0,
     "summaryCandidates": 17,
     "relationCandidates": 1080,
-    "explicitCrossReferenceCandidates": 250,
-    "bibliographyRelationCandidates": 26,
-    "inlineRelationCandidates": 804,
+    "explicitCrossReferenceCandidates": 239,
+    "bibliographyRelationCandidates": 16,
+    "inlineRelationCandidates": 825,
     "safeRelationCandidates": 0,
     "canonicalRelationTargets": 839,
     "unresolvedRelationTargets": 241,
-    "explicitCanonicalRelationCandidates": 181,
-    "explicitUnresolvedRelationCandidates": 69,
+    "explicitCanonicalRelationCandidates": 174,
+    "explicitUnresolvedRelationCandidates": 65,
     "relationTargetClassifications": {
       "base-id-ambiguous": 44,
       "base-id-resolved": 294,
@@ -15076,10 +15076,9 @@
           },
           {
             "target": "OTA-HIS-0008",
-            "evidence": "bibliography",
+            "evidence": "inline",
             "safe": false,
             "contexts": [
-              "bibliography",
               "inline"
             ],
             "targetExists": false,
@@ -15089,10 +15088,9 @@
           },
           {
             "target": "OTA-OBS-0006",
-            "evidence": "bibliography",
+            "evidence": "inline",
             "safe": false,
             "contexts": [
-              "bibliography",
               "inline"
             ],
             "targetExists": true,
@@ -15102,10 +15100,9 @@
           },
           {
             "target": "OTA-LIN-0001",
-            "evidence": "explicit-cross-reference",
+            "evidence": "inline",
             "safe": false,
             "contexts": [
-              "explicit-cross-reference",
               "inline"
             ],
             "targetExists": false,
@@ -15187,10 +15184,10 @@
           },
           {
             "target": "OTA-OBS-XXXX",
-            "evidence": "explicit-cross-reference",
+            "evidence": "inline",
             "safe": false,
             "contexts": [
-              "explicit-cross-reference"
+              "inline"
             ],
             "targetExists": false,
             "targetStatus": "unresolved",
@@ -15622,10 +15619,9 @@
         "relations": [
           {
             "target": "OTA-ARC-0002-MULTI-DE",
-            "evidence": "bibliography",
+            "evidence": "inline",
             "safe": false,
             "contexts": [
-              "bibliography",
               "inline"
             ],
             "targetExists": false,
@@ -15635,10 +15631,10 @@
           },
           {
             "target": "OTA-HIS-0005-1340BCE-DE",
-            "evidence": "bibliography",
+            "evidence": "inline",
             "safe": false,
             "contexts": [
-              "bibliography"
+              "inline"
             ],
             "targetExists": false,
             "targetStatus": "unresolved",
@@ -15647,10 +15643,10 @@
           },
           {
             "target": "OTA-OBS-0003-2026-DE",
-            "evidence": "bibliography",
+            "evidence": "inline",
             "safe": false,
             "contexts": [
-              "bibliography"
+              "inline"
             ],
             "targetExists": false,
             "targetStatus": "unresolved",
@@ -15659,10 +15655,10 @@
           },
           {
             "target": "OTA-KARTE-0003-MULTI-DE",
-            "evidence": "bibliography",
+            "evidence": "inline",
             "safe": false,
             "contexts": [
-              "bibliography"
+              "inline"
             ],
             "targetExists": false,
             "targetStatus": "unresolved",
@@ -15671,10 +15667,10 @@
           },
           {
             "target": "OTA-OBS-0005-2026-DE",
-            "evidence": "bibliography",
+            "evidence": "inline",
             "safe": false,
             "contexts": [
-              "bibliography"
+              "inline"
             ],
             "targetExists": true,
             "targetStatus": "resolved",
@@ -15683,10 +15679,10 @@
           },
           {
             "target": "OTA-NAR-0001-2087-DE",
-            "evidence": "bibliography",
+            "evidence": "inline",
             "safe": false,
             "contexts": [
-              "bibliography"
+              "inline"
             ],
             "targetExists": true,
             "targetStatus": "resolved",
@@ -19261,11 +19257,9 @@
         "relations": [
           {
             "target": "OTA-SCI-0041",
-            "evidence": "explicit-cross-reference",
+            "evidence": "inline",
             "safe": false,
             "contexts": [
-              "bibliography",
-              "explicit-cross-reference",
               "inline"
             ],
             "targetExists": true,
@@ -19275,10 +19269,9 @@
           },
           {
             "target": "OTA-SCI-0042",
-            "evidence": "explicit-cross-reference",
+            "evidence": "inline",
             "safe": false,
             "contexts": [
-              "explicit-cross-reference",
               "inline"
             ],
             "targetExists": true,
@@ -19288,11 +19281,9 @@
           },
           {
             "target": "OTA-SCI-0036",
-            "evidence": "explicit-cross-reference",
+            "evidence": "inline",
             "safe": false,
             "contexts": [
-              "bibliography",
-              "explicit-cross-reference",
               "inline"
             ],
             "targetExists": true,
@@ -19302,10 +19293,9 @@
           },
           {
             "target": "OTA-OBS-0005",
-            "evidence": "explicit-cross-reference",
+            "evidence": "inline",
             "safe": false,
             "contexts": [
-              "explicit-cross-reference",
               "inline"
             ],
             "targetExists": true,
@@ -19315,10 +19305,9 @@
           },
           {
             "target": "OTA-SCI-0026",
-            "evidence": "explicit-cross-reference",
+            "evidence": "inline",
             "safe": false,
             "contexts": [
-              "explicit-cross-reference",
               "inline"
             ],
             "targetExists": false,
@@ -19328,10 +19317,10 @@
           },
           {
             "target": "OTA-SCI-0043",
-            "evidence": "explicit-cross-reference",
+            "evidence": "inline",
             "safe": false,
             "contexts": [
-              "explicit-cross-reference"
+              "inline"
             ],
             "targetExists": true,
             "targetStatus": "resolved-base-id",
@@ -19340,10 +19329,10 @@
           },
           {
             "target": "OTA-TEC-0029",
-            "evidence": "explicit-cross-reference",
+            "evidence": "inline",
             "safe": false,
             "contexts": [
-              "explicit-cross-reference"
+              "inline"
             ],
             "targetExists": false,
             "targetStatus": "unresolved",
@@ -19352,10 +19341,10 @@
           },
           {
             "target": "OTA-SCI-0041-2026-DE",
-            "evidence": "explicit-cross-reference",
+            "evidence": "inline",
             "safe": false,
             "contexts": [
-              "explicit-cross-reference"
+              "inline"
             ],
             "targetExists": true,
             "targetStatus": "resolved",
@@ -19364,10 +19353,10 @@
           },
           {
             "target": "OTA-SCI-0042-2026-DE",
-            "evidence": "explicit-cross-reference",
+            "evidence": "inline",
             "safe": false,
             "contexts": [
-              "explicit-cross-reference"
+              "inline"
             ],
             "targetExists": true,
             "targetStatus": "resolved",
@@ -19376,10 +19365,10 @@
           },
           {
             "target": "OTA-SCI-0036-2026-DE",
-            "evidence": "explicit-cross-reference",
+            "evidence": "inline",
             "safe": false,
             "contexts": [
-              "explicit-cross-reference"
+              "inline"
             ],
             "targetExists": true,
             "targetStatus": "resolved",
@@ -22839,10 +22828,9 @@
         "relations": [
           {
             "target": "OTA-BIO-0001",
-            "evidence": "bibliography",
+            "evidence": "inline",
             "safe": false,
             "contexts": [
-              "bibliography",
               "inline"
             ],
             "targetExists": true,
@@ -22866,10 +22854,11 @@
           },
           {
             "target": "OTA-BIO-0001-2025-DE",
-            "evidence": "bibliography",
+            "evidence": "explicit-cross-reference",
             "safe": false,
             "contexts": [
-              "bibliography"
+              "bibliography",
+              "explicit-cross-reference"
             ],
             "targetExists": true,
             "targetStatus": "resolved",

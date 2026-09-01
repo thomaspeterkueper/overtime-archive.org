@@ -84,8 +84,29 @@ function firstHeadingCandidate(body,sig){
 }
 function summaryCandidate(v){v=cleanCandidate(v);if(!v||v.length<90||v.length>360)return null;if(/^\*\*(?:DOC-ID|KLASSIFIZIERUNG|SUBJEKT|AUTOR|DATUM|STATUS|EPISTEMOLOGIE|QUERVERWEISE)/i.test(v))return null;return v;}
 
-const CROSS_REFERENCE_LABEL=/(?:QUERVERWEISE?|VERWANDTE(?:\s+DOKUMENTE)?|RELATED\s+DOCUMENTS?|SIEHE\s+AUCH|SEE\s+ALSO)/i;
-const BIBLIOGRAPHY_LABEL=/(?:REFERENZEN|LITERATUR|QUELLEN|BIBLIOGRAFIE|BIBLIOGRAPHY|REFERENCES|SOURCES|CITATIONS)/i;
+// Reference-section labels must start the heading name or label line (after
+// optional numbering/decoration) and end at a word boundary, so compound words
+// (Energiequellen, Quellenmarker, …) and prose mentioning labels mid-sentence
+// never classify as reference sections. The stoplist additionally rejects
+// labels that only prefix other kinds of sections (VERWANDTE SYSTEME and
+// VERWANDTE FUNDORTE are not cross-reference lists). Only genuine
+// "Verwandte Dokumente"/"Quellen" style sections and label lines produce
+// non-inline evidence.
+const CROSS_REFERENCE_LABEL=/^(?:QUERVERWEISE?|VERWANDTE(?:\s+DOKUMENTE)?|RELATED\s+DOCUMENTS?|SIEHE\s+AUCH|SEE\s+ALSO)\b/i;
+const BIBLIOGRAPHY_LABEL=/^(?:REFERENZEN|LITERATUR|QUELLEN|BIBLIOGRAFIE|BIBLIOGRAPHY|REFERENCES|SOURCES|CITATIONS)(?:VERZEICHNIS|NACHWEIS|VERWEISE)?\b/i;
+const REFERENCE_LABEL_STOPLIST=/^(?:VERWANDTE\s+(?:SYSTEME|FUNDORTE)|(?:ENERGIE|STÖR|DATEN|SCHWEFEL)QUELLEN|QUELLENMARKER)/i;
+// Section numbering/decoration stripped before label matching: numerals
+// ("6.", "10.2"), roman ordinals ("VII."), "TEIL VII:", "Anhang A:", "§8",
+// list markers and bold.
+const SECTION_PREFIX=/^(?:\d+(?:\.\d+)*\.|§\d+|[IVXLCDM]+\.|[A-Z]\.|[-*|]+)\s*/;
+const SECTION_PREFIX_WORD=/^(?:TEIL|Teil|Anhang|Appendix|Kapitel)\s+[A-Z0-9]+\s*[:.]?\s*/;
+function isCrossReferenceLabel(text){return isReferenceLabel(text,true);}
+function isBibliographyLabel(text){return isReferenceLabel(text,false);}
+function isReferenceLabel(text,cross){
+  text=normalizeLine(text).replace(SECTION_PREFIX,'').replace(SECTION_PREFIX_WORD,'');
+  if(REFERENCE_LABEL_STOPLIST.test(text))return false;
+  return cross?CROSS_REFERENCE_LABEL.test(text):BIBLIOGRAPHY_LABEL.test(text);
+}
 function classifyReferenceContexts(body,signature){
   const lines=body.split(/\r?\n/);
   const contexts=new Map();
@@ -94,12 +115,12 @@ function classifyReferenceContexts(body,signature){
     const heading=line.match(/^#{1,6}\s+(.+)$/);
     if(heading){
       const name=normalizeLine(heading[1]);
-      section=CROSS_REFERENCE_LABEL.test(name)?'explicit-cross-reference':BIBLIOGRAPHY_LABEL.test(name)?'bibliography':'inline';
+      section=isCrossReferenceLabel(name)?'explicit-cross-reference':isBibliographyLabel(name)?'bibliography':'inline';
     }
     let lineContext=section;
     const labelText=normalizeLine(line.replace(/^\s*[-*|]+\s*/,'').replace(/\*\*/g,''));
-    if(CROSS_REFERENCE_LABEL.test(labelText)&&/[:：]/.test(labelText))lineContext='explicit-cross-reference';
-    else if(BIBLIOGRAPHY_LABEL.test(labelText)&&/[:：]/.test(labelText))lineContext='bibliography';
+    if(isCrossReferenceLabel(labelText)&&/[:：]/.test(labelText))lineContext='explicit-cross-reference';
+    else if(isBibliographyLabel(labelText)&&/[:：]/.test(labelText))lineContext='bibliography';
     for(const match of line.matchAll(/\bOTA-[A-Z]+-[A-Z0-9-]+\b/g)){
       const target=match[0];
       if(target===signature)continue;
