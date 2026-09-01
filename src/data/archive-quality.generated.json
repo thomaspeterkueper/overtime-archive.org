@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-01T14:54:57.348Z",
+  "generatedAt": "2026-09-01T15:17:09.865Z",
   "summary": {
     "documents": 216,
     "substantial": 134,
@@ -20,17 +20,18 @@
     "bibliographyRelationCandidates": 16,
     "inlineRelationCandidates": 825,
     "safeRelationCandidates": 0,
-    "canonicalRelationTargets": 839,
+    "canonicalRelationTargets": 819,
     "unresolvedRelationTargets": 241,
-    "explicitCanonicalRelationCandidates": 174,
+    "explicitCanonicalRelationCandidates": 172,
     "explicitUnresolvedRelationCandidates": 65,
     "relationTargetClassifications": {
       "base-id-ambiguous": 44,
-      "base-id-resolved": 294,
+      "base-id-resolved": 275,
       "existing": 525,
       "language-ambiguous": 1,
       "missing": 162,
-      "shorthand-resolved": 20,
+      "self-reference": 20,
+      "shorthand-resolved": 19,
       "temporal-ambiguous": 3,
       "temporal-mismatch": 21,
       "translation-missing": 2,
@@ -1056,9 +1057,9 @@
             "contexts": [
               "inline"
             ],
-            "targetExists": true,
-            "targetStatus": "resolved-base-id",
-            "targetClassification": "base-id-resolved",
+            "targetExists": false,
+            "targetStatus": "self-reference",
+            "targetClassification": "self-reference",
             "resolvedTarget": "OTA-KARTE-0002-Epochen-g-Profile-DE"
           },
           {
@@ -1507,9 +1508,9 @@
             "contexts": [
               "inline"
             ],
-            "targetExists": true,
-            "targetStatus": "resolved-base-id",
-            "targetClassification": "base-id-resolved",
+            "targetExists": false,
+            "targetStatus": "self-reference",
+            "targetClassification": "self-reference",
             "resolvedTarget": "OTA-CUL-0015-MULTI-DE"
           },
           {
@@ -6035,9 +6036,9 @@
             "contexts": [
               "inline"
             ],
-            "targetExists": true,
-            "targetStatus": "resolved-base-id",
-            "targetClassification": "base-id-resolved",
+            "targetExists": false,
+            "targetStatus": "self-reference",
+            "targetClassification": "self-reference",
             "resolvedTarget": "OTA-KARTE-0001-Gehirn-Epochen"
           }
         ],
@@ -6459,9 +6460,9 @@
             "contexts": [
               "inline"
             ],
-            "targetExists": true,
-            "targetStatus": "resolved-base-id",
-            "targetClassification": "base-id-resolved",
+            "targetExists": false,
+            "targetStatus": "self-reference",
+            "targetClassification": "self-reference",
             "resolvedTarget": "OTA-BIO-0000-2025-DE"
           },
           {
@@ -6581,9 +6582,9 @@
             "contexts": [
               "inline"
             ],
-            "targetExists": true,
-            "targetStatus": "resolved-base-id",
-            "targetClassification": "base-id-resolved",
+            "targetExists": false,
+            "targetStatus": "self-reference",
+            "targetClassification": "self-reference",
             "resolvedTarget": "OTA-BIO-0001-2025-DE"
           }
         ],
@@ -6802,9 +6803,9 @@
             "contexts": [
               "inline"
             ],
-            "targetExists": true,
-            "targetStatus": "resolved-base-id",
-            "targetClassification": "base-id-resolved",
+            "targetExists": false,
+            "targetStatus": "self-reference",
+            "targetClassification": "self-reference",
             "resolvedTarget": "OTA-BIO-0005-2025-DE"
           },
           {
@@ -8824,9 +8825,9 @@
             "contexts": [
               "inline"
             ],
-            "targetExists": true,
-            "targetStatus": "resolved-base-id",
-            "targetClassification": "base-id-resolved",
+            "targetExists": false,
+            "targetStatus": "self-reference",
+            "targetClassification": "self-reference",
             "resolvedTarget": "OTA-FND-0002-2025-DE"
           }
         ],
@@ -8887,9 +8888,9 @@
             "contexts": [
               "inline"
             ],
-            "targetExists": true,
-            "targetStatus": "resolved-base-id",
-            "targetClassification": "base-id-resolved",
+            "targetExists": false,
+            "targetStatus": "self-reference",
+            "targetClassification": "self-reference",
             "resolvedTarget": "OTA-FND-0004-2025-DE"
           },
           {
@@ -10786,9 +10787,9 @@
             "contexts": [
               "inline"
             ],
-            "targetExists": true,
-            "targetStatus": "resolved-base-id",
-            "targetClassification": "base-id-resolved",
+            "targetExists": false,
+            "targetStatus": "self-reference",
+            "targetClassification": "self-reference",
             "resolvedTarget": "OTA-KOM-0001-2026-DE"
           }
         ],
@@ -14884,9 +14885,9 @@
             "contexts": [
               "inline"
             ],
-            "targetExists": true,
-            "targetStatus": "resolved-base-id",
-            "targetClassification": "base-id-resolved",
+            "targetExists": false,
+            "targetStatus": "self-reference",
+            "targetClassification": "self-reference",
             "resolvedTarget": "OTA-FND-0015-2026-DE"
           }
         ],
@@ -15917,9 +15918,9 @@
             "contexts": [
               "inline"
             ],
-            "targetExists": true,
-            "targetStatus": "resolved-shorthand",
-            "targetClassification": "shorthand-resolved",
+            "targetExists": false,
+            "targetStatus": "self-reference",
+            "targetClassification": "self-reference",
             "resolvedTarget": "OTA-INDEX-RKF-2026-DE"
           },
           {
@@ -17526,9 +17527,9 @@
             "contexts": [
               "inline"
             ],
-            "targetExists": true,
-            "targetStatus": "resolved-base-id",
-            "targetClassification": "base-id-resolved",
+            "targetExists": false,
+            "targetStatus": "self-reference",
+            "targetClassification": "self-reference",
             "resolvedTarget": "OTA-OBS-0005-2026-DE"
           },
           {
@@ -19322,9 +19323,9 @@
             "contexts": [
               "inline"
             ],
-            "targetExists": true,
-            "targetStatus": "resolved-base-id",
-            "targetClassification": "base-id-resolved",
+            "targetExists": false,
+            "targetStatus": "self-reference",
+            "targetClassification": "self-reference",
             "resolvedTarget": "OTA-SCI-0043-2026-DE"
           },
           {
@@ -20656,9 +20657,9 @@
             "contexts": [
               "inline"
             ],
-            "targetExists": true,
-            "targetStatus": "resolved-base-id",
-            "targetClassification": "base-id-resolved",
+            "targetExists": false,
+            "targetStatus": "self-reference",
+            "targetClassification": "self-reference",
             "resolvedTarget": "OTA-TEC-0081-2026-DE"
           }
         ],
@@ -21010,9 +21011,9 @@
             "contexts": [
               "inline"
             ],
-            "targetExists": true,
-            "targetStatus": "resolved-base-id",
-            "targetClassification": "base-id-resolved",
+            "targetExists": false,
+            "targetStatus": "self-reference",
+            "targetClassification": "self-reference",
             "resolvedTarget": "OTA-FND-0031-2026-DE"
           },
           {
@@ -21089,9 +21090,9 @@
               "explicit-cross-reference",
               "inline"
             ],
-            "targetExists": true,
-            "targetStatus": "resolved-base-id",
-            "targetClassification": "base-id-resolved",
+            "targetExists": false,
+            "targetStatus": "self-reference",
+            "targetClassification": "self-reference",
             "resolvedTarget": "OTA-LIT-0001-2026-DE"
           }
         ],
@@ -21155,9 +21156,9 @@
             "contexts": [
               "inline"
             ],
-            "targetExists": true,
-            "targetStatus": "resolved-base-id",
-            "targetClassification": "base-id-resolved",
+            "targetExists": false,
+            "targetStatus": "self-reference",
+            "targetClassification": "self-reference",
             "resolvedTarget": "OTA-LIT-0002-2026-DE"
           },
           {
@@ -21233,9 +21234,9 @@
             "contexts": [
               "inline"
             ],
-            "targetExists": true,
-            "targetStatus": "resolved-base-id",
-            "targetClassification": "base-id-resolved",
+            "targetExists": false,
+            "targetStatus": "self-reference",
+            "targetClassification": "self-reference",
             "resolvedTarget": "OTA-LIT-0003-2026-DE"
           }
         ],
@@ -21300,9 +21301,9 @@
               "explicit-cross-reference",
               "inline"
             ],
-            "targetExists": true,
-            "targetStatus": "resolved-base-id",
-            "targetClassification": "base-id-resolved",
+            "targetExists": false,
+            "targetStatus": "self-reference",
+            "targetClassification": "self-reference",
             "resolvedTarget": "OTA-LIT-0004-2026-DE"
           },
           {
@@ -23860,9 +23861,9 @@
             "contexts": [
               "inline"
             ],
-            "targetExists": true,
-            "targetStatus": "resolved-base-id",
-            "targetClassification": "base-id-resolved",
+            "targetExists": false,
+            "targetStatus": "self-reference",
+            "targetClassification": "self-reference",
             "resolvedTarget": "OTA-SCI-0064-2026-DE"
           }
         ],
