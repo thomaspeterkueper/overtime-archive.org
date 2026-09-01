@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-01T15:17:09.865Z",
+  "generatedAt": "2026-09-01T16:17:59.755Z",
   "summary": {
     "documents": 216,
     "substantial": 134,
@@ -7,7 +7,7 @@
     "fragments": 6,
     "genericTitles": 177,
     "genericSummaries": 47,
-    "relationGaps": 206,
+    "relationGaps": 203,
     "withoutVisuals": 211,
     "titleReviewA": 0,
     "titleReviewB": 45,
@@ -15,10 +15,10 @@
     "titleReviewOK": 39,
     "safeTitleCandidates": 0,
     "summaryCandidates": 17,
-    "relationCandidates": 1080,
-    "explicitCrossReferenceCandidates": 239,
+    "relationCandidates": 1060,
+    "explicitCrossReferenceCandidates": 237,
     "bibliographyRelationCandidates": 16,
-    "inlineRelationCandidates": 825,
+    "inlineRelationCandidates": 807,
     "safeRelationCandidates": 0,
     "canonicalRelationTargets": 819,
     "unresolvedRelationTargets": 241,
@@ -1051,18 +1051,6 @@
         "summary": null,
         "relations": [
           {
-            "target": "OTA-KARTE-0002",
-            "evidence": "inline",
-            "safe": false,
-            "contexts": [
-              "inline"
-            ],
-            "targetExists": false,
-            "targetStatus": "self-reference",
-            "targetClassification": "self-reference",
-            "resolvedTarget": "OTA-KARTE-0002-Epochen-g-Profile-DE"
-          },
-          {
             "target": "OTA-SCI-0021-2025-DE",
             "evidence": "inline",
             "safe": false,
@@ -1075,7 +1063,7 @@
             "resolvedTarget": "OTA-SCI-0021-2025-DE"
           }
         ],
-        "count": 2
+        "count": 1
       },
       "metrics": {
         "words": 223,
@@ -1502,18 +1490,6 @@
         },
         "relations": [
           {
-            "target": "OTA-CUL-0015",
-            "evidence": "inline",
-            "safe": false,
-            "contexts": [
-              "inline"
-            ],
-            "targetExists": false,
-            "targetStatus": "self-reference",
-            "targetClassification": "self-reference",
-            "resolvedTarget": "OTA-CUL-0015-MULTI-DE"
-          },
-          {
             "target": "OTA-SCI-0047",
             "evidence": "inline",
             "safe": false,
@@ -1778,7 +1754,7 @@
             "resolvedTarget": "OTA-OBS-0004-2026-DE"
           }
         ],
-        "count": 24
+        "count": 23
       },
       "metrics": {
         "words": 2438,
@@ -5999,72 +5975,6 @@
       }
     },
     {
-      "file": "OTA-KARTE-0001-Gehirn-Epochen.md",
-      "signature": "OTA-KARTE-0001-Gehirn-Epochen",
-      "series": "KARTE",
-      "year": "2026",
-      "language": "DE",
-      "canonical": {
-        "title": "OTA-KARTE-0001-Gehirn-Epochen",
-        "summary": "Schnellreferenz: Fünf Epochen des Gehirns und vier Wendepunkte der neuronalen Architektur. Kompakte Übersicht [R] mit spekulativen Erweiterungen [S].",
-        "relatedCount": 1
-      },
-      "extracted": {
-        "title": null,
-        "author": null,
-        "classification": null,
-        "excerpt": "**Quelle:** Mousley et al. (2025), Nature Communications **DOI:** 10.1038/s41467-025-65974-8 **Vollständige Dokumentation:** OTA-SCI-0019-2025-DE"
-      },
-      "titleReview": {
-        "tier": "B",
-        "candidate": "DIE FÃœNF GEHIRN-EPOCHEN â€” Referenzmodul",
-        "evidence": "first-meaningful-heading"
-      },
-      "candidates": {
-        "title": null,
-        "derivedTitle": {
-          "value": "DIE FÃœNF GEHIRN-EPOCHEN â€” Referenzmodul",
-          "evidence": "first-meaningful-heading",
-          "safe": false
-        },
-        "summary": null,
-        "relations": [
-          {
-            "target": "OTA-KARTE-0001",
-            "evidence": "inline",
-            "safe": false,
-            "contexts": [
-              "inline"
-            ],
-            "targetExists": false,
-            "targetStatus": "self-reference",
-            "targetClassification": "self-reference",
-            "resolvedTarget": "OTA-KARTE-0001-Gehirn-Epochen"
-          }
-        ],
-        "count": 2
-      },
-      "metrics": {
-        "words": 541,
-        "headings": 16,
-        "images": 0,
-        "tables": 1,
-        "inlineReferenceTargets": 2
-      },
-      "quality": {
-        "substance": "KURZ",
-        "genericTitle": true,
-        "genericSummary": false,
-        "relationGap": true,
-        "flags": [
-          "GENERIC_TITLE",
-          "RELATION_GAP",
-          "NO_VISUAL"
-        ],
-        "priority": 8
-      }
-    },
-    {
       "file": "OTA-NAR-0001-2087-DE.md",
       "signature": "OTA-NAR-0001-2087-DE",
       "series": "NAR",
@@ -6454,18 +6364,6 @@
         "summary": null,
         "relations": [
           {
-            "target": "OTA-BIO-0000",
-            "evidence": "inline",
-            "safe": false,
-            "contexts": [
-              "inline"
-            ],
-            "targetExists": false,
-            "targetStatus": "self-reference",
-            "targetClassification": "self-reference",
-            "resolvedTarget": "OTA-BIO-0000-2025-DE"
-          },
-          {
             "target": "OTA-FND-0001",
             "evidence": "inline",
             "safe": false,
@@ -6502,7 +6400,7 @@
             "resolvedTarget": null
           }
         ],
-        "count": 4
+        "count": 3
       },
       "metrics": {
         "words": 916,
@@ -6574,21 +6472,9 @@
             "targetStatus": "unresolved",
             "targetClassification": "missing",
             "resolvedTarget": null
-          },
-          {
-            "target": "OTA-BIO-0001",
-            "evidence": "inline",
-            "safe": false,
-            "contexts": [
-              "inline"
-            ],
-            "targetExists": false,
-            "targetStatus": "self-reference",
-            "targetClassification": "self-reference",
-            "resolvedTarget": "OTA-BIO-0001-2025-DE"
           }
         ],
-        "count": 3
+        "count": 2
       },
       "metrics": {
         "words": 711,
@@ -6797,18 +6683,6 @@
             "resolvedTarget": "OTA-BIO-0001-2025-DE"
           },
           {
-            "target": "OTA-BIO-0005",
-            "evidence": "inline",
-            "safe": false,
-            "contexts": [
-              "inline"
-            ],
-            "targetExists": false,
-            "targetStatus": "self-reference",
-            "targetClassification": "self-reference",
-            "resolvedTarget": "OTA-BIO-0005-2025-DE"
-          },
-          {
             "target": "OTA-BIO-0002-2025-DE",
             "evidence": "inline",
             "safe": false,
@@ -6845,7 +6719,7 @@
             "resolvedTarget": "OTA-ART-0001-2087-DE"
           }
         ],
-        "count": 10
+        "count": 9
       },
       "metrics": {
         "words": 2328,
@@ -8817,21 +8691,9 @@
             "targetStatus": "resolved-base-id",
             "targetClassification": "base-id-resolved",
             "resolvedTarget": "OTA-FND-0005-2025-DE"
-          },
-          {
-            "target": "OTA-FND-0002",
-            "evidence": "inline",
-            "safe": false,
-            "contexts": [
-              "inline"
-            ],
-            "targetExists": false,
-            "targetStatus": "self-reference",
-            "targetClassification": "self-reference",
-            "resolvedTarget": "OTA-FND-0002-2025-DE"
           }
         ],
-        "count": 7
+        "count": 6
       },
       "metrics": {
         "words": 1112,
@@ -8881,18 +8743,6 @@
         "derivedTitle": null,
         "summary": null,
         "relations": [
-          {
-            "target": "OTA-FND-0004",
-            "evidence": "inline",
-            "safe": false,
-            "contexts": [
-              "inline"
-            ],
-            "targetExists": false,
-            "targetStatus": "self-reference",
-            "targetClassification": "self-reference",
-            "resolvedTarget": "OTA-FND-0004-2025-DE"
-          },
           {
             "target": "OTA-FND-0001",
             "evidence": "inline",
@@ -8990,7 +8840,7 @@
             "resolvedTarget": "OTA-SCI-0008-2096-DE"
           }
         ],
-        "count": 9
+        "count": 8
       },
       "metrics": {
         "words": 2675,
@@ -10779,21 +10629,9 @@
             "targetStatus": "resolved-base-id",
             "targetClassification": "base-id-resolved",
             "resolvedTarget": "OTA-SCI-0045-2026-DE"
-          },
-          {
-            "target": "OTA-KOM-0001",
-            "evidence": "inline",
-            "safe": false,
-            "contexts": [
-              "inline"
-            ],
-            "targetExists": false,
-            "targetStatus": "self-reference",
-            "targetClassification": "self-reference",
-            "resolvedTarget": "OTA-KOM-0001-2026-DE"
           }
         ],
-        "count": 5
+        "count": 4
       },
       "metrics": {
         "words": 1526,
@@ -14877,21 +14715,9 @@
             "targetStatus": "resolved-base-id",
             "targetClassification": "base-id-resolved",
             "resolvedTarget": "OTA-FND-0014-2026-DE"
-          },
-          {
-            "target": "OTA-FND-0015",
-            "evidence": "inline",
-            "safe": false,
-            "contexts": [
-              "inline"
-            ],
-            "targetExists": false,
-            "targetStatus": "self-reference",
-            "targetClassification": "self-reference",
-            "resolvedTarget": "OTA-FND-0015-2026-DE"
           }
         ],
-        "count": 4
+        "count": 3
       },
       "metrics": {
         "words": 1527,
@@ -15912,18 +15738,6 @@
         "summary": null,
         "relations": [
           {
-            "target": "OTA-INDEX-RKF-2026",
-            "evidence": "inline",
-            "safe": false,
-            "contexts": [
-              "inline"
-            ],
-            "targetExists": false,
-            "targetStatus": "self-reference",
-            "targetClassification": "self-reference",
-            "resolvedTarget": "OTA-INDEX-RKF-2026-DE"
-          },
-          {
             "target": "OTA-SCI-0044",
             "evidence": "explicit-cross-reference",
             "safe": false,
@@ -16129,7 +15943,7 @@
             "resolvedTarget": "OTA-NAR-0002-2025-DE"
           }
         ],
-        "count": 19
+        "count": 18
       },
       "metrics": {
         "words": 1858,
@@ -16146,6 +15960,58 @@
         "flags": [
           "GENERIC_TITLE",
           "RELATION_GAP",
+          "NO_VISUAL"
+        ],
+        "priority": 6
+      }
+    },
+    {
+      "file": "OTA-KARTE-0001-Gehirn-Epochen.md",
+      "signature": "OTA-KARTE-0001-Gehirn-Epochen",
+      "series": "KARTE",
+      "year": "2026",
+      "language": "DE",
+      "canonical": {
+        "title": "OTA-KARTE-0001-Gehirn-Epochen",
+        "summary": "Schnellreferenz: Fünf Epochen des Gehirns und vier Wendepunkte der neuronalen Architektur. Kompakte Übersicht [R] mit spekulativen Erweiterungen [S].",
+        "relatedCount": 1
+      },
+      "extracted": {
+        "title": null,
+        "author": null,
+        "classification": null,
+        "excerpt": "**Quelle:** Mousley et al. (2025), Nature Communications **DOI:** 10.1038/s41467-025-65974-8 **Vollständige Dokumentation:** OTA-SCI-0019-2025-DE"
+      },
+      "titleReview": {
+        "tier": "B",
+        "candidate": "DIE FÃœNF GEHIRN-EPOCHEN â€” Referenzmodul",
+        "evidence": "first-meaningful-heading"
+      },
+      "candidates": {
+        "title": null,
+        "derivedTitle": {
+          "value": "DIE FÃœNF GEHIRN-EPOCHEN â€” Referenzmodul",
+          "evidence": "first-meaningful-heading",
+          "safe": false
+        },
+        "summary": null,
+        "relations": [],
+        "count": 1
+      },
+      "metrics": {
+        "words": 541,
+        "headings": 16,
+        "images": 0,
+        "tables": 1,
+        "inlineReferenceTargets": 2
+      },
+      "quality": {
+        "substance": "KURZ",
+        "genericTitle": true,
+        "genericSummary": false,
+        "relationGap": false,
+        "flags": [
+          "GENERIC_TITLE",
           "NO_VISUAL"
         ],
         "priority": 6
@@ -17521,18 +17387,6 @@
         "summary": null,
         "relations": [
           {
-            "target": "OTA-OBS-0005",
-            "evidence": "inline",
-            "safe": false,
-            "contexts": [
-              "inline"
-            ],
-            "targetExists": false,
-            "targetStatus": "self-reference",
-            "targetClassification": "self-reference",
-            "resolvedTarget": "OTA-OBS-0005-2026-DE"
-          },
-          {
             "target": "OTA-SCI-0036-2026-DE",
             "evidence": "explicit-cross-reference",
             "safe": false,
@@ -17593,7 +17447,7 @@
             "resolvedTarget": "OTA-OBS-0001-2025-DE"
           }
         ],
-        "count": 7
+        "count": 6
       },
       "metrics": {
         "words": 1984,
@@ -19317,18 +19171,6 @@
             "resolvedTarget": null
           },
           {
-            "target": "OTA-SCI-0043",
-            "evidence": "inline",
-            "safe": false,
-            "contexts": [
-              "inline"
-            ],
-            "targetExists": false,
-            "targetStatus": "self-reference",
-            "targetClassification": "self-reference",
-            "resolvedTarget": "OTA-SCI-0043-2026-DE"
-          },
-          {
             "target": "OTA-TEC-0029",
             "evidence": "inline",
             "safe": false,
@@ -19377,7 +19219,7 @@
             "resolvedTarget": "OTA-SCI-0036-2026-DE"
           }
         ],
-        "count": 11
+        "count": 10
       },
       "metrics": {
         "words": 2939,
@@ -20649,21 +20491,9 @@
             "targetStatus": "resolved-base-id",
             "targetClassification": "base-id-resolved",
             "resolvedTarget": "OTA-SCI-0080-2026-DE"
-          },
-          {
-            "target": "OTA-TEC-0081",
-            "evidence": "inline",
-            "safe": false,
-            "contexts": [
-              "inline"
-            ],
-            "targetExists": false,
-            "targetStatus": "self-reference",
-            "targetClassification": "self-reference",
-            "resolvedTarget": "OTA-TEC-0081-2026-DE"
           }
         ],
-        "count": 7
+        "count": 6
       },
       "metrics": {
         "words": 2139,
@@ -21005,18 +20835,6 @@
             "resolvedTarget": "OTA-LIT-0003-2026-DE"
           },
           {
-            "target": "OTA-FND-0031",
-            "evidence": "inline",
-            "safe": false,
-            "contexts": [
-              "inline"
-            ],
-            "targetExists": false,
-            "targetStatus": "self-reference",
-            "targetClassification": "self-reference",
-            "resolvedTarget": "OTA-FND-0031-2026-DE"
-          },
-          {
             "target": "OTA-FND-0031-2026-DE-",
             "evidence": "inline",
             "safe": false,
@@ -21029,7 +20847,7 @@
             "resolvedTarget": null
           }
         ],
-        "count": 7
+        "count": 6
       },
       "metrics": {
         "words": 811,
@@ -21037,73 +20855,6 @@
         "images": 0,
         "tables": 1,
         "inlineReferenceTargets": 6
-      },
-      "quality": {
-        "substance": "SUBSTANZIELL",
-        "genericTitle": false,
-        "genericSummary": true,
-        "relationGap": true,
-        "flags": [
-          "GENERIC_SUMMARY",
-          "RELATION_GAP",
-          "NO_VISUAL"
-        ],
-        "priority": 5
-      }
-    },
-    {
-      "file": "OTA-LIT-0001-2026-DE.md",
-      "signature": "OTA-LIT-0001-2026-DE",
-      "series": "LIT",
-      "year": "2026",
-      "language": "DE",
-      "canonical": {
-        "title": "OTA-LIT-0001 — Tessán-Vokabular: Kanonische Vektorableitungen",
-        "summary": "OTA-LIT-0001 — Tessán-Vokabular: Kanonische Vektorableitungen",
-        "relatedCount": 0
-      },
-      "extracted": {
-        "title": null,
-        "author": null,
-        "classification": null,
-        "excerpt": "**Reihe:** OTA-LIT (Literarisches Kanon-Lexikon, Baumeister Universe) **Dokument:** LIT-0001 **Version:** 1.0 **Datum:** April 2026 **Status:** Kanonisch **Autor:** Thomas Peter Küper **Lizenz:** Baumeister-Universum Fiction Lizenz (LICENSE-FICTION.txt) · © Thomas Peter Küper 2026 · Alle Rechte vorbehalten"
-      },
-      "titleReview": {
-        "tier": "OK",
-        "candidate": null,
-        "evidence": "canonical-title"
-      },
-      "candidates": {
-        "title": null,
-        "derivedTitle": null,
-        "summary": {
-          "value": "**Reihe:** OTA-LIT (Literarisches Kanon-Lexikon, Baumeister Universe) **Dokument:** LIT-0001 **Version:** 1.0 **Datum:** April 2026 **Status:** Kanonisch **Autor:** Thomas Peter Küper **Lizenz:** Baumeister-Universum Fiction Lizenz (LICENSE-FICTION.txt) · © Thomas Peter Küper 2026 · Alle Rechte vorbehalten",
-          "evidence": "first-substantive-paragraph",
-          "safe": false
-        },
-        "relations": [
-          {
-            "target": "OTA-LIT-0001",
-            "evidence": "explicit-cross-reference",
-            "safe": false,
-            "contexts": [
-              "explicit-cross-reference",
-              "inline"
-            ],
-            "targetExists": false,
-            "targetStatus": "self-reference",
-            "targetClassification": "self-reference",
-            "resolvedTarget": "OTA-LIT-0001-2026-DE"
-          }
-        ],
-        "count": 2
-      },
-      "metrics": {
-        "words": 1260,
-        "headings": 11,
-        "images": 0,
-        "tables": 1,
-        "inlineReferenceTargets": 1
       },
       "quality": {
         "substance": "SUBSTANZIELL",
@@ -21150,18 +20901,6 @@
         },
         "relations": [
           {
-            "target": "OTA-LIT-0002",
-            "evidence": "inline",
-            "safe": false,
-            "contexts": [
-              "inline"
-            ],
-            "targetExists": false,
-            "targetStatus": "self-reference",
-            "targetClassification": "self-reference",
-            "resolvedTarget": "OTA-LIT-0002-2026-DE"
-          },
-          {
             "target": "OTA-LIT-0003",
             "evidence": "inline",
             "safe": false,
@@ -21174,7 +20913,7 @@
             "resolvedTarget": "OTA-LIT-0003-2026-DE"
           }
         ],
-        "count": 3
+        "count": 2
       },
       "metrics": {
         "words": 1266,
@@ -21182,72 +20921,6 @@
         "images": 0,
         "tables": 1,
         "inlineReferenceTargets": 2
-      },
-      "quality": {
-        "substance": "SUBSTANZIELL",
-        "genericTitle": false,
-        "genericSummary": true,
-        "relationGap": true,
-        "flags": [
-          "GENERIC_SUMMARY",
-          "RELATION_GAP",
-          "NO_VISUAL"
-        ],
-        "priority": 5
-      }
-    },
-    {
-      "file": "OTA-LIT-0003-2026-DE.md",
-      "signature": "OTA-LIT-0003-2026-DE",
-      "series": "LIT",
-      "year": "2026",
-      "language": "DE",
-      "canonical": {
-        "title": "OTA-LIT-0003 — Mishkenaz Kernset: Zereya-Welt",
-        "summary": "OTA-LIT-0003 — Mishkenaz Kernset: Zereya-Welt",
-        "relatedCount": 0
-      },
-      "extracted": {
-        "title": null,
-        "author": null,
-        "classification": null,
-        "excerpt": "**Reihe:** OTA-LIT (Literarisches Kanon-Lexikon, Baumeister Universe) **Dokument:** LIT-0003 **Version:** 1.0 **Datum:** April 2026 **Status:** Kanonisch **Geltungsbereich:** Miriam-Chroniken, Zereya-Saga (Bände 1–8), Soraya-Erzählungen **Autor:** Thomas Peter Küper **Lizenz:** Baumeister-Universum Fiction Lizenz (LICENSE-FICTION.txt) · © Thomas Peter Küp…"
-      },
-      "titleReview": {
-        "tier": "OK",
-        "candidate": null,
-        "evidence": "canonical-title"
-      },
-      "candidates": {
-        "title": null,
-        "derivedTitle": null,
-        "summary": {
-          "value": "**Reihe:** OTA-LIT (Literarisches Kanon-Lexikon, Baumeister Universe) **Dokument:** LIT-0003 **Version:** 1.0 **Datum:** April 2026 **Status:** Kanonisch **Geltungsbereich:** Miriam-Chroniken, Zereya-Saga (Bände 1–8), Soraya-Erzählungen **Autor:** Thomas Peter Küper **Lizenz:** Baumeister-Universum Fiction Lizenz (LICENSE-FICTION.txt) · © Thomas Peter Küp…",
-          "evidence": "first-substantive-paragraph",
-          "safe": false
-        },
-        "relations": [
-          {
-            "target": "OTA-LIT-0003",
-            "evidence": "inline",
-            "safe": false,
-            "contexts": [
-              "inline"
-            ],
-            "targetExists": false,
-            "targetStatus": "self-reference",
-            "targetClassification": "self-reference",
-            "resolvedTarget": "OTA-LIT-0003-2026-DE"
-          }
-        ],
-        "count": 2
-      },
-      "metrics": {
-        "words": 1427,
-        "headings": 17,
-        "images": 0,
-        "tables": 1,
-        "inlineReferenceTargets": 1
       },
       "quality": {
         "substance": "SUBSTANZIELL",
@@ -21294,19 +20967,6 @@
         },
         "relations": [
           {
-            "target": "OTA-LIT-0004",
-            "evidence": "explicit-cross-reference",
-            "safe": false,
-            "contexts": [
-              "explicit-cross-reference",
-              "inline"
-            ],
-            "targetExists": false,
-            "targetStatus": "self-reference",
-            "targetClassification": "self-reference",
-            "resolvedTarget": "OTA-LIT-0004-2026-DE"
-          },
-          {
             "target": "OTA-LIT-0002",
             "evidence": "explicit-cross-reference",
             "safe": false,
@@ -21344,7 +21004,7 @@
             "resolvedTarget": "OTA-LIT-0001-2026-DE"
           }
         ],
-        "count": 5
+        "count": 4
       },
       "metrics": {
         "words": 2161,
@@ -22215,6 +21875,110 @@
           "RELATION_GAP",
           "NO_VISUAL",
           "NO_HEADINGS"
+        ],
+        "priority": 3
+      }
+    },
+    {
+      "file": "OTA-LIT-0001-2026-DE.md",
+      "signature": "OTA-LIT-0001-2026-DE",
+      "series": "LIT",
+      "year": "2026",
+      "language": "DE",
+      "canonical": {
+        "title": "OTA-LIT-0001 — Tessán-Vokabular: Kanonische Vektorableitungen",
+        "summary": "OTA-LIT-0001 — Tessán-Vokabular: Kanonische Vektorableitungen",
+        "relatedCount": 0
+      },
+      "extracted": {
+        "title": null,
+        "author": null,
+        "classification": null,
+        "excerpt": "**Reihe:** OTA-LIT (Literarisches Kanon-Lexikon, Baumeister Universe) **Dokument:** LIT-0001 **Version:** 1.0 **Datum:** April 2026 **Status:** Kanonisch **Autor:** Thomas Peter Küper **Lizenz:** Baumeister-Universum Fiction Lizenz (LICENSE-FICTION.txt) · © Thomas Peter Küper 2026 · Alle Rechte vorbehalten"
+      },
+      "titleReview": {
+        "tier": "OK",
+        "candidate": null,
+        "evidence": "canonical-title"
+      },
+      "candidates": {
+        "title": null,
+        "derivedTitle": null,
+        "summary": {
+          "value": "**Reihe:** OTA-LIT (Literarisches Kanon-Lexikon, Baumeister Universe) **Dokument:** LIT-0001 **Version:** 1.0 **Datum:** April 2026 **Status:** Kanonisch **Autor:** Thomas Peter Küper **Lizenz:** Baumeister-Universum Fiction Lizenz (LICENSE-FICTION.txt) · © Thomas Peter Küper 2026 · Alle Rechte vorbehalten",
+          "evidence": "first-substantive-paragraph",
+          "safe": false
+        },
+        "relations": [],
+        "count": 1
+      },
+      "metrics": {
+        "words": 1260,
+        "headings": 11,
+        "images": 0,
+        "tables": 1,
+        "inlineReferenceTargets": 1
+      },
+      "quality": {
+        "substance": "SUBSTANZIELL",
+        "genericTitle": false,
+        "genericSummary": true,
+        "relationGap": false,
+        "flags": [
+          "GENERIC_SUMMARY",
+          "NO_VISUAL"
+        ],
+        "priority": 3
+      }
+    },
+    {
+      "file": "OTA-LIT-0003-2026-DE.md",
+      "signature": "OTA-LIT-0003-2026-DE",
+      "series": "LIT",
+      "year": "2026",
+      "language": "DE",
+      "canonical": {
+        "title": "OTA-LIT-0003 — Mishkenaz Kernset: Zereya-Welt",
+        "summary": "OTA-LIT-0003 — Mishkenaz Kernset: Zereya-Welt",
+        "relatedCount": 0
+      },
+      "extracted": {
+        "title": null,
+        "author": null,
+        "classification": null,
+        "excerpt": "**Reihe:** OTA-LIT (Literarisches Kanon-Lexikon, Baumeister Universe) **Dokument:** LIT-0003 **Version:** 1.0 **Datum:** April 2026 **Status:** Kanonisch **Geltungsbereich:** Miriam-Chroniken, Zereya-Saga (Bände 1–8), Soraya-Erzählungen **Autor:** Thomas Peter Küper **Lizenz:** Baumeister-Universum Fiction Lizenz (LICENSE-FICTION.txt) · © Thomas Peter Küp…"
+      },
+      "titleReview": {
+        "tier": "OK",
+        "candidate": null,
+        "evidence": "canonical-title"
+      },
+      "candidates": {
+        "title": null,
+        "derivedTitle": null,
+        "summary": {
+          "value": "**Reihe:** OTA-LIT (Literarisches Kanon-Lexikon, Baumeister Universe) **Dokument:** LIT-0003 **Version:** 1.0 **Datum:** April 2026 **Status:** Kanonisch **Geltungsbereich:** Miriam-Chroniken, Zereya-Saga (Bände 1–8), Soraya-Erzählungen **Autor:** Thomas Peter Küper **Lizenz:** Baumeister-Universum Fiction Lizenz (LICENSE-FICTION.txt) · © Thomas Peter Küp…",
+          "evidence": "first-substantive-paragraph",
+          "safe": false
+        },
+        "relations": [],
+        "count": 1
+      },
+      "metrics": {
+        "words": 1427,
+        "headings": 17,
+        "images": 0,
+        "tables": 1,
+        "inlineReferenceTargets": 1
+      },
+      "quality": {
+        "substance": "SUBSTANZIELL",
+        "genericTitle": false,
+        "genericSummary": true,
+        "relationGap": false,
+        "flags": [
+          "GENERIC_SUMMARY",
+          "NO_VISUAL"
         ],
         "priority": 3
       }
@@ -23853,21 +23617,9 @@
             "targetStatus": "resolved-base-id",
             "targetClassification": "base-id-resolved",
             "resolvedTarget": "OTA-SCI-0062-2026-DE"
-          },
-          {
-            "target": "OTA-SCI-0064",
-            "evidence": "inline",
-            "safe": false,
-            "contexts": [
-              "inline"
-            ],
-            "targetExists": false,
-            "targetStatus": "self-reference",
-            "targetClassification": "self-reference",
-            "resolvedTarget": "OTA-SCI-0064-2026-DE"
           }
         ],
-        "count": 7
+        "count": 6
       },
       "metrics": {
         "words": 2032,
