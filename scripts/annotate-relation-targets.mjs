@@ -1,56 +1,56 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import { loadReferenceRegistry, classifyTarget, referenceStatus } from './reference-resolution.mjs';
 
 const ROOT = process.cwd();
-const DOCS_DIR = path.join(ROOT, 'src', 'content', 'documents');
 const QUALITY_FILE = path.join(ROOT, 'src', 'data', 'archive-quality.generated.json');
 
-function splitFrontmatter(raw) {
-  const m = raw.match(/^---\s*\r?\n([\s\S]*?)\r?\n---\s*\r?\n?/);
-  return m ? m[1] : '';
-}
-
-function scalar(frontmatter, key) {
-  const m = frontmatter.match(new RegExp(`^${key}:\\s*(.+?)\\s*$`, 'm'));
-  if (!m) return '';
-  const value = m[1].trim();
-  return ((value.startsWith('"') && value.endsWith('"')) || (value.startsWith("'") && value.endsWith("'")))
-    ? value.slice(1, -1)
-    : value;
-}
-
-const files = fs.readdirSync(DOCS_DIR)
-  .filter(name => /\.(?:md|mdx)$/i.test(name))
-  .sort((a, b) => a.localeCompare(b));
-
-const canonicalSignatures = new Set(files.map(file => {
-  const raw = fs.readFileSync(path.join(DOCS_DIR, file), 'utf8');
-  const frontmatter = splitFrontmatter(raw);
-  return scalar(frontmatter, 'signature') || file.replace(/\.(?:md|mdx)$/i, '');
-}));
+// Use the same authoritative resolution scheme as the reference index
+// (scripts/build-reference-index.mjs): exact canonical signatures resolve,
+// and language-suffix shorthands and base identifiers resolve mechanically,
+// while temporal variants, ambiguous bases and genuinely missing targets keep
+// distinct labels instead of being collapsed into a single 'unresolved' bin.
+const registry = loadReferenceRegistry();
 
 const report = JSON.parse(fs.readFileSync(QUALITY_FILE, 'utf8'));
 const candidates = [];
 
 for (const document of report.documents ?? []) {
   for (const relation of document?.candidates?.relations ?? []) {
-    const targetExists = canonicalSignatures.has(relation.target);
-    relation.targetExists = targetExists;
-    relation.targetStatus = targetExists ? 'canonical' : 'unresolved';
+    const analysis = classifyTarget(registry, relation.target);
+    const resolved = analysis.resolvedTarget !== null;
+    relation.targetExists = resolved;
+    relation.targetStatus = referenceStatus(analysis.classification, registry.registryByTarget.get(relation.target));
+    relation.targetClassification = analysis.classification;
+    relation.resolvedTarget = analysis.resolvedTarget;
     candidates.push(relation);
   }
 }
 
+const resolvedCandidates = candidates.filter(r => r.targetExists);
+const openCandidates = candidates.filter(r => !r.targetExists);
+const classificationCounts = Object.fromEntries(
+  [...new Set(candidates.map(r => r.targetClassification))].sort()
+    .map(kind => [kind, candidates.filter(r => r.targetClassification === kind).length])
+);
+
 report.summary ??= {};
-report.summary.canonicalRelationTargets = candidates.filter(r => r.targetExists).length;
-report.summary.unresolvedRelationTargets = candidates.filter(r => !r.targetExists).length;
+report.summary.canonicalRelationTargets = resolvedCandidates.length;
+report.summary.unresolvedRelationTargets = openCandidates.length;
 report.summary.explicitCanonicalRelationCandidates = candidates.filter(r => r.evidence === 'explicit-cross-reference' && r.targetExists).length;
 report.summary.explicitUnresolvedRelationCandidates = candidates.filter(r => r.evidence === 'explicit-cross-reference' && !r.targetExists).length;
+report.summary.relationTargetClassifications = classificationCounts;
 
 fs.writeFileSync(QUALITY_FILE, `${JSON.stringify(report, null, 2)}\n`, 'utf8');
 
 console.log(`Relation target resolution: ${candidates.length} candidates`);
-console.log(`  canonical targets: ${report.summary.canonicalRelationTargets}`);
-console.log(`  unresolved targets: ${report.summary.unresolvedRelationTargets}`);
-console.log(`  explicit cross-reference + canonical target: ${report.summary.explicitCanonicalRelationCandidates}`);
-console.log(`  explicit cross-reference + unresolved target: ${report.summary.explicitUnresolvedRelationCandidates}`);
+console.log(`  resolved targets: ${resolvedCandidates.length}`);
+console.log(`    exact canonical: ${classificationCounts.existing ?? 0}`);
+console.log(`    language-suffix shorthand: ${classificationCounts['shorthand-resolved'] ?? 0}`);
+console.log(`    base identifier: ${classificationCounts['base-id-resolved'] ?? 0}`);
+console.log(`  open targets: ${openCandidates.length}`);
+for (const kind of Object.keys(classificationCounts).filter(kind => !['existing', 'shorthand-resolved', 'base-id-resolved'].includes(kind))) {
+  console.log(`    ${kind}: ${classificationCounts[kind]}`);
+}
+console.log(`  explicit cross-reference + resolved target: ${report.summary.explicitCanonicalRelationCandidates}`);
+console.log(`  explicit cross-reference + open target: ${report.summary.explicitUnresolvedRelationCandidates}`);

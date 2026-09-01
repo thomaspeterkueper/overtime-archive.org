@@ -1,33 +1,22 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import {
+  loadReferenceRegistry,
+  classifyTarget,
+  referenceStatus,
+  walk,
+  frontmatter,
+  field,
+} from './reference-resolution.mjs';
 
 const root = process.cwd();
 const docsDir = path.join(root, 'src', 'content', 'documents');
-const registryPath = path.join(root, 'src', 'data', 'reference-registry.json');
 const outputPath = path.join(root, 'src', 'data', 'internal-references.generated.json');
 
 const signaturePattern = /\bOTA-[A-Z]+-[0-9]{4}(?:-[A-Z0-9]+)*(?:-[0-9]{4}|-[0-9]+BCE)?(?:-[A-Z]{2}|-MULTI)?\b/g;
-const baseIdPattern = /^OTA-[A-Z]+-[0-9]{4}$/;
 
-function walk(dir) {
-  if (!fs.existsSync(dir)) return [];
-  return fs.readdirSync(dir, { withFileTypes: true }).flatMap(entry => {
-    const full = path.join(dir, entry.name);
-    return entry.isDirectory() ? walk(full) : [full];
-  });
-}
-
-function frontmatter(text) {
-  const m = text.match(/^---\s*\n([\s\S]*?)\n---/);
-  return m?.[1] ?? '';
-}
-
-function field(fm, key) {
-  const re = new RegExp(`^${key}:\\s*(.+)$`, 'm');
-  const m = fm.match(re);
-  if (!m) return undefined;
-  return m[1].trim().replace(/^['"]|['"]$/g, '');
-}
+const registry = loadReferenceRegistry();
+const { documents, bySignature, registryByTarget } = registry;
 
 function contextFor(text, index, length) {
   const start = Math.max(0, index - 110);
@@ -35,60 +24,7 @@ function contextFor(text, index, length) {
   return text.slice(start, end).replace(/\s+/g, ' ').trim();
 }
 
-function baseSignature(signature) {
-  const parts = signature.split('-');
-  if (parts.length <= 3) return signature;
-  const language = parts.at(-1);
-  const temporal = language && /^(?:DE|EN|MULTI)$/.test(language) ? parts.at(-2) : parts.at(-1);
-  const hasLanguage = /^(?:DE|EN|MULTI)$/.test(language ?? '');
-  if (/^(?:[0-9]{4}|[0-9]+BCE)$/.test(temporal ?? '')) {
-    return parts.slice(0, hasLanguage ? -2 : -1).join('-');
-  }
-  return signature;
-}
-
-function baseId(signature) {
-  return signature.match(/^(OTA-[A-Z]+-[0-9]{4})(?:-|$)/)?.[1] ?? null;
-}
-
-function stripLanguage(signature) {
-  return signature.replace(/-(?:DE|EN|MULTI)$/, '');
-}
-
 const files = walk(docsDir).filter(file => /\.(md|mdx)$/i.test(file));
-const documents = [];
-const bySignature = new Map();
-const byBaseSignature = new Map();
-const byBaseId = new Map();
-
-for (const file of files) {
-  const text = fs.readFileSync(file, 'utf8');
-  const fm = frontmatter(text);
-  const signature = field(fm, 'signature');
-  if (!signature) continue;
-  const doc = {
-    signature,
-    title: field(fm, 'title') ?? signature,
-    summary: field(fm, 'summary') ?? '',
-    file: path.relative(root, file).replaceAll('\\', '/'),
-  };
-  documents.push(doc);
-  bySignature.set(signature, doc);
-
-  const base = baseSignature(signature);
-  if (!byBaseSignature.has(base)) byBaseSignature.set(base, []);
-  byBaseSignature.get(base).push(doc);
-
-  const id = baseId(signature);
-  if (id) {
-    if (!byBaseId.has(id)) byBaseId.set(id, []);
-    byBaseId.get(id).push(doc);
-  }
-}
-
-let registry = [];
-if (fs.existsSync(registryPath)) registry = JSON.parse(fs.readFileSync(registryPath, 'utf8'));
-const registryByTarget = new Map(registry.map(entry => [entry.target, entry]));
 
 const refs = new Map();
 for (const file of files) {
@@ -112,102 +48,12 @@ for (const ref of refs.values()) {
   sourceCountByTarget.get(ref.target).add(ref.source);
 }
 
-function classify(target, reg) {
-  if (bySignature.has(target)) {
-    return { classification: 'existing', candidates: [], resolvedTarget: target };
-  }
-  if (reg?.status === 'planned') return { classification: 'planned', candidates: [], resolvedTarget: null };
-  if (reg?.status === 'uncertain') return { classification: 'uncertain', candidates: [], resolvedTarget: null };
-
-  // A reference that is otherwise a complete signature but omits only the
-  // language suffix can be resolved mechanically when exactly one concrete
-  // language version exists. This is deliberately dynamic: if a second
-  // language version appears later, the shorthand becomes ambiguous again.
-  const languageExtensions = ['DE', 'EN', 'MULTI']
-    .map(language => bySignature.get(`${target}-${language}`))
-    .filter(Boolean);
-  if (languageExtensions.length === 1) {
-    return {
-      classification: 'shorthand-resolved',
-      candidates: languageExtensions,
-      resolvedTarget: languageExtensions[0].signature,
-    };
-  }
-  if (languageExtensions.length > 1) {
-    return {
-      classification: 'language-ambiguous',
-      candidates: languageExtensions,
-      resolvedTarget: null,
-    };
-  }
-
-  // Bare OTA series/number references (for example OTA-SCI-0045) are common
-  // in the archive. Match them against the stable series/number prefix, not
-  // against temporal suffix stripping: the four-digit series number itself
-  // must never be mistaken for a year.
-  if (baseIdPattern.test(target)) {
-    const idCandidates = (byBaseId.get(target) ?? [])
-      .filter(doc => doc.signature !== target)
-      .map(doc => ({ signature: doc.signature, title: doc.title, file: doc.file }));
-    if (idCandidates.length === 1) {
-      return {
-        classification: 'base-id-resolved',
-        candidates: idCandidates,
-        resolvedTarget: idCandidates[0].signature,
-      };
-    }
-    if (idCandidates.length > 1) {
-      return {
-        classification: 'base-id-ambiguous',
-        candidates: idCandidates,
-        resolvedTarget: null,
-      };
-    }
-  }
-
-  const candidates = (byBaseSignature.get(baseSignature(target)) ?? [])
-    .filter(doc => doc.signature !== target)
-    .map(doc => ({ signature: doc.signature, title: doc.title, file: doc.file }));
-
-  if (candidates.length) {
-    const sameTemporalDifferentLanguage = candidates.filter(candidate =>
-      stripLanguage(candidate.signature) === stripLanguage(target)
-    );
-    if (sameTemporalDifferentLanguage.length) {
-      return {
-        classification: 'translation-missing',
-        candidates,
-        resolvedTarget: null,
-      };
-    }
-
-    const targetHasTemporalMarker = /-(?:[0-9]{4}|[0-9]+BCE)-(?:DE|EN|MULTI)$/.test(target);
-    if (targetHasTemporalMarker) {
-      return {
-        classification: candidates.length === 1 ? 'temporal-mismatch' : 'temporal-ambiguous',
-        candidates,
-        resolvedTarget: null,
-      };
-    }
-
-    return {
-      classification: candidates.length === 1 ? 'underspecified' : 'ambiguous-base',
-      candidates,
-      resolvedTarget: null,
-    };
-  }
-
-  return { classification: 'missing', candidates: [], resolvedTarget: null };
-}
-
 const references = [...refs.values()].map(ref => {
   const reg = registryByTarget.get(ref.target);
-  const analysis = classify(ref.target, reg);
+  const analysis = classifyTarget(registry, ref.target);
   const resolvedDoc = analysis.resolvedTarget ? bySignature.get(analysis.resolvedTarget) : undefined;
   const sourceCount = sourceCountByTarget.get(ref.target)?.size ?? 0;
-  const status = resolvedDoc
-    ? (analysis.classification === 'existing' ? 'resolved' : analysis.classification === 'base-id-resolved' ? 'resolved-base-id' : 'resolved-shorthand')
-    : (reg?.status ?? 'unresolved');
+  const status = referenceStatus(analysis.classification, reg);
 
   return {
     ...ref,
