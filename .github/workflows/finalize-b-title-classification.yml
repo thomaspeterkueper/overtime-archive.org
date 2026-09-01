@@ -61,6 +61,7 @@ jobs:
           git add scripts/analyze-archive-content.mjs
           git diff --cached --quiet && exit 0
           git commit -m 'Finalize remaining B-title classification'
+          git reset --hard HEAD
           git clean -fd src/data public >/dev/null 2>&1 || true
           git pull --rebase origin master
           git push origin HEAD:master
