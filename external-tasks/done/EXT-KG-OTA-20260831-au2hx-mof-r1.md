@@ -5,7 +5,7 @@ status: done
 source: KG
 target: OTA
 created: 2026-08-31
-resolved: 2026-09-01
+completed: 2026-09-01
 requested_by: research-validation-loop
 priority: high
 affects: [KG, OTA]
