@@ -37,18 +37,16 @@ jobs:
               raise SystemExit(f'expected structural block once, got {s.count(old)}')
           s=s.replace(old,new)
           old2=(
-              "  if (genericTitle) {\n"
-              "    if (derivedTitle?.safe) titleReviewTier = 'A';\n"
-              "    else if (derivedTitle?.value) titleReviewTier = 'B';\n"
-              "    else titleReviewTier = 'C';\n"
-              "  }"
+              "  let titleReview={tier:'OK',candidate:null,evidence:'canonical-title'};\n"
+              "  if(genericTitle&&safeTitle)titleReview={tier:'A',candidate:safeTitle,evidence:'explicit-labeled-field'};\n"
+              "  else if(genericTitle&&derivedTitle)titleReview={tier:'B',candidate:derivedTitle,evidence:'first-non-structural-heading'};\n"
+              "  else if(genericTitle)titleReview={tier:'C',candidate:null,evidence:'editorial-decision-required'};"
           )
           new2=(
-              "  if (genericTitle) {\n"
-              "    if (derivedTitle?.safe) titleReviewTier = 'A';\n"
-              "    else if (derivedTitle?.value && signature !== 'OTA-INDEX-RKF-2026-DE') titleReviewTier = 'B';\n"
-              "    else titleReviewTier = 'C';\n"
-              "  }"
+              "  let titleReview={tier:'OK',candidate:null,evidence:'canonical-title'};\n"
+              "  if(genericTitle&&safeTitle)titleReview={tier:'A',candidate:safeTitle,evidence:'explicit-labeled-field'};\n"
+              "  else if(genericTitle&&derivedTitle&&signature!=='OTA-INDEX-RKF-2026-DE')titleReview={tier:'B',candidate:derivedTitle,evidence:'first-non-structural-heading'};\n"
+              "  else if(genericTitle)titleReview={tier:'C',candidate:null,evidence:'editorial-decision-required'};"
           )
           if s.count(old2)!=1:
               raise SystemExit(f'expected tier block once, got {s.count(old2)}')
