@@ -12,19 +12,13 @@ OTA übernimmt technische Inhalte wieder, wenn KUEPER Engineering einen belastba
 
 PR #43 (`ASCE 0.3P: Packaging- und Architekturstudie`) wurde deshalb am 2026-09-05 ohne Merge geschlossen. Der Arbeitsstand ist im Engineering-Repository gesichert.
 
-## 2. Offene Pull Requests
+## 2. Pull-Request-Status
 
-### PR #25 — KG Legal Build Sync
+### PR #25 — KG Legal Build Sync — ERLEDIGT
 
-**Priorität: P0 / zuerst abschließen.**
+**Status:** am 2026-09-05 nach erfolgreichem `Validate OTA`-Workflow gemergt.
 
-Der PR implementiert die zentrale Legal-SSOT-Regel: Impressum, Datenschutz und Nutzungsbedingungen werden buildseitig aus dem KUEPER Knowledge Graph aufgelöst. Der PR ist mergeable; laut PR-Beschreibung fehlt vor Merge im Wesentlichen noch der Abschlusscheck für Build, interne Links und Footer-Navigation.
-
-Aktion:
-
-1. CI/Preview und Linkprüfung verifizieren.
-2. Falls grün: mergen.
-3. OTA-seitigen Rückrequest `KG-REQ-20260830-ota-legal-disclosures.md` separat offen lassen, bis KG antwortet.
+Die zentrale Legal-SSOT-Regel ist damit produktiv im Master verankert: Impressum, Datenschutz und Nutzungsbedingungen werden buildseitig aus dem KUEPER Knowledge Graph aufgelöst. Der OTA-seitige Rückrequest `KG-REQ-20260830-ota-legal-disclosures.md` bleibt separat offen, bis der KG darauf antwortet.
 
 ### PR #24 — Generation-Mars-Biografien
 
@@ -46,7 +40,7 @@ Der Draft verbessert die Klassifikation von Relations-Kandidaten in explizite Qu
 
 Aktion:
 
-1. Nach P0/P1 auf aktuellen Master rebasen bzw. konfliktfrei neu aufsetzen.
+1. Nach P1 auf aktuellen Master rebasen bzw. konfliktfrei neu aufsetzen.
 2. `npm run verify` auf dem aktuellen Stand ausführen.
 3. Danach als Qualitätswerkzeug mergen, nicht als Kanonänderung.
 
@@ -103,16 +97,15 @@ Die redaktionelle Darstellungsrichtung bleibt:
 - Metadaten sichtbar, aber nicht dominierend,
 - Archivcharakter statt generischer Datenbankoberfläche.
 
-Vor größeren visuellen Umbauten werden jedoch zuerst Legal-Integration, offene Kanonkonflikte und Request-Triage bereinigt. Darstellung darf nicht vor Daten-/Kanonqualität priorisiert werden.
+Vor größeren visuellen Umbauten werden jedoch zuerst offene Kanonkonflikte und Request-Triage bereinigt. Darstellung darf nicht vor Daten-/Kanonqualität priorisiert werden.
 
 ## 7. Arbeitsreihenfolge ab jetzt
 
-1. **PR #25 final prüfen und abschließen.**
-2. **PR #24 fachlich reconciliieren und schließen.**
-3. **KG→OTA Evidence-Requests vom 31.08. als Batch triagieren; fehlerkritische Dokumente zuerst.**
-4. **Drive-Eingang gegen OTA/KG abgleichen und anschließend nach `ABGEGLICHEN` verschieben.**
-5. **PR #6 auf aktuellen Master bringen und Qualitätsreport produktiv machen.**
-6. **Danach Website-/Archivdarstellung weiter verfeinern.**
-7. **Neue Engineering-Rückgaben nur über explizite Canonicalization-Requests aufnehmen.**
+1. **PR #24 fachlich reconciliieren und schließen.**
+2. **KG→OTA Evidence-Requests vom 31.08. als Batch triagieren; fehlerkritische Dokumente zuerst.**
+3. **Drive-Eingang gegen OTA/KG abgleichen und anschließend nach `ABGEGLICHEN` verschieben.**
+4. **PR #6 auf aktuellen Master bringen und Qualitätsreport produktiv machen.**
+5. **Danach Website-/Archivdarstellung weiter verfeinern.**
+6. **Neue Engineering-Rückgaben nur über explizite Canonicalization-Requests aufnehmen.**
 
 Diese Reihenfolge gilt, bis ein neuer P0-Kanon- oder Publikationsblocker eintrifft.
