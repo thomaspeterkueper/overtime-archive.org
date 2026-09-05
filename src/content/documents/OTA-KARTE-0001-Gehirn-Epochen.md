@@ -1,6 +1,6 @@
 ---
 signature: "OTA-KARTE-0001-Gehirn-Epochen"
-title: "OTA-KARTE-0001-Gehirn-Epochen"
+title: "DIE FÜNF GEHIRN-EPOCHEN — Referenzmodul"
 series: "KARTE"
 seriesNumber: 1
 year: 2026

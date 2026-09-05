@@ -86,6 +86,13 @@ function isStructuralHeading(v){
     || /^(?:TEIL|SECTION|KAPITEL|CHAPTER|MODUL|PROTOKOLL)\s+[A-Z0-9IVX]+\s*[:—–-]/i.test(s)
     || /^(?:TEIL|SECTION|KAPITEL|CHAPTER|MODUL|PROTOKOLL)\s+[A-Z0-9IVX]+$/i.test(s);
 }
+const reviewedAmbiguousTitleSignatures = new Set([
+  'OTA-SCI-0030-2090-DE',
+  'OTA-CUL-0013-MULTI-DE',
+  'OTA-FND-0012-2026-DE',
+  'OTA-SCI-0026-2048-DE',
+]);
+
 function firstHeadingCandidate(body,sig){
   for(const m of body.matchAll(/^#{1,3}\s+(.+)$/gm)){
     const v=validTitleCandidate(m[1],sig);
@@ -114,7 +121,7 @@ const documents=files.map(file=>{
   const derivedTitle=genericTitle&&!safeTitle?firstHeadingCandidate(body,signature):null;
   let titleReview={tier:'OK',candidate:null,evidence:'canonical-title'};
   if(genericTitle&&safeTitle)titleReview={tier:'A',candidate:safeTitle,evidence:'explicit-labeled-field'};
-  else if(genericTitle&&derivedTitle&&signature!=='OTA-INDEX-RKF-2026-DE')titleReview={tier:'B',candidate:derivedTitle,evidence:'first-non-structural-heading'};
+  else if(genericTitle&&derivedTitle&&signature!=='OTA-INDEX-RKF-2026-DE'&&!reviewedAmbiguousTitleSignatures.has(signature))titleReview={tier:'B',candidate:derivedTitle,evidence:'first-non-structural-heading'};
   else if(genericTitle)titleReview={tier:'C',candidate:null,evidence:'editorial-decision-required'};
 
   const safeSummary=genericSummary?summaryCandidate(excerpt):null;
