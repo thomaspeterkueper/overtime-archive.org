@@ -8,6 +8,7 @@ on:
 
 permissions:
   contents: write
+  actions: write
 
 jobs:
   validate-ota:
@@ -32,6 +33,28 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Normalize canonical OTA system metadata
+        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          old = "  system: SYS:KUEPER:ota"
+          new = "  system: SYS:OTA:overtimearchive"
+          changed = 0
+
+          for path in Path("src/content/documents").glob("*.md"):
+              text = path.read_text(encoding="utf-8")
+              if old not in text:
+                  continue
+              path.write_text(text.replace(old, new), encoding="utf-8")
+              changed += 1
+              print(f"Normalized kg.system: {path}")
+
+          print(f"Normalized {changed} document(s).")
+          PY
+
       - name: Run OTA metadata validator
         run: python tools/validate_ota_metadata.py .
 
@@ -48,18 +71,27 @@ jobs:
           python tools/validate_ota_metadata.py .
           npm run verify
 
-      - name: Commit safe editorial fixes
+      - name: Commit safe canonical metadata fixes
+        id: commit-fixes
         if: github.event_name == 'push' && github.ref == 'refs/heads/master'
         run: |
           if git diff --quiet -- src/content/documents; then
-            echo "No safe title changes to commit."
+            echo "No safe canonical metadata changes to commit."
+            echo "committed=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add src/content/documents
-          git commit -m "Apply source-backed OTA document titles"
+          git commit -m "Apply safe OTA canonical metadata fixes"
           git push
+          echo "committed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Refresh Google Drive after bot commit
+        if: steps.commit-fixes.outputs.committed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run sync-google-drive.yml --ref master
 
       - name: Publish archive quality report
         if: always()
