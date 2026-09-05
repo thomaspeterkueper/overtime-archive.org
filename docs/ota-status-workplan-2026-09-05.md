@@ -12,6 +12,25 @@ OTA übernimmt technische Inhalte wieder, wenn KUEPER Engineering einen belastba
 
 PR #43 (`ASCE 0.3P: Packaging- und Architekturstudie`) wurde deshalb am 2026-09-05 ohne Merge geschlossen. Der Arbeitsstand ist im Engineering-Repository gesichert.
 
+### Engineering-Eskalationsregel
+
+Wenn bei OTA-Kanon-, Evidence- oder Archivarbeit ein Problem nicht mehr nur redaktionell oder evidenziell ist, sondern eine echte technische Auslegung, Massen-/Energiebilanz, Systemdimensionierung, Trade Study, Performance-Rechnung oder Designentscheidung erfordert, erzeugt OTA einen expliziten Request an `thomaspeterkueper/kueper-engineering`.
+
+Jeder solche Request muss mindestens enthalten:
+
+- die betroffenen OTA-Signaturen und, soweit vorhanden, KG-/Research-IDs,
+- den dokumentierten technischen Konflikt bzw. die offene Designfrage,
+- die unveränderlichen Weltsetzungen und die noch offenen Parameter,
+- konkrete Engineering-Deliverables und Akzeptanzkriterien,
+- die Source-of-Truth-Grenze: Engineering entwickelt, OTA kanonisiert,
+- die Pflicht zur Rückgabe über einen Canonicalization-/Decision-Request statt direkter Änderung des OTA-Kanons.
+
+Am 2026-09-05 wurden aus der laufenden Evidence-Arbeit bereits drei Engineering-Projekte abgeleitet:
+
+- `EXT-OTA-ENG-20260905-cygnus-mass-closure.md` — Massen-/Treibstoff-/Delta-v-Schließung für `OTA-TEC-0082-2026-DE` / `OTA-TEC-0025-2050-DE`.
+- `EXT-OTA-ENG-20260905-rl25-propulsion-closure.md` — technische Schließung der RL-25-Klasse aus `OTA-TEC-0085-2026-DE` mit Kopplung an CYGNUS.
+- `EXT-OTA-ENG-20260905-kite-eclss-survival-architecture.md` — quantitative ECLSS-/Survival-Architektur für `OTA-TEC-0019-2091-DE` / `OTA-TEC-0016-2063-DE`.
+
 ## 2. Pull-Request-Status
 
 ### PR #25 — KG Legal Build Sync — ERLEDIGT
@@ -79,7 +98,7 @@ Neue Dateien werden erst nach dokumentiertem OTA/KG-Abgleich nach `ABGEGLICHEN` 
 
 - **Kanonkonflikte:** immer gegen die zuständige Source of Truth reconciliieren; keine aktiven Dubletten erzeugen.
 - **Evidence Alignment:** neue Forschung/KG-Evidenz darf epistemische Marker und Begründungen präzisieren, aber historische oder fiktionale Aussagen nicht stillschweigend umschreiben.
-- **Engineering vs. Canon:** technische Entwicklungsstände bleiben außerhalb OTA, bis eine formale Übergabe erfolgt.
+- **Engineering vs. Canon:** technische Entwicklungsstände bleiben außerhalb OTA, bis eine formale Übergabe erfolgt. Konkrete Engineering-Probleme werden aktiv an `kueper-engineering` eskaliert.
 - **Relationsqualität:** Referenznennungen sind nicht automatisch kanonische `relatedDocuments`.
 
 ## 6. Website / Archivdarstellung
@@ -92,9 +111,10 @@ Größere visuelle Umbauten folgen erst nach Request-/Kanonbereinigung.
 
 1. **KG→OTA Evidence-Requests vom 31.08. als Batch triagieren; fehlerkritische Dokumente zuerst.**
 2. **Den priorisierten Evidence-Batch umsetzen und erledigte Requests sauber schließen/verschieben.**
-3. **Drive-Eingang gegen OTA/KG abgleichen und anschließend nach `ABGEGLICHEN` verschieben.**
-4. **PR #6 auf aktuellen Master bringen und Qualitätsreport produktiv machen.**
-5. **Danach Website-/Archivdarstellung weiter verfeinern.**
-6. **Neue Engineering-Rückgaben nur über explizite Canonicalization-Requests aufnehmen.**
+3. **Bei technisch offenen Entwurfsfragen Engineering-Requests mit OTA-/KG-/Research-Verknüpfung erzeugen.**
+4. **Drive-Eingang gegen OTA/KG abgleichen und anschließend nach `ABGEGLICHEN` verschieben.**
+5. **PR #6 auf aktuellen Master bringen und Qualitätsreport produktiv machen.**
+6. **Danach Website-/Archivdarstellung weiter verfeinern.**
+7. **Neue Engineering-Rückgaben nur über explizite Canonicalization-Requests aufnehmen.**
 
 Diese Reihenfolge gilt, bis ein neuer P0-Kanon- oder Publikationsblocker eintrifft.
