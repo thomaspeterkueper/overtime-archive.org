@@ -11,6 +11,9 @@ on:
     - cron: "20 3 * * *"
   workflow_dispatch:
 
+# GitHub Actions commits made with GITHUB_TOKEN do not cascade into new
+# workflow runs. A workflow-only maintenance commit can therefore be used to
+# trigger an immediate Drive refresh after such a canonical bot commit.
 permissions:
   contents: read
 
