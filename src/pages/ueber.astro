@@ -1,80 +1,29 @@
 ---
 import LayoutBase from '../layouts/LayoutBase.astro';
 import { getCollection } from 'astro:content';
-
 const allDocs = await getCollection('documents');
 const seriesCount = new Set(allDocs.map(d => d.data.series)).size;
 const years = allDocs.map(d => d.data.year);
-const minYear = Math.min(...years);
-const maxYear = Math.max(...years);
+const minYear = Math.min(...years); const maxYear = Math.max(...years);
 ---
-
 <LayoutBase title="Über das Archiv">
-  <div style="max-width:var(--content-width);margin:3rem auto;padding:0 2rem">
-
-    <div style="font-family:var(--font-mono);font-size:0.62rem;color:var(--rust);letter-spacing:0.2em;margin-bottom:1rem">
-      OTA-META · ÜBER DAS ARCHIV
-    </div>
-
-    <h1 style="font-family:var(--font-display);font-size:2rem;color:var(--ink);font-weight:700;margin-bottom:2rem">
-      Das OverTime Archive
-    </h1>
-
-    <div style="background:var(--paper);padding:2.5rem;box-shadow:var(--shadow-paper);font-family:var(--font-serif);font-size:1rem;line-height:1.85">
-
-      <p>
-        Das <strong>OverTime Archive</strong> ist ein transmediales Wissenssystem. Es dokumentiert
-        wissenschaftliche Grundlagen, historische Rekonstruktionen, philosophische Fundamente
-        und narrative Strukturen — epistemisch markiert und archivarisch geordnet.
-        Die Zeitspanne reicht von ~60.000 BCE bis 2500 CE.
-      </p>
-
-      <p style="margin-top:1.5rem">
-        Jedes Dokument trägt explizite epistemologische Marker:
-      </p>
-
-      <div style="margin:1.5rem 0;font-family:var(--font-mono);font-size:0.78rem;display:grid;gap:0.5rem">
-        {[
-          { tag: '[R]', color: '#4A7C59', label: 'Real — empirisch belegt, peer-reviewed' },
-          { tag: '[T]', color: '#888', label: 'Theoretisch — wissenschaftlich plausibel, nicht abschließend bestätigt' },
-          { tag: '[H]', color: '#C8923A', label: 'Hypothese — wissenschaftlich formulierbar, offen' },
-          { tag: '[S]', color: '#8B4513', label: 'Spekulativ — konzeptionell möglich, keine Evidenz' },
-          { tag: '[F]', color: '#B0302A', label: 'Fiktiv — kanonisches Element des Erzähluniversums' },
-          { tag: '[W]', color: '#2C5F8A', label: 'Werk-Setzung — Autorenscheidung, kanonisch' },
-          { tag: '[I]', color: '#666', label: 'Interpretativ — Schlussfolgerung aus vorhandenem Material' },
-        ].map(item => (
-          <div style="display:flex;gap:1rem;align-items:baseline">
-            <span style={`color:${item.color};font-weight:500;min-width:3.5rem`}>{item.tag}</span>
-            <span style="color:var(--ink-light);font-size:0.72rem">{item.label}</span>
-          </div>
-        ))}
-      </div>
-
-      <p style="margin-top:1.5rem">
-        Das Archiv ist gleichzeitig eine reale Wissensinfrastruktur und eine fiktive Institution.
-        In der Erzählung übernimmt das <em>OverTime Institute</em> das Archiv um das Jahr 2050.
-        In der Realität ist es das wissenschaftliche und narrative Fundament aller literarischen
-        Projekte von Thomas Peter Küper.
-      </p>
-
-      <div style="margin-top:2rem;padding:1.5rem;background:var(--paper-aged);font-family:var(--font-mono);font-size:0.7rem;border-left:3px solid var(--rust)">
-        <div style="color:var(--rust);margin-bottom:0.75rem;letter-spacing:0.1em">ARCHIVSTATISTIK</div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.5rem;color:var(--ink)">
-          <div>Dokumente (online): <span style="color:var(--rust)">{allDocs.length}</span></div>
-          <div>Serien: <span style="color:var(--rust)">{seriesCount}</span></div>
-          <div>Ältestes Dokument: <span style="color:var(--rust)">{minYear} CE</span></div>
-          <div>Neuestes Dokument: <span style="color:var(--rust)">{maxYear} CE</span></div>
-          <div>Gesamt im Archiv: <span style="color:var(--rust)">~237</span></div>
-          <div>Zeitspanne: <span style="color:var(--rust)">~62.500 Jahre</span></div>
-        </div>
-      </div>
-
-      <p style="margin-top:2rem;font-size:0.9rem;color:var(--ink-light)">
-        Das Archiv ist kein abgeschlossenes Werk. Es wächst mit jedem Dokument —
-        und mit jedem, das noch nicht geschrieben ist.
-      </p>
-
-      <div style="text-align:center;margin-top:2rem;font-size:1.2rem;color:var(--rust)">ᐃ</div>
+  <div class="about-shell">
+    <div class="about-kicker">OTA-META · ÜBER DAS ARCHIV</div>
+    <h1>Das OverTime Archive</h1>
+    <div class="about-panel">
+      <p>Das <strong>OverTime Archive</strong> ist ein transmediales Wissenssystem. Es dokumentiert wissenschaftliche Grundlagen, historische Rekonstruktionen, philosophische Fundamente und narrative Strukturen — epistemisch markiert und archivarisch geordnet. Die Zeitspanne reicht von ~60.000 BCE bis 2500 CE.</p>
+      <section class="institution-note" aria-labelledby="institution-title">
+        <span class="institution-code">IN-WORLD CURATORIAL LAYER</span>
+        <h2 id="institution-title">Solar Science Foundation</h2>
+        <p>Innerhalb der dargestellten Archivwelt wird das OverTime Archive von der <strong>Solar Science Foundation (SSF)</strong> kuratiert. „Kuratiert“ bezeichnet dabei die institutionelle Erschließung, Klassifikation, Bewahrung und öffentliche Vermittlung der Bestände — nicht deren ursprüngliche Urheberschaft.</p>
+        <p class="reality-note"><strong>Reale Ebene:</strong> Das OverTime Archive und die Solar Science Foundation sind Bestandteile eines transmedialen Projekts von Thomas Peter Küper. Die SSF ist in diesem Kontext eine fiktive Institution.</p>
+      </section>
+      <p>Jedes Dokument trägt explizite epistemologische Marker. Sie trennen reale Quellenlage, Theorie, Hypothese, Spekulation, Fiktion, Werk-Setzung und Interpretation voneinander.</p>
+      <div class="stats"><span>ARCHIVSTATISTIK</span><div><b>{allDocs.length}</b> Dokumente online · <b>{seriesCount}</b> Serien · {minYear}–{maxYear} CE · ~62.500 Jahre Zeitspanne</div></div>
+      <p class="closing">Das Archiv ist kein abgeschlossenes Werk. Es wächst mit jedem Dokument — und mit jedem, das noch nicht geschrieben ist.</p>
     </div>
   </div>
 </LayoutBase>
+<style>
+.about-shell{max-width:var(--content-width);margin:2.5rem auto;padding:0 2rem 5rem}.about-kicker{font-family:var(--font-mono);font-size:.6rem;color:var(--blue);letter-spacing:.18em;margin-bottom:.8rem}.about-shell h1{font-family:var(--font-display);font-size:2rem;color:var(--ink);margin-bottom:1.5rem}.about-panel{background:var(--paper);border:1px solid var(--paper-dark);padding:2.25rem;font-size:1rem;line-height:1.8}.about-panel p+p{margin-top:1.2rem}.institution-note{margin:1.8rem 0;padding:1.4rem 1.5rem;background:var(--void);border-left:2px solid var(--blue)}.institution-code{font-family:var(--font-mono);font-size:.54rem;letter-spacing:.15em;color:var(--blue)}.institution-note h2{font-family:var(--font-display);font-size:1.25rem;margin:.3rem 0 .7rem}.reality-note{font-size:.9rem;color:var(--ink-light);padding-top:1rem;border-top:1px solid var(--paper-dark)}.stats{margin-top:2rem;padding:1rem 1.2rem;background:var(--void);font-family:var(--font-mono);font-size:.68rem;border:1px solid var(--paper-dark)}.stats>span{display:block;color:var(--blue);letter-spacing:.12em;margin-bottom:.45rem}.stats b{color:var(--blue);font-weight:500}.closing{margin-top:2rem;color:var(--ink-light)}
+</style>
