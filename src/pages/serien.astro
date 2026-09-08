@@ -5,29 +5,38 @@ import { getCollection } from 'astro:content';
 const allDocs = await getCollection('documents');
 const seriesData: Record<string, { docs: typeof allDocs, desc: string }> = {};
 const seriesDesc: Record<string, string> = {
-  SCI: 'Wissenschaftliche Grundlagen — peer-reviewed, empirisch verankert',
-  TEC: 'Technische Dokumentation — Systeme, Verfahren, Konstruktionsprinzipien',
+  SCI: 'Wissenschaftliche Grundlagen und referenzierte Forschungsstände',
+  TEC: 'Technische Dokumentation — Systeme, Verfahren und Konstruktionsprinzipien',
   FND: 'Philosophische und konzeptuelle Fundamente',
   BIO: 'Personendossiers — Biografien realer und fiktiver Personen',
   HIS: 'Historische Rekonstruktionen und Epochenanalysen',
-  RED: 'Redacted — Zugangsstufe 3+', ARC: 'Archivrichtlinien und Governance',
-  NAR: 'Narrative Dokumente — Erzähltexte und Szenen', ORG: 'Organisationen und Institutionen',
-  OBS: 'Beobachtungen und Feldberichte', LSC: 'Leitmotiv-Schwefel-Kette — thematische Verbindungen',
-  MON: 'Monitor-Dokumente — laufende Beobachtungen', KOM: 'Kommunikationsdokumente',
-  CUL: 'Kulturdokumente', LIM: 'Grenzfälle und Ausnahmedokumente',
+  RED: 'Dokumente mit eingeschränkter Zugangsstufe',
+  ARC: 'Archivrichtlinien und Governance',
+  NAR: 'Narrative Dokumente — Erzähltexte und Szenen',
+  ORG: 'Organisationen und Institutionen',
+  OBS: 'Beobachtungen und Feldberichte',
+  LSC: 'Thematische Verbindungen und Leitmotive',
+  MON: 'Monitor-Dokumente — laufende Beobachtungen',
+  KOM: 'Kommunikationsdokumente',
+  CUL: 'Kulturelle Objekte, Praktiken und Kontexte',
+  LIM: 'Grenzfälle und Ausnahmedokumente',
+  LIT: 'Literarische und werkbezogene Dokumente',
+  KARTE: 'Kartierungen, Netzwerke und strukturierte Übersichten',
+  META: 'Metadokumente zur Struktur und Methode des Archivs',
+  ART: 'Artefakt- und Objekt-Dossiers',
 };
 for (const doc of allDocs) {
-  if (!seriesData[doc.data.series]) seriesData[doc.data.series] = { docs: [], desc: seriesDesc[doc.data.series] ?? '' };
+  if (!seriesData[doc.data.series]) seriesData[doc.data.series] = { docs: [], desc: seriesDesc[doc.data.series] ?? 'Archivserie' };
   seriesData[doc.data.series].docs.push(doc);
 }
-const seriesSorted = Object.entries(seriesData).sort((a, b) => b[1].docs.length - a[1].docs.length);
+const seriesSorted = Object.entries(seriesData).sort((a, b) => b[1].docs.length - a[1].docs.length || a[0].localeCompare(b[0]));
 ---
-<LayoutBase title="Serien — The Overtime Archive">
+<LayoutBase title="Serien">
   <section class="series-page">
     <header class="series-page-header">
       <div class="series-eyebrow">OTA · DOKUMENTENSERIEN</div>
       <h1>Serien</h1>
-      <p class="series-intro">Das Archiv gliedert sich in thematische Dokumentserien. Jede Serie trägt einen Typcode, der als fester Bestandteil der Dokumentensignatur die archivische Adresse bildet.</p>
+      <p class="series-intro">Das Archiv gliedert sich in Dokumentserien. Der Seriencode ist Teil der archivischen Adresse; die epistemische Einordnung erfolgt auf Dokumentebene.</p>
       <div class="signature-schema" aria-label="Schema einer OTA-Dokumentensignatur">
         <span class="signature-schema-label">SIGNATURSCHEMA</span>
         <code>OTA-&#123;SERIE&#125;-&#123;NNNN&#125;-&#123;ZEITMARKER&#125;-&#123;SPRACHE&#125;</code>
@@ -38,7 +47,7 @@ const seriesSorted = Object.entries(seriesData).sort((a, b) => b[1].docs.length 
       {seriesSorted.map(([code, data]) => (
         <article class="series-card">
           <div class="series-card-head"><span class="series-code">OTA-{code}</span><span class="series-count">{data.docs.length} Dokument{data.docs.length !== 1 ? 'e' : ''}</span></div>
-          <div class="series-description">{data.desc || code}</div>
+          <div class="series-description">{data.desc}</div>
           <div class="series-documents" aria-label={`Dokumente der Serie OTA-${code}`}>
             {data.docs.slice(0, 6).map(doc => <a class="document-signature" href={`/dokument/${doc.id}`}>{doc.data.signature}</a>)}
             {data.docs.length > 6 && <a class="document-signature document-signature-more" href={`/katalog?serie=${code}`}>+{data.docs.length - 6} weitere</a>}
@@ -50,5 +59,5 @@ const seriesSorted = Object.entries(seriesData).sort((a, b) => b[1].docs.length 
   </section>
 </LayoutBase>
 <style>
-.series-page{width:min(920px,calc(100% - 3rem));margin:0 auto;padding:2rem 0 3.5rem}.series-page-header{max-width:760px;margin-bottom:2rem}.series-eyebrow{font-family:var(--font-mono);font-size:.62rem;color:var(--rust);letter-spacing:.2em;margin-bottom:.65rem}.series-page h1{font-family:var(--font-display);font-size:clamp(2rem,4vw,2.6rem);line-height:1.08;color:var(--ink);font-weight:700;margin:0 0 .65rem}.series-intro{max-width:66ch;font-family:var(--font-serif);color:var(--ink-light);font-size:1.02rem;line-height:1.65;margin:0 0 1.15rem}.signature-schema{display:grid;grid-template-columns:max-content 1fr;align-items:center;gap:.35rem .85rem;padding:.75rem .9rem;background:rgba(44,36,22,.045);border:1px solid rgba(139,69,19,.22);border-left:3px solid var(--rust)}.signature-schema-label{font-family:var(--font-mono);font-size:.5rem;letter-spacing:.16em;color:var(--ink-light)}.signature-schema code{min-width:0;overflow-wrap:anywhere;font-family:var(--font-mono);font-size:.72rem;color:var(--rust);font-weight:500}.signature-schema-note{grid-column:2;font-family:var(--font-mono);font-size:.5rem;color:var(--ink-faint)}.series-grid{display:grid;gap:1.15rem}.series-card{background:#fffdf8;padding:1.35rem 1.5rem 1.45rem;border:1px solid rgba(74,55,40,.18);box-shadow:0 2px 10px rgba(44,36,22,.07),0 1px 2px rgba(44,36,22,.06)}.series-card-head{display:flex;align-items:baseline;justify-content:space-between;gap:1rem;padding-bottom:.55rem;border-bottom:1px solid rgba(74,55,40,.12)}.series-code{font-family:var(--font-mono);font-size:.76rem;color:var(--rust);font-weight:500;letter-spacing:.1em}.series-count{font-family:var(--font-mono);font-size:.58rem;color:var(--ink-light);white-space:nowrap}.series-description{font-family:var(--font-serif);color:var(--ink);font-size:.98rem;line-height:1.5;margin:.75rem 0 .9rem}.series-documents{display:flex;flex-wrap:wrap;gap:.5rem}.document-signature{display:inline-flex;align-items:center;min-height:1.8rem;font-family:var(--font-mono);font-size:.6rem;line-height:1.2;color:var(--ink-light);background:rgba(176,96,42,.08);border:1px solid rgba(139,69,19,.28);padding:.34rem .58rem;text-decoration:none;transition:background .15s,border-color .15s,color .15s,transform .15s}.document-signature:hover,.document-signature:focus-visible{color:var(--rust);background:rgba(176,96,42,.14);border-color:var(--rust);transform:translateY(-1px);outline:none}.document-signature:focus-visible{box-shadow:0 0 0 2px var(--paper),0 0 0 4px var(--rust)}.document-signature-more{background:rgba(44,36,22,.035);border-style:dashed}.series-footer-mark{font-family:var(--font-mono);font-size:.55rem;color:var(--ink-faint);margin-top:2.5rem;text-align:center}@media(max-width:640px){.series-page{width:min(100% - 2rem,920px);padding-top:1.35rem}.signature-schema{grid-template-columns:1fr}.signature-schema-note{grid-column:1}.series-card{padding:1.1rem}.series-card-head{align-items:flex-start;flex-direction:column;gap:.25rem}}
+.series-page{width:min(960px,calc(100% - 3rem));margin:0 auto;padding:2rem 0 3.5rem}.series-page-header{max-width:760px;margin-bottom:2rem}.series-eyebrow{font-family:var(--font-mono);font-size:.62rem;color:var(--blue);letter-spacing:.2em;margin-bottom:.65rem}.series-page h1{font-family:var(--font-display);font-size:clamp(2rem,4vw,2.6rem);line-height:1.08;color:var(--ink);font-weight:700;margin:0 0 .65rem}.series-intro{max-width:66ch;font-family:var(--font-serif);color:var(--ink-light);font-size:1.02rem;line-height:1.65;margin:0 0 1.15rem}.signature-schema{display:grid;grid-template-columns:max-content 1fr;align-items:center;gap:.35rem .85rem;padding:.8rem .95rem;background:#f4f7f9;border:1px solid #d5dfe5;border-left:3px solid var(--blue)}.signature-schema-label{font-family:var(--font-mono);font-size:.5rem;letter-spacing:.16em;color:var(--ink-light)}.signature-schema code{min-width:0;overflow-wrap:anywhere;font-family:var(--font-mono);font-size:.72rem;color:var(--blue-dim);font-weight:500}.signature-schema-note{grid-column:2;font-family:var(--font-mono);font-size:.5rem;color:var(--ink-faint)}.series-grid{display:grid;gap:.8rem}.series-card{background:#fff;padding:1.2rem 1.35rem 1.3rem;border:1px solid #d7dfe4}.series-card-head{display:flex;align-items:baseline;justify-content:space-between;gap:1rem;padding-bottom:.5rem;border-bottom:1px solid #e2e8ec}.series-code{font-family:var(--font-mono);font-size:.76rem;color:var(--blue);font-weight:500;letter-spacing:.1em}.series-count{font-family:var(--font-mono);font-size:.58rem;color:var(--ink-faint);white-space:nowrap}.series-description{font-family:var(--font-serif);color:var(--ink);font-size:.98rem;line-height:1.5;margin:.7rem 0 .8rem}.series-documents{display:flex;flex-wrap:wrap;gap:.4rem}.document-signature{display:inline-flex;align-items:center;min-height:1.8rem;font-family:var(--font-mono);font-size:.58rem;line-height:1.2;color:#496678;background:#f1f5f7;border:0;border-bottom:1px dashed #c5d2da;padding:.34rem .55rem;text-decoration:none;transition:background .15s,color .15s}.document-signature:hover{color:#244f6b;background:#e7eef2}.document-signature-more{background:transparent;color:var(--ink-faint)}.series-footer-mark{font-family:var(--font-mono);font-size:.55rem;color:var(--ink-faint);margin-top:2.5rem;text-align:center}@media(max-width:640px){.series-page{width:min(100% - 2rem,960px);padding-top:1.35rem}.signature-schema{grid-template-columns:1fr}.signature-schema-note{grid-column:1}.series-card{padding:1rem}.series-card-head{align-items:flex-start;flex-direction:column;gap:.25rem}.series-documents{display:grid;grid-template-columns:1fr}.document-signature{width:100%}}
 </style>
