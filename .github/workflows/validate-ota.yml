@@ -104,11 +104,24 @@ jobs:
         if: always()
         run: node scripts/annotate-explicit-relations.mjs
 
+      - name: Analyze epistemic metadata
+        if: always()
+        run: node scripts/analyze-epistemic-metadata.mjs
+
       - name: Publish archive quality report
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: ota-archive-quality
           path: src/data/archive-quality.generated.json
+          if-no-files-found: error
+          retention-days: 30
+
+      - name: Publish epistemic quality report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ota-epistemic-quality
+          path: src/data/epistemic-quality.generated.json
           if-no-files-found: error
           retention-days: 30

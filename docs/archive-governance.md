@@ -35,24 +35,28 @@ A missing KG projection is a migration gap, not permission to invent graph IDs. 
 
 `epistemicStatus` is descriptive metadata and must preserve the document's actual epistemic framing. Historical/speculative material must not be silently promoted to established research. A later review may clarify or downgrade metadata, but it must not rewrite the document's intellectual history without an explicit revision note.
 
+Short epistemic markers must not be migrated solely by letter. The archive contains legacy and document-local marker vocabularies; a marker is only globally interpretable after its definition and usage have been reviewed. Generated epistemic audits therefore report observed frontmatter markers, body markers and local legend evidence before any migration is attempted.
+
 ## 5. Relation policy
 
 Inline mentions of another OTA signature are candidates for relations, not automatically canonical relations. `relatedDocuments` should be added only when the semantic relation is clear enough to classify as `references`, `basis`, `prerequisite`, `extends`, `contradicts`, `supersedes`, `clarifies`, or `related`.
 
-The quality report deliberately treats automatically discovered relation candidates as unsafe until reviewed.
+The quality report distinguishes free inline mentions from explicit relation evidence such as source/basis labels and related-document sections. Even explicit candidates remain editorial review input rather than permission for blind automatic mutation.
 
-## 6. Current baseline (2026-09-08)
+## 6. Governance introduction baseline (2026-09-08)
 
-The latest successful `Validate OTA` quality artifact reports:
+When archive governance was introduced, the successful `Validate OTA` quality artifact reported:
 
 - 273 canonical documents
 - 155 substantial, 86 short, 32 fragments
 - 149 generic titles
 - 46 generic summaries
 - 239 documents with relation gaps
-- 1,188 relation candidates, none marked safe for automatic application
+- 1,188 relation candidates, none then marked safe for automatic application
 
-This means the next editorial pass should not mass-write metadata. Review order is:
+These figures are a historical baseline, not live documentation. Curated passes intentionally change them. The current state is always the latest generated `archive-quality.generated.json` artifact; epistemic usage is tracked separately in `epistemic-quality.generated.json`.
+
+Review order is:
 
 1. structural consistency and lifecycle schema,
 2. highest-priority metadata defects,
