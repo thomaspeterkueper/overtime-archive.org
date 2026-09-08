@@ -1,0 +1,181 @@
+/* Final OTA UI cleanup: global link language, responsive app modes, legacy-neutral overrides. */
+
+/* Safe default for unstyled content links. Components may override this deliberately. */
+.main-content a:not(.document-card):not(.result-card):not(.q-card):not(.series-card-link):not(.document-signature):not(.context-relation):not(.series-btn) {
+  color: var(--blue-dim);
+  text-decoration-color: #c5cfd6;
+  text-decoration-thickness: 1px;
+  text-underline-offset: .22em;
+}
+.main-content a:not(.document-card):not(.result-card):not(.q-card):not(.series-card-link):not(.document-signature):not(.context-relation):hover {
+  color: var(--blue);
+  text-decoration-color: var(--blue-faint);
+}
+a:focus-visible,button:focus-visible,input:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 3px;
+}
+
+/* Mobile navigation trigger: absent on desktop. */
+.mobile-nav-toggle {
+  display: none;
+  align-items: center;
+  gap: .45rem;
+  border: 1px solid #526572;
+  background: transparent;
+  color: #c6d4dd;
+  padding: .42rem .62rem;
+  font-family: var(--font-mono);
+  font-size: .58rem;
+  letter-spacing: .1em;
+  cursor: pointer;
+}
+.mobile-nav-toggle .mobile-nav-icon { font-size: .85rem; line-height: 1; }
+.mobile-nav-backdrop { display: none; }
+
+/* Series pages are repository groups, not paper cards. */
+.series-page .signature-schema {
+  background: #f4f7f9 !important;
+  border: 1px solid #d5dfe5 !important;
+  border-left: 3px solid var(--blue) !important;
+}
+.series-page .series-card {
+  background: #fff !important;
+  border: 1px solid #d7dfe4 !important;
+  box-shadow: none !important;
+}
+.series-page .series-card-head { border-bottom-color: #e2e8ec !important; }
+.series-page .document-signature {
+  color: #496678 !important;
+  background: #f1f5f7 !important;
+  border: 0 !important;
+  border-bottom: 1px dashed #c5d2da !important;
+  transform: none !important;
+}
+.series-page .document-signature:hover,
+.series-page .document-signature:focus-visible {
+  color: #244f6b !important;
+  background: #e7eef2 !important;
+  border-bottom-color: #7899ad !important;
+}
+.series-page .document-signature-more {
+  background: transparent !important;
+  color: var(--ink-faint) !important;
+}
+
+/* Home series matrix follows the same record language. */
+.home-series-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(220px,1fr));
+  gap: 1px;
+  background: #dce3e8;
+  border: 1px solid #dce3e8;
+}
+.home-series-grid .series-card-link {
+  display: block;
+  padding: 1.35rem;
+  background: #fbfcfd;
+  color: var(--ink);
+  text-decoration: none;
+  transition: background .15s;
+}
+.home-series-grid .series-card-link:hover { background: #f0f5f7; }
+.home-series-code,.home-series-count {
+  font-family: var(--font-mono);
+  font-size: .6rem;
+  letter-spacing: .12em;
+  color: var(--blue);
+}
+.home-series-title { font-family: var(--font-display); font-size: 1.08rem; color: var(--ink); margin: .35rem 0 .2rem; }
+.home-series-desc { font-family: var(--font-mono); font-size: .61rem; line-height: 1.5; color: var(--ink-light); }
+.home-series-count { margin-top: .7rem; color: var(--ink-faint); letter-spacing: .05em; }
+
+/* Terminal is digital, not a desktop-window imitation. */
+.terminal-titlebar .terminal-lights { display: none; }
+.terminal-titlebar::before {
+  content: '●';
+  color: #78a3be;
+  font-size: .55rem;
+  margin-right: .3rem;
+}
+
+/* Tablet: preserve application structure, collapse secondary chrome. */
+@media (max-width: 1100px) {
+  .site-header { padding-inline: 1rem; gap: 1rem; }
+  .header-logo-text .line2 { display: none; }
+  .hero { padding-inline: 2rem; }
+  .catalog-section { padding-inline: 2rem; }
+}
+
+/* Mobile/tablet navigation becomes a drawer; content remains primary. */
+@media (max-width: 900px) {
+  .app-body { display: block; min-height: 0; }
+  .mobile-nav-toggle { display: inline-flex; }
+  .sidebar {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0;
+    z-index: 520;
+    width: min(300px, 86vw);
+    height: 100dvh !important;
+    padding-top: 1rem;
+    transform: translateX(-102%);
+    transition: transform .2s ease;
+    box-shadow: 12px 0 34px rgba(10,20,28,.2);
+  }
+  body.mobile-nav-open .sidebar { transform: translateX(0); }
+  .mobile-nav-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 510;
+    background: rgba(13,23,30,.45);
+    border: 0;
+    width: 100%;
+    height: 100%;
+  }
+  body.mobile-nav-open .mobile-nav-backdrop { display: block; }
+  body.mobile-nav-open { overflow: hidden; }
+  .sidebar-institution { display: flex !important; }
+  .main-content { width: 100%; overflow-x: clip; }
+  .site-footer { padding: 2rem 1.5rem; }
+  .document-table { max-width: 100%; overflow-x: auto; }
+}
+
+@media (max-width: 700px) {
+  .site-header { padding: .6rem .75rem; }
+  .logo-svg-wrap { width: 38px; height: 38px; }
+  .logo-svg-wrap svg { width: 38px; height: 38px; }
+  .header-logo { gap: .55rem; min-width: 0; }
+  .header-logo-text .line1 { font-size: .78rem; white-space: nowrap; }
+  .header-status { display: none; }
+  .header-right { gap: .5rem; margin-left: auto; }
+  .header-search { display: none; }
+  .lang-btn { padding: .2rem .38rem; }
+  .mobile-nav-toggle { padding: .36rem .48rem; }
+  .mobile-nav-toggle .mobile-nav-label { display: none; }
+  .hero { padding: 2rem 1rem 1.6rem; }
+  .hero-title { font-size: clamp(2rem, 11vw, 3rem); }
+  .hero-stats { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 1rem; }
+  .catalog-section { padding: 1.6rem 1rem !important; }
+  .document-grid { grid-template-columns: 1fr; gap: .8rem; }
+  .catalog-header { align-items: flex-start; }
+  .series-filters { flex-wrap: nowrap; overflow-x: auto; padding-bottom: .35rem; scrollbar-width: thin; }
+  .series-btn { flex: 0 0 auto; }
+  .view-toggle { width: 100%; justify-content: stretch; }
+  .view-btn { flex: 1; }
+  .site-footer { padding: 1.7rem 1rem; }
+  .footer-links { gap: .65rem 1rem; }
+  .footer-epigraph { display: none; }
+  .terminal-window { width: calc(100vw - 1.5rem); }
+  .terminal-line { white-space: normal; font-size: .64rem; }
+  .home-series-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+  .header-logo-text .line1 { font-size: .68rem; letter-spacing: .035em; }
+  .hero-subtitle { font-size: .94rem; }
+  .stat-value { font-size: 1.1rem; }
+  .card-header { align-items: flex-start; flex-direction: column; gap: .35rem; }
+  .card-series-badge { align-self: flex-start; }
+  .card-footer { align-items: flex-start; flex-direction: column; gap: .55rem; }
+}
