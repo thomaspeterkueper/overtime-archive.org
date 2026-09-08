@@ -73,7 +73,12 @@ const visibleRelations = relatedDocs.slice(0, 6);
 
 <LayoutBase title={displayTitle} description={summary}>
   <div class="document-v3">
-    <aside class="document-v3-context" aria-label="Archivkontext">
+    <div class="context-toolbar">
+      <button class="context-toggle" id="context-toggle" type="button" aria-controls="archive-context-panel" aria-expanded="false">Kontext</button>
+    </div>
+
+    <aside class="document-v3-context" id="archive-context-panel" aria-label="Archivkontext" aria-hidden="false">
+      <button class="context-close" id="context-close" type="button" aria-label="Archivkontext schließen">SCHLIESSEN ×</button>
       <div>
         <div class="context-kicker">Archivkontext</div>
       </div>
@@ -145,6 +150,8 @@ const visibleRelations = relatedDocs.slice(0, 6);
       )}
     </aside>
 
+    <div class="context-backdrop" id="context-backdrop" aria-hidden="true"></div>
+
     <article class="document-v3-paper fade-in" data-signature={signature} data-doc-title={displayTitle}>
       <header class="document-v3-head">
         <div class="document-v3-eyebrow">{series} · {classification} · {year}</div>
@@ -204,3 +211,35 @@ const visibleRelations = relatedDocs.slice(0, 6);
     </article>
   </div>
 </LayoutBase>
+
+<script>
+  const panel = document.getElementById('archive-context-panel');
+  const toggle = document.getElementById('context-toggle');
+  const close = document.getElementById('context-close');
+  const backdrop = document.getElementById('context-backdrop');
+
+  const setContextOpen = (open) => {
+    if (!panel || !toggle || !backdrop) return;
+    panel.classList.toggle('is-open', open);
+    backdrop.classList.toggle('is-open', open);
+    toggle.setAttribute('aria-expanded', String(open));
+    panel.setAttribute('aria-hidden', String(!open));
+    document.body.style.overflow = open ? 'hidden' : '';
+  };
+
+  toggle?.addEventListener('click', () => setContextOpen(true));
+  close?.addEventListener('click', () => setContextOpen(false));
+  backdrop?.addEventListener('click', () => setContextOpen(false));
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') setContextOpen(false);
+  });
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 980) {
+      panel?.classList.remove('is-open');
+      backdrop?.classList.remove('is-open');
+      toggle?.setAttribute('aria-expanded', 'false');
+      panel?.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = '';
+    }
+  });
+</script>
