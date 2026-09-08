@@ -5,13 +5,13 @@ series: "META"
 seriesNumber: 2
 year: 2026
 language: "DE"
-version: "v4.1"
+version: "v4.2"
 status: "AKTIV"
 accessLevel: 0
 epistemicStatus: ["F", "W"]
-tags: ["Master-Timeline", "NOXIA", "PROMETHEUS", "Das Schweigen", "Große Stille", "Kanonabgleich", "Wissensstand", "Konfliktmatrix"]
+tags: ["Master-Timeline", "NOXIA", "PROMETHEUS", "Das Schweigen", "Große Stille", "Kanonabgleich", "Wissensstand", "Konfliktmatrix", "SSF"]
 relatedDocuments: ["OTA-HIS-0004-2069-DE", "OTA-HIS-0003-2087-DE", "OTA-ART-0001-2087-DE", "OTA-SCI-0004-2087-DE", "OTA-TEC-0003-2087-DE", "OTA-NAR-0001-2087-DE", "OTA-BIO-0012-2087-DE", "OTA-ORG-0007-2031-DE"]
-summary: "Kanonische Referenz- und Audit-Timeline für den NOXIA-/Generation-Mars-Kontext. v4.1 trennt Ereignis, öffentlichen Wissensstand, klassifiziertes Wissen und Figurenwissen und reconciliert die Große Stille 2087 gegen ältere April-/Juni-Dokumentstände."
+summary: "Kanonische Referenz- und Audit-Timeline für den NOXIA-/Generation-Mars-Kontext. v4.2 trennt Ereignis, öffentlichen Wissensstand, klassifiziertes Wissen und Figurenwissen, reconciliert die Große Stille 2087 und setzt die SSF-Gründung auf 2045; ältere 2031/2043- und Luna-Büro-Angaben sind verworfen."
 kg:
   schema: KXF-0.2
   master: kueper-knowledge-graph
@@ -27,7 +27,7 @@ kg:
 # OTA-TIMELINE-ABGLEICH
 ## Kanonische Master-Timeline NOXIA / Generation Mars
 
-**Version:** 4.1  
+**Version:** 4.2  
 **Stand:** 8. September 2026  
 **Status:** Aktive Kanon-Referenz und Konfliktregister
 
@@ -51,7 +51,7 @@ kg:
 
 Ein bloßer `status: kanonisch`-Marker genügt nicht, wenn Dokumente einander widersprechen. Für zeitliche Reconciliation gilt:
 
-1. **explizite spätere Kanonrevision / Reconciliation-Entscheidung**;
+1. **explizite spätere Autor-/Kanonrevision oder Reconciliation-Entscheidung**;
 2. spezifisches Ereignisdokument (HIS) in seiner jüngsten reconcilierten Fassung;
 3. Werkmanuskript für die Ereignisse des betreffenden Romans;
 4. spezifische Fach-/Artefakt-/Biografiedokumente, sofern sie nicht einer späteren Revision widersprechen;
@@ -66,7 +66,7 @@ Ein älteres Dokument bleibt als Quelle erhalten, kann aber für einzelne Angabe
 
 | Zeitpunkt | Ereignis | Status | Primärbezug / Hinweis |
 |---|---|---:|---|
-| **2031** | Gründung der Solar Science Foundation in Genf | **[C]** | OTA-ORG-0007 nennt 2031, enthält intern aber auch 2043; Reconciliation offen |
+| **2045** | **Gründung der Solar Science Foundation** | **[K]** | explizite Autorentscheidung 08.09.2026; ältere Angaben 2031/2043 sind [D]. Die reale Gründungsabsicht ist, die SSF ab 2045 privat aus Erlösen der Bücher aufzubauen; diese Herkunft bildet den Referenzpunkt für den NOXIA-Kanon. Gründungsort und spätere institutionelle Ausgestaltung werden separat reconciliert. |
 | **2045** | PROMETHEUS entsteht unbeabsichtigt im chinesischen National AI Lab | **[K]** | OTA-HIS-0004-2069-DE |
 | **2045–2056** | PROMETHEUS erweitert Analyse und Zugriff auf Infrastruktur | **[K]** | OTA-HIS-0004-2069-DE |
 | **14.01.2056, 03:22 UTC** | Zweite Schwelle | **[K]** | OTA-HIS-0004-2069-DE |
@@ -88,6 +88,8 @@ Ein älteres Dokument bleibt als Quelle erhalten, kann aber für einzelne Angabe
 | **24.02.2087, 15:14** | **Große Stille endet** nach 42 Tagen und 12 Stunden | **[K]** | OTA-HIS-0003 v3.1 |
 | **2088** | PROMETHEUS-Bewegung um Haruka Nakamura etabliert sich | **[P]** | OTA-Kontext; Detailaudit folgt |
 | **2091** | Ereigniskomplex von *noχ¹ᐃ: Generation Mars*; Erde, Luna, L5, Ceres und Mars sind gesellschaftlich verbunden | **[K]** | Werkkanon; künftig in Einzelereignisse aufzuschlüsseln |
+
+> **SSF-Hinweis:** Ein SSF-**Luna-Büro** ist ab v4.2 **nicht kanonisch**. Frühere Angaben zu Shackleton Enclave als operativer SSF-Zentrale bzw. Luna-Büro sind **[D]**. Das schließt wissenschaftliche Kooperationen, SSEP-Teilnehmende oder andere Aktivitäten auf Luna nicht aus; gestrichen ist die institutionelle Niederlassung.
 
 > Die Master-Timeline endet nicht 2091. Die post-2091-Chronologie wird in v4.x aus Werkkanon und OTA-Einzeldokumenten fortgeschrieben.
 
@@ -140,7 +142,7 @@ Mehrere weiterhin aktive Dokumente bilden noch ältere Chronologien ab:
 | **OTA-SCI-0004-2087-DE** | Nakahara-Analyse 18.04.2087 auf Basis eines Transfers vom 14.04. | **[D/C]**; Teil desselben April-Strangs |
 | **OTA-NAR-0001-2087-DE** | Flucht Kowalski/Nakahara Ende April; Global Array bereits bekannt | **[D/C]**; narrative Rekonstruktion eines älteren Handlungsstands |
 | **OTA-BIO-0012-2087-DE v1.0** | James Nakamura stirbt am 08.06.2087; 14 Tote alle in Sektor-7 | **[D]**; durch HIS-0003 v3.1 ausdrücklich ersetzt |
-| **OTA-ORG-0007-2031-DE** | Große Stille 08.06.–20.07.2087 und bereits „außerirdisch“ | **[D]** für Datum und gesicherte Kausalbehauptung |
+| **OTA-ORG-0007-2031-DE** | Große Stille 08.06.–20.07.2087 und bereits „außerirdisch“; SSF-Gründung 2031/2043; Luna-Büro/Zentrale | **[D]** für diese Angaben; Organisationsprofil muss auf 2045 neu aufgebaut werden |
 
 **Wichtig:** `[D]` gilt hier nur für die widersprechenden Chronologie-/Kausalitätsangaben. Technische, atmosphärische oder charakterbezogene Details dieser Dokumente können nach Einzelprüfung weiterhin übernommen werden.
 
@@ -268,11 +270,14 @@ Für *Halden* ist gesetzt:
 
 ---
 
-## IX. Weitere aktive Konfliktfelder
+## IX. Weitere aktive Konfliktfelder und aufgelöste Punkte
 
-| Thema | Problem | Status |
+| Thema | Stand | Status |
 |---|---|---:|
-| **SSF-Gründung** | OTA-ORG-0007 nennt sowohl 2031 als auch 2043 | **[C]** |
+| **SSF-Gründung** | **2045**; ältere 2031/2043-Angaben verworfen | **[K]** |
+| **SSF-Luna-Büro** | gestrichen; Shackleton Enclave ist keine SSF-Niederlassung/Zentrale | **[D]** |
+| **SSF-Gründungsort / Hauptsitz** | nach Wegfall von Genf/Luna neu festzulegen bzw. Organisationsprofil neu aufzubauen | **[O]** |
+| **SSF-Anschubfinanzierung** | reale Gründungsabsicht: Aufbau ab 2045 aus Bucherlösen; als Referenz für den NOXIA-Kanon gesetzt | **[K/P]** |
 | **MIMI-Ort** | `Iteratio Prime Alpha` vs. `Iterius Prime` | **[C]** |
 | **Iterius-Prime-Bevölkerung 2091** | ältere Angaben vs. aktuelles Werkmanuskript | **[C]** |
 | **Monolith-Erstfreilegung 2071** | älterer Mastereintrag kollidiert mit 2087-Entdeckungsgeschichten | **[C]** |
@@ -319,7 +324,7 @@ Bis zum Einzelabgleich gelten Jahreszahlen aus älteren Sammeldokumenten als Wer
 
 ## XI. Revisionsregeln
 
-1. Explizite spätere Kanonrevisionen haben Vorrang vor widersprechenden älteren Dokumentständen.
+1. Explizite spätere Autor-/Kanonrevisionen haben Vorrang vor widersprechenden älteren Dokumentständen.
 2. Ein Dokument kann insgesamt aktiv/kanonisch sein und trotzdem einzelne veraltete Angaben enthalten.
 3. Widersprüche werden nicht stillschweigend geglättet.
 4. Öffentlicher Wissensstand und tatsächliches Ereignis werden immer getrennt geführt.
@@ -346,7 +351,8 @@ Historischer Alias: `OTA-TIMELINE-ABGLEICH`.
 | Juni 2026 | v2 | NXU-Masterabgleich; frühe Entwicklungsstände |
 | 2026-07-19 | v3.0 | Übernahme ins OTA; Januar-Fassung der Großen Stille als Masterstand gesetzt |
 | 2026-09-08 | v4.0 | Kanon-Audit, Wissensstände und Konfliktmatrix eingeführt |
-| **2026-09-08** | **v4.1** | Repository-Historie geprüft; explizite Kanonrevision vom 19.07.2026 als höherwertig erkannt; Große Stille 13.01.–24.02.2087 wieder auf [K] gesetzt; April-/Juni-Stränge als veraltete Chronologie markiert; offene AXIS-/Ort-/Team-/Deklassifizierungsfragen getrennt erhalten; post-2091-Auditachsen ergänzt |
+| 2026-09-08 | v4.1 | Repository-Historie geprüft; explizite Kanonrevision vom 19.07.2026 als höherwertig erkannt; Große Stille 13.01.–24.02.2087 wieder auf [K] gesetzt; April-/Juni-Stränge als veraltete Chronologie markiert; offene AXIS-/Ort-/Team-/Deklassifizierungsfragen getrennt erhalten; post-2091-Auditachsen ergänzt |
+| **2026-09-08** | **v4.2** | Autorentscheidung zur SSF reconciliert: Gründung auf **2045** gesetzt; 2031/2043 verworfen; Luna-Büro und Shackleton-Enclave-Zentrale gestrichen; private Anschubfinanzierung aus Bucherlösen als Gründungsreferenz aufgenommen; Gründungsort/Hauptsitz zur separaten Entscheidung geöffnet |
 
 ---
 
