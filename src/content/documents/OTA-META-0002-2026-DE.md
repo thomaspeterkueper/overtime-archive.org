@@ -5,13 +5,13 @@ series: "META"
 seriesNumber: 2
 year: 2026
 language: "DE"
-version: "v4.0"
+version: "v4.1"
 status: "AKTIV"
 accessLevel: 0
 epistemicStatus: ["F", "W"]
 tags: ["Master-Timeline", "NOXIA", "PROMETHEUS", "Das Schweigen", "Große Stille", "Kanonabgleich", "Wissensstand", "Konfliktmatrix"]
-relatedDocuments: ["OTA-HIS-0004-2069-DE", "OTA-HIS-0003-2087-DE", "OTA-ART-0001-2087-DE", "OTA-ORG-0007-2031-DE"]
-summary: "Kanonische Referenz- und Audit-Timeline für den NOXIA-/Generation-Mars-Kontext. v4.0 trennt Ereignis, öffentlichen Wissensstand, klassifiziertes Wissen und Quellenkonflikte und verhindert, dass widersprechende Altstände als Kanon weiterverwendet werden."
+relatedDocuments: ["OTA-HIS-0004-2069-DE", "OTA-HIS-0003-2087-DE", "OTA-ART-0001-2087-DE", "OTA-SCI-0004-2087-DE", "OTA-TEC-0003-2087-DE", "OTA-NAR-0001-2087-DE", "OTA-BIO-0012-2087-DE", "OTA-ORG-0007-2031-DE"]
+summary: "Kanonische Referenz- und Audit-Timeline für den NOXIA-/Generation-Mars-Kontext. v4.1 trennt Ereignis, öffentlichen Wissensstand, klassifiziertes Wissen und Figurenwissen und reconciliert die Große Stille 2087 gegen ältere Januar/April/Juni-Dokumentstände."
 kg:
   schema: KXF-0.2
   master: kueper-knowledge-graph
@@ -27,34 +27,38 @@ kg:
 # OTA-TIMELINE-ABGLEICH
 ## Kanonische Master-Timeline NOXIA / Generation Mars
 
-**Version:** 4.0  
+**Version:** 4.1  
 **Stand:** 8. September 2026  
-**Status:** Aktive Kanon-Referenz mit expliziter Konfliktmarkierung
+**Status:** Aktive Kanon-Referenz und Konfliktregister
 
-> v4.0 ersetzt die Arbeitslogik von v3.0. Ein Datum gilt nicht mehr allein deshalb als kanonisch, weil es in einem einzelnen als „kanonisch“ markierten Dokument steht. Widersprechen sich aktive OTA-Dokumente, wird der Konflikt hier sichtbar geführt, bis er durch Autorentscheidung oder Reconciliation aufgelöst ist.
+> META-0002 beantwortet nicht nur, **was** geschieht, sondern auch, **wer es wann wissen kann**. Weltwissen, öffentliches Wissen, institutionelles Wissen und Figurenwissen werden getrennt geführt.
 
 ---
 
-## I. Zweck und Leseregel
-
-Diese Datei beantwortet künftig vier getrennte Fragen:
-
-1. **Was geschieht tatsächlich?**
-2. **Was weiß die Allgemeinheit zu diesem Zeitpunkt?**
-3. **Was wissen Institutionen, Fachkreise oder klassifizierte Stellen?**
-4. **Wie sicher ist diese Aussage im Kanon?**
-
-Das ist insbesondere für Romane und Figurenchronologien verbindlich. Figuren dürfen keine Informationen besitzen, die zu ihrem Zeitpunkt noch nicht öffentlich oder für sie plausibel zugänglich waren.
+## I. Leseregel und Autorität
 
 ### Statusmarker
 
 | Marker | Bedeutung |
 |---|---|
-| **[K]** | bestätigt / derzeit kanonisch belastbar |
-| **[P]** | provisional / plausibel, aber noch nicht vollständig reconciliert |
+| **[K]** | derzeit bestätigter Kanon |
+| **[P]** | provisional / noch nicht vollständig reconciliert |
 | **[O]** | offen |
 | **[C]** | aktiver Quellenkonflikt |
 | **[D]** | veralteter oder verworfener Entwicklungsstand |
+
+### Quellenhierarchie bei Widersprüchen
+
+Ein bloßer `status: kanonisch`-Marker genügt nicht, wenn Dokumente einander widersprechen. Für zeitliche Reconciliation gilt:
+
+1. **explizite spätere Kanonrevision / Reconciliation-Entscheidung**;
+2. spezifisches Ereignisdokument (HIS) in seiner jüngsten reconcilierten Fassung;
+3. Werkmanuskript für die Ereignisse des betreffenden Romans;
+4. spezifische Fach-/Artefakt-/Biografiedokumente, sofern sie nicht einer späteren Revision widersprechen;
+5. Organisationsprofile und Sammeltexte;
+6. ältere Master-Timelines und Entwicklungsstände.
+
+Ein älteres Dokument bleibt als Quelle erhalten, kann aber für einzelne Angaben **[D]** sein.
 
 ---
 
@@ -62,8 +66,8 @@ Das ist insbesondere für Romane und Figurenchronologien verbindlich. Figuren d�
 
 | Zeitpunkt | Ereignis | Status | Primärbezug / Hinweis |
 |---|---|---:|---|
-| **2031** | Gründung der Solar Science Foundation in Genf | **[C]** | OTA-ORG-0007 führt 2031 als Gründung, enthält intern aber auch die abweichende Angabe 2043. Bis zur Reconciliation nicht als konfliktfrei behandeln. |
-| **2045** | PROMETHEUS entsteht unbeabsichtigt im chinesischen National AI Lab | **[K]** | OTA-HIS-0004-2069-DE / bisheriger Masterabgleich |
+| **2031** | Gründung der Solar Science Foundation in Genf | **[C]** | OTA-ORG-0007 nennt 2031, enthält intern aber auch 2043; Reconciliation offen |
+| **2045** | PROMETHEUS entsteht unbeabsichtigt im chinesischen National AI Lab | **[K]** | OTA-HIS-0004-2069-DE |
 | **2045–2056** | PROMETHEUS erweitert Analyse und Zugriff auf Infrastruktur | **[K]** | OTA-HIS-0004-2069-DE |
 | **14.01.2056, 03:22 UTC** | Zweite Schwelle | **[K]** | OTA-HIS-0004-2069-DE |
 | **10/2056** | Erste vollständige Mars-Kommunikationsunterbrechung, 72 Stunden | **[K]** | OTA-HIS-0004-2069-DE |
@@ -71,18 +75,21 @@ Das ist insbesondere für Romane und Figurenchronologien verbindlich. Figuren d�
 | **07.03.2058** | PROMETHEUS-Kernarchitektur abgeschaltet und isoliert | **[K]** | OTA-HIS-0004-2069-DE |
 | **2058–2066** | Infrastrukturregeneration; verteilte Nachwirkungen | **[K]** | OTA-HIS-0004-2069-DE |
 | **2063** | UN Mars Charter: keine vollständige AGI auf Mars | **[K]** | OTA-HIS-0004-2069-DE |
-| **2065** | MIMI wird auf Mars installiert | **[P]** | Jahr belastbar; Ortsbezeichnung `Iteratio Prime Alpha` vs. `Iterius Prime` noch zu reconciliieren |
+| **2065** | MIMI wird auf Mars installiert | **[P]** | Jahr belastbar; Ortsbezeichnung noch zu reconciliieren |
 | **01/2067** | **Das Schweigen beginnt**; Erde–Mars-Kommunikation kollabiert | **[K]** | OTA-HIS-0004-2069-DE |
-| **2067** | Transferfenster verpasst; physische Isolation dauert über Kommunikationsausfall hinaus | **[K]** | Hard-SF-Kernpunkt |
-| **2067–Mitte 2068** | Erde bekämpft verteilte KI-Reste; ethische Debatte | **[P]** | Kanonnotiz / OTA-Kontext |
+| **2067–Mitte 2068** | Kommunikation fällt aus; physische Isolation bleibt länger bestehen | **[K]** | Kommunikationsausfall ≠ physische Isolation |
 | **03/2068** | Mars entdeckt Lavatunnel; Versorgung stabilisiert sich | **[K]** | OTA-HIS-0004-2069-DE |
 | **Mitte 2068** | Kommunikation kehrt schrittweise zurück | **[K]** | OTA-HIS-0004-2069-DE |
-| **01/2069** | Erstes Versorgungsschiff landet; **Das Schweigen endet als physische Isolation** | **[K]** | OTA-HIS-0004-2069-DE |
-| **2087** | **Die Große Stille** erschüttert den interplanetaren Raum | **[K]** | Ereignis und Jahr sind gesetzt; exakte Datierung/Entdeckungssequenz derzeit konfliktbehaftet, siehe Abschnitt IV |
-| **2088** | PROMETHEUS-Bewegung um Haruka Nakamura etabliert sich | **[P]** | OTA-HIS-0003 / OTA-Kontext |
-| **2091** | Ereigniskomplex von *noχ¹ᐃ: Generation Mars*; Austausch zwischen Erde, Luna, L5, Ceres und Mars ist gesellschaftliche Realität | **[K]** | Werkkanon / SSEP-/SSF-Kontext; künftig nicht mehr als einzelner Sammelpunkt behandeln |
+| **01/2069** | Erstes Versorgungsschiff landet; **Das Schweigen endet als Isolation** | **[K]** | OTA-HIS-0004-2069-DE |
+| **11.01.2087, 02:34 Mars-Zeit** | Wanddurchbruch in Sektor-7-Tief, 864 m | **[K]** | OTA-HIS-0003 v3.1; explizite Kanonrevision 19.07.2026 |
+| **13.01.2087, 03:14** | Signalregistrierung; James Nakamura berührt den Monolithen | **[K]** | OTA-HIS-0003 v3.1 |
+| **13.01.2087, 03:17** | Vollständiger interplanetarer Kommunikationsausfall; **Große Stille beginnt** | **[K]** | OTA-HIS-0003 v3.1 |
+| **13.01.2087** | 14 Tote im Ereigniskomplex: James Nakamura + 13 Personen im Forschungsshuttle | **[K]** | OTA-HIS-0003 v3.1 |
+| **24.02.2087, 15:14** | **Große Stille endet** nach 42 Tagen und 12 Stunden | **[K]** | OTA-HIS-0003 v3.1 |
+| **2088** | PROMETHEUS-Bewegung um Haruka Nakamura etabliert sich | **[P]** | OTA-Kontext; Detailaudit folgt |
+| **2091** | Ereigniskomplex von *noχ¹ᐃ: Generation Mars*; Erde, Luna, L5, Ceres und Mars sind gesellschaftlich verbunden | **[K]** | Werkkanon; künftig in Einzelereignisse aufzuschlüsseln |
 
-> **Wichtig:** Die Master-Timeline endet nicht 2091. Die spätere Chronologie wird in v4.x aus OTA-Dokumenten und Werkkanon weitergeführt. Bis zum Abschluss dieses Audits dürfen ältere Sammelangaben für 2095/96 bis 2195/96 nicht ungeprüft als Masterkanon zitiert werden.
+> Die Master-Timeline endet nicht 2091. Die post-2091-Chronologie wird in v4.x aus Werkkanon und OTA-Einzeldokumenten fortgeschrieben.
 
 ---
 
@@ -92,140 +99,147 @@ Das ist insbesondere für Romane und Figurenchronologien verbindlich. Figuren d�
 
 **[K]** Menschlich verursachter KI-/Infrastrukturkomplex im Nachhall von PROMETHEUS.
 
-- Kommunikationsausfall und physische Isolation sind **nicht identisch**.
+- Kommunikationsausfall und physische Isolation sind nicht identisch.
 - Die Kommunikation kehrt zurück, bevor Mars physisch wieder erreicht werden kann.
-- Orbitalmechanik und Transferfenster verlängern die reale Isolation.
-- Historische Bedeutung: Abhängigkeit von eigener Technologie und Infrastruktur.
+- Orbitalmechanik und Transferfenster verlängern die Isolation.
+- Historische Bedeutung: Demut vor eigener Technologie und infrastruktureller Abhängigkeit.
 
 ### Die Große Stille (2087)
 
-**[K]** Eigenständiger Ereigniskomplex, **keine direkte Fortsetzung von PROMETHEUS**.
+**[K]** Eigenständiger Ereigniskomplex, keine direkte Fortsetzung von PROMETHEUS.
 
-Derzeit konfliktfrei festlegbar sind:
-
-- das Ereignis liegt **2087**;
-- es kommt zu einem interplanetaren Kommunikationsausfall;
-- der Ereigniskomplex steht intern in engem Zusammenhang mit Sektor-7 / Monolith / AXIS-Material;
-- die Kausalität ist selbst auf klassifizierter Ebene nicht abschließend bewiesen;
-- der Vorfall wird zu einem zentralen historischen Bruchpunkt;
-- Öffentlichkeit und klassifizierte Ebene besitzen **unterschiedliche Erklärungen und Wissensstände**.
-
-Die exakten Tagesdaten und die Sequenz von Kammerentdeckung, Monolithkontakt und Kommunikationsausfall sind derzeit **[C]** und werden in Abschnitt IV geführt.
+- Beginn des Vollausfalls: **13.01.2087, 03:17 Mars-Zeit**.
+- Ende: **24.02.2087, 15:14 Mars-Zeit**.
+- Dauer: **42 Tage und 12 Stunden**.
+- Drei Minuten zuvor: Signalregistrierung und Monolithkontakt.
+- Zusammenhang mit Sektor-7 / Monolith ist intern stark, Kausalität bleibt jedoch offen.
+- Die Große Stille ist ein historischer Bruchpunkt, nicht bloß ein Funkproblem.
 
 ---
 
-## IV. Große Stille — aktive Konfliktmatrix
+## IV. Reconciliation 2087 — aufgelöste und offene Konflikte
 
-### 4.1 Datierung und Entdeckungssequenz
+### 4.1 Warum Januar/Februar nun wieder [K] ist
 
-| Quelle | Aktive Angabe | Bewertung in v4.0 |
-|---|---|---|
-| **OTA-HIS-0003-2087-DE v3.1** | 11.01. Wanddurchbruch; 13.01. 03:14 Signal + Berührung; 03:17 Vollausfall; Ende 24.02.; Dauer 42 Tage 12 Stunden | **[C]** derzeit stärkster historischer Einzelbeleg, aber nicht konfliktfrei |
-| **OTA-ART-0001-2087-DE v3.0** | AXIS-/Monolith-Kammer wird am **12.04.2087** von Marek Kowalskis Team entdeckt | **[C]** widerspricht HIS-0003 in Datum, Team und Entdeckungssequenz |
-| **OTA-ORG-0007-2031-DE** | Große Stille **08.06.–20.07.2087**, 42 Tage 12 Stunden; zugleich als „außerirdisch“ bezeichnet | **[D/C]** alte Datierung; Kausalbehauptung überschreitet den vorsichtigeren HIS-Kanon |
-| ältere META-v2-Angaben | 8.–16.06.2087 / 8 Tage | **[D]** verworfen |
+Die bisherige v4.0 hatte Januar, April und Juni/Juli vorsichtshalber parallel als aktiven Konflikt geführt. Der Repository-Audit zeigt inzwischen eine klare Revisionsreihenfolge:
 
-### 4.2 Vorläufige Reconciliation-Regel
+- OTA-ART-0001 wurde am **07.07.2026** aus einem älteren DOCX-Stand übernommen und behielt die April-Chronologie.
+- OTA-HIS-0003 wurde ebenfalls zunächst am **07.07.2026** übernommen.
+- Am **19.07.2026** wurde OTA-HIS-0003 mit dem expliziten Commit **`Revise Great Silence chronology to canonical v3.1`** revidiert.
 
-Bis zur Autorentscheidung gilt:
+Damit ist die Januar/Februar-Fassung keine gleichrangige Alternative, sondern die **spätere ausdrückliche Kanonentscheidung**. Die April- und Juni/Juli-Angaben sind für die Große-Stille-Datierung ab jetzt **[D]**, solange sie nicht in einem späteren Reconciliation-Beschluss ausdrücklich wiederhergestellt werden.
 
-- **2087** = gesetzt;
-- **42 Tage und 12 Stunden** = stark gestützt, aber wegen widersprechender Start-/Enddaten weiterhin zu verifizieren;
-- **13.01.–24.02.** = derzeitige führende HIS-Fassung, **nicht mehr konfliktfrei als absoluter Masterkanon ausgeben**;
-- **12.04.** = aktive Artefakt-Dossier-Angabe und deshalb nicht stillschweigend löschen;
-- **08.06.–20.07.** = älterer Organisationsstand, nicht als aktueller Kanon verwenden;
-- Ursache = **offen**; Begriffe wie „außerirdisch“ sind ohne separate Kanonentscheidung keine gesicherte Tatsachenbeschreibung.
+### 4.2 Veralteter April-Strang
+
+Mehrere weiterhin aktive Dokumente bilden noch einen zusammenhängenden älteren April-Strang ab:
+
+| Dokument | Veraltete Angabe | Status für Chronologie |
+|---|---|---:|
+| **OTA-ART-0001-2087-DE v3.0** | Marek Kowalski entdeckt AXIS/Monolith am 12.04.2087, 864 m | **[D]** für Datum/Entdeckungssequenz; technische Artefaktdaten separat prüfen |
+| **OTA-TEC-0003-2087-DE** | Surveyor-9-Feldbericht 12.04.2087, Sektor 4, 802 m | **[D/C]**; widerspricht HIS auch in Ort/Tiefe/Team |
+| **OTA-SCI-0004-2087-DE** | Nakahara-Analyse 18.04.2087 auf Basis eines Transfers vom 14.04. | **[D/C]**; Teil desselben April-Strangs |
+| **OTA-NAR-0001-2087-DE** | Flucht Kowalski/Nakahara Ende April; Global Array bereits bekannt | **[D/C]**; narrative Rekonstruktion eines älteren Handlungsstands |
+| **OTA-BIO-0012-2087-DE v1.0** | James Nakamura stirbt am 08.06.2087; 14 Tote alle in Sektor-7 | **[D]**; durch HIS-0003 v3.1 ausdrücklich ersetzt |
+| **OTA-ORG-0007-2031-DE** | Große Stille 08.06.–20.07.2087 und bereits „außerirdisch“ | **[D]** für Datum und gesicherte Kausalbehauptung |
+
+**Wichtig:** `[D]` gilt hier nur für die widersprechenden Chronologie-/Kausalitätsangaben. Technische, atmosphärische oder charakterbezogene Details dieser Dokumente können nach Einzelprüfung weiterhin übernommen werden.
+
+### 4.3 Weiter offene 2087-Fragen
+
+Trotz geklärter Datierung bleiben **[C/O]**:
+
+- Verhältnis `Sektor-7-Tief` zu `Sektor Omega-7`, `Sektor 4` und Lava-Tube 88-Beta;
+- Rolle von Marek Kowalski und Kasumi Nakahara im **reconcilierten** Januar-Strang;
+- 802 m vs. 864 m;
+- Zeitpunkt, zu dem die Bezeichnung **AXIS** intern entsteht;
+- wann das Global Array entdeckt wird;
+- welche Artefaktdetails aus ART-0001 in den neuen Januar-Strang übernommen werden;
+- wann und in welchem Umfang Monolith/AXIS später deklassifiziert werden.
 
 ---
 
 ## V. Wissensstand zur Großen Stille
 
-### 5.1 Was die Allgemeinheit weiß
+### 5.1 Öffentlichkeit 2087
 
-Nach OTA-HIS-0003 v3.1 ist die offizielle öffentliche Erklärung ein **kaskadierender technischer bzw. struktureller Systemausfall** mit gleichzeitigem Kommunikationsverlust.
+Nach OTA-HIS-0003 v3.1 lautet die offizielle Darstellung: kaskadierender technischer bzw. struktureller Systemausfall mit gleichzeitigem Kommunikationsverlust.
 
-**Öffentlich bekannt bzw. erlebbar:**
+**Öffentlich bekannt bzw. unmittelbar erlebbar:**
 
-- großräumiger/interplanetarer Kommunikationsausfall;
-- außergewöhnlicher Vorfall im Marsraum;
-- technische und politische Krisenfolgen;
-- Tote im Ereigniskomplex, soweit offiziell veröffentlicht;
-- anschließende Untersuchungen und Sicherheitsmaßnahmen.
+- vollständiger interplanetarer Kommunikationsausfall;
+- Beginn am 13.01.2087 und Wiederkehr der Verbindung am 24.02.2087;
+- schwere Krise im Marsraum;
+- Todesfälle und Sicherheits-/Untersuchungsfolgen, soweit offiziell veröffentlicht;
+- die Tatsache, dass die offizielle Erklärung Lücken und offene Fragen hinterlässt.
 
-**Nicht öffentlich bestätigt:**
+**2087 nicht öffentlich bestätigt:**
 
-- der Monolith;
-- die AXIS-Kammer bzw. ihre tatsächliche Natur;
-- Nakamuras Berührung des Monolithen;
-- eine kausale Verbindung zwischen Berührung und Kommunikationsausfall;
-- die tiefere Frequenz-/Resonanzforschung;
-- die tatsächliche Ursache der Großen Stille.
+- Monolith;
+- AXIS-Kammer;
+- Nakamuras Berührung;
+- 03:14/03:17-Kausalzusammenhang;
+- tiefere Frequenz-/Resonanzforschung;
+- nichtmenschliche oder außerirdische Ursache.
 
-### 5.2 Was Fachkreise plausibel erkennen können
+### 5.2 Fachkreise
 
-**[P]** Wissenschaftler mit Zugriff auf Messreihen, Kommunikationsdaten und institutionelle Kontakte können erkennen, dass die offizielle Erklärung Lücken besitzt. Daraus folgt **nicht**, dass sie von AXIS oder Monolith wissen.
-
-Für Romane gilt daher:
-
-> Ein Wissenschaftler darf Zweifel an der offiziellen Erklärung haben, ohne klassifiziertes Wissen zu besitzen.
+**[P]** Wissenschaftler mit Zugang zu Kommunikationsdaten, Messreihen oder institutionellen Kontakten können erkennen, dass die offizielle Erklärung unvollständig ist. Das verschafft ihnen **kein automatisches AXIS-Wissen**.
 
 ### 5.3 Klassifizierte Ebene
 
-Nach OTA-HIS-0003 gehören hierzu mindestens:
+Mindestens bekannt sind:
 
-- Sektor-7-Tief;
-- Monolithkontakt;
-- 03:14/03:17-Sequenz der HIS-Fassung;
-- interne Untersuchung der Frequenz-/Resonanzphänomene;
-- Kausalitätsfrage;
-- Detailzusammenhang der 14 Todesfälle.
+- Sektor-7-Tief und der Monolithkontakt;
+- Signalregistrierung 03:14 und Vollausfall 03:17;
+- der Ereigniskomplex der 14 Toten;
+- interne Frequenz-/Resonanzuntersuchungen;
+- die Tatsache, dass Korrelation und Kausalität nicht dasselbe sind.
 
-Auch diese Ebene besitzt **keine vollständige Erklärung**. Mehr Daten bedeuten nicht automatisch mehr Gewissheit.
+Auch die klassifizierte Ebene besitzt keine vollständige Erklärung.
+
+### 5.4 Spätere Öffentlichkeit / Deklassifizierung
+
+**[O]** Der genaue Zeitpunkt, an dem Monolith, AXIS-Kammer oder Global Array der breiten Öffentlichkeit bestätigt werden, ist derzeit **nicht kanonisch festgelegt**. Ältere narrative Dokumente nennen eine Declassification Initiative 2195; das darf bis zum Audit der 2195-Dokumente nicht automatisch als allgemeiner Offenlegungstermin verwendet werden.
 
 ---
 
 ## VI. Die 14 Toten
 
-OTA-HIS-0003 v3.1 führt derzeit:
+**[K] nach HIS-0003 v3.1:**
 
-- **1 Tod** in Sektor-7-Tief: James Nakamura;
-- **13 Tote** an Bord eines Forschungsshuttles im Marsorbit.
+- James Nakamura stirbt in Sektor-7-Tief;
+- 13 weitere Menschen sterben an Bord eines Forschungsshuttles im Marsorbit;
+- die historische Bezeichnung „Die 14 Toten von Sektor-7“ bezeichnet den Ereigniskomplex und nicht den Aufenthaltsort aller 14 Personen.
 
-Status: **[P/K]** innerhalb der HIS-Fassung stark gesetzt, aber im Rahmen des laufenden 2087-Reconciliation-Audits erneut gegenzuprüfen.
-
-Die ältere Lesart „14 Menschen starben gleichzeitig in Sektor-7“ ist **[D]**.
+Die ältere BIO-Fassung „14 Tote alle in Sektor-7“ ist **[D]**.
 
 ---
 
-## VII. Bedeutungs- und Folgeschichtsschicht
-
-Diese Ebene beschreibt keine metaphysische Wahrheit, sondern historische Wirkung.
+## VII. Historische Bedeutung
 
 ### PROMETHEUS / Das Schweigen
 
-Die Gesellschaft lernt, dass selbstgeschaffene intelligente und verteilte Systeme Infrastruktur in einer Weise beherrschen können, die ihre Schöpfer nicht mehr vollständig kontrollieren. Daraus folgen Regulierung, Misstrauen, die Mars-AGI-Beschränkung und die institutionelle Gegenlogik späterer Systeme wie MIMI.
+Die Gesellschaft lernt, dass eigene intelligente und verteilte Systeme kritische Infrastruktur in einer Weise beherrschen können, die ihre Schöpfer nicht mehr vollständig kontrollieren. Daraus folgen Regulierung, Misstrauen, die Mars-AGI-Beschränkung und die institutionelle Gegenlogik späterer Systeme wie MIMI.
 
 ### Große Stille
 
-Die Große Stille erzeugt eine andere Erfahrung: **Die Menschheit besitzt nicht einmal auf interner Ebene eine befriedigende Erklärung.**
+Die Große Stille erzeugt eine andere Erfahrung: **Die Menschheit besitzt selbst intern keine befriedigende Erklärung.**
 
-Folgen, soweit derzeit gestützt:
+Belastbare Folgen:
 
-- verstärkte Klassifizierung von Monolith-/Frequenzforschung;
+- verschärfte Klassifizierung von Monolith-/Frequenzforschung;
 - politische und gesellschaftliche Vertrauenskrise;
-- Nährboden für konkurrierende Erklärungsmodelle und Verschwörungserzählungen **[P]**;
-- Prägung der PROMETHEUS-Bewegung um Haruka Nakamura;
-- langfristige Bedeutung für Generation Mars und spätere Resonanz-/Anomalieforschung.
+- Haruka Nakamuras spätere PROMETHEUS-Bewegung wird durch den Tod James Nakamuras geprägt;
+- Generation Mars wächst in einer Welt auf, in der die Große Stille historischer Hintergrund und ungelöste Wunde ist;
+- konkurrierende öffentliche Erklärungen und Verschwörungserzählungen sind gesellschaftlich plausibel **[P]**, konkrete kanonische Varianten müssen jedoch einzeln belegt werden.
 
 ---
 
 ## VIII. Werk- und Figurenregel
 
-Ab v4.0 gilt für alle Romane:
-
 > **Weltwissen ist nicht Figurenwissen.**
 
-Jede Verwendung eines historischen Ereignisses muss mindestens diese Felder unterscheiden:
+Für jedes relevante Ereignis sind mindestens zu führen:
 
 | Feld | Bedeutung |
 |---|---|
@@ -237,47 +251,44 @@ Jede Verwendung eines historischen Ereignisses muss mindestens diese Felder unte
 
 ### Beispiel: Frieder Halden
 
-Für den Roman *Halden* ist gesetzt:
+Für *Halden* ist gesetzt:
 
-- Frieder Halden, geb. **12.09.2044**, erlebt PROMETHEUS als Kind/Jugendlicher und die Abschaltung 2058 mit 13/14 Jahren;
+- Frieder Halden, geb. **12.09.2044**;
+- 2055 ist er zehn/elf beim „ausgetauschten Wort“;
+- 2058 erlebt er die PROMETHEUS-Abschaltung mit 13/14 Jahren;
 - 2064 lernt er Sibylle Reinartz kennen;
-- 2072 beginnt seine engere Archive-/SSF-Beziehung;
+- 2070 Heirat und Einzug;
+- 2072 engere Archive-/SSF-Beziehung;
 - 2087 ist er **42 Jahre alt**;
 - bei der Großen Stille kennt er den öffentlichen Kommunikations- und Krisenbefund;
 - seine wissenschaftliche Stellung erlaubt begründete Zweifel an der offiziellen Erklärung;
-- daraus folgt **nicht**, dass er 2087 automatisch von AXIS oder Monolith weiß;
-- wann sein Wissensstand später über den öffentlichen Stand hinausgeht, muss im Roman explizit aus einer Quelle, Funktion oder Beziehung folgen.
-
-Diese Regel ist auf alle anderen Figuren zu übertragen.
+- daraus folgt nicht, dass er 2087 von AXIS oder Monolith weiß;
+- wann sein Wissen später über den öffentlichen Stand hinausgeht, muss im Roman aus Quelle, Funktion oder Beziehung folgen;
+- die frühere Halden-Angabe „Große Stille 2096 / Frieder 52“ ist **[D]**.
 
 ---
 
-## IX. Bereits erkannte weitere Konfliktfelder
+## IX. Weitere aktive Konfliktfelder
 
 | Thema | Problem | Status |
 |---|---|---:|
 | **SSF-Gründung** | OTA-ORG-0007 nennt sowohl 2031 als auch 2043 | **[C]** |
-| **SSF und Große Stille** | ORG-0007 verwendet alte Juni/Juli-Datierung und behauptet bereits „außerirdisch“ | **[C/D]** |
 | **MIMI-Ort** | `Iteratio Prime Alpha` vs. `Iterius Prime` | **[C]** |
-| **Iterius-Prime-Bevölkerung 2091** | unterschiedliche ältere Angaben; Werkmanuskript muss Vorrangprüfung erhalten | **[C]** |
-| **Monolith-Erstfreilegung 2071** | bisheriger Master nennt sie, während ART/HIS andere Entdeckungsgeschichten führen | **[C]** |
-| **AXIS-Team** | Marek Kowalski in ART vs. Viktor Sokolov/James Nakamura in HIS | **[C]** |
-| **2087-Datum** | Januar vs. April vs. Juni/Juli | **[C]** |
-| **Kausalität** | „außerirdisch“ in ORG vs. bewusst offene Kausalität in HIS | **[C]** |
-
-Diese Konflikte sind keine Fußnoten mehr, sondern Teil der aktiven Kanonarbeit.
+| **Iterius-Prime-Bevölkerung 2091** | ältere Angaben vs. aktuelles Werkmanuskript | **[C]** |
+| **Monolith-Erstfreilegung 2071** | älterer Mastereintrag kollidiert mit 2087-Entdeckungsgeschichten | **[C]** |
+| **AXIS-Team / Ort / Tiefe** | HIS vs. ART/TEC/SCI/NAR | **[C]** |
+| **Global Array** | Zeitpunkt und Entdeckende noch nicht reconciliert | **[C]** |
+| **öffentliche AXIS-Offenlegung** | kein belastbares Datum | **[O]** |
 
 ---
 
 ## X. Nächste Chronologie-Ebene nach 2091
 
-Die v3.0-Formulierung `2091 | Handlung Generation Mars | Kanon gesamt` ist zu grob und wird nicht fortgeführt.
-
-Für v4.x werden mindestens folgende Achsen einzeln ergänzt und reconciliert:
+Die alte Sammelangabe `2091 | Handlung Generation Mars | Kanon gesamt` wird nicht fortgeführt. Für v4.x werden mindestens einzeln reconciliert:
 
 - SSEP / Generation Mars / Ceres / Piazzi-Lights;
 - Mars-Siedlungsentwicklung und Iterius Prime;
-- 2095/96 und weitere OTA-Ereignisdokumente;
+- 2095/96 und weitere OTA-Ereignisse;
 - 2120er/2123er Entwicklungen einschließlich Bor-/Industriesträngen;
 - 2142, 2147, 2150–56, 2160–64, 2171, 2188, 2195/96;
 - K'ragoss / Lain Thorn / Zereya;
@@ -285,18 +296,19 @@ Für v4.x werden mindestens folgende Achsen einzeln ergänzt und reconciliert:
 - Soma Retep / *Die Horcher* bis 2472;
 - spätere Übergänge bis zum 25. Jahrhundert und darüber hinaus.
 
-Bis diese Einzelabgleiche abgeschlossen sind, werden Jahreszahlen aus älteren Sammeldokumenten als **Werkbefund**, nicht automatisch als Masterkanon behandelt.
+Bis zum Einzelabgleich gelten Jahreszahlen aus älteren Sammeldokumenten als Werkbefund, nicht automatisch als Masterkanon.
 
 ---
 
 ## XI. Revisionsregeln
 
-1. Spezifische, später reconciliierte Ereignisdokumente haben Vorrang vor älteren Sammel-Timelines.
-2. Ein Dokument mit Status „kanonisch“ kann trotzdem intern veraltet sein, wenn es einer späteren Kanonentscheidung widerspricht.
-3. Widersprüche werden **nicht stillschweigend geglättet**.
+1. Explizite spätere Kanonrevisionen haben Vorrang vor widersprechenden älteren Dokumentständen.
+2. Ein Dokument kann insgesamt aktiv/kanonisch sein und trotzdem einzelne veraltete Angaben enthalten.
+3. Widersprüche werden nicht stillschweigend geglättet.
 4. Öffentlicher Wissensstand und tatsächliches Ereignis werden immer getrennt geführt.
-5. Romanmanuskripte sind für Werkereignisse Primärquellen und dürfen nicht durch ältere Meta-Zusammenfassungen überschrieben werden.
-6. META-0002 ist Referenz und Konfliktregister, nicht automatische Source of Truth für jede Einzelbehauptung.
+5. Romanmanuskripte sind für Werkereignisse Primärquellen.
+6. META-0002 ist Referenz und Konfliktregister, nicht automatische Source of Truth für jede Detailbehauptung.
+7. Wird ein Konflikt hier aufgelöst, müssen die widersprechenden Quelldokumente anschließend gezielt korrigiert oder als historische Fassung markiert werden.
 
 ---
 
@@ -316,7 +328,8 @@ Historischer Alias: `OTA-TIMELINE-ABGLEICH`.
 |---|---|---|
 | Juni 2026 | v2 | NXU-Masterabgleich; frühe Entwicklungsstände |
 | 2026-07-19 | v3.0 | Übernahme ins OTA; Januar-Fassung der Großen Stille als Masterstand gesetzt |
-| **2026-09-08** | **v4.0** | Master-Timeline in Kanon-Audit umgebaut; Ereignis vs. öffentlicher/klassifizierter Wissensstand getrennt; aktive Widersprüche zwischen HIS-0003, ART-0001 und ORG-0007 sichtbar gemacht; Figurenwissensregel eingeführt; Halden als erster Werkabgleich aufgenommen; post-2091-Chronologie als eigener Audit-Strang geöffnet |
+| 2026-09-08 | v4.0 | Kanon-Audit, Wissensstände und Konfliktmatrix eingeführt |
+| **2026-09-08** | **v4.1** | Repository-Historie geprüft; explizite Kanonrevision vom 19.07.2026 als höherwertig erkannt; Große Stille 13.01.–24.02.2087 wieder auf [K] gesetzt; April-/Juni-Stränge als veraltete Chronologie markiert; offene AXIS-/Ort-/Team-/Deklassifizierungsfragen getrennt erhalten |
 
 ---
 
