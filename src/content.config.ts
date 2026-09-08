@@ -38,6 +38,17 @@ const documents = defineCollection({
     tags: z.array(z.string()).optional(),
     relatedDocuments: z.array(z.union([z.string(), documentRelation])).optional(),
     summary: z.string(),
+    // Real archive lifecycle timestamps. These describe repository/archive
+    // provenance, not the in-universe document year above. Optional for legacy
+    // records; new editorial work can populate them without fabricating dates.
+    archivedAt: z.string().datetime({ offset: true }).optional(),
+    updatedAt: z.string().datetime({ offset: true }).optional(),
+    provenance: z.object({
+      source: z.string().optional(),
+      importedAt: z.string().datetime({ offset: true }).optional(),
+      reviewedAt: z.string().datetime({ offset: true }).optional(),
+      reviewStatus: z.enum(['unreviewed', 'metadata-reviewed', 'content-reviewed', 'canonical-reviewed']).optional(),
+    }).optional(),
     kg: z.object({
       schema: z.string().optional(),
       master: z.string().optional(),
