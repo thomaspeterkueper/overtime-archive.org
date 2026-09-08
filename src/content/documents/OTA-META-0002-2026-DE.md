@@ -11,7 +11,7 @@ accessLevel: 0
 epistemicStatus: ["F", "W"]
 tags: ["Master-Timeline", "NOXIA", "PROMETHEUS", "Das Schweigen", "Große Stille", "Kanonabgleich", "Wissensstand", "Konfliktmatrix"]
 relatedDocuments: ["OTA-HIS-0004-2069-DE", "OTA-HIS-0003-2087-DE", "OTA-ART-0001-2087-DE", "OTA-SCI-0004-2087-DE", "OTA-TEC-0003-2087-DE", "OTA-NAR-0001-2087-DE", "OTA-BIO-0012-2087-DE", "OTA-ORG-0007-2031-DE"]
-summary: "Kanonische Referenz- und Audit-Timeline für den NOXIA-/Generation-Mars-Kontext. v4.1 trennt Ereignis, öffentlichen Wissensstand, klassifiziertes Wissen und Figurenwissen und reconciliert die Große Stille 2087 gegen ältere Januar/April/Juni-Dokumentstände."
+summary: "Kanonische Referenz- und Audit-Timeline für den NOXIA-/Generation-Mars-Kontext. v4.1 trennt Ereignis, öffentlichen Wissensstand, klassifiziertes Wissen und Figurenwissen und reconciliert die Große Stille 2087 gegen ältere April-/Juni-Dokumentstände."
 kg:
   schema: KXF-0.2
   master: kueper-knowledge-graph
@@ -119,9 +119,9 @@ Ein älteres Dokument bleibt als Quelle erhalten, kann aber für einzelne Angabe
 
 ## IV. Reconciliation 2087 — aufgelöste und offene Konflikte
 
-### 4.1 Warum Januar/Februar nun wieder [K] ist
+### 4.1 Warum Januar/Februar [K] ist
 
-Die bisherige v4.0 hatte Januar, April und Juni/Juli vorsichtshalber parallel als aktiven Konflikt geführt. Der Repository-Audit zeigt inzwischen eine klare Revisionsreihenfolge:
+Der Repository-Audit zeigt eine klare Revisionsreihenfolge:
 
 - OTA-ART-0001 wurde am **07.07.2026** aus einem älteren DOCX-Stand übernommen und behielt die April-Chronologie.
 - OTA-HIS-0003 wurde ebenfalls zunächst am **07.07.2026** übernommen.
@@ -129,9 +129,9 @@ Die bisherige v4.0 hatte Januar, April und Juni/Juli vorsichtshalber parallel al
 
 Damit ist die Januar/Februar-Fassung keine gleichrangige Alternative, sondern die **spätere ausdrückliche Kanonentscheidung**. Die April- und Juni/Juli-Angaben sind für die Große-Stille-Datierung ab jetzt **[D]**, solange sie nicht in einem späteren Reconciliation-Beschluss ausdrücklich wiederhergestellt werden.
 
-### 4.2 Veralteter April-Strang
+### 4.2 Veralteter April-/Juni-Strang
 
-Mehrere weiterhin aktive Dokumente bilden noch einen zusammenhängenden älteren April-Strang ab:
+Mehrere weiterhin aktive Dokumente bilden noch ältere Chronologien ab:
 
 | Dokument | Veraltete Angabe | Status für Chronologie |
 |---|---|---:|
