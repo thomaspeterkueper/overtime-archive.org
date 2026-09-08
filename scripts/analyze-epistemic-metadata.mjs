@@ -42,7 +42,7 @@ function legends(body) {
     const line = lines[index].replace(/\s+/g, ' ').trim();
     const markers = [...line.matchAll(/\[([RHTSIFW])\]/g)].map(match => match[1]);
     if (!markers.length) continue;
-    if (!/(?:=|Real|Empir|Hypoth|Theoret|Spekul|Fikt|Fiction|Interpret|Welt|World|Framework|Archiv|Quelle|Marker|Legende|Legend|belegt|etabliert|Hayashi)/i.test(line)) continue;
+    if (!/(?:=|Real|Empir|Hypoth|Theoret|Spekul|Fikt|Fiction|Interpret|Werk|Welt|World|Framework|Archiv|Quelle|Marker|Legende|Legend|belegt|etabliert|Hayashi)/i.test(line)) continue;
     result.push({ line: index + 1, markers: [...new Set(markers)], text: line.slice(0, 360) });
   }
   return result.slice(0, 30);
@@ -65,12 +65,12 @@ for (const file of files) {
   const flags = [];
 
   if (missingInFrontmatter.length) flags.push('BODY_MARKERS_MISSING_IN_FRONTMATTER');
-  if (frontmatterMarkers.includes('W') || markerCounts.W > 0) flags.push('LEGACY_W_PRESENT');
+  if (frontmatterMarkers.includes('W') || markerCounts.W > 0) flags.push('WORK_SETTING_W_PRESENT');
   if ((frontmatterMarkers.includes('R') || markerCounts.R > 0) && (frontmatterMarkers.includes('F') || markerCounts.F > 0)) flags.push('MIXED_REAL_FICTION');
   if (legendLines.length) flags.push('LOCAL_MARKER_LEGEND');
   if (legendLines.some(item => item.markers.includes('H') && /Hayashi/i.test(item.text))) flags.push('H_HAS_LOCAL_NON_HYPOTHESIS_MEANING');
 
-  const priority = (['SCI', 'FND'].includes(series) ? 4 : 0) + missingInFrontmatter.length * 3 + (flags.includes('LEGACY_W_PRESENT') ? 2 : 0) + (flags.includes('MIXED_REAL_FICTION') ? 2 : 0) + (legendLines.length ? 1 : 0);
+  const priority = (['SCI', 'FND'].includes(series) ? 4 : 0) + missingInFrontmatter.length * 3 + (flags.includes('WORK_SETTING_W_PRESENT') ? 2 : 0) + (flags.includes('MIXED_REAL_FICTION') ? 2 : 0) + (legendLines.length ? 1 : 0);
 
   documents.push({ file, signature, series, frontmatterMarkers, bodyMarkers, markerCounts, missingInFrontmatter, legendLines, flags, priority });
 }
@@ -87,7 +87,7 @@ const summary = {
   documents: documents.length,
   sciDocuments: documents.filter(document => document.series === 'SCI').length,
   fndDocuments: documents.filter(document => document.series === 'FND').length,
-  documentsWithLegacyW: documents.filter(document => document.flags.includes('LEGACY_W_PRESENT')).length,
+  documentsWithWorkSettingW: documents.filter(document => document.flags.includes('WORK_SETTING_W_PRESENT')).length,
   documentsWithBodyMarkersMissingInFrontmatter: documents.filter(document => document.missingInFrontmatter.length).length,
   sciFndWithBodyMarkersMissingInFrontmatter: documents.filter(document => ['SCI', 'FND'].includes(document.series) && document.missingInFrontmatter.length).length,
   documentsWithMixedRealFiction: documents.filter(document => document.flags.includes('MIXED_REAL_FICTION')).length,
@@ -101,7 +101,7 @@ fs.writeFileSync(OUT_FILE, `${JSON.stringify({ generatedAt: new Date().toISOStri
 
 console.log(`Epistemic audit: ${summary.documents} documents`);
 console.log(`SCI/FND: ${summary.sciDocuments}/${summary.fndDocuments}`);
-console.log(`Legacy W present: ${summary.documentsWithLegacyW}`);
+console.log(`Werk-Setzung W present: ${summary.documentsWithWorkSettingW}`);
 console.log(`Body/frontmatter mismatches: ${summary.documentsWithBodyMarkersMissingInFrontmatter}`);
 console.log(`SCI/FND mismatches: ${summary.sciFndWithBodyMarkersMissingInFrontmatter}`);
 console.log(`Mixed R/F: ${summary.documentsWithMixedRealFiction}`);
