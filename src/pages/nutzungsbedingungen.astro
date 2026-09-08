@@ -1,14 +1,16 @@
 ---
 import LayoutBase from '../layouts/LayoutBase.astro';
 import LegalDocument from '../components/LegalDocument.astro';
+import LegalNav from '../components/LegalNav.astro';
 import legal from '../data/legal.generated.json';
 ---
-
 <LayoutBase title="Nutzungsbedingungen">
-  <div style="max-width:var(--content-width);margin:4rem auto;padding:0 2rem 6rem">
-    <div style="font-family:var(--font-mono);font-size:0.62rem;color:var(--rust);letter-spacing:0.2em;margin-bottom:1.5rem">
-      RECHTLICHE ANGABEN · KG LEGAL SSOT
-    </div>
+  <div class="legal-page-shell">
+    <div class="legal-kicker">RECHTLICHE ANGABEN · KG LEGAL SSOT</div>
+    <LegalNav />
     <LegalDocument title="Nutzungsbedingungen" documentId={legal.terms.id} status={legal.terms.status} markdown={legal.terms.markdown} />
   </div>
 </LayoutBase>
+<style>
+.legal-page-shell{max-width:var(--content-width);margin:3rem auto;padding:0 2rem 6rem}.legal-kicker{font-family:var(--font-mono);font-size:.62rem;color:var(--blue);letter-spacing:.2em;margin-bottom:1.2rem}@media(max-width:700px){.legal-page-shell{margin:1.5rem auto;padding:0 1rem 3rem}}
+</style>
