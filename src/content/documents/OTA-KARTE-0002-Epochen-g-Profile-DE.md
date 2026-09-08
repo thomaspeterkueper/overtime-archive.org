@@ -1,6 +1,6 @@
 ---
 signature: "OTA-KARTE-0002-Epochen-g-Profile-DE"
-title: "OTA-KARTE-0002-Epochen-g-Profile-DE"
+title: "Gehirn-Epochen × g-Profile — Referenzmatrix"
 series: "KARTE"
 seriesNumber: 2
 year: 2026
@@ -10,8 +10,16 @@ status: "AKTIV"
 accessLevel: 0
 epistemicStatus: ["R", "S", "W"]
 tags: ["Gehirn-Epochen", "g-Profile", "Referenzmatrix", "Karte", "Neurowissenschaft"]
-relatedDocuments: []
+relatedDocuments:
+  - target: "OTA-SCI-0021-2025-DE"
+    relation: "basis"
+    context: "Explizite Quelle und vollständige Dokumentation der Referenzmatrix."
+    descriptionStatus: "explicit"
 summary: "Gehirn-Epochen × g-Profile — Referenzmatrix. Schnellreferenz für neuronale Entwicklungsepochen und korrespondierende g-Profilwerte."
+updatedAt: "2026-09-08T09:23:00+02:00"
+provenance:
+  reviewedAt: "2026-09-08T09:23:00+02:00"
+  reviewStatus: "metadata-reviewed"
 kg:
   schema: KXF-0.2
   master: kueper-knowledge-graph
