@@ -23,7 +23,7 @@ const href = redacted ? '/gesperrt' : `/dokument/${slug}`;
 <a href={href} class:list={['document-card', { redacted }]} title={title}>
   <div class="card-header">
     <span class="card-signature">{signature}</span>
-    <span class="card-series-badge">{series}</span>
+    <span class="card-series-badge">{series} · {year} · {language}</span>
   </div>
 
   <div class="card-body">
@@ -47,7 +47,7 @@ const href = redacted ? '/gesperrt' : `/dokument/${slug}`;
       ))}
     </div>
     <span class="card-access-level">
-      {accessLevel > 0 ? `TIER-${accessLevel}` : `${year} · ${language}`}
+      {accessLevel > 0 ? `TIER-${accessLevel}` : status}
     </span>
   </div>
 </a>
