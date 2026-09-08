@@ -4,41 +4,51 @@ import DocumentCard from '../components/DocumentCard.astro';
 import { getCollection } from 'astro:content';
 
 const allDocs = await getCollection('documents');
-const recentDocs = allDocs.slice(0, 6);
 const totalDocs = allDocs.length;
 const seriesSet = new Set(allDocs.map(d => d.data.series));
 const restrictedCount = allDocs.filter(d => d.data.accessLevel > 0).length;
 
-const seriesList = [
-  { code: 'SCI', label: 'Scientific', desc: 'Wissenschaftliche Grundlagen', count: 66 },
-  { code: 'TEC', label: 'Technical', desc: 'Technische Dokumentation', count: 35 },
-  { code: 'FND', label: 'Foundation', desc: 'Philosophische Fundamente', count: 30 },
-  { code: 'BIO', label: 'Biography', desc: 'Personendossiers', count: 31 },
-  { code: 'HIS', label: 'History', desc: 'Historische Rekonstruktionen', count: 9 },
-  { code: 'RED', label: 'Redacted', desc: '[ZUGANGSSTUFE 3+]', count: 23, restricted: true },
-];
+const seriesLabels: Record<string, { label: string; desc: string }> = {
+  SCI: { label: 'Scientific', desc: 'Wissenschaftliche Grundlagen und referenzierte Forschungsstände' },
+  TEC: { label: 'Technical', desc: 'Technische Systeme, Verfahren und Konstruktionsprinzipien' },
+  FND: { label: 'Foundation', desc: 'Philosophische und konzeptuelle Fundamente' },
+  BIO: { label: 'Biography', desc: 'Personendossiers realer und fiktiver Personen' },
+  HIS: { label: 'History', desc: 'Historische Rekonstruktionen und Epochenanalysen' },
+  RED: { label: 'Redacted', desc: 'Dokumente mit eingeschränkter Zugangsstufe' },
+  ARC: { label: 'Archive', desc: 'Archivrichtlinien und Governance' },
+  NAR: { label: 'Narrative', desc: 'Erzähltexte und narrative Dokumente' },
+  ORG: { label: 'Organisation', desc: 'Organisationen und Institutionen' },
+  OBS: { label: 'Observation', desc: 'Beobachtungen und Feldberichte' },
+  LSC: { label: 'Linkage', desc: 'Thematische Verbindungen und Leitmotive' },
+  MON: { label: 'Monitor', desc: 'Laufende Beobachtungsdokumente' },
+  KOM: { label: 'Communication', desc: 'Kommunikationsdokumente' },
+  CUL: { label: 'Culture', desc: 'Kulturelle Objekte, Praktiken und Kontexte' },
+  LIM: { label: 'Boundary', desc: 'Grenzfälle und Ausnahmedokumente' },
+  LIT: { label: 'Literature', desc: 'Literarische und werkbezogene Dokumente' },
+  KARTE: { label: 'Map', desc: 'Kartierungen, Netzwerke und strukturierte Übersichten' },
+  META: { label: 'Meta', desc: 'Metadokumente zur Struktur und Methode des Archivs' },
+  ART: { label: 'Artifact', desc: 'Artefakt- und Objekt-Dossiers' },
+};
+
+const seriesCounts = [...seriesSet].map(code => ({
+  code,
+  count: allDocs.filter(d => d.data.series === code).length,
+  label: seriesLabels[code]?.label ?? code,
+  desc: seriesLabels[code]?.desc ?? 'Archivserie',
+})).sort((a, b) => b.count - a.count || a.code.localeCompare(b.code));
+
+const featuredSeries = seriesCounts.slice(0, 6);
+const archiveSelection = [...allDocs].sort((a, b) => a.data.signature.localeCompare(b.data.signature)).slice(0, 6);
 ---
 
 <LayoutBase title="The Overtime Archive">
-
-  <!-- Hero -->
   <section class="hero">
     <div class="hero-bg"></div>
     <div class="hero-grid-lines"></div>
     <div class="hero-content">
-      <div class="hero-eyebrow fade-in">
-        Transmedia Archive · Est. 2025 · overtimearchive.org
-      </div>
-      <h1 class="hero-title fade-in-delay-1">
-        Das Archiv<br/>
-        <em>bewahrt</em>,<br/>
-        was vergessen wird.
-      </h1>
-      <p class="hero-subtitle fade-in-delay-2">
-        Ein transmediales Wissenssystem. Wissenschaft, Fiktion, Spekulation
-        — epistemisch markiert, archivarisch dokumentiert, narrativ verankert.
-        60.000 BCE bis 2500 CE.
-      </p>
+      <div class="hero-eyebrow fade-in">Transmedia Archive · Est. 2025 · overtimearchive.org</div>
+      <h1 class="hero-title fade-in-delay-1">Das Archiv<br/><em>bewahrt</em>,<br/>was vergessen wird.</h1>
+      <p class="hero-subtitle fade-in-delay-2">Ein transmediales Wissenssystem. Wissenschaft, Fiktion, Spekulation — epistemisch markiert, archivarisch dokumentiert, narrativ verankert. 60.000 BCE bis 2500 CE.</p>
       <div class="hero-stats fade-in-delay-3">
         <div class="stat-block"><span class="stat-value">{totalDocs}</span><span class="stat-label">Dokumente</span></div>
         <div class="stat-block"><span class="stat-value">{seriesSet.size}</span><span class="stat-label">Serien</span></div>
@@ -51,42 +61,26 @@ const seriesList = [
   <div class="divider"></div>
 
   <section class="catalog-section">
-    <div class="catalog-header"><div class="catalog-title">Dokumentenserien</div></div>
-    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1px;background:rgba(44,36,22,0.08);border:1px solid rgba(44,36,22,0.1)">
-      {seriesList.map(s => (
-        <a href={`/katalog?serie=${s.code}`} style={`display:block;padding:1.5rem;background:var(--paper);text-decoration:none;transition:background 0.2s;`} class="series-card-link">
-          <div style={`font-family:var(--font-mono);font-size:0.6rem;letter-spacing:0.2em;margin-bottom:0.5rem;color:${s.restricted ? 'var(--red-ink)' : 'var(--rust)'}`}>OTA-{s.code}</div>
-          <div style="font-family:var(--font-display);font-size:1.1rem;color:var(--ink);margin-bottom:0.3rem">{s.label}</div>
-          <div style="font-family:var(--font-mono);font-size:0.62rem;color:var(--ink-light)">{s.desc}</div>
-          <div style="font-family:var(--font-mono);font-size:0.6rem;color:var(--rust);margin-top:0.75rem">{s.count} Dokumente</div>
+    <div class="catalog-header"><div class="catalog-title">Dokumentenserien</div><a href="/serien">Alle {seriesSet.size} Serien →</a></div>
+    <div class="home-series-grid">
+      {featuredSeries.map(s => (
+        <a href={`/katalog?serie=${s.code}`} class="series-card-link">
+          <div class="home-series-code">OTA-{s.code}</div>
+          <div class="home-series-title">{s.label}</div>
+          <div class="home-series-desc">{s.desc}</div>
+          <div class="home-series-count">{s.count} Dokument{s.count !== 1 ? 'e' : ''}</div>
         </a>
       ))}
     </div>
   </section>
 
-  <style>.series-card-link:hover { background: rgba(139,69,19,0.08) !important; }</style>
   <div class="divider"></div>
 
   <section class="catalog-section">
-    <div class="catalog-header">
-      <div class="catalog-title">Zuletzt archiviert</div>
-      <a href="/katalog" style="font-family:var(--font-mono);font-size:0.62rem;letter-spacing:0.1em;color:var(--rust);text-decoration:none">Alle Dokumente →</a>
-    </div>
+    <div class="catalog-header"><div class="catalog-title">Archivauswahl</div><a href="/katalog">Alle Dokumente →</a></div>
     <div class="document-grid active">
-      {recentDocs.map(doc => (
-        <DocumentCard
-          signature={doc.data.signature}
-          title={doc.data.title}
-          summary={doc.data.summary}
-          series={doc.data.series}
-          year={doc.data.year}
-          language={doc.data.language}
-          epistemicStatus={doc.data.epistemicStatus}
-          accessLevel={doc.data.accessLevel}
-          status={doc.data.status}
-          slug={doc.id}
-          redacted={doc.data.redacted ?? false}
-        />
+      {archiveSelection.map(doc => (
+        <DocumentCard signature={doc.data.signature} title={doc.data.title} summary={doc.data.summary} series={doc.data.series} year={doc.data.year} language={doc.data.language} epistemicStatus={doc.data.epistemicStatus} accessLevel={doc.data.accessLevel} status={doc.data.status} slug={doc.id} redacted={doc.data.redacted ?? false} />
       ))}
     </div>
   </section>
@@ -98,5 +92,4 @@ const seriesList = [
       <div class="kn-sig">— T.P.K., OTA-BIO-0000</div>
     </div>
   </section>
-
 </LayoutBase>
