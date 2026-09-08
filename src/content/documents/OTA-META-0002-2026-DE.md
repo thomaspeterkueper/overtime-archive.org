@@ -284,7 +284,24 @@ Für *Halden* ist gesetzt:
 
 ## X. Nächste Chronologie-Ebene nach 2091
 
-Die alte Sammelangabe `2091 | Handlung Generation Mars | Kanon gesamt` wird nicht fortgeführt. Für v4.x werden mindestens einzeln reconciliert:
+Die alte Sammelangabe `2091 | Handlung Generation Mars | Kanon gesamt` wird nicht fortgeführt.
+
+### Bereits festgestellte Zeiträume, noch nicht vollständig reconciliert
+
+| Zeitraum | Werk-/OTA-Befund | Status |
+|---|---|---:|
+| **2091** | SSEP-/Generation-Mars-Komplex; Piazzi-Lights/Ceres, Luna, L5 und Mars sind aktiv verbunden | **[K/P]** |
+| **2095/96** | OTA-Dokumente vorhanden; Ereignisse noch einzeln zuzuordnen | **[P]** |
+| **2098** | Korolev Station Alpha / noχ¹ᐃ-Strang | **[P]** bis Werkabgleich |
+| **2120–2125** | Bor-/Industriekrisen-Strang | **[P]** bis Werk-/OTA-Abgleich |
+| **2123** | eigene OTA-Dokumentgruppe vorhanden | **[P]** |
+| **2142 / 2147** | eigene OTA-Dokumentgruppen vorhanden | **[P]** |
+| **2150–2156** | spätere Resonanz-/Kalgaii-/K'ragoss-nahe Schichten | **[P]** |
+| **2160–2164 / 2171 / 2188** | OTA-Dokumentgruppen vorhanden | **[P]** |
+| **2195/96** | spätere Archiv-/Deklassifizierungs- und Zukunftsdokumente | **[P]** |
+| **2472** | *Die Horcher* / Soma Retep, Uranus XXIX „Silence“ | **[P]** bis Bandabgleich |
+
+Für v4.x werden mindestens einzeln reconciliert:
 
 - SSEP / Generation Mars / Ceres / Piazzi-Lights;
 - Mars-Siedlungsentwicklung und Iterius Prime;
@@ -329,7 +346,7 @@ Historischer Alias: `OTA-TIMELINE-ABGLEICH`.
 | Juni 2026 | v2 | NXU-Masterabgleich; frühe Entwicklungsstände |
 | 2026-07-19 | v3.0 | Übernahme ins OTA; Januar-Fassung der Großen Stille als Masterstand gesetzt |
 | 2026-09-08 | v4.0 | Kanon-Audit, Wissensstände und Konfliktmatrix eingeführt |
-| **2026-09-08** | **v4.1** | Repository-Historie geprüft; explizite Kanonrevision vom 19.07.2026 als höherwertig erkannt; Große Stille 13.01.–24.02.2087 wieder auf [K] gesetzt; April-/Juni-Stränge als veraltete Chronologie markiert; offene AXIS-/Ort-/Team-/Deklassifizierungsfragen getrennt erhalten |
+| **2026-09-08** | **v4.1** | Repository-Historie geprüft; explizite Kanonrevision vom 19.07.2026 als höherwertig erkannt; Große Stille 13.01.–24.02.2087 wieder auf [K] gesetzt; April-/Juni-Stränge als veraltete Chronologie markiert; offene AXIS-/Ort-/Team-/Deklassifizierungsfragen getrennt erhalten; post-2091-Auditachsen ergänzt |
 
 ---
 
