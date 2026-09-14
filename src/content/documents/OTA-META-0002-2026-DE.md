@@ -5,13 +5,13 @@ series: "META"
 seriesNumber: 2
 year: 2026
 language: "DE"
-version: "v4.4"
+version: "v4.5"
 status: "AKTIV"
 accessLevel: 0
 epistemicStatus: ["F", "W"]
 tags: ["Master-Timeline", "NOXIA", "PROMETHEUS", "Das Schweigen", "Große Stille", "Kanonabgleich", "Wissensstand", "Konfliktmatrix", "SSF", "Iterius Prime", "Kaiwu", "Utopia Planitia", "Mars"]
-relatedDocuments: ["OTA-HIS-0004-2069-DE", "OTA-HIS-0003-2087-DE", "OTA-HIS-0004-2021-DE", "OTA-HIS-0005-2050-DE", "OTA-ART-0001-2087-DE", "OTA-SCI-0004-2087-DE", "OTA-TEC-0003-2087-DE", "OTA-NAR-0001-2087-DE", "OTA-BIO-0012-2087-DE", "OTA-ORG-0007-2031-DE", "OTA-ORG-0008-2087-DE", "OTA-META-0003-2045-DE", "OTA-META-0004-2076-DE", "OTA-CHR-0001-2072-DE", "OTA-SOC-0001-2076-DE"]
-summary: "Kanonische Referenz- und Audit-Timeline für den NOXIA-/Generation-Mars-Kontext. v4.4 führt den SSF-Reconciliation-Stand, belastbare Eckpunkte von Iterius Prime sowie den inzwischen gesetzten Kaiwu-/Utopia-Strang zusammen und hält verbleibende Quellenkonflikte sichtbar."
+relatedDocuments: ["OTA-HIS-0004-2069-DE", "OTA-HIS-0003-2087-DE", "OTA-HIS-0004-2021-DE", "OTA-HIS-0005-2050-DE", "OTA-ART-0001-2087-DE", "OTA-SCI-0004-2087-DE", "OTA-TEC-0003-2087-DE", "OTA-NAR-0001-2087-DE", "OTA-BIO-0012-2087-DE", "OTA-ORG-0007-2045-DE", "OTA-ORG-0007-2031-DE", "OTA-ORG-0008-2087-DE", "OTA-META-0003-2045-DE", "OTA-META-0004-2076-DE", "OTA-CHR-0001-2072-DE", "OTA-SOC-0001-2076-DE"]
+summary: "Kanonische Referenz- und Audit-Timeline für den NOXIA-/Generation-Mars-Kontext. v4.5 schließt die SSF-Reconciliation ab, führt den Kaiwu-/Utopia-Strang zusammen und hält verbleibende offene Punkte ohne Legacy-Konflikte sichtbar."
 kg:
   schema: KXF-0.2
   master: kueper-knowledge-graph
@@ -27,7 +27,7 @@ kg:
 # OTA-TIMELINE-ABGLEICH
 ## Kanonische Master-Timeline NOXIA / Generation Mars
 
-**Version:** 4.4  
+**Version:** 4.5  
 **Stand:** 14. September 2026  
 **Status:** Aktive Kanon-Referenz und Konfliktregister
 
@@ -65,7 +65,7 @@ Ein älteres Dokument bleibt als Quelle erhalten, kann aber für einzelne Angabe
 | Zeitpunkt | Ereignis | Status | Primärbezug / Hinweis |
 |---|---|---:|---|
 | **2040** | Standort des späteren Iterius Prime wird als **Proposed Site Alpha-7** kartiert/bezeichnet | **[K] Werkkanon** | *Generation Mars*; spätere Karte in Keikos Besitz |
-| **2045** | **Gründung der Solar Science Foundation** | **[K]** | explizite Autorentscheidung 08.09.2026; ältere Angaben 2031/2043 sind [D] |
+| **2045** | **Gründung der Solar Science Foundation** | **[K]** | explizite Autorentscheidung 08.09.2026; reconciliert in OTA-ORG-0007-2045-DE; ältere Angaben 2031/2043 sind [D] |
 | **2045** | PROMETHEUS entsteht unbeabsichtigt im chinesischen National AI Lab | **[K]** | OTA-HIS-0004-2069-DE |
 | **2045–2056** | PROMETHEUS erweitert Analyse und Zugriff auf Infrastruktur | **[K]** | OTA-HIS-0004-2069-DE |
 | **14.01.2056, 03:22 UTC** | Zweite Schwelle | **[K]** | OTA-HIS-0004-2069-DE |
@@ -96,7 +96,7 @@ Ein älteres Dokument bleibt als Quelle erhalten, kann aber für einzelne Angabe
 | **2091** | Kaiwu ist das zweite permanente Marszentrum mit Ressourcen-, Fertigungs- und Schwerlogistikprofil; genaue Einwohnerzahl bleibt provisional | **[K/P]** | Rolle und Identität [K], Größenordnung [P]; OTA-META-0004-2076-DE |
 | **2091** | Ereigniskomplex von *noχ¹ᐃ: Generation Mars*; Erde, Luna, L5, Ceres und Mars sind gesellschaftlich verbunden | **[K]** | Werkkanon |
 
-> **SSF-Hinweis:** Die SSF besitzt nach aktueller Autorentscheidung weder ein Luna- noch ein Mars-Büro. Interplanetare Präsenz bedeutet Netzwerk, Programme, Mitglieder, Partner und Wissensaustausch, nicht automatisch physische Niederlassungen. Frühere Angaben zu Shackleton Enclave als operativer SSF-Zentrale sowie zu einem SSF-Marsbüro in Iterius Prime sind **[D]**. `OTA-ORG-0007-2031-DE` enthält diese älteren Angaben weiterhin und muss als Quelldokument noch reconciliert werden; bis dahin bleibt der Konflikt sichtbar.
+> **SSF-Hinweis:** Die SSF besitzt nach aktueller Autorentscheidung weder ein Luna- noch ein Mars-Büro. Interplanetare Präsenz bedeutet Netzwerk, Programme, Mitglieder, Partner und Wissensaustausch, nicht automatisch physische Niederlassungen. Die aktuelle Organisationsfassung ist `OTA-ORG-0007-2045-DE`. `OTA-ORG-0007-2031-DE` bleibt ausschließlich als historische Entwicklungsfassung erhalten; seine 2031/2043-, Büro- und alte 2087-Angaben sind für den aktuellen Kanon [D].
 
 ---
 
@@ -220,16 +220,17 @@ Für jedes relevante Ereignis werden `event_truth`, `public_knowledge`, `institu
 
 | Thema | Stand | Status |
 |---|---|---:|
-| **SSF-Gründung** | 2045; `OTA-ORG-0007-2031-DE` führt noch ältere 2031/2043-Angaben | **[K/C]** bis Quelldokument reconciliert ist |
-| **SSF-Luna-/Mars-Büros** | nach aktueller Autorentscheidung gestrichen; `OTA-ORG-0007-2031-DE` enthält sie noch | **[D/C]** für alte Büroangaben |
+| **SSF-Gründung** | 2045; aktive Organisationsfassung `OTA-ORG-0007-2045-DE`; ältere 2031/2043-Fassung als Legacy erhalten | **[K]** |
+| **SSF-Luna-/Mars-Büros** | nicht Teil des aktuellen Kanons; interplanetare Präsenz = Netzwerk/Programme/Partner | **[K]**, alte Büroangaben **[D]** |
 | **SSF-Gründungsort / Hauptsitz** | noch festzulegen | **[O]** |
+| **SSF-Gründerperson / Detailgovernance** | Elena Vasquez und ältere Detailangaben nicht automatisch übernommen | **[P/O]** |
 | **Kaiwu** | zweite permanente Mars-Siedlung; Utopia Planitia; chinesisch initiiert, später internationalisiert; Industrie-/Ressourcenprofil | **[K]** |
 | **Kaiwu Datierung/Größe/Rechtsform** | 2076/77 erste permanente Crew und spätere Einwohnerzahlen als Arbeitskorridor; exakte Form noch offen | **[P/O]** |
 | **Iterius Prime 2091** | kanonischer Name; ca. 5.000 Einwohner | **[K]** |
 | **~30.000 Einwohner 2091** | ältere Sammelangabe | **[D]** |
 | **Iteratio Prime Alpha** | ältere Form, nicht kanonischer Siedlungsname | **[D]** |
 | **Beginn dauerhafter Besiedlung Alpha-7/Iterius Prime** | noch kein belastbarer Primärbeleg | **[O]** |
-| **Mars-Bevölkerung 2067** | ältere ORG-Angabe „knapp 1.000“ stammt aus inzwischen revisionsbedürftigem Organisationsprofil; noch nicht hochstufen | **[P]** |
+| **Mars-Bevölkerung 2067** | ältere ORG-Angabe „knapp 1.000“ wird in der reconciliierten SSF-Fassung nicht übernommen | **[P]** |
 | **MIMI-Ort/Funktion 2065** | Jahr vorhanden, genaue Zuordnung offen | **[P/O]** |
 | **Mars Council 2087** | lokale Kompetenzverschiebung als plausibler Organisationsrahmen; Rechtsgrundlage/Details offen | **[P/O]** |
 | **Monolith/AXIS/Global Array** | Teilfragen weiterhin offen | **[C/O]** |
@@ -283,7 +284,8 @@ Kanonische OTA-ID: `DOC:OTA:OTA-META-0002-2026-DE`.
 | 2026-09-08 | v4.1 | Repository-Historie; Große Stille reconciliert; post-2091-Auditachsen |
 | 2026-09-08 | v4.2 | SSF-Gründung 2045; alte 2031/2043- und Luna-Büro-Angaben verworfen |
 | 2026-09-08 | v4.3 | Mars-/Iterius-Audit: Proposed Site Alpha-7 (2040), Mars-Kinder 2069 und Iterius Prime 2091 mit ca. 5.000 Einwohnern als Werkfixpunkte aufgenommen; ~30.000 und `Iteratio Prime Alpha` verworfen; frühe Besiedlungsdaten bewusst offen gehalten; SSF-Marsbüro gestrichen |
-| **2026-09-14** | **v4.4** | Kaiwu/Utopia-Strang aus META-0004/HIS-0004-2021 integriert; Mars-Council-Anschluss ergänzt; offene Mars-Siedlungsfragen an den neuen Kanon angepasst; fortbestehende SSF-Widersprüche in ORG-0007 explizit als Quelldokument-Nacharbeit markiert |
+| 2026-09-14 | v4.4 | Kaiwu/Utopia-Strang aus META-0004/HIS-0004-2021 integriert; Mars-Council-Anschluss ergänzt; offene Mars-Siedlungsfragen an den neuen Kanon angepasst; fortbestehende SSF-Widersprüche in ORG-0007 explizit als Quelldokument-Nacharbeit markiert |
+| **2026-09-14** | **v4.5** | SSF-Reconciliation abgeschlossen: aktive Organisationsfassung auf `OTA-ORG-0007-2045-DE` gelegt; `OTA-ORG-0007-2031-DE` als Legacy-/Provenienzfassung erhalten; 2031/2043- und feste Luna-/Mars-Büroangaben endgültig als [D] eingeordnet; offene Gründer-/Sitz-/Governance-Details nicht erfunden. |
 
 ---
 
