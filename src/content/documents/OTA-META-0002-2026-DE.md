@@ -5,13 +5,13 @@ series: "META"
 seriesNumber: 2
 year: 2026
 language: "DE"
-version: "v4.3"
+version: "v4.4"
 status: "AKTIV"
 accessLevel: 0
 epistemicStatus: ["F", "W"]
-tags: ["Master-Timeline", "NOXIA", "PROMETHEUS", "Das Schweigen", "Große Stille", "Kanonabgleich", "Wissensstand", "Konfliktmatrix", "SSF", "Iterius Prime", "Mars"]
-relatedDocuments: ["OTA-HIS-0004-2069-DE", "OTA-HIS-0003-2087-DE", "OTA-ART-0001-2087-DE", "OTA-SCI-0004-2087-DE", "OTA-TEC-0003-2087-DE", "OTA-NAR-0001-2087-DE", "OTA-BIO-0012-2087-DE", "OTA-ORG-0007-2031-DE", "OTA-META-0003-2045-DE"]
-summary: "Kanonische Referenz- und Audit-Timeline für den NOXIA-/Generation-Mars-Kontext. v4.3 reconciliert SSF-Gründung und Netzwerkmodell sowie belastbare Eckpunkte der Mars-Siedlungsentwicklung und Iterius Prime bis 2091."
+tags: ["Master-Timeline", "NOXIA", "PROMETHEUS", "Das Schweigen", "Große Stille", "Kanonabgleich", "Wissensstand", "Konfliktmatrix", "SSF", "Iterius Prime", "Kaiwu", "Utopia Planitia", "Mars"]
+relatedDocuments: ["OTA-HIS-0004-2069-DE", "OTA-HIS-0003-2087-DE", "OTA-HIS-0004-2021-DE", "OTA-HIS-0005-2050-DE", "OTA-ART-0001-2087-DE", "OTA-SCI-0004-2087-DE", "OTA-TEC-0003-2087-DE", "OTA-NAR-0001-2087-DE", "OTA-BIO-0012-2087-DE", "OTA-ORG-0007-2031-DE", "OTA-ORG-0008-2087-DE", "OTA-META-0003-2045-DE", "OTA-META-0004-2076-DE", "OTA-CHR-0001-2072-DE", "OTA-SOC-0001-2076-DE"]
+summary: "Kanonische Referenz- und Audit-Timeline für den NOXIA-/Generation-Mars-Kontext. v4.4 führt den SSF-Reconciliation-Stand, belastbare Eckpunkte von Iterius Prime sowie den inzwischen gesetzten Kaiwu-/Utopia-Strang zusammen und hält verbleibende Quellenkonflikte sichtbar."
 kg:
   schema: KXF-0.2
   master: kueper-knowledge-graph
@@ -27,8 +27,8 @@ kg:
 # OTA-TIMELINE-ABGLEICH
 ## Kanonische Master-Timeline NOXIA / Generation Mars
 
-**Version:** 4.3  
-**Stand:** 8. September 2026  
+**Version:** 4.4  
+**Stand:** 14. September 2026  
 **Status:** Aktive Kanon-Referenz und Konfliktregister
 
 > META-0002 beantwortet nicht nur, **was** geschieht, sondern auch, **wer es wann wissen kann**. Weltwissen, öffentliches Wissen, institutionelles Wissen und Figurenwissen werden getrennt geführt.
@@ -81,21 +81,26 @@ Ein älteres Dokument bleibt als Quelle erhalten, kann aber für einzelne Angabe
 | **Mitte 2068** | Kommunikation kehrt schrittweise zurück | **[K]** | OTA-HIS-0004-2069-DE |
 | **01/2069** | Erstes Versorgungsschiff landet; **Das Schweigen endet als Isolation** | **[K]** | OTA-HIS-0004-2069-DE |
 | **2069** | erste Generation auf Mars geborener Kinder ist vorhanden; 1-g-Trainingszentrifuge wird als Reaktion auf medizinische Fragen gebaut | **[K] Werkkanon** | *Generation Mars*, Kap. 1 |
+| **2072–2075** | Robotische Vorbereitung des späteren Kaiwu-Standorts in Utopia Planitia | **[P]** | OTA-HIS-0004-2021-DE; OTA-META-0004-2076-DE |
+| **2076/77** | Erste permanente Crew am Kaiwu-Standort; Kaiwu wird als zweite permanente Mars-Siedlung geführt | **[K/P]** | zweite permanente Siedlung [K], Datierung und Größenordnung [P]; OTA-META-0004-2076-DE |
+| **03.12.2080** | Maryem Hamid wird auf Mars geboren; Geburtsort **Kaiwu** | **[K]** | OTA-META-0004-2076-DE; OTA-CHR-0001-2072-DE |
 | **11.01.2087, 02:34 Mars-Zeit** | Wanddurchbruch in Sektor-7-Tief, 864 m | **[K]** | OTA-HIS-0003 v3.1 |
 | **13.01.2087, 03:14** | Signalregistrierung; James Nakamura berührt den Monolithen | **[K]** | OTA-HIS-0003 v3.1 |
 | **13.01.2087, 03:17** | Vollständiger interplanetarer Kommunikationsausfall; **Große Stille beginnt** | **[K]** | OTA-HIS-0003 v3.1 |
 | **13.01.2087** | 14 Tote im Ereigniskomplex: James Nakamura + 13 Personen im Forschungsshuttle | **[K]** | OTA-HIS-0003 v3.1 |
+| **01–02/2087** | Mars Council übernimmt während der Kommunikationskrise verstärkt lokale Koordinationskompetenzen; Iterius Prime und Utopia werden funktional enger gekoppelt | **[P]** | OTA-ORG-0008-2087-DE; Organisationsentwurf, keine Unabhängigkeitserklärung |
 | **24.02.2087, 15:14** | **Große Stille endet** nach 42 Tagen und 12 Stunden | **[K]** | OTA-HIS-0003 v3.1 |
 | **2088** | PROMETHEUS-Bewegung um Haruka Nakamura etabliert sich | **[P]** | Detailaudit folgt |
 | **2091** | **Iterius Prime hat rund 5.000 Einwohner** | **[K] Werkkanon** | mehrfach im aktuellen *Generation Mars*-Manuskript belegt; ältere ~30.000-Angabe ist [D] für 2091 |
 | **2091** | Iterius Prime ist eine tief gestaffelte, kilometerweit verbundene unterirdische Siedlung mit zahlreichen Sektoren/Ebenen | **[K] Werkkanon** | Wohnbereiche, Medical Center, Akademie, lokale Netze, Geothermie und Wartungsrobotik im Manuskript |
+| **2091** | Kaiwu ist das zweite permanente Marszentrum mit Ressourcen-, Fertigungs- und Schwerlogistikprofil; genaue Einwohnerzahl bleibt provisional | **[K/P]** | Rolle und Identität [K], Größenordnung [P]; OTA-META-0004-2076-DE |
 | **2091** | Ereigniskomplex von *noχ¹ᐃ: Generation Mars*; Erde, Luna, L5, Ceres und Mars sind gesellschaftlich verbunden | **[K]** | Werkkanon |
 
-> **SSF-Hinweis:** Die SSF besitzt nach aktueller Autorentscheidung weder ein Luna- noch ein Mars-Büro. Interplanetare Präsenz bedeutet Netzwerk, Programme, Mitglieder, Partner und Wissensaustausch, nicht automatisch physische Niederlassungen. Frühere Angaben zu Shackleton Enclave als operativer SSF-Zentrale sowie zu einem SSF-Marsbüro in Iterius Prime sind **[D]**.
+> **SSF-Hinweis:** Die SSF besitzt nach aktueller Autorentscheidung weder ein Luna- noch ein Mars-Büro. Interplanetare Präsenz bedeutet Netzwerk, Programme, Mitglieder, Partner und Wissensaustausch, nicht automatisch physische Niederlassungen. Frühere Angaben zu Shackleton Enclave als operativer SSF-Zentrale sowie zu einem SSF-Marsbüro in Iterius Prime sind **[D]**. `OTA-ORG-0007-2031-DE` enthält diese älteren Angaben weiterhin und muss als Quelldokument noch reconciliert werden; bis dahin bleibt der Konflikt sichtbar.
 
 ---
 
-## III. Mars-Siedlungsentwicklung / Iterius Prime
+## III. Mars-Siedlungsentwicklung / Iterius Prime und Kaiwu
 
 ### 3.1 Was derzeit wirklich belegt ist
 
@@ -109,8 +114,13 @@ Der Audit trennt harte Werkfixpunkte von älteren Sammelangaben:
 | **2065** | MIMI wird auf Mars eingeführt/installiert | **[P]** |
 | **2067–2069** | Mars kann eine lange Kommunikations- und Versorgungskrise als eigenständige Siedlungsgesellschaft überstehen | **[K]** für Ereignis; genaue Einwohnerzahl separat offen |
 | **2069** | erste Mars-Kinder existieren; medizinische Infrastruktur reagiert auf dauerhaft in 0,38 g aufwachsende Kinder | **[K]** |
+| **2072–2075** | Utopia/Kaiwu wird robotisch vorbereitet | **[P]** |
+| **2076/77** | Kaiwu verfügt über eine permanente Crew; Kaiwu ist die zweite permanente Mars-Siedlung | **[K/P]** |
+| **2080** | Kaiwu ist als familienfähige Siedlung angelegt; Maryem Hamids Geburt am 03.12.2080 in Kaiwu ist gesetzt | **[K/P]** |
+| **2087** | Iterius Prime und Utopia/Kaiwu sind während der Großen Stille funktional auf marsweite Koordination angewiesen | **[P]** |
 | **2091** | Iterius Prime: ca. 5.000 Einwohner | **[K]** |
 | **2091** | unterirdisches Sektor-/Ebenensystem bis mindestens ca. 420 m Tiefe; Akademie bei ca. 180 m, Beobachtungsplattform bei ca. 80 m | **[K] Werkkanon** |
+| **2091** | Kaiwu: Identität, Utopia-Lage und industrielles Profil gesetzt; konkrete Bevölkerungszahl weiterhin provisional | **[K/P]** |
 
 ### 3.2 Noch nicht kanonisieren
 
@@ -119,13 +129,16 @@ Der derzeitige Quellenbestand reicht **nicht** aus, um ohne neue Autorentscheidu
 - wann die ersten Menschen am Standort Alpha-7 dauerhaft bleiben;
 - wann der Name **Iterius Prime** erstmals offiziell verwendet wird;
 - wie viele Menschen 2056, 2063, 2065 oder 2067 dort leben;
-- ob Iterius Prime die erste oder eine von mehreren permanenten Marskolonien ist;
+- welche konkrete Siedlung vor Kaiwu als erste permanente Mars-Siedlung zu zählen ist, sofern dies nicht durch Werkkanon eindeutig belegt wird;
 - ob MIMI ursprünglich direkt in Iterius Prime oder an anderer Stelle auf Mars installiert wird;
-- wie schnell Bevölkerung durch Zuzug gegenüber Geburten wächst.
+- wie schnell Bevölkerung durch Zuzug gegenüber Geburten wächst;
+- die exakte Kaiwu-Koordinate, formale Rechtsstruktur und endgültige Bevölkerungszahlen.
 
 ### 3.3 Namensreconciliation
 
 **[K]** Der kanonische Siedlungsname 2091 lautet **Iterius Prime**.
+
+**[K]** Der Name der zweiten permanenten Mars-Siedlung lautet **Kaiwu (开物)**; der Standort liegt in Utopia Planitia.
 
 **[D]** Die ältere Form `Iteratio Prime Alpha` wird nicht mehr als kanonischer Siedlungsname verwendet. Sie ist nur in einem älteren Mastereintrag zur MIMI-Installation belegt.
 
@@ -136,6 +149,8 @@ Der derzeitige Quellenbestand reicht **nicht** aus, um ohne neue Autorentscheidu
 Das aktuelle Werkmanuskript nennt wiederholt **5.000 Menschen** in Iterius Prime. Diese Zahl hat als Werkkanon Vorrang vor älteren Sammelangaben von ungefähr 30.000.
 
 Die physische Größe der Siedlung widerspricht der Einwohnerzahl nicht: kilometerlange Korridore, zahlreiche Ebenen und große Tiefen können aus Sicherheitssegmentierung, Versorgung, Industrie, Lagerung, Forschung, Verkehrswegen, Reservevolumen und über Jahrzehnte gewachsener Infrastruktur resultieren. Volumen ist nicht mit dichter Wohnfläche gleichzusetzen.
+
+Für Kaiwu wird 2091 derzeit nur eine **provisionale Größenordnung** geführt. Die Identität als zweites permanentes Marszentrum und das funktionale Profil sind davon unabhängig kanonisch gesetzt.
 
 ---
 
@@ -205,15 +220,18 @@ Für jedes relevante Ereignis werden `event_truth`, `public_knowledge`, `institu
 
 | Thema | Stand | Status |
 |---|---|---:|
-| **SSF-Gründung** | 2045 | **[K]** |
-| **SSF-Luna-/Mars-Büros** | gestrichen; interplanetare Präsenz = Netzwerk/Programme, nicht Niederlassungen | **[D]** für alte Büroangaben |
+| **SSF-Gründung** | 2045; `OTA-ORG-0007-2031-DE` führt noch ältere 2031/2043-Angaben | **[K/C]** bis Quelldokument reconciliert ist |
+| **SSF-Luna-/Mars-Büros** | nach aktueller Autorentscheidung gestrichen; `OTA-ORG-0007-2031-DE` enthält sie noch | **[D/C]** für alte Büroangaben |
 | **SSF-Gründungsort / Hauptsitz** | noch festzulegen | **[O]** |
+| **Kaiwu** | zweite permanente Mars-Siedlung; Utopia Planitia; chinesisch initiiert, später internationalisiert; Industrie-/Ressourcenprofil | **[K]** |
+| **Kaiwu Datierung/Größe/Rechtsform** | 2076/77 erste permanente Crew und spätere Einwohnerzahlen als Arbeitskorridor; exakte Form noch offen | **[P/O]** |
 | **Iterius Prime 2091** | kanonischer Name; ca. 5.000 Einwohner | **[K]** |
 | **~30.000 Einwohner 2091** | ältere Sammelangabe | **[D]** |
 | **Iteratio Prime Alpha** | ältere Form, nicht kanonischer Siedlungsname | **[D]** |
 | **Beginn dauerhafter Besiedlung Alpha-7/Iterius Prime** | noch kein belastbarer Primärbeleg | **[O]** |
 | **Mars-Bevölkerung 2067** | ältere ORG-Angabe „knapp 1.000“ stammt aus inzwischen revisionsbedürftigem Organisationsprofil; noch nicht hochstufen | **[P]** |
 | **MIMI-Ort/Funktion 2065** | Jahr vorhanden, genaue Zuordnung offen | **[P/O]** |
+| **Mars Council 2087** | lokale Kompetenzverschiebung als plausibler Organisationsrahmen; Rechtsgrundlage/Details offen | **[P/O]** |
 | **Monolith/AXIS/Global Array** | Teilfragen weiterhin offen | **[C/O]** |
 
 ---
@@ -264,7 +282,8 @@ Kanonische OTA-ID: `DOC:OTA:OTA-META-0002-2026-DE`.
 | 2026-09-08 | v4.0 | Kanon-Audit, Wissensstände und Konfliktmatrix |
 | 2026-09-08 | v4.1 | Repository-Historie; Große Stille reconciliert; post-2091-Auditachsen |
 | 2026-09-08 | v4.2 | SSF-Gründung 2045; alte 2031/2043- und Luna-Büro-Angaben verworfen |
-| **2026-09-08** | **v4.3** | Mars-/Iterius-Audit: Proposed Site Alpha-7 (2040), Mars-Kinder 2069 und Iterius Prime 2091 mit ca. 5.000 Einwohnern als Werkfixpunkte aufgenommen; ~30.000 und `Iteratio Prime Alpha` verworfen; frühe Besiedlungsdaten bewusst offen gehalten; SSF-Marsbüro gestrichen |
+| 2026-09-08 | v4.3 | Mars-/Iterius-Audit: Proposed Site Alpha-7 (2040), Mars-Kinder 2069 und Iterius Prime 2091 mit ca. 5.000 Einwohnern als Werkfixpunkte aufgenommen; ~30.000 und `Iteratio Prime Alpha` verworfen; frühe Besiedlungsdaten bewusst offen gehalten; SSF-Marsbüro gestrichen |
+| **2026-09-14** | **v4.4** | Kaiwu/Utopia-Strang aus META-0004/HIS-0004-2021 integriert; Mars-Council-Anschluss ergänzt; offene Mars-Siedlungsfragen an den neuen Kanon angepasst; fortbestehende SSF-Widersprüche in ORG-0007 explizit als Quelldokument-Nacharbeit markiert |
 
 ---
 
