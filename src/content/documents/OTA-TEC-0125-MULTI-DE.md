@@ -3,7 +3,7 @@ signature: "OTA-TEC-0125-MULTI-DE"
 title: "Mishkenaz Sprachsystem — Grammatik, Wortbildung und Aktivierungssequenzen"
 series: "TEC"
 seriesNumber: 125
-year: "MULTI"
+year: 2026
 language: "DE"
 version: "v1.0"
 status: "AKTIV"
