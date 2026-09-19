@@ -4,7 +4,7 @@ import path from 'node:path';
 const ROOT = process.cwd();
 const DOCS_DIR = path.join(ROOT, 'src', 'content', 'documents');
 const OUT_FILE = path.join(ROOT, 'src', 'data', 'epistemic-quality.generated.json');
-const MARKERS = ['R', 'H', 'T', 'S', 'I', 'F', 'W'];
+const MARKERS = ['R', 'H', 'T', 'S', 'I', 'F', 'W', 'HAY'];
 const CANONICAL = ['R', 'H', 'T', 'S', 'I', 'F'];
 
 function splitFrontmatter(raw) {
@@ -29,9 +29,13 @@ function normalize(body) {
   return body.replace(/\\\[/g, '[').replace(/\\\]/g, ']');
 }
 
+function markerMatches(line) {
+  return [...line.matchAll(/\[(HAY|[RHTSIFW])\]/g)].map(match => match[1]);
+}
+
 function counts(body) {
   const result = Object.fromEntries(MARKERS.map(marker => [marker, 0]));
-  for (const match of body.matchAll(/\[([RHTSIFW])\]/g)) result[match[1]] += 1;
+  for (const marker of markerMatches(body)) result[marker] += 1;
   return result;
 }
 
@@ -40,7 +44,7 @@ function legends(body) {
   const lines = body.split(/\r?\n/);
   for (let index = 0; index < lines.length; index += 1) {
     const line = lines[index].replace(/\s+/g, ' ').trim();
-    const markers = [...line.matchAll(/\[([RHTSIFW])\]/g)].map(match => match[1]);
+    const markers = markerMatches(line);
     if (!markers.length) continue;
     if (!/(?:=|Real|Empir|Hypoth|Theoret|Spekul|Fikt|Fiction|Interpret|Werk|Welt|World|Framework|Archiv|Quelle|Marker|Legende|Legend|belegt|etabliert|Hayashi)/i.test(line)) continue;
     result.push({ line: index + 1, markers: [...new Set(markers)], text: line.slice(0, 360) });
@@ -68,9 +72,10 @@ for (const file of files) {
   if (frontmatterMarkers.includes('W') || markerCounts.W > 0) flags.push('WORK_SETTING_W_PRESENT');
   if ((frontmatterMarkers.includes('R') || markerCounts.R > 0) && (frontmatterMarkers.includes('F') || markerCounts.F > 0)) flags.push('MIXED_REAL_FICTION');
   if (legendLines.length) flags.push('LOCAL_MARKER_LEGEND');
+  if (markerCounts.HAY > 0) flags.push('HAYASHI_SOURCE_MARKER_PRESENT');
   if (legendLines.some(item => item.markers.includes('H') && /Hayashi/i.test(item.text))) flags.push('H_HAS_LOCAL_NON_HYPOTHESIS_MEANING');
 
-  const priority = (['SCI', 'FND'].includes(series) ? 4 : 0) + missingInFrontmatter.length * 3 + (flags.includes('WORK_SETTING_W_PRESENT') ? 2 : 0) + (flags.includes('MIXED_REAL_FICTION') ? 2 : 0) + (legendLines.length ? 1 : 0);
+  const priority = (['SCI', 'FND'].includes(series) ? 4 : 0) + missingInFrontmatter.length * 3 + (flags.includes('WORK_SETTING_W_PRESENT') ? 2 : 0) + (flags.includes('MIXED_REAL_FICTION') ? 2 : 0) + (legendLines.length ? 1 : 0) + (flags.includes('H_HAS_LOCAL_NON_HYPOTHESIS_MEANING') ? 5 : 0);
 
   documents.push({ file, signature, series, frontmatterMarkers, bodyMarkers, markerCounts, missingInFrontmatter, legendLines, flags, priority });
 }
@@ -92,6 +97,7 @@ const summary = {
   sciFndWithBodyMarkersMissingInFrontmatter: documents.filter(document => ['SCI', 'FND'].includes(document.series) && document.missingInFrontmatter.length).length,
   documentsWithMixedRealFiction: documents.filter(document => document.flags.includes('MIXED_REAL_FICTION')).length,
   documentsWithLocalLegend: documents.filter(document => document.flags.includes('LOCAL_MARKER_LEGEND')).length,
+  documentsWithHayashiSourceMarker: documents.filter(document => document.flags.includes('HAYASHI_SOURCE_MARKER_PRESENT')).length,
   documentsWhereHHasLocalNonHypothesisMeaning: documents.filter(document => document.flags.includes('H_HAS_LOCAL_NON_HYPOTHESIS_MEANING')).length,
   markerSummary,
 };
@@ -106,3 +112,5 @@ console.log(`Body/frontmatter mismatches: ${summary.documentsWithBodyMarkersMiss
 console.log(`SCI/FND mismatches: ${summary.sciFndWithBodyMarkersMissingInFrontmatter}`);
 console.log(`Mixed R/F: ${summary.documentsWithMixedRealFiction}`);
 console.log(`Local legends: ${summary.documentsWithLocalLegend}`);
+console.log(`Hayashi HAY source markers: ${summary.documentsWithHayashiSourceMarker}`);
+console.log(`Remaining H=Hayashi collisions: ${summary.documentsWhereHHasLocalNonHypothesisMeaning}`);
