@@ -59,6 +59,63 @@ const reviews = [
       'OTA-SCI-0009-2025-DE',
     ],
   },
+  {
+    signature: 'OTA-SCI-0025-2091-DE',
+    title: 'Solare Demographie 2091 — Kanonische Bevölkerungszahlen des Sonnensystems',
+    reviewedAt: '2026-09-19T18:41:25+02:00',
+    relations: [
+      'OTA-ORG-0005-2090-DE',
+      'OTA-TEC-0025-2050-DE',
+      'OTA-ORG-0002-2091-DE',
+    ],
+  },
+  {
+    signature: 'OTA-SCI-0026-2026-DE',
+    title: 'Interstellare Schwefelchemie — Die Entdeckung von 2,5-Cyclohexadien-1-thion',
+    reviewedAt: '2026-09-19T18:41:25+02:00',
+    relations: [
+      'OTA-SCI-0009-2025-DE',
+      'OTA-SCI-0010-2025-DE',
+      'OTA-FND-0002-2025-DE',
+    ],
+  },
+  {
+    signature: 'OTA-SCI-0009-2025-DE',
+    title: 'Planetare Schumann-Resonanzen und AVI-Kopplung',
+    reviewedAt: '2026-09-19T18:41:25+02:00',
+    relations: [
+      'OTA-FND-0002-2025-DE',
+      'OTA-FND-0004-2025-DE',
+      'OTA-MON-0002-2142-DE',
+      'OTA-SCI-0008-2096-DE',
+      'OTA-RED-0012-2171-DE',
+      'OTA-TEC-0001-2196-DE',
+    ],
+  },
+  {
+    signature: 'OTA-FND-0009-2026-DE',
+    title: 'Biotechnologie vs. Metallurgie — Zwei paradigmatische Pfade der Zivilisation',
+    reviewedAt: '2026-09-19T18:41:25+02:00',
+    relations: [
+      'OTA-SCI-0018-60000BCE-DE',
+      'OTA-CUL-0002-60000BCE-DE',
+      'OTA-OBS-0002-2026-DE',
+      'OTA-FND-0001-2025-DE',
+    ],
+  },
+  {
+    signature: 'OTA-FND-0010-2026-DE',
+    title: 'Das χ-Feld als Präkursor-Theorie',
+    reviewedAt: '2026-09-19T18:41:25+02:00',
+    expectedEpistemicStatus: ['T', 'H', 'S', 'W'],
+    epistemicStatus: ['I', 'S'],
+    relations: [
+      'OTA-SCI-0024-2026-EN',
+      'OTA-SCI-0024-2026-DE',
+      'OTA-SCI-0009-2025-DE',
+      'OTA-TEC-0001-2196-DE',
+    ],
+  },
 ];
 
 const knownFiles = new Set(fs.readdirSync(DOCS_DIR));
@@ -76,11 +133,16 @@ function relationYaml(targets) {
   return lines.join('\n');
 }
 
+function epistemicYaml(values) {
+  return `epistemicStatus: [${values.map(value => `"${value}"`).join(', ')}]`;
+}
+
 function patchFrontmatter(raw, review) {
   const match = raw.match(/^---\s*\r?\n([\s\S]*?)\r?\n---\s*\r?\n?/);
   if (!match) throw new Error(`${review.signature}: missing frontmatter`);
 
   let fm = match[1];
+  const reviewedAt = review.reviewedAt || REVIEWED_AT;
   const genericTitle = `title: "${review.signature}"`;
   const canonicalTitle = `title: "${review.title}"`;
 
@@ -88,6 +150,16 @@ function patchFrontmatter(raw, review) {
     fm = fm.replace(genericTitle, canonicalTitle);
   } else if (!fm.includes(canonicalTitle)) {
     throw new Error(`${review.signature}: unexpected title state`);
+  }
+
+  if (review.epistemicStatus) {
+    const expectedLine = epistemicYaml(review.expectedEpistemicStatus || []);
+    const desiredLine = epistemicYaml(review.epistemicStatus);
+    if (fm.includes(expectedLine)) {
+      fm = fm.replace(expectedLine, desiredLine);
+    } else if (!fm.includes(desiredLine)) {
+      throw new Error(`${review.signature}: epistemicStatus changed since review; refusing to overwrite`);
+    }
   }
 
   if (review.relations.length) {
@@ -108,13 +180,12 @@ function patchFrontmatter(raw, review) {
   if (!/^updatedAt:/m.test(fm)) {
     const marker = '\nkg:';
     if (!fm.includes(marker)) throw new Error(`${review.signature}: kg block marker not found`);
-    fm = fm.replace(marker, `\nupdatedAt: "${REVIEWED_AT}"\nprovenance:\n  reviewedAt: "${REVIEWED_AT}"\n  reviewStatus: "metadata-reviewed"${marker}`);
-  } else if (!fm.includes(`reviewedAt: "${REVIEWED_AT}"`)) {
+    fm = fm.replace(marker, `\nupdatedAt: "${reviewedAt}"\nprovenance:\n  reviewedAt: "${reviewedAt}"\n  reviewStatus: "metadata-reviewed"${marker}`);
+  } else if (!fm.includes(`reviewedAt: "${reviewedAt}"`)) {
     throw new Error(`${review.signature}: lifecycle fields changed since review; refusing to overwrite`);
   }
 
-  const rebuilt = raw.replace(match[1], fm);
-  return rebuilt;
+  return raw.replace(match[1], fm);
 }
 
 let plannedChanges = 0;
@@ -133,7 +204,8 @@ for (const review of reviews) {
   }
 
   plannedChanges += 1;
-  console.log(`${CHECK_ONLY ? 'Validated' : 'Curating'}: ${review.signature} → ${review.title} (${review.relations.length} explicit relations)`);
+  const epistemicNote = review.epistemicStatus ? `; epistemicStatus → ${review.epistemicStatus.join('/')}` : '';
+  console.log(`${CHECK_ONLY ? 'Validated' : 'Curating'}: ${review.signature} → ${review.title} (${review.relations.length} explicit relations${epistemicNote})`);
   if (!CHECK_ONLY) {
     fs.writeFileSync(file, patched, 'utf8');
     writtenChanges += 1;
