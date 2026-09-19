@@ -1,7 +1,7 @@
 ---
 id: EXT-NOXIA-OTA-20260911-CHILD-DEVELOPMENT-PARTIAL-GRAVITY-EVIDENCE
 title: Evidence dossier for child growth and development in microgravity and partial gravity
-status: open
+status: done
 source: NOXIA
 target: OTA
 created: 2026-09-11

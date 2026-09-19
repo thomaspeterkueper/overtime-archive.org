@@ -1,7 +1,7 @@
 ---
 id: EXT-NOXIA-OTA-20260912-EXPAND-SCI0086-CHILD-DEVELOPMENT-PARTIAL-GRAVITY
 title: Expand OTA-SCI-0086 with postnatal child development in micro- and partial gravity
-status: open
+status: done
 source: NOXIA
 target: OTA
 created: 2026-09-12
