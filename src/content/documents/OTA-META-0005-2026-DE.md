@@ -5,13 +5,13 @@ series: "META"
 seriesNumber: 5
 year: 2026
 language: "DE"
-version: "v0.4"
+version: "v0.5"
 status: "ENTWURF"
 accessLevel: 0
 epistemicStatus: ["W"]
 tags: ["Mars", "Alpha-7", "Iterius Prime", "MIMI", "PROMETHEUS", "Das Schweigen", "Kanon-Audit", "2040", "2069"]
 relatedDocuments: ["OTA-META-0002-2026-DE", "OTA-HIS-0004-2069-DE", "OTA-HIS-0005-2050-DE"]
-summary: "Arbeitsaudit zur frühen Marsgesellschaft 2040–2069. v0.4 trennt reproduzierbare Primärbelege von derzeit nur sekundär in META-0002 geführten Werkkanon-Angaben; MIMI 2065 und ~1.000 Menschen 2067–2069 bleiben provisional."
+summary: "Arbeitsaudit zur frühen Marsgesellschaft 2040–2069. v0.5 trennt Primärbelege, Kanonreferenzen und ein ausdrücklich nichtkanonisches Bevölkerungsmodell; MIMI 2065 und ~1.000 Menschen 2067–2069 bleiben provisional."
 kg:
   schema: KXF-0.2
   master: kueper-knowledge-graph
@@ -24,7 +24,7 @@ kg:
 # Frühe Marsgesellschaft 2040–2069
 ## Kanon-Audit Alpha-7, MIMI und Iterius Prime
 
-**Version:** 0.4  
+**Version:** 0.5  
 **Stand:** 15. September 2026  
 **Status:** Arbeitsaudit, keine neue Kanonfestlegung
 
@@ -139,7 +139,49 @@ Das ist mit dem ersten Schweigen kompatibel und liefert einen plausiblen technis
 
 ---
 
-## 7. Reconciliation-Matrix
+
+## 7. Provisionaler Bevölkerungskorridor [P-Modell]
+
+Dieser Abschnitt ist **kein Werkkanon**. Er prüft nur, ob die vorhandenen Eckwerte demografisch und infrastrukturell miteinander vereinbar sind. Die Modellwerte dürfen nicht als historische OTA-Fakten zitiert werden.
+
+Als externe Plausibilitätsanker dienen lediglich allgemeine Siedlungsparameter: Erde–Mars-Transfergelegenheiten liegen typischerweise ungefähr 26 Monate auseinander; publizierte Mars-Siedlungsmodelle behandeln Wachstum als Kombination aus Zuwanderung und natürlicher Bevölkerungsentwicklung. Für frühe Siedlungen bleiben Lebenserhaltung, Energie, ISRU, Ersatzteile und lokale Fertigung die entscheidenden Kapazitätsgrenzen.
+
+### 7.1 Arbeitskorridor
+
+| Jahr | Mars gesamt / Iterius | Modellstatus | Interpretation |
+|---|---:|---|---|
+| 2056 | **250–450** | [P-Modell] | Bereits operative bemannte Infrastruktur; noch starke Erde-Abhängigkeit. |
+| 2063 | **600–850** | [P-Modell] | Größenordnung erlaubt institutionelle Marsregeln und wachsende Dauerbevölkerung, ohne bereits eine große Stadt vorauszusetzen. |
+| 2065 | **750–950** | [P-Modell] | MIMI-Einführung fällt in eine Siedlung, die bereits dauerhaft und organisatorisch differenziert sein kann. |
+| 2067 | **900–1.100** | [P-Modell] | Schließt den Legacy-Wert von ungefähr 1.000 Menschen ein; Beginn des ersten Schweigens. |
+| 2069 | **950–1.200** | [P-Modell] | Während der Isolation kaum migrationsgetriebenes Wachstum; Überleben und Stabilisierung dominieren. |
+| 2076/77 | **1.600–2.200 Iterius** + **40–60 Kaiwu** | [P-Modell] | Nach Wiederaufnahme regulärer Transfers beschleunigt sich das Wachstum; Kaiwu beginnt als zweite permanente Siedlung. |
+| 2080 | **2.200–3.000 Iterius** + **120–200 Kaiwu** | [P-Modell] | Zwei dauerhaft bewohnte Standorte; Geburten tragen zunehmend bei, Zuwanderung bleibt aber der stärkere Wachstumstreiber. |
+| 2087 | **3.800–4.700 Iterius** + **300–500 Kaiwu** | [P-Modell] | Vor dem Großen Schweigen ist Mars bereits eine kleine, verteilte Gesellschaft mit redundanter Infrastruktur. |
+| 2091 | **~5.000 Iterius [K laut META-0002]** + **500–800 Kaiwu [P]** | gemischt | Der bekannte Iterius-Eckwert wird nicht aus dem Modell erzeugt, sondern bildet dessen oberen Anschlussanker. |
+
+### 7.2 Was das Modell verlangt
+
+Der Sprung von ungefähr 1.000 Menschen um 2067–2069 auf ungefähr 5.000 allein in Iterius 2091 kann **nicht sinnvoll primär durch Geburten** erklärt werden. Das Modell verlangt mehrere größere Einwanderungswellen nach Wiederherstellung der Versorgung. Natürliche Bevölkerungsentwicklung wird erst mit wachsendem Familienanteil zu einem relevanten zweiten Faktor.
+
+Die Größenordnung bleibt mit dem industriellen Audit vereinbar, wenn lokale Fertigung, Wasser-/Sauerstoffgewinnung, Nahrungsproduktion, Energieerzeugung und Habitatbau schneller wachsen als die Bevölkerung. Genau deshalb ist der Übergang von Reparaturfähigkeit zu reproduktionsfähiger Infrastruktur in `OTA-HIS-0005-2050-DE` für die 2070er und 2080er zentral.
+
+### 7.3 Falsifizierbare Punkte
+
+Das Modell muss geändert werden, sobald ein Primärbeleg einen der folgenden Punkte festlegt:
+
+- eine wesentlich kleinere oder größere Bevölkerung 2056–2069;
+- konkrete Transferzahlen oder Transportkapazitäten;
+- einen späteren Beginn permanenter Besiedlung;
+- Geburtenzahlen oder Altersstruktur;
+- Habitat-, Energie- oder Nahrungsmittelkapazitäten;
+- eine andere Verteilung zwischen Iterius und Kaiwu.
+
+Damit bleibt der Korridor bewusst **revidierbar** und erzeugt keinen versteckten Kanon.
+
+---
+
+## 8. Reconciliation-Matrix
 
 | Frage | Aktueller Stand | Nächster Belegbedarf |
 |---|---|---|
@@ -157,12 +199,12 @@ Das ist mit dem ersten Schweigen kompatibel und liefert einen plausiblen technis
 
 ---
 
-## 8. Nächste Audit-Schritte
+## 9. Nächste Audit-Schritte
 
 1. Die richtige Werkfassung für **Proposed Site Alpha-7**, frühe Marskinder und die 1-g-Trainingszentrifuge lokalisieren; die aktuell auf Google Drive auffindbare *Generation Mars Version 3* enthält diese Belege nicht.
 2. Nach einem unabhängigen Werkbeleg für **~1.000 Menschen 2067–2069** suchen.
 3. Erst nach Auffinden der passenden Werkfassung die in META-0002 genannten Angaben als reproduzierte Primärbelege markieren; bis dahin bleibt META-0002 die sekundäre Kanonreferenz.
-4. Danach einen **provisionalen Bevölkerungskorridor 2056–2091** modellieren und gegen Habitat-/Industrieentwicklung testen.
+4. Den jetzt angelegten **provisionalen Bevölkerungskorridor 2056–2091** gegen neue Werkbelege, Transportkapazitäten und Habitat-/Industrieentwicklung testen und bei Bedarf revidieren.
 5. Aus den Belegen eine getrennte Ereigniskette für Standort, Besiedlung, Namensgebung und institutionelle Entwicklung erstellen.
 
 ---
@@ -172,7 +214,7 @@ Das ist mit dem ersten Schweigen kompatibel und liefert einen plausiblen technis
 | Datum | Version | Änderung |
 |---|---|---|
 | 2026-09-15 | 0.1 | Audit-Strang eröffnet; vorhandene Fixpunkte und offene Fragen getrennt, ohne neue Siedlungs- oder MIMI-Kanonentscheidung. |
-| 2026-09-15 | 0.2 | NXU-Autorensynthese als Quelle für MIMI 2065, `Iteratio Prime Alpha` und ~1.000 Menschen 2067–2069 lokalisiert; Legacy-Chronologie vom noch zu prüfenden Zahlen-/Namensbeleg getrennt; industrielle Mindestanforderung ergänzt. |\n| 2026-09-18 | 0.3 | Gegen aktuellen `META-0002 v4.5` reconciliert: `Iteratio Prime Alpha` bleibt [D] und wird nicht als offene Namensoption reaktiviert; Werkbelegpfad für Alpha-7/Marskinder/1-g-Zentrifuge präzisiert. |\n| 2026-09-19 | 0.4 | Quellenprüfung gegen die aktuell auf Google Drive auffindbare *Generation Mars Version 3*: Alpha-7, Marskinder und 1-g-Zentrifuge dort nicht reproduzierbar; sekundäre Kanonreferenz und noch zu sichernder Primärbeleg ausdrücklich getrennt. |
+| 2026-09-15 | 0.2 | NXU-Autorensynthese als Quelle für MIMI 2065, `Iteratio Prime Alpha` und ~1.000 Menschen 2067–2069 lokalisiert; Legacy-Chronologie vom noch zu prüfenden Zahlen-/Namensbeleg getrennt; industrielle Mindestanforderung ergänzt. |\n| 2026-09-18 | 0.3 | Gegen aktuellen `META-0002 v4.5` reconciliert: `Iteratio Prime Alpha` bleibt [D] und wird nicht als offene Namensoption reaktiviert; Werkbelegpfad für Alpha-7/Marskinder/1-g-Zentrifuge präzisiert. |\n| 2026-09-19 | 0.4 | Quellenprüfung gegen die aktuell auf Google Drive auffindbare *Generation Mars Version 3*: Alpha-7, Marskinder und 1-g-Zentrifuge dort nicht reproduzierbar; sekundäre Kanonreferenz und noch zu sichernder Primärbeleg ausdrücklich getrennt. |\n| 2026-09-19 | 0.5 | Explizit nichtkanonischen Bevölkerungskorridor 2056–2091 ergänzt; Legacy-~1.000, Iterius-~5.000 und Kaiwu-Arbeitskorridore als getrennte Anker behandelt; Zuwanderung als notwendiger Haupttreiber des Wachstums ausgewiesen. |
 
 ---
 
