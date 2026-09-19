@@ -71,6 +71,36 @@ const reviews = [
     reviewedAt: '2026-09-19T18:54:00+02:00',
     relations: ['OTA-HIS-0004-2085-DE','OTA-TEC-0025-2091-DE','OTA-TEC-0025-2050-DE','OTA-FND-0008-2025-DE','OTA-ORG-0004-2075-DE'],
   },
+  {
+    signature: 'OTA-TEC-0004-2087-DE',
+    title: 'GD-9 Seeker — Gravimetrie-Drohne mit AVI-Gegenmaßnahmen',
+    reviewedAt: '2026-09-19T19:03:00+02:00',
+    relations: ['OTA-ORG-0001-2079-DE','OTA-SCI-0009-2025-DE','OTA-NAR-0001-2087-DE','OTA-TEC-0015-2082-DE','OTA-TEC-0003-2087-DE'],
+  },
+  {
+    signature: 'OTA-RED-0003-2091-DE',
+    title: 'Monolith-Aktivierungssequenz V41 — Signalanalyse und Musterextraktion',
+    reviewedAt: '2026-09-19T19:03:00+02:00',
+    relations: ['OTA-RED-0012-2171-DE','OTA-SCI-0004-2087-DE','OTA-TEC-0023-2089-DE','OTA-RED-0019-2091-DE','OTA-HIS-0003-2087-DE'],
+  },
+  {
+    signature: 'OTA-TEC-0025-2091-DE',
+    title: 'Solar Student Exchange Program — Interplanetare Transferlogistik 2091',
+    reviewedAt: '2026-09-19T19:03:00+02:00',
+    relations: ['OTA-RED-0017-2091-DE','OTA-FND-0007-2025-DE','OTA-BIO-0008-2025-DE','OTA-BIO-0015-2091-DE','OTA-ORG-0002-2091-DE'],
+  },
+  {
+    signature: 'OTA-ORG-0004-2075-DE',
+    title: 'New Horizons Cluster — Der heliozentrische Freihafen',
+    reviewedAt: '2026-09-19T19:03:00+02:00',
+    relations: ['OTA-ORG-0003-2089-DE','OTA-TEC-0025-2050-DE','OTA-FND-0008-2025-DE','OTA-HIS-0004-2085-DE'],
+  },
+  {
+    signature: 'OTA-RED-0019-2091-DE',
+    title: 'Das 03:14-Ereignis — Forensische Rekonstruktion',
+    reviewedAt: '2026-09-19T19:03:00+02:00',
+    relations: ['OTA-BIO-0010-2025-DE','OTA-BIO-0008-2025-DE','OTA-TEC-0018-2091-DE','OTA-SCI-0014-2025-DE'],
+  },
 ];
 
 const knownFiles = new Set(fs.readdirSync(DOCS_DIR));
