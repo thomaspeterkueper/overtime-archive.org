@@ -36,6 +36,9 @@ jobs:
       - name: Validate reviewed SCI/FND curation plan
         run: node scripts/apply-reviewed-sci-fnd-metadata.mjs --check
 
+      - name: Validate reviewed cross-series curation plan
+        run: node scripts/apply-reviewed-cross-series-metadata.mjs --check
+
       - name: Validate Hayashi marker migration
         run: node scripts/migrate-hayashi-markers.mjs --check
 
@@ -74,6 +77,10 @@ jobs:
       - name: Apply reviewed SCI/FND metadata
         if: github.event_name == 'push' && github.ref == 'refs/heads/master'
         run: node scripts/apply-reviewed-sci-fnd-metadata.mjs
+
+      - name: Apply reviewed cross-series metadata
+        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+        run: node scripts/apply-reviewed-cross-series-metadata.mjs
 
       - name: Apply Hayashi marker migration
         if: github.event_name == 'push' && github.ref == 'refs/heads/master'
