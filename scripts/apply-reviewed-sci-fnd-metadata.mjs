@@ -142,12 +142,14 @@ function patchFrontmatter(raw, review) {
   if (!match) throw new Error(`${review.signature}: missing frontmatter`);
 
   let fm = match[1];
+  let semanticChanged = false;
   const reviewedAt = review.reviewedAt || REVIEWED_AT;
   const genericTitle = `title: "${review.signature}"`;
   const canonicalTitle = `title: "${review.title}"`;
 
   if (fm.includes(genericTitle)) {
     fm = fm.replace(genericTitle, canonicalTitle);
+    semanticChanged = true;
   } else if (!fm.includes(canonicalTitle)) {
     throw new Error(`${review.signature}: unexpected title state`);
   }
@@ -157,6 +159,7 @@ function patchFrontmatter(raw, review) {
     const desiredLine = epistemicYaml(review.epistemicStatus);
     if (fm.includes(expectedLine)) {
       fm = fm.replace(expectedLine, desiredLine);
+      semanticChanged = true;
     } else if (!fm.includes(desiredLine)) {
       throw new Error(`${review.signature}: epistemicStatus changed since review; refusing to overwrite`);
     }
@@ -172,6 +175,7 @@ function patchFrontmatter(raw, review) {
     const desiredRelations = relationYaml(review.relations);
     if (fm.includes('relatedDocuments: []')) {
       fm = fm.replace('relatedDocuments: []', desiredRelations);
+      semanticChanged = true;
     } else if (!review.relations.every(target => fm.includes(`target: "${target}"`))) {
       throw new Error(`${review.signature}: relatedDocuments changed since review; refusing to overwrite`);
     }
@@ -181,8 +185,8 @@ function patchFrontmatter(raw, review) {
     const marker = '\nkg:';
     if (!fm.includes(marker)) throw new Error(`${review.signature}: kg block marker not found`);
     fm = fm.replace(marker, `\nupdatedAt: "${reviewedAt}"\nprovenance:\n  reviewedAt: "${reviewedAt}"\n  reviewStatus: "metadata-reviewed"${marker}`);
-  } else if (!fm.includes(`reviewedAt: "${reviewedAt}"`)) {
-    throw new Error(`${review.signature}: lifecycle fields changed since review; refusing to overwrite`);
+  } else if (semanticChanged && !fm.includes(`reviewedAt: "${reviewedAt}"`)) {
+    throw new Error(`${review.signature}: lifecycle changed since review while semantic changes are still pending; refusing to overwrite`);
   }
 
   return raw.replace(match[1], fm);
