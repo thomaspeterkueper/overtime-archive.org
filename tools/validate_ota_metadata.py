@@ -81,11 +81,13 @@ def validate(path: pathlib.Path) -> list[str]:
         errors.append("primary knowledge IDs must use KD:<DOMAIN-CODE>:<LEVEL>; KNOW:* is legacy only")
     if "sourceOfTruth: true" in meta:
         errors.append("kg.sourceOfTruth must be false")
-    if "kg:" in meta and "master: kueper-knowledge-graph" not in meta:
-        errors.append("kg.master must be kueper-knowledge-graph")
-    if "kg:" in meta and "system: SYS:OTA:overtimearchive" not in meta:
-        errors.append("kg.system must be SYS:OTA:overtimearchive")
     if "kg:" in meta:
+        master = nested_scalar(meta, "kg", "master")
+        if master != "kueper-knowledge-graph":
+            errors.append("kg.master must be kueper-knowledge-graph")
+        system = nested_scalar(meta, "kg", "system")
+        if system != "SYS:OTA:overtimearchive":
+            errors.append("kg.system must be SYS:OTA:overtimearchive")
         document_id = nested_scalar(meta, "kg", "documentId")
         if document_id and signature and document_id != signature:
             errors.append(f"kg.documentId/signature mismatch: {document_id} != {signature}")
