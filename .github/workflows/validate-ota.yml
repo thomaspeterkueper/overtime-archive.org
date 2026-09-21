@@ -42,6 +42,9 @@ jobs:
       - name: Validate Hayashi marker migration
         run: node scripts/migrate-hayashi-markers.mjs --check
 
+      - name: Validate RED-0022 encoding and metadata repair
+        run: node scripts/repair-red0022-encoding.mjs --check
+
       - name: Normalize canonical OTA system metadata
         if: github.event_name == 'push' && github.ref == 'refs/heads/master'
         shell: bash
@@ -85,6 +88,10 @@ jobs:
       - name: Apply Hayashi marker migration
         if: github.event_name == 'push' && github.ref == 'refs/heads/master'
         run: node scripts/migrate-hayashi-markers.mjs
+
+      - name: Apply RED-0022 encoding and metadata repair
+        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+        run: node scripts/repair-red0022-encoding.mjs
 
       - name: Revalidate after safe editorial fixes
         if: github.event_name == 'push' && github.ref == 'refs/heads/master'
