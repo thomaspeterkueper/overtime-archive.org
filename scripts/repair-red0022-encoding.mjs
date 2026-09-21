@@ -108,7 +108,7 @@ function recoverMojibake(text) {
     try {
       const decoded = decoder.decode(Uint8Array.from(bytes));
       const original = chars.slice(i, i + length).join('');
-      if (decoded !== original && !decoded.includes('\uFFFD')) {
+      if (decoded !== original && !decoded.includes('�')) {
         output += decoded;
         repairs += 1;
         i += length - 1;
@@ -201,7 +201,7 @@ function validateCandidate(text) {
     if (!text.includes(marker)) throw new Error(`${TARGET_SIGNATURE}: repaired candidate missing sentinel: ${marker}`);
   }
 
-  const forbidden = ['â€“', 'â€”', 'â†', 'Ï‡', 'Î¨', 'GaztaÃ±aga', 'áƒ', '\uFFFD'];
+  const forbidden = ['â€“', 'â€”', 'â†', 'Ï‡', 'Î¨', 'GaztaÃ±aga', 'áƒ', '�'];
   for (const marker of forbidden) {
     if (text.includes(marker)) throw new Error(`${TARGET_SIGNATURE}: mojibake remains after repair: ${marker}`);
   }
