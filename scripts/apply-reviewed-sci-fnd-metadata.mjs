@@ -116,6 +116,19 @@ const reviews = [
       'OTA-TEC-0001-2196-DE',
     ],
   },
+  {
+    signature: 'OTA-SCI-0020-2026-DE',
+    title: 'Relikt-Fenster — Spätaktive Wasser- und Eisdynamik auf Mars und Erde',
+    reviewedAt: '2026-09-21T11:59:32+02:00',
+    relations: [
+      'OTA-SCI-0019-2025-DE',
+      'OTA-TEC-0022-2025-DE',
+      'OTA-RED-0012-2171-DE',
+      'OTA-ORG-0002-2091-DE',
+      'OTA-ORG-0003-2089-DE',
+      'OTA-HIS-0004-2085-DE',
+    ],
+  },
 ];
 
 const knownFiles = new Set(fs.readdirSync(DOCS_DIR));
