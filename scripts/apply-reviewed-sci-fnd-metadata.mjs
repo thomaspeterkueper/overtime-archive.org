@@ -123,7 +123,6 @@ const reviews = [
     relations: [
       'OTA-SCI-0019-2025-DE',
       'OTA-TEC-0022-2025-DE',
-      'OTA-TEC-0026-2091-DE',
       'OTA-RED-0012-2171-DE',
       'OTA-ORG-0002-2091-DE',
       'OTA-ORG-0003-2089-DE',
