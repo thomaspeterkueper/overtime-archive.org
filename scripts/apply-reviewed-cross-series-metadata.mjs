@@ -101,6 +101,36 @@ const reviews = [
     reviewedAt: '2026-09-19T19:03:00+02:00',
     relations: ['OTA-BIO-0010-2025-DE','OTA-BIO-0008-2025-DE','OTA-TEC-0018-2091-DE','OTA-SCI-0014-2025-DE'],
   },
+  {
+    signature: 'OTA-TEC-0030-2091-DE',
+    title: 'Molekulare Spektroskopie für Mars-Exploration',
+    reviewedAt: '2026-09-21T12:21:27+02:00',
+    relations: ['OTA-SCI-0026-2026-DE','OTA-LSC-0002-2026-DE','OTA-TEC-0029-2048-DE','OTA-FND-0007-2025-DE'],
+  },
+  {
+    signature: 'OTA-BIO-0007-2025-DE',
+    title: 'Marek Kowalski — Der Mann, der den Stein hörte',
+    reviewedAt: '2026-09-21T12:21:27+02:00',
+    relations: ['OTA-NAR-0001-2087-DE','OTA-BIO-0006-2025-DE','OTA-SCI-0004-2087-DE','OTA-TEC-0015-2082-DE'],
+  },
+  {
+    signature: 'OTA-BIO-0008-2025-DE',
+    title: 'Rashid Al-Mansouri — Der Junge, der Muster sah',
+    reviewedAt: '2026-09-21T12:21:27+02:00',
+    relations: ['OTA-BIO-0006-2025-DE','OTA-BIO-0009-2025-DE','OTA-BIO-0010-2025-DE','OTA-RED-0016-2091-DE'],
+  },
+  {
+    signature: 'OTA-HIS-0004-2085-DE',
+    title: 'Sol University Initiative — Eine Universität für die Menschheit',
+    reviewedAt: '2026-09-21T12:21:27+02:00',
+    relations: ['OTA-TEC-0019-2095-DE','OTA-FND-0007-2025-DE','OTA-TEC-0025-2091-DE','OTA-ORG-0002-2091-DE'],
+  },
+  {
+    signature: 'OTA-LSC-0002-2026-DE',
+    title: 'Schwefel im Bewusstsein — Von kosmischen Molekülwolken zu neuronaler Signalübertragung',
+    reviewedAt: '2026-09-21T12:21:27+02:00',
+    relations: ['OTA-SCI-0026-2026-DE','OTA-SCI-0019-2025-DE','OTA-LSC-0001-2048-DE','OTA-FND-0002-2025-DE'],
+  },
 ];
 
 const knownFiles = new Set(fs.readdirSync(DOCS_DIR));
