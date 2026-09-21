@@ -28,6 +28,10 @@ Two rows in the same table cannot safely be promoted:
 
 Both rows remain unresolved source metadata. No replacement target is inferred.
 
+## Parallel-master recheck
+
+Before merge, the branch base was rechecked against the then-current `master`. Parallel commits affected only an archived KG request and `OTA-TEC-0027-2091-DE`; neither `OTA-SCI-0020-2026-DE`, the SCI/FND runner nor this review note was touched.
+
 ## Guardrails
 
 - no scientific claim text is rewritten;
