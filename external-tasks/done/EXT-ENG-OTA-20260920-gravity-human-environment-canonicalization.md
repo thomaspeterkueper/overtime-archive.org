@@ -1,7 +1,7 @@
 ---
 id: EXT-ENG-OTA-20260920-GRAVITY-HUMAN-ENVIRONMENT-CANONICALIZATION
 title: Canonicalization decision for gravity-flexible human settlement architecture
-status: open
+status: done
 source: KUEPER Engineering
 target: OTA
 created: 2026-09-20
@@ -91,3 +91,8 @@ Please decide:
 ## NOXIA return boundary
 
 After OTA decision, NOXIA may map canonical capability classes and architecture availability into simulation constraints. Costs, build times, balancing, population effects and gameplay modifiers remain NOXIA-owned.
+
+
+## OTA decision — 2026-09-22
+
+Accepted into OTA-SCI-0086 v1.2: the four distinct settlement capability classes and the gravity-flexible Engineering interface. A→B→C remains a robust Engineering option, not a biological requirement. No named settlement or ship is assigned an architecture stage by this decision. Radiation remains an independent design axis. NOXIA may consume capability distinctions but owns gameplay values.
