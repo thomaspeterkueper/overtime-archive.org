@@ -236,7 +236,8 @@ Einwanderungswellen dürfen nicht nur gegen Transportplätze geprüft werden. Ha
 2. Nach einem unabhängigen Werkbeleg für **~1.000 Menschen 2067–2069** suchen.
 3. Erst nach Auffinden der passenden Werkfassung die in META-0002 genannten Angaben als reproduzierte Primärbelege markieren; bis dahin bleibt META-0002 die sekundäre Kanonreferenz.
 4. Den jetzt angelegten **provisionalen Bevölkerungskorridor 2056–2091** gegen neue Werkbelege, Transportkapazitäten und Habitat-/Industrieentwicklung testen und bei Bedarf revidieren.
-5. Einwanderungswellen 2069–2091 zusätzlich gegen Habitat/ECLSS, Medizin, Familien-/Entwicklungsinfrastruktur, Energie und Produktion prüfen.\n6. Aus den Belegen eine getrennte Ereigniskette für Standort, Besiedlung, Namensgebung und institutionelle Entwicklung erstellen.
+5. Einwanderungswellen 2069–2091 zusätzlich gegen Habitat/ECLSS, Medizin, Familien-/Entwicklungsinfrastruktur, Energie und Produktion prüfen.
+6. Aus den Belegen eine getrennte Ereigniskette für Standort, Besiedlung, Namensgebung und institutionelle Entwicklung erstellen.
 
 ---
 
@@ -245,7 +246,11 @@ Einwanderungswellen dürfen nicht nur gegen Transportplätze geprüft werden. Ha
 | Datum | Version | Änderung |
 |---|---|---|
 | 2026-09-15 | 0.1 | Audit-Strang eröffnet; vorhandene Fixpunkte und offene Fragen getrennt, ohne neue Siedlungs- oder MIMI-Kanonentscheidung. |
-| 2026-09-15 | 0.2 | NXU-Autorensynthese als Quelle für MIMI 2065, `Iteratio Prime Alpha` und ~1.000 Menschen 2067–2069 lokalisiert; Legacy-Chronologie vom noch zu prüfenden Zahlen-/Namensbeleg getrennt; industrielle Mindestanforderung ergänzt. |\n| 2026-09-18 | 0.3 | Gegen aktuellen `META-0002 v4.5` reconciliert: `Iteratio Prime Alpha` bleibt [D] und wird nicht als offene Namensoption reaktiviert; Werkbelegpfad für Alpha-7/Marskinder/1-g-Zentrifuge präzisiert. |\n| 2026-09-19 | 0.4 | Quellenprüfung gegen die aktuell auf Google Drive auffindbare *Generation Mars Version 3*: Alpha-7, Marskinder und 1-g-Zentrifuge dort nicht reproduzierbar; sekundäre Kanonreferenz und noch zu sichernder Primärbeleg ausdrücklich getrennt. |\n| 2026-09-19 | 0.5 | Explizit nichtkanonischen Bevölkerungskorridor 2056–2091 ergänzt; Legacy-~1.000, Iterius-~5.000 und Kaiwu-Arbeitskorridore als getrennte Anker behandelt; Zuwanderung als notwendiger Haupttreiber des Wachstums ausgewiesen. |\n| 2026-09-22 | 0.6 | Gegen OTA-SCI-0086 v1.2 reconciliert: vier Settlement-Capabilities übernommen; A→B→C nur als Engineering-Option behandelt; keine Low-g-Schwelle oder konkrete Iterius-Architekturstufe kanonisiert. |
+| 2026-09-15 | 0.2 | NXU-Autorensynthese als Quelle für MIMI 2065, `Iteratio Prime Alpha` und ~1.000 Menschen 2067–2069 lokalisiert; Legacy-Chronologie vom noch zu prüfenden Zahlen-/Namensbeleg getrennt; industrielle Mindestanforderung ergänzt. |
+| 2026-09-18 | 0.3 | Gegen aktuellen `META-0002 v4.5` reconciliert: `Iteratio Prime Alpha` bleibt [D] und wird nicht als offene Namensoption reaktiviert; Werkbelegpfad für Alpha-7/Marskinder/1-g-Zentrifuge präzisiert. |
+| 2026-09-19 | 0.4 | Quellenprüfung gegen die aktuell auf Google Drive auffindbare *Generation Mars Version 3*: Alpha-7, Marskinder und 1-g-Zentrifuge dort nicht reproduzierbar; sekundäre Kanonreferenz und noch zu sichernder Primärbeleg ausdrücklich getrennt. |
+| 2026-09-19 | 0.5 | Explizit nichtkanonischen Bevölkerungskorridor 2056–2091 ergänzt; Legacy-~1.000, Iterius-~5.000 und Kaiwu-Arbeitskorridore als getrennte Anker behandelt; Zuwanderung als notwendiger Haupttreiber des Wachstums ausgewiesen. |
+| 2026-09-22 | 0.6 | Gegen OTA-SCI-0086 v1.2 reconciliert: vier Settlement-Capabilities übernommen; A→B→C nur als Engineering-Option behandelt; keine Low-g-Schwelle oder konkrete Iterius-Architekturstufe kanonisiert. |
 
 ---
 
