@@ -5,13 +5,13 @@ series: "META"
 seriesNumber: 5
 year: 2026
 language: "DE"
-version: "v0.5"
+version: "v0.6"
 status: "ENTWURF"
 accessLevel: 0
 epistemicStatus: ["W"]
 tags: ["Mars", "Alpha-7", "Iterius Prime", "MIMI", "PROMETHEUS", "Das Schweigen", "Kanon-Audit", "2040", "2069"]
 relatedDocuments: ["OTA-META-0002-2026-DE", "OTA-HIS-0004-2069-DE", "OTA-HIS-0005-2050-DE"]
-summary: "Arbeitsaudit zur frühen Marsgesellschaft 2040–2069. v0.5 trennt Primärbelege, Kanonreferenzen und ein ausdrücklich nichtkanonisches Bevölkerungsmodell; MIMI 2065 und ~1.000 Menschen 2067–2069 bleiben provisional."
+summary: "Arbeitsaudit zur frühen Marsgesellschaft 2040–2069. v0.6 koppelt das ausdrücklich nichtkanonische Bevölkerungsmodell an getrennte Settlement-Capabilities, ohne unbekannte biologische Low-g-Schwellen oder konkrete Siedlungsarchitekturen zu kanonisieren."
 kg:
   schema: KXF-0.2
   master: kueper-knowledge-graph
@@ -24,8 +24,8 @@ kg:
 # Frühe Marsgesellschaft 2040–2069
 ## Kanon-Audit Alpha-7, MIMI und Iterius Prime
 
-**Version:** 0.5  
-**Stand:** 15. September 2026  
+**Version:** 0.6  
+**Stand:** 22. September 2026  
 **Status:** Arbeitsaudit, keine neue Kanonfestlegung
 
 Dieses Dokument isoliert den derzeit wichtigsten offenen Abschnitt der Mars-Chronologie. Es übernimmt nur bereits gesetzte oder ausdrücklich als provisional geführte Angaben und macht sichtbar, welche Übergänge noch nicht belegt sind.
@@ -181,7 +181,38 @@ Damit bleibt der Korridor bewusst **revidierbar** und erzeugt keinen versteckten
 
 ---
 
-## 8. Reconciliation-Matrix
+## 8. Bevölkerung × Settlement-Capability × Gravitation
+
+Die inzwischen in `OTA-SCI-0086 v1.2` übernommene Engineering-Entscheidung trennt vier Settlement-Capabilities:
+
+1. `adult-survival-capable`;
+2. `pregnancy-and-birth-capable`;
+3. `child-development-capable`;
+4. `multigenerational-capable`.
+
+Eine niedrigere Capability impliziert keine höhere. Die Begriffe beschreiben Systemfähigkeiten; sie legen insbesondere **keinen** sicheren Mindest-g-Wert für Schwangerschaft, Geburt oder Entwicklung fest.
+
+### 8.1 Anwendung auf diesen Audit
+
+- Für die frühe bemannte Marsinfrastruktur ist `adult-survival-capable` die minimale relevante Systemklasse.
+- Die in META-0002 geführten Marsgeburten bis 2069 würden mindestens praktische Schwangerschafts-/Geburts- und Kindentwicklungsfähigkeit voraussetzen; solange der dort genannte Primärbeleg nicht reproduziert ist, wird daraus hier **keine zusätzliche Kanonfestlegung** erzeugt.
+- `multigenerational-capable` ist für eine dauerhaft generationenübergreifende Marsgesellschaft ein Systemziel, aber kein Beleg dafür, dass 0,38 g allein biologisch ausreichend sind.
+
+### 8.2 Gravity-flexible Architektur
+
+Die Engineering-Folge **A → B → C** — lokale Gravitation plus konfigurierbare intermittierende künstliche Gravitation, Mixed-Gravity-Siedlung mit gemeinsamer Rotationszone und bei Bedarf kontinuierlich bewohnte rotierende Familien-/Medizinzone — bleibt gemäß der OTA-Entscheidung vom 22.09.2026 eine robuste **Engineering-Option**. Dieser Audit weist **Iterius Prime oder einer anderen benannten Siedlung keine Stufe A, B oder C zu**.
+
+Der ältere, bislang nicht reproduzierte Hinweis auf eine 1-g-Trainingszentrifuge wäre mit einer gravity-flexiblen Architektur vereinbar, beweist aber weder eine konkrete Architekturklasse noch kontinuierliche 1-g-Exposition.
+
+Explizit offen bleiben Mindest-g, notwendige Expositionsdauer, Gleichwertigkeit intermittierender und kontinuierlicher künstlicher Gravitation sowie konkrete demografische Low-g-Effekte. Strahlenschutz bleibt eine unabhängige Designachse.
+
+### 8.3 Konsequenz für das Bevölkerungsmodell
+
+Einwanderungswellen dürfen nicht nur gegen Transportplätze geprüft werden. Habitat/ECLSS, Medizin, Familien- und Entwicklungsinfrastruktur, Energie und Produktion müssen als eigene Kapazitätsachsen mitwachsen. Das stützt ein Modell aus **Kapazitätsausbau → Einwanderungswelle → Konsolidierung → nächster Ausbau**, ohne daraus feste historische Ausbaujahre abzuleiten.
+
+---
+
+## 9. Reconciliation-Matrix
 
 | Frage | Aktueller Stand | Nächster Belegbedarf |
 |---|---|---|
@@ -199,13 +230,13 @@ Damit bleibt der Korridor bewusst **revidierbar** und erzeugt keinen versteckten
 
 ---
 
-## 9. Nächste Audit-Schritte
+## 10. Nächste Audit-Schritte
 
 1. Die richtige Werkfassung für **Proposed Site Alpha-7**, frühe Marskinder und die 1-g-Trainingszentrifuge lokalisieren; die aktuell auf Google Drive auffindbare *Generation Mars Version 3* enthält diese Belege nicht.
 2. Nach einem unabhängigen Werkbeleg für **~1.000 Menschen 2067–2069** suchen.
 3. Erst nach Auffinden der passenden Werkfassung die in META-0002 genannten Angaben als reproduzierte Primärbelege markieren; bis dahin bleibt META-0002 die sekundäre Kanonreferenz.
 4. Den jetzt angelegten **provisionalen Bevölkerungskorridor 2056–2091** gegen neue Werkbelege, Transportkapazitäten und Habitat-/Industrieentwicklung testen und bei Bedarf revidieren.
-5. Aus den Belegen eine getrennte Ereigniskette für Standort, Besiedlung, Namensgebung und institutionelle Entwicklung erstellen.
+5. Einwanderungswellen 2069–2091 zusätzlich gegen Habitat/ECLSS, Medizin, Familien-/Entwicklungsinfrastruktur, Energie und Produktion prüfen.\n6. Aus den Belegen eine getrennte Ereigniskette für Standort, Besiedlung, Namensgebung und institutionelle Entwicklung erstellen.
 
 ---
 
@@ -214,7 +245,7 @@ Damit bleibt der Korridor bewusst **revidierbar** und erzeugt keinen versteckten
 | Datum | Version | Änderung |
 |---|---|---|
 | 2026-09-15 | 0.1 | Audit-Strang eröffnet; vorhandene Fixpunkte und offene Fragen getrennt, ohne neue Siedlungs- oder MIMI-Kanonentscheidung. |
-| 2026-09-15 | 0.2 | NXU-Autorensynthese als Quelle für MIMI 2065, `Iteratio Prime Alpha` und ~1.000 Menschen 2067–2069 lokalisiert; Legacy-Chronologie vom noch zu prüfenden Zahlen-/Namensbeleg getrennt; industrielle Mindestanforderung ergänzt. |\n| 2026-09-18 | 0.3 | Gegen aktuellen `META-0002 v4.5` reconciliert: `Iteratio Prime Alpha` bleibt [D] und wird nicht als offene Namensoption reaktiviert; Werkbelegpfad für Alpha-7/Marskinder/1-g-Zentrifuge präzisiert. |\n| 2026-09-19 | 0.4 | Quellenprüfung gegen die aktuell auf Google Drive auffindbare *Generation Mars Version 3*: Alpha-7, Marskinder und 1-g-Zentrifuge dort nicht reproduzierbar; sekundäre Kanonreferenz und noch zu sichernder Primärbeleg ausdrücklich getrennt. |\n| 2026-09-19 | 0.5 | Explizit nichtkanonischen Bevölkerungskorridor 2056–2091 ergänzt; Legacy-~1.000, Iterius-~5.000 und Kaiwu-Arbeitskorridore als getrennte Anker behandelt; Zuwanderung als notwendiger Haupttreiber des Wachstums ausgewiesen. |
+| 2026-09-15 | 0.2 | NXU-Autorensynthese als Quelle für MIMI 2065, `Iteratio Prime Alpha` und ~1.000 Menschen 2067–2069 lokalisiert; Legacy-Chronologie vom noch zu prüfenden Zahlen-/Namensbeleg getrennt; industrielle Mindestanforderung ergänzt. |\n| 2026-09-18 | 0.3 | Gegen aktuellen `META-0002 v4.5` reconciliert: `Iteratio Prime Alpha` bleibt [D] und wird nicht als offene Namensoption reaktiviert; Werkbelegpfad für Alpha-7/Marskinder/1-g-Zentrifuge präzisiert. |\n| 2026-09-19 | 0.4 | Quellenprüfung gegen die aktuell auf Google Drive auffindbare *Generation Mars Version 3*: Alpha-7, Marskinder und 1-g-Zentrifuge dort nicht reproduzierbar; sekundäre Kanonreferenz und noch zu sichernder Primärbeleg ausdrücklich getrennt. |\n| 2026-09-19 | 0.5 | Explizit nichtkanonischen Bevölkerungskorridor 2056–2091 ergänzt; Legacy-~1.000, Iterius-~5.000 und Kaiwu-Arbeitskorridore als getrennte Anker behandelt; Zuwanderung als notwendiger Haupttreiber des Wachstums ausgewiesen. |\n| 2026-09-22 | 0.6 | Gegen OTA-SCI-0086 v1.2 reconciliert: vier Settlement-Capabilities übernommen; A→B→C nur als Engineering-Option behandelt; keine Low-g-Schwelle oder konkrete Iterius-Architekturstufe kanonisiert. |
 
 ---
 
