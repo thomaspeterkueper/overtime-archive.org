@@ -302,7 +302,8 @@ Diese Schwellen sollen später an Werkbelegen und institutionellen Ereignissen f
 | 2026-09-18 | 0.3 | Gegen aktuellen `META-0002 v4.5` reconciliert: `Iteratio Prime Alpha` bleibt [D] und wird nicht als offene Namensoption reaktiviert; Werkbelegpfad für Alpha-7/Marskinder/1-g-Zentrifuge präzisiert. |
 | 2026-09-19 | 0.4 | Quellenprüfung gegen die aktuell auf Google Drive auffindbare *Generation Mars Version 3*: Alpha-7, Marskinder und 1-g-Zentrifuge dort nicht reproduzierbar; sekundäre Kanonreferenz und noch zu sichernder Primärbeleg ausdrücklich getrennt. |
 | 2026-09-19 | 0.5 | Explizit nichtkanonischen Bevölkerungskorridor 2056–2091 ergänzt; Legacy-~1.000, Iterius-~5.000 und Kaiwu-Arbeitskorridore als getrennte Anker behandelt; Zuwanderung als notwendiger Haupttreiber des Wachstums ausgewiesen. |
-| 2026-09-22 | 0.6 | Gegen OTA-SCI-0086 v1.2 reconciliert: vier Settlement-Capabilities übernommen; A→B→C nur als Engineering-Option behandelt; keine Low-g-Schwelle oder konkrete Iterius-Architekturstufe kanonisiert. |\n| 2026-09-24 | 0.7 | Provisionales Transfer-/Kapazitätswellenmodell 2069–2091 ergänzt; Nettozuwachs von Transportpassagieren getrennt; Wachstum an Habitat/ECLSS, Industrie, Medizin und Settlement-Capabilities gekoppelt; Stadtwerdung als institutioneller statt rein numerischer Übergang gefasst. |
+| 2026-09-22 | 0.6 | Gegen OTA-SCI-0086 v1.2 reconciliert: vier Settlement-Capabilities übernommen; A→B→C nur als Engineering-Option behandelt; keine Low-g-Schwelle oder konkrete Iterius-Architekturstufe kanonisiert. |
+| 2026-09-24 | 0.7 | Provisionales Transfer-/Kapazitätswellenmodell 2069–2091 ergänzt; Nettozuwachs von Transportpassagieren getrennt; Wachstum an Habitat/ECLSS, Industrie, Medizin und Settlement-Capabilities gekoppelt; Stadtwerdung als institutioneller statt rein numerischer Übergang gefasst. |
 
 ---
 
