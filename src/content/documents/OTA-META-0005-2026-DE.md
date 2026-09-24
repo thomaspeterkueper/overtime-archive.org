@@ -5,13 +5,13 @@ series: "META"
 seriesNumber: 5
 year: 2026
 language: "DE"
-version: "v0.6"
+version: "v0.7"
 status: "ENTWURF"
 accessLevel: 0
 epistemicStatus: ["W"]
 tags: ["Mars", "Alpha-7", "Iterius Prime", "MIMI", "PROMETHEUS", "Das Schweigen", "Kanon-Audit", "2040", "2069"]
 relatedDocuments: ["OTA-META-0002-2026-DE", "OTA-HIS-0004-2069-DE", "OTA-HIS-0005-2050-DE"]
-summary: "Arbeitsaudit zur frühen Marsgesellschaft 2040–2069. v0.6 koppelt das ausdrücklich nichtkanonische Bevölkerungsmodell an getrennte Settlement-Capabilities, ohne unbekannte biologische Low-g-Schwellen oder konkrete Siedlungsarchitekturen zu kanonisieren."
+summary: "Arbeitsaudit zur frühen Marsgesellschaft 2040–2069. v0.7 ergänzt ein ausdrücklich nichtkanonisches Kapazitäts- und Transferwellenmodell 2069–2091; Bevölkerungswachstum wird an Habitat/ECLSS, Industrie, Medizin und Settlement-Capabilities gekoppelt."
 kg:
   schema: KXF-0.2
   master: kueper-knowledge-graph
@@ -24,8 +24,8 @@ kg:
 # Frühe Marsgesellschaft 2040–2069
 ## Kanon-Audit Alpha-7, MIMI und Iterius Prime
 
-**Version:** 0.6  
-**Stand:** 22. September 2026  
+**Version:** 0.7  
+**Stand:** 24. September 2026  
 **Status:** Arbeitsaudit, keine neue Kanonfestlegung
 
 Dieses Dokument isoliert den derzeit wichtigsten offenen Abschnitt der Mars-Chronologie. Es übernimmt nur bereits gesetzte oder ausdrücklich als provisional geführte Angaben und macht sichtbar, welche Übergänge noch nicht belegt sind.
@@ -212,7 +212,59 @@ Einwanderungswellen dürfen nicht nur gegen Transportplätze geprüft werden. Ha
 
 ---
 
-## 9. Reconciliation-Matrix
+
+## 9. Transfer- und Kapazitätswellen 2069–2091 [P-Modell]
+
+Dieser Abschnitt modelliert **keine kanonischen Transportmissionen** und setzt keine exakten Passagierzahlen. Er zerlegt lediglich den in Abschnitt 7 erforderlichen Nettozuwachs in technisch prüfbare Ausbauphasen. Die Zeitfenster sind Modellfenster, keine historischen Datierungen.
+
+| Modellfenster | Demografische Funktion | Vorlaufende Kapazität | Industrielle Bedingung | Capability-Schwerpunkt |
+|---|---|---|---|---|
+| **2069–2072: Recovery** | Bevölkerung nach dem ersten Schweigen stabilisieren; nur begrenzter Nettozuzug | Reparatur von Habitat/ECLSS, Vorräte, medizinische Reserve, sichere Wasser-/Energiepfade | I2 muss für kritische Ersatzteile praktisch tragfähig sein; Importabhängigkeit bleibt hoch | adult survival absichern; Familienbetrieb nicht aus Einwohnerzahl ableiten |
+| **2072–2076: Expansion I** | erste größere Nettozuwanderung nach Wiederherstellung verlässlicher Logistik | neue Druckvolumina, Energie- und Wasserreserve, Nahrungsproduktion, zusätzliche Klinik-/Schulkapazität | Übergang I2→I3 in ausgewählten Klassen | pregnancy/birth und child development als getrennte Betriebsfähigkeiten ausbauen, ohne biologische Schwelle zu behaupten |
+| **2076–2080: Dual-node** | Iterius wächst weiter; Kaiwu bindet einen kleinen Teil des Zuzugs und neue Fachkräfte | zweite dauerhafte Siedlungsinfrastruktur, Fracht- und Notfallredundanz zwischen Standorten | Utopia/Kaiwu verstärkt I3 und beginnt ausgewählte I4-Funktionen | Familien- und Entwicklungsinfrastruktur muss an zwei Standorten geplant werden, nicht automatisch vollständig dupliziert sein |
+| **2080–2084: Expansion II** | stärkste plausible Wachstumsphase des Modells; mehrere Kohorten statt eines einzelnen Massentransports | skalierbarer Habitatbau, Energie, Wasser, Nahrung, Medizin und kommunale Infrastruktur | I3 breit; ausgewählte I4-Fähigkeiten reduzieren Importmasse pro zusätzlicher Person | multigenerational-capable wird zum langfristigen Systemziel |
+| **2084–2087: Consolidation** | Wachstum setzt sich fort, aber Redundanz und Krisenfestigkeit gewinnen gegenüber maximalem Zuzug | Reserven, Safe Havens, Ersatz-ECLSS, verteilte Speicher und medizinische Redundanz | I3/I4 vertieft; lokale Reparaturketten zwischen Iterius und Kaiwu | höhere Capabilities müssen auch bei Teilausfällen erhalten werden können |
+| **2087–2091: Silence/recovery** | Große Stille unterbricht eine einfache Wachstumsfortschreibung; nachfolgend Wiederaufbau bis zum 2091-Anker | Autonomer Betrieb, Vorräte, lokale Produktion, Wiederanlauf von Transport und Versorgung | Krise beschleunigt Redundanz und reproduktionsfähige Teilketten; I5 darf daraus nicht pauschal abgeleitet werden | multigenerationale Kontinuität wird zur Resilienzfrage, nicht nur zur Medizinfrage |
+
+### 9.1 Größenordnung des Nettozuwachses
+
+Der Korridor verlangt zwischen etwa 2069 und 2091 für Iterius grob **+3.800 bis +4.050 Personen netto**, wenn man den 2069er Modellkorridor von 950–1.200 und den 2091er Werkanker von rund 5.000 gegenüberstellt. Dieser Nettozuwachs enthält **Zuwanderung plus Geburten minus Rückkehrer und Todesfälle**; er ist ausdrücklich keine Passagierzahl.
+
+Eine gleichmäßige Verteilung wäre systemisch unplausibel. Für das Modell ist sinnvoller, den Nettozuwachs in vier Funktionen zu zerlegen:
+
+- **Recovery 2069–2072:** geringe Nettozunahme; Reparatur und Reserve dominieren;
+- **Expansion I / Dual-node 2072–2080:** deutliche Zuwanderung, während Kaiwu als zweiter Knoten entsteht;
+- **Expansion II / Consolidation 2080–2087:** größter kumulativer Zuwachs, ermöglicht durch breitere lokale Fertigung und skalierbaren Habitatbau;
+- **2087–2091:** Krisenknick und anschließende Erholung statt ungebrochener Wachstumskurve.
+
+Das Modell benötigt damit **mehrere Kohorten über viele Transfergelegenheiten**, nicht einen einzelnen kolonialen Großtransport.
+
+### 9.2 Kapazitätsregel
+
+Für jede modellierte Zuwanderungswelle gilt als Prüfreihenfolge:
+
+1. **Druckvolumen / Habitat** ist vor Bezug verfügbar oder sicher im Bau;
+2. **ECLSS, Wasser, Energie und Nahrung** besitzen Reserve oberhalb des erwarteten Bedarfs;
+3. **Medizin und Evakuierungsfähigkeit** skalieren mit Bevölkerung und Altersstruktur;
+4. **Familien-/Entwicklungsinfrastruktur** wird separat bewertet und nicht aus Bettenzahl abgeleitet;
+5. **Industrie und Ersatzteile** können die zusätzliche Infrastruktur über mindestens einen gestörten Nachschubzyklus erhalten;
+6. erst danach wird eine zusätzliche dauerhafte Bevölkerung im Modell zugelassen.
+
+Damit wird Bevölkerungswachstum zu einer Folge nachgewiesener Systemkapazität und nicht zu deren Ursache.
+
+### 9.3 Stadtwerdung von Iterius
+
+Der Audit setzt bewusst **kein einzelnes Jahr**, in dem Iterius „zur Stadt wird“. Das Modell zeigt aber drei voneinander trennbare Übergänge:
+
+- **dauerhafte Siedlung:** Überleben ohne permanente unmittelbare Erdunterstützung;
+- **komplexe Siedlungsgesellschaft:** mehrere Altersgruppen, spezialisierte Institutionen und eigenständige technische/soziale Funktionen;
+- **Stadtgesellschaft:** skalierbare kommunale Infrastruktur, dauerhafte Familien- und Bildungsstrukturen, wirtschaftliche Spezialisierung und ein zweiter Marsknoten, mit dem Arbeit, Ressourcen und Risiken geteilt werden.
+
+Diese Schwellen sollen später an Werkbelegen und institutionellen Ereignissen festgemacht werden, nicht an einer frei gewählten Einwohnerzahl.
+
+---
+
+## 10. Reconciliation-Matrix
 
 | Frage | Aktueller Stand | Nächster Belegbedarf |
 |---|---|---|
@@ -230,7 +282,7 @@ Einwanderungswellen dürfen nicht nur gegen Transportplätze geprüft werden. Ha
 
 ---
 
-## 10. Nächste Audit-Schritte
+## 11. Nächste Audit-Schritte
 
 1. Die richtige Werkfassung für **Proposed Site Alpha-7**, frühe Marskinder und die 1-g-Trainingszentrifuge lokalisieren; die aktuell auf Google Drive auffindbare *Generation Mars Version 3* enthält diese Belege nicht.
 2. Nach einem unabhängigen Werkbeleg für **~1.000 Menschen 2067–2069** suchen.
@@ -251,6 +303,7 @@ Einwanderungswellen dürfen nicht nur gegen Transportplätze geprüft werden. Ha
 | 2026-09-19 | 0.4 | Quellenprüfung gegen die aktuell auf Google Drive auffindbare *Generation Mars Version 3*: Alpha-7, Marskinder und 1-g-Zentrifuge dort nicht reproduzierbar; sekundäre Kanonreferenz und noch zu sichernder Primärbeleg ausdrücklich getrennt. |
 | 2026-09-19 | 0.5 | Explizit nichtkanonischen Bevölkerungskorridor 2056–2091 ergänzt; Legacy-~1.000, Iterius-~5.000 und Kaiwu-Arbeitskorridore als getrennte Anker behandelt; Zuwanderung als notwendiger Haupttreiber des Wachstums ausgewiesen. |
 | 2026-09-22 | 0.6 | Gegen OTA-SCI-0086 v1.2 reconciliert: vier Settlement-Capabilities übernommen; A→B→C nur als Engineering-Option behandelt; keine Low-g-Schwelle oder konkrete Iterius-Architekturstufe kanonisiert. |
+| 2026-09-24 | 0.7 | Provisionales Transfer-/Kapazitätswellenmodell 2069–2091 ergänzt; Nettozuwachs von Transportpassagieren getrennt; Wachstum an Habitat/ECLSS, Industrie, Medizin und Settlement-Capabilities gekoppelt; Stadtwerdung als institutioneller statt rein numerischer Übergang gefasst. |
 
 ---
 
