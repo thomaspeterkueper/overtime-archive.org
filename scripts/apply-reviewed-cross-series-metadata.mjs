@@ -131,6 +131,30 @@ const reviews = [
     reviewedAt: '2026-09-21T12:21:27+02:00',
     relations: ['OTA-SCI-0026-2026-DE','OTA-SCI-0019-2025-DE','OTA-LSC-0001-2048-DE','OTA-FND-0002-2025-DE'],
   },
+  {
+    signature: 'OTA-OBS-0002-2026-DE',
+    title: '60.000 Jahre alte Giftpfeile — Die Umhlatuzana-Entdeckung und ihre Implikationen',
+    reviewedAt: '2026-09-25T09:11:03+02:00',
+    relations: ['OTA-TEC-0023-2089-DE','OTA-SCI-0018-60000BCE-DE','OTA-CUL-0002-60000BCE-DE','OTA-FND-0009-2026-DE'],
+  },
+  {
+    signature: 'OTA-SCI-0018-60000BCE-DE',
+    title: 'Biotechnologische Grundlagen der Altsteinzeit — Eine wissenschaftliche Bewertung realer biologischer Phänomene',
+    reviewedAt: '2026-09-25T09:11:03+02:00',
+    relations: ['OTA-OBS-0002-2026-DE','OTA-CUL-0002-60000BCE-DE','OTA-TEC-0023-2089-DE','OTA-FND-0009-2026-DE'],
+  },
+  {
+    signature: 'OTA-TEC-0022-2025-DE',
+    title: 'Solare Antriebssysteme — Ein technologischer Atlas der interplanetaren Ära',
+    reviewedAt: '2026-09-25T09:11:03+02:00',
+    relations: ['OTA-TEC-0016-2063-DE','OTA-TEC-0023-2091-DE','OTA-TEC-0025-2091-DE','OTA-TEC-0001-2196-DE'],
+  },
+  {
+    signature: 'OTA-LSC-0004-2026-DE',
+    title: 'Mitochondriale Basistherapie bei Λ-FSS — Lebensstil · Ernährung · Supplementierung',
+    reviewedAt: '2026-09-25T09:11:03+02:00',
+    relations: ['OTA-SCI-0048-2031-DE','OTA-LSC-0003-2026-DE','OTA-SCI-0045-2026-DE','OTA-TEC-0032-2091-DE'],
+  },
 ];
 
 const knownFiles = new Set(fs.readdirSync(DOCS_DIR));
