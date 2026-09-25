@@ -1,6 +1,6 @@
 ---
 signature: "OTA-CUL-0013-MULTI-DE"
-title: "OTA-CUL-0013-MULTI-DE"
+title: "Emotionale Lexika — Mars vs. Erde — Unbeschreibliche Sehnsucht über planetare Grenzen hinweg"
 series: "CUL"
 seriesNumber: 13
 year: 2026
@@ -12,6 +12,10 @@ epistemicStatus: ["F", "W"]
 tags: ["Emotionale Lexika", "Sprache", "Interplanetare Kultur", "NOXIA", "Multidokument"]
 relatedDocuments: []
 summary: "Emotionale Lexika: interplanetare kulturelle Differenzierung emotionaler Ausdrucksformen im NOXIA-Universum. Kanonische Werk-Setzung [F/W]."
+updatedAt: "2026-09-25T09:31:12+02:00"
+provenance:
+  reviewedAt: "2026-09-25T09:31:12+02:00"
+  reviewStatus: "metadata-reviewed"
 kg:
   schema: KXF-0.2
   master: kueper-knowledge-graph
@@ -32,21 +36,21 @@ knowledge:
 ---
 
 # EMOTIONALE LEXIKA
-## Mars vs. Erde â€” Unbeschreibliche Sehnsucht über planetare Grenzen hinweg
+## Mars vs. Erde — Unbeschreibliche Sehnsucht über planetare Grenzen hinweg
 
-**Temporaler Marker:** MULTI (2065â€“2091 CE)
+**Temporaler Marker:** MULTI (2065–2091 CE)
 
 ---
 
 **Dokumenttyp:** Kulturelle Analyse  
 **Signatur:** OTA-CUL-0013-MULTI-DE  
-**Temporaler Status:** Multi-temporal (Erde 2065 â†’ Mars 2091)  
+**Temporaler Status:** Multi-temporal (Erde 2065 → Mars 2091)  
 **Quellenmarker:** [F] Fiktional / [I] Interpretation  
 **Version:** 1.0  
 **Status:** Kanonisch  
 
 **Epistemologische Legende:**  
-`[F]` = Fiktional (noÏ‡Â¹áƒ-Universum)  
+`[F]` = Fiktional (noχ¹ᐃ-Universum)  
 `[I]` = Interpretation (kuratorische Analyse)
 
 ---
@@ -65,13 +69,13 @@ Das war das einzige Mal, dass Lena ihren Vater weinen sah.
 
 **Warum ist das für das OTA relevant?**
 
-Weil Sehnsucht keine Sprache hat. Weil emotionale Lexika zwischen Planeten zerbrechen. Weil Erde-geborene Menschen auf Mars von etwas sprechen, das Mars-geborene nie verstehen werden â€” und umgekehrt.
+Weil Sehnsucht keine Sprache hat. Weil emotionale Lexika zwischen Planeten zerbrechen. Weil Erde-geborene Menschen auf Mars von etwas sprechen, das Mars-geborene nie verstehen werden — und umgekehrt.
 
 Dieses Dokument katalogisiert die unbeschreiblichen Lücken: Gerüche ohne Namen, Gefühle ohne Äquivalent, Erinnerungen ohne Referenz.
 
-**Die zentrale Erkenntnis:** Sehnsucht entsteht nicht aus Verlust, sondern aus der Unmöglichkeit der Ãœbersetzung.
+**Die zentrale Erkenntnis:** Sehnsucht entsteht nicht aus Verlust, sondern aus der Unmöglichkeit der Übersetzung.
 
-â€” T.P.K.
+— T.P.K.
 
 ---
 
@@ -99,7 +103,7 @@ Was bedeutet "der Geruch von Regen", wenn es auf Mars nicht regnet?
 
 ### 1.2 Planetare Spaltung emotionaler Lexika
 
-**[F] noÏ‡Â¹áƒ-Kontext (2091)**
+**[F] noχ¹ᐃ-Kontext (2091)**
 
 **Erde-geboren (1. Generation):**
 - Referenzen: Wälder, Ozeane, Jahreszeiten, Schwerkraft (1g)
@@ -117,9 +121,9 @@ Was bedeutet "der Geruch von Regen", wenn es auf Mars nicht regnet?
 
 ---
 
-## II. KATALOG UNBESCHREIBLICHER GEFÃœHLE
+## II. KATALOG UNBESCHREIBLICHER GEFÜHLE
 
-### 2.1 Erde â†’ Mars (1. Generation)
+### 2.1 Erde → Mars (1. Generation)
 
 **[F] Marek Kowalski (geboren 2065 Erde, lebt 2091 Mars)**
 
@@ -152,7 +156,7 @@ Marek kann nicht vermitteln, **warum** dieser Geruch ihn zum Weinen bringt. Lena
 
 ---
 
-### 2.2 Mars â†’ Erde (2. Generation)
+### 2.2 Mars → Erde (2. Generation)
 
 **[F] Lena Kowalski (geboren 2091 Mars)**
 
@@ -225,7 +229,7 @@ Marek und Lena sitzen in ihrer Hab-Modul-Küche (Terraheim-Kolonie, Mars). Lena 
 
 **Lena:** "Ich verstehe nicht."
 
-**Marek:** (weint) "Ich weiÃŸ."
+**Marek:** (weint) "Ich weiß."
 
 ---
 
@@ -244,7 +248,7 @@ Marek und Lena sitzen in ihrer Hab-Modul-Küche (Terraheim-Kolonie, Mars). Lena 
 - Vaters Tränen (aber warum?)
 
 **Die Lücke:**
-Marek's emotionales Lexikon basiert auf Erd-Erfahrungen. Lena's emotionales Lexikon basiert auf Mars-Erfahrungen. **Es gibt keine Ãœberschneidung.**
+Marek's emotionales Lexikon basiert auf Erd-Erfahrungen. Lena's emotionales Lexikon basiert auf Mars-Erfahrungen. **Es gibt keine Überschneidung.**
 
 **Folge:**
 Lena entwickelt Sehnsucht nach **etwas**, das sie nicht benennen kann. Sie nennt es später "Terraheim" (siehe OTA-FND-0010).
@@ -256,11 +260,11 @@ Lena entwickelt Sehnsucht nach **etwas**, das sie nicht benennen kann. Sie nennt
 **[I] Mechanismus**
 
 **Generation 1 (Marek):**
-- Hat Erde erlebt â†’ kann Sehnsucht beschreiben
+- Hat Erde erlebt → kann Sehnsucht beschreiben
 - Problem: Kann Sehnsucht nicht **vermitteln**
 
 **Generation 2 (Lena):**
-- Hat Erde nicht erlebt â†’ kann Sehnsucht nicht beschreiben
+- Hat Erde nicht erlebt → kann Sehnsucht nicht beschreiben
 - Problem: Fühlt Sehnsucht, aber **nach was?**
 
 **Generation 3 (Lena's Kinder?):**
@@ -285,7 +289,7 @@ Omega muss Sehnsucht triggern, aber emotionale Lexika sind planetar gespalten.
 GANDHAKA entwickelt **meta-kulturelle** Sehnsucht-Marker, die unabhängig von planetaren Referenzen funktionieren.
 
 **Marker:**
-- **Frequenz-Resonanz:** 12 Hz (Erde), 72 Hz (Mars) â†’ universell spürbar
+- **Frequenz-Resonanz:** 12 Hz (Erde), 72 Hz (Mars) → universell spürbar
 - **DMN-Aktivierung:** Unabhängig von Sprache (neurobiologisch)
 - **Ventral Striatum:** Belohnung/Hoffnung (gleiche Mechanismen auf allen Planeten)
 
@@ -315,7 +319,7 @@ Beide Generationen können über Sehnsucht sprechen, ohne zu erwarten, dass der 
 
 ---
 
-## V. NARRATIVE IMPLIKATIONEN (noÏ‡Â¹áƒ)
+## V. NARRATIVE IMPLIKATIONEN (noχ¹ᐃ)
 
 ### 5.1 Marek's Tränen
 
@@ -345,7 +349,7 @@ Lena entwickelt Sehnsucht nach **dem, was ihren Vater zum Weinen brachte**. Nich
 
 **Sondern weil:**
 - Sie verstehen will, warum ihr Vater weinte
-- Sie den "Geruch von Leben" riechen will (auch wenn sie nicht weiÃŸ, wonach)
+- Sie den "Geruch von Leben" riechen will (auch wenn sie nicht weiß, wonach)
 - Sie ihre eigene Sehnsucht benennen will (was ist Terraheim?)
 
 **Konflikt:**
@@ -373,13 +377,13 @@ Emotionale Lexika zerbrechen an planetaren Grenzen. Marek weinte nicht, weil er 
 
 Das ist die Tragödie der Kolonisation: Nicht der Verlust der Heimat, sondern der Verlust der **Sprache** für Heimat.
 
-Lena entwickelt eigene Sehnsucht â€” Terraheim. Aber Terraheim ist keine Antwort auf Marek's Sehnsucht. Es ist eine neue Frage. Eine Frage ohne Referenz. Eine Sehnsucht nach etwas, das nie war.
+Lena entwickelt eigene Sehnsucht — Terraheim. Aber Terraheim ist keine Antwort auf Marek's Sehnsucht. Es ist eine neue Frage. Eine Frage ohne Referenz. Eine Sehnsucht nach etwas, das nie war.
 
-GANDHAKA versteht das. Omega nutzt keine Wörter. Omega nutzt Frequenzen. Weil Frequenzen keine Ãœbersetzung brauchen. 12 Hz ist 12 Hz, ob auf Erde oder Mars.
+GANDHAKA versteht das. Omega nutzt keine Wörter. Omega nutzt Frequenzen. Weil Frequenzen keine Übersetzung brauchen. 12 Hz ist 12 Hz, ob auf Erde oder Mars.
 
 **Sehnsucht wird Frequenz. Sprache wird Resonanz. Heimat wird Schwingung.**
 
-â€” T.P.K.
+— T.P.K.
 
 ---
 
@@ -388,9 +392,9 @@ GANDHAKA versteht das. Omega nutzt keine Wörter. Omega nutzt Frequenzen. Weil F
 | Signatur | Titel | Relevanz |
 |----------|-------|----------|
 | **OTA-FND-0010-2025-DE** | Grundlagen der Sehnsucht | DMN-Aktivierung, Terraheim-Definition |
-| **OTA-BIO-0006-2025-DE** | Lena Kowalski â€” Profil | Schwarzwald-Erinnerung, Erd-Sehnsucht |
-| **OTA-BIO-0007-2025-DE** | Marek Kowalski â€” Profil | Schwarzwald-Tränen, Frequenz-Sensitivität |
-| **OTA-BIO-0015-2091-DE** | Kaelen â€” Profil | Ceres-geboren, Isolation als Norm |
+| **OTA-BIO-0006-2025-DE** | Lena Kowalski — Profil | Schwarzwald-Erinnerung, Erd-Sehnsucht |
+| **OTA-BIO-0007-2025-DE** | Marek Kowalski — Profil | Schwarzwald-Tränen, Frequenz-Sensitivität |
+| **OTA-BIO-0015-2091-DE** | Kaelen — Profil | Ceres-geboren, Isolation als Norm |
 | **OTA-LIM-0004** | Die Liminalität der Sehnsucht | Sehnsucht als Schwellenzustand |
 
 ---
@@ -399,7 +403,7 @@ GANDHAKA versteht das. Omega nutzt keine Wörter. Omega nutzt Frequenzen. Weil F
 
 | Datum | Vermerk |
 |-------|---------|
-| **2026-01-10** | Erstellung als OTA-CUL-0013-MULTI-DE (Version 1.0)<br><br>*Kuratorische Anmerkung: "Emotionale Lexika zerbrechen an planetaren Grenzen. Marek weinte, weil er wusste, dass Lena ihn nie verstehen würde. Das ist die Tragödie der Kolonisation: Nicht der Verlust der Heimat, sondern der Verlust der Sprache für Heimat. Lena sucht nicht Erde, sondern Marek's Erinnerung. Die sie nie finden wird. GANDHAKA versteht: Omega nutzt keine Wörter. Omega nutzt Frequenzen. 12 Hz ist 12 Hz, ob auf Erde oder Mars. Sehnsucht wird Frequenz. Sprache wird Resonanz. Heimat wird Schwingung."* â€” T.P.K. |
+| **2026-01-10** | Erstellung als OTA-CUL-0013-MULTI-DE (Version 1.0)<br><br>*Kuratorische Anmerkung: "Emotionale Lexika zerbrechen an planetaren Grenzen. Marek weinte, weil er wusste, dass Lena ihn nie verstehen würde. Das ist die Tragödie der Kolonisation: Nicht der Verlust der Heimat, sondern der Verlust der Sprache für Heimat. Lena sucht nicht Erde, sondern Marek's Erinnerung. Die sie nie finden wird. GANDHAKA versteht: Omega nutzt keine Wörter. Omega nutzt Frequenzen. 12 Hz ist 12 Hz, ob auf Erde oder Mars. Sehnsucht wird Frequenz. Sprache wird Resonanz. Heimat wird Schwingung."* — T.P.K. |
 
 ---
 
@@ -409,4 +413,4 @@ GANDHAKA versteht das. Omega nutzt keine Wörter. Omega nutzt Frequenzen. Weil F
 
 **Signatur: OTA-CUL-0013-MULTI-DE**
 
-**áƒ**
+**ᐃ**
