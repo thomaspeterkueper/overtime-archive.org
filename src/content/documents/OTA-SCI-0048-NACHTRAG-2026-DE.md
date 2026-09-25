@@ -1,6 +1,6 @@
 ---
 signature: "OTA-SCI-0048-NACHTRAG-2026-DE"
-title: "OTA-SCI-0048-NACHTRAG-2026-DE"
+title: "Λ-Haplogruppe: Drei Ergänzungsmodule — UPE-FSS-Detektionsprotokoll · LHON/FSS-Differentialdiagnose · Zweiter-Schlag-Pharmakologie"
 series: "SCI"
 seriesNumber: 48
 year: 2026
@@ -10,8 +10,34 @@ status: "AKTIV"
 accessLevel: 0
 epistemicStatus: ["R", "T", "S", "F"]
 tags: ["Lambda-Haplogruppe", "FSS", "UPE", "LHON", "Differentialdiagnose", "Pharmakologie", "Nachtrag"]
-relatedDocuments: ["OTA-SCI-0048-2031-DE", "OTA-LSC-0004-2026-DE"]
+relatedDocuments:
+  - target: "OTA-SCI-0048-2031-DE"
+    relation: "related"
+    context: "Bereits in der Legacy-Inline-Liste des Ausgangsdokuments als relatedDocuments hinterlegt; bei der Normalisierung erhalten."
+  - target: "OTA-LSC-0004-2026-DE"
+    relation: "related"
+    context: "Bereits in der Legacy-Inline-Liste des Ausgangsdokuments als relatedDocuments hinterlegt; bei der Normalisierung erhalten."
+  - target: "OTA-LSC-0003-2026-DE"
+    relation: "related"
+    context: "Im Dokument ausdrücklich unter den verwandten Dokumenten bzw. Querverweisen aufgeführt."
+    descriptionStatus: "explicit"
+  - target: "OTA-TEC-0032-2091-DE"
+    relation: "related"
+    context: "Im Dokument ausdrücklich unter den verwandten Dokumenten bzw. Querverweisen aufgeführt."
+    descriptionStatus: "explicit"
+  - target: "OTA-SCI-0045-2026-DE"
+    relation: "related"
+    context: "Im Dokument ausdrücklich unter den verwandten Dokumenten bzw. Querverweisen aufgeführt."
+    descriptionStatus: "explicit"
+  - target: "OTA-BIO-0020-2026-DE"
+    relation: "related"
+    context: "Im Dokument ausdrücklich unter den verwandten Dokumenten bzw. Querverweisen aufgeführt."
+    descriptionStatus: "explicit"
 summary: "Drei Ergänzungsmodule zu OTA-SCI-0048: UPE-FSS-Detektionsprotokoll, LHON/FSS-Differentialdiagnose, Zweiter-Schlag-Pharmakologie. Reale medizinische Grundlagen mit Lambda-FSS-Anwendung."
+updatedAt: "2026-09-25T09:16:33+02:00"
+provenance:
+  reviewedAt: "2026-09-25T09:16:33+02:00"
+  reviewStatus: "metadata-reviewed"
 kg:
   schema: KXF-0.2
   master: kueper-knowledge-graph
