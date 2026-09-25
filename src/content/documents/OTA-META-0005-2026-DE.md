@@ -339,7 +339,8 @@ Die **Namensfrage** bleibt davon getrennt: Ein funktionaler Übergang zu S2, S3 
 3. Erst nach Auffinden der passenden Werkfassung die in META-0002 genannten Angaben als reproduzierte Primärbelege markieren; bis dahin bleibt META-0002 die sekundäre Kanonreferenz.
 4. Den jetzt angelegten **provisionalen Bevölkerungskorridor 2056–2091** gegen neue Werkbelege, Transportkapazitäten und Habitat-/Industrieentwicklung testen und bei Bedarf revidieren.
 5. Einwanderungswellen 2069–2091 zusätzlich gegen Habitat/ECLSS, Medizin, Familien-/Entwicklungsinfrastruktur, Energie und Produktion prüfen.
-6. Die neue S0–S5-Schwellenmatrix mit Primärquellen füllen; insbesondere S0→S1, S1→S2 und S4→S5 datieren, ohne aus Modellwerten Kanon zu erzeugen.\n7. Aus den Belegen eine getrennte Ereigniskette für Standort, Besiedlung, Namensgebung und institutionelle Entwicklung erstellen.
+6. Die neue S0–S5-Schwellenmatrix mit Primärquellen füllen; insbesondere S0→S1, S1→S2 und S4→S5 datieren, ohne aus Modellwerten Kanon zu erzeugen.
+7. Aus den Belegen eine getrennte Ereigniskette für Standort, Besiedlung, Namensgebung und institutionelle Entwicklung erstellen.
 
 ---
 
