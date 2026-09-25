@@ -5,13 +5,13 @@ series: "META"
 seriesNumber: 5
 year: 2026
 language: "DE"
-version: "v0.7"
+version: "v0.8"
 status: "ENTWURF"
 accessLevel: 0
 epistemicStatus: ["W"]
 tags: ["Mars", "Alpha-7", "Iterius Prime", "MIMI", "PROMETHEUS", "Das Schweigen", "Kanon-Audit", "2040", "2069"]
 relatedDocuments: ["OTA-META-0002-2026-DE", "OTA-HIS-0004-2069-DE", "OTA-HIS-0005-2050-DE"]
-summary: "Arbeitsaudit zur frühen Marsgesellschaft 2040–2069. v0.7 ergänzt ein ausdrücklich nichtkanonisches Kapazitäts- und Transferwellenmodell 2069–2091; Bevölkerungswachstum wird an Habitat/ECLSS, Industrie, Medizin und Settlement-Capabilities gekoppelt."
+summary: "Arbeitsaudit zur frühen Marsgesellschaft 2040–2069. v0.8 ergänzt institutionelle Schwellen für Alpha-7/Iterius Prime und trennt belegbare Übergangskriterien von weiterhin offenen Datierungen, Namen und Bevölkerungswerten."
 kg:
   schema: KXF-0.2
   master: kueper-knowledge-graph
@@ -24,8 +24,8 @@ kg:
 # Frühe Marsgesellschaft 2040–2069
 ## Kanon-Audit Alpha-7, MIMI und Iterius Prime
 
-**Version:** 0.7  
-**Stand:** 24. September 2026  
+**Version:** 0.8  
+**Stand:** 25. September 2026  
 **Status:** Arbeitsaudit, keine neue Kanonfestlegung
 
 Dieses Dokument isoliert den derzeit wichtigsten offenen Abschnitt der Mars-Chronologie. Es übernimmt nur bereits gesetzte oder ausdrücklich als provisional geführte Angaben und macht sichtbar, welche Übergänge noch nicht belegt sind.
@@ -264,7 +264,57 @@ Diese Schwellen sollen später an Werkbelegen und institutionellen Ereignissen f
 
 ---
 
-## 10. Reconciliation-Matrix
+
+## 10. Institutionelle Schwellen Alpha-7 → Iterius Prime
+
+Die Entwicklung des späteren Iterius Prime wird hier **nicht** über eine frei gewählte Einwohnerzahl definiert. Stattdessen werden sechs unterscheidbare Systemzustände geführt. Sie sind Audit-Kategorien; nur dort, wo vorhandene Quellen einen Zustand tragen, wird eine zeitliche Grenze angegeben.
+
+| Schwelle | Minimales Kriterium | Derzeitige Einordnung | Beleg-/Suchbedarf |
+|---|---|---|---|
+| **S0 Standort** | kartierter/ausgewählter Ort ohne notwendige Dauerpräsenz | **2040 Alpha-7 [K laut META-0002; Primärbeleg offen]** | ursprüngliche Werkstelle/Karte sichern |
+| **S1 bemannter Außenposten** | wiederkehrende oder längere bemannte Nutzung; kritische Funktionen bleiben stark erdgebunden | **spätestens 2056 [P]** | früheste bemannte Nutzung und tatsächlicher Standort |
+| **S2 dauerhafte Siedlung** | ganzjährige Dauerpräsenz plus Fähigkeit, mindestens einen gestörten Nachschubzyklus technisch zu überstehen | **spätestens 2067–2069 praktisch erreicht [K Ereignis / [P] technische Tiefe]** | Beginn der Dauerpräsenz; Repair-Independence-Ereignis |
+| **S3 komplexe Siedlungsgesellschaft** | mehrere Alters-/Rollenklassen, spezialisierte Medizin, Bildung/Familienbetrieb und lokale Institutionen | **bis 2069 möglich bzw. durch META-0002 nahegelegt, aber Primärbeleg offen** | Marskinder-/1-g-Quelle; frühe Klinik-, Bildungs- und Verwaltungsbelege |
+| **S4 marsweit arbeitsteilige Gesellschaft** | mindestens zwei dauerhafte Knoten mit funktionaler Spezialisierung und gegenseitiger Logistik/Redundanz | **ab Kaiwu 2076/77 als Struktur [K/P]** | frühe Iterius–Kaiwu-Verkehrs-, Versorgungs- und Zuständigkeitsbelege |
+| **S5 Stadtgesellschaft** | skalierbare kommunale Infrastruktur, dauerhafte Familien-/Bildungsinstitutionen, wirtschaftliche Spezialisierung, interne räumliche Gliederung und eigenständige Governance-Funktionen | **2091 eindeutig erfüllt [K]; Beginn offen** | früheste Belege für Sektoren/Ebenen, Akademie, Medical Center, kommunale Dienste und Governance |
+
+### 10.1 Was damit bereits eingegrenzt ist
+
+Die Quellen erlauben drei belastbare **späteste Grenzen**, ohne ein Gründungsjahr zu erfinden:
+
+- **S1 spätestens 2056:** Die Mars-Kommunikationskrise setzt eine gesellschaftlich relevante bemannte Infrastruktur voraus; ob diese bereits am Alpha-7-Standort liegt, ist damit noch nicht bewiesen.
+- **S2 spätestens während des ersten Schweigens 2067–2069:** Eine Siedlungsgesellschaft übersteht den langen Kommunikations- und Versorgungsausfall. Das belegt Dauerhaftigkeit auf Mars, aber noch nicht automatisch den exakten Übergang des Alpha-7-Standorts.
+- **S5 spätestens 2091:** Iterius Prime besitzt im Werkkanon etwa 5.000 Einwohner, ein tief gestaffeltes Sektor-/Ebenensystem, Medical Center, Akademie, lokale Netze, Geothermie und Wartungsrobotik. Damit ist die funktionale Stadtqualität unabhängig von einer formalen Rechtsbezeichnung gegeben.
+
+Dazwischen bleibt bewusst ein **Datierungskorridor**. Insbesondere darf die Existenz marsgeborener Kinder 2069 nicht automatisch mit dem formalen Beginn einer Stadt gleichgesetzt werden.
+
+### 10.2 Institutionen statt Einwohnergrenze
+
+Für den späteren Nachweis von S3–S5 sind folgende Belegklassen aussagekräftiger als eine einzelne Bevölkerungszahl:
+
+1. **Versorgung:** dauerhaftes ECLSS-, Wasser-, Energie-, Nahrungs- und Abfallmanagement als gemeinschaftliche Infrastruktur;
+2. **Medizin:** nicht nur Missionsmedizin, sondern kontinuierliche Versorgung verschiedener Altersgruppen;
+3. **Familie/Bildung:** Kinderbetreuung, Schule/Akademie oder vergleichbare dauerhafte Entwicklungsinstitutionen;
+4. **Governance:** lokale Regeln, Verwaltung, Notfallkompetenzen und Konfliktlösung jenseits einer Missionskommandostruktur;
+5. **Wirtschaft/Arbeitsteilung:** spezialisierte Produktion, Dienste, Logistik und Austausch zwischen Marsknoten;
+6. **Raumstruktur:** benannte/organisierte Sektoren, Verkehrswege, öffentliche bzw. gemeinschaftliche Räume und technische Versorgungszonen;
+7. **Resilienz:** Fähigkeit, zentrale Funktionen bei Kommunikations- oder Nachschubausfall lokal weiterzuführen.
+
+### 10.3 Priorisierte Quellenlücken
+
+Aus der Schwellenmatrix ergeben sich jetzt konkrete Suchziele statt abstrakter Chronologielücken:
+
+- **S0→S1:** erste bemannte Nutzung von Alpha-7 und erste Überwinterung/Dauerbesatzung;
+- **S1→S2:** erster belegter ganzjähriger Dauerbetrieb sowie ein frühes Repair-Independence-Ereignis;
+- **S2→S3:** erste Familien, Marsgeburten, Kinder-/Bildungsinfrastruktur, dauerhafte medizinische Institution;
+- **S3→S4:** Aufbau Kaiwus und Beginn regelmäßiger funktionaler Arbeitsteilung zwischen den beiden Siedlungen;
+- **S4→S5:** früheste Nachweise für kommunale Governance, interne Sektorisierung, Akademie/Medical Center und eine nicht mehr missionsförmige Alltagsökonomie in Iterius.
+
+Die **Namensfrage** bleibt davon getrennt: Ein funktionaler Übergang zu S2, S3 oder S5 beweist nicht, wann die Bezeichnung **Iterius Prime** erstmals offiziell verwendet wurde.
+
+---
+
+## 11. Reconciliation-Matrix
 
 | Frage | Aktueller Stand | Nächster Belegbedarf |
 |---|---|---|
@@ -282,14 +332,14 @@ Diese Schwellen sollen später an Werkbelegen und institutionellen Ereignissen f
 
 ---
 
-## 11. Nächste Audit-Schritte
+## 12. Nächste Audit-Schritte
 
 1. Die richtige Werkfassung für **Proposed Site Alpha-7**, frühe Marskinder und die 1-g-Trainingszentrifuge lokalisieren; die aktuell auf Google Drive auffindbare *Generation Mars Version 3* enthält diese Belege nicht.
 2. Nach einem unabhängigen Werkbeleg für **~1.000 Menschen 2067–2069** suchen.
 3. Erst nach Auffinden der passenden Werkfassung die in META-0002 genannten Angaben als reproduzierte Primärbelege markieren; bis dahin bleibt META-0002 die sekundäre Kanonreferenz.
 4. Den jetzt angelegten **provisionalen Bevölkerungskorridor 2056–2091** gegen neue Werkbelege, Transportkapazitäten und Habitat-/Industrieentwicklung testen und bei Bedarf revidieren.
 5. Einwanderungswellen 2069–2091 zusätzlich gegen Habitat/ECLSS, Medizin, Familien-/Entwicklungsinfrastruktur, Energie und Produktion prüfen.
-6. Aus den Belegen eine getrennte Ereigniskette für Standort, Besiedlung, Namensgebung und institutionelle Entwicklung erstellen.
+6. Die neue S0–S5-Schwellenmatrix mit Primärquellen füllen; insbesondere S0→S1, S1→S2 und S4→S5 datieren, ohne aus Modellwerten Kanon zu erzeugen.\n7. Aus den Belegen eine getrennte Ereigniskette für Standort, Besiedlung, Namensgebung und institutionelle Entwicklung erstellen.
 
 ---
 
@@ -303,7 +353,7 @@ Diese Schwellen sollen später an Werkbelegen und institutionellen Ereignissen f
 | 2026-09-19 | 0.4 | Quellenprüfung gegen die aktuell auf Google Drive auffindbare *Generation Mars Version 3*: Alpha-7, Marskinder und 1-g-Zentrifuge dort nicht reproduzierbar; sekundäre Kanonreferenz und noch zu sichernder Primärbeleg ausdrücklich getrennt. |
 | 2026-09-19 | 0.5 | Explizit nichtkanonischen Bevölkerungskorridor 2056–2091 ergänzt; Legacy-~1.000, Iterius-~5.000 und Kaiwu-Arbeitskorridore als getrennte Anker behandelt; Zuwanderung als notwendiger Haupttreiber des Wachstums ausgewiesen. |
 | 2026-09-22 | 0.6 | Gegen OTA-SCI-0086 v1.2 reconciliert: vier Settlement-Capabilities übernommen; A→B→C nur als Engineering-Option behandelt; keine Low-g-Schwelle oder konkrete Iterius-Architekturstufe kanonisiert. |
-| 2026-09-24 | 0.7 | Provisionales Transfer-/Kapazitätswellenmodell 2069–2091 ergänzt; Nettozuwachs von Transportpassagieren getrennt; Wachstum an Habitat/ECLSS, Industrie, Medizin und Settlement-Capabilities gekoppelt; Stadtwerdung als institutioneller statt rein numerischer Übergang gefasst. |
+| 2026-09-24 | 0.7 | Provisionales Transfer-/Kapazitätswellenmodell 2069–2091 ergänzt; Nettozuwachs von Transportpassagieren getrennt; Wachstum an Habitat/ECLSS, Industrie, Medizin und Settlement-Capabilities gekoppelt; Stadtwerdung als institutioneller statt rein numerischer Übergang gefasst. |\n| 2026-09-25 | 0.8 | Institutionelle Schwellen S0–S5 für Alpha-7/Iterius Prime ergänzt; späteste belegbare Grenzen von frei erfundenen Gründungsdaten getrennt und konkrete Quellenlücken für Außenposten-, Siedlungs-, Gesellschafts- und Stadtübergang definiert. |
 
 ---
 
