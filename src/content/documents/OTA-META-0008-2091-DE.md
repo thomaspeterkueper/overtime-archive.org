@@ -7,6 +7,9 @@ year: 2091
 language: "DE"
 version: "v0.3"
 status: "ENTWURF"
+accessLevel: 0
+epistemicStatus: ["F", "W", "OFFEN"]
+summary: "Erweiterung des Iterius-Prime-Spatial-Graphen um zusätzliche räumliche Constraints und Knoten, mit Kennzeichnung von kanonischen, provisorischen und offenen Angaben."
 universe: ["NOXIA", "Generation Mars"]
 relatedDocuments: ["OTA-META-0007-2091-DE"]
 ---
