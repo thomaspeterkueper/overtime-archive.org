@@ -1,11 +1,11 @@
 ---
 signature: "OTA-META-0007-2091-DE"
-title: "Iterius Prime Spatial Graph v0.1"
+title: "Iterius Prime Spatial Graph v0.2"
 series: "META"
 seriesNumber: 7
 year: 2091
 language: "DE"
-version: "v0.1"
+version: "v0.2"
 status: "ENTWURF"
 accessLevel: 0
 epistemicStatus: ["F", "W", "OFFEN"]
@@ -15,11 +15,11 @@ relatedDocuments: ["OTA-META-0006-2091-DE", "OTA-HIS-0010-2040-DE", "OTA-META-00
 summary: "Erster quellennaher räumlicher Graph von Iterius Prime 2091 mit kanonischen Romanankern und minimalen provisorischen Verbindungsknoten."
 ---
 
-# Iterius Prime Spatial Graph v0.1
+# Iterius Prime Spatial Graph v0.2
 
 **Stand:** 28. September 2026  
 **Zielzustand:** Iterius Prime, 2091  
-**Umfang:** 32 Knoten  
+**Umfang:** 38 Knoten  
 **Regel:** Romanbeleg vor OTA-Arbeitsmodell; notwendige Ergänzungen bleiben [P].
 
 ## 1. Quellenkorrekturen vor dem Graph
@@ -183,3 +183,96 @@ v0.2 soll:
 ## 9. Kanonregel
 
 Der Graph ist ein **Konsistenzmodell**, keine vollständige Stadtbeschreibung. Ein [P]-Knoten darf nicht allein deshalb Roman-Kanon werden, weil er für die Graphverbindung praktisch ist.
+
+
+# 10. v0.2 — Szenenprovenienz und Wegeconstraints
+
+## 10.1 Direkt belegte Szenenpfade
+
+| Pfad | Manuskriptprovenienz | Constraint | Status |
+|---|---|---|---|
+| Mars-Orbit → KITE-Shuttle → Iterius Prime | Kap. 3.1 „Roter Horizont“, 02.10.2091 | regulärer Ankunftspfad | [K] |
+| KITE-Shuttle → Empfangshalle | Kap. 3.3 „Die Stumme“ | Kaelen benötigt im Reha-Zustand ca. 2 h; **keine normale Reisezeit ableiten** | [K] |
+| Empfangshalle → B-8 | Kap. 3.2 „Der Beobachter“ | zusammenhängender Ankunfts-/Gastfamilienpfad | [K] |
+| D-2-Quartier → Aufzüge → Level 2 Beobachtungsplattform | Kap. 3.3 | Start 04:58; Lift erreicht obere Route vor 05:34; exakte Geh-/Wartezeit nicht isolierbar | [K] |
+| E-3 Mars-Akademie → C-4 | Kap. 3.4 „Erste Lektion“ | ca. 20 min zu Fuß oder ca. 5 min mit Aufzug | [K] |
+| C-7 / Unit 23-B → Hauptkorridor | Kap. 1 „Schwerkraft-Training“ | Wohnung öffnet direkt/nahe zum Hauptkorridor | [K] |
+| B-12 → Omega-7 | Kap. „Die Navigatorin“ | narrativ angekündigter Pfad; Distanz/Reisezeit noch nicht belegt | [K/O] |
+
+## 10.2 Neue Knoten aus Szenenprovenienz
+
+| ID | Name | Layer | Typ | Status | Provenienz |
+|---|---|---|---|---|---|
+| IP-033 | KITE-Lande-/Transferinterface | L0 | TRANSIT_NODE | [K/P] | Kap. 3.1/3.3 |
+| IP-034 | D-2 Gemeinschaftsbereich | L2 | COMMUNITY | [K] | Kap. 3.3: Orientierung links |
+| IP-035 | D-2 Aufzugzugang | L2 | TRANSIT_NODE | [K] | Kap. 3.3: Orientierung rechts |
+| IP-036 | Akademie Raum 7-A | L2 | EDUCATION | [K] | Kap. 3.4 |
+| IP-037 | C-7 Schichtwechselkorridor | L4/L5 | PERSON_ROUTE | [K] | Kap. 1 |
+| IP-038 | Unterer Durchgangsverkehr | L3/L5 | TRANSIT/FREIGHT_ROUTE | [K/P] | Kap. 3.4: Wandvibration vom Verkehr drei Ebenen tiefer |
+
+## 10.3 Neue/geschärfte Kanten
+
+| Von | Nach | Relation | Constraint | Status |
+|---|---|---|---|---|
+| IP-033 | IP-003 | PERSON_ROUTE | Kaelen: ca. 2 h im stark eingeschränkten Reha-Zustand; nicht als Netzdistanz verwenden | [K] |
+| IP-016 | IP-034 | CONNECTED_TO | Orientierung vom Quartier: links | [K/P] |
+| IP-016 | IP-035 | CONNECTED_TO | Orientierung vom Quartier: rechts | [K/P] |
+| IP-035 | IP-006 | ELEVATOR_ROUTE | Aufstieg bis Level 2 | [K] |
+| IP-018 | IP-036 | CONTAINS | zweiter Korridor links vom Akademie-Eingangsbereich | [K] |
+| IP-018 | IP-012 | PERSON_ROUTE | ~20 min zu Fuß | [K] |
+| IP-018 | IP-012 | ELEVATOR_ROUTE | ~5 min mit Aufzug | [K] |
+| IP-014 | IP-015 | CONNECTED_TO | unmittelbarer Wohn-/Korridorbezug | [K] |
+| IP-015 | IP-037 | PART_OF | Schichtwechsel/öffentlicher Verkehr | [K] |
+| IP-038 | IP-018 | BELOW/ACOUSTIC_COUPLING | Durchgangsverkehr drei Ebenen tiefer erzeugt messbare Wandvibration | [K/P] |
+
+## 10.4 Provenienzmatrix der zentralen Ortsanker
+
+| Ort | Kapitel/Szene | Was die Quelle tatsächlich setzt |
+|---|---|---|
+| Medical Center | Kap. 1 „Schwerkraft-Training“ | Medical Center; 1-g-Zentrifuge; Zentrifuge Baujahr 2069 |
+| C-7 / Unit 23-B | Kap. 1 | Level 14; 820 m; Tube-Geflecht; 8×3-m-Hauptkorridor; natürliche Basaltdecke |
+| Iterius Prime Alpha | Kap. 1 | Landing Pad 3 / SSEP Check-in |
+| Empfangshalle | Kap. 3.1/3.2 | 15-m-Decke; in Fels eingegraben; verdichteter Regolithboden; Ankunfts-/Empfangsfunktion |
+| B-8 | Kap. 3.2 | Dela-Cruz-Gastfamilie; Level 12 |
+| D-2 | Kap. 3.3 | Kimura/Obi-Gastquartier; Gemeinschaftsbereich und Aufzüge vom Quartier aus ausgeschildert |
+| Beobachtungsplattform | Kap. 3.3 | Level 2; ~80 m; ~15-m-Kuppel; Ostblick |
+| E-3 Akademie | Kap. 3.4 | ~180 m; Korridor-/Aufzugsnetz; Raum 7-A |
+| C-4 | Kap. 3.4 | Gastfamiliensektor; ~20 min Fuß / ~5 min Lift von Akademie-Kontext |
+| B-12 | „Die Navigatorin“ | Keikos Wohnsektor; 3×3-m-Standardzimmer |
+| Omega-7 | „Die Navigatorin“ | ehemaliges Sektor-7-Tief; nach 2087 umklassifiziert; Zugang/innere Topologie offen |
+
+## 10.5 Harte Konsistenzregeln aus v0.2
+
+1. **E-3 ↔ C-4** ist der bislang stärkste metrische Netzanker: Fußweg und Liftweg müssen beide möglich sein.
+2. **D-2 → Level 2** besitzt einen echten vertikalen Aufzugspfad.
+3. **C-7** ist kein künstlich gebohrter Standardkorridor allein, sondern sichtbar in das natürliche Basalt-/Lavatube-Geflecht integriert.
+4. **420 m** darf vorerst keinem bestimmten Sektor fest zugewiesen werden. Der Text setzt Kaelens Quartierkontext auf 420 m, während ältere/andere Passagen Rashids Levelzuordnung widersprüchlich behandeln.
+5. **Kaelens 2 h vom KITE-Shuttle zur Empfangshalle** sind ein Mobilitäts-/Reha-Fakt, kein Beweis für große räumliche Entfernung.
+6. Frequenz- und Vibrationsbeobachtungen können räumliche Relationen liefern: In/nahe der Akademie ist Verkehr drei Ebenen tiefer mechanisch wahrnehmbar.
+7. Level 16+ bleibt semantisch **restricted research**, nicht automatisch Omega-7. Eine direkte Identität wäre derzeit unbelegt.
+
+## 10.6 Erkannte Manuskriptkonflikte
+
+### Rashid: Level 8 / 420 m vs. B-8 / Level 12
+
+Kap. 3.3 nennt vergleichend „Rashids Quartier in Level 8, 420 Meter tief“. Das Gastfamilienpaket in Kap. 3.2 setzt die Dela-Cruz-Wohnung dagegen ausdrücklich auf **Sektor B-8, Level 12**. Diese Angaben dürfen nicht still zusammengezogen werden.
+
+Arbeitsstatus:
+- Dela-Cruz-Wohnung = B-8 / Level 12 [K, direkte Zuweisung].
+- „Rashids Quartier Level 8 / 420 m“ = [C], redaktionell zu prüfen.
+- 420 m bleibt als realer Tiefenanker des Manuskripts erhalten, aber ohne endgültige Sektorbindung.
+
+### C-7 / „Hälfte von Mars“
+
+Kap. 1 formuliert, seit der Entdeckung der natürlichen Hohlräume 2072 lebe „die Hälfte von Mars hier unten“. Das belegt die starke Nutzung des Untergrund-/Lavatube-Geflechts, ist aber als quantitative Aussage mit der später rekonstruierten Mehrsiedlungswelt (u. a. Kaiwu) zu prüfen. v0.2 übernimmt **nicht** automatisch 50 % als demografischen Kanonwert.
+
+## 10.7 Konsequenz für v0.3
+
+Vor zusätzlicher Geometrie müssen nun die übrigen Manuskript-Orte und Bewegungen gegen BIO/RED/TEC-Dokumente geprüft werden. Priorität haben:
+- Omega-7-Zugangsweg;
+- Lage Medical Center;
+- Hydroponik-Dome 5;
+- Alpha/Empfangshalle/Untergrund-Übergang;
+- 420-m-Konflikt;
+- funktionale Trennung von Level 13–15 und Level 16+;
+- genaue Lavatube-Nutzung außerhalb C-7.
