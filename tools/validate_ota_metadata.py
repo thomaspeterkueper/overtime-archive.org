@@ -54,6 +54,11 @@ def validate(path: pathlib.Path) -> list[str]:
     errors: list[str] = []
     warnings: list[str] = []
 
+    # Literal backslash-n sequences join Markdown rows without creating a line break.
+    # This has repeatedly escaped rendering/link checks, so reject it in canonical docs.
+    if r"\\n" in text:
+        errors.append(r"literal \\n sequence found; use a real newline instead")
+
     signature = scalar(meta, "signature")
     series = scalar(meta, "series")
     series_number = scalar(meta, "seriesNumber")
