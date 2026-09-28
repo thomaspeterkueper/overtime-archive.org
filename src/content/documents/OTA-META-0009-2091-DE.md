@@ -7,6 +7,9 @@ year: 2091
 language: "DE"
 version: "v1.0"
 status: "ENTWURF"
+accessLevel: 0
+epistemicStatus: ["F", "W", "OFFEN"]
+summary: "Quellenaudit älterer Iterius-Prime-Dokumente für den Spatial Graph mit Einzelbewertung räumlicher Angaben gegenüber aktuellem Manuskript und konsolidiertem OTA-Bestand."
 universe: ["NOXIA", "Generation Mars"]
 relatedDocuments: ["OTA-META-0005-2091-DE", "OTA-META-0007-2091-DE", "OTA-META-0008-2091-DE"]
 ---
