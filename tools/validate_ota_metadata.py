@@ -35,12 +35,14 @@ def scalar(meta: str, key: str) -> str | None:
 
 
 def has_nonempty_field(meta: str, key: str) -> bool:
-    """Check a one-line YAML frontmatter field without trying to parse quoted content."""
-    match = re.search(rf"^\\s*{re.escape(key)}:\\s*(.*?)\\s*$", meta, re.MULTILINE)
-    if not match:
-        return False
-    value = match.group(1).strip()
-    return value not in {"", '""', "''", "null", "~"}
+    """Check a top-level one-line YAML frontmatter field without parsing quoted content."""
+    prefix = f"{key}:"
+    for line in meta.splitlines():
+        if not line.startswith(prefix):
+            continue
+        value = line[len(prefix):].strip()
+        return value not in {"", '""', "''", "null", "~"}
+    return False
 
 
 def nested_scalar(meta: str, block: str, key: str) -> str | None:
