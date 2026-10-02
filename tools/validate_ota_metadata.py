@@ -34,6 +34,15 @@ def scalar(meta: str, key: str) -> str | None:
     return match.group(1).strip() if match else None
 
 
+def has_nonempty_field(meta: str, key: str) -> bool:
+    """Check a one-line YAML frontmatter field without trying to parse quoted content."""
+    match = re.search(rf"^\\s*{re.escape(key)}:\\s*(.*?)\\s*$", meta, re.MULTILINE)
+    if not match:
+        return False
+    value = match.group(1).strip()
+    return value not in {"", '""', "''", "null", "~"}
+
+
 def nested_scalar(meta: str, block: str, key: str) -> str | None:
     lines = meta.splitlines()
     start = next((i for i, line in enumerate(lines) if re.match(rf"^{re.escape(block)}:\s*$", line)), None)
@@ -63,13 +72,13 @@ def validate(path: pathlib.Path) -> list[str]:
     series = scalar(meta, "series")
     series_number = scalar(meta, "seriesNumber")
     language = scalar(meta, "language")
-    summary = scalar(meta, "summary")
+    has_summary = has_nonempty_field(meta, "summary")
 
     if path.name.startswith("OTA-") and not OTA_ID.search(text):
         errors.append("filename looks like OTA document but no canonical OTA signature was found")
     # Astro content schema requires a non-empty summary for every canonical document.
     # Keep this lightweight validator aligned so missing summaries fail before deployment.
-    if not summary:
+    if not has_summary:
         errors.append("missing required frontmatter field: summary")
     if signature:
         expected_filename = f"{signature}{path.suffix}"
