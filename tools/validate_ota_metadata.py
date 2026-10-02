@@ -63,9 +63,14 @@ def validate(path: pathlib.Path) -> list[str]:
     series = scalar(meta, "series")
     series_number = scalar(meta, "seriesNumber")
     language = scalar(meta, "language")
+    summary = scalar(meta, "summary")
 
     if path.name.startswith("OTA-") and not OTA_ID.search(text):
         errors.append("filename looks like OTA document but no canonical OTA signature was found")
+    # Astro content schema requires a non-empty summary for every canonical document.
+    # Keep this lightweight validator aligned so missing summaries fail before deployment.
+    if not summary:
+        errors.append("missing required frontmatter field: summary")
     if signature:
         expected_filename = f"{signature}{path.suffix}"
         if path.name != expected_filename:
