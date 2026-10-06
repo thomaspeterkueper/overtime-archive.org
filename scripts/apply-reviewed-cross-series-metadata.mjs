@@ -184,6 +184,12 @@ const reviews = [
     title: 'Relativistische Finanz-Metriken — RFV-1: Technischer Anhang zum IFL-Layer 0',
     reviewedAt: '2026-10-06T07:41:00+02:00',
     relations: ['OTA-FND-0008-2025-DE','OTA-TEC-0023-2091-DE','OTA-SCI-0015-2025-DE'],
+  },
+  {
+    signature: 'OTA-TEC-0023-2091-DE',
+    title: 'Mars Credit (MCR) — Technische Spezifikation des Mars Financial Network',
+    reviewedAt: '2026-10-06T07:41:00+02:00',
+    relations: ['OTA-FND-0008-2025-DE','OTA-ORG-0001-2079-DE','OTA-ORG-0002-2091-DE'],
   }
 ];
 
