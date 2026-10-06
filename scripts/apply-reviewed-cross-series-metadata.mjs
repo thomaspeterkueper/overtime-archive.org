@@ -155,6 +155,42 @@ const reviews = [
     reviewedAt: '2026-09-25T09:11:03+02:00',
     relations: ['OTA-SCI-0048-2031-DE','OTA-LSC-0003-2026-DE','OTA-SCI-0045-2026-DE','OTA-TEC-0032-2091-DE'],
   },
+  {
+    signature: 'OTA-TEC-0016-2063-DE',
+    title: 'Helios KITE-Shuttle — Kinetic Interplanetary Transport Element',
+    reviewedAt: '2026-10-06T07:41:00+02:00',
+    expectedSummary: 'Helios KITE-SHUTTLE — solarbetriebenes Shuttle-System 2063, NOXIA-Universum.',
+    summary: 'Technische Spezifikation des Helios KITE-Shuttle als modulares Mars-Orbit/Oberflächen-Shuttle ab 2063 mit Methan/LOX-Antrieb und redundanter Systemarchitektur.',
+    relations: ['OTA-BIO-0008-2025-DE','OTA-TEC-0015-2082-DE','OTA-ORG-0001-2079-DE'],
+  },
+  {
+    signature: 'OTA-ORG-0002-2091-DE',
+    title: 'Iterius Prime — Kolonie-Struktur & Sektoreneinteilung',
+    reviewedAt: '2026-10-06T07:41:00+02:00',
+    expectedSummary: 'Iterius Prime — KI-Organisation 2091, NOXIA-Universum.',
+    summary: 'Organisationsdokument zu Iterius Prime 2091: vertikale Lavaröhrenstruktur, Sektoreneinteilung, Bevölkerung sowie die klassifizierten Bereiche 7-Tief und Omega im NOXIA-Universum.',
+    relations: ['OTA-ORG-0001-2079-DE','OTA-HIS-0003-2087-DE','OTA-BIO-0007-2025-DE'],
+  },
+  {
+    signature: 'OTA-ORG-0001-2079-DE',
+    title: 'Unit-7 — Die Schwarzen Architekten',
+    reviewedAt: '2026-10-06T07:41:00+02:00',
+    expectedSummary: 'Die Schwarzen Architekten — Macht-Organisation 2079, NOXIA-Universum.',
+    summary: 'Organisationsprofil der Unit-7 („Die Schwarzen Architekten“), der 2079 gegründeten Resource Protection & Crisis Management Unit von HeliosCorp Mars Division.',
+    relations: ['OTA-TEC-0004-2087-DE','OTA-NAR-0001-2087-DE','OTA-TEC-0015-2082-DE'],
+  },
+  {
+    signature: 'OTA-TEC-0024-2150-DE',
+    title: 'Relativistische Finanz-Metriken — RFV-1: Technischer Anhang zum IFL-Layer 0',
+    reviewedAt: '2026-10-06T07:41:00+02:00',
+    relations: ['OTA-FND-0008-2025-DE','OTA-TEC-0023-2091-DE','OTA-SCI-0015-2025-DE'],
+  },
+  {
+    signature: 'OTA-TEC-0023-2091-DE',
+    title: 'Mars Credit (MCR) — Technische Spezifikation des Mars Financial Network',
+    reviewedAt: '2026-10-06T07:41:00+02:00',
+    relations: ['OTA-FND-0008-2025-DE','OTA-ORG-0001-2079-DE','OTA-ORG-0002-2091-DE'],
+  }
 ];
 
 const knownFiles = new Set(fs.readdirSync(DOCS_DIR));
