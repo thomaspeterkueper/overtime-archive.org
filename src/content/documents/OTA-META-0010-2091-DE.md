@@ -5,13 +5,13 @@ series: "META"
 seriesNumber: 10
 year: 2091
 language: "DE"
-version: "v0.1"
+version: "v0.2"
 status: "ENTWURF"
 accessLevel: 0
 epistemicStatus: ["F", "W", "OFFEN"]
 universe: ["NOXIA", "Generation Mars"]
 relatedDocuments: ["OTA-META-0007-2091-DE", "OTA-META-0008-2091-DE", "OTA-META-0009-2091-DE", "OTA-HIS-0010-2040-DE"]
-summary: "Erster geometrischer Querschnitt von Iterius Prime 2091. Positioniert nur belegte Tiefenanker und Wegeconstraints; offene Funktionsknoten bleiben bewusst unpositioniert."
+summary: "Constraint-basierter geometrischer Querschnitt von Iterius Prime 2091 mit geprüftem B-12/C-7-Wegekonflikt und geologischer Plausibilitätsprüfung der tiefen Lavatube-Angaben."
 ---
 
 # Iterius Prime — Geometrischer Querschnitt v0.1
@@ -139,3 +139,59 @@ Mindestens erforderlich sind:
 ## 10. Kanonregel
 
 Dieser Querschnitt darf keine offenen Einrichtungen durch grafische Bequemlichkeit kanonisieren. Eine gezeichnete Position wird erst dann zum Weltfakt, wenn sie als [K] oder ausdrücklich angenommener [P]-Stand dokumentiert ist.
+
+
+## 11. v0.2 — 420↔820-m-Konsistenztest
+
+### 11.1 Quellenlage
+
+Der aktuelle Manuskriptbestand setzt B-12 bei ca. 420 m und C-7/Level 14 bei ca. 820 m. Zusätzlich ist für B-12-Untergeschoss → C-7/Level 14 ein Fußweg von ca. 15 Minuten durch Verbindungstunnel überliefert. Diese drei Angaben werden nicht gegeneinander weginterpretiert.
+
+### 11.2 Kinematischer Test
+
+Die reine vertikale Differenz beträgt ca. 400 m.
+
+Ein ausschließlich begehbarer Weg mit 400 m Nettoabstieg in 15 Minuten erforderte bereits eine mittlere Vertikalgeschwindigkeit von rund 0,44 m/s, noch bevor irgendeine horizontale Wegstrecke berücksichtigt wird. Das entspräche einer sehr aggressiven Dauerabwärtsbewegung und passt schlecht zur Formulierung eines normalen Fußwegs durch Verbindungstunnel.
+
+**Ergebnis:** Ein rein passiver Fußtunnel zwischen beiden absoluten Tiefen ist als Standardweg nicht plausibel.
+
+### 11.3 Zulässige Lösungen
+
+Bis zur Romanrevision werden vier Möglichkeiten getrennt geführt:
+
+1. **[P bevorzugt] mechanisierte Vertikalkomponente:** Der Weg enthält Lift/Fahrsteig/Schrägaufzug; die 15 Minuten beschreiben den gesamten Personenweg, nicht ausschließlich aktives Gehen.
+2. **[P] lokale Tiefenreferenzen:** 420 m und 820 m beziehen sich nicht auf exakt dieselbe lokale Oberfläche beziehungsweise dasselbe Höhenreferenzniveau.
+3. **[P] kombinierte Geometrie:** Verbindungstunnel plus kurzer vertikaler Schnelltransfer; im Figurenempfinden bleibt dies ein „Fußweg“.
+4. **[C] Manuskriptfehler:** Mindestens eine der drei Angaben muss bei der Romanrevision geändert werden.
+
+Keine dieser Varianten wird in v0.2 kanonisiert.
+
+### 11.4 Revisionsmarker
+
+Für die spätere Revision von *Generation Mars Band 1* wird ein expliziter Konsistenzmarker gesetzt:
+
+**REV-GM1-SPATIAL-001:** B-12 ~420 m / C-7 ~820 m / ~15 min Fußweg gemeinsam prüfen. Nicht lokal umformulieren, bevor die gewünschte Iterius-Geometrie entschieden ist.
+
+## 12. Geologische Prüfung der Lavatube-Tiefe
+
+Die reale Marsforschung stützt die Existenz großer Lavatubes und kollabierter Tube-Systeme. Beobachtete beziehungsweise modellierte marsianische Tubes können deutlich größer als terrestrische sein. Das rechtfertigt die Nutzung natürlicher basaltischer Hohlräume als Habitat- und Trassenräume grundsätzlich.
+
+Die derzeitige Quellenlage stützt jedoch **nicht** ohne Weiteres die spezifische Vorstellung eines klassischen, oberflächennah entstandenen Lavakanals mit rund 820 m Gesteinsüberdeckung. Reale dokumentierte Mars-Lavatube-/Pit-Systeme und Modellarbeiten belegen große Hohlräume, aber nicht diesen konkreten Tiefenanker als typische Tube-Geometrie.
+
+Daher wird getrennt:
+
+- **[K NOXIA]** C-7 liegt im Manuskript ca. 820 m unter Oberfläche.
+- **[K NOXIA]** C-7 ist in natürliches basaltisches/Lavatube-Geflecht integriert.
+- **[W Wissenschaft]** große marsianische Lavatubes sind plausibel.
+- **[O Wissenschaft]** Entstehungsmechanismus und geologische Geschichte eines bei Iterius bis ~820 m reichenden Hohlraumgeflechts.
+
+Für die Romanrevision ist deshalb nicht zwingend die Tiefe zu ändern. Eine bessere Lösung kann sein, Iterius geologisch präziser als mehrphasiges vulkanisch-tektonisches Hohlraumsystem zu definieren, in dem ältere Lavatubes, Bruchzonen, kollabierte/verschüttete Tube-Level und künstlich verbundene Tiefenräume zusammenkommen. Diese Erklärung bleibt bis zur Standort- und Geologieentscheidung [P].
+
+## 13. Konsequenz für die nächste Stufe
+
+Vor einer endgültigen Karte werden zwei Dinge getrennt weitergeführt:
+
+- **Stadtgeometrie:** B-12/C-7-Verbindung, Omega-7-Relation und historische Alpha-Schächte.
+- **Standortgeologie:** erst nach Festlegung des realen Marsstandorts von Iterius Prime. Die Standortwahl muss die vulkanische Geschichte und natürliche Hohlraumbildung mittragen.
+
+Damit wird verhindert, dass die Geometrie heute eine Marsregion voraussetzt, die später geologisch nicht zu Iterius passt.
