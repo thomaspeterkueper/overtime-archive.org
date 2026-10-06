@@ -154,7 +154,15 @@ const reviews = [
     title: 'Mitochondriale Basistherapie bei Λ-FSS — Lebensstil · Ernährung · Supplementierung',
     reviewedAt: '2026-09-25T09:11:03+02:00',
     relations: ['OTA-SCI-0048-2031-DE','OTA-LSC-0003-2026-DE','OTA-SCI-0045-2026-DE','OTA-TEC-0032-2091-DE'],
-  },
+  },,
+  {
+    signature: 'OTA-TEC-0016-2063-DE',
+    title: 'Helios KITE-Shuttle — Kinetic Interplanetary Transport Element',
+    reviewedAt: '2026-10-06T07:41:00+02:00',
+    expectedSummary: 'Helios KITE-SHUTTLE — solarbetriebenes Shuttle-System 2063, NOXIA-Universum.',
+    summary: 'Technische Spezifikation des Helios KITE-Shuttle als modulares Mars-Orbit/Oberflächen-Shuttle ab 2063 mit Methan/LOX-Antrieb und redundanter Systemarchitektur.',
+    relations: ['OTA-BIO-0008-2025-DE','OTA-TEC-0015-2082-DE','OTA-ORG-0001-2079-DE'],
+  }
 ];
 
 const knownFiles = new Set(fs.readdirSync(DOCS_DIR));
