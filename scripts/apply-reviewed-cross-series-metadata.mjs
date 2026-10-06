@@ -154,7 +154,7 @@ const reviews = [
     title: 'Mitochondriale Basistherapie bei Λ-FSS — Lebensstil · Ernährung · Supplementierung',
     reviewedAt: '2026-09-25T09:11:03+02:00',
     relations: ['OTA-SCI-0048-2031-DE','OTA-LSC-0003-2026-DE','OTA-SCI-0045-2026-DE','OTA-TEC-0032-2091-DE'],
-  },,
+  },
   {
     signature: 'OTA-TEC-0016-2063-DE',
     title: 'Helios KITE-Shuttle — Kinetic Interplanetary Transport Element',
