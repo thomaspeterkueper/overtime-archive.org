@@ -178,6 +178,12 @@ const reviews = [
     expectedSummary: 'Die Schwarzen Architekten — Macht-Organisation 2079, NOXIA-Universum.',
     summary: 'Organisationsprofil der Unit-7 („Die Schwarzen Architekten“), der 2079 gegründeten Resource Protection & Crisis Management Unit von HeliosCorp Mars Division.',
     relations: ['OTA-TEC-0004-2087-DE','OTA-NAR-0001-2087-DE','OTA-TEC-0015-2082-DE'],
+  },
+  {
+    signature: 'OTA-TEC-0024-2150-DE',
+    title: 'Relativistische Finanz-Metriken — RFV-1: Technischer Anhang zum IFL-Layer 0',
+    reviewedAt: '2026-10-06T07:41:00+02:00',
+    relations: ['OTA-FND-0008-2025-DE','OTA-TEC-0023-2091-DE','OTA-SCI-0015-2025-DE'],
   }
 ];
 
