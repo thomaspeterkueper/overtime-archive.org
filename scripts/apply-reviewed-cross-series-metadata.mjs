@@ -162,6 +162,14 @@ const reviews = [
     expectedSummary: 'Helios KITE-SHUTTLE — solarbetriebenes Shuttle-System 2063, NOXIA-Universum.',
     summary: 'Technische Spezifikation des Helios KITE-Shuttle als modulares Mars-Orbit/Oberflächen-Shuttle ab 2063 mit Methan/LOX-Antrieb und redundanter Systemarchitektur.',
     relations: ['OTA-BIO-0008-2025-DE','OTA-TEC-0015-2082-DE','OTA-ORG-0001-2079-DE'],
+  },
+  {
+    signature: 'OTA-ORG-0002-2091-DE',
+    title: 'Iterius Prime — Kolonie-Struktur & Sektoreneinteilung',
+    reviewedAt: '2026-10-06T07:41:00+02:00',
+    expectedSummary: 'Iterius Prime — KI-Organisation 2091, NOXIA-Universum.',
+    summary: 'Organisationsdokument zu Iterius Prime 2091: vertikale Lavaröhrenstruktur, Sektoreneinteilung, Bevölkerung sowie die klassifizierten Bereiche 7-Tief und Omega im NOXIA-Universum.',
+    relations: ['OTA-ORG-0001-2079-DE','OTA-HIS-0003-2087-DE','OTA-BIO-0007-2025-DE'],
   }
 ];
 
