@@ -17,3 +17,6 @@
 6. T1/T3 nur bei unabhängig begründetem theoretischem Inhalt und quantifizierter Kopplung prüfen; T4 nur bei nach Standardmodell verbleibendem global-context-abhängigem dimensionslosem Response-Raum.
 
 **Keine** neuen X, ξ, Φ, History-Kernels oder AVI-Fits; Omnizedenz nur Heuristik. Dieser Nachtrag ergänzt die OTA-interne Matrixdokumentation und behauptet keine Änderung externer Source-of-Truth-Systeme.
+
+## IR-1/IR-2 provenance gate (13.10.2026)
+Die verbindlichen ursprünglichen Definitionen von IR-1 und IR-2 konnten in den bisher geprüften OTA-Unterlagen/Issues nicht nachgewiesen werden. Daher **keine feste Zuordnung** der de-Sitter-Monte-Carlo-Arbeit zu IR-1 oder IR-2. IR-Completeness bleibt eine eigenständige Standard-QFT-Kontrolle. Erst nach Fund der Originaldefinitionen mit Quelle, Versionsstand und Geltungsbereich eine Zuordnung prüfen. IR-Resummierung, Zustandsspeicherung und kosmologische Geschichtsabhängigkeit sind nicht gleichzusetzen.
