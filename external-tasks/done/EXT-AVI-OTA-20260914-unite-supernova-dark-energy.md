@@ -1,10 +1,11 @@
 ---
 id: EXT-AVI-OTA-20260914-UNITE-SUPERNOVA-DARK-ENERGY
 title: Integrate Supernovae Unite as an external observational test for AVI
-status: open
+status: done
 source: OTA
 target: AVI
 created: 2026-09-14
+completed: 2026-09-22
 priority: high
 affects: [OTA, AVI]
 sourceDocuments:
@@ -66,3 +67,8 @@ Done when:
 3. the model-to-observable mapping needed for a real likelihood test is explicit;
 4. Test B remains separately defined and is not relabelled as passed;
 5. future peer-review or independent reanalysis of Unite can update the AVI evidence status without rewriting the theory definition.
+
+
+## OTA-Abschluss
+
+Der Zielzustand ist im Repository `thomaspeterkueper/avi-modell` umgesetzt. Die aktuelle `docs/observational-test-matrix-v0.1.md` (Dokumentstand v0.2, 2026-09-22) enthält den geforderten Beobachtungskanal mit den verlangten epistemischen Guardrails. Der Request wird daher nicht länger als offene OTA-Arbeit geführt.

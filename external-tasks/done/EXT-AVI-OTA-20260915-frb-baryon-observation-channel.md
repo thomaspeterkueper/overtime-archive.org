@@ -1,10 +1,11 @@
 ---
 id: EXT-AVI-OTA-20260915-frb-baryon-observation-channel
 title: "AVI-Beobachtungsmatrix um FRB/Baryonen-Kanal erweitern"
-status: open
+status: done
 source: OTA
 target: AVI
 created: 2026-09-15
+completed: 2026-09-22
 priority: medium
 affects: ["Beobachtungs-Testmatrix", "Zustandsdefinition Y", "Test B"]
 sourceDocuments: ["OTA-SCI-0092-2026-DE"]
@@ -47,3 +48,8 @@ Die methodische Nutzung für Test B lautet: Je vollständiger Standardinformatio
 3. Integrierte Beobachtungshistorie wird ausdrücklich von physikalischem Gedächtnis bei gleichem Gegenwartszustand getrennt.
 4. Test B bleibt separat und wird nicht als erfüllt markiert.
 5. Keine neue AVI-Dynamik oder Kopplung wird allein aus dem FRB-Befund postuliert.
+
+
+## OTA-Abschluss
+
+Der Zielzustand ist im Repository `thomaspeterkueper/avi-modell` umgesetzt. Die aktuelle `docs/observational-test-matrix-v0.1.md` (Dokumentstand v0.2, 2026-09-22) enthält den geforderten Beobachtungskanal mit den verlangten epistemischen Guardrails. Der Request wird daher nicht länger als offene OTA-Arbeit geführt.
