@@ -219,7 +219,7 @@ const reviews = [
     signature: 'OTA-CUL-0014-2152-DE',
     title: 'Sprache im Sonnensystem — Solar Standard, SolLex und die Evolution interplanetarer Kommunikation',
     reviewedAt: '2026-10-18T13:08:00+02:00',
-    relations: ['OTA-BIO-0016-2123-DE','OTA-TEC-0002-2095-DE','OTA-CUL-0013-MULTI-DE'],
+    relations: ['OTA-BIO-0016-2123-DE','OTA-CUL-0013-MULTI-DE'],
   },
   {
     signature: 'OTA-LIM-0001-2196-DE',
