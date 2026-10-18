@@ -129,6 +129,18 @@ const reviews = [
       'OTA-HIS-0004-2085-DE',
     ],
   },
+  {
+    signature: 'OTA-SCI-0024-2026-EN',
+    title: 'A Scalar Field Mediator for Neutrino-Dark Matter Interactions — Resolving the S₈ and Hubble Tensions',
+    reviewedAt: '2026-10-18T14:02:00+02:00',
+    expectedVersion: 'v1.0',
+    version: 'v2.0',
+    relations: [
+      'OTA-SCI-0024-2026-DE',
+      'OTA-FND-0010-2026-DE',
+      'OTA-SCI-0009-2025-DE',
+    ],
+  },
 ];
 
 const knownFiles = new Set(fs.readdirSync(DOCS_DIR));
@@ -165,6 +177,17 @@ function patchFrontmatter(raw, review) {
     semanticChanged = true;
   } else if (!fm.includes(canonicalTitle)) {
     throw new Error(`${review.signature}: unexpected title state`);
+  }
+
+  if (review.version) {
+    const expectedLine = `version: "${review.expectedVersion}"`;
+    const desiredLine = `version: "${review.version}"`;
+    if (fm.includes(expectedLine)) {
+      fm = fm.replace(expectedLine, desiredLine);
+      semanticChanged = true;
+    } else if (!fm.includes(desiredLine)) {
+      throw new Error(`${review.signature}: version changed since review; refusing to overwrite`);
+    }
   }
 
   if (review.epistemicStatus) {
@@ -221,8 +244,9 @@ for (const review of reviews) {
   }
 
   plannedChanges += 1;
+  const versionNote = review.version ? `; version → ${review.version}` : '';
   const epistemicNote = review.epistemicStatus ? `; epistemicStatus → ${review.epistemicStatus.join('/')}` : '';
-  console.log(`${CHECK_ONLY ? 'Validated' : 'Curating'}: ${review.signature} → ${review.title} (${review.relations.length} explicit relations${epistemicNote})`);
+  console.log(`${CHECK_ONLY ? 'Validated' : 'Curating'}: ${review.signature} → ${review.title} (${review.relations.length} explicit relations${versionNote}${epistemicNote})`);
   if (!CHECK_ONLY) {
     fs.writeFileSync(file, patched, 'utf8');
     writtenChanges += 1;
