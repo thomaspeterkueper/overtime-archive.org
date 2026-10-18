@@ -191,6 +191,30 @@ const reviews = [
     reviewedAt: '2026-10-06T07:41:00+02:00',
     relations: ['OTA-FND-0008-2025-DE','OTA-ORG-0001-2079-DE','OTA-ORG-0002-2091-DE'],
   }
+  {
+    signature: 'OTA-FND-0008-2025-DE',
+    title: 'Solares Finanzsystem: Grundlagen — Die Evolution interplanetarer Ökonomie (2025–2200+)',
+    reviewedAt: '2026-10-18T13:08:00+02:00',
+    relations: ['OTA-TEC-0023-2091-DE','OTA-ORG-0002-2091-DE','OTA-SCI-0016-2150-DE'],
+  },
+  {
+    signature: 'OTA-BIO-0011-2091-DE',
+    title: 'Haruka Nakamura — Die Hüterin der Stille',
+    reviewedAt: '2026-10-18T13:08:00+02:00',
+    relations: ['OTA-BIO-0010-2025-DE','OTA-BIO-0012-2087-DE','OTA-HIS-0003-2087-DE'],
+  },
+  {
+    signature: 'OTA-BIO-0012-2087-DE',
+    title: 'James Nakamura — Der Mann, der das Muster verstand',
+    reviewedAt: '2026-10-18T13:08:00+02:00',
+    relations: ['OTA-BIO-0010-2025-DE','OTA-BIO-0011-2091-DE','OTA-HIS-0003-2087-DE'],
+  },
+  {
+    signature: 'OTA-CUL-0002-60000BCE-DE',
+    title: 'Die Ära des Lebendigen — Kulturelle Rekonstruktion der Uralten',
+    reviewedAt: '2026-10-18T13:08:00+02:00',
+    relations: ['OTA-SCI-0018-60000BCE-DE','OTA-OBS-0002-2026-DE','OTA-TEC-0023-2089-DE'],
+  },
 ];
 
 const knownFiles = new Set(fs.readdirSync(DOCS_DIR));
