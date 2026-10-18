@@ -1,7 +1,7 @@
 ---
 id: EXT-NOXIA-OTA-20260914-FLEX-PHOTOSYNTHESIS-STATE-MODEL
 title: Use ESA FLEX as scientific reference for dynamic biosphere state modelling in NOXIA
-status: open
+status: done
 source: OTA
 target: NOXIA
 created: 2026-09-14
@@ -108,3 +108,8 @@ Done when:
 4. accumulated biomass/yield remains distinct from instantaneous activity;
 5. any future SIF/FLEX ingestion keeps raw observation separate from calibrated simulation state;
 6. implementation reuses the existing Earth/tick/state architecture rather than creating a parallel simulation path.
+
+
+## OTA-Abschluss
+
+Der NOXIA-Consumer hat den Request umgesetzt: `thomaspeterkueper/noxiagame` PR #506 ist gemerged (`bc5890b009b69593e017d9fed90e3965bb9197fb`). Die dynamische Biosphärenfunktion ist vom Vegetationstyp getrennt, reagiert tickbasiert auf Wasser/Temperatur/Phenologie, hält Biomasse getrennt von momentaner Aktivität und trennt Roh-SIF von explizit kalibrierten Simulationsproxies. FLEX selbst wurde am 15.09.2026 erfolgreich gestartet; die ursprüngliche Zukunftsformulierung ist damit überholt.
