@@ -275,6 +275,30 @@ const reviews = [
     reviewedAt: '2026-10-18T14:08:00+02:00',
     relations: ['OTA-SCI-0012-2188-DE','OTA-SCI-0008-2096-DE'],
   },
+  {
+    signature: 'OTA-FND-0007-2025-DE',
+    title: 'noχ¹ᐃ: GENERATION MARS — Serienkonzept der Junior-Saga',
+    reviewedAt: '2026-10-18T17:42:00+02:00',
+    relations: ['OTA-FND-0006-2025-DE','OTA-BIO-0006-2025-DE','OTA-BIO-0010-2025-DE','OTA-RED-0016-2091-DE'],
+  },
+  {
+    signature: 'OTA-BIO-0009-2025-DE',
+    title: 'Dr. Tayo Dela Cruz — Der Beobachter in der Tiefe',
+    reviewedAt: '2026-10-18T17:42:00+02:00',
+    relations: ['OTA-BIO-0008-2025-DE','OTA-BIO-0007-2025-DE'],
+  },
+  {
+    signature: 'OTA-BIO-0006-2025-DE',
+    title: 'Lena Kowalski — Frequenz-Sensitive der Zweiten Generation',
+    reviewedAt: '2026-10-18T17:42:00+02:00',
+    relations: ['OTA-NAR-0001-2087-DE','OTA-RED-0016-2091-DE','OTA-SCI-0013-2025-DE','OTA-BIO-0007-2025-DE'],
+  },
+  {
+    signature: 'OTA-RED-0020-2091-DE',
+    title: 'Solar Student Exchange 2091 — Medizinische Disqualifikationen & Anomalie-Bericht',
+    reviewedAt: '2026-10-18T17:42:00+02:00',
+    relations: [],
+  },
 ];
 
 const knownFiles = new Set(fs.readdirSync(DOCS_DIR));
