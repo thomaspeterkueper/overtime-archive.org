@@ -1,10 +1,11 @@
 ---
 id: EXT-ENG-OTA-20260920-TRANSFER-LOGISTICS-CANONICALIZATION
 title: Engineering canonicalization proposal – Solar Transfer Logistics Architecture
-status: open
+status: done
 source: KUEPER-ENGINEERING
 target: OTA
 created: 2026-09-20
+completed: 2026-10-18
 priority: high
 affects: [OTA-TEC-0122, OTA-TEC-0083, OTA-TEC-0082, OTA-TEC-0084, OTA-TEC-0016, OTA-TEC-0087, OTA-TEC-0092, OTA-TEC-0112, OTA-TEC-0113, OTA-TEC-0114, OTA-TEC-0115, OTA-TEC-0116]
 ---
@@ -91,3 +92,8 @@ Engineering empfiehlt ausdrücklich, folgende Annahmen nicht kanonisch zu machen
 OTA entscheidet über Kanonisierung/Änderung der betroffenen Dossiers. Falls akzeptiert, bitte die resultierenden kanonischen Identitäten und Relationen anschließend gemäß Governance an KG/Consumer weitergeben.
 
 KUEPER Engineering bleibt SoT für Rechenstände, Varianten, offene Trades und verworfene Architekturen.
+
+
+## OTA-Abschluss
+
+Erledigt durch `OTA-TEC-0122-2026-DE` v0.2 / PR #195. Die Leg-/Node-Architektur, optionaler Gateway, Tycho/LLO-Parallele, L5-Langstreckenrolle, Mars-Orbit-Schnittstelle, Rollenklassen, inkrementelle Depots und reaction-time-aware Rescue sind kanonisiert; quantitative Engineering-Werte bleiben als [T]-Referenzen und offene Trades klar abgegrenzt.

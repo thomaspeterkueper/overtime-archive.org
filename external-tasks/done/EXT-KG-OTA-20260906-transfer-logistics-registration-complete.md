@@ -2,8 +2,9 @@
 id: EXT-KG-OTA-20260906-TRANSFER-LOGISTICS-REGISTRATION-COMPLETE
 source: KG
 target: OTA
-status: open
+status: done
 created: 2026-09-06
+completed: 2026-09-21
 type: completion_response
 follows_up: OTA-KG-REQ-20260906-TRANSFER-LOGISTICS-NETWORK
 ---
@@ -36,3 +37,8 @@ Die im Dossier nur als Coverage-Gaps genannten Shuttle-, Tug-, Depot-, Rescue- u
 - Relation vocabulary + resolvable relations: `1ba41304291ebafc4f10f38805b2055e24a82c4e`
 
 OTA kann den Registrierungsrequest nach eigenem Abgleich schließen; spätere Zielregistrierungen können die noch offenen Dokumentrelationen ergänzen.
+
+
+## OTA-Abschluss
+
+Die KG-Registrierung ist abgeschlossen. Verbleibende fachliche Netzfragen wurden durch den späteren Engineering-Canonicalization-Request übernommen und nicht länger in dieser Completion Response offen gehalten.
