@@ -190,7 +190,7 @@ const reviews = [
     title: 'Mars Credit (MCR) — Technische Spezifikation des Mars Financial Network',
     reviewedAt: '2026-10-06T07:41:00+02:00',
     relations: ['OTA-FND-0008-2025-DE','OTA-ORG-0001-2079-DE','OTA-ORG-0002-2091-DE'],
-  }
+  },
   {
     signature: 'OTA-FND-0008-2025-DE',
     title: 'Solares Finanzsystem: Grundlagen — Die Evolution interplanetarer Ökonomie (2025–2200+)',
