@@ -251,6 +251,30 @@ const reviews = [
     reviewedAt: '2026-10-18T13:55:05+02:00',
     relations: ['OTA-SCI-0012-2188-DE'],
   },
+  {
+    signature: 'OTA-BIO-0013-2089-DE',
+    title: 'Die Karim-Zwillinge — Sol & Maya Karim — Exchange 2089',
+    reviewedAt: '2026-10-18T14:08:00+02:00',
+    relations: ['OTA-RED-0020-2091-DE','OTA-ORG-0002-2091-DE','OTA-SCI-0016-2150-DE'],
+  },
+  {
+    signature: 'OTA-TEC-0020-2091-DE',
+    title: 'Tribologie & Staub-Ökonomie — Dichtungs-, Filter- und Lager-Verschleiß für KITE & Tugs',
+    reviewedAt: '2026-10-18T14:08:00+02:00',
+    relations: ['OTA-TEC-0016-2063-DE','OTA-TEC-0019-2091-DE'],
+  },
+  {
+    signature: 'OTA-SCI-0017-2025-DE',
+    title: 'Superionisches Goldhydrid als Resonanzanker — Eine theoretische Erweiterung des AVI-Modells',
+    reviewedAt: '2026-10-18T14:08:00+02:00',
+    relations: ['OTA-SCI-0008-2096-DE','OTA-TEC-0021-2025-DE'],
+  },
+  {
+    signature: 'OTA-OBS-0001-2025-DE',
+    title: 'Reale Grundlagen — Maya, Archäoakustik, Resonanzphänomene',
+    reviewedAt: '2026-10-18T14:08:00+02:00',
+    relations: ['OTA-SCI-0012-2188-DE','OTA-SCI-0008-2096-DE'],
+  },
 ];
 
 const knownFiles = new Set(fs.readdirSync(DOCS_DIR));
