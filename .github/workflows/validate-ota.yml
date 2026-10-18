@@ -57,6 +57,9 @@ jobs:
       - name: Validate encoding repair batch 3
         run: node scripts/repair-encoding-batch-3.mjs --check
 
+      - name: Validate SCI-0031 encoding and metadata repair
+        run: node scripts/repair-sci0031-encoding.mjs --check
+
       - name: Normalize canonical OTA system metadata
         if: github.event_name == 'push' && github.ref == 'refs/heads/master'
         shell: bash
@@ -120,6 +123,10 @@ jobs:
       - name: Apply encoding repair batch 3
         if: github.event_name == 'push' && github.ref == 'refs/heads/master'
         run: node scripts/repair-encoding-batch-3.mjs
+
+      - name: Apply SCI-0031 encoding and metadata repair
+        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+        run: node scripts/repair-sci0031-encoding.mjs
 
       - name: Revalidate after safe editorial fixes
         if: github.event_name == 'push' && github.ref == 'refs/heads/master'
