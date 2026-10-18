@@ -227,6 +227,30 @@ const reviews = [
     reviewedAt: '2026-10-18T13:08:00+02:00',
     relations: ['OTA-TEC-0001-2196-DE','OTA-SCI-0012-2188-DE','OTA-BIO-0003-2195-EN'],
   },
+  {
+    signature: 'OTA-BIO-0016-2123-DE',
+    title: 'Dr. Ayia Al Suri — Linguistin · SCSA Abteilung Lexikographie',
+    reviewedAt: '2026-10-18T13:55:05+02:00',
+    relations: ['OTA-CUL-0014-2152-DE'],
+  },
+  {
+    signature: 'OTA-TEC-0001-2196-DE',
+    title: 'VEX — Volatile Environment eXplorer: VEX-47 Explorationsdrohne — Technische Spezifikation',
+    reviewedAt: '2026-10-18T13:55:05+02:00',
+    relations: ['OTA-SCI-0012-2188-DE'],
+  },
+  {
+    signature: 'OTA-SCI-0012-2188-DE',
+    title: 'Polare Kohärenz im χ-Feld — Bewusstseinskristalle und Blackpearls als komplementäre Manifestationen der Resonanz-Energie',
+    reviewedAt: '2026-10-18T13:55:05+02:00',
+    relations: ['OTA-BIO-0003-2195-EN'],
+  },
+  {
+    signature: 'OTA-BIO-0003-2195-EN',
+    title: 'The Resonance Marriage — A Biographical Note on Dr. Yuki Hayashi-Okonkwo',
+    reviewedAt: '2026-10-18T13:55:05+02:00',
+    relations: ['OTA-SCI-0012-2188-DE'],
+  },
 ];
 
 const knownFiles = new Set(fs.readdirSync(DOCS_DIR));
