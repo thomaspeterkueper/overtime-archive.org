@@ -30,3 +30,8 @@ Kontext: Maitra et al. (2024), arXiv:2401.17293.
 ## Ownership
 
 OTA ist Source of Truth fuer den Dokumentvolltext. Kanonische Wissensentitaeten und IDs bleiben im Knowledge Graph; keine konkurrierenden IDs anlegen.
+
+
+## OTA-Abschluss
+
+Erledigt durch `OTA-SCI-0108-2026-DE` / PR #197. Das Dossier trennt die gemessenen Timinggrößen von der modellabhängigen Chirp-Masse, der Direct-Impact-Interpretation sowie offenen Einzelmassen und Distanz und ordnet die zukünftige mHz-Gravitationswellenrelevanz ohne vorweggenommenen Detektionsclaim ein.
