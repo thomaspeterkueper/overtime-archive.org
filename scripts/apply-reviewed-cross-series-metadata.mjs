@@ -215,6 +215,18 @@ const reviews = [
     reviewedAt: '2026-10-18T13:08:00+02:00',
     relations: ['OTA-SCI-0018-60000BCE-DE','OTA-OBS-0002-2026-DE','OTA-TEC-0023-2089-DE'],
   },
+  {
+    signature: 'OTA-CUL-0014-2152-DE',
+    title: 'Sprache im Sonnensystem — Solar Standard, SolLex und die Evolution interplanetarer Kommunikation',
+    reviewedAt: '2026-10-18T13:08:00+02:00',
+    relations: ['OTA-BIO-0016-2123-DE','OTA-CUL-0013-MULTI-DE'],
+  },
+  {
+    signature: 'OTA-LIM-0001-2196-DE',
+    title: 'VEX — Kuratorische Beobachtung einer Quasi-Persönlichkeit',
+    reviewedAt: '2026-10-18T13:08:00+02:00',
+    relations: ['OTA-TEC-0001-2196-DE','OTA-SCI-0012-2188-DE','OTA-BIO-0003-2195-EN'],
+  },
 ];
 
 const knownFiles = new Set(fs.readdirSync(DOCS_DIR));
