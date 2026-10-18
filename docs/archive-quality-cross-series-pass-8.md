@@ -8,7 +8,8 @@ This pass curates only source-backed frontmatter metadata. It does not rewrite d
 
 - `OTA-CUL-0014-2152-DE`
   - canonical title: **Sprache im Sonnensystem — Solar Standard, SolLex und die Evolution interplanetarer Kommunikation**
-  - explicit canonical relations: `OTA-BIO-0016-2123-DE`, `OTA-TEC-0002-2095-DE`, `OTA-CUL-0013-MULTI-DE`
+  - explicit canonical relations: `OTA-BIO-0016-2123-DE`, `OTA-CUL-0013-MULTI-DE`
+  - `OTA-TEC-0002-2095-DE` is listed in the archived source but has no canonical OTA document today, so it is intentionally not promoted into frontmatter metadata.
   - `OTA-ORG-0001-2079-DE` is marked **[AUSSTEHEND]** in the archived source and is intentionally not promoted. The current canonical `OTA-ORG-0001-2079-DE` represents Unit-7 rather than the source row's described SCSA founding document, so linking it would create a false historical relation.
   - unresolved `OTA-HIS-[AUSSTEHEND]` and `OTA-TEC-[AUSSTEHEND]` placeholders remain untouched.
 
