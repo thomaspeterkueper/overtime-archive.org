@@ -59,13 +59,13 @@ knowledge:
 
 ## ANMERKUNG DES KURATORS
 
-Göbekli Tepe ist ein Rätsel, das sich weigert, in bestehende Kategorien zu passen. Jäger-Sammler bauten Monumentalarchitektur. Vor der Landwirtschaft. Vor der Keramik. Vor der Schrift. 200+ T-Pfeiler, bis zu 16 Tonnen schwer, in kreisförmigen Anlagen angeordnet â€” und dann absichtlich begraben.
+Göbekli Tepe ist ein Rätsel, das sich weigert, in bestehende Kategorien zu passen. Jäger-Sammler bauten Monumentalarchitektur. Vor der Landwirtschaft. Vor der Keramik. Vor der Schrift. 200+ T-Pfeiler, bis zu 16 Tonnen schwer, in kreisförmigen Anlagen angeordnet — und dann absichtlich begraben.
 
 Dieses Bridge-Dokument verbindet die gesicherten archäologischen Fakten (OTA-OBS-0004-2026-DE, 100% [R]) mit den Hypothesen des Baumeister-Netzwerks. Die Grenze zwischen Empirie und Spekulation wird durchgehend markiert.
 
-> **[KN-0.1]** *Was an Göbekli Tepe am meisten verstört, ist nicht das Alter. Es ist die Kompetenz. Wer immer diese Anlagen entwarf, verstand Geometrie, Statik, Reliefkunst â€” und möglicherweise Akustik. Diese Fähigkeiten entstehen nicht im Vakuum. Sie setzen Tradition voraus. Und Tradition setzt Lehrer voraus.*
+> **[KN-0.1]** *Was an Göbekli Tepe am meisten verstört, ist nicht das Alter. Es ist die Kompetenz. Wer immer diese Anlagen entwarf, verstand Geometrie, Statik, Reliefkunst — und möglicherweise Akustik. Diese Fähigkeiten entstehen nicht im Vakuum. Sie setzen Tradition voraus. Und Tradition setzt Lehrer voraus.*
 > 
-> *Die Frage ist nicht: War Göbekli Tepe ein Baumeister-Knoten? Die Frage ist: Was lag davor? â€” T.P.K.*
+> *Die Frage ist nicht: War Göbekli Tepe ein Baumeister-Knoten? Die Frage ist: Was lag davor? — T.P.K.*
 
 ---
 
@@ -77,15 +77,15 @@ Dieses Bridge-Dokument verbindet die gesicherten archäologischen Fakten (OTA-OB
 
 | Faktum | Wert | Status |
 |--------|------|--------|
-| Datierung | ~9500â€“8000 cal BCE | [R] |
+| Datierung | ~9500–8000 cal BCE | [R] |
 | Architekturtyp | Kreisförmige Megalith-Anlagen | [R] |
-| T-Pfeiler | 200+, bis 5,5 m hoch, 10â€“16 Tonnen | [R] |
-| Kreisanlagen | 20+ dokumentiert (Aâ€“H freigelegt) | [R] |
+| T-Pfeiler | 200+, bis 5,5 m hoch, 10–16 Tonnen | [R] |
+| Kreisanlagen | 20+ dokumentiert (A–H freigelegt) | [R] |
 | Reliefs | Schlangen, Füchse, Eber, Kraniche, Leoparden | [R] |
 | Anthropomorphe Elemente | Arme, Hände, Gürtel an T-Pfeilern | [R] |
 | Verfüllung | Anlagen absichtlich mit Schutt bedeckt | [R] (revidiert) |
 | Siedlungscharakter | Häusliche Aktivitäten nachgewiesen (post-2014) | [R] |
-| Verwandte Fundorte | Karahan Tepe, Nevali Ã‡ori, Hamzan Tepe | [R] |
+| Verwandte Fundorte | Karahan Tepe, Nevali Çori, Hamzan Tepe | [R] |
 | Ausgrabungsstand | ~10% freigelegt | [R] |
 
 ### 1.2 Was die Archäologie nicht erklärt
@@ -106,7 +106,7 @@ Dieses Bridge-Dokument verbindet die gesicherten archäologischen Fakten (OTA-OB
 ### 2.1 Das Problem des Meeresspiegels
 
 **[R] Gesichert:**
-- Am Ende der letzten Eiszeit (~12.000â€“8000 BCE) stieg der Meeresspiegel um ~120 Meter
+- Am Ende der letzten Eiszeit (~12.000–8000 BCE) stieg der Meeresspiegel um ~120 Meter
 - Küstenlinien verschoben sich um Hunderte Kilometer ins Landesinnere
 - Gebiete, die heute unter Wasser liegen, waren in der Eiszeit bewohnbar
 - Früheste menschliche Siedlungen lagen bevorzugt an Küsten
@@ -118,27 +118,27 @@ Der Meeresspiegelanstieg vernichtete eine hypothetische Küsten-Architektur der 
 ZEITLINIE:
 
 ~60.000 BCE    Baumeister-Ur-Tradition [F]
-    â”‚              (Ort unbekannt, möglicherweise Küstenregion)
-    â”‚
-    â†“
+    │              (Ort unbekannt, möglicherweise Küstenregion)
+    │
+    ↓
 ~20.000 BCE    Letztes glaziales Maximum
-    â”‚              (Meeresspiegel ~120 m tiefer)
-    â”‚
-    â†“
-~12.000 BCE    Eiszeit endet â€” Wasser steigt
-    â”‚              â•³â•³â•³ KÃœSTENSTRUKTUREN GEHEN VERLOREN â•³â•³â•³
-    â”‚
-    â†“
+    │              (Meeresspiegel ~120 m tiefer)
+    │
+    ↓
+~12.000 BCE    Eiszeit endet — Wasser steigt
+    │              ╳╳╳ KÜSTENSTRUKTUREN GEHEN VERLOREN ╳╳╳
+    │
+    ↓
 ~9500 BCE      GÖBEKLI TEPE
-    â”‚              Erste Hochland-Monumentalarchitektur
-    â”‚              â†’ Wissen wird in Stein gesichert
-    â”‚
-    â†“
+    │              Erste Hochland-Monumentalarchitektur
+    │              → Wissen wird in Stein gesichert
+    │
+    ↓
 ~8000 BCE      Verfüllung / Aufgabe
-                   â†’ Wissen wandert weiter
+                   → Wissen wandert weiter
 ```
 
-> **[KN-2.1]** *Die Hypothese ist nicht beweisbar â€” das ist ihr Wesen. Was unter Wasser liegt, ist kaum erreichbar. Aber der Umkehrschluss gilt: Die Abwesenheit von Vorläufern beweist nicht deren Nichtexistenz. â€” T.P.K.*
+> **[KN-2.1]** *Die Hypothese ist nicht beweisbar — das ist ihr Wesen. Was unter Wasser liegt, ist kaum erreichbar. Aber der Umkehrschluss gilt: Die Abwesenheit von Vorläufern beweist nicht deren Nichtexistenz. — T.P.K.*
 
 ### 2.2 Analoge Fälle
 
@@ -159,15 +159,15 @@ ZEITLINIE:
 
 | Stätte | Geometrie | Resonanz | Gemessen |
 |--------|-----------|----------|----------|
-| Ä¦al Saflieni (Malta) | Elliptisch/rund | 70 + 114 Hz | Ja |
+| Ħal Saflieni (Malta) | Elliptisch/rund | 70 + 114 Hz | Ja |
 | Stonehenge (UK) | Kreisförmig | 110 Hz | Ja |
 | Newgrange (Irland) | Kammergrab (rund) | 110 Hz | Ja |
-| ChavÃ­n de Huantar (Peru) | Labyrinthisch | 50â€“150 Hz | Ja |
+| Chavín de Huantar (Peru) | Labyrinthisch | 50–150 Hz | Ja |
 
 **[S] Hypothese für Göbekli Tepe:**
 
 Göbekli Tepe teilt mit diesen Stätten:
-- Kreisförmige Grundrisse (10â€“30 m Durchmesser)
+- Kreisförmige Grundrisse (10–30 m Durchmesser)
 - Massive Steinpfeiler als potenzielle Reflektoren
 - Geschlossene Räume (wahrscheinlich überdacht)
 - Zentrale Monumentalpfeiler (stehende Wellen?)
@@ -176,13 +176,13 @@ Göbekli Tepe teilt mit diesen Stätten:
 
 | Anlage | Durchmesser | Erwartete Grundfrequenz | Anmerkung |
 |--------|-------------|-------------------------|-----------|
-| Enclosure D | ~20 m | ~17 Hz (Î»/2) | Infraschall-Bereich |
-| Enclosure C | ~30 m | ~11 Hz (Î»/2) | Nahe 12 Hz (!) |
-| Enclosure A | ~20 m | ~17 Hz (Î»/2) | Infraschall-Bereich |
+| Enclosure D | ~20 m | ~17 Hz (λ/2) | Infraschall-Bereich |
+| Enclosure C | ~30 m | ~11 Hz (λ/2) | Nahe 12 Hz (!) |
+| Enclosure A | ~20 m | ~17 Hz (λ/2) | Infraschall-Bereich |
 
-**Berechnung:** f = v/(2d), mit v â‰ˆ 340 m/s (Schallgeschwindigkeit in Luft)
+**Berechnung:** f = v/(2d), mit v ≈ 340 m/s (Schallgeschwindigkeit in Luft)
 
-> **[KN-3.1]** *Die theoretischen Grundfrequenzen der groÃŸen Kreisanlagen liegen im Infraschall-Bereich, 11â€“17 Hz. Das ist bemerkenswert nah an der Baumeister-Grundfrequenz von 12 Hz (OTA-SCI-0009-2025-DE). Aber: Dies ist eine Schätzung. Keine Messung. Die tatsächliche Resonanz hängt von Wandmaterial, Dachkonstruktion, Boden und Hunderten anderer Variablen ab. â€” T.P.K.*
+> **[KN-3.1]** *Die theoretischen Grundfrequenzen der großen Kreisanlagen liegen im Infraschall-Bereich, 11–17 Hz. Das ist bemerkenswert nah an der Baumeister-Grundfrequenz von 12 Hz (OTA-SCI-0009-2025-DE). Aber: Dies ist eine Schätzung. Keine Messung. Die tatsächliche Resonanz hängt von Wandmaterial, Dachkonstruktion, Boden und Hunderten anderer Variablen ab. — T.P.K.*
 
 ### 3.2 T-Pfeiler als akustische Elemente [S]
 
@@ -198,7 +198,7 @@ Die T-förmigen Pfeiler könnten akustische Funktionen erfüllt haben:
 
 **[R] Vergleich mit Carnyx-Akustik (OTA-ARC-0002-MULTI-DE):**
 
-Die Carnyx-Rekonstruktion (Tintignac, 2014) erzeugte Resonanzfrequenzen im Bereich 72â€“288 Hz. Wenn Carnyx in einer Kreisanlage wie Göbekli Tepe gespielt würde, könnten Harmonische im 12-Hz-Bereich als Differenzfrequenzen entstehen.
+Die Carnyx-Rekonstruktion (Tintignac, 2014) erzeugte Resonanzfrequenzen im Bereich 72–288 Hz. Wenn Carnyx in einer Kreisanlage wie Göbekli Tepe gespielt würde, könnten Harmonische im 12-Hz-Bereich als Differenzfrequenzen entstehen.
 
 **Status:** Rein theoretisch. Keine Messung möglich ohne physischen Zugang zu einer intakten Anlage.
 
@@ -212,13 +212,13 @@ Klaus Schmidts Beobachtung, dass die Anlagen absichtlich begraben wurden, erhäl
 - Natürliche Hangrutschungen (neuere Interpretation)
 
 **Baumeister-Hypothese [T]:**
-Verfüllung als akustische *Versiegelung* â€” die Resonanzkammer wird deaktiviert, ihr â€žSignal" verstummt. Analog zur rituellen Deposition der Carnyx-Instrumente (Tintignac, ~100 BCE).
+Verfüllung als akustische *Versiegelung* — die Resonanzkammer wird deaktiviert, ihr „Signal" verstummt. Analog zur rituellen Deposition der Carnyx-Instrumente (Tintignac, ~100 BCE).
 
 | Vorgang | Göbekli Tepe | Tintignac |
 |---------|--------------|-----------|
 | Objekt | Kreisanlage | 7 Carnyx + Eberkopf |
 | Aktion | Verfüllung mit Erde/Schutt | Rituelle Deponierung in Grube |
-| Effekt | Anlage â€žschweigt" | Instrumente â€žschweigen" |
+| Effekt | Anlage „schweigt" | Instrumente „schweigen" |
 | Zeitraum | ~8000 BCE | ~100 BCE |
 | Motivation | Unbekannt | Rituell (keltisch) |
 
@@ -231,50 +231,50 @@ Verfüllung als akustische *Versiegelung* â€” die Resonanzkammer wird deakt
 Göbekli Tepe wäre der älteste dokumentierte Primärknoten:
 
 ```
-BAUMEISTER-NETZWERK â€” CHRONOLOGIE
+BAUMEISTER-NETZWERK — CHRONOLOGIE
 
-â–ˆâ–ˆâ–ˆâ–ˆ GÖBEKLI TEPE (~9500 BCE) â† ÄLTESTER KNOTEN
-    â”‚
-    â”œâ”€â”€â†’ Nevali Ã‡ori (~8500 BCE, überflutet)
-    â”œâ”€â”€â†’ Ã‡atalhöyük (~7500 BCE)
-    â”‚
-    â”‚    [4.000 Jahre Lücke â€” Transferwege unbekannt]
-    â”‚
-    â”œâ”€â”€â†’ â–ˆâ–ˆâ–ˆâ–ˆ Malta (~4000 BCE)
-    â”œâ”€â”€â†’ â–ˆâ–ˆâ–ˆâ–ˆ Caral (~3000 BCE)
-    â”œâ”€â”€â†’ â–ˆâ–ˆâ–ˆâ–ˆ Stonehenge (~3000 BCE)
-    â”œâ”€â”€â†’ â–ˆâ–ˆâ–ˆâ–ˆ Newgrange (~3200 BCE)
-    â”‚
-    â”‚    [2.000 Jahre â€” Bronzezeit-Vernetzung]
-    â”‚
-    â”œâ”€â”€â†’ â–‘ Qatna (~1800 BCE)
-    â”œâ”€â”€â†’ â–ˆâ–ˆâ–ˆâ–ˆ Karnak (~2000 BCE)
-    â”œâ”€â”€â†’ â–ˆâ–ˆâ–ˆâ–ˆ ChavÃ­n (~1200 BCE)
-    â”œâ”€â”€â†’ â–ˆâ–ˆâ–ˆâ–ˆ Sanxingdui (~1200 BCE)
-    â”‚
-    â”‚    â•³â•³â•³ BRONZEZEIT-KOLLAPS (~1200 BCE) â•³â•³â•³
-    â”‚
-    â””â”€â”€â†’ Fragmentierung â†’ Diaspora â†’ Kelten, Phönizier...
+████ GÖBEKLI TEPE (~9500 BCE) ← ÄLTESTER KNOTEN
+    │
+    ├──→ Nevali Çori (~8500 BCE, überflutet)
+    ├──→ Çatalhöyük (~7500 BCE)
+    │
+    │    [4.000 Jahre Lücke — Transferwege unbekannt]
+    │
+    ├──→ ████ Malta (~4000 BCE)
+    ├──→ ████ Caral (~3000 BCE)
+    ├──→ ████ Stonehenge (~3000 BCE)
+    ├──→ ████ Newgrange (~3200 BCE)
+    │
+    │    [2.000 Jahre — Bronzezeit-Vernetzung]
+    │
+    ├──→ ░ Qatna (~1800 BCE)
+    ├──→ ████ Karnak (~2000 BCE)
+    ├──→ ████ Chavín (~1200 BCE)
+    ├──→ ████ Sanxingdui (~1200 BCE)
+    │
+    │    ╳╳╳ BRONZEZEIT-KOLLAPS (~1200 BCE) ╳╳╳
+    │
+    └──→ Fragmentierung → Diaspora → Kelten, Phönizier...
 ```
 
-### 4.2 Transfer-Hypothese: Göbekli Tepe â†’ Levante [S]
+### 4.2 Transfer-Hypothese: Göbekli Tepe → Levante [S]
 
 Der naheliegendste Transferweg führt südwärts:
 
 ```
-â–ˆâ–ˆâ–ˆâ–ˆ GÖBEKLI TEPE (Südostanatolien)
-    â”‚
-    â”‚  ~200 km
-    â†“
-â–‘ Harran-Ebene (Transitzone)
-    â”‚
-    â”‚  ~400 km
-    â†“
-â–‘ Levante (Byblos, Ugarit, später Qatna)
-    â”‚
-    â”‚  ~800 km
-    â†“
-â–ˆâ–ˆâ–ˆâ–ˆ Ägypten? (Prä-Dynastisch)
+████ GÖBEKLI TEPE (Südostanatolien)
+    │
+    │  ~200 km
+    ↓
+░ Harran-Ebene (Transitzone)
+    │
+    │  ~400 km
+    ↓
+░ Levante (Byblos, Ugarit, später Qatna)
+    │
+    │  ~800 km
+    ↓
+████ Ägypten? (Prä-Dynastisch)
 ```
 
 **Evidenz [R]:**
@@ -285,17 +285,17 @@ Der naheliegendste Transferweg führt südwärts:
 **Lücke [S]:**
 Der Sprung von Göbekli Tepe (9500 BCE) zu den Megalith-Traditionen Westeuropas (ab 5000 BCE) beträgt 4.000+ Jahre. Kein kontinuierlicher Transferweg ist dokumentiert.
 
-### 4.3 Die â€ž4.000-Jahre-Lücke" [T]
+### 4.3 Die „4.000-Jahre-Lücke" [T]
 
 | Zeitraum | Bekannte Entwicklungen | Baumeister-Status |
 |----------|------------------------|-------------------|
-| 9500â€“8000 BCE | Göbekli Tepe aktiv | Primärknoten aktiv |
-| 8000â€“7000 BCE | Ã‡atalhöyük, Jericho | Sekundärtransfer? |
-| 7000â€“5000 BCE | Frühe Landwirtschaft breitet sich aus | Wissen diffundiert? |
-| 5000â€“4000 BCE | Malta-Tempelkultur beginnt | Neuer Primärknoten? |
-| 4000â€“3000 BCE | Megalith-Explosion (Europa, Amerika, Indien) | Globale Welle? |
+| 9500–8000 BCE | Göbekli Tepe aktiv | Primärknoten aktiv |
+| 8000–7000 BCE | Çatalhöyük, Jericho | Sekundärtransfer? |
+| 7000–5000 BCE | Frühe Landwirtschaft breitet sich aus | Wissen diffundiert? |
+| 5000–4000 BCE | Malta-Tempelkultur beginnt | Neuer Primärknoten? |
+| 4000–3000 BCE | Megalith-Explosion (Europa, Amerika, Indien) | Globale Welle? |
 
-> **[KN-4.1]** *Die 4.000-Jahre-Lücke zwischen Göbekli Tepe und den westeuropäischen Megalithen ist das gröÃŸte ungelöste Problem. Drei Möglichkeiten: (a) Kontinuierlicher Transfer über unbekannte Zwischenstationen, (b) Unabhängige Konvergenz â€” verschiedene Kulturen entdeckten dieselben akustischen Prinzipien, (c) Gemeinsame Quelle, die vor Göbekli Tepe liegt und deren Spuren unter Wasser verschwanden. â€” T.P.K.*
+> **[KN-4.1]** *Die 4.000-Jahre-Lücke zwischen Göbekli Tepe und den westeuropäischen Megalithen ist das größte ungelöste Problem. Drei Möglichkeiten: (a) Kontinuierlicher Transfer über unbekannte Zwischenstationen, (b) Unabhängige Konvergenz — verschiedene Kulturen entdeckten dieselben akustischen Prinzipien, (c) Gemeinsame Quelle, die vor Göbekli Tepe liegt und deren Spuren unter Wasser verschwanden. — T.P.K.*
 
 ---
 
@@ -305,20 +305,20 @@ Der Sprung von Göbekli Tepe (9500 BCE) zu den Megalith-Traditionen Westeuropas 
 
 | Knoten | Erwartete Resonanz | Baumeister-Zuordnung | Status |
 |--------|-------------------|---------------------|--------|
-| Göbekli Tepe | ~11â€“17 Hz | 12 Hz (Grundton) | [S] Nicht gemessen |
+| Göbekli Tepe | ~11–17 Hz | 12 Hz (Grundton) | [S] Nicht gemessen |
 | Malta Hypogeum | 70 + 114 Hz | 72 Hz + 110 Hz (Harmonische) | [R] Gemessen |
 | Stonehenge | 110 Hz | 110 Hz (9. Harmonische von 12 Hz) | [R] Gemessen |
 | Qatna Felsgruft | ??? | Unbekannt | [S] Nicht gemessen |
-| Axis Monolith | 72 Hz â†’ 432 Hz | 72 Hz (Basis), 432 Hz (Träger) | [F] Fiktional |
+| Axis Monolith | 72 Hz → 432 Hz | 72 Hz (Basis), 432 Hz (Träger) | [F] Fiktional |
 
 ### 5.2 Die numerologische Kohärenz [T]
 
 | Beziehung | Wert | Anmerkung |
 |-----------|------|-----------|
-| 72 = 12 Ã— 6 | Basis Ã— Faktor | Grundton â†’ Kommunikationsfrequenz |
-| 432 = 12 Ã— 36 | Basis Ã— VKS-Vektoren | Grundton â†’ Trägerfrequenz |
-| 864 = 72 Ã— 12 | Kommunikation Ã— Grundton | AXIS-Tiefe (864 m) |
-| 110 â‰ˆ 12 Ã— 9.17 | Annäherung | Nicht exakt, aber nahe 9. Harmonische |
+| 72 = 12 × 6 | Basis × Faktor | Grundton → Kommunikationsfrequenz |
+| 432 = 12 × 36 | Basis × VKS-Vektoren | Grundton → Trägerfrequenz |
+| 864 = 72 × 12 | Kommunikation × Grundton | AXIS-Tiefe (864 m) |
+| 110 ≈ 12 × 9.17 | Annäherung | Nicht exakt, aber nahe 9. Harmonische |
 
 ---
 
@@ -326,12 +326,12 @@ Der Sprung von Göbekli Tepe (9500 BCE) zu den Megalith-Traditionen Westeuropas 
 
 | Signatur | Titel | Beziehung |
 |----------|-------|-----------|
-| OTA-OBS-0004-2026-DE | Göbekli Tepe â€” Wissenschaftlich | Faktenbasis (100% [R]) |
+| OTA-OBS-0004-2026-DE | Göbekli Tepe — Wissenschaftlich | Faktenbasis (100% [R]) |
 | OTA-OBS-0001-2025-DE | Konkan-Petroglyphen & Archäoakustik | Frequenz-Grundlagen |
 | OTA-ARC-0002-MULTI-DE | Carnyx und Resonanzkammern | Frequenz-System |
-| OTA-HIS-0005-1340BCE-DE | Qatna â€” Baumeister-Hypothesen | Bridge-Analogie |
+| OTA-HIS-0005-1340BCE-DE | Qatna — Baumeister-Hypothesen | Bridge-Analogie |
 | OTA-SCI-0009-2025-DE | Schumann-Resonanzen und Mars | 12-Hz-System |
-| OTA-KARTE-0003-MULTI-DE | Globales Baumeister-Netzwerk | Netzwerk-Ãœbersicht |
+| OTA-KARTE-0003-MULTI-DE | Globales Baumeister-Netzwerk | Netzwerk-Übersicht |
 | OTA-HIS-0007-1200BCE-DE | Bronzezeit-Kollaps | Folgedokument |
 
 ---
@@ -349,4 +349,4 @@ Der Sprung von Göbekli Tepe (9500 BCE) zu den Megalith-Traditionen Westeuropas 
 *Für das OverTime Archive*
 Signatur: OTA-HIS-0006-9500BCE-DE
 
-áƒ
+ᐃ

@@ -27,7 +27,7 @@ knowledge:
 ---
 
 # OTA-KARTE-0001
-## DIE FÃœNF GEHIRN-EPOCHEN â€” Referenzmodul
+## DIE FÜNF GEHIRN-EPOCHEN — Referenzmodul
 
 **Quelle:** Mousley et al. (2025), Nature Communications  
 **DOI:** 10.1038/s41467-025-65974-8  
@@ -35,39 +35,39 @@ knowledge:
 
 ---
 
-## SCHNELLREFERENZ: FÃœNF EPOCHEN, VIER WENDEPUNKTE
+## SCHNELLREFERENZ: FÜNF EPOCHEN, VIER WENDEPUNKTE
 
 | Epoche | Alter | Neuronaler Status | Charakteristikum | Vulnerabilität |
 |--------|-------|-------------------|------------------|----------------|
 | **I. Childhood** | 0-9 | Konsolidierung | Synaptische Blüte + Pruning | Entwicklungsstörungen |
 | **II. Adolescent** | 9-32 | Effizienzsteigerung | Einzige Phase mit zunehmender Effizienz | Psychische Störungen |
 | **III. Adult** | 32-66 | Stabilität | Längste stabile Phase, Plateau | Relative Robustheit |
-| **IV. Early Ageing** | 66-83 | Reorganisation | Abbau weiÃŸer Substanz beginnt | Neurodegenerative Risiken |
-| **V. Late Ageing** | 83+ | Lokalisierung | Global â†’ Lokal, Desintegration | Demenz, Fragilität |
+| **IV. Early Ageing** | 66-83 | Reorganisation | Abbau weißer Substanz beginnt | Neurodegenerative Risiken |
+| **V. Late Ageing** | 83+ | Lokalisierung | Global → Lokal, Desintegration | Demenz, Fragilität |
 
 ---
 
 ## DIE VIER WENDEPUNKTE
 
 ### Wendepunkt 1: ~9 Jahre
-- **Transition:** Konsolidierung â†’ Effizienzsteigerung
+- **Transition:** Konsolidierung → Effizienzsteigerung
 - **Was passiert:** Ende uniformer Netzwerkbildung, Beginn Spezialisierung
 - **Klinisch:** Diagnostikfenster für Entwicklungsstörungen
 
 ### Wendepunkt 2: ~32 Jahre  
-**âš ï¸ STÄRKSTER WENDEPUNKT DES LEBENS**
-- **Transition:** Effizienzsteigerung â†’ Stabilität
-- **Was passiert:** GröÃŸte topologische Reorganisation, maximale strukturelle Verschiebung
+**⚠️ STÄRKSTER WENDEPUNKT DES LEBENS**
+- **Transition:** Effizienzsteigerung → Stabilität
+- **Was passiert:** Größte topologische Reorganisation, maximale strukturelle Verschiebung
 - **Mousley-Zitat:** "Die meisten gerichteten Veränderungen in der Verschaltung"
 - **Klinisch:** Maximale Formbarkeit UND Vulnerabilität
 
 ### Wendepunkt 3: ~66 Jahre
-- **Transition:** Stabilität â†’ Reorganisation
-- **Was passiert:** Messbarer Abbau weiÃŸer Substanz, Netzwerk-Umstrukturierung kulminiert
+- **Transition:** Stabilität → Reorganisation
+- **Was passiert:** Messbarer Abbau weißer Substanz, Netzwerk-Umstrukturierung kulminiert
 - **Klinisch:** Präventionsfenster für Neurodegeneration
 
 ### Wendepunkt 4: ~83 Jahre
-- **Transition:** Reorganisation â†’ Lokalisierung
+- **Transition:** Reorganisation → Lokalisierung
 - **Was passiert:** Globale Vernetzung bricht zusammen, lokale Dominanz
 - **Klinisch:** Schwelle zur Fragilität
 
@@ -89,45 +89,45 @@ knowledge:
 
 Die Mousley-Studie analysierte **12 Netzwerk-Metriken:**
 
-**Zentrale MaÃŸe:**
+**Zentrale Maße:**
 - **Degree:** Anzahl Verbindungen pro Knoten
 - **Clustering-Koeffizient:** Lokale Vernetzungsdichte
 - **Small-Worldness:** Balance lokal/global
 - **Modularity:** Aufteilung in Teilnetzwerke
 
 **Projektion:**
-- UMAP-Algorithmus â†’ 3D-Manifold-Raum
+- UMAP-Algorithmus → 3D-Manifold-Raum
 - Identifikation topologischer Wendepunkte
 
 ---
 
-## ANWENDUNGSHINWEISE FÃœR OTA-DOKUMENTE
+## ANWENDUNGSHINWEISE FÜR OTA-DOKUMENTE
 
 ### GANDHAKA (2070s)
-- **Kaia Rune (31):** Am Wendepunkt 2 (~32) â†’ maximale S-S-Matrix-Empfänglichkeit
-- **Christina Velten (18):** Mitten in Epoche II â†’ Autoimmun-Vulnerabilität
+- **Kaia Rune (31):** Am Wendepunkt 2 (~32) → maximale S-S-Matrix-Empfänglichkeit
+- **Christina Velten (18):** Mitten in Epoche II → Autoimmun-Vulnerabilität
 - **"Jahr der Stille" (2067):** Altersabhängige Effekte modellieren
 
-### noÏ‡Â¹áƒ (Mars)
-- Wendepunkte unter 0,38g? â†’ Spekulation mit realem Anker (ISS Microgravity-Studien)
-- Solar Student Exchange (15-18): Alle in Epoche II â†’ maximale Vulnerabilität
+### noχ¹ᐃ (Mars)
+- Wendepunkte unter 0,38g? → Spekulation mit realem Anker (ISS Microgravity-Studien)
+- Solar Student Exchange (15-18): Alle in Epoche II → maximale Vulnerabilität
 
 ### "Die Uralten" (~60.000 BCE)
-- Anatomisch moderne Gehirne â†’ identische Wendepunkte (wahrscheinlich)
+- Anatomisch moderne Gehirne → identische Wendepunkte (wahrscheinlich)
 - Unterschied: Kulturelle Prägung der Epochen, kürzere Lebenserwartung
 
 ---
 
 ## WICHTIGSTE MOUSLEY-ZITATE
 
-> "Neural efficiency is â€“ as you can imagine â€“ well connected by short paths, and the adolescent phase is the only one in which this efficiency increases."  
-> â€” Dr. Alexa Mousley
+> "Neural efficiency is – as you can imagine – well connected by short paths, and the adolescent phase is the only one in which this efficiency increases."  
+> — Dr. Alexa Mousley
 
 > "Around the age of 32 we see the most directed changes in connectivity and the overall largest shift in the developmental curve compared to all other turning points."  
-> â€” Dr. Alexa Mousley
+> — Dr. Alexa Mousley
 
 > "Understanding that the brain's structural journey is not a matter of steady progression, but rather is shaped by a few key turning points, will help us to identify when and how its wiring is vulnerable to disruption."  
-> â€” Prof. Duncan Astle
+> — Prof. Duncan Astle
 
 ---
 
@@ -147,4 +147,4 @@ Beim Referenzieren dieser Karte in OTA-Dokumenten:
 **Letzte Aktualisierung:** 09. Januar 2026  
 **Vollständige Dokumentation:** OTA-SCI-0019-2025-DE (Version 1.1)  
 
-**áƒ**
+**ᐃ**
