@@ -36,6 +36,30 @@ jobs:
       - name: Validate reviewed SCI/FND curation plan
         run: node scripts/apply-reviewed-sci-fnd-metadata.mjs --check
 
+      - name: Validate reviewed cross-series curation plan
+        run: node scripts/apply-reviewed-cross-series-metadata.mjs --check
+
+      - name: Validate Hayashi marker migration
+        run: node scripts/migrate-hayashi-markers.mjs --check
+
+      - name: Validate RED-0022 encoding and metadata repair
+        run: node scripts/repair-red0022-encoding.mjs --check
+
+      - name: Validate SCI-0048 Nachtrag legacy metadata normalization
+        run: node scripts/normalize-sci0048-nachtrag-metadata.mjs --check
+
+      - name: Validate encoding repair batch 1
+        run: node scripts/repair-encoding-batch-1.mjs --check
+
+      - name: Validate encoding repair batch 2
+        run: node scripts/repair-encoding-batch-2.mjs --check
+
+      - name: Validate encoding repair batch 3
+        run: node scripts/repair-encoding-batch-3.mjs --check
+
+      - name: Validate SCI-0031 encoding and metadata repair
+        run: node scripts/repair-sci0031-encoding.mjs --check
+
       - name: Normalize canonical OTA system metadata
         if: github.event_name == 'push' && github.ref == 'refs/heads/master'
         shell: bash
@@ -71,6 +95,38 @@ jobs:
       - name: Apply reviewed SCI/FND metadata
         if: github.event_name == 'push' && github.ref == 'refs/heads/master'
         run: node scripts/apply-reviewed-sci-fnd-metadata.mjs
+
+      - name: Apply reviewed cross-series metadata
+        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+        run: node scripts/apply-reviewed-cross-series-metadata.mjs
+
+      - name: Apply Hayashi marker migration
+        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+        run: node scripts/migrate-hayashi-markers.mjs
+
+      - name: Apply RED-0022 encoding and metadata repair
+        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+        run: node scripts/repair-red0022-encoding.mjs
+
+      - name: Apply SCI-0048 Nachtrag legacy metadata normalization
+        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+        run: node scripts/normalize-sci0048-nachtrag-metadata.mjs
+
+      - name: Apply encoding repair batch 1
+        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+        run: node scripts/repair-encoding-batch-1.mjs
+
+      - name: Apply encoding repair batch 2
+        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+        run: node scripts/repair-encoding-batch-2.mjs
+
+      - name: Apply encoding repair batch 3
+        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+        run: node scripts/repair-encoding-batch-3.mjs
+
+      - name: Apply SCI-0031 encoding and metadata repair
+        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+        run: node scripts/repair-sci0031-encoding.mjs
 
       - name: Revalidate after safe editorial fixes
         if: github.event_name == 'push' && github.ref == 'refs/heads/master'

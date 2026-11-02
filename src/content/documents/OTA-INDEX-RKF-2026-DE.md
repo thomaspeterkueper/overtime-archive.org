@@ -1,6 +1,6 @@
 ---
 signature: "OTA-INDEX-RKF-2026-DE"
-title: "OTA-INDEX-RKF-2026-DE"
+title: "Resonanzklassifikations-Formalismus (RKF) — Vollständiger Dokumentationsindex"
 series: "FND"
 seriesNumber: 99
 year: 2026
@@ -10,8 +10,24 @@ status: "AKTIV"
 accessLevel: 0
 epistemicStatus: ["W"]
 tags: ["RKF", "Index", "Dokumentenarchitektur", "Metadokument", "Resonanzklassifikation"]
-relatedDocuments: ["OTA-FND-0012-2026-DE", "OTA-FND-0013-2026-DE", "OTA-FND-0014-2026-DE", "OTA-FND-0015-2026-DE"]
+relatedDocuments:
+  - target: "OTA-FND-0012-2026-DE"
+    relation: "related"
+    context: "Bereits in der Legacy-Inline-Liste des Ausgangsdokuments als relatedDocuments hinterlegt; beim Encoding-Pass erhalten."
+  - target: "OTA-FND-0013-2026-DE"
+    relation: "related"
+    context: "Bereits in der Legacy-Inline-Liste des Ausgangsdokuments als relatedDocuments hinterlegt; beim Encoding-Pass erhalten."
+  - target: "OTA-FND-0014-2026-DE"
+    relation: "related"
+    context: "Bereits in der Legacy-Inline-Liste des Ausgangsdokuments als relatedDocuments hinterlegt; beim Encoding-Pass erhalten."
+  - target: "OTA-FND-0015-2026-DE"
+    relation: "related"
+    context: "Bereits in der Legacy-Inline-Liste des Ausgangsdokuments als relatedDocuments hinterlegt; beim Encoding-Pass erhalten."
 summary: "Vollständiger Dokumentationsindex des Resonanzklassifikations-Formalismus RKF: Architekturübersicht aller RKF-Dokumente von SCI-0044 bis FND-0016. Metadokument mit Verweisstruktur."
+updatedAt: "2026-09-25T09:31:12+02:00"
+provenance:
+  reviewedAt: "2026-09-25T09:31:12+02:00"
+  reviewStatus: "metadata-reviewed"
 kg:
   schema: KXF-0.2
   master: kueper-knowledge-graph
@@ -36,12 +52,12 @@ knowledge:
 
 ---
 
-## Ãœbersicht
+## Übersicht
 
 Der **Resonanzklassifikations-Formalismus (RKF)** ist ein skalenübergreifendes Klassifikationssystem für physikalische Systeme vom lokalen Ökosystem bis zur galaktischen Struktur. Er existiert in zwei Varianten:
 
 **RKF-R (Reduced):** Wissenschaftlich anschlussfähige Version  
-**RKF-F (Full):** In-Universe-Version für die noÏ‡Â¹áƒ-Saga
+**RKF-F (Full):** In-Universe-Version für die noχ¹ᐃ-Saga
 
 ---
 
@@ -49,31 +65,31 @@ Der **Resonanzklassifikations-Formalismus (RKF)** ist ein skalenübergreifendes 
 
 ```
 OTA-SCI-0044 [R]
-    â””â”€â”€ JWST-Entdeckung: Empirische Grundlage
-         â”‚
-         â†“
+    └── JWST-Entdeckung: Empirische Grundlage
+         │
+         ↓
 OTA-FND-0012 [S]
-    â””â”€â”€ AVI-Interpretation: Erste Resonanz-Analyse
-         â”‚
-         â†“
+    └── AVI-Interpretation: Erste Resonanz-Analyse
+         │
+         ↓
 OTA-FND-0013 [R+T+S+F]
-    â””â”€â”€ RKF-Basis-Formalismus: Vollständiges System
-         â”‚
-         â†“
+    └── RKF-Basis-Formalismus: Vollständiges System
+         │
+         ↓
 OTA-FND-0014 [R+T+S+F]
-    â””â”€â”€ Anwendung & Validierung: JWST-Katalog + Referenzsysteme
-         â”‚
-         â†“
+    └── Anwendung & Validierung: JWST-Katalog + Referenzsysteme
+         │
+         ↓
 OTA-FND-0015 [META]
-    â””â”€â”€ Epistemologische Schichtung: Wissenschaft vs. Fiktion
-         â”‚
-         â†“
+    └── Epistemologische Schichtung: Wissenschaft vs. Fiktion
+         │
+         ↓
 OTA-FND-0013A [F]
-    â””â”€â”€ Messhandbuch: In-Universe-Operationalisierung
-         â”‚
-         â†“
+    └── Messhandbuch: In-Universe-Operationalisierung
+         │
+         ↓
 OTA-FND-0013B [R+F]
-    â””â”€â”€ Î -BIO-Addendum: Bioenergetische Fenster (SOL-HELIO-01)
+    └── Π-BIO-Addendum: Bioenergetische Fenster (SOL-HELIO-01)
 ```
 
 ---
@@ -84,11 +100,11 @@ OTA-FND-0013B [R+F]
 **Titel:** JWST-Entdeckung organischer Chemie in IRAS 07251-0248  
 **Status:** [R] Real / Empirisch validiert  
 **Inhalt:**
-- Extragalaktisches CHâ‚ƒ (erstmals auÃŸerhalb MilchstraÃŸe)
-- Câ‚‚Hâ‚‚, Câ‚„Hâ‚‚, Câ‚†Hâ‚‚, Câ‚†Hâ‚†, CHâ‚„ in ULIRG-Kern
+- Extragalaktisches CH₃ (erstmals außerhalb Milchstraße)
+- C₂H₂, C₄H₂, C₆H₂, C₆H₆, CH₄ in ULIRG-Kern
 - Kosmische-Strahlen-dominierte Fragmentationschemie
-- log(Î¶_Hâ‚‚/n_H) â‰ˆ -18.5 cmÂ³ sâ»Â¹
-- T_dust > 500 K, n_H = 10Â³â€“10âµ cmâ»Â³
+- log(ζ_H₂/n_H) ≈ -18.5 cm³ s⁻¹
+- T_dust > 500 K, n_H = 10³–10⁵ cm⁻³
 
 **Klassifikation:** S4-C (ULIRG-Kern, modulare Chemie)
 
@@ -100,9 +116,9 @@ OTA-FND-0013B [R+F]
 **Titel:** Resonanz-Level-Schema für IRAS 07251-0248  
 **Status:** [S] Spekulativ (AVI-Framework)  
 **Inhalt:**
-- 6-Ebenen-Schema (Level 0â€“5)
-- Parametertabelle (T, Ï, Î¶, Resonanzgrade, Informationsdichte)
-- Korrelationstabelle: Physik â†” Resonanz
+- 6-Ebenen-Schema (Level 0–5)
+- Parametertabelle (T, ρ, ζ, Resonanzgrade, Informationsdichte)
+- Korrelationstabelle: Physik ↔ Resonanz
 - Integration in g-Faktor-Hierarchie
 - Testbare Vorhersagen
 
@@ -111,46 +127,46 @@ OTA-FND-0013B [R+F]
 ---
 
 ### 3. OTA-FND-0013-2026-DE
-**Titel:** Resonanzklassifikations-Formalismus (RKF) â€“ Basis-Dokument  
+**Titel:** Resonanzklassifikations-Formalismus (RKF) – Basis-Dokument  
 **Status:** [R+T+S+F] Hybrid  
 **Inhalt:**
 
 **Mathematische Grundlagen:**
-- R(a)-Gleichung: R(a) = Râ‚€ · [1 + Îµ · cos(Ï‰ · ln(a) + Ï†)]
-- Ï‡-Operator: Ï‡ = âˆš(Ori Ã— AVI Ã— Reso Ã— Kran Ã— Ira Ã— Numa)
-- RFG (Resonanz-Freiheitsgrade): N_modes Ã— P_coupling Ã— F_dynamic
-- Î¨ (Informationsdichte): (S_config Ã— N_states) / V
+- R(a)-Gleichung: R(a) = R₀ · [1 + ε · cos(ω · ln(a) + φ)]
+- χ-Operator: χ = √(Ori × AVI × Reso × Kran × Ira × Numa)
+- RFG (Resonanz-Freiheitsgrade): N_modes × P_coupling × F_dynamic
+- Ψ (Informationsdichte): (S_config × N_states) / V
 
-**Skala (S0â€“S5):**
+**Skala (S0–S5):**
 - S0: Lokal (<100 km)
-- S1: Planetar (10â€“10âµ km)
-- S2: Planetensystem (10Â¹Â¹â€“10Â¹Â³ m)
-- S3: Scheiben/Nebel (0.01â€“10 pc)
-- S4: Galaktische Substruktur (10Â²â€“10â´ pc)
-- S5: Galaxis/Cluster (>10â´ pc)
+- S1: Planetar (10–10⁵ km)
+- S2: Planetensystem (10¹¹–10¹³ m)
+- S3: Scheiben/Nebel (0.01–10 pc)
+- S4: Galaktische Substruktur (10²–10⁴ pc)
+- S5: Galaxis/Cluster (>10⁴ pc)
 
-**Resonanzlevels (Aâ€“F):**
+**Resonanzlevels (A–F):**
 - A: Rohfeld (diffuse Gase)
 - B: Cluster (Gesteinsformationen, PAHs)
 - C: Modulare Chemie (organische Netzwerke)
 - D: Strukturierte Zyklen (geochemische Kreisläufe)
-- E: Biosphäre (Leben, Ï‡ â‰¥ 0.70)
-- F: Noosphäre (Technosphäre, Ï‡ > 1.0)
+- E: Biosphäre (Leben, χ ≥ 0.70)
+- F: Noosphäre (Technosphäre, χ > 1.0)
 
-**SÃ—R-Matrix:** 6 Skalen Ã— 6 Levels = 36 Kombinationen
+**S×R-Matrix:** 6 Skalen × 6 Levels = 36 Kombinationen
 
-**g-Faktor-Integration:** Zuordnung Resonanzlevels â†’ gâ‚€â€“gâ‚† (10â»Â¹â¸ Hz bis 10Â¹Â² Hz)
+**g-Faktor-Integration:** Zuordnung Resonanzlevels → g₀–g₆ (10⁻¹⁸ Hz bis 10¹² Hz)
 
 **Testbare Vorhersagen:** 8 konkrete Vorhersagen für ULIRGs, Planetensysteme, Noosphären
 
 ---
 
 ### 4. OTA-FND-0014-2026-DE
-**Titel:** RKF â€“ Anwendung, Validierung und Ressourcen-Integration  
+**Titel:** RKF – Anwendung, Validierung und Ressourcen-Integration  
 **Status:** [R+T+S+F] Hybrid  
 **Inhalt:**
 
-**Ressourcen-Achse (R0â€“R5):**
+**Ressourcen-Achse (R0–R5):**
 - R0: Ressourcenarm
 - R1: Basisminerale
 - R2: Lokale Anreicherungen
@@ -158,18 +174,18 @@ OTA-FND-0013B [R+F]
 - R4: Hochkonzentriert
 - R5: Systemischer Hub
 
-**Kategorien:** Metalle, Hâ‚‚O, Organika, CHNOPS, Zugänglichkeit
+**Kategorien:** Metalle, H₂O, Organika, CHNOPS, Zugänglichkeit
 
 **Quantitative Parameterbereiche:**
-- Level C: log(Î¶_Hâ‚‚/n_H) = -18.2 bis -19.1, T = 30â€“300 K, >50 Moleküle
-- Level D: E > 10 W/mÂ², Zyklen 10Â²â€“10â¸ Jahre, P/N verfügbar
-- Level E: B_max > 0, B_obs > 10â»Â¹Â² kg/mÂ³, Ï‡ â‰¥ 0.70
-- Level F: Energie > 10â»Â³ Einstrahlung, Ï‡ > 1.0, >10Â³â° bits/mÂ³
+- Level C: log(ζ_H₂/n_H) = -18.2 bis -19.1, T = 30–300 K, >50 Moleküle
+- Level D: E > 10 W/m², Zyklen 10²–10⁸ Jahre, P/N verfügbar
+- Level E: B_max > 0, B_obs > 10⁻¹² kg/m³, χ ≥ 0.70
+- Level F: Energie > 10⁻³ Einstrahlung, χ > 1.0, >10³⁰ bits/m³
 
 **Bioenergetische Integration:**
 - NutMEG-Modell: P_net = P_catabolic - P_maintenance
-- Mass-Energy-Habitability: H_ME = M Ã— E Ã— q
-- D-E-Ãœbergang: Theoretisch habitable (B_max > 0), aber nicht belebt (B_obs = 0)
+- Mass-Energy-Habitability: H_ME = M × E × q
+- D-E-Übergang: Theoretisch habitable (B_max > 0), aber nicht belebt (B_obs = 0)
 
 **JWST-Validierungskatalog:** 10 Objekte
 1. IRAS 07251-0248: S4-C-R2
@@ -184,60 +200,60 @@ OTA-FND-0013B [R+F]
 10. 2M1207 b: S1-B-R1
 
 **Referenz-Klassifikationen:**
-- **Erde:** S1-E/F-Î _Earth-R4 (Biosphäre + Noosphäre)
-- **Mars:** S1-B/C-Î _Mars-R2 (Mineralogie, bioenergetisch D-fähig)
-- **Venus:** S1-C/D-Î _Venus-R2 (Extreme Chemie, Wolkenschicht)
-- **Europa:** S1-D/E?-Î _Europa-R3 (Ozean-Zyklen, bioenergetisch plausibel)
+- **Erde:** S1-E/F-Π_Earth-R4 (Biosphäre + Noosphäre)
+- **Mars:** S1-B/C-Π_Mars-R2 (Mineralogie, bioenergetisch D-fähig)
+- **Venus:** S1-C/D-Π_Venus-R2 (Extreme Chemie, Wolkenschicht)
+- **Europa:** S1-D/E?-Π_Europa-R3 (Ozean-Zyklen, bioenergetisch plausibel)
 
-**Vollständige RKF-Adresse:** SxRy-Î z-Rw
+**Vollständige RKF-Adresse:** SxRy-Πz-Rw
 
 ---
 
 ### 5. OTA-FND-0015-2026-DE
-**Titel:** RKF â€“ Epistemologische Schichtung  
+**Titel:** RKF – Epistemologische Schichtung  
 **Status:** [META] Selbstreflexion  
 **Inhalt:**
 
 **Externe Kritik dokumentiert:**
-- âœ… SÃ—R-Matrix: Strukturell sauber, taxonomisch legitim
-- âš ï¸ RFG/Î¨: Heuristisch, gröÃŸenordnungsmäÃŸig plausibel
-- âŒ AVI-Gleichung: Keine physikalische Entsprechung
-- âŒ Ï‡-Operator: Keine Messprozedur, symbolische Form
-- âŒ g-Hierarchie: Biologische Rhythmen nicht im MHz-Bereich
+- ✅ S×R-Matrix: Strukturell sauber, taxonomisch legitim
+- ⚠️ RFG/Ψ: Heuristisch, größenordnungsmäßig plausibel
+- ❌ AVI-Gleichung: Keine physikalische Entsprechung
+- ❌ χ-Operator: Keine Messprozedur, symbolische Form
+- ❌ g-Hierarchie: Biologische Rhythmen nicht im MHz-Bereich
 
 **Epistemologische Neuzuordnung:**
 
 **[R] Real / Empirisch validiert:**
-- SÃ—R-Matrix (Skala Ã— Komplexität)
+- S×R-Matrix (Skala × Komplexität)
 - JWST-Validierung (10 Objekte)
 - Bioenergetische Modelle (NutMEG, H_ME)
-- Quantitative Parameter (T, Ï, Î¶, Moleküle)
+- Quantitative Parameter (T, ρ, ζ, Moleküle)
 
 **[T] Theoretisch / Physikalisch plausibel:**
 - RFG als Ordnungsparameter
-- Î¨ als Informationsdichte
-- Dâ†’E-Ãœbergänge (bioenergetisch begründbar)
+- Ψ als Informationsdichte
+- D→E-Übergänge (bioenergetisch begründbar)
 
 **[S] Spekulativ / Testbar:**
-- Benzol â†” Câ‚‚Hâ‚‚-Korrelation in ULIRGs
-- Mars-Schumann-Resonanz (7â€“14 Hz)
+- Benzol ↔ C₂H₂-Korrelation in ULIRGs
+- Mars-Schumann-Resonanz (7–14 Hz)
 - Exoplaneten-Biosignaturen
 
-**[F] Fiktional / Diegetisch (noÏ‡Â¹áƒ-Saga):**
+**[F] Fiktional / Diegetisch (noχ¹ᐃ-Saga):**
 - AVI-Modell (R(a)-Gleichung)
-- Ï‡-Operator (Bewusstseins-Kohärenz)
-- Frequenz-Bewusstseinsmapping (gâ‚€â€“gâ‚†)
-- Resonanzanker, Monolithe, Ï‡-Netze
+- χ-Operator (Bewusstseins-Kohärenz)
+- Frequenz-Bewusstseinsmapping (g₀–g₆)
+- Resonanzanker, Monolithe, χ-Netze
 
 **Dual-Natur:**
 
-**RKF-R (Reduced):** SÃ—C-Matrix, Feature-Space-Klassifikator, wissenschaftlich anschlussfähig  
-**RKF-F (Full):** SÃ—R-Matrix mit AVI/Ï‡, In-Universe-Physik der noÏ‡Â¹áƒ-Saga
+**RKF-R (Reduced):** S×C-Matrix, Feature-Space-Klassifikator, wissenschaftlich anschlussfähig  
+**RKF-F (Full):** S×R-Matrix mit AVI/χ, In-Universe-Physik der noχ¹ᐃ-Saga
 
 **Empfehlungen zur Härtung (RKF-R):**
-- Ï‡ ersetzen durch Î¦_E, Î£_prod, I_rate
-- RFG als NetzwerkmaÃŸ (N_nodes Ã— k_avg)
-- Î  als Vektor realer Observablen
+- χ ersetzen durch Φ_E, Σ_prod, I_rate
+- RFG als Netzwerkmaß (N_nodes × k_avg)
+- Π als Vektor realer Observablen
 - g-Hierarchie empirisch neu definieren
 
 **Kuratorisches Prinzip:**
@@ -251,9 +267,9 @@ OTA-FND-0013B [R+F]
 **Inhalt:**
 
 **Parameterpakete:**
-- **Î -MIN:** (T, Ï, Î¶, RFG, Î¨) â€“ immer anzugeben
-- **Î -AVI:** (Ï‰, Î›, Ï‡, Î´R, R_loc) â€“ wenn AVI-Messtechnik verfügbar
-- **Î -ID:** Messkampagnen-ID (Datum + Plattform + Suite)
+- **Π-MIN:** (T, ρ, ζ, RFG, Ψ) – immer anzugeben
+- **Π-AVI:** (ω, Λ, χ, δR, R_loc) – wenn AVI-Messtechnik verfügbar
+- **Π-ID:** Messkampagnen-ID (Datum + Plattform + Suite)
 
 **Instrumentenfamilien:**
 
@@ -266,11 +282,11 @@ OTA-FND-0013B [R+F]
 - S-NET: Kopplungs-/Netzwerkanalyse
 - S-DYN: Modenanregung & Dynamiktests
 
-**A-Suite (AVI/Ï‡):** [F]
+**A-Suite (AVI/χ):** [F]
 - A-CLK: Interferometrisches Atomuhr-Array
 - A-RES: Resonanz-Spektralresonator
-- A-LAM: Î›-Material-/Struktursonde
-- A-CHI: Ï‡-Tomograph
+- A-LAM: Λ-Material-/Struktursonde
+- A-CHI: χ-Tomograph
 
 **Hersteller (fiktional):**
 - Monolith Consortium (Zürich Division)
@@ -282,132 +298,132 @@ OTA-FND-0013B [R+F]
 - Zeitfenster (Kurz/Standard/Lang)
 - Kalibrationsanker (E-Anchor, I-Anchor, A-Anchor)
 - Reporting-Standard
-- Datenqualität (DQ 0â€“5)
+- Datenqualität (DQ 0–5)
 
 **Operationaldefinitionen:**
 - T (Temperatur): IR-Spektroskopie, Linienverhältnisse
-- Ï/n (Dichte): Gravimetrie, Radiative Transfer
-- Î¶ (Ionisationsrate): Ion/Elektronendichten, chemische Tracer
-- RFG: N_modes Ã— P_coupling Ã— F_dynamic
-- Î¨: Strukturtragende Konfigurationen pro Volumen
-- Ï‰: Log-periodische Modulation
-- Î›: Lokale AVI-Kopplung
-- Ï‡: Kohärenz-Tomogramm
+- ρ/n (Dichte): Gravimetrie, Radiative Transfer
+- ζ (Ionisationsrate): Ion/Elektronendichten, chemische Tracer
+- RFG: N_modes × P_coupling × F_dynamic
+- Ψ: Strukturtragende Konfigurationen pro Volumen
+- ω: Log-periodische Modulation
+- Λ: Lokale AVI-Kopplung
+- χ: Kohärenz-Tomogramm
 
-**Ï‡-Schwellenwerte (In-Universe):**
-- Ï‡ < 0.3: Nicht-selbstreferenziell (Aâ€“B)
-- 0.3â€“0.7: Proto-selbstreferenziell (Câ€“D)
-- â‰¥ 0.70: Biosphären-Emergenz (E)
+**χ-Schwellenwerte (In-Universe):**
+- χ < 0.3: Nicht-selbstreferenziell (A–B)
+- 0.3–0.7: Proto-selbstreferenziell (C–D)
+- ≥ 0.70: Biosphären-Emergenz (E)
 - > 1.0: Noosphären-Niveau (F)
 - > 2.0: Transplanetare Kognition (F+)
 
 **Level-Gates (messgetrieben):**
-- A: RFG < 5, Î¨ < 10Â³, Ï‡ < 0.1
-- B: 5 â‰¤ RFG < 20, 10Â³ â‰¤ Î¨ < 10â¸, Ï‡ < 0.3
-- C: 20 â‰¤ RFG < 100, 10â¸ â‰¤ Î¨ < 10Â¹âµ, 0.3 â‰¤ Ï‡ < 0.7
-- D: 100 â‰¤ RFG < 1000, 10Â¹âµ â‰¤ Î¨ < 10Â²Â², 0.5 â‰¤ Ï‡ < 0.7
-- E: RFG > 1000, Î¨ > 10Â²Â², Ï‡ â‰¥ 0.70
-- F: RFG > 10â´, Î¨_dig dominant, Ï‡ > 1.0
+- A: RFG < 5, Ψ < 10³, χ < 0.1
+- B: 5 ≤ RFG < 20, 10³ ≤ Ψ < 10⁸, χ < 0.3
+- C: 20 ≤ RFG < 100, 10⁸ ≤ Ψ < 10¹⁵, 0.3 ≤ χ < 0.7
+- D: 100 ≤ RFG < 1000, 10¹⁵ ≤ Ψ < 10²², 0.5 ≤ χ < 0.7
+- E: RFG > 1000, Ψ > 10²², χ ≥ 0.70
+- F: RFG > 10⁴, Ψ_dig dominant, χ > 1.0
 
 **Standard-Messkampagnen:**
-- S0 (lokal): Boden + Drohnen, Ï‡-Inseln
+- S0 (lokal): Boden + Drohnen, χ-Inseln
 - S1 (planetar): Orbital-Tomographie, Langfenster
 - S2 (System): Multi-Körper-Observatorien
-- S3â€“S5 (Nebel/Galaxien): Spektroskopie, Interferometrie
+- S3–S5 (Nebel/Galaxien): Spektroskopie, Interferometrie
 
 **Berichtsvorlage:** Vollständiges Copy-Paste-Template
 
 **Beispiele (In-Universe):**
-1. Erde (2026): S1-E/F-Î _EARTH-R4, Ï‡ = 0.85 Â± 0.03
-2. Mars (2091, mit Schumann-Netz): S1-C/D-Î _MARS-R2 (dom=D), Ï‡ = 0.65 Â± 0.04
-3. IRAS 07251-0248: S4-C-Î _ULIRG-R2, Î -AVI nicht berichtet (DQ zu niedrig)
+1. Erde (2026): S1-E/F-Π_EARTH-R4, χ = 0.85 ± 0.03
+2. Mars (2091, mit Schumann-Netz): S1-C/D-Π_MARS-R2 (dom=D), χ = 0.65 ± 0.04
+3. IRAS 07251-0248: S4-C-Π_ULIRG-R2, Π-AVI nicht berichtet (DQ zu niedrig)
 
 **Safety & Ethik:**
 - A-CHI als kognitive Invasion (Noosphären-Messungen)
-- Ï‡-Manipulation als Intervention (Resonanzanker, Schumann-Generatoren)
+- χ-Manipulation als Intervention (Resonanzanker, Schumann-Generatoren)
 - Messrückwirkung bei F-Systemen
 
 **Anhang A (In-Universe):**
 - Gerätenamen & Modelle (TD-7 "ChronoScope", FT-12 "ModeScan Pro")
-- Einheitensystem (Î›-Einheit "lam", Ï‡-Einheit "chi/KG")
+- Einheitensystem (Λ-Einheit "lam", χ-Einheit "chi/KG")
 - Störsignaturen-Tabellen
 
 ---
 
 ### 7. OTA-FND-0013B-2026-DE
-**Titel:** Î -BIO-Addendum â€“ Bioenergetische Fenster  
-**Status:** [R] Real (Î¦-Messungen) + [F] Fiktional (Szenarien)  
+**Titel:** Π-BIO-Addendum – Bioenergetische Fenster  
+**Status:** [R] Real (Φ-Messungen) + [F] Fiktional (Szenarien)  
 **Inhalt:**
 
 **SOL-N1 Bioenergetische Norm:**
-- Î¦âŠ•,bio = 0.2 W/mÂ² (Erdbasierte Biosphären-Referenz)
-- Î¦_rel = Î¦ / Î¦âŠ•,bio (Normierung)
+- Φ⊕,bio = 0.2 W/m² (Erdbasierte Biosphären-Referenz)
+- Φ_rel = Φ / Φ⊕,bio (Normierung)
 - 100 TW globale NPP als Anker
 
-**Î -BIO-Felder:**
-- Î¦_heat [W/mÂ²]: Geophysikalischer Wärmefluss
-- Î¦_redox [W/mÂ²]: Nutzbarer chemischer Energiefluss
-- Î·_chem: Umwandlungsanteil Wärme â†’ Redox
+**Π-BIO-Felder:**
+- Φ_heat [W/m²]: Geophysikalischer Wärmefluss
+- Φ_redox [W/m²]: Nutzbarer chemischer Energiefluss
+- η_chem: Umwandlungsanteil Wärme → Redox
 - N/P-Klasse: {reich / mittel / arm}
 - Mix-Effizienz M: {hoch / mittel / niedrig}
-- Î¨_growth: Erwartbarer Î¨_rel-Zuwachs (Szenarien)
+- Ψ_growth: Erwartbarer Ψ_rel-Zuwachs (Szenarien)
 
-**Europa (S1-C/D-Î _BIO-EUR-01):**
-- Î¦_heat = 1Ã—10â»Â² W/mÂ², Î¦_redox = 1.6Ã—10â»â´ W/mÂ²
-- Î¦_rel(redox) â‰ˆ 8Ã—10â»â´
-- Î·_chem â‰ˆ 1.6Ã—10â»Â²
-- N/P: Mittel, Mix: Niedrigâ€“Mittel
-- Î¨_growth: 10â»Â¹Â² â€¦ 10â»â· (konservativ â€¦ optimistisch)
-- **Interpretation:** Î¦-fähig, aber Î¨-limitiert (Transport + N/P-Gate)
+**Europa (S1-C/D-Π_BIO-EUR-01):**
+- Φ_heat = 1×10⁻² W/m², Φ_redox = 1.6×10⁻⁴ W/m²
+- Φ_rel(redox) ≈ 8×10⁻⁴
+- η_chem ≈ 1.6×10⁻²
+- N/P: Mittel, Mix: Niedrig–Mittel
+- Ψ_growth: 10⁻¹² … 10⁻⁷ (konservativ … optimistisch)
+- **Interpretation:** Φ-fähig, aber Ψ-limitiert (Transport + N/P-Gate)
 
-**Enceladus (S1-C/D-Î _BIO-ENC-01):**
-- Î¦_heat = 2Ã—10â»Â² W/mÂ², Î¦_redox = 2Ã—10â»â´ â€¦ 2Ã—10â»Â³ W/mÂ²
-- Î¦_rel(redox) â‰ˆ 1Ã—10â»Â³ â€¦ 1Ã—10â»Â²
-- Î·_chem â‰ˆ 0.01 â€¦ 0.1
-- N/P: Mittelâ€“Reich, Mix: Mittelâ€“Hoch
-- Î¨_growth: 10â»Â¹Â² â€¦ 10â»â¶ (konservativ â€¦ optimistisch)
-- **Interpretation:** Beste E-Nische im Sonnensystem (auÃŸer Erde)
+**Enceladus (S1-C/D-Π_BIO-ENC-01):**
+- Φ_heat = 2×10⁻² W/m², Φ_redox = 2×10⁻⁴ … 2×10⁻³ W/m²
+- Φ_rel(redox) ≈ 1×10⁻³ … 1×10⁻²
+- η_chem ≈ 0.01 … 0.1
+- N/P: Mittel–Reich, Mix: Mittel–Hoch
+- Ψ_growth: 10⁻¹² … 10⁻⁶ (konservativ … optimistisch)
+- **Interpretation:** Beste E-Nische im Sonnensystem (außer Erde)
 
-**Titan-SURF (S1-C/D-Î _BIO-TIT-SURF-01):**
-- Î¦_heat = 3.7Ã—10â»Â² W/mÂ², Î¦_redox = [Szenario] W/mÂ²
-- Î¦_rel(redox): SURF-KONS = 5Ã—10â»âµ, SURF-MID = 5Ã—10â»â´, SURF-MAX = 5Ã—10â»Â³
-- Î·_chem: unklar (reaktionspfadabhängig)
-- N/P: Armâ€“Mittel, Mix: Hoch (Chemie-Gate)
-- Î¨_growth: 10â»Â¹Â³ â€¦ 10â»â· (KONS â€¦ MAX)
+**Titan-SURF (S1-C/D-Π_BIO-TIT-SURF-01):**
+- Φ_heat = 3.7×10⁻² W/m², Φ_redox = [Szenario] W/m²
+- Φ_rel(redox): SURF-KONS = 5×10⁻⁵, SURF-MID = 5×10⁻⁴, SURF-MAX = 5×10⁻³
+- η_chem: unklar (reaktionspfadabhängig)
+- N/P: Arm–Mittel, Mix: Hoch (Chemie-Gate)
+- Ψ_growth: 10⁻¹³ … 10⁻⁷ (KONS … MAX)
 - **Interpretation:** Exotisches E-Fenster, hochgradig spekulativ
 
-**Titan-SUB (S1-C/D-Î _BIO-TIT-SUB-01):**
-- Î¦_heat = 3.7Ã—10â»Â² W/mÂ², Î¦_redox = 1Ã—10â»â´ â€¦ 1Ã—10â»Â³ W/mÂ²
-- Î¦_rel(redox) â‰ˆ 5Ã—10â»â´ â€¦ 5Ã—10â»Â³
-- Î·_chem â‰ˆ 0.003 â€¦ 0.03
-- N/P: Mittel, Mix: Niedrigâ€“Mittel
-- Î¨_growth: 10â»Â¹Â² â€¦ 10â»â· (konservativ â€¦ optimistisch)
+**Titan-SUB (S1-C/D-Π_BIO-TIT-SUB-01):**
+- Φ_heat = 3.7×10⁻² W/m², Φ_redox = 1×10⁻⁴ … 1×10⁻³ W/m²
+- Φ_rel(redox) ≈ 5×10⁻⁴ … 5×10⁻³
+- η_chem ≈ 0.003 … 0.03
+- N/P: Mittel, Mix: Niedrig–Mittel
+- Ψ_growth: 10⁻¹² … 10⁻⁷ (konservativ … optimistisch)
 - **Interpretation:** Klassischer Eiswelt-Kandidat, schwer zugänglich
 
 **Ampel-Tafel (Missionsplanung):**
 
-| Körper | Î¦-Fähigkeit | N/P-Gate | Î¨-Skalierbarkeit | Ranking |
+| Körper | Φ-Fähigkeit | N/P-Gate | Ψ-Skalierbarkeit | Ranking |
 |--------|-------------|----------|------------------|---------|
-| Enceladus | ðŸŸ¢ | ðŸŸ¢ | ðŸŸ¡ | ðŸ¥‡ |
-| Europa | ðŸŸ¡ | ðŸŸ¡ | ðŸ”´ | ðŸ¥ˆ |
-| Titan-SUB | ðŸŸ¡ | ðŸŸ¡ | ðŸ”´ | ðŸ¥‰ |
-| Titan-SURF | ðŸŸ¡ | ðŸŸ¡ | ðŸŸ¡ | Spekulativ |
+| Enceladus | 🟢 | 🟢 | 🟡 | 🥇 |
+| Europa | 🟡 | 🟡 | 🔴 | 🥈 |
+| Titan-SUB | 🟡 | 🟡 | 🔴 | 🥉 |
+| Titan-SURF | 🟡 | 🟡 | 🟡 | Spekulativ |
 
 **Legende:**
-- ðŸŸ¢ Grün: Plausibel / Reich
-- ðŸŸ¡ Gelb: Unsicher / Mittel
-- ðŸ”´ Rot: Unwahrscheinlich / Arm
+- 🟢 Grün: Plausibel / Reich
+- 🟡 Gelb: Unsicher / Mittel
+- 🔴 Rot: Unwahrscheinlich / Arm
 
 **Haupterkenntnis:**
 
-> E-Ãœbergang ist Î¨-limitiert, nicht Î¦-limitiert.  
-> Eiswelten haben ausreichend Energie für Nischen-Biosphären, aber globales E (Ï‡ â‰¥ 0.70) bleibt unerreichbar ohne massives Engineering.
+> E-Übergang ist Ψ-limitiert, nicht Φ-limitiert.  
+> Eiswelten haben ausreichend Energie für Nischen-Biosphären, aber globales E (χ ≥ 0.70) bleibt unerreichbar ohne massives Engineering.
 
 **Terraforming-Hebel-Analyse:**
-- Energiefluss-Verstärkung: +1 GröÃŸenordnung Î¨_growth
-- Transport-Engineering: +2â€“3 GröÃŸenordnungen
-- Nährstoff-Anreicherung: +1 GröÃŸenordnung
-- **Kombination:** Î¨_rel â†’ 10â»âµ â€¦ 10â»Â² (noch immer unter E-Schwelle)
+- Energiefluss-Verstärkung: +1 Größenordnung Ψ_growth
+- Transport-Engineering: +2–3 Größenordnungen
+- Nährstoff-Anreicherung: +1 Größenordnung
+- **Kombination:** Ψ_rel → 10⁻⁵ … 10⁻² (noch immer unter E-Schwelle)
 
 **RFG-Limit als harte Grenze:**
 - Ozeanvolumen zu klein für globales E
@@ -419,7 +435,7 @@ OTA-FND-0013B [R+F]
 - Choblet et al. (2017): Enceladus Wärmefluss
 - McKay: Titan as Abode of Life
 
-**Status:** Archiviert â€“ Bioenergetisches Addendum zu SOL-N1
+**Status:** Archiviert – Bioenergetisches Addendum zu SOL-N1
 
 ---
 
@@ -429,38 +445,38 @@ OTA-FND-0013B [R+F]
 
 **Verwenden:**
 - OTA-FND-0013 (nur [R]/[T]-Elemente)
-- OTA-FND-0014 (SÃ—C-Matrix, quantitative Parameter)
+- OTA-FND-0014 (S×C-Matrix, quantitative Parameter)
 - OTA-FND-0015 (RKF-R Version)
 
 **Ignorieren:**
-- AVI-Gleichung, Ï‡-Operator, g-Hierarchie
-- Î -AVI-Parameter (Ï‰, Î›, Ï‡, Î´R)
+- AVI-Gleichung, χ-Operator, g-Hierarchie
+- Π-AVI-Parameter (ω, Λ, χ, δR)
 - A-Suite-Instrumente
 
-**Format:** SxCy-Î z-Rw (C = Complexity, nicht Resonance)
+**Format:** SxCy-Πz-Rw (C = Complexity, nicht Resonance)
 
 **Legitimität:** Taxonomisches Framework, vergleichbar mit Spektralklassifikation, Planetary Habitability Indices
 
 ---
 
-### Für Worldbuilding (noÏ‡Â¹áƒ-Saga)
+### Für Worldbuilding (noχ¹ᐃ-Saga)
 
 **Verwenden:**
 - Alle Dokumente (OTA-FND-0012 bis OTA-FND-0013A)
 - Vollständige RKF-F Version
 - A-Suite-Instrumente als Technologie
-- Ï‡-Metrik als diegetische Observable
+- χ-Metrik als diegetische Observable
 
-**Format:** SxRy-Î z-Rw (R = Resonance)
+**Format:** SxRy-Πz-Rw (R = Resonance)
 
 **Funktionen:**
 - Einheitliche Klassifikation (Planeten bis Noosphären)
-- Plot-Mechaniken (Ï‡-Krieg, Resonanzwaffen, Terraforming)
-- Zivilisationsstufen (Ï‡-basiert, nicht nur Kardashev)
+- Plot-Mechaniken (χ-Krieg, Resonanzwaffen, Terraforming)
+- Zivilisationsstufen (χ-basiert, nicht nur Kardashev)
 - In-Universe-Messtechnik (A-CLK, A-RES, A-LAM, A-CHI)
 
 **Konsistenzregel:**
-> "AVI, Ï‡ und Frequenzmapping sind **interne Feldtheorie eines fiktiven Universums**, nicht Behauptungen über reale Physik."
+> "AVI, χ und Frequenzmapping sind **interne Feldtheorie eines fiktiven Universums**, nicht Behauptungen über reale Physik."
 
 ---
 
@@ -480,7 +496,7 @@ OTA-FND-0013B [R+F]
 - OTA-FND-0004: Omnizedenz-Antwort (0.7-Hz-Korrespondenz)
 
 **Narrative Anwendung:**
-- OTA-ART-0001: Monolith-01 (0.0027 Hz, Ï‡ = 0.70)
+- OTA-ART-0001: Monolith-01 (0.0027 Hz, χ = 0.70)
 - OTA-RED-0020: 72-Hz-Testprotokoll
 - OTA-NAR-0002: GENERATION MARS (Mars-Klassifikation 2091)
 
@@ -505,7 +521,7 @@ OTA-FND-0013B [R+F]
 - Peer-Review erwünscht
 
 **Narrative Nutzung (RKF-F):**
-- Exklusiv für noÏ‡Â¹áƒ-Saga
+- Exklusiv für noχ¹ᐃ-Saga
 - Copyright: Thomas Küper / Das OverTime Archive
 - Nicht für andere fiktionale Universen ohne Genehmigung
 
@@ -523,9 +539,9 @@ OTA-FND-0013B [R+F]
 
 *Der RKF ist ein Ordnungssystem für das Ungeordnete, ein Versuch, das Spektrum von der Molekülwolke bis zum Bewusstsein unter eine einheitliche Klassifikation zu stellen.*
 
-*Das Î -BIO-Addendum zeigt: Energie allein macht kein Leben. Transport, Nährstoffe und Zeit entscheiden über den Aufstieg von chemischer Vielfalt zu echter Biosphäre.*
+*Das Π-BIO-Addendum zeigt: Energie allein macht kein Leben. Transport, Nährstoffe und Zeit entscheiden über den Aufstieg von chemischer Vielfalt zu echter Biosphäre.*
 
-*Die Eiswelten unseres Systems sind energetisch reichhaltig â€“ aber sie bleiben Nischen-Labore, keine zweiten Erden. Das ändert sich erst, wenn Technologie die fundamentalen Grenzen von RFG und Î¨ verschiebt.*
+*Die Eiswelten unseres Systems sind energetisch reichhaltig – aber sie bleiben Nischen-Labore, keine zweiten Erden. Das ändert sich erst, wenn Technologie die fundamentalen Grenzen von RFG und Ψ verschiebt.*
 
 *Ob diese Ordnung objektiv existiert oder eine Projektion des menschlichen Geistes ist, kann das Archiv nicht entscheiden.*
 
@@ -533,7 +549,7 @@ OTA-FND-0013B [R+F]
 
 *Die Grenzen zu kennen ist wichtiger als Recht zu haben.*
 
-*â€” T.P.K., Das OverTime Archive, 16. Februar 2026*
+*— T.P.K., Das OverTime Archive, 16. Februar 2026*
 
 ---
 

@@ -1,6 +1,6 @@
 ---
 signature: "OTA-CUL-0002-60000BCE-DE"
-title: "OTA-CUL-0002-60000BCE-DE"
+title: "Die Ära des Lebendigen — Kulturelle Rekonstruktion der Uralten"
 series: "CUL"
 seriesNumber: 2
 year: 2026
@@ -10,8 +10,24 @@ status: "AKTIV"
 accessLevel: 0
 epistemicStatus: ["R", "T", "S", "F"]
 tags: ["60000 BCE", "\u00c4ra des Lebendigen", "Pal\u00e4olithikum", "Kultur", "Bewusstsein"]
-relatedDocuments: []
+relatedDocuments:
+  - target: "OTA-SCI-0018-60000BCE-DE"
+    relation: "related"
+    context: "Im Dokument ausdrücklich unter den verwandten Dokumenten bzw. Querverweisen aufgeführt."
+    descriptionStatus: "explicit"
+  - target: "OTA-OBS-0002-2026-DE"
+    relation: "related"
+    context: "Im Dokument ausdrücklich unter den verwandten Dokumenten bzw. Querverweisen aufgeführt."
+    descriptionStatus: "explicit"
+  - target: "OTA-TEC-0023-2089-DE"
+    relation: "related"
+    context: "Im Dokument ausdrücklich unter den verwandten Dokumenten bzw. Querverweisen aufgeführt."
+    descriptionStatus: "explicit"
 summary: "Die Ära des Lebendigen — 60.000 BCE. Paläolithische Kultur und Bewusstseinsgrundlagen. [R/T/S/F]"
+updatedAt: "2026-10-18T13:08:00+02:00"
+provenance:
+  reviewedAt: "2026-10-18T13:08:00+02:00"
+  reviewStatus: "metadata-reviewed"
 kg:
   schema: KXF-0.2
   master: kueper-knowledge-graph

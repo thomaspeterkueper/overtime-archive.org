@@ -1,6 +1,6 @@
 ---
 signature: "OTA-SCI-0018-60000BCE-DE"
-title: "OTA-SCI-0018-60000BCE-DE"
+title: "Biotechnologische Grundlagen der Altsteinzeit — Eine wissenschaftliche Bewertung realer biologischer Phänomene"
 series: "SCI"
 seriesNumber: 18
 year: 2026
@@ -10,8 +10,28 @@ status: "AKTIV"
 accessLevel: 0
 epistemicStatus: ["R", "S", "F"]
 tags: ["Biotechnologie", "60000 BCE", "Pal\u00e4oanthropologie", "Evolution", "Grundlagen"]
-relatedDocuments: []
+relatedDocuments:
+  - target: "OTA-OBS-0002-2026-DE"
+    relation: "related"
+    context: "Im Dokument ausdrücklich unter den verwandten Dokumenten bzw. Querverweisen aufgeführt."
+    descriptionStatus: "explicit"
+  - target: "OTA-CUL-0002-60000BCE-DE"
+    relation: "related"
+    context: "Im Dokument ausdrücklich unter den verwandten Dokumenten bzw. Querverweisen aufgeführt."
+    descriptionStatus: "explicit"
+  - target: "OTA-TEC-0023-2089-DE"
+    relation: "related"
+    context: "Im Dokument ausdrücklich unter den verwandten Dokumenten bzw. Querverweisen aufgeführt."
+    descriptionStatus: "explicit"
+  - target: "OTA-FND-0009-2026-DE"
+    relation: "related"
+    context: "Im Dokument ausdrücklich unter den verwandten Dokumenten bzw. Querverweisen aufgeführt."
+    descriptionStatus: "explicit"
 summary: "Biotechnologische Grundlagen 60.000 BCE: paläoanthropologische Basis [R], spekulative Extrapolationen [S], Saga-Einbindung [F]."
+updatedAt: "2026-09-25T09:11:03+02:00"
+provenance:
+  reviewedAt: "2026-09-25T09:11:03+02:00"
+  reviewStatus: "metadata-reviewed"
 kg:
   schema: KXF-0.2
   master: kueper-knowledge-graph

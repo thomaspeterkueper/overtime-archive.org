@@ -34,19 +34,18 @@ function explicitCandidates(body, ownSignature) {
   const candidates = new Map();
   const lines = body.split(/\r?\n/);
 
-  function add(target, evidence, suggestedRelation, context) {
+  function add(target, evidence, suggestedRelation, context, safe) {
     if (!target || target === ownSignature) return;
-    const rank = evidence === 'explicit-basis-label' ? 3 : evidence === 'explicit-related-section' ? 2 : 1;
+    const rank = evidence === 'explicit-basis-label'
+      ? 4
+      : evidence === 'explicit-related-section'
+        ? 3
+        : evidence === 'bibliography-section'
+          ? 2
+          : 1;
     const current = candidates.get(target);
     if (!current || rank > current.rank) {
-      candidates.set(target, {
-        target,
-        evidence,
-        safe: true,
-        suggestedRelation,
-        context,
-        rank,
-      });
+      candidates.set(target, { target, evidence, safe, suggestedRelation, context, rank });
     }
   }
 
@@ -56,7 +55,7 @@ function explicitCandidates(body, ownSignature) {
     const [, label, rest] = labelMatch;
     const relation = /basis|quelle|source/i.test(label) ? 'basis' : 'references';
     for (const target of signatures(rest)) {
-      add(target, 'explicit-basis-label', relation, `${label.trim()}: ${target}`);
+      add(target, 'explicit-basis-label', relation, `${label.trim()}: ${target}`, true);
     }
   }
 
@@ -68,7 +67,6 @@ function explicitCandidates(body, ownSignature) {
       continue;
     }
     if (!inRelatedSection) continue;
-
     if (/^━━━━━━━━|^={3,}|^-{8,}/.test(normalized)) {
       if (normalized) continue;
     }
@@ -76,26 +74,41 @@ function explicitCandidates(body, ownSignature) {
       inRelatedSection = false;
       continue;
     }
-
     for (const target of signatures(line)) {
-      add(target, 'explicit-related-section', 'related', `Explicitly listed under related/cross-reference section: ${target}`);
+      add(target, 'explicit-related-section', 'related', `Explicitly listed under related/cross-reference section: ${target}`, true);
+    }
+  }
+
+  let inBibliography = false;
+  for (const line of lines) {
+    const normalized = line.replace(/[*_#]/g, '').trim();
+    if (/^(Quellen(?:verzeichnis)?|Literatur(?:verzeichnis)?|Bibliografie|Bibliography|References|Sources|Citations)$/i.test(normalized)) {
+      inBibliography = true;
+      continue;
+    }
+    if (!inBibliography) continue;
+    if (/^(Revisionsverlauf|Revision History|Verwandte Dokumente|Related Documents|Querverweise|Cross-references|ENDE DOKUMENT|END DOCUMENT|Anhang|Appendix)\b/i.test(normalized)) {
+      inBibliography = false;
+      continue;
+    }
+    for (const target of signatures(line)) {
+      add(target, 'bibliography-section', 'references', `Listed in bibliography/source section: ${target}`, false);
     }
   }
 
   return [...candidates.values()].map(({ rank, ...candidate }) => candidate);
 }
 
-if (!fs.existsSync(REPORT_FILE)) {
-  throw new Error(`Quality report not found: ${REPORT_FILE}`);
-}
+if (!fs.existsSync(REPORT_FILE)) throw new Error(`Quality report not found: ${REPORT_FILE}`);
 
 const report = JSON.parse(fs.readFileSync(REPORT_FILE, 'utf8'));
 const reportBySignature = new Map(report.documents.map(document => [document.signature, document]));
 const knownSignatures = new Set(report.documents.map(document => document.signature));
-
 let explicitCandidatesTotal = 0;
+let bibliographyCandidatesTotal = 0;
 let safeCandidatesTotal = 0;
 let documentsWithExplicitCandidates = 0;
+let documentsWithBibliographyCandidates = 0;
 
 for (const file of fs.readdirSync(DOCS_DIR).filter(name => /\.(?:md|mdx)$/i.test(name))) {
   const raw = fs.readFileSync(path.join(DOCS_DIR, file), 'utf8');
@@ -103,23 +116,25 @@ for (const file of fs.readdirSync(DOCS_DIR).filter(name => /\.(?:md|mdx)$/i.test
   const signature = scalar(frontmatter, 'signature') || file.replace(/\.(?:md|mdx)$/i, '');
   const document = reportBySignature.get(signature);
   if (!document) continue;
-
   const candidates = explicitCandidates(body, signature).filter(candidate => knownSignatures.has(candidate.target));
   if (!candidates.length) continue;
-
   const byTarget = new Map(document.candidates.relations.map(candidate => [candidate.target, candidate]));
-  let applied = 0;
-
+  let appliedExplicit = 0;
+  let appliedBibliography = 0;
   for (const candidate of candidates) {
     const existing = byTarget.get(candidate.target);
     if (!existing) continue;
     Object.assign(existing, candidate);
-    applied += 1;
+    if (candidate.evidence === 'bibliography-section') appliedBibliography += 1;
+    else appliedExplicit += 1;
   }
-
-  if (applied) {
+  if (appliedExplicit) {
     documentsWithExplicitCandidates += 1;
-    explicitCandidatesTotal += applied;
+    explicitCandidatesTotal += appliedExplicit;
+  }
+  if (appliedBibliography) {
+    documentsWithBibliographyCandidates += 1;
+    bibliographyCandidatesTotal += appliedBibliography;
   }
 }
 
@@ -129,14 +144,19 @@ for (const document of report.documents) {
 
 report.summary.explicitRelationCandidates = explicitCandidatesTotal;
 report.summary.documentsWithExplicitRelationCandidates = documentsWithExplicitCandidates;
+report.summary.bibliographyRelationCandidates = bibliographyCandidatesTotal;
+report.summary.documentsWithBibliographyRelationCandidates = documentsWithBibliographyCandidates;
 report.summary.safeRelationCandidates = safeCandidatesTotal;
 report.relationAnalysis = {
-  mode: 'explicit-evidence-only',
+  mode: 'context-aware-evidence',
   safeEvidence: ['explicit-basis-label', 'explicit-related-section'],
-  note: 'safe=true means safe for editorial review/curation, not automatic canonical mutation',
+  reviewOnlyEvidence: ['bibliography-section', 'inline-reference'],
+  note: 'safe=true means safe for editorial review/curation, not automatic canonical mutation; bibliography references remain review-only.',
 };
 
 fs.writeFileSync(REPORT_FILE, `${JSON.stringify(report, null, 2)}\n`, 'utf8');
 console.log(`Explicit relation candidates: ${explicitCandidatesTotal}`);
 console.log(`Documents with explicit relation candidates: ${documentsWithExplicitCandidates}`);
+console.log(`Bibliography relation candidates: ${bibliographyCandidatesTotal}`);
+console.log(`Documents with bibliography relation candidates: ${documentsWithBibliographyCandidates}`);
 console.log(`Safe relation candidates: ${safeCandidatesTotal}`);
