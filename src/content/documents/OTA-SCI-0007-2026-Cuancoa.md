@@ -29,6 +29,11 @@ knowledge:
     - id: "KD:GEO-PLANET:N1"
       level: "N1"
       purpose: read
+review:
+  last: "2026-10-31"
+  next: "2027-10-31"
+  reason: "Laufende JWST-Programme zu LTT 9779 b (Phasenkurven, Chemie-Asymmetrie); jährlich neue Befunde einarbeiten."
+  abgeschlossen: false
 ---
 <!-- OTA-SCI-0007-2026-DE -->
 **THE OVERTIME ARCHIVE**

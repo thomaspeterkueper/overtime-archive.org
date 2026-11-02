@@ -88,12 +88,12 @@ Die späte Bronzezeit war ein Zeitalter der Vernetzung. Eric Cline beschreibt si
 
 | Route | Güter | Beleg |
 |-------|-------|-------|
-| Ägypten â†” Levante | Gold, Papyrus, Getreide | Amarna-Briefe (~1350 BCE) |
-| Levante â†” Ägäis | Kupfer, Zinn, Textilien, Keramik | Schiffswrack Uluburun (~1300 BCE) |
-| Qatna â†” Baltikum | Bernstein | Funde in Qatna-Gruft |
-| Ägypten â†” Punt | Weihrauch, Myrrhe, Ebenholz | Reliefs Deir el-Bahari |
-| Zypern â†” alle | Kupfer (Oxhide Ingots) | œberall im Mittelmeerraum |
-| Mesopotamien â†” Indus | Lapislazuli | Siegelfunde |
+| Ägypten ↔ Levante | Gold, Papyrus, Getreide | Amarna-Briefe (~1350 BCE) |
+| Levante ↔ Ägäis | Kupfer, Zinn, Textilien, Keramik | Schiffswrack Uluburun (~1300 BCE) |
+| Qatna ↔ Baltikum | Bernstein | Funde in Qatna-Gruft |
+| Ägypten ↔ Punt | Weihrauch, Myrrhe, Ebenholz | Reliefs Deir el-Bahari |
+| Zypern ↔ alle | Kupfer (Oxhide Ingots) | œberall im Mittelmeerraum |
+| Mesopotamien ↔ Indus | Lapislazuli | Siegelfunde |
 
 **Systemische Verwundbarkeit [R]:**
 Das System basierte auf der Palastwirtschaft —” zentralisierte Bürokratien kontrollierten Produktion und Verteilung. Dieses System war effizient, aber fragil: Der Ausfall eines Knotens konnte Kaskadeneffekte auslösen.
@@ -118,7 +118,7 @@ Kein einzelner Faktor verursachte den Kollaps. Die Kombination von Dürre, Erdbe
 
 | Datum (ca.) | Ereignis |
 |-------------|----------|
-| ~1340 BCE | **Qatna** —” Zerstörung durch Hethiter (Å uppiluliuma I.) |
+| ~1340 BCE | **Qatna** —” Zerstörung durch Hethiter (Šuppiluliuma I.) |
 | ~1250 BCE | Erste Erdbebenphase, Dürre beginnt |
 | ~1207 BCE | **Seevölker-Angriff auf Ägypten** (Merenptah) |
 | ~1200 BCE | **Hattusa** —” Hethiter-Hauptstadt aufgegeben/zerstört |
@@ -150,7 +150,7 @@ Die ägyptischen Quellen nennen verschiedene Gruppen:
 
 | Ägyptischer Name | Mögliche Zuordnung | Status |
 |------------------|-------------------|--------|
-| Peleset | Philister (â†’ Palästina) | [R] Weitgehend akzeptiert |
+| Peleset | Philister (→ Palästina) | [R] Weitgehend akzeptiert |
 | Tjeker | Teukrer? (Troas) | [S] Umstritten |
 | Shekelesh | Sizilier? | [S] Umstritten |
 | Denyen/Danuna | Danaer (Homer) | [S] Umstritten |
@@ -187,7 +187,7 @@ Die Vorstellung eines einheitlichen —žSeevölkersturms" gilt als überholt. A
 | **Malta** | Primär | Bereits aufgegeben (~2500 BCE) —” Tempelkultur endete vor dem Kollaps |
 | **Stonehenge** | Primär | Peripherie —” nicht betroffen |
 | **Newgrange** | Primär | Peripherie —” nicht betroffen |
-| **Chav­n de Huantar** | Primär | Anderer Kontinent —” unabhängig |
+| **Chavín de Huantar** | Primär | Anderer Kontinent —” unabhängig |
 | **Sanxingdui** | Primär (?) | Eigener Kollaps (~1100 BCE), möglicherweise korreliert |
 | **Konkan** | Primär (?) | Peripherie —” nicht betroffen |
 
@@ -196,8 +196,8 @@ Die Vorstellung eines einheitlichen —žSeevölkersturms" gilt als überholt. A
 ```
 VOR DEM KOLLAPS (~1400 BCE):
 
-ÄGYPTEN â†â†’ LEVANTE â†â†’ ÄGÄIS â†â†’ ANATOLIEN
-    â†•            â†•           â†•           â†•
+ÄGYPTEN ←→ LEVANTE ←→ ÄGÄIS ←→ ANATOLIEN
+    ↕            ↕           ↕           ↕
   Nubien      Qatna       Malta     Mesopotamien
               Ugarit      Knossos
               Byblos      Mykene
@@ -207,14 +207,14 @@ NACH DEM KOLLAPS (~1100 BCE):
 
 ÄGYPTEN       LEVANTE       ÄGÄIS        ANATOLIEN
 (geschwächt)  (zerstört)    (dunkel)     (zerstört)
-    â”‚              â”‚            â”‚             â”‚
-    â”‚         PHÖNIZIEN         â”‚        PHRYGIEN?
-    â”‚         (Tyros/Sidon)     â”‚
-    â”‚              â”‚            â”‚
-    â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜            â”‚
-         Einzige                â”‚
-         aktive Route           â”‚
-                                â”‚
+    │              │            │             │
+    │         PHÖNIZIEN         │        PHRYGIEN?
+    │         (Tyros/Sidon)     │
+    │              │            │
+    └──────────────┘            │
+         Einzige                │
+         aktive Route           │
+                                │
                          —žDUNKLE JAHRHUNDERTE"
                          (300+ Jahre)
 ```
@@ -225,13 +225,13 @@ Wenn Baumeister-Wissen in den zerstörten Zentren existierte, wohin wanderte es?
 
 **Hypothetische Fluchtrouten:**
 
-| Route | Von â†’ Nach | Evidenz | Status |
+| Route | Von → Nach | Evidenz | Status |
 |-------|-----------|---------|--------|
-| **Phönizische Route** | Ugarit â†’ Tyros/Sidon â†’ Karthago | Kulturelle Kontinuität | [S] |
-| **Iranische Route** | Hattusa â†’ Iran â†’ Indien? | Indoeuropäische Migration | [T] |
-| **Ägäische Route** | Mykene â†’ Inseln â†’ Delphi? | Orakel-Traditionen | [T] |
-| **Ägyptische Bewahrung** | Levante â†’ Ägypten â†’ Tempel | Tempelarchive | [S] |
-| **Keltische Route** | Anatolien â†’ Balkan â†’ Mitteleuropa | Urnenfelderkultur | [T] |
+| **Phönizische Route** | Ugarit → Tyros/Sidon → Karthago | Kulturelle Kontinuität | [S] |
+| **Iranische Route** | Hattusa → Iran → Indien? | Indoeuropäische Migration | [T] |
+| **Ägäische Route** | Mykene → Inseln → Delphi? | Orakel-Traditionen | [T] |
+| **Ägyptische Bewahrung** | Levante → Ägypten → Tempel | Tempelarchive | [S] |
+| **Keltische Route** | Anatolien → Balkan → Mitteleuropa | Urnenfelderkultur | [T] |
 
 > **[KN-3.1]** *Die Carnyx (OTA-ARC-0002-MULTI-DE) erscheint bei den Kelten um 300 BCE —” genau dort, wohin die Urnenfelderkultur führt: Mitteleuropa. Fanden die Kelten Baumeister-Artefakte in den Trümmern einer kollabierten Zivilisation? Die zeitliche und geographische Koinzidenz ist bemerkenswert. —” T.P.K.*
 
@@ -253,7 +253,7 @@ Wenn Baumeister-Wissen in den zerstörten Zentren existierte, wohin wanderte es?
 
 ### 4.2 Die —žCline-Parallele" [F]
 
-In der noÏ‡¹áƒ-Saga wird der Bronzezeit-Kollaps explizit als historische Parallele zum GroŸen Schweigen herangezogen. Beide Ereignisse markieren den Moment, in dem ein vernetztes System an einer Kombination aus externem Schock und interner Fragilität zerbricht.
+In der noχ¹ᐃ-Saga wird der Bronzezeit-Kollaps explizit als historische Parallele zum GroŸen Schweigen herangezogen. Beide Ereignisse markieren den Moment, in dem ein vernetztes System an einer Kombination aus externem Schock und interner Fragilität zerbricht.
 
 > **[KN-4.1]** *Die Geschichte wiederholt sich nicht —” aber sie reimt sich. Der Bronzezeit-Kollaps zerstörte ein Netzwerk, das Jahrtausende brauchte, um zu heilen. Das GroŸe Schweigen zerstörte Vertrauen, das Generationen brauchte, um zurückzukehren. In beiden Fällen bewahrten diejenigen das Wissen, die am Rand standen. —” T.P.K.*
 
@@ -313,4 +313,4 @@ Die Shu-Zivilisation in Sanxingdui (Sichuan, China) erlebte um ~1100 BCE einen e
 *Für das OverTime Archive*
 Signatur: OTA-HIS-0007-1200BCE-DE
 
-áƒ
+ᐃ

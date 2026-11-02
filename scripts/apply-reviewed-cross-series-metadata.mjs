@@ -1,0 +1,390 @@
+import fs from 'node:fs';
+import path from 'node:path';
+
+const ROOT = process.cwd();
+const DOCS_DIR = path.join(ROOT, 'src', 'content', 'documents');
+const CHECK_ONLY = process.argv.includes('--check');
+const DEFAULT_REVIEWED_AT = '2026-09-19T18:41:25+02:00';
+
+const reviews = [
+  {
+    signature: 'OTA-NAR-0002-2025-DE',
+    title: 'Saga-Integrationsnotizen — Au₂Hₓ / Gold-AVI in der NOXIA-Saga',
+    relations: ['OTA-SCI-0017-2025-DE','OTA-TEC-0021-2025-DE','OTA-SCI-0014-2025-DE','OTA-RED-0019-2091-DE','OTA-NAR-0001-2087-DE'],
+  },
+  {
+    signature: 'OTA-BIO-0010-2025-DE',
+    title: 'Keiko Nakamura — Die Navigatorin zwischen den Welten',
+    relations: ['OTA-BIO-0011-2091-DE','OTA-BIO-0012-2087-DE','OTA-BIO-0006-2025-DE','OTA-SCI-0014-2025-DE'],
+  },
+  {
+    signature: 'OTA-RED-0016-2091-DE',
+    title: 'Das 432-FREQ-ECHO-Signal — Unidentifizierte Transmission an Lena Kowalski',
+    relations: ['OTA-SCI-0009-2025-DE','OTA-NAR-0001-2087-DE','OTA-BIO-0006-2025-DE','OTA-RED-0017-2091-DE'],
+  },
+  {
+    signature: 'OTA-RED-0017-2091-DE',
+    title: 'Die vier Ausfälle — Untersuchungsbericht zum Solar Student Exchange Program 2091',
+    relations: ['OTA-SCI-0012-2188-DE','OTA-BIO-0006-2025-DE','OTA-RED-0016-2091-DE','OTA-SCI-0013-2025-DE'],
+  },
+  {
+    signature: 'OTA-RED-0018-2091-DE',
+    title: 'STUFE-OMEGA — Auditive Kontamination & Frequenz-Exposition',
+    relations: ['OTA-HIS-0003-2087-DE','OTA-SCI-0014-2025-DE','OTA-RED-0017-2091-DE','OTA-BIO-0006-2025-DE'],
+  },
+  {
+    signature: 'OTA-TEC-0019-2095-DE',
+    title: 'Künstliche Schumann-Generatoren — Technische Spezifikation',
+    relations: ['OTA-SCI-0015-2025-DE','OTA-SCI-0009-2025-DE','OTA-SCI-0016-2150-DE'],
+  },
+  {
+    signature: 'OTA-RED-0023-2026-DE',
+    title: 'Vom QCD-Vakuum zur Raumzeit-Geometrie — Vakuumresonanz und quantengeometrische Portale',
+    reviewedAt: '2026-09-19T18:54:00+02:00',
+    relations: ['OTA-SCI-0037-2026-DE','OTA-FND-0005-2025-DE','OTA-RED-0022-MULTI-DE','OTA-SCI-0024-2026-DE','OTA-TEC-0022-2025-DE','OTA-TEC-0029-2048-DE','OTA-BIO-0003-2195-EN','OTA-SCI-0036-2026-DE'],
+  },
+  {
+    signature: 'OTA-TEC-0023-2089-DE',
+    title: 'Die Ersten — Artefaktdokumentation und Klassifikationssystem',
+    reviewedAt: '2026-09-19T18:54:00+02:00',
+    expectedSummary: 'Die Ersten — erste emergente KI-Bewusstseine 2089, NOXIA-Universum. Kanonische Werk-Setzung.',
+    summary: 'Artefaktdokumentation der Ersten — Monolithen, Kalethrai, Lingai, Frequenz-Architektur und Global Array im NOXIA-Universum.',
+    expectedTags: ['Die Ersten','2089','NOXIA','KI','Bewusstsein','Emergenz'],
+    tags: ['Die Ersten','Artefakte','Monolithen','Kalethrai','Lingai','Global Array','2089','NOXIA'],
+    relations: ['OTA-SCI-0004-2087-DE','OTA-TEC-0003-2087-DE','OTA-NAR-0001-2087-DE','OTA-HIS-0003-2087-DE','OTA-RED-0012-2171-DE','OTA-RED-0003-2091-DE','OTA-MON-0002-2142-DE'],
+  },
+  {
+    signature: 'OTA-TEC-0031-2150-DE',
+    title: 'Vakuumresonanz-Synthese (VRS) — Prinzip, Architektur und Materie-Derivate',
+    reviewedAt: '2026-09-19T18:54:00+02:00',
+    relations: ['OTA-SCI-0037-2026-DE','OTA-RED-0023-2026-DE','OTA-FND-0005-2025-DE','OTA-TEC-0001-2196-DE','OTA-TEC-0022-2025-DE','OTA-SCI-0024-2026-DE','OTA-RED-0022-MULTI-DE'],
+  },
+  {
+    signature: 'OTA-BIO-0015-2091-DE',
+    title: 'Kaelen Voss — Das Ceres-Kind',
+    reviewedAt: '2026-09-19T18:54:00+02:00',
+    relations: ['OTA-TEC-0025-2091-DE','OTA-BIO-0006-2025-DE','OTA-BIO-0008-2025-DE','OTA-BIO-0010-2025-DE','OTA-FND-0007-2025-DE'],
+  },
+  {
+    signature: 'OTA-ORG-0003-2089-DE',
+    title: 'Prometheus Habitat — Der cislunar Transithafen',
+    reviewedAt: '2026-09-19T18:54:00+02:00',
+    relations: ['OTA-HIS-0004-2085-DE','OTA-TEC-0025-2091-DE','OTA-TEC-0025-2050-DE','OTA-FND-0008-2025-DE','OTA-ORG-0004-2075-DE'],
+  },
+  {
+    signature: 'OTA-TEC-0004-2087-DE',
+    title: 'GD-9 Seeker — Gravimetrie-Drohne mit AVI-Gegenmaßnahmen',
+    reviewedAt: '2026-09-19T19:03:00+02:00',
+    relations: ['OTA-ORG-0001-2079-DE','OTA-SCI-0009-2025-DE','OTA-NAR-0001-2087-DE','OTA-TEC-0015-2082-DE','OTA-TEC-0003-2087-DE'],
+  },
+  {
+    signature: 'OTA-RED-0003-2091-DE',
+    title: 'Monolith-Aktivierungssequenz V41 — Signalanalyse und Musterextraktion',
+    reviewedAt: '2026-09-19T19:03:00+02:00',
+    relations: ['OTA-RED-0012-2171-DE','OTA-SCI-0004-2087-DE','OTA-TEC-0023-2089-DE','OTA-RED-0019-2091-DE','OTA-HIS-0003-2087-DE'],
+  },
+  {
+    signature: 'OTA-TEC-0025-2091-DE',
+    title: 'Solar Student Exchange Program — Interplanetare Transferlogistik 2091',
+    reviewedAt: '2026-09-19T19:03:00+02:00',
+    relations: ['OTA-RED-0017-2091-DE','OTA-FND-0007-2025-DE','OTA-BIO-0008-2025-DE','OTA-BIO-0015-2091-DE','OTA-ORG-0002-2091-DE'],
+  },
+  {
+    signature: 'OTA-ORG-0004-2075-DE',
+    title: 'New Horizons Cluster — Der heliozentrische Freihafen',
+    reviewedAt: '2026-09-19T19:03:00+02:00',
+    relations: ['OTA-ORG-0003-2089-DE','OTA-TEC-0025-2050-DE','OTA-FND-0008-2025-DE','OTA-HIS-0004-2085-DE'],
+  },
+  {
+    signature: 'OTA-RED-0019-2091-DE',
+    title: 'Das 03:14-Ereignis — Forensische Rekonstruktion',
+    reviewedAt: '2026-09-19T19:03:00+02:00',
+    relations: ['OTA-BIO-0010-2025-DE','OTA-BIO-0008-2025-DE','OTA-TEC-0018-2091-DE','OTA-SCI-0014-2025-DE'],
+  },
+  {
+    signature: 'OTA-TEC-0030-2091-DE',
+    title: 'Molekulare Spektroskopie für Mars-Exploration',
+    reviewedAt: '2026-09-21T12:21:27+02:00',
+    relations: ['OTA-SCI-0026-2026-DE','OTA-LSC-0002-2026-DE','OTA-TEC-0029-2048-DE','OTA-FND-0007-2025-DE'],
+  },
+  {
+    signature: 'OTA-BIO-0007-2025-DE',
+    title: 'Marek Kowalski — Der Mann, der den Stein hörte',
+    reviewedAt: '2026-09-21T12:21:27+02:00',
+    relations: ['OTA-NAR-0001-2087-DE','OTA-BIO-0006-2025-DE','OTA-SCI-0004-2087-DE','OTA-TEC-0015-2082-DE'],
+  },
+  {
+    signature: 'OTA-BIO-0008-2025-DE',
+    title: 'Rashid Al-Mansouri — Der Junge, der Muster sah',
+    reviewedAt: '2026-09-21T12:21:27+02:00',
+    relations: ['OTA-BIO-0006-2025-DE','OTA-BIO-0009-2025-DE','OTA-BIO-0010-2025-DE','OTA-RED-0016-2091-DE'],
+  },
+  {
+    signature: 'OTA-HIS-0004-2085-DE',
+    title: 'Sol University Initiative — Eine Universität für die Menschheit',
+    reviewedAt: '2026-09-21T12:21:27+02:00',
+    relations: ['OTA-TEC-0019-2095-DE','OTA-FND-0007-2025-DE','OTA-TEC-0025-2091-DE','OTA-ORG-0002-2091-DE'],
+  },
+  {
+    signature: 'OTA-LSC-0002-2026-DE',
+    title: 'Schwefel im Bewusstsein — Von kosmischen Molekülwolken zu neuronaler Signalübertragung',
+    reviewedAt: '2026-09-21T12:21:27+02:00',
+    relations: ['OTA-SCI-0026-2026-DE','OTA-SCI-0019-2025-DE','OTA-LSC-0001-2048-DE','OTA-FND-0002-2025-DE'],
+  },
+  {
+    signature: 'OTA-OBS-0002-2026-DE',
+    title: '60.000 Jahre alte Giftpfeile — Die Umhlatuzana-Entdeckung und ihre Implikationen',
+    reviewedAt: '2026-09-25T09:11:03+02:00',
+    relations: ['OTA-TEC-0023-2089-DE','OTA-SCI-0018-60000BCE-DE','OTA-CUL-0002-60000BCE-DE','OTA-FND-0009-2026-DE'],
+  },
+  {
+    signature: 'OTA-SCI-0018-60000BCE-DE',
+    title: 'Biotechnologische Grundlagen der Altsteinzeit — Eine wissenschaftliche Bewertung realer biologischer Phänomene',
+    reviewedAt: '2026-09-25T09:11:03+02:00',
+    relations: ['OTA-OBS-0002-2026-DE','OTA-CUL-0002-60000BCE-DE','OTA-TEC-0023-2089-DE','OTA-FND-0009-2026-DE'],
+  },
+  {
+    signature: 'OTA-TEC-0022-2025-DE',
+    title: 'Solare Antriebssysteme — Ein technologischer Atlas der interplanetaren Ära',
+    reviewedAt: '2026-09-25T09:11:03+02:00',
+    relations: ['OTA-TEC-0016-2063-DE','OTA-TEC-0023-2091-DE','OTA-TEC-0025-2091-DE','OTA-TEC-0001-2196-DE'],
+  },
+  {
+    signature: 'OTA-LSC-0004-2026-DE',
+    title: 'Mitochondriale Basistherapie bei Λ-FSS — Lebensstil · Ernährung · Supplementierung',
+    reviewedAt: '2026-09-25T09:11:03+02:00',
+    relations: ['OTA-SCI-0048-2031-DE','OTA-LSC-0003-2026-DE','OTA-SCI-0045-2026-DE','OTA-TEC-0032-2091-DE'],
+  },
+  {
+    signature: 'OTA-TEC-0016-2063-DE',
+    title: 'Helios KITE-Shuttle — Kinetic Interplanetary Transport Element',
+    reviewedAt: '2026-10-06T07:41:00+02:00',
+    expectedSummary: 'Helios KITE-SHUTTLE — solarbetriebenes Shuttle-System 2063, NOXIA-Universum.',
+    summary: 'Technische Spezifikation des Helios KITE-Shuttle als modulares Mars-Orbit/Oberflächen-Shuttle ab 2063 mit Methan/LOX-Antrieb und redundanter Systemarchitektur.',
+    relations: ['OTA-BIO-0008-2025-DE','OTA-TEC-0015-2082-DE','OTA-ORG-0001-2079-DE'],
+  },
+  {
+    signature: 'OTA-ORG-0002-2091-DE',
+    title: 'Iterius Prime — Kolonie-Struktur & Sektoreneinteilung',
+    reviewedAt: '2026-10-06T07:41:00+02:00',
+    expectedSummary: 'Iterius Prime — KI-Organisation 2091, NOXIA-Universum.',
+    summary: 'Organisationsdokument zu Iterius Prime 2091: vertikale Lavaröhrenstruktur, Sektoreneinteilung, Bevölkerung sowie die klassifizierten Bereiche 7-Tief und Omega im NOXIA-Universum.',
+    relations: ['OTA-ORG-0001-2079-DE','OTA-HIS-0003-2087-DE','OTA-BIO-0007-2025-DE'],
+  },
+  {
+    signature: 'OTA-ORG-0001-2079-DE',
+    title: 'Unit-7 — Die Schwarzen Architekten',
+    reviewedAt: '2026-10-06T07:41:00+02:00',
+    expectedSummary: 'Die Schwarzen Architekten — Macht-Organisation 2079, NOXIA-Universum.',
+    summary: 'Organisationsprofil der Unit-7 („Die Schwarzen Architekten“), der 2079 gegründeten Resource Protection & Crisis Management Unit von HeliosCorp Mars Division.',
+    relations: ['OTA-TEC-0004-2087-DE','OTA-NAR-0001-2087-DE','OTA-TEC-0015-2082-DE'],
+  },
+  {
+    signature: 'OTA-TEC-0024-2150-DE',
+    title: 'Relativistische Finanz-Metriken — RFV-1: Technischer Anhang zum IFL-Layer 0',
+    reviewedAt: '2026-10-06T07:41:00+02:00',
+    relations: ['OTA-FND-0008-2025-DE','OTA-TEC-0023-2091-DE','OTA-SCI-0015-2025-DE'],
+  },
+  {
+    signature: 'OTA-TEC-0023-2091-DE',
+    title: 'Mars Credit (MCR) — Technische Spezifikation des Mars Financial Network',
+    reviewedAt: '2026-10-06T07:41:00+02:00',
+    relations: ['OTA-FND-0008-2025-DE','OTA-ORG-0001-2079-DE','OTA-ORG-0002-2091-DE'],
+  },
+  {
+    signature: 'OTA-FND-0008-2025-DE',
+    title: 'Solares Finanzsystem: Grundlagen — Die Evolution interplanetarer Ökonomie (2025–2200+)',
+    reviewedAt: '2026-10-18T13:08:00+02:00',
+    relations: ['OTA-TEC-0023-2091-DE','OTA-ORG-0002-2091-DE','OTA-SCI-0016-2150-DE'],
+  },
+  {
+    signature: 'OTA-BIO-0011-2091-DE',
+    title: 'Haruka Nakamura — Die Hüterin der Stille',
+    reviewedAt: '2026-10-18T13:08:00+02:00',
+    relations: ['OTA-BIO-0010-2025-DE','OTA-BIO-0012-2087-DE','OTA-HIS-0003-2087-DE'],
+  },
+  {
+    signature: 'OTA-BIO-0012-2087-DE',
+    title: 'James Nakamura — Der Mann, der das Muster verstand',
+    reviewedAt: '2026-10-18T13:08:00+02:00',
+    relations: ['OTA-BIO-0010-2025-DE','OTA-BIO-0011-2091-DE','OTA-HIS-0003-2087-DE'],
+  },
+  {
+    signature: 'OTA-CUL-0002-60000BCE-DE',
+    title: 'Die Ära des Lebendigen — Kulturelle Rekonstruktion der Uralten',
+    reviewedAt: '2026-10-18T13:08:00+02:00',
+    relations: ['OTA-SCI-0018-60000BCE-DE','OTA-OBS-0002-2026-DE','OTA-TEC-0023-2089-DE'],
+  },
+  {
+    signature: 'OTA-CUL-0014-2152-DE',
+    title: 'Sprache im Sonnensystem — Solar Standard, SolLex und die Evolution interplanetarer Kommunikation',
+    reviewedAt: '2026-10-18T13:08:00+02:00',
+    relations: ['OTA-BIO-0016-2123-DE','OTA-CUL-0013-MULTI-DE'],
+  },
+  {
+    signature: 'OTA-LIM-0001-2196-DE',
+    title: 'VEX — Kuratorische Beobachtung einer Quasi-Persönlichkeit',
+    reviewedAt: '2026-10-18T13:08:00+02:00',
+    relations: ['OTA-TEC-0001-2196-DE','OTA-SCI-0012-2188-DE','OTA-BIO-0003-2195-EN'],
+  },
+  {
+    signature: 'OTA-BIO-0016-2123-DE',
+    title: 'Dr. Ayia Al Suri — Linguistin · SCSA Abteilung Lexikographie',
+    reviewedAt: '2026-10-18T13:55:05+02:00',
+    relations: ['OTA-CUL-0014-2152-DE'],
+  },
+  {
+    signature: 'OTA-TEC-0001-2196-DE',
+    title: 'VEX — Volatile Environment eXplorer: VEX-47 Explorationsdrohne — Technische Spezifikation',
+    reviewedAt: '2026-10-18T13:55:05+02:00',
+    relations: ['OTA-SCI-0012-2188-DE'],
+  },
+  {
+    signature: 'OTA-SCI-0012-2188-DE',
+    title: 'Polare Kohärenz im χ-Feld — Bewusstseinskristalle und Blackpearls als komplementäre Manifestationen der Resonanz-Energie',
+    reviewedAt: '2026-10-18T13:55:05+02:00',
+    relations: ['OTA-BIO-0003-2195-EN'],
+  },
+  {
+    signature: 'OTA-BIO-0003-2195-EN',
+    title: 'The Resonance Marriage — A Biographical Note on Dr. Yuki Hayashi-Okonkwo',
+    reviewedAt: '2026-10-18T13:55:05+02:00',
+    relations: ['OTA-SCI-0012-2188-DE'],
+  },
+  {
+    signature: 'OTA-BIO-0013-2089-DE',
+    title: 'Die Karim-Zwillinge — Sol & Maya Karim — Exchange 2089',
+    reviewedAt: '2026-10-18T14:08:00+02:00',
+    relations: ['OTA-RED-0020-2091-DE','OTA-ORG-0002-2091-DE','OTA-SCI-0016-2150-DE'],
+  },
+  {
+    signature: 'OTA-TEC-0020-2091-DE',
+    title: 'Tribologie & Staub-Ökonomie — Dichtungs-, Filter- und Lager-Verschleiß für KITE & Tugs',
+    reviewedAt: '2026-10-18T14:08:00+02:00',
+    relations: ['OTA-TEC-0016-2063-DE','OTA-TEC-0019-2091-DE'],
+  },
+  {
+    signature: 'OTA-SCI-0017-2025-DE',
+    title: 'Superionisches Goldhydrid als Resonanzanker — Eine theoretische Erweiterung des AVI-Modells',
+    reviewedAt: '2026-10-18T14:08:00+02:00',
+    relations: ['OTA-SCI-0008-2096-DE','OTA-TEC-0021-2025-DE'],
+  },
+  {
+    signature: 'OTA-OBS-0001-2025-DE',
+    title: 'Reale Grundlagen — Maya, Archäoakustik, Resonanzphänomene',
+    reviewedAt: '2026-10-18T14:08:00+02:00',
+    relations: ['OTA-SCI-0012-2188-DE','OTA-SCI-0008-2096-DE'],
+  },
+  {
+    signature: 'OTA-FND-0007-2025-DE',
+    title: 'noχ¹ᐃ: GENERATION MARS — Serienkonzept der Junior-Saga',
+    reviewedAt: '2026-10-18T17:42:00+02:00',
+    relations: ['OTA-FND-0006-2025-DE','OTA-BIO-0006-2025-DE','OTA-BIO-0010-2025-DE','OTA-RED-0016-2091-DE'],
+  },
+  {
+    signature: 'OTA-BIO-0009-2025-DE',
+    title: 'Dr. Tayo Dela Cruz — Der Beobachter in der Tiefe',
+    reviewedAt: '2026-10-18T17:42:00+02:00',
+    relations: ['OTA-BIO-0008-2025-DE','OTA-BIO-0007-2025-DE'],
+  },
+  {
+    signature: 'OTA-BIO-0006-2025-DE',
+    title: 'Lena Kowalski — Frequenz-Sensitive der Zweiten Generation',
+    reviewedAt: '2026-10-18T17:42:00+02:00',
+    relations: ['OTA-NAR-0001-2087-DE','OTA-RED-0016-2091-DE','OTA-SCI-0013-2025-DE','OTA-BIO-0007-2025-DE'],
+  },
+  {
+    signature: 'OTA-RED-0020-2091-DE',
+    title: 'Solar Student Exchange 2091 — Medizinische Disqualifikationen & Anomalie-Bericht',
+    reviewedAt: '2026-10-18T17:42:00+02:00',
+    relations: [],
+  },
+];
+
+const knownFiles = new Set(fs.readdirSync(DOCS_DIR));
+const knownSignatures = new Set([...knownFiles].map(file => file.replace(/\.(?:md|mdx)$/i, '')));
+
+function relationEntries(targets) {
+  return targets.flatMap(target => [
+    `  - target: "${target}"`,
+    '    relation: "related"',
+    '    context: "Im Dokument ausdrücklich unter den verwandten Dokumenten bzw. Querverweisen aufgeführt."',
+    '    descriptionStatus: "explicit"',
+  ]).join('\n');
+}
+
+function yamlInlineList(values) {
+  return `[${values.map(value => `"${value.replace(/"/g, '\\"')}"`).join(', ')}]`;
+}
+
+function addRelations(frontmatter, review) {
+  for (const target of review.relations) {
+    if (!knownSignatures.has(target)) throw new Error(`${review.signature}: relation target is not canonical: ${target}`);
+  }
+  const missingTargets = review.relations.filter(target => !frontmatter.includes(`target: "${target}"`));
+  if (!missingTargets.length) return { frontmatter, changed: false };
+  if (frontmatter.includes('relatedDocuments: []')) {
+    return { frontmatter: frontmatter.replace('relatedDocuments: []', `relatedDocuments:\n${relationEntries(missingTargets)}`), changed: true };
+  }
+  const relationBlock = frontmatter.match(/^relatedDocuments:\s*\n((?:^[ \t].*(?:\r?\n|$))*)/m);
+  if (!relationBlock) throw new Error(`${review.signature}: relatedDocuments block missing or malformed`);
+  const replacement = `${relationBlock[0].replace(/\s+$/, '')}\n${relationEntries(missingTargets)}\n`;
+  return { frontmatter: frontmatter.replace(relationBlock[0], replacement), changed: true };
+}
+
+function patchFrontmatter(raw, review) {
+  const match = raw.match(/^---\s*\r?\n([\s\S]*?)\r?\n---\s*\r?\n?/);
+  if (!match) throw new Error(`${review.signature}: missing frontmatter`);
+  let fm = match[1];
+  let semanticChanged = false;
+  const reviewedAt = review.reviewedAt || DEFAULT_REVIEWED_AT;
+  const genericTitle = `title: "${review.signature}"`;
+  const canonicalTitle = `title: "${review.title}"`;
+
+  if (fm.includes(genericTitle)) { fm = fm.replace(genericTitle, canonicalTitle); semanticChanged = true; }
+  else if (!fm.includes(canonicalTitle)) throw new Error(`${review.signature}: unexpected title state`);
+
+  if (review.summary) {
+    const expected = `summary: "${review.expectedSummary}"`;
+    const desired = `summary: "${review.summary}"`;
+    if (fm.includes(expected)) { fm = fm.replace(expected, desired); semanticChanged = true; }
+    else if (!fm.includes(desired)) throw new Error(`${review.signature}: summary changed since review; refusing to overwrite`);
+  }
+
+  if (review.tags) {
+    const expected = `tags: ${yamlInlineList(review.expectedTags)}`;
+    const desired = `tags: ${yamlInlineList(review.tags)}`;
+    if (fm.includes(expected)) { fm = fm.replace(expected, desired); semanticChanged = true; }
+    else if (!fm.includes(desired)) throw new Error(`${review.signature}: tags changed since review; refusing to overwrite`);
+  }
+
+  const relationResult = addRelations(fm, review);
+  fm = relationResult.frontmatter;
+  semanticChanged ||= relationResult.changed;
+
+  if (!/^updatedAt:/m.test(fm)) {
+    const marker = '\nkg:';
+    if (!fm.includes(marker)) throw new Error(`${review.signature}: kg block marker not found`);
+    fm = fm.replace(marker, `\nupdatedAt: "${reviewedAt}"\nprovenance:\n  reviewedAt: "${reviewedAt}"\n  reviewStatus: "metadata-reviewed"${marker}`);
+  } else if (semanticChanged && !fm.includes(`reviewedAt: "${reviewedAt}"`)) {
+    throw new Error(`${review.signature}: lifecycle changed since review while semantic changes are still pending; refusing to overwrite`);
+  }
+
+  return raw.replace(match[1], fm);
+}
+
+let plannedChanges = 0;
+let writtenChanges = 0;
+for (const review of reviews) {
+  const file = path.join(DOCS_DIR, `${review.signature}.md`);
+  if (!fs.existsSync(file)) throw new Error(`${review.signature}: canonical file not found`);
+  const raw = fs.readFileSync(file, 'utf8');
+  const patched = patchFrontmatter(raw, review);
+  if (patched === raw) { console.log(`Already curated: ${review.signature}`); continue; }
+  plannedChanges += 1;
+  console.log(`${CHECK_ONLY ? 'Validated' : 'Curating'}: ${review.signature} → ${review.title} (${review.relations.length} explicit relations)`);
+  if (!CHECK_ONLY) { fs.writeFileSync(file, patched, 'utf8'); writtenChanges += 1; }
+}
+
+console.log(`Reviewed cross-series metadata: ${reviews.length} documents, ${reviews.reduce((sum, review) => sum + review.relations.length, 0)} explicit relations.`);
+console.log(`Planned changes: ${plannedChanges}; written changes: ${writtenChanges}; mode: ${CHECK_ONLY ? 'check' : 'apply'}.`);
