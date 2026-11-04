@@ -1,6 +1,6 @@
 # OTA-REQ-20261104-001 – OTA-SCI-0064-2026-DE (Hautmikrobiom): Realteil auf Verweis nach KUE-SCI-0064 kürzen
 
-Status: open
+Status: done
 Datum: 2026-11-04
 Quelle: Begutachtung nach ECO-ARC-0037, Zuordnung nach ECO-ARC-0038 §2 (Claude)
 Prüfbericht: `kueper-ecosystem/reviews/2026-11-04-OTA-SCI-0064-2026-DE.md`
@@ -24,3 +24,7 @@ Abschnitte II–VI und VIII von OTA-SCI-0064 sind eine Parallelfassung von KUE-S
 ## Wirkung
 
 Keine weitere auf andere Repositories. Abweichungen, die KUE fehlen (unbelegte Aussagen zu dauerhaftem Artenverlust und alternativen stabilen Zuständen), stehen in KUE-REQ-20261104-001 Punkt 6.
+
+## Erledigt
+
+2026-11-04 – nach Freigabe von Thomas umgesetzt (OTA-SCI-0064 v1.2). Punkt 6 (KG-Domain) offen gelassen – Abklärung mit dem Knowledge Graph.
