@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-06T08:49:29.973Z",
+  "generatedAt": "2026-11-06T10:04:52.688Z",
   "documents": [
     {
       "signature": "OTA-ART-0001-2087-DE",
@@ -2019,11 +2019,11 @@
     }
   ],
   "summary": {
-    "referenceCount": 1665,
-    "openReferenceCount": 241,
-    "openTargetCount": 127,
+    "referenceCount": 1667,
+    "openReferenceCount": 242,
+    "openTargetCount": 128,
     "classifications": {
-      "missing": 81,
+      "missing": 82,
       "shorthand-resolved": 10,
       "base-id-resolved": 173,
       "base-id-ambiguous": 19,
@@ -6969,6 +6969,23 @@
       "sourceCount": 1,
       "priority": 1,
       "title": "OTA-TEC-0034-WEX-M",
+      "description": "",
+      "descriptionStatus": null,
+      "targetFile": null
+    },
+    {
+      "source": "OTA-FND-0025-2026-DE",
+      "target": "OTA-TEC-0035-UPDATE",
+      "contexts": [
+        "ie TEC-0035 v1.3 setzt – ohne sie zu schließen. — T.P.K.* *(Übertragen am 2026-11-06 aus dem Drive-Dokument „OTA-TEC-0035-UPDATE-v1_3-2026-DE“, Abschnitt „Antwort an den Reviewer: Die Baumeister-Frage“; dort als Kurator-Korrespondenz geführt, nicht für TEC-0035 bestimmt.)* **3"
+      ],
+      "status": "unresolved",
+      "classification": "missing",
+      "candidates": [],
+      "resolvedTarget": null,
+      "sourceCount": 1,
+      "priority": 1,
+      "title": "OTA-TEC-0035-UPDATE",
       "description": "",
       "descriptionStatus": null,
       "targetFile": null
@@ -17420,6 +17437,29 @@
       "targetFile": "src/content/documents/OTA-META-0009-2091-DE.md"
     },
     {
+      "source": "OTA-FND-0025-2026-DE",
+      "target": "OTA-MON-0002",
+      "contexts": [
+        "Rohstoff, die Kalethra präzise Ingenieurarbeit. Dasselbe Prinzip – 3.000 Jahre Erfahrung und Theorie weiter. OTA-MON-0002 beschreibt den β-Kopplungsfaktor als Mess- und Steuerungsgröße; das ist Kalibrierung, kein anderes Prinzip.* [F] **[KN-Baumeister]** *KN-3.1 fragt:"
+      ],
+      "status": "resolved-base-id",
+      "classification": "base-id-resolved",
+      "candidates": [
+        {
+          "signature": "OTA-MON-0002-2142-DE",
+          "title": "TEMENON",
+          "file": "src/content/documents/OTA-MON-0002-2142-DE.md"
+        }
+      ],
+      "resolvedTarget": "OTA-MON-0002-2142-DE",
+      "sourceCount": 4,
+      "priority": 0,
+      "title": "TEMENON",
+      "description": "Monitor-Dokument Temenon 2142: laufende Beobachtung des Temenon-Systems im NOXIA-Universum. Fiktives Protokoll [F] mit realphysikalischen Parametern als Rahmen [R].",
+      "descriptionStatus": "canonical",
+      "targetFile": "src/content/documents/OTA-MON-0002-2142-DE.md"
+    },
+    {
       "source": "OTA-SCI-0009-2025-DE",
       "target": "OTA-MON-0002",
       "contexts": [
@@ -17435,7 +17475,7 @@
         }
       ],
       "resolvedTarget": "OTA-MON-0002-2142-DE",
-      "sourceCount": 3,
+      "sourceCount": 4,
       "priority": 0,
       "title": "TEMENON",
       "description": "Monitor-Dokument Temenon 2142: laufende Beobachtung des Temenon-Systems im NOXIA-Universum. Fiktives Protokoll [F] mit realphysikalischen Parametern als Rahmen [R].",
@@ -17459,7 +17499,7 @@
         }
       ],
       "resolvedTarget": "OTA-MON-0002-2142-DE",
-      "sourceCount": 3,
+      "sourceCount": 4,
       "priority": 0,
       "title": "TEMENON",
       "description": "Monitor-Dokument Temenon 2142: laufende Beobachtung des Temenon-Systems im NOXIA-Universum. Fiktives Protokoll [F] mit realphysikalischen Parametern als Rahmen [R].",
@@ -17482,7 +17522,7 @@
         }
       ],
       "resolvedTarget": "OTA-MON-0002-2142-DE",
-      "sourceCount": 3,
+      "sourceCount": 4,
       "priority": 0,
       "title": "TEMENON",
       "description": "Monitor-Dokument Temenon 2142: laufende Beobachtung des Temenon-Systems im NOXIA-Universum. Fiktives Protokoll [F] mit realphysikalischen Parametern als Rahmen [R].",
@@ -27573,7 +27613,7 @@
       "target": "OTA-SCI-0085-2164-EN",
       "contexts": [
         "0023-2089-DE · OTA-SCI-0059 · OTA-SCI-0060 · OTA-SCI-0045 · OTA-TEC-0035 · OTA-SCI-0084-2163-EN · OTA-SCI-0085-2164-EN | | **Frueherer Arbeitscode:** | OTA-FND-HSS-D (temporar, nicht kanonisch) | *Kurator: Thomas Peter Kueper · Frankfurt am Main · April 2026* **",
-        "-Temenon Paradox (Ramirez et al.) | β-Kopplung: Prokaryoten koppeln nicht — Holobiont-Erweiterung der FTB | | OTA-SCI-0085-2164-EN | Oral Pathobiont Translocation (Muller et al.) | Folgestudie: Gut/Oral-Hirn-Achse, TAPC-Population, Tau/Synuclein-Fruhbefunde | ***-- T.P.K.*** *E"
+        "-Temenon Paradox (Ramirez et al.) | β-Kopplung: Prokaryoten koppeln nicht — Holobiont-Erweiterung der FTB | | OTA-SCI-0085-2164-EN | Oral Pathobiont Translocation (Muller et al.) | Folgestudie: Gut/Oral-Hirn-Achse, TAPC-Population, Tau/Synuclein-Fruhbefunde | ***-- T.P.K.*** **"
       ],
       "status": "resolved",
       "classification": "existing",
@@ -28699,7 +28739,7 @@
       "source": "OTA-TEC-0035-2026-DE",
       "target": "OTA-SCI-0117",
       "contexts": [
-        "124) als geklärt; IV.4 um „Aktive Artefakte brauchen Treibstoff. Passive nicht.“ ergänzt (Konsistenz-Naht aus OTA-SCI-0117 VIII). Offen zur Entscheidung: Th-232-„Zerfallsfeld“ (IV.4, VII), „drainierte Artefakte“ (VII) gegen A-4, Häufigkeit „Baumeister“ gegen Quarantäne V2"
+        "124) als geklärt; IV.4 um „Aktive Artefakte brauchen Treibstoff. Passive nicht.“ ergänzt (Konsistenz-Naht aus OTA-SCI-0117 VIII). Nach Entscheidung von Thomas (gleicher Tag): Th-232-„Zerfallsfeld“ gestrichen (IV.4, VII – radioaktiver Zerfall erzeugt kein Magnetfeld; Th-Sp"
       ],
       "status": "resolved-base-id",
       "classification": "base-id-resolved",
@@ -31200,7 +31240,9 @@
       "source": "OTA-FND-0025-2026-DE",
       "target": "OTA-TEC-0035",
       "contexts": [
-        "nte:** | OTA-MON-0002-2142-DE · OTA-TEC-0023-2089-DE · OTA-SCI-0059 · OTA-SCI-0060 · OTA-SCI-0045 · OTA-TEC-0035 · OTA-SCI-0084-2163-EN · OTA-SCI-0085-2164-EN | | **Frueherer Arbeitscode:** | OTA-FND-HSS-D (temporar, nicht kanonisch) | *Kurator: Thomas Pete"
+        "nte:** | OTA-MON-0002-2142-DE · OTA-TEC-0023-2089-DE · OTA-SCI-0059 · OTA-SCI-0060 · OTA-SCI-0045 · OTA-TEC-0035 · OTA-SCI-0084-2163-EN · OTA-SCI-0085-2164-EN | | **Frueherer Arbeitscode:** | OTA-FND-HSS-D (temporar, nicht kanonisch) | *Kurator: Thomas Pete",
+        "nfolge. — T.P.K.* **[KN-3.2 — Antwort auf KN-3.1, Mai 2026]** *Archivischer Befund (aus der Begutachtung zu OTA-TEC-0035 v1.3): Die Baumeister benutzen dieselbe physikalische Trägerschicht wie die Proto-Temenon-Objekte – ferromagnetische Hysterese in biogenem Magnetit,",
+        "chicht, kalibriert) und KN-Baumeister als Antwort auf KN-3.1 ergänzt – übertragen aus dem Update-Protokoll zu OTA-TEC-0035 v1.3 (EXT-ECO-OTA-20261106-001). Inhalt sonst unverändert. *ENDE DOKUMENT · Signatur: OTA-FND-0025-2026-DE · v1.1 · April 2026 · rev. November"
       ],
       "status": "resolved-base-id",
       "classification": "base-id-resolved",
@@ -31223,7 +31265,8 @@
       "source": "OTA-NAR-0005-2026-DE",
       "target": "OTA-TEC-0035",
       "contexts": [
-        "esetzt April 2026) | | **Verbundene Dokumente:** | OTA-FND-0024 · OTA-BIO-0027 (Mia) · OTA-BIO-0028 (Anton) · OTA-TEC-0035 · OTA-SCI-0059 · OTA-SCI-0060 | *Kurator: Thomas Peter Küper · Frankfurt am Main · April 2026* **I. DIE DREI THEMATISCHEN ACHSEN** Alle narrat"
+        "esetzt April 2026) | | **Verbundene Dokumente:** | OTA-FND-0024 · OTA-BIO-0027 (Mia) · OTA-BIO-0028 (Anton) · OTA-TEC-0035 · OTA-SCI-0059 · OTA-SCI-0060 | *Kurator: Thomas Peter Küper · Frankfurt am Main · April 2026* **I. DIE DREI THEMATISCHEN ACHSEN** Alle narrat",
+        "s er. Das macht ihn tragikomisch statt nur böse.* ***— T.P.K.*** **Revisionsvermerk 2026-11-06 (v1.1):** An OTA-TEC-0035 v1.3 angeglichen – „Resonanz-Gradient“ (dort in KN-IV.6 gestrichen) durch „Temenon-Verstärkung“ ersetzt; „Drain/drainiert“ gemäß Schreibregel A-4 dur"
       ],
       "status": "resolved-base-id",
       "classification": "base-id-resolved",
@@ -35133,7 +35176,7 @@
       "contexts": [
         "ie Kette ist ein aktives Artefakt: Sie wirkt nur über den Neurostoffwechsel ihrer Trägerin. Die Splitterlupe (OTA-TEC-0124) ist ein passives Feld und braucht keinen menschlichen Treibstoff. `[F]` **Belastungsanalogie:** Das Kostenprofil entspricht in etwa der Bioenergeti",
         "Objekt, Resonanzklasse β-0, geologisch-mono (OTA-TEC-0123) | | Splitterlupe: Eigenes TEC-Dokument | Geklärt — OTA-TEC-0124 (passives Feld, kein Trägertreibstoff) | | Klasse Σ: Gibt es Proto-Temenon-Objekte der Klasse Σ in der Story-Welt? | `[OFFEN]` | | Wechselwirkung Pro",
-        "Kopftabelle); Flüstern-Mechanik „Stufe 6“ → „Entzugsstufe E2“; IX: Hör-Stein (OTA-TEC-0123) und Splitterlupe (OTA-TEC-0124) als geklärt; IV.4 um „Aktive Artefakte brauchen Treibstoff. Passive nicht.“ ergänzt (Konsistenz-Naht aus OTA-SCI-0117 VIII). Offen zur Entscheidung:"
+        "Kopftabelle); Flüstern-Mechanik „Stufe 6“ → „Entzugsstufe E2“; IX: Hör-Stein (OTA-TEC-0123) und Splitterlupe (OTA-TEC-0124) als geklärt; IV.4 um „Aktive Artefakte brauchen Treibstoff. Passive nicht.“ ergänzt (Konsistenz-Naht aus OTA-SCI-0117 VIII). Nach Entscheidung von T"
       ],
       "status": "resolved-base-id",
       "classification": "base-id-resolved",
