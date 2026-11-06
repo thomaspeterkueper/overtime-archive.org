@@ -45,7 +45,8 @@ Betroffene Dossiers: OTA-TEC-0035 (Kette), OTA-TEC-0123 (Hör-Stein), OTA-TEC-01
 17. Mias Mutter ist in BIO-0027 als „Sekretärin an Mias Schule“ geführt. Der Roman zeigt sie mit einer Arbeit anderswo („ein Kollege, der gekündigt hatte, die neue Sekretärin, die alles falsch machte“). Die Angabe bitte streichen oder als `[OFFEN]` führen.
 18. Mias Familie wohnt in einer **Doppelhaushälfte** am Rand der Innenstadt (Kanon A3).
 19. Leon wohnt im **Haus der Schultes**, die Werkstatt des Vaters liegt im Hof (nicht „Wohnung über der Werkstatt“; BIO-0030 I).
-20. **Offen bei T.P.K. (noch nicht ändern):** Mias Alter. Bei Geburt 7.7.2011 ist sie im Herbst 2024 13. Der Roman nennt sie „Vierzehnjährige“ und lässt Anton sagen „Du bist vierzehn“. Entweder wird das Geburtsjahr 2010 oder der Text sagt 13.
+20. **Mia ist am 7. Juli 2010 geboren** (Entscheidung T.P.K. vom 06.11.; bisher 7.7.2011) und im Herbst 2024 vierzehn. BIO-0027 entsprechend ändern. Tim gilt als „ein Jahr älter als Mia“ und wäre damit ≈ 2009 geboren; bitte in BIO-0029 prüfen.
+21. **Polizei:** Die Kommissarin wird von „Hauptkommissar Becker“ begleitet, nicht mehr Brenner, falls ein Dossier ihn nennt.
 
 ## F. Widersprüche zwischen den Dossiers selbst
 
@@ -59,6 +60,7 @@ Entschieden von T.P.K. am 06.11.2026 für die Gegenwartsschicht der Chronomap (`
 - Die Kette liegt im Depot, im Museum Menden ist eine Nachbildung zu sehen. Das passt zu TEC-0035 I „→ Depot“.
 - Das volle Artefakt des Hexenteichs wird nie gefunden.
 - Den vier Hauptfiguren begegnet man 2086 nicht. Im Museum gibt es nur Biografie-Tafeln.
+- Der Hör-Stein ist im Museum als „Leihgabe aus Privatbesitz“ ausgestellt, ohne Namen. Die Splitterlupe fehlt, ihre Vitrine ist leer und trägt das Schild „Verbleib unbekannt“.
 - Der Brunnen unter der Schule steht unter Denkmalschutz und ist bei Führungen begehbar. Er bleibt zugemauert.
 
 Wenn OTA diese Punkte als Weltkanon führen möchte, bitte als `[F]` mit Verweis auf die Chronomap.
