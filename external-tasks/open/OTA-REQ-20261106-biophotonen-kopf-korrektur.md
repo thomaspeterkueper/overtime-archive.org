@@ -1,14 +1,14 @@
 # OTA-REQ-20261106-002 – OTA-SCI-0047-2026-DE (Biophotonen im Kopfbereich): Quellen und Halo-Geschichte korrigieren, Realteil auf Verweis nach KUE-SCI-0175 kürzen
 
 Status: open
-Claude-Status: wartet auf Thomas
+Entschieden: 2026-11-06 (Thomas) – Punkt B: pEEG bleibt im Kanon als künftige Technik [S→F], nicht als Fortsetzung eines heutigen Befunds.
 Datum: 2026-11-06
 Quelle: Begutachtung nach ECO-ARC-0037, Zuordnung nach ECO-ARC-0038 §2 (Claude)
 Prüfbericht: `kueper-ecosystem/reviews/2026-11-06-OTA-SCI-0047-2026-DE.md`
 Zuordnung: KUE-Gegenstück vorhanden (Gruppe K) – `DOC:KUE:KUE-SCI-0175-2026-DE`. Teil III (Halo-Ikonographie), Teil IV (Brücke) und Teil V (Λ-Emissionsprofile) bleiben in OTA.
 Voraussetzung für Punkt C: KUE-SCI-0175 v0.2 ist in `kueper.com/main` gemergt (Branch `claude/review-2026-11-06`).
 
-Warum Thomas: Punkt B berührt die Weltlogik – pEEG als Λ-Monitoring-Kanal (OTA-SCI-0046, OTA-LSC-0003). Die Punkte A und C sind ohne Entscheidung umsetzbar.
+Punkt B berührte die Weltlogik (pEEG als Λ-Monitoring-Kanal in OTA-SCI-0046, OTA-LSC-0003); Thomas hat am 2026-11-06 entschieden (siehe oben). Alle Punkte sind damit umsetzbar.
 
 ## A. Quellen und Fakten (Marker R/R-hist.)
 
@@ -17,12 +17,12 @@ Warum Thomas: Punkt B berührt die Weltlogik – pEEG als Λ-Monitoring-Kanal (O
 3. **§3.1 Halo-Ursprung:** Die Aussage, die ältesten eindeutig datierbaren Scheiben-Halos stammten aus dem 4. Jh. v. Chr. in zoroastrischen Mithra-Darstellungen, ist nicht belegt. Belegt sind: ägyptische Sonnenscheiben (Ra) deutlich früher; griechisch-hellenistische Strahlenkränze (Helios, Koloss von Rhodos, hellenistische Herrscher); Nimben auf Münzen der Kuschan-Herrscher und in der buddhistischen Kunst seit dem 1. Jh. n. Chr. (Bimaran-Reliquiar um 60 n. Chr., Kanischka-Reliquiar 127 n. Chr.); Übernahme ins Christentum im 4. Jh. n. Chr. Khvarenah ist ein zoroastrisches Konzept göttlichen Glanzes; eine Verbindung zum Halo gilt als möglich, nicht als Ursprung. Vorschlag: §3.1 und die erste Tabellenzeile in 3.3 entsprechend umformulieren (Marker [R-hist.] für die belegten Stationen, [T] für die Khvarenah-Verbindung).
 4. **Elsner A. (2006): Nimbus, Grove Art Online** – Autor und Jahr bibliographisch prüfen.
 
-## B. Kopf-UPE und pEEG – neue Gegenposition (wartet auf Thomas)
+## B. Kopf-UPE und pEEG – neue Gegenposition (entschieden 2026-11-06)
 
 Eine Gegenanalyse (Salari, Seshan, Rishabh, Oblak, Simon 2026, arXiv:2603.26630, Preprint, nicht begutachtet) argumentiert, dass unter wirklich dunklen Bedingungen deutlich weniger UPE vom Kopf ankommt als berichtet, dass Hintergrundlicht die großen Signale erklären kann und dass Kopfhaut und Schädel Licht unter etwa 600 nm stark dämpfen – Kopf-UPE stamme mit Photomultipliern gemessen vermutlich überwiegend aus der Kopfhaut. Vorschlag:
 - Teil II (2.1–2.3) und Tabelle 6.1 „pEEG bietet zusätzliche Messparameter [R→T]“ um den Satz ergänzen: „Ob am Kopf gemessene UPE Hirnaktivität abbildet, ist umstritten; eine Gegenanalyse (2026, Preprint) führt die Signale überwiegend auf Kopfhaut und Hintergrundlicht zurück. `[H]`“
 - Marker der pEEG-Zeilen von [R→T] auf [R] (Messung) / [H] (Hirnbezug) aufteilen.
-- **Für Thomas:** Soll pEEG als Λ-Tracking-Kanal im Kanon (OTA-SCI-0046, OTA-LSC-0003 ab 2083) bleiben, sollte die Weltsetzung das als künftige Technik [S→F] tragen, nicht als Fortschreibung eines heutigen Realbefunds. Teil V (Λ-Emissionsprofile) wird nicht geändert.
+- **Entscheidung Thomas (2026-11-06):** pEEG bleibt als Λ-Tracking-Kanal im Kanon (OTA-SCI-0046, OTA-LSC-0003 ab 2083), getragen als künftige Technik [S→F], nicht als Fortschreibung eines heutigen Realbefunds. Umsetzung: In Teil II 2.2 (Λ-Brücke) einen Satz ergänzen: „Im Kanon ist pEEG eine künftige Messtechnik, deren Hirnbezug im Universum gesetzt ist `[S→F]`; heute ist dieser Bezug offen `[H]`.“ Teil V (Λ-Emissionsprofile) wird nicht geändert. In OTA-SCI-0046 und OTA-LSC-0003 dieselbe Einordnung bei deren Begutachtung prüfen.
 
 ## C. Kürzung nach ECO-ARC-0038 §3a (nach Merge von KUE-SCI-0175 v0.2)
 
