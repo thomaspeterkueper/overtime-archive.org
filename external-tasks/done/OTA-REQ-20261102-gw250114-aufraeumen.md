@@ -1,6 +1,7 @@
 # OTA-REQ-20261102-001 – OTA-SCI-0113-2026-DE (GW250114): Realteil auf Verweis nach KUE-SCI-0196 kürzen
 
-Status: open
+Status: done
+Erledigt: 2026-11-07 (Umsetzung durch die Begutachtung nach ECO-ARC-0038 §3b)
 Datum: 2026-11-02
 Quelle: Begutachtung nach ECO-ARC-0037, Zuordnung nach ECO-ARC-0038 §2 (Claude)
 Prüfbericht: `kueper-ecosystem/reviews/2026-11-02-OTA-SCI-0113-2026-DE.md`
