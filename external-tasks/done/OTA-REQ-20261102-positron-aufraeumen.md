@@ -1,6 +1,7 @@
 # OTA-REQ-20261102-002 – OTA-SCI-0115-2026-DE (Positron-Quantenzyklotron): auf Brückendokument verschlanken
 
-Status: open
+Status: done
+Erledigt: 2026-11-07 (Umsetzung durch die Begutachtung nach ECO-ARC-0038 §3b)
 Datum: 2026-11-02
 Quelle: Begutachtung nach ECO-ARC-0037, Zuordnung nach ECO-ARC-0038 §2 (Claude)
 Prüfbericht: `kueper-ecosystem/reviews/2026-11-02-OTA-SCI-0115-2026-DE.md`
