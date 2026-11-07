@@ -93,7 +93,52 @@ Umsetzung über die tägliche Begutachtung nach ECO-ARC-0037 §4: Dokumente mit 
 | OTA-TEC-0090-2074-DE | 2 zu ungenau |
 | OTA-TEC-0126-2026-DE | 2 zu ungenau |
 
-## Noch nicht geprüft
+## Ergänzung Folgelauf 2026-11-07
+
+Der Folgelauf hat die 11 noch nicht geprüften OTA-SCI-Dokumente und einen Teil der ungeprüften Einzelangaben geprüft sowie die im ersten Lauf nur nach Fachwissen belegten Korrekturen online bestätigt (33 von 37) bzw. verworfen. Einzelheiten im Prüfbericht, Abschnitt „Folgelauf 2026-11-07“ (Tabelle „Neue Befunde (Folgelauf)“; aktualisierte Zeilen der Tabelle „Befunde“ sind mit „Folgelauf 2026-11-07“ gekennzeichnet). Weiterhin keine Änderung an OTA-Dokumenten durch die Quellenprüfung.
+
+### Neu betroffene Dokumente
+
+| Signatur | Befunde |
+| --- | --- |
+| OTA-SCI-0030-2025-DE | 1 fehlerhaft |
+| OTA-SCI-0043-2026-DE | 1 zu ungenau, 1 im Browser zu prüfen |
+| OTA-SCI-0044-2026-DE | 4 fehlerhaft, 2 nicht auffindbar, 2 im Browser zu prüfen |
+| OTA-SCI-0045-2026-DE | 2 fehlerhaft, 3 zu ungenau |
+| OTA-SCI-0047-2026-DE | 2 fehlerhaft, 1 zu ungenau, 1 im Browser zu prüfen |
+| OTA-SCI-0057-2026-DE | 2 fehlerhaft, 1 nicht auffindbar, 2 zu ungenau |
+| OTA-SCI-0058-2026-DE | 1 fehlerhaft, 2 im Browser zu prüfen |
+| OTA-SCI-0061-2026-DE | 1 zu ungenau, 2 im Browser zu prüfen |
+| OTA-SCI-0062-2026-DE | 3 fehlerhaft, 1 im Browser zu prüfen |
+| OTA-TEC-0028-2025-DE | 1 fehlerhaft, 1 nicht auffindbar |
+| OTA-TEC-0028-2048-DE | 1 im Browser zu prüfen |
+| OTA-TEC-0031-2150-DE | 1 im Browser zu prüfen |
+
+OTA-SCI-0048-2031-DE enthält keine realen Literaturangaben (kein Befund).
+
+### Weitere Befunde in bereits genannten Dokumenten
+
+| Signatur | zusätzliche Befunde |
+| --- | --- |
+| OTA-SCI-0007-2026-Cuancoa | 1 fehlerhaft |
+| OTA-SCI-0020-2026-DE | 3 fehlerhaft, 1 nicht auffindbar |
+| OTA-SCI-0023-2025-DE | 1 fehlerhaft, 1 nicht auffindbar |
+| OTA-SCI-0028-2025-DE | 1 fehlerhaft, 1 nicht auffindbar |
+| OTA-SCI-0031-2024-DE | 1 fehlerhaft, 1 nicht auffindbar |
+| OTA-SCI-0032-2024-DE | 1 fehlerhaft |
+| OTA-SCI-0034-2026-DE | 1 fehlerhaft |
+| OTA-SCI-0038-2026-EN | 2 fehlerhaft, 2 nicht auffindbar, 1 zu ungenau |
+| OTA-SCI-0119-2026-DE | 1 fehlerhaft, 1 nicht auffindbar |
+| OTA-TEC-0034-2026-DE | 1 im Browser zu prüfen |
+| OTA-TEC-0087-2026-DE | 1 nicht auffindbar |
+
+Im ersten Lauf nur nach Fachwissen belegte Korrekturen sind jetzt bis auf zwei OTA-Angaben (OTA-SCI-0023-2025-DE Hirsch 2002, OTA-SCI-0086-2026-DE Ronca) online belegt und können bei der Begutachtung übernommen werden.
+
+### Weiterhin offen
+
+Ungeprüfte oder nur teilweise geprüfte Angaben (grund „weiter_offen“) und Angaben, die nur über gesperrte Verlagsseiten zu klären sind (grund „browser_pruefen“, gemeinsame Prüfung mit Thomas im Browser), stehen in `kueper-ecosystem/status/quellenpruefung-2026-11-offen.json`. Schwerpunkt der ungeprüften Angaben: OTA-SCI-0095 bis -0115, OTA-SCI-0045, -0057, -0059, -0060 und OTA-TEC-0084 bis -0087.
+
+## Noch nicht geprüft (Stand erster Lauf)
 
 OTA-SCI-0043, -0044, -0045, -0047, -0048-2031, -0057, -0058, -0059, -0060, -0061, -0062 sowie die im Bericht genannten ungeprüften Einzelangaben.
 
