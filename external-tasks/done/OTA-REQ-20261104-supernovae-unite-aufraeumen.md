@@ -1,6 +1,7 @@
 # OTA-REQ-20261104-002 – OTA-SCI-0091-2026-DE (Supernovae Unite): Realteil auf Verweis nach KUE-SCI-0191 kürzen, Signifikanz berichtigen
 
-Status: open
+Status: done
+Erledigt: 2026-11-08 (Umsetzung nach ECO-ARC-0038 §3b; OTA-SCI-0091 v1.1)
 Datum: 2026-11-04
 Quelle: Begutachtung nach ECO-ARC-0037, Zuordnung nach ECO-ARC-0038 §2 (Claude)
 Prüfbericht: `kueper-ecosystem/reviews/2026-11-04-OTA-SCI-0091-2026-DE.md`
