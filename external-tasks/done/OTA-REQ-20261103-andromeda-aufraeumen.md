@@ -1,6 +1,7 @@
 # OTA-REQ-20261103-002 – OTA-SCI-0116-2026-DE (Andromeda als Welteninsel): zum Brückendokument mit Verweis auf KUE-SCI-0198 verschlanken
 
-Status: open
+Status: done
+Erledigt: 2026-11-08 (Umsetzung nach ECO-ARC-0038 §3b; OTA-SCI-0116 v0.2)
 Datum: 2026-11-03
 Quelle: Begutachtung nach ECO-ARC-0037, Zuordnung nach ECO-ARC-0038 §2 (Claude)
 Prüfbericht: `kueper-ecosystem/reviews/2026-11-03-OTA-SCI-0116-2026-DE.md`
