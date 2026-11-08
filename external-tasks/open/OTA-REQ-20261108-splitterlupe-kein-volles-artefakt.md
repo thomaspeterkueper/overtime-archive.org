@@ -9,7 +9,7 @@
 
 1. Die **Splitterlupe** in OTA-TEC-0124 als **Splitter** führen, nicht als eins der sieben vollen Artefakte. Vermutete Herkunft: ein Splitter vom Artefakt der **Bilsteinhöhle** (Fundort laut Roman Kap. 12: „Gefunden in der Bilsteinhöhle.“). Die Vermutung bitte als Vermutung kennzeichnen.
 2. Ihre Wirkung im Kanon: Sie **nimmt** (Kap. 12, 16, 20). Bei Anton erzeugt sie Interferenz mit Kette und Brunnen (Kap. 20). Sie schützt nicht. Schutz in der Zeitdehnung gibt Krahls Reif (Kap. 16, 25).
-3. Zählung im Roman (Kap. 25): „Also kennen wir *ein* volles Artefakt von sieben. Sechs fehlen.“ Das eine ist die Kette vom Hexenteich. Der Hör-Stein ist im Roman kein volles Artefakt der sieben, falls das Dossier etwas anderes sagt, bitte mit Thomas klären.
+3. Zählung im Roman (Kap. 25, Leon): Volle Artefakte sind „eins pro Ort – ganz, ungeteilt, nicht nur ein Span wie bei den Gliedern“. „Der Hör-Stein ist einer davon. Reckenhöhle. Die Kette gehört nicht dazu – die ist die Ausnahme, der Schlüssel. Also kennen wir *ein* volles Artefakt von sieben.“ Die Splitterlupe ist in diesem Sinn ein **Span**, wie die Glieder der Kette.
 4. Verbleib 2086 (Chronomap, noxiagame W-24): leere Vitrine im Museum Menden für Stadt- und Kulturgeschichte, „Verbleib unbekannt“. Der Platz „Bilsteinhöhle“ auf der Wand der sieben Orte bleibt „verschollen“.
 
 ## Quellen
