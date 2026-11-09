@@ -1,6 +1,7 @@
 # OTA-REQ-20261105-002 – OTA-SCI-0086-2026-DE (Reproduktion in Mikro- und Teilgravitation): Realteil auf Verweis nach KUE-SCI-0187 kürzen
 
-Status: open
+Status: done
+Erledigt: 2026-11-09
 Datum: 2026-11-05
 Quelle: Begutachtung nach ECO-ARC-0037, Zuordnung nach ECO-ARC-0038 §2 (Claude)
 Prüfbericht: `kueper-ecosystem/reviews/2026-11-05-OTA-SCI-0086-2026-DE.md`
@@ -26,3 +27,7 @@ Die Abschnitte 1–15 und 18 von OTA-SCI-0086 decken sich mit KUE-SCI-0187. Was 
 
 - `noxia-universe`/`noxiagame`: §19.3 (NOXIA-Grenze) bleibt unverändert; die neuen Generationenbefunde ändern die Regel „keine Geburtenraten oder Entwicklungsabzüge“ nicht, stützen sie eher. Kein eigener Request.
 - OTA-SCI-0089-2026-DE (Human Adaptation by Gravity Environment) ist noch nicht begutachtet.
+
+## Umsetzung
+
+2026-11-09 (Claude, ECO-ARC-0038 §3b): Punkte 1–6 umgesetzt in OTA-SCI-0086 v1.3 (Voraussetzung KUE-SCI-0187 v0.2 in kueper.com/main geprüft). Abschnittsnummern 16–19 beibehalten, damit Verweise auf §19 gültig bleiben.
