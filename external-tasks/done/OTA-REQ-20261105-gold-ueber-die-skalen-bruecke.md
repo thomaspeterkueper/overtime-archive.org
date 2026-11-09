@@ -1,6 +1,7 @@
 # OTA-REQ-20261105-001 – OTA-SCI-0106-2026-DE (Gold über die Skalen): Realteil auf Verweis nach KUE-SCI-0195 kürzen, schlankes Brückendokument
 
-Status: open
+Status: done
+Erledigt: 2026-11-09
 Datum: 2026-11-05
 Quelle: Begutachtung nach ECO-ARC-0037, Zuordnung nach ECO-ARC-0038 §2 (Claude)
 Prüfbericht: `kueper-ecosystem/reviews/2026-11-05-OTA-SCI-0106-2026-DE.md`
@@ -24,3 +25,7 @@ Die Abschnitte 2–6, 9 und 10 von OTA-SCI-0106 decken sich jetzt mit KUE-SCI-01
 ## Wirkung
 
 - Keine weiteren Repositories. Der KG-Hinweis in §8 Punkt 6 (KG-Kandidaten nur als Vorschläge) gilt künftig für KUE-SCI-0195.
+
+## Umsetzung
+
+2026-11-09 (Claude, ECO-ARC-0038 §3b): Punkte 1–6 umgesetzt in OTA-SCI-0106 v0.3 (Voraussetzung KUE-SCI-0195 v0.4 in kueper.com/main geprüft). Punkt 5: Bezüge zu OTA-SCI-0017 und OTA-TEC-0021 als `relatedDocuments` ohne neue Setzung ergänzt; sieht Thomas keinen Werkbezug, können sie entfallen.
