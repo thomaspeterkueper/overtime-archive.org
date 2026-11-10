@@ -1,6 +1,7 @@
 # OTA-REQ-20261106-001 – OTA-SCI-0080-2026-DE (Der singende Schlüssel): Realgrundlage korrigieren, U/Th-Teil auf Verweis nach KUE-SCI-0174 kürzen
 
-Status: open
+Status: done
+Erledigt: 2026-11-10 – umgesetzt in OTA-SCI-0080 v1.4 durch die Begutachtung (ECO-ARC-0038 §3b). Punkt A6 ist nur ein Hinweis ohne benannte Richtung („Kanonisch“ in der Kopftabelle gegen `status: AKTIV`) und wurde nicht geändert – an Thomas gemeldet. Zu A4: Lucas (1948) nicht geprüft, Aussage daher als [H] geführt; in Tabelle V wurde die Lorbeer-Zeile dem gesenkten Marker angeglichen.
 Datum: 2026-11-06
 Quelle: Begutachtung nach ECO-ARC-0037, Zuordnung nach ECO-ARC-0038 §2 (Claude)
 Prüfbericht: `kueper-ecosystem/reviews/2026-11-06-OTA-SCI-0080-2026-DE.md`

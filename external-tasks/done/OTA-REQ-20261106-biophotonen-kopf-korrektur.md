@@ -1,6 +1,7 @@
 # OTA-REQ-20261106-002 – OTA-SCI-0047-2026-DE (Biophotonen im Kopfbereich): Quellen und Halo-Geschichte korrigieren, Realteil auf Verweis nach KUE-SCI-0175 kürzen
 
-Status: open
+Status: done
+Erledigt: 2026-11-10 – umgesetzt in OTA-SCI-0047 v1.3 durch die Begutachtung (ECO-ARC-0038 §3b), Punkte A–C. A4: Elsner (2006) per Websuche nicht verifizierbar, im Literaturverzeichnis so vermerkt. Tabelle 2.3 entfällt mit der Kürzung nach C; die Markeraufteilung aus B ist in Tabelle 6.1 umgesetzt.
 Entschieden: 2026-11-06 (Thomas) – Punkt B: pEEG bleibt im Kanon als künftige Technik [S→F], nicht als Fortsetzung eines heutigen Befunds.
 Datum: 2026-11-06
 Quelle: Begutachtung nach ECO-ARC-0037, Zuordnung nach ECO-ARC-0038 §2 (Claude)
