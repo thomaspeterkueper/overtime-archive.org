@@ -1,6 +1,7 @@
 # OTA-REQ-20261107-001 – OTA-SCI-0114-2026-DE (Horizontfragmentierung): Quellen korrigieren, Realteil auf Verweis nach KUE-SCI-0196 kürzen
 
-Status: open
+Status: done
+Erledigt: 2026-11-11 – umgesetzt in OTA-SCI-0114 v0.2 durch die Begutachtung (ECO-ARC-0038 §3b), Punkte A–D. Der Revisionsvermerk trägt das Umsetzungsdatum 2026-11-11.
 Datum: 2026-11-07
 Quelle: Begutachtung nach ECO-ARC-0037, Zuordnung nach ECO-ARC-0038 §2 (Claude)
 Prüfbericht: `kueper-ecosystem/reviews/2026-11-07-OTA-SCI-0114-2026-DE.md`
