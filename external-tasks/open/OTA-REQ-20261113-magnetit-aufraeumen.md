@@ -2,6 +2,7 @@
 
 Status: open
 Datum: 2026-11-13
+Teilweise erledigt: 2026-11-13 – Punkte A–D umgesetzt in OTA-SCI-0060 v1.1 durch die Begutachtung (ECO-ARC-0038 §3b); `relatedDocuments` nicht um KUE-SCI-0170 ergänzt (keine KUE-Ziele im Bestand, Verweis steht im Text). Offen bleibt Punkt E (wartet auf Thomas).
 Quelle: Begutachtung nach ECO-ARC-0037, Zuordnung nach ECO-ARC-0038 §2 (Claude)
 Prüfbericht: `kueper-ecosystem/reviews/2026-11-13-OTA-SCI-0060-2026-DE.md`
 Zuordnung: KUE-Gegenstück vorhanden – `DOC:KUE:KUE-SCI-0170-2026-DE` („Menschliche Magnetorezeption und Magnetit im Gehirn“, v0.1, Status Reviewfähig). Die Inventur führte das Dokument in Gruppe A; das Gegenstück existiert aber bereits und behandelt genau die Realaussagen dieses Dokuments (einschließlich der 19–24-nm-Angabe). Werkbezug (Die Kette vom Hexenteich, Hüter-der-Schwellen; Entzugsprofil, Zeitdehnung) bleibt in OTA.
