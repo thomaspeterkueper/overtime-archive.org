@@ -53,3 +53,9 @@ Keep separate nodes/relations for:
 - animal/mechanistic evidence versus human observational/interventional evidence.
 
 Do not encode a scalar rule such as "more autophagy = healthier". A flux value requires context about cargo/damage load and downstream lysosomal capacity.
+
+## Ergänzung 2026-11-13 (Begutachtung nach ECO-ARC-0037/0038)
+
+- OTA-SCI-0102 zieht nach ECO-ARC-0038 vollständig nach kueper.com um (`kueper.com/external-tasks/open/EXT-OTA-KUE-20261113-002.md`, `OTA-REQ-20261113-002`). Für die Kandidatenclaims sollte nach dem Merge das KUE-Dokument als Quelldokument dienen, nicht OTA-SCI-0102.
+- Claim 4: Singh et al. ist als medRxiv-Preprint vom 13.07.2026 belegt (DOI 10.64898/2026.07.07.26357503); die Angabe „Clinical Nutrition 2026, DOI 10.1016/j.clnu.2026.106778“ war am 2026-11-13 nicht auffindbar – vor Registrierung prüfen.
+- Claim 3 / Moreno et al.: Die Bewegungsintervention war eine Pilotstudie mit fünf Personen (77–88 Jahre) ohne Kontrollgruppe.
