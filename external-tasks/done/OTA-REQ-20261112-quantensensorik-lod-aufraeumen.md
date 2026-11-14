@@ -1,6 +1,7 @@
 # OTA-REQ-20261112-002 – OTA-TEC-0029-2048-DE (Quantensensorik & KI für LOD-Validierung): Realteil auf Verweis nach KUE-SCI-0177 kürzen
 
-Status: open
+Status: done
+Erledigt: 2026-11-14 – umgesetzt in OTA-TEC-0029-2048-DE v1.3 durch die Begutachtung (ECO-ARC-0038 §3b); Voraussetzung KUE-SCI-0177 v0.2 (mit EXT-OTA-KUE-20261112-002) seit 2026-11-14 in kueper.com/main.
 Datum: 2026-11-12
 Quelle: Begutachtung nach ECO-ARC-0037, Zuordnung nach ECO-ARC-0038 §2 (Claude)
 Prüfbericht: `kueper-ecosystem/reviews/2026-11-12-OTA-TEC-0029-2048-DE.md`
