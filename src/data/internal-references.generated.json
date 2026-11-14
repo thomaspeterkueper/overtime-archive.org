@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-06T10:09:07.485Z",
+  "generatedAt": "2026-11-14T00:22:52.665Z",
   "documents": [
     {
       "signature": "OTA-ART-0001-2087-DE",
@@ -1060,7 +1060,7 @@
     {
       "signature": "OTA-SCI-0021-2025-DE",
       "title": "Mikrogravitation und Gehirnarchitektur",
-      "summary": "Mikrogravitation und Gehirnarchitektur: ISS-Studien [R], neuroplastische Anpassungstheorien [T/S].",
+      "summary": "Mikrogravitation und Gehirnarchitektur: ISS-Studien [R], Anpassungsdeutungen [T/I], Übertragung auf Mars-Gravitation und vollständige Matrix Epochen × g-Profile [S].",
       "file": "src/content/documents/OTA-SCI-0021-2025-DE.md"
     },
     {
@@ -1342,7 +1342,7 @@
     {
       "signature": "OTA-SCI-0086-2026-DE",
       "title": "Reproduktion und Entwicklung von der Konzeption bis zum Erwachsenenalter in Mikro- und Teilgravitation",
-      "summary": "Evidenzdossier zu menschlicher Reproduktion, Schwangerschaft, Geburt und Entwicklung bis zum Erwachsenenalter unter Mikro- und Teilgravitation. Trennt Human-, Tier- und Analogdaten von offenen biologischen Schwellenwerten und unterscheidet vier Siedlungsfähigkeitsklassen ohne daraus eine sichere Mindestgravitation abzuleiten.",
+      "summary": "Brückendokument zu Reproduktion und Entwicklung unter Mikro- und Teilgravitation: Evidenzregel, Konsequenzen für Mars, Mond und Stationen, Engineering-Grenze und die vier kanonischen Siedlungsfähigkeitsklassen (§19); der Realteil liegt in DOC:KUE:KUE-SCI-0187-2026-DE.",
       "file": "src/content/documents/OTA-SCI-0086-2026-DE.md"
     },
     {
@@ -1372,7 +1372,7 @@
     {
       "signature": "OTA-SCI-0091-2026-DE",
       "title": "Supernovae Unite — 2.884 Typ-Ia-Supernovae und die Evidenz für zeitabhängige Dunkle Energie",
-      "summary": "Wissenschaftliches Evidenzdossier zum Unite-Hubble-Diagramm aus Pantheon+ und DES-SN5YR. Dokumentiert die 2.884-SN-Ia-Stichprobe, die verbesserten systematischen Kontrollen und die nur modellabhängige, statistisch noch nicht entscheidende Präferenz für zeitabhängige Dunkle Energie. Trennt den Beobachtungsbefund strikt von einer möglichen späteren AVI-Nutzung.",
+      "summary": "Brückendokument: Was der Supernovae-Unite-Datensatz für AVI leisten kann und was nicht (Evidenzgrenze, Bezug zu Test B, Kanonregel). Beobachtungsbefund, Zahlen und Systematik in KUE-SCI-0191.",
       "file": "src/content/documents/OTA-SCI-0091-2026-DE.md"
     },
     {
@@ -1462,7 +1462,7 @@
     {
       "signature": "OTA-SCI-0106-2026-DE",
       "title": "Gold über die Skalen – Nukleosynthese, Material, Ressourcen und Bedeutungen",
-      "summary": "Skalenübergreifendes, quellenbasiertes Grundlagen- und Forschungsdossier zu Gold: astrophysikalische Herkunft, chemische und materialphysikalische Eigenschaften, geologische Lagerstätten, Technik, Recycling sowie ein ausdrücklich separater STAR-Schwerionenbefund; gesellschaftliche Deutungen sind von physikalischen Aussagen getrennt.",
+      "summary": "Schlankes Brückendokument zu Gold über die Skalen: Trennregel zwischen Nukleosynthese, Material, Lagerstätten, Schwerionenphysik und gesellschaftlicher Deutung, Vergleichsmatrix und OTA-interner Index; der Realteil liegt in DOC:KUE:KUE-SCI-0195-2026-DE.",
       "file": "src/content/documents/OTA-SCI-0106-2026-DE.md"
     },
     {
@@ -1504,7 +1504,7 @@
     {
       "signature": "OTA-SCI-0113-2026-DE",
       "title": "GW250114 – Hawkings Flächensatz, Kerr-Ringdown und starke Gravitation",
-      "summary": "Quellengebundene Beobachtungsnotiz zum außergewöhnlich klaren Gravitationswellensignal GW250114: starker Test des klassischen Hawking-Flächensatzes und der Kerr-Ringdown-Dynamik. Unterscheidet die 2025er Flächenanalyse von 2026er Spektroskopie und modellabhängigen Horizontstudien; weder Hawking-Strahlung noch Quantengravitation sind nachgewiesen.",
+      "summary": "Brückendokument zu GW250114: kurze Grundinformation zum Flächensatz- und Kerr-Test mit Verweis auf KUE-SCI-0196; AVI-P-Filter und Übergaben an KG, SSF und SCION. Weder Hawking-Strahlung noch Quantengravitation sind nachgewiesen.",
       "file": "src/content/documents/OTA-SCI-0113-2026-DE.md"
     },
     {
@@ -1522,7 +1522,7 @@
     {
       "signature": "OTA-SCI-0116-2026-DE",
       "title": "Andromeda als Welteninsel – Distanzmessung, Kalibration und Erkenntnisgeschichte",
-      "summary": "Methodische Fallstudie zur Entdeckung von Andromeda als externer Galaxie: historische Werte und spätere Neukalibration klar getrennt.",
+      "summary": "Brückendokument: Andromeda als Welteninsel aus historischer und erzählerischer Perspektive; Methode, Erkenntnisgeschichte und Messwerte in KUE-SCI-0198.",
       "file": "src/content/documents/OTA-SCI-0116-2026-DE.md"
     },
     {
@@ -1542,6 +1542,12 @@
       "title": "Lodestone: Magnetit-Eisenstein — Natürlicher Permanentmagnet, Physik, Chemie, Entstehung, Vorkommen",
       "summary": "Realwissenschaftliche Materialbasis für Lodestone (Magnetit-Eisenstein) als natürlichen Permanentmagneten: Maghemit-Mikrostruktur, REM-Ratio, Blitz-Magnetisierung, Domänenphysik, Feldstärken, Drei-Träger-Vergleich des Sauerland-Clusters, Vorkommen und historische Nutzung. SCI-Basis des Hör-Steins (OTA-TEC-0123).",
       "file": "src/content/documents/OTA-SCI-0119-2026-DE.md"
+    },
+    {
+      "signature": "OTA-SCI-0120-2026-DE",
+      "title": "LHCb 2026: Evidenz für den seltenen B⁰→μ⁺μ⁻-Zerfall",
+      "summary": "LHCb berichtete am 3. November 2026 erstmals Evidenz aus einem einzelnen Experiment für den stark unterdrückten Zerfall B⁰→μ⁺μ⁻ mit 3,2 σ in der Datenkombination. Die Ergebnisse sind mit dem Standardmodell vereinbar; sie belegen keine neue Physik.",
+      "file": "src/content/documents/OTA-SCI-0120-2026-DE.md"
     },
     {
       "signature": "OTA-SOC-0001-2076-DE",
@@ -2019,7 +2025,7 @@
     }
   ],
   "summary": {
-    "referenceCount": 1667,
+    "referenceCount": 1673,
     "openReferenceCount": 242,
     "openTargetCount": 128,
     "classifications": {
@@ -7282,7 +7288,7 @@
       "source": "OTA-TEC-0112-2026-DE",
       "target": "OTA-TEC-0112-NOX-SHIP-MK1",
       "contexts": [
-        "6-DE\" system: SYS:OTA:overtimearchive sourceOfTruth: false objectId: \"noxia-ship-frame-mk1\" canonicalId: \"OTA-TEC-0112-NOX-SHIP-MK1\" contexts: [\"noxia\"] mappings: noxia: objectId: \"mk1\" role: \"ship-frame\" entities: mentions: [] relations: requires: [] teaches: []",
+        "6-DE\" system: SYS:OTA:overtimearchive sourceOfTruth: false objectId: \"noxia-ship-frame-mk1\" canonicalId: \"OTA-TEC-0112-NOX-SHIP-MK1\" contexts: [\"noxia\"] mappings: noxia: objectId: \"noxia-ship-frame-mk1\" consumerKey: \"mk1\" role: \"ship-frame\" entities: mentions: [] r",
         "12. NOXIA- und SSF-Bezug NOXIA referenziert read-only: `sourceDocumentId=OTA-TEC-0112-2026-DE`, `canonicalId=OTA-TEC-0112-NOX-SHIP-MK1`, `objectId=noxia-ship-frame-mk1`, `mappingRole=ship-frame`. SSF-Lernmodule bleiben offen. ## 13. Relationen ```text Frachter Mk.I ├─ MAY_USE → Fra"
       ],
       "status": "unresolved",
@@ -7300,7 +7306,7 @@
       "source": "OTA-TEC-0113-2026-DE",
       "target": "OTA-TEC-0113-NOX-SHIP-FAST",
       "contexts": [
-        "-DE\" system: SYS:OTA:overtimearchive sourceOfTruth: false objectId: \"noxia-ship-frame-fast\" canonicalId: \"OTA-TEC-0113-NOX-SHIP-FAST\" contexts: [\"noxia\"] mappings: noxia: objectId: \"fast\" role: \"ship-frame\" entities: mentions: [] relations: requires: [] teaches: []",
+        "-DE\" system: SYS:OTA:overtimearchive sourceOfTruth: false objectId: \"noxia-ship-frame-fast\" canonicalId: \"OTA-TEC-0113-NOX-SHIP-FAST\" contexts: [\"noxia\"] mappings: noxia: objectId: \"noxia-ship-frame-fast\" consumerKey: \"fast\" role: \"ship-frame\" entities: mentions: []",
         "NOXIA. ## 12. NOXIA- und SSF-Bezug Read-only Mapping: `sourceDocumentId=OTA-TEC-0113-2026-DE`, `canonicalId=OTA-TEC-0113-NOX-SHIP-FAST`, `objectId=noxia-ship-frame-fast`, `mappingRole=ship-frame`. SSF-Lernmodule bleiben offen. ## 13. Relationen ```text Schnellfrachter ├─ MAY_USE →"
       ],
       "status": "unresolved",
@@ -7318,7 +7324,7 @@
       "source": "OTA-TEC-0114-2026-DE",
       "target": "OTA-TEC-0114-NOX-SHIP-HEAVY",
       "contexts": [
-        "DE\" system: SYS:OTA:overtimearchive sourceOfTruth: false objectId: \"noxia-ship-frame-heavy\" canonicalId: \"OTA-TEC-0114-NOX-SHIP-HEAVY\" contexts: [\"noxia\"] mappings: noxia: objectId: \"heavy\" role: \"ship-frame\" entities: mentions: [] relations: requires: [] teaches: []",
+        "DE\" system: SYS:OTA:overtimearchive sourceOfTruth: false objectId: \"noxia-ship-frame-heavy\" canonicalId: \"OTA-TEC-0114-NOX-SHIP-HEAVY\" contexts: [\"noxia\"] mappings: noxia: objectId: \"noxia-ship-frame-heavy\" consumerKey: \"heavy\" role: \"ship-frame\" entities: mentions:",
         "NOXIA-only. ## 12. NOXIA-/SSF-Bezug Read-only Mapping: `sourceDocumentId=OTA-TEC-0114-2026-DE`, `canonicalId=OTA-TEC-0114-NOX-SHIP-HEAVY`, `objectId=noxia-ship-frame-heavy`, `mappingRole=ship-frame`. SSF-Lernmodule offen. ## 13. Relationen ```text Schwerfrachter ├─ MAY_USE → standard"
       ],
       "status": "unresolved",
@@ -7336,7 +7342,7 @@
       "source": "OTA-TEC-0115-2026-DE",
       "target": "OTA-TEC-0115-NOX-SHIP-SCOUT",
       "contexts": [
-        "DE\" system: SYS:OTA:overtimearchive sourceOfTruth: false objectId: \"noxia-ship-frame-scout\" canonicalId: \"OTA-TEC-0115-NOX-SHIP-SCOUT\" contexts: [\"noxia\"] mappings: noxia: objectId: \"scout\" role: \"ship-frame\" entities: mentions: [] relations: requires: [] teaches: []",
+        "DE\" system: SYS:OTA:overtimearchive sourceOfTruth: false objectId: \"noxia-ship-frame-scout\" canonicalId: \"OTA-TEC-0115-NOX-SHIP-SCOUT\" contexts: [\"noxia\"] mappings: noxia: objectId: \"noxia-ship-frame-scout\" consumerKey: \"scout\" role: \"ship-frame\" entities: mentions:",
         "iben NOXIA. ## 12. NOXIA-/SSF-Bezug Read-only Mapping: `sourceDocumentId=OTA-TEC-0115-2026-DE`, `canonicalId=OTA-TEC-0115-NOX-SHIP-SCOUT`, `objectId=noxia-ship-frame-scout`, `mappingRole=ship-frame`. SSF-Lernpfade für Fernerkundung/Sensorik bleiben als Lücke markiert. ## 13. Relatione"
       ],
       "status": "unresolved",
@@ -7354,7 +7360,7 @@
       "source": "OTA-TEC-0116-2026-DE",
       "target": "OTA-TEC-0116-NOX-SHIP-PIONEER-CONSTRUCTOR",
       "contexts": [
-        "SYS:OTA:overtimearchive sourceOfTruth: false objectId: \"noxia-ship-frame-pioneer-constructor\" canonicalId: \"OTA-TEC-0116-NOX-SHIP-PIONEER-CONSTRUCTOR\" contexts: [\"noxia\"] mappings: noxia: objectId: \"pioneer\" role: \"ship-frame\" entities: mentions: [] relations: requires: [] teaches:",
+        "SYS:OTA:overtimearchive sourceOfTruth: false objectId: \"noxia-ship-frame-pioneer-constructor\" canonicalId: \"OTA-TEC-0116-NOX-SHIP-PIONEER-CONSTRUCTOR\" contexts: [\"noxia\"] mappings: noxia: objectId: \"noxia-ship-frame-pioneer-constructor\" consumerKey: \"pioneer\" role: \"ship-frame\" entiti",
         "lich NOXIA. ## 12. NOXIA-/SSF-Bezug Read-only Mapping: `sourceDocumentId=OTA-TEC-0116-2026-DE`, `canonicalId=OTA-TEC-0116-NOX-SHIP-PIONEER-CONSTRUCTOR`, `objectId=noxia-ship-frame-pioneer-constructor`, `mappingRole=ship-frame`. SSF-Lernpfade für autonome Bau-/Gründungslogistik bleiben offen. ## 13."
       ],
       "status": "unresolved",
@@ -7372,7 +7378,7 @@
       "source": "OTA-TEC-0117-2026-DE",
       "target": "OTA-TEC-0117-ORBITAL-SOLAR-ARRAY",
       "contexts": [
-        "system: SYS:OTA:overtimearchive sourceOfTruth: false objectId: \"orbital-station-solar-array\" canonicalId: \"OTA-TEC-0117-ORBITAL-SOLAR-ARRAY\" contexts: [\"noxia\"] mappings: noxia: objectId: \"solar_array\" role: \"station-module\" entities: mentions: [] relations: requires: [] t",
+        "system: SYS:OTA:overtimearchive sourceOfTruth: false objectId: \"orbital-station-solar-array\" canonicalId: \"OTA-TEC-0117-ORBITAL-SOLAR-ARRAY\" contexts: [\"noxia\"] mappings: noxia: objectId: \"orbital-station-solar-array\" consumerKey: \"solar_array\" role: \"station-module\" entitie",
         "ick“-Wert ist kein OTA-Leistungswert. ## NOXIA-Mapping `sourceDocumentId=OTA-TEC-0117-2026-DE`; `canonicalId=OTA-TEC-0117-ORBITAL-SOLAR-ARRAY`; `objectId=orbital-station-solar-array`; `mappingRole=station-module`. ## Engineering-Grenze KUEPER Engineering schließt Leistungsbereich, Speicher"
       ],
       "status": "unresolved",
@@ -7390,7 +7396,7 @@
       "source": "OTA-TEC-0118-2026-DE",
       "target": "OTA-TEC-0118-ORBITAL-DOCKING-BAY",
       "contexts": [
-        "system: SYS:OTA:overtimearchive sourceOfTruth: false objectId: \"orbital-station-docking-bay\" canonicalId: \"OTA-TEC-0118-ORBITAL-DOCKING-BAY\" contexts: [\"noxia\"] mappings: noxia: objectId: \"docking_bay\" role: \"station-module\" entities: mentions: [] relations: requires: [] t",
+        "system: SYS:OTA:overtimearchive sourceOfTruth: false objectId: \"orbital-station-docking-bay\" canonicalId: \"OTA-TEC-0118-ORBITAL-DOCKING-BAY\" contexts: [\"noxia\"] mappings: noxia: objectId: \"orbital-station-docking-bay\" consumerKey: \"docking_bay\" role: \"station-module\" entitie",
         "ockbucht als technische Typidentität. ## NOXIA-Mapping `sourceDocumentId=OTA-TEC-0118-2026-DE`; `canonicalId=OTA-TEC-0118-ORBITAL-DOCKING-BAY`; `objectId=orbital-station-docking-bay`; `mappingRole=station-module`. ## Engineering-Grenze KUEPER Engineering schließt Interface-Standard, Fahrze"
       ],
       "status": "unresolved",
@@ -7408,7 +7414,7 @@
       "source": "OTA-TEC-0119-2026-DE",
       "target": "OTA-TEC-0119-ORBITAL-HABITAT",
       "contexts": [
-        "stem: SYS:OTA:overtimearchive sourceOfTruth: false objectId: \"orbital-station-habitat-module\" canonicalId: \"OTA-TEC-0119-ORBITAL-HABITAT\" contexts: [\"noxia\"] mappings: noxia: objectId: \"habitat_module\" role: \"station-module\" entities: mentions: [] relations: requires: [\"O",
+        "stem: SYS:OTA:overtimearchive sourceOfTruth: false objectId: \"orbital-station-habitat-module\" canonicalId: \"OTA-TEC-0119-ORBITAL-HABITAT\" contexts: [\"noxia\"] mappings: noxia: objectId: \"orbital-station-habitat-module\" consumerKey: \"habitat_module\" role: \"station-module\" e",
         "satzung“ ist kein OTA-Kapazitätswert. ## NOXIA-Mapping `sourceDocumentId=OTA-TEC-0119-2026-DE`; `canonicalId=OTA-TEC-0119-ORBITAL-HABITAT`; `objectId=orbital-station-habitat-module`; `mappingRole=station-module`. ## Engineering-Grenze KUEPER Engineering schließt Crew-/Volumenmodell, EC"
       ],
       "status": "unresolved",
@@ -7426,7 +7432,7 @@
       "source": "OTA-TEC-0120-2026-DE",
       "target": "OTA-TEC-0120-ORBITAL-RESEARCH-LAB",
       "contexts": [
-        "system: SYS:OTA:overtimearchive sourceOfTruth: false objectId: \"orbital-station-research-lab\" canonicalId: \"OTA-TEC-0120-ORBITAL-RESEARCH-LAB\" contexts: [\"noxia\"] mappings: noxia: objectId: \"research_lab\" role: \"station-module\" entities: mentions: [] relations: requires: []",
+        "system: SYS:OTA:overtimearchive sourceOfTruth: false objectId: \"orbital-station-research-lab\" canonicalId: \"OTA-TEC-0120-ORBITAL-RESEARCH-LAB\" contexts: [\"noxia\"] mappings: noxia: objectId: \"orbital-station-research-lab\" consumerKey: \"research_lab\" role: \"station-module\" entit",
         "punkte“ sind kein technischer Output. ## NOXIA-Mapping `sourceDocumentId=OTA-TEC-0120-2026-DE`; `canonicalId=OTA-TEC-0120-ORBITAL-RESEARCH-LAB`; `objectId=orbital-station-research-lab`; `mappingRole=station-module`. ## Engineering-Grenze KUEPER Engineering soll Standardrack, Energie-/Thermi"
       ],
       "status": "unresolved",
@@ -7444,7 +7450,7 @@
       "source": "OTA-TEC-0121-2026-DE",
       "target": "OTA-TEC-0121-ORBITAL-OBSERVATORY",
       "contexts": [
-        "system: SYS:OTA:overtimearchive sourceOfTruth: false objectId: \"orbital-station-observatory\" canonicalId: \"OTA-TEC-0121-ORBITAL-OBSERVATORY\" contexts: [\"noxia\"] mappings: noxia: objectId: \"observatory\" role: \"station-module\" entities: mentions: [] relations: requires: [] t",
+        "system: SYS:OTA:overtimearchive sourceOfTruth: false objectId: \"orbital-station-observatory\" canonicalId: \"OTA-TEC-0121-ORBITAL-OBSERVATORY\" contexts: [\"noxia\"] mappings: noxia: objectId: \"orbital-station-observatory\" consumerKey: \"observatory\" role: \"station-module\" entitie",
         "eplaywirkung, kein OTA-Messparameter. ## NOXIA-Mapping `sourceDocumentId=OTA-TEC-0121-2026-DE`; `canonicalId=OTA-TEC-0121-ORBITAL-OBSERVATORY`; `objectId=orbital-station-observatory`; `mappingRole=station-module`. ## Engineering-Grenze KUEPER Engineering schließt Missions-/Instrumentklasse"
       ],
       "status": "unresolved",
@@ -15474,7 +15480,32 @@
         }
       ],
       "resolvedTarget": "OTA-KARTE-0002-Epochen-g-Profile-DE",
-      "sourceCount": 1,
+      "sourceCount": 2,
+      "priority": 0,
+      "title": "Gehirn-Epochen × g-Profile — Referenzmatrix",
+      "description": "Gehirn-Epochen × g-Profile — Referenzmatrix. Schnellreferenz für neuronale Entwicklungsepochen und korrespondierende g-Profilwerte.",
+      "descriptionStatus": "canonical",
+      "targetFile": "src/content/documents/OTA-KARTE-0002-Epochen-g-Profile-DE.md"
+    },
+    {
+      "source": "OTA-SCI-0021-2025-DE",
+      "target": "OTA-KARTE-0002",
+      "contexts": [
+        "s: [\"Mikrogravitation\", \"Gehirn\", \"Neuroplastizit\\u00e4t\", \"Raumfahrt\", \"ISS\"] relatedDocuments: - target: \"OTA-KARTE-0002-Epochen-g-Profile-DE\" relation: \"related\" context: \"Kurzreferenz derselben Matrix Gehirn-Epochen × g-Profile; Zeilen IV–V wurden von dort übe",
+        "IV. VOM ORBIT ZUM MARS 4.1 g-Profile **\\[S\\]** Für die Narrative werden drei Profile unterschieden (wie in OTA-KARTE-0002): > • 1g-only: überwiegend Erde > > • 0,38g-only: überwiegend Mars > > • Hybrid: wiederholte Wechsel (Erde ↔ Orbit ↔ Mars) 4.2 Warum 0g kein Mars-M",
+        "Epochen IV und V vervollständigt (Entscheidung Thomas, 2026-11-11). Die Zeilen IV–V stammen wörtlich aus OTA-KARTE-0002; II mit Primärquellen aus der Begutachtung vom 2026-11-11; III–IV neu formuliert, Setzungen als \\[S\\] gekennzeichnet. Kuratoranmerkung, Matrixz"
+      ],
+      "status": "resolved-base-id",
+      "classification": "base-id-resolved",
+      "candidates": [
+        {
+          "signature": "OTA-KARTE-0002-Epochen-g-Profile-DE",
+          "title": "Gehirn-Epochen × g-Profile — Referenzmatrix",
+          "file": "src/content/documents/OTA-KARTE-0002-Epochen-g-Profile-DE.md"
+        }
+      ],
+      "resolvedTarget": "OTA-KARTE-0002-Epochen-g-Profile-DE",
+      "sourceCount": 2,
       "priority": 0,
       "title": "Gehirn-Epochen × g-Profile — Referenzmatrix",
       "description": "Gehirn-Epochen × g-Profile — Referenzmatrix. Schnellreferenz für neuronale Entwicklungsepochen und korrespondierende g-Profilwerte.",
@@ -22498,7 +22529,7 @@
         }
       ],
       "resolvedTarget": "OTA-SCI-0017-2025-DE",
-      "sourceCount": 3,
+      "sourceCount": 4,
       "priority": 0,
       "title": "Superionisches Goldhydrid als Resonanzanker — Eine theoretische Erweiterung des AVI-Modells",
       "description": "Superionisches Goldhydrid unter Hochdruck: Entdeckungsdaten [R], Mechanismus [T], Anwendungshypothesen [H].",
@@ -22521,7 +22552,30 @@
         }
       ],
       "resolvedTarget": "OTA-SCI-0017-2025-DE",
-      "sourceCount": 3,
+      "sourceCount": 4,
+      "priority": 0,
+      "title": "Superionisches Goldhydrid als Resonanzanker — Eine theoretische Erweiterung des AVI-Modells",
+      "description": "Superionisches Goldhydrid unter Hochdruck: Entdeckungsdaten [R], Mechanismus [T], Anwendungshypothesen [H].",
+      "descriptionStatus": "canonical",
+      "targetFile": "src/content/documents/OTA-SCI-0017-2025-DE.md"
+    },
+    {
+      "source": "OTA-SCI-0106-2026-DE",
+      "target": "OTA-SCI-0017",
+      "contexts": [
+        "enienz und Umwelt auf je einen Satz gekürzt, Folgedossier/Arbeitspakete auf OTA-Aufgaben reduziert, Bezüge zu OTA-SCI-0017 und OTA-TEC-0021 ergänzt. Langfassung über Git (v0.2). |"
+      ],
+      "status": "resolved-base-id",
+      "classification": "base-id-resolved",
+      "candidates": [
+        {
+          "signature": "OTA-SCI-0017-2025-DE",
+          "title": "Superionisches Goldhydrid als Resonanzanker — Eine theoretische Erweiterung des AVI-Modells",
+          "file": "src/content/documents/OTA-SCI-0017-2025-DE.md"
+        }
+      ],
+      "resolvedTarget": "OTA-SCI-0017-2025-DE",
+      "sourceCount": 4,
       "priority": 0,
       "title": "Superionisches Goldhydrid als Resonanzanker — Eine theoretische Erweiterung des AVI-Modells",
       "description": "Superionisches Goldhydrid unter Hochdruck: Entdeckungsdaten [R], Mechanismus [T], Anwendungshypothesen [H].",
@@ -22545,7 +22599,7 @@
         }
       ],
       "resolvedTarget": "OTA-SCI-0017-2025-DE",
-      "sourceCount": 3,
+      "sourceCount": 4,
       "priority": 0,
       "title": "Superionisches Goldhydrid als Resonanzanker — Eine theoretische Erweiterung des AVI-Modells",
       "description": "Superionisches Goldhydrid unter Hochdruck: Entdeckungsdaten [R], Mechanismus [T], Anwendungshypothesen [H].",
@@ -22563,7 +22617,7 @@
       "classification": "existing",
       "candidates": [],
       "resolvedTarget": "OTA-SCI-0017-2025-DE",
-      "sourceCount": 3,
+      "sourceCount": 4,
       "priority": 0,
       "title": "Superionisches Goldhydrid als Resonanzanker — Eine theoretische Erweiterung des AVI-Modells",
       "description": "Superionisches Goldhydrid unter Hochdruck: Entdeckungsdaten [R], Mechanismus [T], Anwendungshypothesen [H].",
@@ -22580,7 +22634,7 @@
       "classification": "existing",
       "candidates": [],
       "resolvedTarget": "OTA-SCI-0017-2025-DE",
-      "sourceCount": 3,
+      "sourceCount": 4,
       "priority": 0,
       "title": "Superionisches Goldhydrid als Resonanzanker — Eine theoretische Erweiterung des AVI-Modells",
       "description": "Superionisches Goldhydrid unter Hochdruck: Entdeckungsdaten [R], Mechanismus [T], Anwendungshypothesen [H].",
@@ -22598,7 +22652,25 @@
       "classification": "existing",
       "candidates": [],
       "resolvedTarget": "OTA-SCI-0017-2025-DE",
-      "sourceCount": 3,
+      "sourceCount": 4,
+      "priority": 0,
+      "title": "Superionisches Goldhydrid als Resonanzanker — Eine theoretische Erweiterung des AVI-Modells",
+      "description": "Superionisches Goldhydrid unter Hochdruck: Entdeckungsdaten [R], Mechanismus [T], Anwendungshypothesen [H].",
+      "descriptionStatus": "canonical",
+      "targetFile": "src/content/documents/OTA-SCI-0017-2025-DE.md"
+    },
+    {
+      "source": "OTA-SCI-0106-2026-DE",
+      "target": "OTA-SCI-0017-2025-DE",
+      "contexts": [
+        "llen und kollektiven QCD-Korrelationen bei Au+Au-Kollisionen.\" descriptionStatus: \"explicit\" - target: \"OTA-SCI-0017-2025-DE\" relation: \"related\" context: \"Superionisches Goldhydrid als Resonanzanker – Gold im AVI-Kontext.\" descriptionStatus: \"explicit\" - targ",
+        "ge (siehe §12); noch keine Vollständigkeit behaupten; 2. den **Werkbezug**: Gold im AVI- und Technikkontext (`OTA-SCI-0017-2025-DE`, `OTA-TEC-0021-2025-DE`), ohne neue Setzung; 3. die Regel, KG-Kandidaten nur als Vorschläge mit Provenienz weiterzureichen, keinen stillen Kanontran"
+      ],
+      "status": "resolved",
+      "classification": "existing",
+      "candidates": [],
+      "resolvedTarget": "OTA-SCI-0017-2025-DE",
+      "sourceCount": 4,
       "priority": 0,
       "title": "Superionisches Goldhydrid als Resonanzanker — Eine theoretische Erweiterung des AVI-Modells",
       "description": "Superionisches Goldhydrid unter Hochdruck: Entdeckungsdaten [R], Mechanismus [T], Anwendungshypothesen [H].",
@@ -22801,8 +22873,9 @@
       "source": "OTA-SCI-0021-2025-DE",
       "target": "OTA-SCI-0019-2025-DE",
       "contexts": [
-        "s: [\"Mikrogravitation\", \"Gehirn\", \"Neuroplastizit\\u00e4t\", \"Raumfahrt\", \"ISS\"] relatedDocuments: - target: \"OTA-SCI-0019-2025-DE\" relation: \"references\" context: \"Die kuratorische Einordnung benennt die Mousley-Studie ausdrücklich als Ausgangsreferenz.\" descriptionS",
-        "gsdatum: 09. Januar 2026\\]* ANMERKUNG DES KURATORS **\\[I\\]** *Kuratorische Einordnung* Die Mousley-Studie (OTA-SCI-0019-2025-DE) beschreibt Epochen und Wendepunkte der Gehirnentwicklung über die Lebensspanne --- jedoch unter 1g. Raumfahrtmedizinische Studien der letzten Jahre"
+        "-Epochen × g-Profile; Zeilen IV–V wurden von dort übernommen.\" descriptionStatus: \"explicit\" - target: \"OTA-SCI-0019-2025-DE\" relation: \"references\" context: \"Die kuratorische Einordnung benennt die Mousley-Studie ausdrücklich als Ausgangsreferenz.\" descriptionS",
+        "gsdatum: 09. Januar 2026\\]* ANMERKUNG DES KURATORS **\\[I\\]** *Kuratorische Einordnung* Die Mousley-Studie (OTA-SCI-0019-2025-DE) beschreibt Epochen und Wendepunkte der Gehirnentwicklung über die Lebensspanne --- jedoch unter 1g. Raumfahrtmedizinische Studien der letzten Jahre",
+        "ey, A. et al. (2025). Topological turning points across the human lifespan. *Nature Communications* – siehe OTA-SCI-0019-2025-DE. VII. REVISIONSVERMERK - **v1.1 (2026-11-11):** Abschnitte II–IV ergänzt und Matrix V um die Epochen IV und V vervollständigt (Entscheidung Thoma"
       ],
       "status": "resolved",
       "classification": "existing",
@@ -23020,7 +23093,7 @@
       "sourceCount": 1,
       "priority": 0,
       "title": "Mikrogravitation und Gehirnarchitektur",
-      "description": "Mikrogravitation und Gehirnarchitektur: ISS-Studien [R], neuroplastische Anpassungstheorien [T/S].",
+      "description": "Mikrogravitation und Gehirnarchitektur: ISS-Studien [R], Anpassungsdeutungen [T/I], Übertragung auf Mars-Gravitation und vollständige Matrix Epochen × g-Profile [S].",
       "descriptionStatus": "canonical",
       "targetFile": "src/content/documents/OTA-SCI-0021-2025-DE.md"
     },
@@ -23309,7 +23382,7 @@
       "source": "OTA-SCI-0022-2025-DE",
       "target": "OTA-SCI-0023-2025-DE",
       "contexts": [
-        "Status: [\"R\"] tags: [\"Mars\", \"Zhurong\", \"Wasser\", \"Amazonis\", \"Planetologie\", \"Geologie\"] relatedDocuments: [\"OTA-SCI-0023-2025-DE\"] summary: \"Analyse der Zhurong-Rover-Daten: Nachweis von salzhaltigen Schichten in der Utopia Planitia, die auf flüssiges Wasser bis vor ~750 Millio"
+        "Status: [\"R\"] tags: [\"Mars\", \"Zhurong\", \"Wasser\", \"Amazonis\", \"Planetologie\", \"Geologie\"] relatedDocuments: [\"OTA-SCI-0023-2025-DE\"] review: last: \"2026-11-12\" next: \"2027-05-12\" reason: \"Unbelegtes Realdossier mit Fehlern: Korrektur und Umzug des Realteils nach KUE (EXT-OT"
       ],
       "status": "resolved",
       "classification": "existing",
@@ -24551,7 +24624,7 @@
       "source": "OTA-SCI-0091-2026-DE",
       "target": "OTA-SCI-0037-2026-DE",
       "contexts": [
-        "\"Pantheon+\", \"DES-SN5YR\", \"DESI\", \"BAO\", \"CMB\", \"w0waCDM\", \"Expansionsgeschichte\", \"AVI\"] relatedDocuments: [\"OTA-SCI-0037-2026-DE\"] summary: \"Wissenschaftliches Evidenzdossier zum Unite-Hubble-Diagramm aus Pantheon+ und DES-SN5YR. Dokumentiert die 2.884-SN-Ia-Stichprobe, die ver"
+        "\"Pantheon+\", \"DES-SN5YR\", \"DESI\", \"BAO\", \"CMB\", \"w0waCDM\", \"Expansionsgeschichte\", \"AVI\"] relatedDocuments: [\"OTA-SCI-0037-2026-DE\"] summary: \"Brückendokument: Was der Supernovae-Unite-Datensatz für AVI leisten kann und was nicht (Evidenzgrenze, Bezug zu Test B, Kanonregel). Beob"
       ],
       "status": "resolved",
       "classification": "existing",
@@ -27664,7 +27737,7 @@
       "sourceCount": 5,
       "priority": 0,
       "title": "Reproduktion und Entwicklung von der Konzeption bis zum Erwachsenenalter in Mikro- und Teilgravitation",
-      "description": "Evidenzdossier zu menschlicher Reproduktion, Schwangerschaft, Geburt und Entwicklung bis zum Erwachsenenalter unter Mikro- und Teilgravitation. Trennt Human-, Tier- und Analogdaten von offenen biologischen Schwellenwerten und unterscheidet vier Siedlungsfähigkeitsklassen ohne daraus eine sichere Mindestgravitation abzuleiten.",
+      "description": "Brückendokument zu Reproduktion und Entwicklung unter Mikro- und Teilgravitation: Evidenzregel, Konsequenzen für Mars, Mond und Stationen, Engineering-Grenze und die vier kanonischen Siedlungsfähigkeitsklassen (§19); der Realteil liegt in DOC:KUE:KUE-SCI-0187-2026-DE.",
       "descriptionStatus": "canonical",
       "targetFile": "src/content/documents/OTA-SCI-0086-2026-DE.md"
     },
@@ -27687,7 +27760,7 @@
       "sourceCount": 5,
       "priority": 0,
       "title": "Reproduktion und Entwicklung von der Konzeption bis zum Erwachsenenalter in Mikro- und Teilgravitation",
-      "description": "Evidenzdossier zu menschlicher Reproduktion, Schwangerschaft, Geburt und Entwicklung bis zum Erwachsenenalter unter Mikro- und Teilgravitation. Trennt Human-, Tier- und Analogdaten von offenen biologischen Schwellenwerten und unterscheidet vier Siedlungsfähigkeitsklassen ohne daraus eine sichere Mindestgravitation abzuleiten.",
+      "description": "Brückendokument zu Reproduktion und Entwicklung unter Mikro- und Teilgravitation: Evidenzregel, Konsequenzen für Mars, Mond und Stationen, Engineering-Grenze und die vier kanonischen Siedlungsfähigkeitsklassen (§19); der Realteil liegt in DOC:KUE:KUE-SCI-0187-2026-DE.",
       "descriptionStatus": "canonical",
       "targetFile": "src/content/documents/OTA-SCI-0086-2026-DE.md"
     },
@@ -27710,7 +27783,7 @@
       "sourceCount": 5,
       "priority": 0,
       "title": "Reproduktion und Entwicklung von der Konzeption bis zum Erwachsenenalter in Mikro- und Teilgravitation",
-      "description": "Evidenzdossier zu menschlicher Reproduktion, Schwangerschaft, Geburt und Entwicklung bis zum Erwachsenenalter unter Mikro- und Teilgravitation. Trennt Human-, Tier- und Analogdaten von offenen biologischen Schwellenwerten und unterscheidet vier Siedlungsfähigkeitsklassen ohne daraus eine sichere Mindestgravitation abzuleiten.",
+      "description": "Brückendokument zu Reproduktion und Entwicklung unter Mikro- und Teilgravitation: Evidenzregel, Konsequenzen für Mars, Mond und Stationen, Engineering-Grenze und die vier kanonischen Siedlungsfähigkeitsklassen (§19); der Realteil liegt in DOC:KUE:KUE-SCI-0187-2026-DE.",
       "descriptionStatus": "canonical",
       "targetFile": "src/content/documents/OTA-SCI-0086-2026-DE.md"
     },
@@ -27734,7 +27807,7 @@
       "sourceCount": 5,
       "priority": 0,
       "title": "Reproduktion und Entwicklung von der Konzeption bis zum Erwachsenenalter in Mikro- und Teilgravitation",
-      "description": "Evidenzdossier zu menschlicher Reproduktion, Schwangerschaft, Geburt und Entwicklung bis zum Erwachsenenalter unter Mikro- und Teilgravitation. Trennt Human-, Tier- und Analogdaten von offenen biologischen Schwellenwerten und unterscheidet vier Siedlungsfähigkeitsklassen ohne daraus eine sichere Mindestgravitation abzuleiten.",
+      "description": "Brückendokument zu Reproduktion und Entwicklung unter Mikro- und Teilgravitation: Evidenzregel, Konsequenzen für Mars, Mond und Stationen, Engineering-Grenze und die vier kanonischen Siedlungsfähigkeitsklassen (§19); der Realteil liegt in DOC:KUE:KUE-SCI-0187-2026-DE.",
       "descriptionStatus": "canonical",
       "targetFile": "src/content/documents/OTA-SCI-0086-2026-DE.md"
     },
@@ -27757,7 +27830,7 @@
       "sourceCount": 5,
       "priority": 0,
       "title": "Reproduktion und Entwicklung von der Konzeption bis zum Erwachsenenalter in Mikro- und Teilgravitation",
-      "description": "Evidenzdossier zu menschlicher Reproduktion, Schwangerschaft, Geburt und Entwicklung bis zum Erwachsenenalter unter Mikro- und Teilgravitation. Trennt Human-, Tier- und Analogdaten von offenen biologischen Schwellenwerten und unterscheidet vier Siedlungsfähigkeitsklassen ohne daraus eine sichere Mindestgravitation abzuleiten.",
+      "description": "Brückendokument zu Reproduktion und Entwicklung unter Mikro- und Teilgravitation: Evidenzregel, Konsequenzen für Mars, Mond und Stationen, Engineering-Grenze und die vier kanonischen Siedlungsfähigkeitsklassen (§19); der Realteil liegt in DOC:KUE:KUE-SCI-0187-2026-DE.",
       "descriptionStatus": "canonical",
       "targetFile": "src/content/documents/OTA-SCI-0086-2026-DE.md"
     },
@@ -27775,7 +27848,7 @@
       "sourceCount": 3,
       "priority": 0,
       "title": "Reproduktion und Entwicklung von der Konzeption bis zum Erwachsenenalter in Mikro- und Teilgravitation",
-      "description": "Evidenzdossier zu menschlicher Reproduktion, Schwangerschaft, Geburt und Entwicklung bis zum Erwachsenenalter unter Mikro- und Teilgravitation. Trennt Human-, Tier- und Analogdaten von offenen biologischen Schwellenwerten und unterscheidet vier Siedlungsfähigkeitsklassen ohne daraus eine sichere Mindestgravitation abzuleiten.",
+      "description": "Brückendokument zu Reproduktion und Entwicklung unter Mikro- und Teilgravitation: Evidenzregel, Konsequenzen für Mars, Mond und Stationen, Engineering-Grenze und die vier kanonischen Siedlungsfähigkeitsklassen (§19); der Realteil liegt in DOC:KUE:KUE-SCI-0187-2026-DE.",
       "descriptionStatus": "canonical",
       "targetFile": "src/content/documents/OTA-SCI-0086-2026-DE.md"
     },
@@ -27793,7 +27866,7 @@
       "sourceCount": 3,
       "priority": 0,
       "title": "Reproduktion und Entwicklung von der Konzeption bis zum Erwachsenenalter in Mikro- und Teilgravitation",
-      "description": "Evidenzdossier zu menschlicher Reproduktion, Schwangerschaft, Geburt und Entwicklung bis zum Erwachsenenalter unter Mikro- und Teilgravitation. Trennt Human-, Tier- und Analogdaten von offenen biologischen Schwellenwerten und unterscheidet vier Siedlungsfähigkeitsklassen ohne daraus eine sichere Mindestgravitation abzuleiten.",
+      "description": "Brückendokument zu Reproduktion und Entwicklung unter Mikro- und Teilgravitation: Evidenzregel, Konsequenzen für Mars, Mond und Stationen, Engineering-Grenze und die vier kanonischen Siedlungsfähigkeitsklassen (§19); der Realteil liegt in DOC:KUE:KUE-SCI-0187-2026-DE.",
       "descriptionStatus": "canonical",
       "targetFile": "src/content/documents/OTA-SCI-0086-2026-DE.md"
     },
@@ -27810,7 +27883,7 @@
       "sourceCount": 3,
       "priority": 0,
       "title": "Reproduktion und Entwicklung von der Konzeption bis zum Erwachsenenalter in Mikro- und Teilgravitation",
-      "description": "Evidenzdossier zu menschlicher Reproduktion, Schwangerschaft, Geburt und Entwicklung bis zum Erwachsenenalter unter Mikro- und Teilgravitation. Trennt Human-, Tier- und Analogdaten von offenen biologischen Schwellenwerten und unterscheidet vier Siedlungsfähigkeitsklassen ohne daraus eine sichere Mindestgravitation abzuleiten.",
+      "description": "Brückendokument zu Reproduktion und Entwicklung unter Mikro- und Teilgravitation: Evidenzregel, Konsequenzen für Mars, Mond und Stationen, Engineering-Grenze und die vier kanonischen Siedlungsfähigkeitsklassen (§19); der Realteil liegt in DOC:KUE:KUE-SCI-0187-2026-DE.",
       "descriptionStatus": "canonical",
       "targetFile": "src/content/documents/OTA-SCI-0086-2026-DE.md"
     },
@@ -28064,7 +28137,7 @@
       "sourceCount": 2,
       "priority": 0,
       "title": "Supernovae Unite — 2.884 Typ-Ia-Supernovae und die Evidenz für zeitabhängige Dunkle Energie",
-      "description": "Wissenschaftliches Evidenzdossier zum Unite-Hubble-Diagramm aus Pantheon+ und DES-SN5YR. Dokumentiert die 2.884-SN-Ia-Stichprobe, die verbesserten systematischen Kontrollen und die nur modellabhängige, statistisch noch nicht entscheidende Präferenz für zeitabhängige Dunkle Energie. Trennt den Beobachtungsbefund strikt von einer möglichen späteren AVI-Nutzung.",
+      "description": "Brückendokument: Was der Supernovae-Unite-Datensatz für AVI leisten kann und was nicht (Evidenzgrenze, Bezug zu Test B, Kanonregel). Beobachtungsbefund, Zahlen und Systematik in KUE-SCI-0191.",
       "descriptionStatus": "canonical",
       "targetFile": "src/content/documents/OTA-SCI-0091-2026-DE.md"
     },
@@ -28081,7 +28154,7 @@
       "sourceCount": 2,
       "priority": 0,
       "title": "Supernovae Unite — 2.884 Typ-Ia-Supernovae und die Evidenz für zeitabhängige Dunkle Energie",
-      "description": "Wissenschaftliches Evidenzdossier zum Unite-Hubble-Diagramm aus Pantheon+ und DES-SN5YR. Dokumentiert die 2.884-SN-Ia-Stichprobe, die verbesserten systematischen Kontrollen und die nur modellabhängige, statistisch noch nicht entscheidende Präferenz für zeitabhängige Dunkle Energie. Trennt den Beobachtungsbefund strikt von einer möglichen späteren AVI-Nutzung.",
+      "description": "Brückendokument: Was der Supernovae-Unite-Datensatz für AVI leisten kann und was nicht (Evidenzgrenze, Bezug zu Test B, Kanonregel). Beobachtungsbefund, Zahlen und Systematik in KUE-SCI-0191.",
       "descriptionStatus": "canonical",
       "targetFile": "src/content/documents/OTA-SCI-0091-2026-DE.md"
     },
@@ -28429,10 +28502,10 @@
       "targetFile": "src/content/documents/OTA-SCI-0102-2026-DE.md"
     },
     {
-      "source": "OTA-SCI-0106-2026-DE",
+      "source": "OTA-SCI-0107-2026-DE",
       "target": "OTA-SCI-0105",
       "contexts": [
-        "*137**, 132301 (2026); https://arxiv.org/abs/2604.06434 ; Veröffentlichungsdatum 22.09.2026. **Abgrenzung zu OTA-SCI-0105:** Dort geht es um seltene b→s μ⁺μ⁻-Zerfälle und Standardmodellspannungen im Flavour-Sektor. Hier um kollektive QCD-Dynamik und das Phasendiagramm. G"
+        "lltext und Daten nachtragen; keine Vereinheitlichung ungleichartiger Signifikanzen. ## Gegenüberstellung mit OTA-SCI-0105 **STAR:** Kollektive stark wechselwirkende Materie in Goldionenkollisionen; Eigenschaften des QCD-Mediums. **CMS/LHCb:** Seltene Beauty-Zerfälle u"
       ],
       "status": "resolved-base-id",
       "classification": "base-id-resolved",
@@ -28452,10 +28525,12 @@
       "targetFile": "src/content/documents/OTA-SCI-0105-2026-DE.md"
     },
     {
-      "source": "OTA-SCI-0107-2026-DE",
+      "source": "OTA-SCI-0120-2026-DE",
       "target": "OTA-SCI-0105",
       "contexts": [
-        "lltext und Daten nachtragen; keine Vereinheitlichung ungleichartiger Signifikanzen. ## Gegenüberstellung mit OTA-SCI-0105 **STAR:** Kollektive stark wechselwirkende Materie in Goldionenkollisionen; Eigenschaften des QCD-Mediums. **CMS/LHCb:** Seltene Beauty-Zerfälle u"
+        "uktur. - Weitere Daten, systematische Prüfungen und unabhängige Bestätigung sind notwendig. ## Abgrenzung zu OTA-SCI-0105 [R/I] Der bereits vorhandene Eintrag **OTA-SCI-0105-2026-DE** behandelt unter anderem den Übergang **b → s μ⁺μ⁻** und Winkelobservablen des Zerfalls",
+        "kanzen noch die Residuen oder Modellinterpretationen dürfen als austauschbar behandelt werden. Kreuzverweis: [OTA-SCI-0105](./OTA-SCI-0105-2026-DE.md). ## Projektschnittstellen und Transferregeln - **KG:** Eintrag als quellengebundene Evidenz zu seltenem B-Meson-Zerfall;",
+        "d Transferregeln - **KG:** Eintrag als quellengebundene Evidenz zu seltenem B-Meson-Zerfall; Referenzkante zu OTA-SCI-0105; keine voreilige „Neue Physik entdeckt“-Relation. - **AVI / AVI-P:** kein erfüllter T1–T4-Test. Weder Modellparameter noch Beobachtungsstatus anpasse"
       ],
       "status": "resolved-base-id",
       "classification": "base-id-resolved",
@@ -28485,7 +28560,7 @@
       "classification": "existing",
       "candidates": [],
       "resolvedTarget": "OTA-SCI-0105-2026-DE",
-      "sourceCount": 2,
+      "sourceCount": 3,
       "priority": 0,
       "title": "Seltene b→sμμ-Zerfälle – CMS- und LHCb-Spannungen mit dem Standardmodell",
       "description": "Beobachtungsnotiz zu CMS-Kombinationsanalysen seltener Beauty-Hadron-Zerfälle und LHCb-Winkelmessungen: Hinweise auf Spannungen im Übergang b→s μ+μ−, jedoch keine gesicherte neue Physik; hadronische Modellunsicherheiten und Korrelationen zwischen Kanälen bleiben wesentlich.",
@@ -28502,7 +28577,26 @@
       "classification": "existing",
       "candidates": [],
       "resolvedTarget": "OTA-SCI-0105-2026-DE",
-      "sourceCount": 2,
+      "sourceCount": 3,
+      "priority": 0,
+      "title": "Seltene b→sμμ-Zerfälle – CMS- und LHCb-Spannungen mit dem Standardmodell",
+      "description": "Beobachtungsnotiz zu CMS-Kombinationsanalysen seltener Beauty-Hadron-Zerfälle und LHCb-Winkelmessungen: Hinweise auf Spannungen im Übergang b→s μ+μ−, jedoch keine gesicherte neue Physik; hadronische Modellunsicherheiten und Korrelationen zwischen Kanälen bleiben wesentlich.",
+      "descriptionStatus": "canonical",
+      "targetFile": "src/content/documents/OTA-SCI-0105-2026-DE.md"
+    },
+    {
+      "source": "OTA-SCI-0120-2026-DE",
+      "target": "OTA-SCI-0105-2026-DE",
+      "contexts": [
+        "\"Flavour-Physik\", \"Myonen\", \"seltene Zerfälle\", \"Standardmodell\", \"Zeptoversum\", \"AVI-P\"] relatedDocuments: [\"OTA-SCI-0105-2026-DE\"] summary: \"LHCb berichtete am 3. November 2026 erstmals Evidenz aus einem einzelnen Experiment für den stark unterdrückten Zerfall B⁰→μ⁺μ⁻ mit 3,2 σ",
+        "unabhängige Bestätigung sind notwendig. ## Abgrenzung zu OTA-SCI-0105 [R/I] Der bereits vorhandene Eintrag **OTA-SCI-0105-2026-DE** behandelt unter anderem den Übergang **b → s μ⁺μ⁻** und Winkelobservablen des Zerfalls **B⁰ → K*⁰ μ⁺μ⁻**. Der hier beschriebene **B⁰ → μ⁺μ⁻**-Kanal",
+        "Residuen oder Modellinterpretationen dürfen als austauschbar behandelt werden. Kreuzverweis: [OTA-SCI-0105](./OTA-SCI-0105-2026-DE.md). ## Projektschnittstellen und Transferregeln - **KG:** Eintrag als quellengebundene Evidenz zu seltenem B-Meson-Zerfall; Referenzkante zu OTA-SC"
+      ],
+      "status": "resolved",
+      "classification": "existing",
+      "candidates": [],
+      "resolvedTarget": "OTA-SCI-0105-2026-DE",
+      "sourceCount": 3,
       "priority": 0,
       "title": "Seltene b→sμμ-Zerfälle – CMS- und LHCb-Spannungen mit dem Standardmodell",
       "description": "Beobachtungsnotiz zu CMS-Kombinationsanalysen seltener Beauty-Hadron-Zerfälle und LHCb-Winkelmessungen: Hinweise auf Spannungen im Übergang b→s μ+μ−, jedoch keine gesicherte neue Physik; hadronische Modellunsicherheiten und Korrelationen zwischen Kanälen bleiben wesentlich.",
@@ -28522,7 +28616,7 @@
       "sourceCount": 1,
       "priority": 0,
       "title": "Gold über die Skalen – Nukleosynthese, Material, Ressourcen und Bedeutungen",
-      "description": "Skalenübergreifendes, quellenbasiertes Grundlagen- und Forschungsdossier zu Gold: astrophysikalische Herkunft, chemische und materialphysikalische Eigenschaften, geologische Lagerstätten, Technik, Recycling sowie ein ausdrücklich separater STAR-Schwerionenbefund; gesellschaftliche Deutungen sind von physikalischen Aussagen getrennt.",
+      "description": "Schlankes Brückendokument zu Gold über die Skalen: Trennregel zwischen Nukleosynthese, Material, Lagerstätten, Schwerionenphysik und gesellschaftlicher Deutung, Vergleichsmatrix und OTA-interner Index; der Realteil liegt in DOC:KUE:KUE-SCI-0195-2026-DE.",
       "descriptionStatus": "canonical",
       "targetFile": "src/content/documents/OTA-SCI-0106-2026-DE.md"
     },
@@ -28638,7 +28732,7 @@
       "sourceCount": 1,
       "priority": 0,
       "title": "GW250114 – Hawkings Flächensatz, Kerr-Ringdown und starke Gravitation",
-      "description": "Quellengebundene Beobachtungsnotiz zum außergewöhnlich klaren Gravitationswellensignal GW250114: starker Test des klassischen Hawking-Flächensatzes und der Kerr-Ringdown-Dynamik. Unterscheidet die 2025er Flächenanalyse von 2026er Spektroskopie und modellabhängigen Horizontstudien; weder Hawking-Strahlung noch Quantengravitation sind nachgewiesen.",
+      "description": "Brückendokument zu GW250114: kurze Grundinformation zum Flächensatz- und Kerr-Test mit Verweis auf KUE-SCI-0196; AVI-P-Filter und Übergaben an KG, SSF und SCION. Weder Hawking-Strahlung noch Quantengravitation sind nachgewiesen.",
       "descriptionStatus": "canonical",
       "targetFile": "src/content/documents/OTA-SCI-0113-2026-DE.md"
     },
@@ -29918,7 +30012,7 @@
         }
       ],
       "resolvedTarget": "OTA-TEC-0021-2025-DE",
-      "sourceCount": 2,
+      "sourceCount": 3,
       "priority": 0,
       "title": "MOF-STABILISIERUNG FÜR SUPERIONISCHES GOLDHYDRID",
       "description": "Au₂Hₓ und MOF-Konfinement: realer Hochdruck-Anker [R], offene Stabilisierungshypothese [H] und fiktionale Anwendung [S/F].",
@@ -29941,7 +30035,30 @@
         }
       ],
       "resolvedTarget": "OTA-TEC-0021-2025-DE",
-      "sourceCount": 2,
+      "sourceCount": 3,
+      "priority": 0,
+      "title": "MOF-STABILISIERUNG FÜR SUPERIONISCHES GOLDHYDRID",
+      "description": "Au₂Hₓ und MOF-Konfinement: realer Hochdruck-Anker [R], offene Stabilisierungshypothese [H] und fiktionale Anwendung [S/F].",
+      "descriptionStatus": "canonical",
+      "targetFile": "src/content/documents/OTA-TEC-0021-2025-DE.md"
+    },
+    {
+      "source": "OTA-SCI-0106-2026-DE",
+      "target": "OTA-TEC-0021",
+      "contexts": [
+        "auf je einen Satz gekürzt, Folgedossier/Arbeitspakete auf OTA-Aufgaben reduziert, Bezüge zu OTA-SCI-0017 und OTA-TEC-0021 ergänzt. Langfassung über Git (v0.2). |"
+      ],
+      "status": "resolved-base-id",
+      "classification": "base-id-resolved",
+      "candidates": [
+        {
+          "signature": "OTA-TEC-0021-2025-DE",
+          "title": "MOF-STABILISIERUNG FÜR SUPERIONISCHES GOLDHYDRID",
+          "file": "src/content/documents/OTA-TEC-0021-2025-DE.md"
+        }
+      ],
+      "resolvedTarget": "OTA-TEC-0021-2025-DE",
+      "sourceCount": 3,
       "priority": 0,
       "title": "MOF-STABILISIERUNG FÜR SUPERIONISCHES GOLDHYDRID",
       "description": "Au₂Hₓ und MOF-Konfinement: realer Hochdruck-Anker [R], offene Stabilisierungshypothese [H] und fiktionale Anwendung [S/F].",
@@ -29959,7 +30076,7 @@
       "classification": "existing",
       "candidates": [],
       "resolvedTarget": "OTA-TEC-0021-2025-DE",
-      "sourceCount": 3,
+      "sourceCount": 4,
       "priority": 0,
       "title": "MOF-STABILISIERUNG FÜR SUPERIONISCHES GOLDHYDRID",
       "description": "Au₂Hₓ und MOF-Konfinement: realer Hochdruck-Anker [R], offene Stabilisierungshypothese [H] und fiktionale Anwendung [S/F].",
@@ -29978,7 +30095,7 @@
       "classification": "existing",
       "candidates": [],
       "resolvedTarget": "OTA-TEC-0021-2025-DE",
-      "sourceCount": 3,
+      "sourceCount": 4,
       "priority": 0,
       "title": "MOF-STABILISIERUNG FÜR SUPERIONISCHES GOLDHYDRID",
       "description": "Au₂Hₓ und MOF-Konfinement: realer Hochdruck-Anker [R], offene Stabilisierungshypothese [H] und fiktionale Anwendung [S/F].",
@@ -29996,7 +30113,25 @@
       "classification": "existing",
       "candidates": [],
       "resolvedTarget": "OTA-TEC-0021-2025-DE",
-      "sourceCount": 3,
+      "sourceCount": 4,
+      "priority": 0,
+      "title": "MOF-STABILISIERUNG FÜR SUPERIONISCHES GOLDHYDRID",
+      "description": "Au₂Hₓ und MOF-Konfinement: realer Hochdruck-Anker [R], offene Stabilisierungshypothese [H] und fiktionale Anwendung [S/F].",
+      "descriptionStatus": "canonical",
+      "targetFile": "src/content/documents/OTA-TEC-0021-2025-DE.md"
+    },
+    {
+      "source": "OTA-SCI-0106-2026-DE",
+      "target": "OTA-TEC-0021-2025-DE",
+      "contexts": [
+        "ionisches Goldhydrid als Resonanzanker – Gold im AVI-Kontext.\" descriptionStatus: \"explicit\" - target: \"OTA-TEC-0021-2025-DE\" relation: \"related\" context: \"MOF-Stabilisierung für superionisches Goldhydrid – Gold im Technikkontext.\" descriptionStatus: \"explicit\"",
+        "ne Vollständigkeit behaupten; 2. den **Werkbezug**: Gold im AVI- und Technikkontext (`OTA-SCI-0017-2025-DE`, `OTA-TEC-0021-2025-DE`), ohne neue Setzung; 3. die Regel, KG-Kandidaten nur als Vorschläge mit Provenienz weiterzureichen, keinen stillen Kanontransfer. ## Quellenanker -"
+      ],
+      "status": "resolved",
+      "classification": "existing",
+      "candidates": [],
+      "resolvedTarget": "OTA-TEC-0021-2025-DE",
+      "sourceCount": 4,
       "priority": 0,
       "title": "MOF-STABILISIERUNG FÜR SUPERIONISCHES GOLDHYDRID",
       "description": "Au₂Hₓ und MOF-Konfinement: realer Hochdruck-Anker [R], offene Stabilisierungshypothese [H] und fiktionale Anwendung [S/F].",
@@ -30775,7 +30910,7 @@
       "source": "OTA-TEC-0029-2048-DE",
       "target": "OTA-TEC-0028-2048-DE",
       "contexts": [
-        "ensorik\", \"LOD\", \"Optische Uhren\", \"SQUID\", \"Atominterferometer\", \"AVI\", \"2048\", \"NOXIA\"] relatedDocuments: [\"OTA-TEC-0028-2048-DE\"] summary: \"Quantensensorik und KI-gestützte LOD-Validierung als orthogonale Prüfschiene zum Post-Dotierungs-Halbleiter-Experiment; reale Messanker w",
+        "ensorik\", \"LOD\", \"Optische Uhren\", \"SQUID\", \"Atominterferometer\", \"AVI\", \"2048\", \"NOXIA\"] relatedDocuments: [\"OTA-TEC-0028-2048-DE\"] review: last: \"2026-11-12\" next: \"2027-11-12\" reason: \"Realanker sind bereits bereinigt; Standardintervall, Kürzung auf KUE-SCI-0177 nach des",
         "gs-Halbleiter-Experiment* ## METADATEN **Dokumenttyp:** Supplementary Technical Specification **Bezug:** `OTA-TEC-0028-2048-DE` **Status:** [R+H+T+F] Realanker → Hypothese → technische Setzung → fiktionaler Systemkontext **Temporaler Marker:** 2048 (Realreferenzen überwie",
         "ivision, Tsukuba **Peer Review:** [AUSSTEHEND] — Physical Review X (2048) ## BEZIEHUNG ZUM HAUPTDOKUMENT `OTA-TEC-0028-2048-DE` beschreibt Post-Dotierungs-Halbleiter als primäre Sensoren für AVI-Feld-Kopplungen. Dieses Dokument erweitert das experimentelle Design durch Quante",
         "bergreifende Realwissenschaftsgrundlage zu Quantensensorik, optischen Uhren und geomagnetischen Indizes. 12. `OTA-TEC-0028-2048-DE` — Post-Dotierungs-Halbleitertechnologie. ## Revisionsverlauf - **v1.0:** Erstfassung; Frontmatter fälschlich noch auf „Thermische Dioden“ ausgeric",
@@ -33275,7 +33410,7 @@
       "source": "OTA-SCI-0086-2026-DE",
       "target": "OTA-TEC-0088-2026-DE",
       "contexts": [
-        "ion\", \"Mars\", \"Mond\", \"Raumstationen\", \"Neonatologie\", \"Strahlung\", \"Artificial Gravity\"] relatedDocuments: [\"OTA-TEC-0088-2026-DE\", \"OTA-TEC-0093-2026-DE\", \"OTA-TEC-0119-2026-DE\"] summary: \"Evidenzdossier zu menschlicher Reproduktion, Schwangerschaft, Geburt und Entwicklung bis"
+        "ion\", \"Mars\", \"Mond\", \"Raumstationen\", \"Neonatologie\", \"Strahlung\", \"Artificial Gravity\"] relatedDocuments: [\"OTA-TEC-0088-2026-DE\", \"OTA-TEC-0093-2026-DE\", \"OTA-TEC-0119-2026-DE\"] summary: \"Brückendokument zu Reproduktion und Entwicklung unter Mikro- und Teilgravitation: Evidenz"
       ],
       "status": "resolved",
       "classification": "existing",
@@ -34050,7 +34185,7 @@
       "source": "OTA-SCI-0086-2026-DE",
       "target": "OTA-TEC-0093-2026-DE",
       "contexts": [
-        "aumstationen\", \"Neonatologie\", \"Strahlung\", \"Artificial Gravity\"] relatedDocuments: [\"OTA-TEC-0088-2026-DE\", \"OTA-TEC-0093-2026-DE\", \"OTA-TEC-0119-2026-DE\"] summary: \"Evidenzdossier zu menschlicher Reproduktion, Schwangerschaft, Geburt und Entwicklung bis zum Erwachsenenalter unt"
+        "aumstationen\", \"Neonatologie\", \"Strahlung\", \"Artificial Gravity\"] relatedDocuments: [\"OTA-TEC-0088-2026-DE\", \"OTA-TEC-0093-2026-DE\", \"OTA-TEC-0119-2026-DE\"] summary: \"Brückendokument zu Reproduktion und Entwicklung unter Mikro- und Teilgravitation: Evidenzregel, Konsequenzen für"
       ],
       "status": "resolved",
       "classification": "existing",
@@ -34156,7 +34291,7 @@
       "source": "OTA-TEC-0119-2026-DE",
       "target": "OTA-TEC-0093-2026-DE",
       "contexts": [
-        ": objectId: \"habitat_module\" role: \"station-module\" entities: mentions: [] relations: requires: [\"OTA-TEC-0093-2026-DE\"] teaches: [] expands: [] cites: [\"OTA-TEC-0087-2026-DE\", \"OTA-TEC-0093-2026-DE\"] sync: graphVersion: \"KXF-0.2\" graphUpdated: \"2026-09-06\"",
+        "consumerKey: \"habitat_module\" role: \"station-module\" entities: mentions: [] relations: requires: [\"OTA-TEC-0093-2026-DE\"] teaches: [] expands: [] cites: [\"OTA-TEC-0087-2026-DE\", \"OTA-TEC-0093-2026-DE\"] sync: graphVersion: \"KXF-0.2\" graphUpdated: \"2026-09-06\"",
         "elations: requires: [\"OTA-TEC-0093-2026-DE\"] teaches: [] expands: [] cites: [\"OTA-TEC-0087-2026-DE\", \"OTA-TEC-0093-2026-DE\"] sync: graphVersion: \"KXF-0.2\" graphUpdated: \"2026-09-06\" exportedFrom: kueper-knowledge-graph --- # OTA-TEC-0119 — Orbitales Wohnmodul ## F"
       ],
       "status": "resolved",
@@ -34861,7 +34996,7 @@
       "source": "OTA-SCI-0086-2026-DE",
       "target": "OTA-TEC-0119-2026-DE",
       "contexts": [
-        "ogie\", \"Strahlung\", \"Artificial Gravity\"] relatedDocuments: [\"OTA-TEC-0088-2026-DE\", \"OTA-TEC-0093-2026-DE\", \"OTA-TEC-0119-2026-DE\"] summary: \"Evidenzdossier zu menschlicher Reproduktion, Schwangerschaft, Geburt und Entwicklung bis zum Erwachsenenalter unter Mikro- und Teilgravit"
+        "ogie\", \"Strahlung\", \"Artificial Gravity\"] relatedDocuments: [\"OTA-TEC-0088-2026-DE\", \"OTA-TEC-0093-2026-DE\", \"OTA-TEC-0119-2026-DE\"] summary: \"Brückendokument zu Reproduktion und Entwicklung unter Mikro- und Teilgravitation: Evidenzregel, Konsequenzen für Mars, Mond und Stationen"
       ],
       "status": "resolved",
       "classification": "existing",
