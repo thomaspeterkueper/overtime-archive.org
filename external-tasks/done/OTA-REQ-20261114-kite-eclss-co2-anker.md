@@ -1,6 +1,7 @@
 # OTA-REQ-20261114-001 – OTA-TEC-0019-2091-DE (ECLSS Survival-Protokolle, KITE): CO₂-Realanker an KUE-SCI-0178 v0.2 angleichen
 
-Status: open
+Status: done
+Erledigt: 2026-11-14 – umgesetzt in OTA-TEC-0019-2091-DE v1.4 durch die Begutachtung (ECO-ARC-0038 §3b); Voraussetzung KUE-SCI-0178 v0.2 seit 2026-11-14 in kueper.com/main.
 Datum: 2026-11-14
 Quelle: Begutachtung nach ECO-ARC-0037, Zuordnung nach ECO-ARC-0038 §2 (Claude)
 Prüfbericht: `kueper-ecosystem/reviews/2026-11-14-OTA-TEC-0019-2091-DE.md`
