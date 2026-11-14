@@ -24,6 +24,8 @@ const documentRelation = z.object({
 const objectMapping = z.object({
   objectId: z.string(),
   role: z.string().optional(),
+  // Interner Schlüssel des Consumers (z. B. NOXIA-Code "solar_array"), wenn er vom objectId abweicht.
+  consumerKey: z.string().optional(),
 });
 
 const documents = defineCollection({
