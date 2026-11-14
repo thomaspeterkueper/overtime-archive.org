@@ -49,6 +49,15 @@ const documents = defineCollection({
       reviewedAt: z.string().datetime({ offset: true }).optional(),
       reviewStatus: z.enum(['unreviewed', 'metadata-reviewed', 'content-reviewed', 'canonical-reviewed']).optional(),
     }).optional(),
+    // Wiederkehrende Begutachtung nach ECO-ARC-0037-2026-DE (spätestens alle
+    // 12 Monate). Optional; die Termine setzt die tägliche Begutachtung nach
+    // und nach. provenance.reviewedAt bleibt davon unberührt.
+    review: z.object({
+      last: z.string().regex(/^\d{4}-\d{2}-\d{2}$/).optional(),
+      next: z.string().regex(/^\d{4}-\d{2}-\d{2}$/).optional(),
+      reason: z.string().optional(),
+      abgeschlossen: z.boolean().default(false),
+    }).optional(),
     kg: z.object({
       schema: z.string().optional(),
       master: z.string().optional(),
