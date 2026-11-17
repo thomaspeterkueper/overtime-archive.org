@@ -7,6 +7,7 @@ Prüfbericht: `kueper-ecosystem/reviews/2026-11-08-OTA-SCI-0062-2026-DE.md`
 Zuordnung: Teile nach KUE – Abschnitte II–VII nach `kueper.com/external-tasks/open/EXT-OTA-KUE-20261108-002.md`; VIII und Kuratornotizen bleiben in OTA
 Voraussetzung: das neue KUE-Dokument aus EXT-OTA-KUE-20261108-002 ist in `kueper.com/main` gemergt (Signatur dort vergeben, im Folgenden `KUE-SCI-NNNN`). Erst danach umsetzen (Punkte A–D).
 Claude-Status: wartet auf Thomas (nur Punkt E – Leitsatz/KN-Formulierungen)
+Teilweise erledigt: 2026-11-17 – Punkte A–D umgesetzt in OTA-SCI-0062 v1.1 durch die Begutachtung (ECO-ARC-0038 §3b; KUE-SCI-0203 v0.1 in `kueper.com/main`). Offen bleibt Punkt E (wartet auf Thomas).
 
 ## Anlass
 

@@ -1,6 +1,7 @@
 # OTA-REQ-20261111-002 – OTA-SCI-0107-2026-DE (STAR: Impulskorrelationen in Au+Au): Realteil auf Verweis nach KUE-SCI-0195 kürzen, AVI-P/Omnizedenz behalten
 
-Status: open
+Status: done
+Erledigt: 2026-11-17 – umgesetzt in OTA-SCI-0107 v1.1 durch die Begutachtung (ECO-ARC-0038 §3b; KUE-SCI-0195 v0.5 in `kueper.com/main`). Revisionsvermerk mit Umsetzungsdatum statt des im Request genannten 2026-11-11.
 Datum: 2026-11-11
 Quelle: Begutachtung nach ECO-ARC-0037, Zuordnung nach ECO-ARC-0038 §2 (Claude)
 Prüfbericht: `kueper-ecosystem/reviews/2026-11-11-OTA-SCI-0107-2026-DE.md`
