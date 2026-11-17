@@ -1,6 +1,7 @@
 # OTA-REQ-20261031-001 – OTA-LSC-0003-2026-DE (UPE): Realgrundlage ergänzen
 
-Status: open
+Status: done
+Erledigt: 2026-11-17 – Ökosystem-Kreislauf (Claude), Branch `claude/OTA-REQ-20261031-001`; Voraussetzung KUE-SCI-0175 v0.2.1 seit 2026-11-17 in kueper.com/main (EXT-OTA-KUE-20261031-001 erledigt).
 Datum: 2026-10-31
 Quelle: Begutachtung nach ECO-ARC-0037 (Claude)
 Prüfbericht: `kueper-ecosystem/reviews/2026-10-31-OTA-LSC-0003-2026-DE.md`
@@ -16,3 +17,9 @@ Betrifft: nur [R]/[T]/[H]-Abschnitte (I–III, VI). Weltsetzung (IV, BRS, Λ-Pro
 
 - `kueper.com`: `KUE-SCI-0175-2026-DE` ist SSOT für die UPE-Grundlage – Request `kueper.com/external-tasks/open/EXT-OTA-KUE-20261031-001.md`.
 - OTA-intern: `OTA-SCI-0047-2026-DE` (Kopf-/Gesichtsmessungen, Halo-Brücke) bei seiner Begutachtung gegen Punkt 3 prüfen.
+
+## Umgesetzt
+
+OTA-LSC-0003-2026-DE v1.3: Punkt 1 – Entwicklungspfad geteilt (Labor-UPE-Bildgebung seit 2009 [R], klinisch validierte Redox-Bildgebung 2055–2080 [S]); Punkt 2 – Salari et al. 2025 in 2.1 als [R]-Messung mit [T]-Deutung und Grenzen; Punkt 3 – Kopf-/Hirn-UPE in VI als methodisch umstritten [H] mit Preprint-Kennzeichnung, Verweis auf KUE-SCI-0175 Abschnitt IVa; Literaturanker in VI ergänzt. Weltsetzung (IV, BRS, Λ-Profile) unverändert. Kennzeichnung nicht stärker als in KUE.
+
+Offen bleibt der Hinweis zu `OTA-SCI-0047-2026-DE` (Punkt 3 bei dessen nächster Begutachtung prüfen) – kein Handlungsauftrag dieses Requests.
