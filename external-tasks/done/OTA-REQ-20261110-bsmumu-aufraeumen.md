@@ -1,6 +1,7 @@
 # OTA-REQ-20261110-002 – OTA-SCI-0105-2026-DE (Seltene b→sμμ-Zerfälle): Realteil nach KUE auslagern, AVI-P-Einordnung behalten
 
-Status: open
+Status: done
+Erledigt: 2026-11-18 – Punkte A–C umgesetzt in OTA-SCI-0105 v1.1 durch die Begutachtung (ECO-ARC-0038 §3b; KUE-SCI-0205 v0.1 in `kueper.com/main`).
 Datum: 2026-11-10
 Quelle: Begutachtung nach ECO-ARC-0037, Zuordnung nach ECO-ARC-0038 §2 (Claude)
 Prüfbericht: `kueper-ecosystem/reviews/2026-11-10-OTA-SCI-0105-2026-DE.md`
