@@ -6,6 +6,7 @@ Quelle: Begutachtung nach ECO-ARC-0037, Zuordnung nach ECO-ARC-0038 §2 (Claude)
 Prüfbericht: `kueper-ecosystem/reviews/2026-11-12-OTA-SCI-0022-2025-DE.md`
 Zuordnung: Teile nach KUE (Inventur Gruppe A; wegen Werkbezug – Relikt-Fenster, GANDHAKA 2070, Utopia Planitia 2091 – kein vollständiger Umzug). Neues KUE-Dokument per `kueper.com/external-tasks/open/EXT-OTA-KUE-20261112-001.md`.
 Voraussetzung: das neue KUE-Dokument aus EXT-OTA-KUE-20261112-001 ist in `kueper.com/main` gemergt (Signatur dort vergeben, im Folgenden `KUE-SCI-NNNN`). Erst danach umsetzen (Punkte A–D). Punkt E wartet auf Thomas.
+Teilweise erledigt: 2026-11-18 – Punkte A–D umgesetzt in OTA-SCI-0022 v1.1 durch die Begutachtung (ECO-ARC-0038 §3b; KUE-SCI-0202 v0.1 in `kueper.com/main`); Abschnitte nach Wegfall von I–III neu nummeriert (II Habitabilität, III Politische Dimension, IV noχ¹ᐃ-Anwendungen). Offen bleibt Punkt E (wartet auf Thomas).
 
 ## Anlass
 
