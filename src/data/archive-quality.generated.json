@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-18T23:56:06.328Z",
+  "generatedAt": "2026-11-18T23:58:46.854Z",
   "summary": {
     "documents": 337,
     "substantial": 196,
@@ -15,7 +15,7 @@
     "titleReviewOK": 268,
     "safeTitleCandidates": 0,
     "summaryCandidates": 19,
-    "relationCandidates": 1023,
+    "relationCandidates": 1026,
     "safeRelationCandidates": 0
   },
   "documents": [
@@ -18466,19 +18466,24 @@
             "safe": false
           },
           {
+            "target": "OTA-REQ-20261108-001",
+            "evidence": "inline-reference",
+            "safe": false
+          },
+          {
             "target": "OTA-SCI-0117",
             "evidence": "inline-reference",
             "safe": false
           }
         ],
-        "count": 6
+        "count": 7
       },
       "metrics": {
-        "words": 3666,
+        "words": 3695,
         "headings": 32,
         "images": 0,
         "tables": 1,
-        "inlineReferenceTargets": 7
+        "inlineReferenceTargets": 8
       },
       "quality": {
         "substance": "SUBSTANZIELL",
@@ -19961,7 +19966,7 @@
       "language": "DE",
       "canonical": {
         "title": "Die Splitterlupe — Instrumententechnisches Protokoll, Dr. Oskar Anton",
-        "summary": "Die Splitterlupe — instrumententechnisches Analyseprotokoll aus Dr. Oskar Antons Perspektive. Antons materialwissenschaftlich korrekte, aber funktional fehlgedeutete Analyse eines Obsidian-Artefakts, das Hysterese-Muster löscht statt Resonanz zu ernten.",
+        "summary": "Die Splitterlupe — instrumententechnisches Analyseprotokoll aus Dr. Oskar Antons Perspektive. Ein Splitter (Span), kein volles Artefakt; vermutete Herkunft: das Artefakt der Bilsteinhöhle. Antons materialwissenschaftlich korrekte, aber funktional fehlgedeutete Analyse eines Obsidian-Artefakts, das Hysterese-Muster löscht statt Resonanz zu ernten.",
         "relatedCount": 5
       },
       "extracted": {
@@ -20009,16 +20014,26 @@
             "target": "OTA-SCI-0117-",
             "evidence": "inline-reference",
             "safe": false
+          },
+          {
+            "target": "OTA-REQ-20261108-001",
+            "evidence": "inline-reference",
+            "safe": false
+          },
+          {
+            "target": "OTA-REQ-20261106-003",
+            "evidence": "inline-reference",
+            "safe": false
           }
         ],
-        "count": 6
+        "count": 8
       },
       "metrics": {
-        "words": 1562,
-        "headings": 24,
+        "words": 1817,
+        "headings": 26,
         "images": 0,
         "tables": 1,
-        "inlineReferenceTargets": 7
+        "inlineReferenceTargets": 9
       },
       "quality": {
         "substance": "SUBSTANZIELL",
