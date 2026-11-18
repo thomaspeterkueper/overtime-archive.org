@@ -1,11 +1,11 @@
 # OTA-REQ-20261107-002 – OTA-SCI-0112-2026-DE (Mars-Siedlungen als Stoffstromsystem): nach KUE-Umzug zum Brückendokument kürzen
 
-Status: open
+Status: done
 Datum: 2026-11-07
 Quelle: Begutachtung nach ECO-ARC-0037, Zuordnung nach ECO-ARC-0038 §2 (Claude)
 Prüfbericht: `kueper-ecosystem/reviews/2026-11-07-OTA-SCI-0112-2026-DE.md`
 Zuordnung: ganz nach KUE (Gruppe A) – Realdossier; Werkbezug nur über die NOXIA-Regeln §21, §24, §27, den MiniNode-Pfad §18 und die Archivregel §30
-Voraussetzung: das neue KUE-Dokument aus `kueper.com/external-tasks/open/EXT-OTA-KUE-20261107-001.md` ist in `kueper.com/main` gemergt (Signatur dort vergeben, im Folgenden `KUE-SCI-NNNN`). Erst danach umsetzen.
+Voraussetzung: das neue KUE-Dokument aus `kueper.com/external-tasks/open/EXT-OTA-KUE-20261107-001.md` ist in `kueper.com/main` gemergt (Signatur dort vergeben, vergeben: `KUE-SCI-0208-2026-DE`). Erst danach umsetzen.
 
 ## Anlass
 
@@ -24,3 +24,14 @@ Nicht stärker kennzeichnen als KUE. Nicht archivieren – das Dokument bleibt a
 ## Wirkung
 
 `noxiagame`: keine Änderung nötig, solange NOXIA auf OTA-SCI-0112 verweist; die Kalibrierwerte bleiben in OTA.
+
+## Erledigt
+
+Status: done – 2026-11-18, Claude (Ökosystem-Kreislauf). Voraussetzung erfüllt: `DOC:KUE:KUE-SCI-0208-2026-DE` ist in `kueper.com/main` gemergt (EXT-OTA-KUE-20261107-001).
+
+## Umgesetzt
+
+- A: §§ 1–17, 19, 20, 22, 23, 25, 26, 28, 29 durch die Grundinformation ersetzt (nach der Kernregel), Signatur `KUE-SCI-0208-2026-DE` eingesetzt.
+- B: Kernregel, §§ 18, 21, 24, 27, 30 und `relatedDocuments` unverändert erhalten; in § 24 Herkunftshinweis auf KUE ergänzt und Energie-Kalibrierwert präzisiert (Kernspaltung: ≥ 100 kWe als NASA-Zielmarke für den Mond, statt der überholten 40-kW-Klasse aus § 13.2 – Quellenprüfung in KUE-SCI-0208 § 5.3).
+- C: In den erhaltenen Abschnitten stehen keine Formeln; nichts zu korrigieren.
+- D: `summary` gekürzt, v1.1, Versionsvermerk ergänzt.

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-14T00:22:52.665Z",
+  "generatedAt": "2026-11-18T20:54:25.985Z",
   "documents": [
     {
       "signature": "OTA-ART-0001-2087-DE",
@@ -1066,7 +1066,7 @@
     {
       "signature": "OTA-SCI-0022-2025-DE",
       "title": "Zhurong-Entdeckung: Wasser-Fenster auf Mars verlängert bis Amazonis-Epoche (~750 Mio. Jahre)",
-      "summary": "Analyse der Zhurong-Rover-Daten: Nachweis von salzhaltigen Schichten in der Utopia Planitia, die auf flüssiges Wasser bis vor ~750 Millionen Jahren hinweisen — deutlich jünger als bisherige Modelle. Erweitert das Fenster möglicher Habitabilität auf dem Mars erheblich.",
+      "summary": "Zhurong-Befunde zu Wasser im Amazonium in Utopia Planitia (Radar 2026: geschichtete Ablagerung, etwa 750 Mio. Jahre) und ihre Nutzung für die Relikt-Fenster-Hypothese und Utopia Planitia im Werk; Realteil in KUE-SCI-0202.",
       "file": "src/content/documents/OTA-SCI-0022-2025-DE.md"
     },
     {
@@ -1456,7 +1456,7 @@
     {
       "signature": "OTA-SCI-0105-2026-DE",
       "title": "Seltene b→sμμ-Zerfälle – CMS- und LHCb-Spannungen mit dem Standardmodell",
-      "summary": "Beobachtungsnotiz zu CMS-Kombinationsanalysen seltener Beauty-Hadron-Zerfälle und LHCb-Winkelmessungen: Hinweise auf Spannungen im Übergang b→s μ+μ−, jedoch keine gesicherte neue Physik; hadronische Modellunsicherheiten und Korrelationen zwischen Kanälen bleiben wesentlich.",
+      "summary": "AVI-P-Einordnung seltener b→sμμ-Zerfälle; Realteil in KUE-SCI-0205.",
       "file": "src/content/documents/OTA-SCI-0105-2026-DE.md"
     },
     {
@@ -1468,7 +1468,7 @@
     {
       "signature": "OTA-SCI-0107-2026-DE",
       "title": "STAR: Nichtmonotone transversale Impulskorrelationen in Au+Au-Kollisionen",
-      "summary": "STAR beobachtet nichtmonotone transversale Impulskorrelationen bei Au+Au-Kollisionen zwischen 3,0 und 7,7 GeV pro Nukleonenpaar. Das Muster ist für das QCD-Phasendiagramm relevant, beweist jedoch weder einen kritischen Endpunkt noch neue fundamentale Physik.",
+      "summary": "AVI-P- und Omnizedenz-Einordnung des STAR-Befunds zu Impulskorrelationen; Realteil in KUE-SCI-0195",
       "file": "src/content/documents/OTA-SCI-0107-2026-DE.md"
     },
     {
@@ -1498,7 +1498,7 @@
     {
       "signature": "OTA-SCI-0112-2026-DE",
       "title": "Mars-Siedlungen als Stoffstromsystem: ECLSS, Nahrung, ISRU, Energie und Resilienz",
-      "summary": "Evidenzbasis für Mars-Siedlungsmodelle: reale ISS-ECLSS-, Crop-, MELiSSA-, ISRU-, Energie-, Wartungs- und Robotikbefunde werden nach Maßstab, Dauer und Reifegrad getrennt; daraus werden Mass-/Energieerhaltung, Closure-Grenzen und Resilienzregeln für NOXIA abgeleitet.",
+      "summary": "Brückendokument: NOXIA-Regeln für Stoff- und Energiebilanz von Mars-Siedlungen (MiniNode-Pfad, Game-Physics-Sperren, Kalibrierwerte, Closure-Check, Archivregel); reale Evidenzbasis in KUE-SCI-0208-2026-DE.",
       "file": "src/content/documents/OTA-SCI-0112-2026-DE.md"
     },
     {
@@ -1678,7 +1678,7 @@
     {
       "signature": "OTA-TEC-0029-2048-DE",
       "title": "Quantensensorik & KI-Integration für LOD-Validierung",
-      "summary": "Quantensensorik und KI-gestützte LOD-Validierung als orthogonale Prüfschiene zum Post-Dotierungs-Halbleiter-Experiment; reale Messanker werden von fiktionalen AVI-/Netzwerkannahmen getrennt.",
+      "summary": "Quantensensorik und KI-gestützte LOD-Validierung als orthogonale Prüfschiene zum Post-Dotierungs-Halbleiter-Experiment; reale Messanker werden von fiktionalen AVI-/Netzwerkannahmen getrennt; Realanker in KUE-SCI-0177.",
       "file": "src/content/documents/OTA-TEC-0029-2048-DE.md"
     },
     {
@@ -2025,7 +2025,7 @@
     }
   ],
   "summary": {
-    "referenceCount": 1673,
+    "referenceCount": 1672,
     "openReferenceCount": 242,
     "openTargetCount": 128,
     "classifications": {
@@ -4922,7 +4922,7 @@
       "source": "OTA-SCI-0082-2026-DE",
       "target": "OTA-TEC-0080",
       "contexts": [
-        "`[R]`-tauglich | | **Saga-Quarantäne:** | Aktiv | | **Verwandte Dokumente:** | OTA-SCI-0081 · OTA-TEC-0081 · OTA-TEC-0080 | ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ **Kurator:** Thomas Peter Küper Frankfurt am Main · April 2026 --- ## EINLEITUNG Der St"
+        "I-0207-2026-DE` | | **Saga-Quarantäne:** | Aktiv | | **Verwandte Dokumente:** | OTA-SCI-0081 · OTA-TEC-0081 · OTA-TEC-0080 | ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ **Kurator:** Thomas Peter Küper Frankfurt am Main · April 2026 --- ## EINLEITUNG Der St"
       ],
       "status": "unresolved",
       "classification": "missing",
@@ -23117,7 +23117,7 @@
       "sourceCount": 1,
       "priority": 0,
       "title": "Zhurong-Entdeckung: Wasser-Fenster auf Mars verlängert bis Amazonis-Epoche (~750 Mio. Jahre)",
-      "description": "Analyse der Zhurong-Rover-Daten: Nachweis von salzhaltigen Schichten in der Utopia Planitia, die auf flüssiges Wasser bis vor ~750 Millionen Jahren hinweisen — deutlich jünger als bisherige Modelle. Erweitert das Fenster möglicher Habitabilität auf dem Mars erheblich.",
+      "description": "Zhurong-Befunde zu Wasser im Amazonium in Utopia Planitia (Radar 2026: geschichtete Ablagerung, etwa 750 Mio. Jahre) und ihre Nutzung für die Relikt-Fenster-Hypothese und Utopia Planitia im Werk; Realteil in KUE-SCI-0202.",
       "descriptionStatus": "canonical",
       "targetFile": "src/content/documents/OTA-SCI-0022-2025-DE.md"
     },
@@ -23134,7 +23134,7 @@
       "sourceCount": 5,
       "priority": 0,
       "title": "Zhurong-Entdeckung: Wasser-Fenster auf Mars verlängert bis Amazonis-Epoche (~750 Mio. Jahre)",
-      "description": "Analyse der Zhurong-Rover-Daten: Nachweis von salzhaltigen Schichten in der Utopia Planitia, die auf flüssiges Wasser bis vor ~750 Millionen Jahren hinweisen — deutlich jünger als bisherige Modelle. Erweitert das Fenster möglicher Habitabilität auf dem Mars erheblich.",
+      "description": "Zhurong-Befunde zu Wasser im Amazonium in Utopia Planitia (Radar 2026: geschichtete Ablagerung, etwa 750 Mio. Jahre) und ihre Nutzung für die Relikt-Fenster-Hypothese und Utopia Planitia im Werk; Realteil in KUE-SCI-0202.",
       "descriptionStatus": "canonical",
       "targetFile": "src/content/documents/OTA-SCI-0022-2025-DE.md"
     },
@@ -23151,7 +23151,7 @@
       "sourceCount": 5,
       "priority": 0,
       "title": "Zhurong-Entdeckung: Wasser-Fenster auf Mars verlängert bis Amazonis-Epoche (~750 Mio. Jahre)",
-      "description": "Analyse der Zhurong-Rover-Daten: Nachweis von salzhaltigen Schichten in der Utopia Planitia, die auf flüssiges Wasser bis vor ~750 Millionen Jahren hinweisen — deutlich jünger als bisherige Modelle. Erweitert das Fenster möglicher Habitabilität auf dem Mars erheblich.",
+      "description": "Zhurong-Befunde zu Wasser im Amazonium in Utopia Planitia (Radar 2026: geschichtete Ablagerung, etwa 750 Mio. Jahre) und ihre Nutzung für die Relikt-Fenster-Hypothese und Utopia Planitia im Werk; Realteil in KUE-SCI-0202.",
       "descriptionStatus": "canonical",
       "targetFile": "src/content/documents/OTA-SCI-0022-2025-DE.md"
     },
@@ -23168,7 +23168,7 @@
       "sourceCount": 5,
       "priority": 0,
       "title": "Zhurong-Entdeckung: Wasser-Fenster auf Mars verlängert bis Amazonis-Epoche (~750 Mio. Jahre)",
-      "description": "Analyse der Zhurong-Rover-Daten: Nachweis von salzhaltigen Schichten in der Utopia Planitia, die auf flüssiges Wasser bis vor ~750 Millionen Jahren hinweisen — deutlich jünger als bisherige Modelle. Erweitert das Fenster möglicher Habitabilität auf dem Mars erheblich.",
+      "description": "Zhurong-Befunde zu Wasser im Amazonium in Utopia Planitia (Radar 2026: geschichtete Ablagerung, etwa 750 Mio. Jahre) und ihre Nutzung für die Relikt-Fenster-Hypothese und Utopia Planitia im Werk; Realteil in KUE-SCI-0202.",
       "descriptionStatus": "canonical",
       "targetFile": "src/content/documents/OTA-SCI-0022-2025-DE.md"
     },
@@ -23188,7 +23188,7 @@
       "sourceCount": 5,
       "priority": 0,
       "title": "Zhurong-Entdeckung: Wasser-Fenster auf Mars verlängert bis Amazonis-Epoche (~750 Mio. Jahre)",
-      "description": "Analyse der Zhurong-Rover-Daten: Nachweis von salzhaltigen Schichten in der Utopia Planitia, die auf flüssiges Wasser bis vor ~750 Millionen Jahren hinweisen — deutlich jünger als bisherige Modelle. Erweitert das Fenster möglicher Habitabilität auf dem Mars erheblich.",
+      "description": "Zhurong-Befunde zu Wasser im Amazonium in Utopia Planitia (Radar 2026: geschichtete Ablagerung, etwa 750 Mio. Jahre) und ihre Nutzung für die Relikt-Fenster-Hypothese und Utopia Planitia im Werk; Realteil in KUE-SCI-0202.",
       "descriptionStatus": "canonical",
       "targetFile": "src/content/documents/OTA-SCI-0022-2025-DE.md"
     },
@@ -23205,7 +23205,7 @@
       "sourceCount": 5,
       "priority": 0,
       "title": "Zhurong-Entdeckung: Wasser-Fenster auf Mars verlängert bis Amazonis-Epoche (~750 Mio. Jahre)",
-      "description": "Analyse der Zhurong-Rover-Daten: Nachweis von salzhaltigen Schichten in der Utopia Planitia, die auf flüssiges Wasser bis vor ~750 Millionen Jahren hinweisen — deutlich jünger als bisherige Modelle. Erweitert das Fenster möglicher Habitabilität auf dem Mars erheblich.",
+      "description": "Zhurong-Befunde zu Wasser im Amazonium in Utopia Planitia (Radar 2026: geschichtete Ablagerung, etwa 750 Mio. Jahre) und ihre Nutzung für die Relikt-Fenster-Hypothese und Utopia Planitia im Werk; Realteil in KUE-SCI-0202.",
       "descriptionStatus": "canonical",
       "targetFile": "src/content/documents/OTA-SCI-0022-2025-DE.md"
     },
@@ -26122,6 +26122,7 @@
       "source": "OTA-SCI-0062-2026-DE",
       "target": "OTA-SCI-0057-2026-DE",
       "contexts": [
+        "gs: [\"Mpemba-Effekt\", \"Thermodynamik\", \"Relaxation\", \"Physik\", \"Wissenschaftsgeschichte\"] relatedDocuments: [\"OTA-SCI-0057-2026-DE\", \"OTA-SCI-0058-2026-DE\"] summary: \"Wissenschaftliche Analyse des Mpemba-Effekts: historische Entdeckung, experimentelle Kontroversen, thermodynamisc",
         "Publikationsfähig (Abschnitte I–VI) | | **Bezug-Dokumente:** | OTA-FND-0023-2026-DE (OTJIZE: Serienkonzept) · OTA-SCI-0057-2026-DE (Otjize als Materialsystem) · OTA-SCI-0058-2026-DE (Triclosan) · OTA-BIO-0026-2026-DE (Zuva) | **Kurator:** Thomas Peter Küper · Frankfurt am Main ·"
       ],
       "status": "resolved",
@@ -26272,6 +26273,7 @@
       "source": "OTA-SCI-0062-2026-DE",
       "target": "OTA-SCI-0058-2026-DE",
       "contexts": [
+        "hermodynamik\", \"Relaxation\", \"Physik\", \"Wissenschaftsgeschichte\"] relatedDocuments: [\"OTA-SCI-0057-2026-DE\", \"OTA-SCI-0058-2026-DE\"] summary: \"Wissenschaftliche Analyse des Mpemba-Effekts: historische Entdeckung, experimentelle Kontroversen, thermodynamische Erklärungsansätze übe",
         "umente:** | OTA-FND-0023-2026-DE (OTJIZE: Serienkonzept) · OTA-SCI-0057-2026-DE (Otjize als Materialsystem) · OTA-SCI-0058-2026-DE (Triclosan) · OTA-BIO-0026-2026-DE (Zuva) | **Kurator:** Thomas Peter Küper · Frankfurt am Main · April 2026 --- ## I. ZUSAMMENFASSUNG Der **Mpem"
       ],
       "status": "resolved",
@@ -27391,8 +27393,7 @@
       "target": "OTA-SCI-0081",
       "contexts": [
         "arstern · MUL.APIN-Systematik · Der fremde Himmel *Wissenschaftliche Grundlage · Yin Hua Saga · Ergänzung zu OTA-SCI-0081* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ | | | |---|---| | **Dokumenttyp:** | Wissenschaftliche Grundlage | | **Signatur:** | **OTA-",
-        "Kandidat:** | Ja — vollständig `[R]`-tauglich | | **Saga-Quarantäne:** | Aktiv | | **Verwandte Dokumente:** | OTA-SCI-0081 · OTA-TEC-0081 · OTA-TEC-0080 | ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ **Kurator:** Thomas Peter Küper Frankfurt am Main · April 20",
-        "für die Bronzescheibe:** `[T]` Die Scheibe datiert archäologisch-hypothetisch auf ~2700 BCE (Thuban-Anker, s. OTA-SCI-0081). MUL.APIN kodifiziert Wissen, das möglicherweise älter ist — aber die erhaltenen Texte sind Jahrhunderte jünger. Die Scheibe kann folglich nicht MUL"
+        "*Realteil:** | `DOC:KUE:KUE-SCI-0207-2026-DE` | | **Saga-Quarantäne:** | Aktiv | | **Verwandte Dokumente:** | OTA-SCI-0081 · OTA-TEC-0081 · OTA-TEC-0080 | ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ **Kurator:** Thomas Peter Küper Frankfurt am Main · April 20"
       ],
       "status": "resolved-base-id",
       "classification": "base-id-resolved",
@@ -28505,7 +28506,7 @@
       "source": "OTA-SCI-0107-2026-DE",
       "target": "OTA-SCI-0105",
       "contexts": [
-        "lltext und Daten nachtragen; keine Vereinheitlichung ungleichartiger Signifikanzen. ## Gegenüberstellung mit OTA-SCI-0105 **STAR:** Kollektive stark wechselwirkende Materie in Goldionenkollisionen; Eigenschaften des QCD-Mediums. **CMS/LHCb:** Seltene Beauty-Zerfälle u"
+        "iesen. `[I]`/`[OFFEN]` Messung, Zahlen und Quellen: `DOC:KUE:KUE-SCI-0195-2026-DE`. ## Gegenüberstellung mit OTA-SCI-0105 **STAR:** Kollektive stark wechselwirkende Materie in Goldionenkollisionen; Eigenschaften des QCD-Mediums. **CMS/LHCb:** Seltene Beauty-Zerfälle u"
       ],
       "status": "resolved-base-id",
       "classification": "base-id-resolved",
@@ -28520,7 +28521,7 @@
       "sourceCount": 2,
       "priority": 0,
       "title": "Seltene b→sμμ-Zerfälle – CMS- und LHCb-Spannungen mit dem Standardmodell",
-      "description": "Beobachtungsnotiz zu CMS-Kombinationsanalysen seltener Beauty-Hadron-Zerfälle und LHCb-Winkelmessungen: Hinweise auf Spannungen im Übergang b→s μ+μ−, jedoch keine gesicherte neue Physik; hadronische Modellunsicherheiten und Korrelationen zwischen Kanälen bleiben wesentlich.",
+      "description": "AVI-P-Einordnung seltener b→sμμ-Zerfälle; Realteil in KUE-SCI-0205.",
       "descriptionStatus": "canonical",
       "targetFile": "src/content/documents/OTA-SCI-0105-2026-DE.md"
     },
@@ -28545,7 +28546,7 @@
       "sourceCount": 2,
       "priority": 0,
       "title": "Seltene b→sμμ-Zerfälle – CMS- und LHCb-Spannungen mit dem Standardmodell",
-      "description": "Beobachtungsnotiz zu CMS-Kombinationsanalysen seltener Beauty-Hadron-Zerfälle und LHCb-Winkelmessungen: Hinweise auf Spannungen im Übergang b→s μ+μ−, jedoch keine gesicherte neue Physik; hadronische Modellunsicherheiten und Korrelationen zwischen Kanälen bleiben wesentlich.",
+      "description": "AVI-P-Einordnung seltener b→sμμ-Zerfälle; Realteil in KUE-SCI-0205.",
       "descriptionStatus": "canonical",
       "targetFile": "src/content/documents/OTA-SCI-0105-2026-DE.md"
     },
@@ -28563,7 +28564,7 @@
       "sourceCount": 3,
       "priority": 0,
       "title": "Seltene b→sμμ-Zerfälle – CMS- und LHCb-Spannungen mit dem Standardmodell",
-      "description": "Beobachtungsnotiz zu CMS-Kombinationsanalysen seltener Beauty-Hadron-Zerfälle und LHCb-Winkelmessungen: Hinweise auf Spannungen im Übergang b→s μ+μ−, jedoch keine gesicherte neue Physik; hadronische Modellunsicherheiten und Korrelationen zwischen Kanälen bleiben wesentlich.",
+      "description": "AVI-P-Einordnung seltener b→sμμ-Zerfälle; Realteil in KUE-SCI-0205.",
       "descriptionStatus": "canonical",
       "targetFile": "src/content/documents/OTA-SCI-0105-2026-DE.md"
     },
@@ -28580,7 +28581,7 @@
       "sourceCount": 3,
       "priority": 0,
       "title": "Seltene b→sμμ-Zerfälle – CMS- und LHCb-Spannungen mit dem Standardmodell",
-      "description": "Beobachtungsnotiz zu CMS-Kombinationsanalysen seltener Beauty-Hadron-Zerfälle und LHCb-Winkelmessungen: Hinweise auf Spannungen im Übergang b→s μ+μ−, jedoch keine gesicherte neue Physik; hadronische Modellunsicherheiten und Korrelationen zwischen Kanälen bleiben wesentlich.",
+      "description": "AVI-P-Einordnung seltener b→sμμ-Zerfälle; Realteil in KUE-SCI-0205.",
       "descriptionStatus": "canonical",
       "targetFile": "src/content/documents/OTA-SCI-0105-2026-DE.md"
     },
@@ -28599,7 +28600,7 @@
       "sourceCount": 3,
       "priority": 0,
       "title": "Seltene b→sμμ-Zerfälle – CMS- und LHCb-Spannungen mit dem Standardmodell",
-      "description": "Beobachtungsnotiz zu CMS-Kombinationsanalysen seltener Beauty-Hadron-Zerfälle und LHCb-Winkelmessungen: Hinweise auf Spannungen im Übergang b→s μ+μ−, jedoch keine gesicherte neue Physik; hadronische Modellunsicherheiten und Korrelationen zwischen Kanälen bleiben wesentlich.",
+      "description": "AVI-P-Einordnung seltener b→sμμ-Zerfälle; Realteil in KUE-SCI-0205.",
       "descriptionStatus": "canonical",
       "targetFile": "src/content/documents/OTA-SCI-0105-2026-DE.md"
     },
@@ -28633,7 +28634,7 @@
       "sourceCount": 1,
       "priority": 0,
       "title": "STAR: Nichtmonotone transversale Impulskorrelationen in Au+Au-Kollisionen",
-      "description": "STAR beobachtet nichtmonotone transversale Impulskorrelationen bei Au+Au-Kollisionen zwischen 3,0 und 7,7 GeV pro Nukleonenpaar. Das Muster ist für das QCD-Phasendiagramm relevant, beweist jedoch weder einen kritischen Endpunkt noch neue fundamentale Physik.",
+      "description": "AVI-P- und Omnizedenz-Einordnung des STAR-Befunds zu Impulskorrelationen; Realteil in KUE-SCI-0195",
       "descriptionStatus": "canonical",
       "targetFile": "src/content/documents/OTA-SCI-0107-2026-DE.md"
     },
@@ -28654,30 +28655,7 @@
         }
       ],
       "resolvedTarget": "OTA-SCI-0109-2026-DE",
-      "sourceCount": 2,
-      "priority": 0,
-      "title": "Stromnetz-Engpässe: Erzeugung, Transportkapazität, Redispatch und Flexibilität",
-      "description": "Evidenzdossier zu Stromnetz-Engpässen und erneuerbarer Integration: Deutschland 2025/2026 als Realanker für die Trennung von Erzeugung, Anschlussleistung, Übertragung, Verteilung, Flexibilität und Speicherung; mit expliziten Grenzen für Extrapolationen auf zukünftige terrestrische und außerirdische Energiesysteme.",
-      "descriptionStatus": "canonical",
-      "targetFile": "src/content/documents/OTA-SCI-0109-2026-DE.md"
-    },
-    {
-      "source": "OTA-SCI-0112-2026-DE",
-      "target": "OTA-SCI-0109",
-      "contexts": [
-        "icherkapazität [kWh/MWh]; - Lade-/Entladeleistung; - Verluste; - Reservezeit; - kritische Last. Siehe auch **OTA-SCI-0109**. --- ## 15. Maintenance und Ersatzteile: die verborgene Closure-Grenze [R] Die ISS ist kein wartungsfreies System. NASA nutzt reale Ausfallrate"
-      ],
-      "status": "resolved-base-id",
-      "classification": "base-id-resolved",
-      "candidates": [
-        {
-          "signature": "OTA-SCI-0109-2026-DE",
-          "title": "Stromnetz-Engpässe: Erzeugung, Transportkapazität, Redispatch und Flexibilität",
-          "file": "src/content/documents/OTA-SCI-0109-2026-DE.md"
-        }
-      ],
-      "resolvedTarget": "OTA-SCI-0109-2026-DE",
-      "sourceCount": 2,
+      "sourceCount": 1,
       "priority": 0,
       "title": "Stromnetz-Engpässe: Erzeugung, Transportkapazität, Redispatch und Flexibilität",
       "description": "Evidenzdossier zu Stromnetz-Engpässen und erneuerbarer Integration: Deutschland 2025/2026 als Realanker für die Trennung von Erzeugung, Anschlussleistung, Übertragung, Verteilung, Flexibilität und Speicherung; mit expliziten Grenzen für Extrapolationen auf zukünftige terrestrische und außerirdische Energiesysteme.",
@@ -29735,7 +29713,7 @@
       "source": "OTA-TEC-0019-2091-DE",
       "target": "OTA-TEC-0016-2063-DE",
       "contexts": [
-        ", \"T\"] tags: [\"ECLSS\", \"Survival-Protokolle\", \"2091\", \"Mars\", \"Lebenserhaltung\", \"NOXIA\"] relatedDocuments: [\"OTA-TEC-0016-2063-DE\", \"OTA-TEC-0093-2026-DE\"] summary: \"Kanonische KITE-Notfall-SOP und Survival-Architektur auf Basis der ECLSS-SR-Familie: nominaler regenerativer Pfad",
+        ", \"T\"] tags: [\"ECLSS\", \"Survival-Protokolle\", \"2091\", \"Mars\", \"Lebenserhaltung\", \"NOXIA\"] relatedDocuments: [\"OTA-TEC-0016-2063-DE\", \"OTA-TEC-0093-2026-DE\", \"OTA-TEC-0020-2091-DE\"] summary: \"Kanonische KITE-Notfall-SOP und Survival-Architektur auf Basis der ECLSS-SR-Familie: nomi",
         "rlebende, die sich erinnern. Das ist der narrative Kern jeder ECLSS-Krise.* ## VIII. Verwandte Dokumente - `OTA-TEC-0016-2063-DE` — KITE-Shuttle — Spezifikation - `OTA-TEC-0020-2091-DE` — Tribologie & Staub-Ökonomie ## Revisionsverlauf - **2025-12-30 — v1.0:** Erstellung als"
       ],
       "status": "resolved",
@@ -29983,6 +29961,7 @@
       "source": "OTA-TEC-0019-2091-DE",
       "target": "OTA-TEC-0020-2091-DE",
       "contexts": [
+        "091\", \"Mars\", \"Lebenserhaltung\", \"NOXIA\"] relatedDocuments: [\"OTA-TEC-0016-2063-DE\", \"OTA-TEC-0093-2026-DE\", \"OTA-TEC-0020-2091-DE\"] summary: \"Kanonische KITE-Notfall-SOP und Survival-Architektur auf Basis der ECLSS-SR-Familie: nominaler regenerativer Pfad und unabhängige Fallbac",
         "jeder ECLSS-Krise.* ## VIII. Verwandte Dokumente - `OTA-TEC-0016-2063-DE` — KITE-Shuttle — Spezifikation - `OTA-TEC-0020-2091-DE` — Tribologie & Staub-Ökonomie ## Revisionsverlauf - **2025-12-30 — v1.0:** Erstellung als OTA-TEC-0019-2091-DE. - **2026-09-05 — v1.1:** R1-Eviden"
       ],
       "status": "resolved",
@@ -30914,7 +30893,7 @@
         "gs-Halbleiter-Experiment* ## METADATEN **Dokumenttyp:** Supplementary Technical Specification **Bezug:** `OTA-TEC-0028-2048-DE` **Status:** [R+H+T+F] Realanker → Hypothese → technische Setzung → fiktionaler Systemkontext **Temporaler Marker:** 2048 (Realreferenzen überwie",
         "ivision, Tsukuba **Peer Review:** [AUSSTEHEND] — Physical Review X (2048) ## BEZIEHUNG ZUM HAUPTDOKUMENT `OTA-TEC-0028-2048-DE` beschreibt Post-Dotierungs-Halbleiter als primäre Sensoren für AVI-Feld-Kopplungen. Dieses Dokument erweitert das experimentelle Design durch Quante",
         "bergreifende Realwissenschaftsgrundlage zu Quantensensorik, optischen Uhren und geomagnetischen Indizes. 12. `OTA-TEC-0028-2048-DE` — Post-Dotierungs-Halbleitertechnologie. ## Revisionsverlauf - **v1.0:** Erstfassung; Frontmatter fälschlich noch auf „Thermische Dioden“ ausgeric",
-        "plizit gemacht; `kg.system` auf `SYS:KUEPER:ota` vereinheitlicht. [DOKUMENTENDE] *Supplementary Document zu OTA-TEC-0028-2048-DE* *OverTime Archive — Dokumentation der Zukunft, Kuratierung der Gegenwart*"
+        "agert; Uhrenstand auf 10^-19 aktualisiert (OTA-REQ-20261112-002). [DOKUMENTENDE] *Supplementary Document zu OTA-TEC-0028-2048-DE* *OverTime Archive — Dokumentation der Zukunft, Kuratierung der Gegenwart*"
       ],
       "status": "resolved",
       "classification": "existing",
@@ -30959,7 +30938,7 @@
       "sourceCount": 4,
       "priority": 0,
       "title": "Quantensensorik & KI-Integration für LOD-Validierung",
-      "description": "Quantensensorik und KI-gestützte LOD-Validierung als orthogonale Prüfschiene zum Post-Dotierungs-Halbleiter-Experiment; reale Messanker werden von fiktionalen AVI-/Netzwerkannahmen getrennt.",
+      "description": "Quantensensorik und KI-gestützte LOD-Validierung als orthogonale Prüfschiene zum Post-Dotierungs-Halbleiter-Experiment; reale Messanker werden von fiktionalen AVI-/Netzwerkannahmen getrennt; Realanker in KUE-SCI-0177.",
       "descriptionStatus": "canonical",
       "targetFile": "src/content/documents/OTA-TEC-0029-2048-DE.md"
     },
@@ -30976,7 +30955,7 @@
       "sourceCount": 4,
       "priority": 0,
       "title": "Quantensensorik & KI-Integration für LOD-Validierung",
-      "description": "Quantensensorik und KI-gestützte LOD-Validierung als orthogonale Prüfschiene zum Post-Dotierungs-Halbleiter-Experiment; reale Messanker werden von fiktionalen AVI-/Netzwerkannahmen getrennt.",
+      "description": "Quantensensorik und KI-gestützte LOD-Validierung als orthogonale Prüfschiene zum Post-Dotierungs-Halbleiter-Experiment; reale Messanker werden von fiktionalen AVI-/Netzwerkannahmen getrennt; Realanker in KUE-SCI-0177.",
       "descriptionStatus": "canonical",
       "targetFile": "src/content/documents/OTA-TEC-0029-2048-DE.md"
     },
@@ -30994,7 +30973,7 @@
       "sourceCount": 4,
       "priority": 0,
       "title": "Quantensensorik & KI-Integration für LOD-Validierung",
-      "description": "Quantensensorik und KI-gestützte LOD-Validierung als orthogonale Prüfschiene zum Post-Dotierungs-Halbleiter-Experiment; reale Messanker werden von fiktionalen AVI-/Netzwerkannahmen getrennt.",
+      "description": "Quantensensorik und KI-gestützte LOD-Validierung als orthogonale Prüfschiene zum Post-Dotierungs-Halbleiter-Experiment; reale Messanker werden von fiktionalen AVI-/Netzwerkannahmen getrennt; Realanker in KUE-SCI-0177.",
       "descriptionStatus": "canonical",
       "targetFile": "src/content/documents/OTA-TEC-0029-2048-DE.md"
     },
@@ -31012,7 +30991,7 @@
       "sourceCount": 4,
       "priority": 0,
       "title": "Quantensensorik & KI-Integration für LOD-Validierung",
-      "description": "Quantensensorik und KI-gestützte LOD-Validierung als orthogonale Prüfschiene zum Post-Dotierungs-Halbleiter-Experiment; reale Messanker werden von fiktionalen AVI-/Netzwerkannahmen getrennt.",
+      "description": "Quantensensorik und KI-gestützte LOD-Validierung als orthogonale Prüfschiene zum Post-Dotierungs-Halbleiter-Experiment; reale Messanker werden von fiktionalen AVI-/Netzwerkannahmen getrennt; Realanker in KUE-SCI-0177.",
       "descriptionStatus": "canonical",
       "targetFile": "src/content/documents/OTA-TEC-0029-2048-DE.md"
     },
@@ -32230,9 +32209,9 @@
       "source": "OTA-SCI-0082-2026-DE",
       "target": "OTA-TEC-0081",
       "contexts": [
-        "a — vollständig `[R]`-tauglich | | **Saga-Quarantäne:** | Aktiv | | **Verwandte Dokumente:** | OTA-SCI-0081 · OTA-TEC-0081 · OTA-TEC-0080 | ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ **Kurator:** Thomas Peter Küper Frankfurt am Main · April 2026 --- ## EIN",
+        "`DOC:KUE:KUE-SCI-0207-2026-DE` | | **Saga-Quarantäne:** | Aktiv | | **Verwandte Dokumente:** | OTA-SCI-0081 · OTA-TEC-0081 · OTA-TEC-0080 | ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ **Kurator:** Thomas Peter Küper Frankfurt am Main · April 2026 --- ## EIN",
         "(~36°N) im Jahr 2700 BCE ist nicht der Sternhimmel, den ein moderner Betrachter kennt. Wer die Bronzescheibe (OTA-TEC-0081) entschlüsseln will, muss mit einer fundamentalen Tatsache beginnen: Die Erdachse präzediert. In 4.700 Jahren hat sich der Nordhimmel so stark versch",
-        "ale Anwendung — welche Sternpunkte die Scheibe tatsächlich trägt und wie Yin Hua sie entziffert — erfolgt in `OTA-TEC-0081`. --- ## I. PRÄZESSION: DER FREMDE HIMMEL ### 1.1 Das Prinzip der Erdachsen-Präzession `[R]` Die Erdachse ist nicht fest im Raum — sie beschreibt"
+        "ale Anwendung — welche Sternpunkte die Scheibe tatsächlich trägt und wie Yin Hua sie entziffert — erfolgt in `OTA-TEC-0081`. --- ## I. REALGRUNDLAGE (KURZFASSUNG) Die Erdachse präzediert in rund 25.800 Jahren einmal um den Pol der Ekliptik; dadurch wandern der Himmelsp"
       ],
       "status": "resolved-base-id",
       "classification": "base-id-resolved",
@@ -34202,7 +34181,7 @@
       "source": "OTA-TEC-0019-2091-DE",
       "target": "OTA-TEC-0093-2026-DE",
       "contexts": [
-        "Survival-Protokolle\", \"2091\", \"Mars\", \"Lebenserhaltung\", \"NOXIA\"] relatedDocuments: [\"OTA-TEC-0016-2063-DE\", \"OTA-TEC-0093-2026-DE\"] summary: \"Kanonische KITE-Notfall-SOP und Survival-Architektur auf Basis der ECLSS-SR-Familie: nominaler regenerativer Pfad und unabhängige Fallbac"
+        "Survival-Protokolle\", \"2091\", \"Mars\", \"Lebenserhaltung\", \"NOXIA\"] relatedDocuments: [\"OTA-TEC-0016-2063-DE\", \"OTA-TEC-0093-2026-DE\", \"OTA-TEC-0020-2091-DE\"] summary: \"Kanonische KITE-Notfall-SOP und Survival-Architektur auf Basis der ECLSS-SR-Familie: nominaler regenerativer Pfad"
       ],
       "status": "resolved",
       "classification": "existing",
@@ -35489,7 +35468,7 @@
       "source": "OTA-SCI-0112-2026-DE",
       "target": "OTA-TEC-0126",
       "contexts": [
-        "; - menschliche Ausnahmebehandlung. --- ## 18. MiniNodes / verteilte Wartung [H/T] Der MiniNode-Pfad aus **OTA-TEC-0126** kann in einer Mars-Siedlung folgende Rolle spielen: - mobile Inspektion; - lokale Sensorik; - Inventartracking; - Thermal-/Leak-Survey; - Transpor"
+        "en: `DOC:KUE:KUE-SCI-0208-2026-DE`. --- ## 18. MiniNodes / verteilte Wartung [H/T] Der MiniNode-Pfad aus **OTA-TEC-0126** kann in einer Mars-Siedlung folgende Rolle spielen: - mobile Inspektion; - lokale Sensorik; - Inventartracking; - Thermal-/Leak-Survey; - Transpor"
       ],
       "status": "resolved-base-id",
       "classification": "base-id-resolved",
