@@ -1,21 +1,21 @@
 {
-  "generatedAt": "2026-11-14T00:22:53.351Z",
+  "generatedAt": "2026-11-18T20:54:26.509Z",
   "summary": {
     "documents": 337,
-    "substantial": 198,
-    "short": 100,
-    "fragments": 39,
+    "substantial": 196,
+    "short": 101,
+    "fragments": 40,
     "genericTitles": 69,
-    "genericSummaries": 42,
-    "relationGaps": 241,
+    "genericSummaries": 43,
+    "relationGaps": 244,
     "withoutVisuals": 332,
     "titleReviewA": 0,
     "titleReviewB": 2,
     "titleReviewC": 67,
     "titleReviewOK": 268,
     "safeTitleCandidates": 0,
-    "summaryCandidates": 18,
-    "relationCandidates": 1018,
+    "summaryCandidates": 19,
+    "relationCandidates": 1023,
     "safeRelationCandidates": 0
   },
   "documents": [
@@ -1485,6 +1485,66 @@
           "RELATION_GAP",
           "NO_VISUAL",
           "NO_HEADINGS"
+        ],
+        "priority": 9
+      }
+    },
+    {
+      "file": "OTA-SCI-0105-2026-DE.md",
+      "signature": "OTA-SCI-0105-2026-DE",
+      "series": "SCI",
+      "year": "2026",
+      "language": "DE",
+      "canonical": {
+        "title": "Seltene b→sμμ-Zerfälle – CMS- und LHCb-Spannungen mit dem Standardmodell",
+        "summary": "AVI-P-Einordnung seltener b→sμμ-Zerfälle; Realteil in KUE-SCI-0205.",
+        "relatedCount": 0
+      },
+      "extracted": {
+        "title": null,
+        "author": null,
+        "classification": null,
+        "excerpt": "**Stand:** 17. Oktober 2026 · **Status:** Wissenschaftliche Beobachtungsnotiz, keine Entdeckung neuer Physik."
+      },
+      "titleReview": {
+        "tier": "OK",
+        "candidate": null,
+        "evidence": "canonical-title"
+      },
+      "candidates": {
+        "title": null,
+        "derivedTitle": null,
+        "summary": {
+          "value": "**Stand:** 17. Oktober 2026 · **Status:** Wissenschaftliche Beobachtungsnotiz, keine Entdeckung neuer Physik.",
+          "evidence": "first-substantive-paragraph",
+          "safe": false
+        },
+        "relations": [
+          {
+            "target": "OTA-REQ-20261110-002",
+            "evidence": "inline-reference",
+            "safe": false
+          }
+        ],
+        "count": 2
+      },
+      "metrics": {
+        "words": 242,
+        "headings": 5,
+        "images": 0,
+        "tables": 0,
+        "inlineReferenceTargets": 1
+      },
+      "quality": {
+        "substance": "FRAGMENT",
+        "genericTitle": false,
+        "genericSummary": true,
+        "relationGap": true,
+        "flags": [
+          "GENERIC_SUMMARY",
+          "RELATION_GAP",
+          "NO_VISUAL",
+          "LOW_SUBSTANCE"
         ],
         "priority": 9
       }
@@ -5442,16 +5502,21 @@
             "target": "OTA-BIO-0004-2096-DE",
             "evidence": "inline-reference",
             "safe": false
+          },
+          {
+            "target": "OTA-REQ-20261031-001",
+            "evidence": "inline-reference",
+            "safe": false
           }
         ],
-        "count": 6
+        "count": 7
       },
       "metrics": {
-        "words": 912,
+        "words": 1204,
         "headings": 16,
         "images": 0,
         "tables": 1,
-        "inlineReferenceTargets": 5
+        "inlineReferenceTargets": 6
       },
       "quality": {
         "substance": "SUBSTANZIELL",
@@ -6159,14 +6224,14 @@
       "language": "DE",
       "canonical": {
         "title": "STAR: Nichtmonotone transversale Impulskorrelationen in Au+Au-Kollisionen",
-        "summary": "STAR beobachtet nichtmonotone transversale Impulskorrelationen bei Au+Au-Kollisionen zwischen 3,0 und 7,7 GeV pro Nukleonenpaar. Das Muster ist für das QCD-Phasendiagramm relevant, beweist jedoch weder einen kritischen Endpunkt noch neue fundamentale Physik.",
+        "summary": "AVI-P- und Omnizedenz-Einordnung des STAR-Befunds zu Impulskorrelationen; Realteil in KUE-SCI-0195",
         "relatedCount": 2
       },
       "extracted": {
         "title": null,
         "author": null,
         "classification": null,
-        "excerpt": "STAR Collaboration, *Non-Monotonicity of Transverse Momentum Correlations in Au+Au Collisions at RHIC*, *Physical Review Letters* **137**, 132301 (2026), veröffentlicht am 22. September 2026. https://arxiv.org/abs/2604.06434 ; https://doi.org/10.1103/2xsn-rgx3 ."
+        "excerpt": "STAR hat in Fixed-Target-Kollisionen von Goldkernen bei √s_NN = 3,0–7,7 GeV (Beam Energy Scan II) gemessen, dass die Korrelationen des transversalen Impulses geladener Teilchen in zentralen Stößen nicht glatt mit der Kollisionsenergie verlaufen; die Kollaboration gibt dafür etwa 5σ an. `[R]` Ob dahinter ein kritischer Punkt im QCD-Phasendiagramm oder nich…"
       },
       "titleReview": {
         "tier": "OK",
@@ -6182,16 +6247,21 @@
             "target": "OTA-SCI-0105",
             "evidence": "inline-reference",
             "safe": false
+          },
+          {
+            "target": "OTA-REQ-20261111-002",
+            "evidence": "inline-reference",
+            "safe": false
           }
         ],
-        "count": 1
+        "count": 2
       },
       "metrics": {
-        "words": 267,
-        "headings": 7,
+        "words": 209,
+        "headings": 6,
         "images": 0,
         "tables": 0,
-        "inlineReferenceTargets": 1
+        "inlineReferenceTargets": 2
       },
       "quality": {
         "substance": "FRAGMENT",
@@ -6616,13 +6686,13 @@
       "canonical": {
         "title": "OTA-TEC-0019-2091-DE",
         "summary": "Kanonische KITE-Notfall-SOP und Survival-Architektur auf Basis der ECLSS-SR-Familie: nominaler regenerativer Pfad und unabhängige Fallbackpfade werden getrennt; Leak-Trigger bleiben KITE-spezifisch, 16 Personen sind ein eigener Lastfall, und Safe-Haven-Freigaben erfordern gleichzeitig positive Ressourcen- und Leistungsreserven.",
-        "relatedCount": 2
+        "relatedCount": 3
       },
       "extracted": {
         "title": null,
         "author": null,
         "classification": null,
-        "excerpt": "**Dokumenttyp:** Standard Operating Procedure **Signatur:** **OTA-TEC-0019-2091-DE** **Temporaler Status:** Prospektiv [2065–2100] **Version:** 1.3 **Status:** Kanonisch"
+        "excerpt": "**Dokumenttyp:** Standard Operating Procedure **Signatur:** **OTA-TEC-0019-2091-DE** **Temporaler Status:** Prospektiv [2065–2100] **Version:** 1.4 **Status:** Kanonisch"
       },
       "titleReview": {
         "tier": "B",
@@ -6644,7 +6714,7 @@
             "safe": false
           },
           {
-            "target": "OTA-TEC-0020-2091-DE",
+            "target": "OTA-REQ-20261114-001",
             "evidence": "inline-reference",
             "safe": false
           }
@@ -6652,11 +6722,11 @@
         "count": 3
       },
       "metrics": {
-        "words": 798,
+        "words": 807,
         "headings": 18,
         "images": 0,
         "tables": 1,
-        "inlineReferenceTargets": 3
+        "inlineReferenceTargets": 4
       },
       "quality": {
         "substance": "SUBSTANZIELL",
@@ -9180,6 +9250,60 @@
       }
     },
     {
+      "file": "OTA-SCI-0022-2025-DE.md",
+      "signature": "OTA-SCI-0022-2025-DE",
+      "series": "SCI",
+      "year": "2025",
+      "language": "DE",
+      "canonical": {
+        "title": "Zhurong-Entdeckung: Wasser-Fenster auf Mars verlängert bis Amazonis-Epoche (~750 Mio. Jahre)",
+        "summary": "Zhurong-Befunde zu Wasser im Amazonium in Utopia Planitia (Radar 2026: geschichtete Ablagerung, etwa 750 Mio. Jahre) und ihre Nutzung für die Relikt-Fenster-Hypothese und Utopia Planitia im Werk; Realteil in KUE-SCI-0202.",
+        "relatedCount": 1
+      },
+      "extracted": {
+        "title": null,
+        "author": null,
+        "classification": null,
+        "excerpt": "# ZHURONG-ENTDECKUNG ## Wasser-Fenster auf Mars verlängert bis Amazonis-Epoche (~750 Mio. Jahre)"
+      },
+      "titleReview": {
+        "tier": "OK",
+        "candidate": null,
+        "evidence": "canonical-title"
+      },
+      "candidates": {
+        "title": null,
+        "derivedTitle": null,
+        "summary": null,
+        "relations": [
+          {
+            "target": "OTA-REQ-20261112-001",
+            "evidence": "inline-reference",
+            "safe": false
+          }
+        ],
+        "count": 1
+      },
+      "metrics": {
+        "words": 505,
+        "headings": 11,
+        "images": 0,
+        "tables": 0,
+        "inlineReferenceTargets": 1
+      },
+      "quality": {
+        "substance": "KURZ",
+        "genericTitle": false,
+        "genericSummary": false,
+        "relationGap": true,
+        "flags": [
+          "RELATION_GAP",
+          "NO_VISUAL"
+        ],
+        "priority": 4
+      }
+    },
+    {
       "file": "OTA-SCI-0024-2026-DE.md",
       "signature": "OTA-SCI-0024-2026-DE",
       "series": "SCI",
@@ -9516,6 +9640,65 @@
       }
     },
     {
+      "file": "OTA-SCI-0112-2026-DE.md",
+      "signature": "OTA-SCI-0112-2026-DE",
+      "series": "SCI",
+      "year": "2026",
+      "language": "DE",
+      "canonical": {
+        "title": "Mars-Siedlungen als Stoffstromsystem: ECLSS, Nahrung, ISRU, Energie und Resilienz",
+        "summary": "Brückendokument: NOXIA-Regeln für Stoff- und Energiebilanz von Mars-Siedlungen (MiniNode-Pfad, Game-Physics-Sperren, Kalibrierwerte, Closure-Check, Archivregel); reale Evidenzbasis in KUE-SCI-0208-2026-DE.",
+        "relatedCount": 2
+      },
+      "extracted": {
+        "title": null,
+        "author": null,
+        "classification": null,
+        "excerpt": "**Stand:** 18. November 2026 (v1.1; v1.0 vom 18. Oktober 2026) **Status:** Brückendokument (NOXIA-Regeln); Realteil in `DOC:KUE:KUE-SCI-0208-2026-DE` **Anlass:** `EXT-ENG-OTA-20260927-mars-settlement-closure-evidence`"
+      },
+      "titleReview": {
+        "tier": "OK",
+        "candidate": null,
+        "evidence": "canonical-title"
+      },
+      "candidates": {
+        "title": null,
+        "derivedTitle": null,
+        "summary": null,
+        "relations": [
+          {
+            "target": "OTA-TEC-0126",
+            "evidence": "inline-reference",
+            "safe": false
+          },
+          {
+            "target": "OTA-REQ-20261107-002",
+            "evidence": "inline-reference",
+            "safe": false
+          }
+        ],
+        "count": 2
+      },
+      "metrics": {
+        "words": 537,
+        "headings": 20,
+        "images": 0,
+        "tables": 0,
+        "inlineReferenceTargets": 2
+      },
+      "quality": {
+        "substance": "KURZ",
+        "genericTitle": false,
+        "genericSummary": false,
+        "relationGap": true,
+        "flags": [
+          "RELATION_GAP",
+          "NO_VISUAL"
+        ],
+        "priority": 4
+      }
+    },
+    {
       "file": "OTA-SCI-0120-2026-DE.md",
       "signature": "OTA-SCI-0120-2026-DE",
       "series": "SCI",
@@ -9610,6 +9793,60 @@
         "images": 0,
         "tables": 1,
         "inlineReferenceTargets": 1
+      },
+      "quality": {
+        "substance": "KURZ",
+        "genericTitle": false,
+        "genericSummary": false,
+        "relationGap": true,
+        "flags": [
+          "RELATION_GAP",
+          "NO_VISUAL"
+        ],
+        "priority": 4
+      }
+    },
+    {
+      "file": "OTA-TEC-0029-2048-DE.md",
+      "signature": "OTA-TEC-0029-2048-DE",
+      "series": "TEC",
+      "year": "2048",
+      "language": "DE",
+      "canonical": {
+        "title": "Quantensensorik & KI-Integration für LOD-Validierung",
+        "summary": "Quantensensorik und KI-gestützte LOD-Validierung als orthogonale Prüfschiene zum Post-Dotierungs-Halbleiter-Experiment; reale Messanker werden von fiktionalen AVI-/Netzwerkannahmen getrennt; Realanker in KUE-SCI-0177.",
+        "relatedCount": 1
+      },
+      "extracted": {
+        "title": null,
+        "author": null,
+        "classification": null,
+        "excerpt": "*Quantensensorik & KI-Integration für LOD-Validierung: Orthogonale Verifikationsmethoden zum Post-Dotierungs-Halbleiter-Experiment*"
+      },
+      "titleReview": {
+        "tier": "OK",
+        "candidate": null,
+        "evidence": "canonical-title"
+      },
+      "candidates": {
+        "title": null,
+        "derivedTitle": null,
+        "summary": null,
+        "relations": [
+          {
+            "target": "OTA-REQ-20261112-002",
+            "evidence": "inline-reference",
+            "safe": false
+          }
+        ],
+        "count": 1
+      },
+      "metrics": {
+        "words": 649,
+        "headings": 16,
+        "images": 0,
+        "tables": 1,
+        "inlineReferenceTargets": 2
       },
       "quality": {
         "substance": "KURZ",
@@ -15055,53 +15292,6 @@
       }
     },
     {
-      "file": "OTA-SCI-0022-2025-DE.md",
-      "signature": "OTA-SCI-0022-2025-DE",
-      "series": "SCI",
-      "year": "2025",
-      "language": "DE",
-      "canonical": {
-        "title": "Zhurong-Entdeckung: Wasser-Fenster auf Mars verlängert bis Amazonis-Epoche (~750 Mio. Jahre)",
-        "summary": "Analyse der Zhurong-Rover-Daten: Nachweis von salzhaltigen Schichten in der Utopia Planitia, die auf flüssiges Wasser bis vor ~750 Millionen Jahren hinweisen — deutlich jünger als bisherige Modelle. Erweitert das Fenster möglicher Habitabilität auf dem Mars erheblich.",
-        "relatedCount": 1
-      },
-      "extracted": {
-        "title": null,
-        "author": null,
-        "classification": null,
-        "excerpt": "# ZHURONG-ENTDECKUNG ## Wasser-Fenster auf Mars verlängert bis Amazonis-Epoche (~750 Mio. Jahre)"
-      },
-      "titleReview": {
-        "tier": "OK",
-        "candidate": null,
-        "evidence": "canonical-title"
-      },
-      "candidates": {
-        "title": null,
-        "derivedTitle": null,
-        "summary": null,
-        "relations": [],
-        "count": 0
-      },
-      "metrics": {
-        "words": 516,
-        "headings": 12,
-        "images": 0,
-        "tables": 0,
-        "inlineReferenceTargets": 0
-      },
-      "quality": {
-        "substance": "KURZ",
-        "genericTitle": false,
-        "genericSummary": false,
-        "relationGap": false,
-        "flags": [
-          "NO_VISUAL"
-        ],
-        "priority": 2
-      }
-    },
-    {
       "file": "OTA-SCI-0023-2025-DE.md",
       "signature": "OTA-SCI-0023-2025-DE",
       "series": "SCI",
@@ -16283,7 +16473,7 @@
       "canonical": {
         "title": "Der Mpemba-Effekt: Anomale Relaxation, universelles Prinzip und Wissen, das wie Fehler aussieht",
         "summary": "Wissenschaftliche Analyse des Mpemba-Effekts: historische Entdeckung, experimentelle Kontroversen, thermodynamische Erklärungsansätze über Relaxationsprozesse fern des Gleichgewichts, aktuelle Forschungslage und epistemologische Bedeutung als Beispiel für verdrängtes Beobachtungswissen.",
-        "relatedCount": 0
+        "relatedCount": 2
       },
       "extracted": {
         "title": null,
@@ -16307,16 +16497,6 @@
             "safe": false
           },
           {
-            "target": "OTA-SCI-0057-2026-DE",
-            "evidence": "inline-reference",
-            "safe": false
-          },
-          {
-            "target": "OTA-SCI-0058-2026-DE",
-            "evidence": "inline-reference",
-            "safe": false
-          },
-          {
             "target": "OTA-BIO-0026-2026-DE",
             "evidence": "inline-reference",
             "safe": false
@@ -16335,16 +16515,21 @@
             "target": "OTA-SCI-0060",
             "evidence": "inline-reference",
             "safe": false
+          },
+          {
+            "target": "OTA-REQ-20261108-002",
+            "evidence": "inline-reference",
+            "safe": false
           }
         ],
-        "count": 7
+        "count": 6
       },
       "metrics": {
-        "words": 2241,
-        "headings": 32,
+        "words": 924,
+        "headings": 13,
         "images": 0,
         "tables": 1,
-        "inlineReferenceTargets": 7
+        "inlineReferenceTargets": 8
       },
       "quality": {
         "substance": "SUBSTANZIELL",
@@ -16600,7 +16785,7 @@
         "title": null,
         "author": null,
         "classification": null,
-        "excerpt": "| | | |---|---| | **Dokumenttyp:** | Wissenschaftliche Grundlage | | **Signatur:** | **OTA-SCI-0082-2026-DE** | | **Temporaler Marker:** | 2026 (Archivierung) · Astronomischer Bezug: ~2700 BCE | | **Epistemologische Marker:** | `[R]` Real · `[T]` Theoretisch · `[S]` Spekulativ | | **Version:** | 1.0 | | **Status:** | Entwurf | | **kueper.com-Kandidat:** |…"
+        "excerpt": "| | | |---|---| | **Dokumenttyp:** | Wissenschaftliche Grundlage | | **Signatur:** | **OTA-SCI-0082-2026-DE** | | **Temporaler Marker:** | 2026 (Archivierung) · Astronomischer Bezug: ~2700 BCE | | **Epistemologische Marker:** | `[R]` Real · `[T]` Theoretisch · `[S]` Spekulativ | | **Version:** | 1.1 | | **Status:** | Aktiv | | **Realteil:** | `DOC:KUE:KUE…"
       },
       "titleReview": {
         "tier": "OK",
@@ -16626,16 +16811,21 @@
             "target": "OTA-TEC-0080",
             "evidence": "inline-reference",
             "safe": false
+          },
+          {
+            "target": "OTA-REQ-20261110-001",
+            "evidence": "inline-reference",
+            "safe": false
           }
         ],
-        "count": 3
+        "count": 4
       },
       "metrics": {
-        "words": 2587,
-        "headings": 25,
+        "words": 1468,
+        "headings": 16,
         "images": 0,
         "tables": 1,
-        "inlineReferenceTargets": 3
+        "inlineReferenceTargets": 4
       },
       "quality": {
         "substance": "SUBSTANZIELL",
@@ -17436,53 +17626,6 @@
       }
     },
     {
-      "file": "OTA-SCI-0105-2026-DE.md",
-      "signature": "OTA-SCI-0105-2026-DE",
-      "series": "SCI",
-      "year": "2026",
-      "language": "DE",
-      "canonical": {
-        "title": "Seltene b→sμμ-Zerfälle – CMS- und LHCb-Spannungen mit dem Standardmodell",
-        "summary": "Beobachtungsnotiz zu CMS-Kombinationsanalysen seltener Beauty-Hadron-Zerfälle und LHCb-Winkelmessungen: Hinweise auf Spannungen im Übergang b→s μ+μ−, jedoch keine gesicherte neue Physik; hadronische Modellunsicherheiten und Korrelationen zwischen Kanälen bleiben wesentlich.",
-        "relatedCount": 0
-      },
-      "extracted": {
-        "title": null,
-        "author": null,
-        "classification": null,
-        "excerpt": "**Stand:** 17. Oktober 2026 · **Status:** Wissenschaftliche Beobachtungsnotiz, keine Entdeckung neuer Physik."
-      },
-      "titleReview": {
-        "tier": "OK",
-        "candidate": null,
-        "evidence": "canonical-title"
-      },
-      "candidates": {
-        "title": null,
-        "derivedTitle": null,
-        "summary": null,
-        "relations": [],
-        "count": 0
-      },
-      "metrics": {
-        "words": 374,
-        "headings": 7,
-        "images": 0,
-        "tables": 0,
-        "inlineReferenceTargets": 0
-      },
-      "quality": {
-        "substance": "KURZ",
-        "genericTitle": false,
-        "genericSummary": false,
-        "relationGap": false,
-        "flags": [
-          "NO_VISUAL"
-        ],
-        "priority": 2
-      }
-    },
-    {
       "file": "OTA-SCI-0110-2026-DE.md",
       "signature": "OTA-SCI-0110-2026-DE",
       "series": "SCI",
@@ -17520,65 +17663,6 @@
       "metrics": {
         "words": 2237,
         "headings": 55,
-        "images": 0,
-        "tables": 1,
-        "inlineReferenceTargets": 2
-      },
-      "quality": {
-        "substance": "SUBSTANZIELL",
-        "genericTitle": false,
-        "genericSummary": false,
-        "relationGap": true,
-        "flags": [
-          "RELATION_GAP",
-          "NO_VISUAL"
-        ],
-        "priority": 2
-      }
-    },
-    {
-      "file": "OTA-SCI-0112-2026-DE.md",
-      "signature": "OTA-SCI-0112-2026-DE",
-      "series": "SCI",
-      "year": "2026",
-      "language": "DE",
-      "canonical": {
-        "title": "Mars-Siedlungen als Stoffstromsystem: ECLSS, Nahrung, ISRU, Energie und Resilienz",
-        "summary": "Evidenzbasis für Mars-Siedlungsmodelle: reale ISS-ECLSS-, Crop-, MELiSSA-, ISRU-, Energie-, Wartungs- und Robotikbefunde werden nach Maßstab, Dauer und Reifegrad getrennt; daraus werden Mass-/Energieerhaltung, Closure-Grenzen und Resilienzregeln für NOXIA abgeleitet.",
-        "relatedCount": 2
-      },
-      "extracted": {
-        "title": null,
-        "author": null,
-        "classification": null,
-        "excerpt": "**Stand:** 18. Oktober 2026 **Status:** wissenschaftlich-technisches Evidenzdossier **Anlass:** `EXT-ENG-OTA-20260927-mars-settlement-closure-evidence`"
-      },
-      "titleReview": {
-        "tier": "OK",
-        "candidate": null,
-        "evidence": "canonical-title"
-      },
-      "candidates": {
-        "title": null,
-        "derivedTitle": null,
-        "summary": null,
-        "relations": [
-          {
-            "target": "OTA-SCI-0109",
-            "evidence": "inline-reference",
-            "safe": false
-          },
-          {
-            "target": "OTA-TEC-0126",
-            "evidence": "inline-reference",
-            "safe": false
-          }
-        ],
-        "count": 2
-      },
-      "metrics": {
-        "words": 2688,
-        "headings": 83,
         "images": 0,
         "tables": 1,
         "inlineReferenceTargets": 2
@@ -21639,53 +21723,6 @@
         "images": 0,
         "tables": 1,
         "inlineReferenceTargets": 0
-      },
-      "quality": {
-        "substance": "SUBSTANZIELL",
-        "genericTitle": false,
-        "genericSummary": false,
-        "relationGap": false,
-        "flags": [
-          "NO_VISUAL"
-        ],
-        "priority": 0
-      }
-    },
-    {
-      "file": "OTA-TEC-0029-2048-DE.md",
-      "signature": "OTA-TEC-0029-2048-DE",
-      "series": "TEC",
-      "year": "2048",
-      "language": "DE",
-      "canonical": {
-        "title": "Quantensensorik & KI-Integration für LOD-Validierung",
-        "summary": "Quantensensorik und KI-gestützte LOD-Validierung als orthogonale Prüfschiene zum Post-Dotierungs-Halbleiter-Experiment; reale Messanker werden von fiktionalen AVI-/Netzwerkannahmen getrennt.",
-        "relatedCount": 1
-      },
-      "extracted": {
-        "title": null,
-        "author": null,
-        "classification": null,
-        "excerpt": "*Quantensensorik & KI-Integration für LOD-Validierung: Orthogonale Verifikationsmethoden zum Post-Dotierungs-Halbleiter-Experiment*"
-      },
-      "titleReview": {
-        "tier": "OK",
-        "candidate": null,
-        "evidence": "canonical-title"
-      },
-      "candidates": {
-        "title": null,
-        "derivedTitle": null,
-        "summary": null,
-        "relations": [],
-        "count": 0
-      },
-      "metrics": {
-        "words": 706,
-        "headings": 20,
-        "images": 0,
-        "tables": 1,
-        "inlineReferenceTargets": 1
       },
       "quality": {
         "substance": "SUBSTANZIELL",
