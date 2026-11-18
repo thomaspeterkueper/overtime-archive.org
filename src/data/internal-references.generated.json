@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-18T23:56:05.874Z",
+  "generatedAt": "2026-11-18T23:58:46.385Z",
   "documents": [
     {
       "signature": "OTA-ART-0001-2087-DE",
@@ -2002,7 +2002,7 @@
     {
       "signature": "OTA-TEC-0124-2026-DE",
       "title": "Die Splitterlupe — Instrumententechnisches Protokoll, Dr. Oskar Anton",
-      "summary": "Die Splitterlupe — instrumententechnisches Analyseprotokoll aus Dr. Oskar Antons Perspektive. Antons materialwissenschaftlich korrekte, aber funktional fehlgedeutete Analyse eines Obsidian-Artefakts, das Hysterese-Muster löscht statt Resonanz zu ernten.",
+      "summary": "Die Splitterlupe — instrumententechnisches Analyseprotokoll aus Dr. Oskar Antons Perspektive. Ein Splitter (Span), kein volles Artefakt; vermutete Herkunft: das Artefakt der Bilsteinhöhle. Antons materialwissenschaftlich korrekte, aber funktional fehlgedeutete Analyse eines Obsidian-Artefakts, das Hysterese-Muster löscht statt Resonanz zu ernten.",
       "file": "src/content/documents/OTA-TEC-0124-2026-DE.md"
     },
     {
@@ -10017,7 +10017,7 @@
       "source": "OTA-TEC-0124-2026-DE",
       "target": "OTA-BIO-0028",
       "contexts": [
-        "dDocuments: [\"OTA-TEC-0035-2026-DE\", \"OTA-TEC-0123-2026-DE\", \"OTA-SCI-0117-2026-DE\", \"OTA-SCI-0118-2026-DE\", \"OTA-BIO-0028\"] summary: \"Die Splitterlupe — instrumententechnisches Analyseprotokoll aus Dr. Oskar Antons Perspektive. Antons materialwissenschaftlich korrekte, a",
+        "dDocuments: [\"OTA-TEC-0035-2026-DE\", \"OTA-TEC-0123-2026-DE\", \"OTA-SCI-0117-2026-DE\", \"OTA-SCI-0118-2026-DE\", \"OTA-BIO-0028\"] summary: \"Die Splitterlupe — instrumententechnisches Analyseprotokoll aus Dr. Oskar Antons Perspektive. Ein Splitter (Span), kein volles Artefakt;",
         "rialwissenschaft) · OTA-SCI-0118 (Obsidian: Archäometrie) · OTA-TEC-0035 (Kette) · OTA-TEC-0123 (Hör-Stein) · OTA-BIO-0028 (Dr. Anton) **Verfasst von:** Thomas Peter Küper · 2026 --- ## VORBEMERKUNG (Kurator) Dieses Dokument folgt einem anderen Format als TEC-0035 und"
       ],
       "status": "resolved-base-id",
@@ -28860,8 +28860,8 @@
       "target": "OTA-SCI-0117",
       "contexts": [
         "kar Anton **Format:** Instrumententechnisches Protokoll (Antons Analyse-Perspektive) **Verwandte Dokumente:** OTA-SCI-0117 (Obsidian: Materialwissenschaft) · OTA-SCI-0118 (Obsidian: Archäometrie) · OTA-TEC-0035 (Kette) · OTA-TEC-0123 (Hör-Stein) · OTA-BIO-0028 (Dr. Anton)",
-        "`-Slot für narrative Entwicklung.* ### 2.4 Mikrostruktur-Hypothese (Antons Bewertung) `[T]` *Anton baut auf OTA-SCI-0117-Wissen auf, ohne es so zu nennen:* - Magnetit-Nanoeinschlüsse vorhanden (Magnettest, schwache Reaktion) - Schwarzfärbung konsistent mit hohem Magnet",
-        "erweise auf die migrierten Hexenteich-SCI-Dokumente aktualisiert: SCI-0083 (Obsidian: Materialwissenschaft) → OTA-SCI-0117, SCI-0084 (Obsidian: Archäometrie) → OTA-SCI-0118 (Nummernkollision im Master-Repo, siehe EXT-ECO-OTA-20261106-001). Inhalt sonst unverändert. | ---"
+        "hollen“. Bestätigt ist das nicht.* ### 2.4 Mikrostruktur-Hypothese (Antons Bewertung) `[T]` *Anton baut auf OTA-SCI-0117-Wissen auf, ohne es so zu nennen:* - Magnetit-Nanoeinschlüsse vorhanden (Magnettest, schwache Reaktion) - Schwarzfärbung konsistent mit hohem Magnet",
+        "erweise auf die migrierten Hexenteich-SCI-Dokumente aktualisiert: SCI-0083 (Obsidian: Materialwissenschaft) → OTA-SCI-0117, SCI-0084 (Obsidian: Archäometrie) → OTA-SCI-0118 (Nummernkollision im Master-Repo, siehe EXT-ECO-OTA-20261106-001). Inhalt sonst unverändert. | | **"
       ],
       "status": "resolved-base-id",
       "classification": "base-id-resolved",
@@ -28952,7 +28952,7 @@
       "source": "OTA-TEC-0124-2026-DE",
       "target": "OTA-SCI-0117-2026-DE",
       "contexts": [
-        "ian\", \"Dr. Oskar Anton\", \"Proto-Temenon\"] relatedDocuments: [\"OTA-TEC-0035-2026-DE\", \"OTA-TEC-0123-2026-DE\", \"OTA-SCI-0117-2026-DE\", \"OTA-SCI-0118-2026-DE\", \"OTA-BIO-0028\"] summary: \"Die Splitterlupe — instrumententechnisches Analyseprotokoll aus Dr. Oskar Antons Perspektive. Ant"
+        "ian\", \"Dr. Oskar Anton\", \"Proto-Temenon\"] relatedDocuments: [\"OTA-TEC-0035-2026-DE\", \"OTA-TEC-0123-2026-DE\", \"OTA-SCI-0117-2026-DE\", \"OTA-SCI-0118-2026-DE\", \"OTA-BIO-0028\"] summary: \"Die Splitterlupe — instrumententechnisches Analyseprotokoll aus Dr. Oskar Antons Perspektive. Ein"
       ],
       "status": "resolved",
       "classification": "existing",
@@ -29046,7 +29046,7 @@
       "target": "OTA-SCI-0118",
       "contexts": [
         "otokoll (Antons Analyse-Perspektive) **Verwandte Dokumente:** OTA-SCI-0117 (Obsidian: Materialwissenschaft) · OTA-SCI-0118 (Obsidian: Archäometrie) · OTA-TEC-0035 (Kette) · OTA-TEC-0123 (Hör-Stein) · OTA-BIO-0028 (Dr. Anton) **Verfasst von:** Thomas Peter Küper · 2026 --",
-        "e aktualisiert: SCI-0083 (Obsidian: Materialwissenschaft) → OTA-SCI-0117, SCI-0084 (Obsidian: Archäometrie) → OTA-SCI-0118 (Nummernkollision im Master-Repo, siehe EXT-ECO-OTA-20261106-001). Inhalt sonst unverändert. | --- **ENDE DOKUMENT** *Für das OverTime Archive* *"
+        "e aktualisiert: SCI-0083 (Obsidian: Materialwissenschaft) → OTA-SCI-0117, SCI-0084 (Obsidian: Archäometrie) → OTA-SCI-0118 (Nummernkollision im Master-Repo, siehe EXT-ECO-OTA-20261106-001). Inhalt sonst unverändert. | | **2026-11-19** | v1.1 (OTA-REQ-20261108-001 Splitter"
       ],
       "status": "resolved-base-id",
       "classification": "base-id-resolved",
@@ -29086,7 +29086,7 @@
       "source": "OTA-TEC-0124-2026-DE",
       "target": "OTA-SCI-0118-2026-DE",
       "contexts": [
-        "\"Proto-Temenon\"] relatedDocuments: [\"OTA-TEC-0035-2026-DE\", \"OTA-TEC-0123-2026-DE\", \"OTA-SCI-0117-2026-DE\", \"OTA-SCI-0118-2026-DE\", \"OTA-BIO-0028\"] summary: \"Die Splitterlupe — instrumententechnisches Analyseprotokoll aus Dr. Oskar Antons Perspektive. Antons materialwissenschaft"
+        "\"Proto-Temenon\"] relatedDocuments: [\"OTA-TEC-0035-2026-DE\", \"OTA-TEC-0123-2026-DE\", \"OTA-SCI-0117-2026-DE\", \"OTA-SCI-0118-2026-DE\", \"OTA-BIO-0028\"] summary: \"Die Splitterlupe — instrumententechnisches Analyseprotokoll aus Dr. Oskar Antons Perspektive. Ein Splitter (Span), kein v"
       ],
       "status": "resolved",
       "classification": "existing",
@@ -35090,7 +35090,7 @@
       "source": "OTA-TEC-0035-2026-DE",
       "target": "OTA-TEC-0123",
       "contexts": [
-        "to-Temenon-Objekt? β-Kandidat? | Geklärt — zweites Proto-Temenon-Objekt, Resonanzklasse β-0, geologisch-mono (OTA-TEC-0123) | | Splitterlupe: Eigenes TEC-Dokument | Geklärt — OTA-TEC-0124 (passives Feld, kein Trägertreibstoff) | | Klasse Σ: Gibt es Proto-Temenon-Objekte d",
+        "to-Temenon-Objekt? β-Kandidat? | Geklärt — zweites Proto-Temenon-Objekt, Resonanzklasse β-0, geologisch-mono (OTA-TEC-0123) | | Splitterlupe: Eigenes TEC-Dokument | Geklärt — OTA-TEC-0124 (passives Feld, kein Trägertreibstoff); Splitter (Span), kein volles Artefakt, vermu",
         "VIII korrigiert (IV.0, KN-IV.0, Kopftabelle); Flüstern-Mechanik „Stufe 6“ → „Entzugsstufe E2“; IX: Hör-Stein (OTA-TEC-0123) und Splitterlupe (OTA-TEC-0124) als geklärt; IV.4 um „Aktive Artefakte brauchen Treibstoff. Passive nicht.“ ergänzt (Konsistenz-Naht aus OTA-SCI-011"
       ],
       "status": "resolved-base-id",
@@ -35232,7 +35232,7 @@
       "sourceCount": 6,
       "priority": 0,
       "title": "Die Splitterlupe — Instrumententechnisches Protokoll, Dr. Oskar Anton",
-      "description": "Die Splitterlupe — instrumententechnisches Analyseprotokoll aus Dr. Oskar Antons Perspektive. Antons materialwissenschaftlich korrekte, aber funktional fehlgedeutete Analyse eines Obsidian-Artefakts, das Hysterese-Muster löscht statt Resonanz zu ernten.",
+      "description": "Die Splitterlupe — instrumententechnisches Analyseprotokoll aus Dr. Oskar Antons Perspektive. Ein Splitter (Span), kein volles Artefakt; vermutete Herkunft: das Artefakt der Bilsteinhöhle. Antons materialwissenschaftlich korrekte, aber funktional fehlgedeutete Analyse eines Obsidian-Artefakts, das Hysterese-Muster löscht statt Resonanz zu ernten.",
       "descriptionStatus": "canonical",
       "targetFile": "src/content/documents/OTA-TEC-0124-2026-DE.md"
     },
@@ -35257,7 +35257,7 @@
       "sourceCount": 6,
       "priority": 0,
       "title": "Die Splitterlupe — Instrumententechnisches Protokoll, Dr. Oskar Anton",
-      "description": "Die Splitterlupe — instrumententechnisches Analyseprotokoll aus Dr. Oskar Antons Perspektive. Antons materialwissenschaftlich korrekte, aber funktional fehlgedeutete Analyse eines Obsidian-Artefakts, das Hysterese-Muster löscht statt Resonanz zu ernten.",
+      "description": "Die Splitterlupe — instrumententechnisches Analyseprotokoll aus Dr. Oskar Antons Perspektive. Ein Splitter (Span), kein volles Artefakt; vermutete Herkunft: das Artefakt der Bilsteinhöhle. Antons materialwissenschaftlich korrekte, aber funktional fehlgedeutete Analyse eines Obsidian-Artefakts, das Hysterese-Muster löscht statt Resonanz zu ernten.",
       "descriptionStatus": "canonical",
       "targetFile": "src/content/documents/OTA-TEC-0124-2026-DE.md"
     },
@@ -35280,7 +35280,7 @@
       "sourceCount": 6,
       "priority": 0,
       "title": "Die Splitterlupe — Instrumententechnisches Protokoll, Dr. Oskar Anton",
-      "description": "Die Splitterlupe — instrumententechnisches Analyseprotokoll aus Dr. Oskar Antons Perspektive. Antons materialwissenschaftlich korrekte, aber funktional fehlgedeutete Analyse eines Obsidian-Artefakts, das Hysterese-Muster löscht statt Resonanz zu ernten.",
+      "description": "Die Splitterlupe — instrumententechnisches Analyseprotokoll aus Dr. Oskar Antons Perspektive. Ein Splitter (Span), kein volles Artefakt; vermutete Herkunft: das Artefakt der Bilsteinhöhle. Antons materialwissenschaftlich korrekte, aber funktional fehlgedeutete Analyse eines Obsidian-Artefakts, das Hysterese-Muster löscht statt Resonanz zu ernten.",
       "descriptionStatus": "canonical",
       "targetFile": "src/content/documents/OTA-TEC-0124-2026-DE.md"
     },
@@ -35289,7 +35289,7 @@
       "target": "OTA-TEC-0124",
       "contexts": [
         "ie Kette ist ein aktives Artefakt: Sie wirkt nur über den Neurostoffwechsel ihrer Trägerin. Die Splitterlupe (OTA-TEC-0124) ist ein passives Feld und braucht keinen menschlichen Treibstoff. `[F]` **Belastungsanalogie:** Das Kostenprofil entspricht in etwa der Bioenergeti",
-        "Objekt, Resonanzklasse β-0, geologisch-mono (OTA-TEC-0123) | | Splitterlupe: Eigenes TEC-Dokument | Geklärt — OTA-TEC-0124 (passives Feld, kein Trägertreibstoff) | | Klasse Σ: Gibt es Proto-Temenon-Objekte der Klasse Σ in der Story-Welt? | `[OFFEN]` | | Wechselwirkung Pro",
+        "Objekt, Resonanzklasse β-0, geologisch-mono (OTA-TEC-0123) | | Splitterlupe: Eigenes TEC-Dokument | Geklärt — OTA-TEC-0124 (passives Feld, kein Trägertreibstoff); Splitter (Span), kein volles Artefakt, vermutete Herkunft Bilsteinhöhle `[S]` (OTA-REQ-20261108-001) | | Klas",
         "Kopftabelle); Flüstern-Mechanik „Stufe 6“ → „Entzugsstufe E2“; IX: Hör-Stein (OTA-TEC-0123) und Splitterlupe (OTA-TEC-0124) als geklärt; IV.4 um „Aktive Artefakte brauchen Treibstoff. Passive nicht.“ ergänzt (Konsistenz-Naht aus OTA-SCI-0117 VIII). Nach Entscheidung von T"
       ],
       "status": "resolved-base-id",
@@ -35305,7 +35305,7 @@
       "sourceCount": 6,
       "priority": 0,
       "title": "Die Splitterlupe — Instrumententechnisches Protokoll, Dr. Oskar Anton",
-      "description": "Die Splitterlupe — instrumententechnisches Analyseprotokoll aus Dr. Oskar Antons Perspektive. Antons materialwissenschaftlich korrekte, aber funktional fehlgedeutete Analyse eines Obsidian-Artefakts, das Hysterese-Muster löscht statt Resonanz zu ernten.",
+      "description": "Die Splitterlupe — instrumententechnisches Analyseprotokoll aus Dr. Oskar Antons Perspektive. Ein Splitter (Span), kein volles Artefakt; vermutete Herkunft: das Artefakt der Bilsteinhöhle. Antons materialwissenschaftlich korrekte, aber funktional fehlgedeutete Analyse eines Obsidian-Artefakts, das Hysterese-Muster löscht statt Resonanz zu ernten.",
       "descriptionStatus": "canonical",
       "targetFile": "src/content/documents/OTA-TEC-0124-2026-DE.md"
     },
@@ -35328,7 +35328,7 @@
       "sourceCount": 6,
       "priority": 0,
       "title": "Die Splitterlupe — Instrumententechnisches Protokoll, Dr. Oskar Anton",
-      "description": "Die Splitterlupe — instrumententechnisches Analyseprotokoll aus Dr. Oskar Antons Perspektive. Antons materialwissenschaftlich korrekte, aber funktional fehlgedeutete Analyse eines Obsidian-Artefakts, das Hysterese-Muster löscht statt Resonanz zu ernten.",
+      "description": "Die Splitterlupe — instrumententechnisches Analyseprotokoll aus Dr. Oskar Antons Perspektive. Ein Splitter (Span), kein volles Artefakt; vermutete Herkunft: das Artefakt der Bilsteinhöhle. Antons materialwissenschaftlich korrekte, aber funktional fehlgedeutete Analyse eines Obsidian-Artefakts, das Hysterese-Muster löscht statt Resonanz zu ernten.",
       "descriptionStatus": "canonical",
       "targetFile": "src/content/documents/OTA-TEC-0124-2026-DE.md"
     },
@@ -35352,7 +35352,7 @@
       "sourceCount": 6,
       "priority": 0,
       "title": "Die Splitterlupe — Instrumententechnisches Protokoll, Dr. Oskar Anton",
-      "description": "Die Splitterlupe — instrumententechnisches Analyseprotokoll aus Dr. Oskar Antons Perspektive. Antons materialwissenschaftlich korrekte, aber funktional fehlgedeutete Analyse eines Obsidian-Artefakts, das Hysterese-Muster löscht statt Resonanz zu ernten.",
+      "description": "Die Splitterlupe — instrumententechnisches Analyseprotokoll aus Dr. Oskar Antons Perspektive. Ein Splitter (Span), kein volles Artefakt; vermutete Herkunft: das Artefakt der Bilsteinhöhle. Antons materialwissenschaftlich korrekte, aber funktional fehlgedeutete Analyse eines Obsidian-Artefakts, das Hysterese-Muster löscht statt Resonanz zu ernten.",
       "descriptionStatus": "canonical",
       "targetFile": "src/content/documents/OTA-TEC-0124-2026-DE.md"
     },
@@ -35369,7 +35369,7 @@
       "sourceCount": 5,
       "priority": 0,
       "title": "Die Splitterlupe — Instrumententechnisches Protokoll, Dr. Oskar Anton",
-      "description": "Die Splitterlupe — instrumententechnisches Analyseprotokoll aus Dr. Oskar Antons Perspektive. Antons materialwissenschaftlich korrekte, aber funktional fehlgedeutete Analyse eines Obsidian-Artefakts, das Hysterese-Muster löscht statt Resonanz zu ernten.",
+      "description": "Die Splitterlupe — instrumententechnisches Analyseprotokoll aus Dr. Oskar Antons Perspektive. Ein Splitter (Span), kein volles Artefakt; vermutete Herkunft: das Artefakt der Bilsteinhöhle. Antons materialwissenschaftlich korrekte, aber funktional fehlgedeutete Analyse eines Obsidian-Artefakts, das Hysterese-Muster löscht statt Resonanz zu ernten.",
       "descriptionStatus": "canonical",
       "targetFile": "src/content/documents/OTA-TEC-0124-2026-DE.md"
     },
@@ -35386,7 +35386,7 @@
       "sourceCount": 5,
       "priority": 0,
       "title": "Die Splitterlupe — Instrumententechnisches Protokoll, Dr. Oskar Anton",
-      "description": "Die Splitterlupe — instrumententechnisches Analyseprotokoll aus Dr. Oskar Antons Perspektive. Antons materialwissenschaftlich korrekte, aber funktional fehlgedeutete Analyse eines Obsidian-Artefakts, das Hysterese-Muster löscht statt Resonanz zu ernten.",
+      "description": "Die Splitterlupe — instrumententechnisches Analyseprotokoll aus Dr. Oskar Antons Perspektive. Ein Splitter (Span), kein volles Artefakt; vermutete Herkunft: das Artefakt der Bilsteinhöhle. Antons materialwissenschaftlich korrekte, aber funktional fehlgedeutete Analyse eines Obsidian-Artefakts, das Hysterese-Muster löscht statt Resonanz zu ernten.",
       "descriptionStatus": "canonical",
       "targetFile": "src/content/documents/OTA-TEC-0124-2026-DE.md"
     },
@@ -35403,7 +35403,7 @@
       "sourceCount": 5,
       "priority": 0,
       "title": "Die Splitterlupe — Instrumententechnisches Protokoll, Dr. Oskar Anton",
-      "description": "Die Splitterlupe — instrumententechnisches Analyseprotokoll aus Dr. Oskar Antons Perspektive. Antons materialwissenschaftlich korrekte, aber funktional fehlgedeutete Analyse eines Obsidian-Artefakts, das Hysterese-Muster löscht statt Resonanz zu ernten.",
+      "description": "Die Splitterlupe — instrumententechnisches Analyseprotokoll aus Dr. Oskar Antons Perspektive. Ein Splitter (Span), kein volles Artefakt; vermutete Herkunft: das Artefakt der Bilsteinhöhle. Antons materialwissenschaftlich korrekte, aber funktional fehlgedeutete Analyse eines Obsidian-Artefakts, das Hysterese-Muster löscht statt Resonanz zu ernten.",
       "descriptionStatus": "canonical",
       "targetFile": "src/content/documents/OTA-TEC-0124-2026-DE.md"
     },
@@ -35420,7 +35420,7 @@
       "sourceCount": 5,
       "priority": 0,
       "title": "Die Splitterlupe — Instrumententechnisches Protokoll, Dr. Oskar Anton",
-      "description": "Die Splitterlupe — instrumententechnisches Analyseprotokoll aus Dr. Oskar Antons Perspektive. Antons materialwissenschaftlich korrekte, aber funktional fehlgedeutete Analyse eines Obsidian-Artefakts, das Hysterese-Muster löscht statt Resonanz zu ernten.",
+      "description": "Die Splitterlupe — instrumententechnisches Analyseprotokoll aus Dr. Oskar Antons Perspektive. Ein Splitter (Span), kein volles Artefakt; vermutete Herkunft: das Artefakt der Bilsteinhöhle. Antons materialwissenschaftlich korrekte, aber funktional fehlgedeutete Analyse eines Obsidian-Artefakts, das Hysterese-Muster löscht statt Resonanz zu ernten.",
       "descriptionStatus": "canonical",
       "targetFile": "src/content/documents/OTA-TEC-0124-2026-DE.md"
     },
@@ -35437,7 +35437,7 @@
       "sourceCount": 5,
       "priority": 0,
       "title": "Die Splitterlupe — Instrumententechnisches Protokoll, Dr. Oskar Anton",
-      "description": "Die Splitterlupe — instrumententechnisches Analyseprotokoll aus Dr. Oskar Antons Perspektive. Antons materialwissenschaftlich korrekte, aber funktional fehlgedeutete Analyse eines Obsidian-Artefakts, das Hysterese-Muster löscht statt Resonanz zu ernten.",
+      "description": "Die Splitterlupe — instrumententechnisches Analyseprotokoll aus Dr. Oskar Antons Perspektive. Ein Splitter (Span), kein volles Artefakt; vermutete Herkunft: das Artefakt der Bilsteinhöhle. Antons materialwissenschaftlich korrekte, aber funktional fehlgedeutete Analyse eines Obsidian-Artefakts, das Hysterese-Muster löscht statt Resonanz zu ernten.",
       "descriptionStatus": "canonical",
       "targetFile": "src/content/documents/OTA-TEC-0124-2026-DE.md"
     },
