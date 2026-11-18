@@ -1,12 +1,11 @@
 # OTA-REQ-20261110-001 – OTA-SCI-0082-2026-DE (Der Himmel von 2700 BCE): Realteil korrigieren und nach KUE auslagern, Werkbezug behalten
 
-Status: open (nur noch Punkt F)
+Status: done
 Datum: 2026-11-10
 Quelle: Begutachtung nach ECO-ARC-0037, Zuordnung nach ECO-ARC-0038 §2 (Claude)
 Prüfbericht: `kueper-ecosystem/reviews/2026-11-10-OTA-SCI-0082-2026-DE.md`
 Zuordnung: Teile nach KUE – Abschnitte I, II und III.1 (Realteil) nach `kueper.com/external-tasks/open/EXT-OTA-KUE-20261110-001.md`; III.2, IV, VI (Werkbezug Bronzescheibe/Yin Hua) bleiben in OTA
 Voraussetzung: das neue KUE-Dokument aus EXT-OTA-KUE-20261110-001 ist in `kueper.com/main` gemergt (Signatur dort vergeben, im Folgenden `KUE-SCI-NNNN`). Erst danach umsetzen (Punkte A–E).
-Claude-Status: wartet auf Thomas (nur Punkt F – kuratorische Notiz KN-1.2)
 
 ## Anlass
 
@@ -38,3 +37,7 @@ KN-1.2 nennt Thuban einen „weißen Überriesen“, rund 200-mal leuchtkräftig
 ## Umgesetzt (A–E)
 
 2026-11-18 – Ökosystem-Kreislauf (Claude), Branch `claude/OTA-REQ-20261110-himmel-2700-aufraeumen`, nach Merge von `KUE-SCI-0207-2026-DE` in `kueper.com/main` (EXT-OTA-KUE-20261110-001). OTA-SCI-0082 auf v1.1: I–III.1 durch die Grundinformation ersetzt (KN-1.2 und KN-1.3 unverändert erhalten), IV.1-Zeile korrigiert, V auf die korrigierten Werte gebracht (Kennzeichnung nicht stärker als in KUE: heliakische Daten `[T]`), Quellen auf Verweis plus Meeus und Hunger & Steele reduziert, Kopftabelle (Status Aktiv, Realteil-Zeile), Revisionsvermerk. Offen bleibt nur Punkt F (KN-1.2) – wartet auf Thomas.
+
+## Erledigt
+
+2026-11-18 – Punkt F nach Entscheidung von Thomas (Chat, 18.11.2026: „Überriese und den Polaris-Vergleich streichen“): In KN-1.2 „weißer Überriese“ durch „weißer Stern“ ersetzt und den Satz „Scheinbar war er für das bloße Auge vergleichbar mit Polaris heute“ gestrichen; übriger Wortlaut der Notiz unverändert. Damit sind A–F umgesetzt.
