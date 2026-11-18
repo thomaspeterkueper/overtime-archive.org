@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-18T20:54:26.509Z",
+  "generatedAt": "2026-11-18T23:56:06.328Z",
   "summary": {
     "documents": 337,
     "substantial": 196,
@@ -16319,7 +16319,7 @@
       "language": "DE",
       "canonical": {
         "title": "Otjize als funktionales Materialsystem: Mineralogie, Nanophotophysik und kulturelle Dimension",
-        "summary": "Wissenschaftliche Analyse von Otjize, der traditionellen Ocker-Fett-Matrix der Himba: Mineralogie von Hämatit/Goethit-Nanopartikeln, photophysikalische Eigenschaften als UV-Schutz und Temperaturregulation, antimikrobielle Effekte und Verortung als komplexes funktionales Materialsystem.",
+        "summary": "Brücke zwischen der Ocker-Fett-Paste der Himba und dem OTJIZE-Motiv Isolation vs. Kopplung; Realteil in KUE-SCI-0209-2026-DE.",
         "relatedCount": 1
       },
       "extracted": {
@@ -16374,7 +16374,7 @@
             "safe": false
           },
           {
-            "target": "OTA-SCI-XXXX",
+            "target": "OTA-REQ-20261108-001",
             "evidence": "inline-reference",
             "safe": false
           }
@@ -16382,8 +16382,8 @@
         "count": 8
       },
       "metrics": {
-        "words": 1782,
-        "headings": 36,
+        "words": 1064,
+        "headings": 20,
         "images": 0,
         "tables": 1,
         "inlineReferenceTargets": 8
