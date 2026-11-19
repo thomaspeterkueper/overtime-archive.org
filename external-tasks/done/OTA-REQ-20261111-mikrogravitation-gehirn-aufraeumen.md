@@ -1,6 +1,6 @@
 # OTA-REQ-20261111-001 – OTA-SCI-0021-2025-DE (Mikrogravitation und Gehirnarchitektur): Realanker nach KUE auslagern, g-Profil-Matrix behalten
 
-Status: open
+Status: done
 Datum: 2026-11-11
 Entschieden: 2026-11-11 (Thomas) – OTA-SCI-0021 wird ergänzt, nicht auf OTA-KARTE-0002 verwiesen: Abschnitte II–IV und Matrixzeilen IV–V umgesetzt in v1.1 (Branch `claude/ota-sci-0021-ergaenzung`). Dieser Request ist entsprechend angepasst.
 Quelle: Begutachtung nach ECO-ARC-0037, Zuordnung nach ECO-ARC-0038 §2 (Claude)
@@ -29,3 +29,14 @@ C. **Kopf und Frontmatter:** Kopfzeile „Status: Kanonisch“ an den Frontmatte
 
 - `OTA-SCI-0019-2025-DE` (OTA-REQ-20261109-002, Punkt C) verweist für den Realanker „Langzeitaufenthalte im All zeigen messbare Effekte“ auf OTA-SCI-0021; nach Umsetzung beider Requests besser direkt auf `DOC:KUE:KUE-SCI-NNNN-2026-DE`.
 - `OTA-KARTE-0002-Epochen-g-Profile-DE` nennt als Basis „Raumfahrtmedizin (2014–2025)“ ohne Quellen; bei ihrer eigenen Begutachtung auf denselben KUE-Verweis prüfen.
+
+## Erledigt
+
+Status: done – 2026-11-19, Claude (Ökosystem-Kreislauf), Branch `claude/OTA-REQ-20261111-mikrogravitation-gehirn-aufraeumen`. Voraussetzung erfüllt: `DOC:KUE:KUE-SCI-0211-2026-DE` liegt auf `kueper.com/main` (EXT-OTA-KUE-20261111-002).
+
+## Umgesetzt
+
+- A: Abschnitte „I. Überblick“ und „II. Raumfahrtmedizinische Befunde“ durch „I. Realgrundlage (Kurzfassung)“ mit Verweis auf KUE-SCI-0211-2026-DE ersetzt; Quellen VI auf KUE-Verweis, Wang, Seidler et al. 2026 (Titel geprüft: „Brain displacement and nonlinear deformation following human spaceflight“) und Mousley et al. 2025 gekürzt.
+- B: Kuratoranmerkung, III, IV, Matrix V, KN-5.1 und Revisionsvermerk unverändert.
+- C: Kopfstatus „Kanonisch“ → „Aktiv“; `summary` auf Brückenfunktion; `review.reason` angepasst; v1.2 mit Revisionsvermerk.
+- Offen (Wirkung): OTA-SCI-0019 (OTA-REQ-20261109-002, Punkt C) und OTA-KARTE-0002 bei ihrer Bearbeitung direkt auf KUE-SCI-0211-2026-DE verweisen lassen.
