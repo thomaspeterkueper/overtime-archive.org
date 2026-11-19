@@ -11,7 +11,7 @@ accessLevel: 0
 epistemicStatus: ["F", "W", "OFFEN"]
 universe: ["NOXIA", "Generation Mars", "Halden"]
 tags: ["Kaiwu", "开物", "Utopia Planitia", "Mars", "Sozialgeschichte", "Alltag", "Maryem Hamid", "Robotik"]
-relatedDocuments: ["OTA-META-0004-2076-DE", "OTA-HIS-0004-2021-DE", "OTA-HIS-0005-2050-DE", "OTA-ORG-0008-2087-DE"]
+relatedDocuments: ["OTA-META-0004-2076-DE", "OTA-SOC-0001-2076-DE", "OTA-CHR-0001-2072-DE", "OTA-HIS-0006-2072-DE", "OTA-HIS-0004-2021-DE", "OTA-HIS-0005-2050-DE", "OTA-ORG-0008-2087-DE"]
 summary: "Entwicklungsdossier zu Alltag, Migration, Arbeit, Sprache, Familien, institutionellem Wandel und Erinnerungskultur in Kaiwu. Unterscheidet gesicherten NOXIA-Kanon von narrativen Arbeitshypothesen."
 kg:
   schema: KXF-0.2
@@ -113,3 +113,16 @@ Iterius Prime und Kaiwu sind keine autarken Konkurrenten. Kaiwu kann bestimmte M
 8. Welche soziale und institutionelle Beziehung verbindet Maryems Familie mit der Stadt?
 
 **Redaktionelle Sperre:** Keine erfundenen Personennamen, Einwohnerzahlen, genauen Straßen-/Quartiersnamen, Feiertage oder Rechtsakte als Kanon ausgeben, bevor Manuskripte und bestehende OTA-Quellen abgeglichen sind.
+
+
+## 10. Quellenabgleich: Gründergeneration (19. November 2026)
+
+Die Gründergeneration ist **bereits** in zwei OTA-Dossiers ausgearbeitet. Eine weitere konkurrierende Figurenliste ist deshalb nicht anzulegen:
+
+- **OTA-CHR-0001-2072-DE** beschreibt sieben vorläufige narrative Anker: Liu Wenbo (robotische Vorbereitung), Chen Yuxin (Stationsleitung), Zhao Ming (Wartung/Fertigung), Dr. Lin Xiaoqing (Medizin), Amina El-Masri (Wasser/Prozess), Samir Hamid (Infrastrukturnetze) und Leila Haddad-Hamid (Wissensvermittlung/Bildung). **Alle Namen und Biografien [P]**; Samir und Leila als Maryems Eltern ebenfalls **[P]**.
+- **OTA-HIS-0006-2072-DE** enthält die feinere Aufbauchronologie 2072–2080, darunter Werkstattaufbau, erste Dauerbesatzung und Übergang zu Familienfähigkeit. Detaillierte Jahresdaten und Einwohnerkorridore sind **[P]**, nicht mit den wenigen kanonischen Ankern gleichzusetzen.
+- **OTA-SOC-0001-2076-DE** behandelt Migration, Sprachen, Ernährung, Bildung und Reparaturkultur bereits systematisch. Das vorliegende META-Dossier dient als übergreifende soziale Kontinuitätsprüfung, nicht als Ersatz.
+
+**Kontinuitätsentscheidung:** Maryems Geburt am 03.12.2080 in Kaiwu bleibt [K]; ihre Elternnamen, deren Herkunft, konkrete Rollen und Biografien bleiben [P]. Der Aufbau der ersten Stadtgesellschaft ist eine **kollektive Geschichte**, keine Sieben-Personen-Gründungslegende.
+
+**Vor Merge zu prüfen:** Die drei vorhandenen Spezialdossiers und META-0005 dürfen nicht durch doppelte, abweichende Namens- oder Datensätze konkurrieren. Neue Einzelereignisse sollen in der jeweils zuständigen HIS-/CHR-/SOC-Datei gepflegt und hier nur verlinkt werden.
