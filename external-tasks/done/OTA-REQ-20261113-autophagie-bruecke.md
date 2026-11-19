@@ -1,6 +1,7 @@
 # OTA-REQ-20261113-002 – OTA-SCI-0102-2026-DE (Autophagie im menschlichen Altern): nach Umzug nach KUE zum schlanken Brückendokument kürzen
 
-Status: open
+Status: done
+Erledigt: 2026-11-19 – Punkte A–C umgesetzt in OTA-SCI-0102 v1.1 durch die Begutachtung (ECO-ARC-0038 §3b; KUE-SCI-0204 v0.1 in `kueper.com/main`). Zu B: der Zusatz steht am Ende des ersten Satzes im letzten Absatz („… vorgeschlagen werden; ihre Realgrundlage ist künftig …“), damit der Satz grammatisch bleibt.
 Datum: 2026-11-13
 Quelle: Begutachtung nach ECO-ARC-0037, Zuordnung nach ECO-ARC-0038 §2 (Claude)
 Prüfbericht: `kueper-ecosystem/reviews/2026-11-13-OTA-SCI-0102-2026-DE.md`
