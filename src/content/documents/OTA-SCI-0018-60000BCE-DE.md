@@ -27,6 +27,11 @@ relatedDocuments:
     relation: "related"
     context: "Im Dokument ausdrücklich unter den verwandten Dokumenten bzw. Querverweisen aufgeführt."
     descriptionStatus: "explicit"
+review:
+  last: "2026-11-19"
+  next: "2027-11-19"
+  reason: "Bleibt OTA; Korrektur des Realteils per OTA-REQ-20261119-001 (Mykorrhiza-Netzwerke umstritten, Quellenfehler); Grundlagen ändern sich langsam – Standardintervall 12 Monate."
+  abgeschlossen: false
 summary: "Biotechnologische Grundlagen 60.000 BCE: paläoanthropologische Basis [R], spekulative Extrapolationen [S], Saga-Einbindung [F]."
 updatedAt: "2026-09-25T09:11:03+02:00"
 provenance:
