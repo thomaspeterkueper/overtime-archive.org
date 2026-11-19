@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-11-18T23:58:46.854Z",
+  "generatedAt": "2026-11-19T02:55:38.721Z",
   "summary": {
     "documents": 337,
-    "substantial": 196,
+    "substantial": 194,
     "short": 101,
-    "fragments": 40,
+    "fragments": 42,
     "genericTitles": 69,
     "genericSummaries": 43,
-    "relationGaps": 244,
+    "relationGaps": 246,
     "withoutVisuals": 332,
     "titleReviewA": 0,
     "titleReviewB": 2,
@@ -15,7 +15,7 @@
     "titleReviewOK": 268,
     "safeTitleCandidates": 0,
     "summaryCandidates": 19,
-    "relationCandidates": 1026,
+    "relationCandidates": 1030,
     "safeRelationCandidates": 0
   },
   "documents": [
@@ -6217,6 +6217,61 @@
       }
     },
     {
+      "file": "OTA-SCI-0102-2026-DE.md",
+      "signature": "OTA-SCI-0102-2026-DE",
+      "series": "SCI",
+      "year": "2026",
+      "language": "DE",
+      "canonical": {
+        "title": "Autophagie im menschlichen Altern — Flux, Zelltyp, Geschlecht und zelluläre Wartung",
+        "summary": "Brückendokument: Autophagie-Flux im menschlichen Altern als Grundlagenknoten für den OTA-Strang Longitudinal Brain Health (OTA-SCI-0103); Realteil in KUE-SCI-0204.",
+        "relatedCount": 1
+      },
+      "extracted": {
+        "title": null,
+        "author": null,
+        "classification": null,
+        "excerpt": "**Version:** 1.1 **Stand:** 19. November 2026 **Status:** wissenschaftliches Evidenzdossier"
+      },
+      "titleReview": {
+        "tier": "OK",
+        "candidate": null,
+        "evidence": "canonical-title"
+      },
+      "candidates": {
+        "title": null,
+        "derivedTitle": null,
+        "summary": null,
+        "relations": [
+          {
+            "target": "OTA-REQ-20261113-002",
+            "evidence": "inline-reference",
+            "safe": false
+          }
+        ],
+        "count": 1
+      },
+      "metrics": {
+        "words": 208,
+        "headings": 6,
+        "images": 0,
+        "tables": 0,
+        "inlineReferenceTargets": 1
+      },
+      "quality": {
+        "substance": "FRAGMENT",
+        "genericTitle": false,
+        "genericSummary": false,
+        "relationGap": true,
+        "flags": [
+          "RELATION_GAP",
+          "NO_VISUAL",
+          "LOW_SUBSTANCE"
+        ],
+        "priority": 6
+      }
+    },
+    {
       "file": "OTA-SCI-0107-2026-DE.md",
       "signature": "OTA-SCI-0107-2026-DE",
       "series": "SCI",
@@ -6259,6 +6314,66 @@
       "metrics": {
         "words": 209,
         "headings": 6,
+        "images": 0,
+        "tables": 0,
+        "inlineReferenceTargets": 2
+      },
+      "quality": {
+        "substance": "FRAGMENT",
+        "genericTitle": false,
+        "genericSummary": false,
+        "relationGap": true,
+        "flags": [
+          "RELATION_GAP",
+          "NO_VISUAL",
+          "LOW_SUBSTANCE"
+        ],
+        "priority": 6
+      }
+    },
+    {
+      "file": "OTA-SCI-0108-2026-DE.md",
+      "signature": "OTA-SCI-0108-2026-DE",
+      "series": "SCI",
+      "year": "2026",
+      "language": "DE",
+      "canonical": {
+        "title": "Ultrakompakte Doppel-Weiße-Zwerge: Orbitalzerfall, Direct-Impact-Akkretion und Gravitationswellen",
+        "summary": "Brückendokument: eRASSU J060839.5-704014 als Realanker für ultrakompakte Doppel-Weiße-Zwerge; Realteil in KUE-SCI-0206.",
+        "relatedCount": 1
+      },
+      "extracted": {
+        "title": null,
+        "author": null,
+        "classification": null,
+        "excerpt": "**Version:** 1.1 · **Stand:** 19. November 2026 · **Status:** Wissenschaftliches Dossier / Quellen- und Epistemikaudit"
+      },
+      "titleReview": {
+        "tier": "OK",
+        "candidate": null,
+        "evidence": "canonical-title"
+      },
+      "candidates": {
+        "title": null,
+        "derivedTitle": null,
+        "summary": null,
+        "relations": [
+          {
+            "target": "OTA-SCI-0093",
+            "evidence": "inline-reference",
+            "safe": false
+          },
+          {
+            "target": "OTA-REQ-20261115-002",
+            "evidence": "inline-reference",
+            "safe": false
+          }
+        ],
+        "count": 2
+      },
+      "metrics": {
+        "words": 142,
+        "headings": 5,
         "images": 0,
         "tables": 0,
         "inlineReferenceTargets": 2
@@ -16408,7 +16523,7 @@
       "language": "DE",
       "canonical": {
         "title": "Triclosan als entkoppelnder Selektionsdruck: Wirkmechanismus, Mikrobiom-Effekte und regulatorischer Status",
-        "summary": "Analyse von Triclosan als hochspezifischem antimikrobiellem Wirkstoff: FAB-I-Hemmung als Wirkmechanismus, Kreuzresistenzpotenzial zu klinischen Antibiotika, Effekte auf Hautmikrobiom und Barrierefunktion sowie aktueller regulatorischer Status in EU, USA und Asien.",
+        "summary": "Gegendokument zu OTA-SCI-0057: Triclosan als entkoppelnder Selektionsdruck; Realteil in KUE-SCI-0210-2026-DE.",
         "relatedCount": 2
       },
       "extracted": {
@@ -16428,6 +16543,11 @@
         "summary": null,
         "relations": [
           {
+            "target": "OTA-REQ-20261109-001",
+            "evidence": "inline-reference",
+            "safe": false
+          },
+          {
             "target": "OTA-FND-0023-2026-DE",
             "evidence": "inline-reference",
             "safe": false
@@ -16443,14 +16563,14 @@
             "safe": false
           }
         ],
-        "count": 3
+        "count": 4
       },
       "metrics": {
-        "words": 1633,
-        "headings": 31,
+        "words": 740,
+        "headings": 12,
         "images": 0,
         "tables": 1,
-        "inlineReferenceTargets": 4
+        "inlineReferenceTargets": 5
       },
       "quality": {
         "substance": "SUBSTANZIELL",
@@ -21516,53 +21636,6 @@
       }
     },
     {
-      "file": "OTA-SCI-0102-2026-DE.md",
-      "signature": "OTA-SCI-0102-2026-DE",
-      "series": "SCI",
-      "year": "2026",
-      "language": "DE",
-      "canonical": {
-        "title": "Autophagie im menschlichen Altern — Flux, Zelltyp, Geschlecht und zelluläre Wartung",
-        "summary": "Provenienzorientiertes Evidenzdossier zur zellulären Wartung im Altern mit Schwerpunkt auf direkt gemessenem humanem Autophagie-Flux. Trennt Flux von Gen-/Protein-Proxies, Humanbefunde von Tiermechanismen und prüft ausdrücklich, ob erhöhte Aktivität bessere Wartung oder eine kompensatorische Antwort auf höhere Schadenslast widerspiegelt.",
-        "relatedCount": 1
-      },
-      "extracted": {
-        "title": null,
-        "author": null,
-        "classification": null,
-        "excerpt": "Dieses Dossier ordnet den aktuellen Forschungsstand zur Autophagie als Bestandteil zellulärer Wartung im Altern. Im Zentrum steht eine methodische Verschiebung: von statischen Markern und Genexpressions-Proxies hin zur **direkten Messung des Autophagie-Flux**, also des tatsächlichen Materialdurchsatzes durch den autophagisch-lysosomalen Abbauweg."
-      },
-      "titleReview": {
-        "tier": "OK",
-        "candidate": null,
-        "evidence": "canonical-title"
-      },
-      "candidates": {
-        "title": null,
-        "derivedTitle": null,
-        "summary": null,
-        "relations": [],
-        "count": 0
-      },
-      "metrics": {
-        "words": 1891,
-        "headings": 28,
-        "images": 0,
-        "tables": 0,
-        "inlineReferenceTargets": 1
-      },
-      "quality": {
-        "substance": "SUBSTANZIELL",
-        "genericTitle": false,
-        "genericSummary": false,
-        "relationGap": false,
-        "flags": [
-          "NO_VISUAL"
-        ],
-        "priority": 0
-      }
-    },
-    {
       "file": "OTA-SCI-0103-2026-DE.md",
       "signature": "OTA-SCI-0103-2026-DE",
       "series": "SCI",
@@ -21597,53 +21670,6 @@
         "images": 0,
         "tables": 0,
         "inlineReferenceTargets": 2
-      },
-      "quality": {
-        "substance": "SUBSTANZIELL",
-        "genericTitle": false,
-        "genericSummary": false,
-        "relationGap": false,
-        "flags": [
-          "NO_VISUAL"
-        ],
-        "priority": 0
-      }
-    },
-    {
-      "file": "OTA-SCI-0108-2026-DE.md",
-      "signature": "OTA-SCI-0108-2026-DE",
-      "series": "SCI",
-      "year": "2026",
-      "language": "DE",
-      "canonical": {
-        "title": "Ultrakompakte Doppel-Weiße-Zwerge: Orbitalzerfall, Direct-Impact-Akkretion und Gravitationswellen",
-        "summary": "eRASSU J060839.5-704014 als realer Evidence-Anker für ultrakompakte double-degenerate Systeme: gemessene 374.15013-s-Periode und negativer Periodendrift werden von modellabhängigen Aussagen zu Chirp-Masse, Direct-Impact-Akkretion, Entfernung und Komponentenparametern getrennt.",
-        "relatedCount": 1
-      },
-      "extracted": {
-        "title": null,
-        "author": null,
-        "classification": null,
-        "excerpt": "**Stand:** 18. Oktober 2026 · **Status:** Wissenschaftliches Dossier / Quellen- und Epistemikaudit"
-      },
-      "titleReview": {
-        "tier": "OK",
-        "candidate": null,
-        "evidence": "canonical-title"
-      },
-      "candidates": {
-        "title": null,
-        "derivedTitle": null,
-        "summary": null,
-        "relations": [],
-        "count": 0
-      },
-      "metrics": {
-        "words": 859,
-        "headings": 13,
-        "images": 0,
-        "tables": 1,
-        "inlineReferenceTargets": 0
       },
       "quality": {
         "substance": "SUBSTANZIELL",
