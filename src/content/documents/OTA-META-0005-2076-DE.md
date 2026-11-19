@@ -125,4 +125,4 @@ Die Gründergeneration ist **bereits** in zwei OTA-Dossiers ausgearbeitet. Eine 
 
 **Kontinuitätsentscheidung:** Maryems Geburt am 03.12.2080 in Kaiwu bleibt [K]; ihre Elternnamen, deren Herkunft, konkrete Rollen und Biografien bleiben [P]. Der Aufbau der ersten Stadtgesellschaft ist eine **kollektive Geschichte**, keine Sieben-Personen-Gründungslegende.
 
-**Vor Merge zu prüfen:** Die drei vorhandenen Spezialdossiers und META-0005 dürfen nicht durch doppelte, abweichende Namens- oder Datensätze konkurrieren. Neue Einzelereignisse sollen in der jeweils zuständigen HIS-/CHR-/SOC-Datei gepflegt und hier nur verlinkt werden.
+**Redaktioneller Folgeschritt nach Merge (19.11.2026):** Der Abgleich der drei Spezialdossiers wurde vorgenommen. Beziehungen und mögliche 2087-Rollen der Gründergeneration werden ausschließlich im bestehenden OTA-CHR-0001-2072-DE (v1.1) als [P] weitergeführt. Neue Einzelereignisse sind in der jeweils zuständigen HIS-/CHR-/SOC-Datei zu pflegen und hier nur zu verlinken.
