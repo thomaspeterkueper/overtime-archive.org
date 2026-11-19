@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-19T02:55:38.215Z",
+  "generatedAt": "2026-11-19T08:57:40.805Z",
   "documents": [
     {
       "signature": "OTA-ART-0001-2087-DE",
@@ -1060,7 +1060,7 @@
     {
       "signature": "OTA-SCI-0021-2025-DE",
       "title": "Mikrogravitation und Gehirnarchitektur",
-      "summary": "Mikrogravitation und Gehirnarchitektur: ISS-Studien [R], Anpassungsdeutungen [T/I], Übertragung auf Mars-Gravitation und vollständige Matrix Epochen × g-Profile [S].",
+      "summary": "Brückendokument: Gehirn-Epochen × g-Profile für noχ¹ᐃ- und Mars-Narrative [S]; Realgrundlage Raumflug und Gehirn in KUE-SCI-0211-2026-DE.",
       "file": "src/content/documents/OTA-SCI-0021-2025-DE.md"
     },
     {
@@ -23093,7 +23093,7 @@
       "sourceCount": 1,
       "priority": 0,
       "title": "Mikrogravitation und Gehirnarchitektur",
-      "description": "Mikrogravitation und Gehirnarchitektur: ISS-Studien [R], Anpassungsdeutungen [T/I], Übertragung auf Mars-Gravitation und vollständige Matrix Epochen × g-Profile [S].",
+      "description": "Brückendokument: Gehirn-Epochen × g-Profile für noχ¹ᐃ- und Mars-Narrative [S]; Realgrundlage Raumflug und Gehirn in KUE-SCI-0211-2026-DE.",
       "descriptionStatus": "canonical",
       "targetFile": "src/content/documents/OTA-SCI-0021-2025-DE.md"
     },

@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-11-19T02:55:38.721Z",
+  "generatedAt": "2026-11-19T08:57:41.339Z",
   "summary": {
     "documents": 337,
-    "substantial": 194,
-    "short": 101,
+    "substantial": 193,
+    "short": 102,
     "fragments": 42,
     "genericTitles": 69,
     "genericSummaries": 43,
@@ -15,7 +15,7 @@
     "titleReviewOK": 268,
     "safeTitleCandidates": 0,
     "summaryCandidates": 19,
-    "relationCandidates": 1030,
+    "relationCandidates": 1029,
     "safeRelationCandidates": 0
   },
   "documents": [
@@ -12197,7 +12197,7 @@
       "language": "DE",
       "canonical": {
         "title": "Mikrogravitation und Gehirnarchitektur",
-        "summary": "Mikrogravitation und Gehirnarchitektur: ISS-Studien [R], Anpassungsdeutungen [T/I], Übertragung auf Mars-Gravitation und vollständige Matrix Epochen × g-Profile [S].",
+        "summary": "Brückendokument: Gehirn-Epochen × g-Profile für noχ¹ᐃ- und Mars-Narrative [S]; Realgrundlage Raumflug und Gehirn in KUE-SCI-0211-2026-DE.",
         "relatedCount": 2
       },
       "extracted": {
@@ -12217,7 +12217,7 @@
         "summary": null,
         "relations": [
           {
-            "target": "OTA-KUE-20261111-002",
+            "target": "OTA-KARTE-0002",
             "evidence": "inline-reference",
             "safe": false
           },
@@ -12225,24 +12225,19 @@
             "target": "OTA-REQ-20261111-001",
             "evidence": "inline-reference",
             "safe": false
-          },
-          {
-            "target": "OTA-KARTE-0002",
-            "evidence": "inline-reference",
-            "safe": false
           }
         ],
-        "count": 3
+        "count": 2
       },
       "metrics": {
-        "words": 1215,
+        "words": 884,
         "headings": 0,
         "images": 0,
         "tables": 0,
-        "inlineReferenceTargets": 4
+        "inlineReferenceTargets": 3
       },
       "quality": {
-        "substance": "SUBSTANZIELL",
+        "substance": "KURZ",
         "genericTitle": false,
         "genericSummary": false,
         "relationGap": true,
