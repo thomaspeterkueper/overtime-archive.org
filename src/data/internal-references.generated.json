@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-18T23:58:46.385Z",
+  "generatedAt": "2026-11-19T02:55:38.215Z",
   "documents": [
     {
       "signature": "OTA-ART-0001-2087-DE",
@@ -1246,7 +1246,7 @@
     {
       "signature": "OTA-SCI-0058-2026-DE",
       "title": "Triclosan als entkoppelnder Selektionsdruck: Wirkmechanismus, Mikrobiom-Effekte und regulatorischer Status",
-      "summary": "Analyse von Triclosan als hochspezifischem antimikrobiellem Wirkstoff: FAB-I-Hemmung als Wirkmechanismus, Kreuzresistenzpotenzial zu klinischen Antibiotika, Effekte auf Hautmikrobiom und Barrierefunktion sowie aktueller regulatorischer Status in EU, USA und Asien.",
+      "summary": "Gegendokument zu OTA-SCI-0057: Triclosan als entkoppelnder Selektionsdruck; Realteil in KUE-SCI-0210-2026-DE.",
       "file": "src/content/documents/OTA-SCI-0058-2026-DE.md"
     },
     {
@@ -1438,7 +1438,7 @@
     {
       "signature": "OTA-SCI-0102-2026-DE",
       "title": "Autophagie im menschlichen Altern — Flux, Zelltyp, Geschlecht und zelluläre Wartung",
-      "summary": "Provenienzorientiertes Evidenzdossier zur zellulären Wartung im Altern mit Schwerpunkt auf direkt gemessenem humanem Autophagie-Flux. Trennt Flux von Gen-/Protein-Proxies, Humanbefunde von Tiermechanismen und prüft ausdrücklich, ob erhöhte Aktivität bessere Wartung oder eine kompensatorische Antwort auf höhere Schadenslast widerspiegelt.",
+      "summary": "Brückendokument: Autophagie-Flux im menschlichen Altern als Grundlagenknoten für den OTA-Strang Longitudinal Brain Health (OTA-SCI-0103); Realteil in KUE-SCI-0204.",
       "file": "src/content/documents/OTA-SCI-0102-2026-DE.md"
     },
     {
@@ -1474,7 +1474,7 @@
     {
       "signature": "OTA-SCI-0108-2026-DE",
       "title": "Ultrakompakte Doppel-Weiße-Zwerge: Orbitalzerfall, Direct-Impact-Akkretion und Gravitationswellen",
-      "summary": "eRASSU J060839.5-704014 als realer Evidence-Anker für ultrakompakte double-degenerate Systeme: gemessene 374.15013-s-Periode und negativer Periodendrift werden von modellabhängigen Aussagen zu Chirp-Masse, Direct-Impact-Akkretion, Entfernung und Komponentenparametern getrennt.",
+      "summary": "Brückendokument: eRASSU J060839.5-704014 als Realanker für ultrakompakte Doppel-Weiße-Zwerge; Realteil in KUE-SCI-0206.",
       "file": "src/content/documents/OTA-SCI-0108-2026-DE.md"
     },
     {
@@ -2025,13 +2025,13 @@
     }
   ],
   "summary": {
-    "referenceCount": 1672,
+    "referenceCount": 1674,
     "openReferenceCount": 242,
     "openTargetCount": 128,
     "classifications": {
       "missing": 82,
       "shorthand-resolved": 10,
-      "base-id-resolved": 173,
+      "base-id-resolved": 174,
       "base-id-ambiguous": 19,
       "language-ambiguous": 1,
       "translation-missing": 1,
@@ -25996,10 +25996,11 @@
       "source": "OTA-SCI-0058-2026-DE",
       "target": "OTA-SCI-0057",
       "contexts": [
+        "\"Toxikologie\"] relatedDocuments: [\"OTA-SCI-0057-2026-DE\", \"OTA-SCI-0064-2026-DE\"] summary: \"Gegendokument zu OTA-SCI-0057: Triclosan als entkoppelnder Selektionsdruck; Realteil in KUE-SCI-0210-2026-DE.\" kg: schema: \"KXF-0.2\" master: kueper-knowledge-graph documentI",
         "daten fehlen. `[R/T]` 3. **Designstruktur:** Triclosan als Gegenprinzip zu gekoppelten Materialsystemen (vgl. OTA-SCI-0057) **Leitsatz:** `[T]` > Triclosan repräsentiert das inverse Designprinzip zu Otjize: ein isolierter, hochspezifischer Wirkstoff, der auf maximale ant",
         "en; die Tabelle beschreibt Designprinzipien, keine direkte klinische Äquivalenz. --- ## VIII. VERBINDUNG ZU OTA-SCI-0057 (OTJIZE) In OTA-SCI-0057 wurde dokumentiert, dass Otjize als gekoppeltes Materialsystem funktioniert, dessen Wirkung aus dem Zusammenspiel von nanok",
         "Designprinzipien, keine direkte klinische Äquivalenz. --- ## VIII. VERBINDUNG ZU OTA-SCI-0057 (OTJIZE) In OTA-SCI-0057 wurde dokumentiert, dass Otjize als gekoppeltes Materialsystem funktioniert, dessen Wirkung aus dem Zusammenspiel von nanokristallinem α-Fe₂O₃, organ",
-        "eichstrategien.] --- ## XI. KURATORNOTIZ **[KN-1]** Dieses Dokument ist als strukturelles Gegendokument zu OTA-SCI-0057 (Otjize) konzipiert. Die Wahl der Systematik — Kopplung vs. Entkopplung — ist nicht moralisierend. Es ist eine Beschreibung von Designprinzipien: Ein"
+        "I unverändert. | --- ## XI. KURATORNOTIZ **[KN-1]** Dieses Dokument ist als strukturelles Gegendokument zu OTA-SCI-0057 (Otjize) konzipiert. Die Wahl der Systematik — Kopplung vs. Entkopplung — ist nicht moralisierend. Es ist eine Beschreibung von Designprinzipien: Ein"
       ],
       "status": "resolved-base-id",
       "classification": "base-id-resolved",
@@ -26087,7 +26088,7 @@
       "source": "OTA-SCI-0058-2026-DE",
       "target": "OTA-SCI-0057-2026-DE",
       "contexts": [
-        "] tags: [\"Triclosan\", \"Mikrobiom\", \"Antibiotikaresistenz\", \"Hautbarriere\", \"Toxikologie\"] relatedDocuments: [\"OTA-SCI-0057-2026-DE\", \"OTA-SCI-0064-2026-DE\"] summary: \"Analyse von Triclosan als hochspezifischem antimikrobiellem Wirkstoff: FAB-I-Hemmung als Wirkmechanismus, Kreuzre",
+        "] tags: [\"Triclosan\", \"Mikrobiom\", \"Antibiotikaresistenz\", \"Hautbarriere\", \"Toxikologie\"] relatedDocuments: [\"OTA-SCI-0057-2026-DE\", \"OTA-SCI-0064-2026-DE\"] summary: \"Gegendokument zu OTA-SCI-0057: Triclosan als entkoppelnder Selektionsdruck; Realteil in KUE-SCI-0210-2026-DE.\" kg",
         "hert · `[T]` Theoretisch/abgeleitet | | **kueper.com-Status:** | Publikationsfähig | | **Bezug-Dokumente:** | OTA-SCI-0057-2026-DE (Otjize) · OTA-FND-0023-2026-DE (OTJIZE Roman) | **Kurator:** Thomas Peter Küper · Frankfurt am Main · April 2026 --- ## I. ZUSAMMENFASSUNG Tricl"
       ],
       "status": "resolved",
@@ -26190,7 +26191,7 @@
       "sourceCount": 2,
       "priority": 0,
       "title": "Triclosan als entkoppelnder Selektionsdruck: Wirkmechanismus, Mikrobiom-Effekte und regulatorischer Status",
-      "description": "Analyse von Triclosan als hochspezifischem antimikrobiellem Wirkstoff: FAB-I-Hemmung als Wirkmechanismus, Kreuzresistenzpotenzial zu klinischen Antibiotika, Effekte auf Hautmikrobiom und Barrierefunktion sowie aktueller regulatorischer Status in EU, USA und Asien.",
+      "description": "Gegendokument zu OTA-SCI-0057: Triclosan als entkoppelnder Selektionsdruck; Realteil in KUE-SCI-0210-2026-DE.",
       "descriptionStatus": "canonical",
       "targetFile": "src/content/documents/OTA-SCI-0058-2026-DE.md"
     },
@@ -26213,7 +26214,7 @@
       "sourceCount": 2,
       "priority": 0,
       "title": "Triclosan als entkoppelnder Selektionsdruck: Wirkmechanismus, Mikrobiom-Effekte und regulatorischer Status",
-      "description": "Analyse von Triclosan als hochspezifischem antimikrobiellem Wirkstoff: FAB-I-Hemmung als Wirkmechanismus, Kreuzresistenzpotenzial zu klinischen Antibiotika, Effekte auf Hautmikrobiom und Barrierefunktion sowie aktueller regulatorischer Status in EU, USA und Asien.",
+      "description": "Gegendokument zu OTA-SCI-0057: Triclosan als entkoppelnder Selektionsdruck; Realteil in KUE-SCI-0210-2026-DE.",
       "descriptionStatus": "canonical",
       "targetFile": "src/content/documents/OTA-SCI-0058-2026-DE.md"
     },
@@ -26231,7 +26232,7 @@
       "sourceCount": 6,
       "priority": 0,
       "title": "Triclosan als entkoppelnder Selektionsdruck: Wirkmechanismus, Mikrobiom-Effekte und regulatorischer Status",
-      "description": "Analyse von Triclosan als hochspezifischem antimikrobiellem Wirkstoff: FAB-I-Hemmung als Wirkmechanismus, Kreuzresistenzpotenzial zu klinischen Antibiotika, Effekte auf Hautmikrobiom und Barrierefunktion sowie aktueller regulatorischer Status in EU, USA und Asien.",
+      "description": "Gegendokument zu OTA-SCI-0057: Triclosan als entkoppelnder Selektionsdruck; Realteil in KUE-SCI-0210-2026-DE.",
       "descriptionStatus": "canonical",
       "targetFile": "src/content/documents/OTA-SCI-0058-2026-DE.md"
     },
@@ -26248,7 +26249,7 @@
       "sourceCount": 6,
       "priority": 0,
       "title": "Triclosan als entkoppelnder Selektionsdruck: Wirkmechanismus, Mikrobiom-Effekte und regulatorischer Status",
-      "description": "Analyse von Triclosan als hochspezifischem antimikrobiellem Wirkstoff: FAB-I-Hemmung als Wirkmechanismus, Kreuzresistenzpotenzial zu klinischen Antibiotika, Effekte auf Hautmikrobiom und Barrierefunktion sowie aktueller regulatorischer Status in EU, USA und Asien.",
+      "description": "Gegendokument zu OTA-SCI-0057: Triclosan als entkoppelnder Selektionsdruck; Realteil in KUE-SCI-0210-2026-DE.",
       "descriptionStatus": "canonical",
       "targetFile": "src/content/documents/OTA-SCI-0058-2026-DE.md"
     },
@@ -26265,7 +26266,7 @@
       "sourceCount": 6,
       "priority": 0,
       "title": "Triclosan als entkoppelnder Selektionsdruck: Wirkmechanismus, Mikrobiom-Effekte und regulatorischer Status",
-      "description": "Analyse von Triclosan als hochspezifischem antimikrobiellem Wirkstoff: FAB-I-Hemmung als Wirkmechanismus, Kreuzresistenzpotenzial zu klinischen Antibiotika, Effekte auf Hautmikrobiom und Barrierefunktion sowie aktueller regulatorischer Status in EU, USA und Asien.",
+      "description": "Gegendokument zu OTA-SCI-0057: Triclosan als entkoppelnder Selektionsdruck; Realteil in KUE-SCI-0210-2026-DE.",
       "descriptionStatus": "canonical",
       "targetFile": "src/content/documents/OTA-SCI-0058-2026-DE.md"
     },
@@ -26283,7 +26284,7 @@
       "sourceCount": 6,
       "priority": 0,
       "title": "Triclosan als entkoppelnder Selektionsdruck: Wirkmechanismus, Mikrobiom-Effekte und regulatorischer Status",
-      "description": "Analyse von Triclosan als hochspezifischem antimikrobiellem Wirkstoff: FAB-I-Hemmung als Wirkmechanismus, Kreuzresistenzpotenzial zu klinischen Antibiotika, Effekte auf Hautmikrobiom und Barrierefunktion sowie aktueller regulatorischer Status in EU, USA und Asien.",
+      "description": "Gegendokument zu OTA-SCI-0057: Triclosan als entkoppelnder Selektionsdruck; Realteil in KUE-SCI-0210-2026-DE.",
       "descriptionStatus": "canonical",
       "targetFile": "src/content/documents/OTA-SCI-0058-2026-DE.md"
     },
@@ -26300,7 +26301,7 @@
       "sourceCount": 6,
       "priority": 0,
       "title": "Triclosan als entkoppelnder Selektionsdruck: Wirkmechanismus, Mikrobiom-Effekte und regulatorischer Status",
-      "description": "Analyse von Triclosan als hochspezifischem antimikrobiellem Wirkstoff: FAB-I-Hemmung als Wirkmechanismus, Kreuzresistenzpotenzial zu klinischen Antibiotika, Effekte auf Hautmikrobiom und Barrierefunktion sowie aktueller regulatorischer Status in EU, USA und Asien.",
+      "description": "Gegendokument zu OTA-SCI-0057: Triclosan als entkoppelnder Selektionsdruck; Realteil in KUE-SCI-0210-2026-DE.",
       "descriptionStatus": "canonical",
       "targetFile": "src/content/documents/OTA-SCI-0058-2026-DE.md"
     },
@@ -26319,7 +26320,7 @@
       "sourceCount": 6,
       "priority": 0,
       "title": "Triclosan als entkoppelnder Selektionsdruck: Wirkmechanismus, Mikrobiom-Effekte und regulatorischer Status",
-      "description": "Analyse von Triclosan als hochspezifischem antimikrobiellem Wirkstoff: FAB-I-Hemmung als Wirkmechanismus, Kreuzresistenzpotenzial zu klinischen Antibiotika, Effekte auf Hautmikrobiom und Barrierefunktion sowie aktueller regulatorischer Status in EU, USA und Asien.",
+      "description": "Gegendokument zu OTA-SCI-0057: Triclosan als entkoppelnder Selektionsdruck; Realteil in KUE-SCI-0210-2026-DE.",
       "descriptionStatus": "canonical",
       "targetFile": "src/content/documents/OTA-SCI-0058-2026-DE.md"
     },
@@ -27239,7 +27240,7 @@
       "source": "OTA-SCI-0058-2026-DE",
       "target": "OTA-SCI-0064-2026-DE",
       "contexts": [
-        "ikrobiom\", \"Antibiotikaresistenz\", \"Hautbarriere\", \"Toxikologie\"] relatedDocuments: [\"OTA-SCI-0057-2026-DE\", \"OTA-SCI-0064-2026-DE\"] summary: \"Analyse von Triclosan als hochspezifischem antimikrobiellem Wirkstoff: FAB-I-Hemmung als Wirkmechanismus, Kreuzresistenzpotenzial zu klin"
+        "ikrobiom\", \"Antibiotikaresistenz\", \"Hautbarriere\", \"Toxikologie\"] relatedDocuments: [\"OTA-SCI-0057-2026-DE\", \"OTA-SCI-0064-2026-DE\"] summary: \"Gegendokument zu OTA-SCI-0057: Triclosan als entkoppelnder Selektionsdruck; Realteil in KUE-SCI-0210-2026-DE.\" kg: schema: \"KXF-0.2\""
       ],
       "status": "resolved",
       "classification": "existing",
@@ -28228,7 +28229,30 @@
         }
       ],
       "resolvedTarget": "OTA-SCI-0093-2026-DE",
-      "sourceCount": 1,
+      "sourceCount": 2,
+      "priority": 0,
+      "title": "Standard-Sirenen — Umgebungsbeschleunigung als systematischer Bias der H0-Inferenz",
+      "description": "Wissenschaftliches Evidenzdossier zu Liodis et al. (arXiv:2609.24476) über den Bias unmodellierter Sichtlinienbeschleunigung bei Standard-Sirenen. Trennt den simulierten astrophysikalischen Befund strikt von einer möglichen AVI-Nutzung und formuliert die Kontrollregel 'channel-state completeness before history-state inference'.",
+      "descriptionStatus": "canonical",
+      "targetFile": "src/content/documents/OTA-SCI-0093-2026-DE.md"
+    },
+    {
+      "source": "OTA-SCI-0108-2026-DE",
+      "target": "OTA-SCI-0093",
+      "contexts": [
+        "zug; das Dokument bleibt als Brückenknoten für künftige Verwendung in den Romanwelten und für den Verweis aus OTA-SCI-0093 bestehen. ## Revisionsvermerk - 2026-11-19: Realteil nach DOC:KUE:KUE-SCI-0206-2026-DE ausgelagert (OTA-REQ-20261115-002); Langfassung über Git v1."
+      ],
+      "status": "resolved-base-id",
+      "classification": "base-id-resolved",
+      "candidates": [
+        {
+          "signature": "OTA-SCI-0093-2026-DE",
+          "title": "Standard-Sirenen — Umgebungsbeschleunigung als systematischer Bias der H0-Inferenz",
+          "file": "src/content/documents/OTA-SCI-0093-2026-DE.md"
+        }
+      ],
+      "resolvedTarget": "OTA-SCI-0093-2026-DE",
+      "sourceCount": 2,
       "priority": 0,
       "title": "Standard-Sirenen — Umgebungsbeschleunigung als systematischer Bias der H0-Inferenz",
       "description": "Wissenschaftliches Evidenzdossier zu Liodis et al. (arXiv:2609.24476) über den Bias unmodellierter Sichtlinienbeschleunigung bei Standard-Sirenen. Trennt den simulierten astrophysikalischen Befund strikt von einer möglichen AVI-Nutzung und formuliert die Kontrollregel 'channel-state completeness before history-state inference'.",
@@ -28365,8 +28389,7 @@
       "source": "OTA-SCI-0102-2026-DE",
       "target": "OTA-SCI-0096-2026-DE",
       "contexts": [
-        "omen\", \"CMA\", \"Mitophagie\", \"Proteostase\", \"Seneszenz\", \"PBMC\", \"Zellwartung\"] relatedDocuments: - target: \"OTA-SCI-0096-2026-DE\" relation: \"related\" context: \"Anschluss an mitochondriale Physiologie, ROS und die Trennung von Mechanismus, Befund und Humanextrapolation.\"",
-        "nd stützt mechanistisch die Betrachtung einer **Mitochondrien–Lysosomen-Achse**. Anschlussdokument im OTA ist OTA-SCI-0096-2026-DE, das mitochondriale Physiologie und ROS unter einer anderen Expositionsfrage mit strikter Evidenzgrenze behandelt. ## 9. Vier getrennte Evidenzspure"
+        "omen\", \"CMA\", \"Mitophagie\", \"Proteostase\", \"Seneszenz\", \"PBMC\", \"Zellwartung\"] relatedDocuments: - target: \"OTA-SCI-0096-2026-DE\" relation: \"related\" context: \"Anschluss an mitochondriale Physiologie, ROS und die Trennung von Mechanismus, Befund und Humanextrapolation.\""
       ],
       "status": "resolved",
       "classification": "existing",
@@ -28498,9 +28521,32 @@
       "sourceCount": 1,
       "priority": 0,
       "title": "Autophagie im menschlichen Altern — Flux, Zelltyp, Geschlecht und zelluläre Wartung",
-      "description": "Provenienzorientiertes Evidenzdossier zur zellulären Wartung im Altern mit Schwerpunkt auf direkt gemessenem humanem Autophagie-Flux. Trennt Flux von Gen-/Protein-Proxies, Humanbefunde von Tiermechanismen und prüft ausdrücklich, ob erhöhte Aktivität bessere Wartung oder eine kompensatorische Antwort auf höhere Schadenslast widerspiegelt.",
+      "description": "Brückendokument: Autophagie-Flux im menschlichen Altern als Grundlagenknoten für den OTA-Strang Longitudinal Brain Health (OTA-SCI-0103); Realteil in KUE-SCI-0204.",
       "descriptionStatus": "canonical",
       "targetFile": "src/content/documents/OTA-SCI-0102-2026-DE.md"
+    },
+    {
+      "source": "OTA-SCI-0102-2026-DE",
+      "target": "OTA-SCI-0103",
+      "contexts": [
+        "nt: Autophagie-Flux im menschlichen Altern als Grundlagenknoten für den OTA-Strang Longitudinal Brain Health (OTA-SCI-0103); Realteil in KUE-SCI-0204.\" kg: schema: KXF-0.2 master: kueper-knowledge-graph documentId: \"OTA-SCI-0102-2026-DE\" graphId: \"DOC:OTA:OTA-SCI-"
+      ],
+      "status": "resolved-base-id",
+      "classification": "base-id-resolved",
+      "candidates": [
+        {
+          "signature": "OTA-SCI-0103-2026-DE",
+          "title": "Longitudinale Gehirngesundheit — Lebenslauf-Risiken, Prävention und Biomarker",
+          "file": "src/content/documents/OTA-SCI-0103-2026-DE.md"
+        }
+      ],
+      "resolvedTarget": "OTA-SCI-0103-2026-DE",
+      "sourceCount": 1,
+      "priority": 0,
+      "title": "Longitudinale Gehirngesundheit — Lebenslauf-Risiken, Prävention und Biomarker",
+      "description": "Provenienzorientiertes Evidenzdossier zur Gehirngesundheit über den Lebenslauf. Verknüpft die 14 modifizierbaren Risikofaktoren der Lancet Commission 2024 mit den WHO-Leitlinien 2026 und trennt populationsbezogene Prävention von Interventionsbelegen, Mechanismen und emerging Biomarkern wie Schlaf- und Sprachsignalen.",
+      "descriptionStatus": "canonical",
+      "targetFile": "src/content/documents/OTA-SCI-0103-2026-DE.md"
     },
     {
       "source": "OTA-SCI-0107-2026-DE",

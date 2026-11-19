@@ -1,6 +1,6 @@
 # OTA-REQ-20261109-001 – OTA-SCI-0058-2026-DE (Triclosan): Realteil nach KUE auslagern, Leitsatz und Systemvergleich behalten
 
-Status: open
+Status: done
 Datum: 2026-11-09
 Quelle: Begutachtung nach ECO-ARC-0037, Zuordnung nach ECO-ARC-0038 §2 (Claude)
 Prüfbericht: `kueper-ecosystem/reviews/2026-11-09-OTA-SCI-0058-2026-DE.md`
@@ -27,3 +27,15 @@ Leitsatz (I), Systemvergleich VII, Systemtypen-Tabelle VIII und die Kuratornotiz
 ## Wirkung
 
 `OTA-SCI-0057` verweist auf OTA-SCI-0058; Querverweise bleiben gültig. Sammel-Request `OTA-REQ-20261106-quellenpruefung.md`: Punkte zu OTA-SCI-0058 werden mit diesem Request erledigt.
+
+## Erledigt
+
+Status: done – 2026-11-19, Claude (Ökosystem-Kreislauf), Branch `claude/OTA-REQ-20261109-triclosan-aufraeumen`. Voraussetzung erfüllt: `DOC:KUE:KUE-SCI-0210-2026-DE` ist in `kueper.com/main` (EXT-OTA-KUE-20261109-001).
+
+## Umgesetzt
+
+- A: Abschnitte II–VI durch „II. Realgrundlage (Kurzfassung)“ im vorgegebenen Wortlaut ersetzt, Verweis auf `DOC:KUE:KUE-SCI-0210-2026-DE`.
+- B: I, VII, VIII und XI unverändert (die Otjize-Zeile „empirisch belegt“ in VII und die KG-Domain `KD:PHYS-THERM:N1` bleiben wie im Request vorgesehen offen – Entscheidung Thomas bzw. Prüfung im KG).
+- C/D: IX und X auf KUE verwiesen; Florence Statement [2] als Einzelbeleg behalten.
+- E: `summary` als Brückenfunktion, Version v1.2, Revisionsvermerk ergänzt; `relatedDocuments` unverändert.
+- `npm run verify` grün (Build mit Legal-Snapshot, Linkprüfung); generierte Indizes aktualisiert.
