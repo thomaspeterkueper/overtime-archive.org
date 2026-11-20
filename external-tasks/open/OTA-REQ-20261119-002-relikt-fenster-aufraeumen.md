@@ -6,6 +6,7 @@ Quelle: Begutachtung nach ECO-ARC-0037, Zuordnung nach ECO-ARC-0038 §2 (Claude)
 Prüfbericht: `kueper-ecosystem/reviews/2026-11-19-OTA-SCI-0020-2026-DE.md`
 Zuordnung: Teile nach KUE – Zhurong (§I.1): KUE-Gegenstück vorhanden (`DOC:KUE:KUE-SCI-0202-2026-DE`); Prudhoe Dome (§I.2): neues KUE-Dokument per `kueper.com/external-tasks/open/EXT-OTA-KUE-20261119-001.md`. Relikt-Fenster-Synthese (§I.3), Spekulativteil (§II, inkl. Frequenz-Hypothese/AVI) und Transferteil (§III) bleiben.
 Voraussetzung: Punkte A und C: `KUE-SCI-0202-2026-DE` (mindestens v0.1) in `kueper.com/main` – erfüllt (Stand 2026-11-19). Punkt B erst, wenn das neue KUE-Dokument aus EXT-OTA-KUE-20261119-001 in `kueper.com/main` gemergt ist (Signatur dort vergeben, im Folgenden `KUE-SCI-NNNN`). Punkt D zusammen mit B. Punkt E wartet auf Thomas.
+Teilweise erledigt: 2026-11-20 – Punkte A und C umgesetzt in OTA-SCI-0020 v1.1 durch die Begutachtung (ECO-ARC-0038 §3b; KUE-SCI-0202 in `kueper.com/main`). Offen: B und D (warten auf das KUE-Dokument aus EXT-OTA-KUE-20261119-001), E (wartet auf Thomas).
 Erfasst die Punkte zu OTA-SCI-0020 aus `OTA-REQ-20261106-quellenpruefung.md`.
 
 ## Anlass

@@ -6,6 +6,7 @@ Quelle: Begutachtung nach ECO-ARC-0037, Zuordnung nach ECO-ARC-0038 §2 (Claude)
 Prüfbericht: `kueper-ecosystem/reviews/2026-11-19-OTA-SCI-0018-60000BCE-DE.md`
 Zuordnung: bleibt OTA – der Realteil ist ein kurzer Katalog von Ankern für die spekulative Rückprojektion ins Paläolithikum (Ära des Lebendigen); kein KUE-Dokument nötig.
 Voraussetzung: keine (kein KUE-Dokument erforderlich) – Punkte A–G sind umsetzbar. Punkt H wartet auf Thomas.
+Teilweise erledigt: 2026-11-20 – Punkte A–G umgesetzt in OTA-SCI-0018 v1.1 durch die Begutachtung (ECO-ARC-0038 §3b). Offen bleibt Punkt H (wartet auf Thomas).
 Erfasst die Punkte zu OTA-SCI-0018 aus `OTA-REQ-20261106-quellenpruefung.md` (Oliveira 2015, Ludwig 2019 Sci. Rep., Chen 2022, MIT Media Lab).
 
 ## Anlass
