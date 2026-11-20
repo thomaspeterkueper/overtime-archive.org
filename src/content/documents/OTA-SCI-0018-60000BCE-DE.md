@@ -5,7 +5,7 @@ series: "SCI"
 seriesNumber: 18
 year: 2026
 language: "DE"
-version: "v1.0"
+version: "v1.1"
 status: "AKTIV"
 accessLevel: 0
 epistemicStatus: ["R", "S", "F"]
@@ -79,7 +79,7 @@ knowledge:
 
   **Quellenmarker:**      \[R\] Real / \[S\] Spekulativ
 
-  **Version:**            1.0
+  **Version:**            1.1
 
   **Status:**             Kanonisch
   ----------------------- -----------------------------------------------
@@ -116,42 +116,44 @@ ermöglichen den Austausch von Nährstoffen, Wasser und **Signalen**. Das
 Phänomen wurde von Dr. Suzanne Simard (University of British Columbia)
 als *\"Wood Wide Web\"* popularisiert.
 
-  ----------------------- -------------------------- --------------------
+  ----------------------- -------------------------- ----------------------
   **Phänomen**            **Nachweis**               **Status**
 
-  Nährstoff-Transfer      Simard (1997), Nature      **\[R\] Real**
+  Kohlenstofftransfer     Simard et al. (1997),      **\[R\] Befund,
+  zwischen Baumarten im   Nature                     Deutung umstritten**
+  Feld                                               
 
-  Elektrische Signale     Adamatzky (2022), Royal    **\[R\] Real**
-                          Society                    
+  Elektrische             Adamatzky (2022), Royal    **\[R\] Messung,
+  Spike-Aktivität im      Society Open Science       Funktion offen**
+  Myzel                                              
 
-  \"Mutterbäume\"         Simard (2021), Finding the **\[R\] Real**
-  koordinieren Wald       Mother Tree                
+  \"Mutterbäume\"         Simard (2021), Sachbuch    **\[H\] keine
+  versorgen Nachwuchs                                publizierte
+  über Pilznetzwerke                                 Feldevidenz**
 
   Chemische Warnsignale   Diverse Studien            **\[R\] Real**
-  (VOCs)                                             
-  ----------------------- -------------------------- --------------------
+  (VOCs, über die Luft)                              
+  ----------------------- -------------------------- ----------------------
+
+> Eine Auswertung der Feldstudien (Karst, Jones & Hoeksema 2023) fand für die Verbreitung gemeinsamer Mykorrhizanetzwerke im Wald nur schmale Belege, für Ressourcentransfer mit Nutzen für Sämlinge keine eindeutigen Feldbelege und für eine bevorzugte Versorgung des Nachwuchses durch Altbäume keine publizierte Feldevidenz. **\[R\]**
 
 1.2 Elektrische Signalübertragung
 
 **\[R\]** *Real --- Experimentell gemessen*
 
-Andrew Adamatzky (University of the West of England) dokumentierte 2022
-elektrische Signale in Pilz-Hyphen mit Geschwindigkeiten von **bis zu
-8,5 cm/s**. Die Signale zeigen Muster, die strukturelle Ähnlichkeit zu
-menschlicher Sprache aufweisen --- allerdings ohne Nachweis semantischer
-Bedeutung.
+Andrew Adamatzky (University of the West of England) zeichnete 2022 an vier Pilzarten elektrische Spikes auf: Amplituden von etwa 0,03 bis 2,1 mV, Dauer von einer bis 21 Stunden. Die Spike-Folgen zeigen statistische Muster, die er mit Wortlängen menschlicher Sprache verglich – ohne Nachweis einer Bedeutung. Eine Ausbreitungsgeschwindigkeit nennt die Arbeit nicht.
 
   -------------------------- --------------------------------------------
   **Parameter**              **Wert**
 
-  **Geschwindigkeit**        Bis zu 8,5 cm/s
+  **Geschwindigkeit**        nicht bestimmt
 
-  **Reichweite**             Mehrere Kilometer (über Netzwerk)
+  **Reichweite**             nicht gemessen (Elektrodenabstand 1–2 cm)
 
-  **Spannungsamplitude**     1-10 mV
+  **Spannungsamplitude**     0,03–2,1 mV
 
-  **Funktion**               Koordination, Ressourcen-Verteilung,
-                             Warnsignale
+  **Funktion**               unbekannt; Koordination und Warnsignale
+                             sind Hypothesen \[H\]
   -------------------------- --------------------------------------------
 
 1.3 Spekulativer Sprung
@@ -197,8 +199,8 @@ Kalkstein-Ablagerungen seit 3,5 Milliarden Jahren).
   Stromatolithen       Bakterien + Kalkstein      Geologische
                                                   Ablagerungen
 
-  Sporosarcina         Bio-Concrete (Sand →       BioMASON, MIT Research
-  pasteurii            Stein)                     
+  Sporosarcina         Bio-Concrete (Sand →       Biomason, Forschung
+  pasteurii            Stein)                     (u. a. CU Boulder)
   -------------------- -------------------------- -----------------------
 
 2.2 Bio-Concrete --- Moderne Anwendung
@@ -209,10 +211,7 @@ Das Bakterium *Sporosarcina pasteurii* produziert das Enzym Urease, das
 Harnstoff in Ammoniak und CO₂ spaltet. In Gegenwart von Kalzium-Ionen
 entsteht Kalziumkarbonat --- **Sand wird zu Stein**.
 
-Unternehmen wie BioMASON (USA) und Forschungsgruppen am MIT entwickeln
-selbstheilende Baumaterialien auf dieser Basis. Risse in Beton werden
-durch die bakterielle Produktion von Kalziumkarbonat automatisch
-verschlossen.
+Biomason (USA) stellt mit mikrobiell induzierter Calcitfällung Ziegel und Fliesen her. Selbstheilender Beton nutzt meist eingebettete Bacillus-Sporen, die bei Wasserzutritt Kalk in Rissen abscheiden. An der University of Colorado Boulder wurden lebende Baumaterialien aus Sand, Gel und Cyanobakterien entwickelt, die sich mehrfach regenerieren ließen (Heveran et al. 2020).
 
 2.3 Spekulativer Sprung
 
@@ -231,9 +230,9 @@ III\. BIOLUMINESZENZ --- LEBENDE LEUCHTEN
 
 3.1 Grundlagen
 
-**\[R\]** *Real --- Ca. 80 bekannte biolumineszente Pilzarten*
+**\[R\]** *Real --- Über 120 bekannte biolumineszente Pilzarten*
 
-Leuchtende Pilze existieren weltweit. Der biochemische Mechanismus
+Bekannt sind derzeit 122 Arten aus fünf Entwicklungslinien, überwiegend in den Tropen und Subtropen (Priyashantha et al. 2024). Leuchtende Pilze existieren weltweit. Der biochemische Mechanismus
 basiert auf der **Luciferin-Luciferase-Reaktion** --- derselbe Prozess,
 der auch Glühwürmchen leuchten lässt.
 
@@ -245,7 +244,9 @@ der auch Glühwürmchen leuchten lässt.
 
   *Mycena-Arten*       Weltweit (Tropen)       Leuchtendes Myzelium
 
-  *Armillaria*         Oregon, USA             Größtes Lebewesen der Erde
+  *Armillaria*         Weltweit (gemäßigte     Ein Klon von *A. ostoyae*
+                       Zonen)                  in Oregon gilt als größtes
+                                               bekanntes Einzelindividuum
   -------------------- ----------------------- --------------------------
 
 3.2 Spekulativer Sprung
@@ -274,13 +275,16 @@ selbsttragenden Strukturen.
 
   **Wachstumszeit**          15-30 Jahre bis voll belastbar
 
-  **Tragfähigkeit**          Bis zu 50 Personen gleichzeitig
+  **Tragfähigkeit**          mehrere Personen gleichzeitig (Angaben
+                             streuen)
 
   **Lebensdauer**            Mehrere Jahrhunderte (selbstverstärkend)
 
   **Wartung**                Selbstheilend, Wurzeln wachsen nach
 
-  **UNESCO-Status**          Weltkulturerbe-Kandidat
+  **UNESCO-Status**          seit März 2022 auf der indischen
+                             Tentativliste („Jingkieng Jri – Living
+                             Root Bridge Cultural Landscapes“)
   -------------------------- --------------------------------------------
 
 4.2 Spekulativer Sprung
@@ -307,8 +311,8 @@ katalogisiert:
   **Biomineralisation**   \[R\] Bio-Concrete         \[S\] Biologisch plausibel,
                           existiert                  keine Evidenz
 
-  **Biolumineszenz**      \[R\] \~80 leuchtende      \[S\] Kultivierung
-                          Pilzarten                  theoretisch möglich, keine
+  **Biolumineszenz**      \[R\] über 120           \[S\] Kultivierung
+                          leuchtende Pilzarten       theoretisch möglich, keine
                                                      Evidenz
 
   **Wurzelbrücken**       \[R\] Dokumentiert in      \[S\] Biologisch plausibel,
@@ -330,32 +334,34 @@ VI\. QUELLENNACHWEIS
 
 Mykologie und Pilznetzwerke
 
+Simard, S. W. et al. (1997). *\"Net transfer of carbon between ectomycorrhizal tree species in the field\". **Nature*** 388, 579–582.
+
 Simard, S. (2021). *Finding the Mother Tree*. Knopf.
+
+Karst, J., Jones, M. D., Hoeksema, J. D. (2023). *\"Positive citation bias and overinterpreted results lead to misinformation on common mycorrhizal networks in forests\". **Nature Ecology & Evolution***. DOI 10.1038/s41559-023-01986-1.
 
 Sheldrake, M. (2020). *Entangled Life*. Random House.
 
 Adamatzky, A. (2022). *\"Language of fungi derived from their electrical
-spiking activity\". **Royal Society Open Science***.
+spiking activity\". **Royal Society Open Science*** 9, 211926.
 
 Biomineralisation
 
-Chen, Y. et al. (2022). *\"Microbially induced calcium carbonate
-precipitation\". **Journal of Cleaner Production***.
-
-MIT Media Lab: Living Building Materials Research
+Heveran, C. M. et al. (2020). *\"Biomineralization and successive regeneration of engineered living building materials\". **Matter*** 2(2), 481–494.
 
 Biolumineszenz
 
 Desjardin, D.E. et al. (2008). *\"Fungi bioluminescence revisited\".
 **Photochemical & Photobiological Sciences***.
 
-Oliveira, A.G. et al. (2012). *\"Circadian control sheds light on fungal
-bioluminescence\". **Current Biology***.
+Oliveira, A.G. et al. (2015). *\"Circadian control sheds light on fungal
+bioluminescence\". **Current Biology*** 25(7), 964–968.
+
+Priyashantha, A. K. H. et al. (2024). *\"Fungal Bioluminescence: Past, Present, and Future\". **Diversity*** 16(9), 539. DOI 10.3390/d16090539.
 
 Lebende Wurzelbrücken
 
-Ludwig, F. et al. (2019). *\"Living bridges using the roots of Ficus
-elastica\". **Landscape and Urban Planning***.
+Ludwig, F., Middleton, W., Gallenmüller, F., Rogers, P., Speck, T. (2019). *\"Living bridges using aerial roots of ficus elastica – an interdisciplinary perspective\". **Scientific Reports*** 9, 12226.
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
@@ -392,6 +398,10 @@ REVISIONSVERLAUF
 |              | Anwendung ist transparent markiert. Das Archiv baut    |
 |              | Brücken zwischen Evidenz und Imagination --- aber es   |
 |              | verwischt die Grenze nicht.\'*                         |
++--------------+--------------------------------------------------------+
+| 2026-11-19   | Version 1.1: Realteil korrigiert – Myzel-Signale,      |
+|              | Mykorrhiza-Netzwerke, Biolumineszenz, Wurzelbrücken,   |
+|              | Quellen (OTA-REQ-20261119-001). Umgesetzt 2026-11-20.  |
 +--------------+--------------------------------------------------------+
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
