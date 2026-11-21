@@ -1,6 +1,7 @@
 # OTA-REQ-20261109-002 – OTA-SCI-0019-2025-DE (Die fünf Epochen des Gehirns): Studienteil nach KUE auslagern, Extrapolationen behalten
 
-Status: open
+Status: done
+Erledigt: 2026-11-21 – Punkte A–D umgesetzt in OTA-SCI-0019 v1.2 durch die Begutachtung (ECO-ARC-0038 §3b; KUE-SCI-0212-2026-DE v0.1 in `kueper.com/main`). Abschnittsnummern IV–VII nicht neu vergeben (nicht Teil des Requests).
 Datum: 2026-11-09
 Quelle: Begutachtung nach ECO-ARC-0037, Zuordnung nach ECO-ARC-0038 §2 (Claude)
 Prüfbericht: `kueper-ecosystem/reviews/2026-11-09-OTA-SCI-0019-2025-DE.md`
