@@ -5,13 +5,13 @@ series: "KARTE"
 seriesNumber: 1
 year: 2026
 language: "DE"
-version: "v1.0"
+version: "v1.1"
 status: "AKTIV"
 accessLevel: 0
-epistemicStatus: ["R", "S"]
+epistemicStatus: ["R", "I", "S"]
 tags: ["Gehirn", "Epochen", "Schnellreferenz", "Neurowissenschaft", "Karte", "Lebensspanne"]
 relatedDocuments: ["OTA-SCI-0019-2025-DE"]
-summary: "Schnellreferenz: Fünf Epochen des Gehirns und vier Wendepunkte der neuronalen Architektur. Kompakte Übersicht [R] mit spekulativen Erweiterungen [S]."
+summary: "Schnellreferenz: Fünf Abschnitte der Gehirnverschaltung und vier Wendepunkte nach Mousley et al. (2025) [R], Realgrundlage in KUE-SCI-0212-2026-DE; klinische Zuordnungen [I] und spekulative Erweiterungen [S] getrennt."
 kg:
   schema: KXF-0.2
   master: kueper-knowledge-graph
@@ -31,19 +31,22 @@ knowledge:
 
 **Quelle:** Mousley et al. (2025), Nature Communications  
 **DOI:** 10.1038/s41467-025-65974-8  
-**Vollständige Dokumentation:** OTA-SCI-0019-2025-DE
+**Realgrundlage:** `DOC:KUE:KUE-SCI-0212-2026-DE` (Befunde, Grenzen, Quellen)  
+**Werkbezug:** OTA-SCI-0019-2025-DE
+
+Gemessen hat die Studie die Verschaltung (Konnektom) im Querschnitt – nicht Synapsen, Myelin, Intelligenz, Persönlichkeit oder klinische Verläufe. Die Wendepunkte sind Populationsmittel, keine Grenzen für Einzelne. `[R]`
 
 ---
 
 ## SCHNELLREFERENZ: FÜNF EPOCHEN, VIER WENDEPUNKTE
 
-| Epoche | Alter | Neuronaler Status | Charakteristikum | Vulnerabilität |
+| Epoche | Alter | Neuronaler Status | Befund zur Netzwerktopologie [R] | Vulnerabilität [I] |
 |--------|-------|-------------------|------------------|----------------|
-| **I. Childhood** | 0-9 | Konsolidierung | Synaptische Blüte + Pruning | Entwicklungsstörungen |
+| **I. Childhood** | 0-9 | Konsolidierung | Integration sinkt, Segregation steigt | Entwicklungsstörungen |
 | **II. Adolescent** | 9-32 | Effizienzsteigerung | Einzige Phase mit zunehmender Effizienz | Psychische Störungen |
-| **III. Adult** | 32-66 | Stabilität | Längste stabile Phase, Plateau | Relative Robustheit |
-| **IV. Early Ageing** | 66-83 | Reorganisation | Abbau weißer Substanz beginnt | Neurodegenerative Risiken |
-| **V. Late Ageing** | 83+ | Lokalisierung | Global → Lokal, Desintegration | Demenz, Fragilität |
+| **III. Adult** | 32-66 | Stabilität | Längste, relativ stabile Phase | Relative Robustheit |
+| **IV. Early Ageing** | 66-83 | Reorganisation | Zunehmende Modularität | Neurodegenerative Risiken |
+| **V. Late Ageing** | 83+ | Lokalisierung | Verschiebung global → lokal, dünne Datenlage | Demenz, Fragilität |
 
 ---
 
@@ -52,28 +55,30 @@ knowledge:
 ### Wendepunkt 1: ~9 Jahre
 - **Transition:** Konsolidierung → Effizienzsteigerung
 - **Was passiert:** Ende uniformer Netzwerkbildung, Beginn Spezialisierung
-- **Klinisch:** Diagnostikfenster für Entwicklungsstörungen
+- **Klinisch [I]:** Diagnostikfenster für Entwicklungsstörungen
 
 ### Wendepunkt 2: ~32 Jahre  
 **⚠️ STÄRKSTER WENDEPUNKT DES LEBENS**
 - **Transition:** Effizienzsteigerung → Stabilität
 - **Was passiert:** Größte topologische Reorganisation, maximale strukturelle Verschiebung
 - **Mousley-Zitat:** "Die meisten gerichteten Veränderungen in der Verschaltung"
-- **Klinisch:** Maximale Formbarkeit UND Vulnerabilität
+- **Klinisch [I]:** Maximale Formbarkeit UND Vulnerabilität (Interpretation, von der Studie nicht untersucht)
 
 ### Wendepunkt 3: ~66 Jahre
 - **Transition:** Stabilität → Reorganisation
-- **Was passiert:** Messbarer Abbau weißer Substanz, Netzwerk-Umstrukturierung kulminiert
-- **Klinisch:** Präventionsfenster für Neurodegeneration
+- **Was passiert:** Allmähliche Reorganisation der Netzwerke kulminiert Mitte 60; deutlich milder als der Wendepunkt bei 32
+- **Klinisch [I]:** Präventionsfenster für Neurodegeneration
 
 ### Wendepunkt 4: ~83 Jahre
 - **Transition:** Reorganisation → Lokalisierung
-- **Was passiert:** Globale Vernetzung bricht zusammen, lokale Dominanz
-- **Klinisch:** Schwelle zur Fragilität
+- **Was passiert:** Verschiebung von globaler zu lokaler Konnektivität; nur schwache Altersbeziehung, kleine Teilgruppe
+- **Klinisch [I]:** Schwelle zur Fragilität
 
 ---
 
-## KLINISCHE VULNERABILITÄTEN PRO EPOCHE
+## KLINISCHE VULNERABILITÄTEN PRO EPOCHE [I]
+
+*Zuordnung aus allgemeiner Literatur, kein Befund von Mousley et al. (keine klinischen oder kognitiven Messungen); in OTA-Dokumenten nur mit eigener Quelle als [R] führen.*
 
 | Epoche | Häufigste Störungen | Mechanismus |
 |--------|---------------------|-------------|
@@ -135,7 +140,7 @@ Die Mousley-Studie analysierte **12 Netzwerk-Metriken:**
 
 Beim Referenzieren dieser Karte in OTA-Dokumenten:
 
-- **[R]** = Direkt aus Mousley-Studie belegt
+- **[R]** = Direkt aus Mousley-Studie belegt (Netzwerktopologie; siehe `DOC:KUE:KUE-SCI-0212-2026-DE`)
 - **[I]** = Interpretation peer-reviewed Befunde
 - **[S]** = Spekulative Extrapolation für Narrative
 
@@ -144,7 +149,10 @@ Beim Referenzieren dieser Karte in OTA-Dokumenten:
 
 ---
 
-**Letzte Aktualisierung:** 09. Januar 2026  
-**Vollständige Dokumentation:** OTA-SCI-0019-2025-DE (Version 1.1)  
+**Letzte Aktualisierung:** 21. November 2026  
+**Realgrundlage:** `DOC:KUE:KUE-SCI-0212-2026-DE`  
+**Werkbezug:** OTA-SCI-0019-2025-DE (Version 1.2)  
+
+**Revisionsvermerk:** 2026-11-21 – v1.1: Realgrundlage auf DOC:KUE:KUE-SCI-0212-2026-DE verwiesen; Tabellen- und Wendepunktangaben auf die gemessene Netzwerktopologie zurückgeführt (Synapsen-Pruning, Abbau weißer Substanz und „Zusammenbruch“ der globalen Vernetzung entfernt); klinische Zuordnungen als [I] gekennzeichnet (EXT-KUE-OTA-20261120-001).  
 
 **ᐃ**
