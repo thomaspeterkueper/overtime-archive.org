@@ -1,6 +1,7 @@
 # OTA-REQ-20261120-002 – OTA-SCI-0095-2026-DE (Galaktische zentrale Oberflächendichte): Quellen ergänzen, Realteil nach KUE kürzen
 
 Status: open
+Teilweise erledigt: 2026-11-21 – Punkt A umgesetzt in OTA-SCI-0095-2026-DE v1.1 (Ökosystem-Kreislauf, Claude, Branch `claude/OTA-REQ-20261120-002`); scinexx-Meldung weiter nicht auffindbar, durch CHIP.pl ersetzt. B und C warten auf das KUE-Dokument aus EXT-OTA-KUE-20261120-002.
 Datum: 2026-11-20
 Quelle: Begutachtung nach ECO-ARC-0037, Zuordnung nach ECO-ARC-0038 §2 (Claude)
 Prüfbericht: `kueper-ecosystem/reviews/2026-11-20-OTA-SCI-0095-2026-DE.md`
