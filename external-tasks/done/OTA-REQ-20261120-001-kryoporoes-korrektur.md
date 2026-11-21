@@ -1,6 +1,8 @@
 # OTA-REQ-20261120-001 – OTA-SCI-0084-2026-DE (Kryoporöse Oberflächen auf Eiswelten): Realanker korrigieren und auf KUE verweisen
 
-Status: open
+Status: done
+Erledigt: 2026-11-21 – Ökosystem-Kreislauf (Claude), Branch `claude/OTA-REQ-20261120-001`.
+Umgesetzt: Punkte A–D in OTA-SCI-0084-2026-DE v1.1 (Realanker Patočka et al./40 Liter, Verweis `DOC:KUE:KUE-SCI-0013-2026-DE`, §6 Levin et al., §16 Quellen, Revisionsvermerk); §2–§15 unverändert.
 Datum: 2026-11-20
 Quelle: Begutachtung nach ECO-ARC-0037, Zuordnung nach ECO-ARC-0038 §2 (Claude)
 Prüfbericht: `kueper-ecosystem/reviews/2026-11-20-OTA-SCI-0084-2026-DE.md`
