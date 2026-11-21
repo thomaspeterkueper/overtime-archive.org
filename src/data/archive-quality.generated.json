@@ -1,21 +1,21 @@
 {
-  "generatedAt": "2026-11-19T08:57:41.339Z",
+  "generatedAt": "2026-11-21T02:49:12.568Z",
   "summary": {
-    "documents": 337,
-    "substantial": 193,
-    "short": 102,
+    "documents": 338,
+    "substantial": 195,
+    "short": 101,
     "fragments": 42,
     "genericTitles": 69,
     "genericSummaries": 43,
-    "relationGaps": 246,
-    "withoutVisuals": 332,
+    "relationGaps": 250,
+    "withoutVisuals": 333,
     "titleReviewA": 0,
     "titleReviewB": 2,
     "titleReviewC": 67,
-    "titleReviewOK": 268,
+    "titleReviewOK": 269,
     "safeTitleCandidates": 0,
     "summaryCandidates": 19,
-    "relationCandidates": 1029,
+    "relationCandidates": 1039,
     "safeRelationCandidates": 0
   },
   "documents": [
@@ -2176,7 +2176,7 @@
         "count": 5
       },
       "metrics": {
-        "words": 1486,
+        "words": 1607,
         "headings": 0,
         "images": 0,
         "tables": 1,
@@ -3082,7 +3082,7 @@
       "language": "DE",
       "canonical": {
         "title": "OTA-FND-0004-2025-DE",
-        "summary": "Die Große Stille — kanonisches NOXIA-Ereignis. 8. Juni 2087, 42 Tage 12 Stunden. Fundament der Generation-Mars-Saga.",
+        "summary": "Die Große Stille — kanonisches NOXIA-Ereignis. 13. Januar bis 24. Februar 2087, 42 Tage 12 Stunden. Fundament der Generation-Mars-Saga.",
         "relatedCount": 0
       },
       "extracted": {
@@ -3132,6 +3132,11 @@
             "safe": false
           },
           {
+            "target": "OTA-HIS-0003-2087-DE",
+            "evidence": "inline-reference",
+            "safe": false
+          },
+          {
             "target": "OTA-RED-0012-2171",
             "evidence": "inline-reference",
             "safe": false
@@ -3147,14 +3152,14 @@
             "safe": false
           }
         ],
-        "count": 9
+        "count": 10
       },
       "metrics": {
-        "words": 2675,
+        "words": 2702,
         "headings": 0,
         "images": 0,
         "tables": 1,
-        "inlineReferenceTargets": 9
+        "inlineReferenceTargets": 10
       },
       "quality": {
         "substance": "SUBSTANZIELL",
@@ -7907,6 +7912,61 @@
       }
     },
     {
+      "file": "OTA-BIO-0012-2087-DE.md",
+      "signature": "OTA-BIO-0012-2087-DE",
+      "series": "BIO",
+      "year": "2087",
+      "language": "DE",
+      "canonical": {
+        "title": "James Nakamura — Der Mann, der das Muster verstand",
+        "summary": "James Nakamura — der Mann, der das Muster verstand. 2087, NOXIA-Generation-Mars-Saga.",
+        "relatedCount": 3
+      },
+      "extracted": {
+        "title": null,
+        "author": null,
+        "classification": null,
+        "excerpt": "---------------------- ------------------------------------------------ **Dokumenttyp:** Biographisches Profil (posthum)"
+      },
+      "titleReview": {
+        "tier": "OK",
+        "candidate": null,
+        "evidence": "canonical-title"
+      },
+      "candidates": {
+        "title": null,
+        "derivedTitle": null,
+        "summary": null,
+        "relations": [
+          {
+            "target": "OTA-BIO-0037-2092-DE",
+            "evidence": "inline-reference",
+            "safe": false
+          }
+        ],
+        "count": 1
+      },
+      "metrics": {
+        "words": 610,
+        "headings": 0,
+        "images": 0,
+        "tables": 1,
+        "inlineReferenceTargets": 4
+      },
+      "quality": {
+        "substance": "KURZ",
+        "genericTitle": false,
+        "genericSummary": false,
+        "relationGap": true,
+        "flags": [
+          "RELATION_GAP",
+          "NO_VISUAL",
+          "NO_HEADINGS"
+        ],
+        "priority": 5
+      }
+    },
+    {
       "file": "OTA-BIO-0016-2123-DE.md",
       "signature": "OTA-BIO-0016-2123-DE",
       "series": "BIO",
@@ -10796,54 +10856,6 @@
       }
     },
     {
-      "file": "OTA-BIO-0012-2087-DE.md",
-      "signature": "OTA-BIO-0012-2087-DE",
-      "series": "BIO",
-      "year": "2087",
-      "language": "DE",
-      "canonical": {
-        "title": "James Nakamura — Der Mann, der das Muster verstand",
-        "summary": "James Nakamura — der Mann, der das Muster verstand. 2087, NOXIA-Generation-Mars-Saga.",
-        "relatedCount": 3
-      },
-      "extracted": {
-        "title": null,
-        "author": null,
-        "classification": null,
-        "excerpt": "---------------------- ------------------------------------------------ **Dokumenttyp:** Biographisches Profil (posthum)"
-      },
-      "titleReview": {
-        "tier": "OK",
-        "candidate": null,
-        "evidence": "canonical-title"
-      },
-      "candidates": {
-        "title": null,
-        "derivedTitle": null,
-        "summary": null,
-        "relations": [],
-        "count": 0
-      },
-      "metrics": {
-        "words": 513,
-        "headings": 0,
-        "images": 0,
-        "tables": 1,
-        "inlineReferenceTargets": 3
-      },
-      "quality": {
-        "substance": "KURZ",
-        "genericTitle": false,
-        "genericSummary": false,
-        "relationGap": false,
-        "flags": [
-          "NO_VISUAL",
-          "NO_HEADINGS"
-        ],
-        "priority": 3
-      }
-    },
-    {
       "file": "OTA-CUL-0014-2152-DE.md",
       "signature": "OTA-CUL-0014-2152-DE",
       "series": "CUL",
@@ -11985,16 +11997,21 @@
             "target": "OTA-BIO-0004",
             "evidence": "inline-reference",
             "safe": false
+          },
+          {
+            "target": "OTA-REQ-20261118-001",
+            "evidence": "inline-reference",
+            "safe": false
           }
         ],
-        "count": 2
+        "count": 3
       },
       "metrics": {
-        "words": 2176,
+        "words": 2198,
         "headings": 0,
         "images": 0,
         "tables": 0,
-        "inlineReferenceTargets": 8
+        "inlineReferenceTargets": 9
       },
       "quality": {
         "substance": "SUBSTANZIELL",
@@ -12178,6 +12195,61 @@
       },
       "quality": {
         "substance": "KURZ",
+        "genericTitle": false,
+        "genericSummary": false,
+        "relationGap": true,
+        "flags": [
+          "RELATION_GAP",
+          "NO_VISUAL",
+          "NO_HEADINGS"
+        ],
+        "priority": 3
+      }
+    },
+    {
+      "file": "OTA-SCI-0018-60000BCE-DE.md",
+      "signature": "OTA-SCI-0018-60000BCE-DE",
+      "series": "SCI",
+      "year": "2026",
+      "language": "DE",
+      "canonical": {
+        "title": "Biotechnologische Grundlagen der Altsteinzeit — Eine wissenschaftliche Bewertung realer biologischer Phänomene",
+        "summary": "Biotechnologische Grundlagen 60.000 BCE: paläoanthropologische Basis [R], spekulative Extrapolationen [S], Saga-Einbindung [F].",
+        "relatedCount": 4
+      },
+      "extracted": {
+        "title": null,
+        "author": null,
+        "classification": null,
+        "excerpt": "----------------------- ----------------------------------------------- **Dokumenttyp:** Wissenschaftliche Publikation"
+      },
+      "titleReview": {
+        "tier": "OK",
+        "candidate": null,
+        "evidence": "canonical-title"
+      },
+      "candidates": {
+        "title": null,
+        "derivedTitle": null,
+        "summary": null,
+        "relations": [
+          {
+            "target": "OTA-REQ-20261119-001",
+            "evidence": "inline-reference",
+            "safe": false
+          }
+        ],
+        "count": 1
+      },
+      "metrics": {
+        "words": 1405,
+        "headings": 0,
+        "images": 0,
+        "tables": 1,
+        "inlineReferenceTargets": 5
+      },
+      "quality": {
+        "substance": "SUBSTANZIELL",
         "genericTitle": false,
         "genericSummary": false,
         "relationGap": true,
@@ -14653,6 +14725,65 @@
       }
     },
     {
+      "file": "OTA-META-0005-2076-DE.md",
+      "signature": "OTA-META-0005-2076-DE",
+      "series": "META",
+      "year": "2076",
+      "language": "DE",
+      "canonical": {
+        "title": "Kaiwu — Sozial- und Kulturgeschichte einer Marsstadt",
+        "summary": "Entwicklungsdossier zu Alltag, Migration, Arbeit, Sprache, Familien, institutionellem Wandel und Erinnerungskultur in Kaiwu. Unterscheidet gesicherten NOXIA-Kanon von narrativen Arbeitshypothesen.",
+        "relatedCount": 7
+      },
+      "extracted": {
+        "title": null,
+        "author": null,
+        "classification": null,
+        "excerpt": "Dieses Dokument ergänzt OTA-META-0004-2076-DE, ohne dessen Kanonentscheidungen zu überschreiben. **[K]** bezeichnet in der bestehenden Arbeitskontinuität gesetzte Aussagen; **[P]** bezeichnet plausible, aber nicht bestätigte Entwicklung; **[O]** eine offene Entscheidung. Wissenschaftliche und historische Realweltbezüge sind von NOXIA-Fiktion zu trennen."
+      },
+      "titleReview": {
+        "tier": "OK",
+        "candidate": null,
+        "evidence": "canonical-title"
+      },
+      "candidates": {
+        "title": null,
+        "derivedTitle": null,
+        "summary": null,
+        "relations": [
+          {
+            "target": "OTA-HIS-0005",
+            "evidence": "inline-reference",
+            "safe": false
+          },
+          {
+            "target": "OTA-TEC-0089",
+            "evidence": "inline-reference",
+            "safe": false
+          }
+        ],
+        "count": 2
+      },
+      "metrics": {
+        "words": 1319,
+        "headings": 17,
+        "images": 0,
+        "tables": 0,
+        "inlineReferenceTargets": 6
+      },
+      "quality": {
+        "substance": "SUBSTANZIELL",
+        "genericTitle": false,
+        "genericSummary": false,
+        "relationGap": true,
+        "flags": [
+          "RELATION_GAP",
+          "NO_VISUAL"
+        ],
+        "priority": 2
+      }
+    },
+    {
       "file": "OTA-META-0005-2091-DE.md",
       "signature": "OTA-META-0005-2091-DE",
       "series": "META",
@@ -15281,7 +15412,7 @@
       "language": "DE",
       "canonical": {
         "title": "DIE FÜNF EPOCHEN DES GEHIRNS",
-        "summary": "Wissenschaftliche Analyse der fünf neuronalen Entwicklungsepochen: pränatale Architektur, kritische Perioden (0–7 Jahre), Adoleszenz-Pruning, Erwachsenenplastizität und Alterns-Kompensation. Peer-reviewed Grundlage [R] mit spekulativen Extrapolationen zur Interaktion mit Umweltfaktoren [S].",
+        "summary": "Narrative Extrapolationen der Lebensphasen-Wendepunkte für GANDHAKA, noχ¹ᐃ und die Uralten; Studienteil in KUE-SCI-0212-2026-DE.",
         "relatedCount": 3
       },
       "extracted": {
@@ -15301,6 +15432,11 @@
         "summary": null,
         "relations": [
           {
+            "target": "OTA-SCI-0021-2025-DE",
+            "evidence": "inline-reference",
+            "safe": false
+          },
+          {
             "target": "OTA-CUL-0002",
             "evidence": "inline-reference",
             "safe": false
@@ -15314,16 +15450,21 @@
             "target": "OTA-SCI-0020-2067-DE",
             "evidence": "inline-reference",
             "safe": false
+          },
+          {
+            "target": "OTA-REQ-20261109-002",
+            "evidence": "inline-reference",
+            "safe": false
           }
         ],
-        "count": 3
+        "count": 5
       },
       "metrics": {
-        "words": 2109,
-        "headings": 27,
+        "words": 1258,
+        "headings": 17,
         "images": 0,
         "tables": 1,
-        "inlineReferenceTargets": 6
+        "inlineReferenceTargets": 8
       },
       "quality": {
         "substance": "SUBSTANZIELL",
@@ -15378,16 +15519,21 @@
             "target": "OTA-BIO-0010-2025-DE",
             "evidence": "inline-reference",
             "safe": false
+          },
+          {
+            "target": "OTA-REQ-20261119-002",
+            "evidence": "inline-reference",
+            "safe": false
           }
         ],
-        "count": 3
+        "count": 4
       },
       "metrics": {
-        "words": 3014,
+        "words": 2859,
         "headings": 26,
         "images": 0,
         "tables": 0,
-        "inlineReferenceTargets": 9
+        "inlineReferenceTargets": 10
       },
       "quality": {
         "substance": "SUBSTANZIELL",
@@ -17000,6 +17146,60 @@
         "images": 0,
         "tables": 0,
         "inlineReferenceTargets": 4
+      },
+      "quality": {
+        "substance": "SUBSTANZIELL",
+        "genericTitle": false,
+        "genericSummary": false,
+        "relationGap": true,
+        "flags": [
+          "RELATION_GAP",
+          "NO_VISUAL"
+        ],
+        "priority": 2
+      }
+    },
+    {
+      "file": "OTA-SCI-0084-2026-DE.md",
+      "signature": "OTA-SCI-0084-2026-DE",
+      "series": "SCI",
+      "year": "2026",
+      "language": "DE",
+      "canonical": {
+        "title": "Kryoporöse Oberflächen auf Eiswelten — Hazard- und Explorationsdossier",
+        "summary": "Überträgt die experimentell belegte Bildung geschichteter, hochporöser Eisstrukturen unter Nahe-Vakuum-Bedingungen auf Exploration, Landung, Mobilität und Sensorik auf eisigen Welten. Trennt reale Evidenz, planetologische Extrapolation und NOXIA-Anwendung ausdrücklich.",
+        "relatedCount": 1
+      },
+      "extracted": {
+        "title": null,
+        "author": null,
+        "classification": null,
+        "excerpt": "Dieses Dokument beschreibt kryoporöse Oberflächen als eigenständige Explorations- und Gefahrenklasse. Ausgangspunkt ist der experimentell belegte Befund, dass niedrig salines Wasser unter Nahe-Vakuum-Bedingungen beim gekoppelten Sieden und Gefrieren eine ungewöhnliche, lamellare und stark poröse Eisstruktur bilden kann."
+      },
+      "titleReview": {
+        "tier": "OK",
+        "candidate": null,
+        "evidence": "canonical-title"
+      },
+      "candidates": {
+        "title": null,
+        "derivedTitle": null,
+        "summary": null,
+        "relations": [
+          {
+            "target": "OTA-REQ-20261120-001",
+            "evidence": "inline-reference",
+            "safe": false
+          }
+        ],
+        "count": 1
+      },
+      "metrics": {
+        "words": 1365,
+        "headings": 27,
+        "images": 0,
+        "tables": 0,
+        "inlineReferenceTargets": 1
       },
       "quality": {
         "substance": "SUBSTANZIELL",
@@ -20546,54 +20746,6 @@
       }
     },
     {
-      "file": "OTA-SCI-0018-60000BCE-DE.md",
-      "signature": "OTA-SCI-0018-60000BCE-DE",
-      "series": "SCI",
-      "year": "2026",
-      "language": "DE",
-      "canonical": {
-        "title": "Biotechnologische Grundlagen der Altsteinzeit — Eine wissenschaftliche Bewertung realer biologischer Phänomene",
-        "summary": "Biotechnologische Grundlagen 60.000 BCE: paläoanthropologische Basis [R], spekulative Extrapolationen [S], Saga-Einbindung [F].",
-        "relatedCount": 4
-      },
-      "extracted": {
-        "title": null,
-        "author": null,
-        "classification": null,
-        "excerpt": "----------------------- ----------------------------------------------- **Dokumenttyp:** Wissenschaftliche Publikation"
-      },
-      "titleReview": {
-        "tier": "OK",
-        "candidate": null,
-        "evidence": "canonical-title"
-      },
-      "candidates": {
-        "title": null,
-        "derivedTitle": null,
-        "summary": null,
-        "relations": [],
-        "count": 0
-      },
-      "metrics": {
-        "words": 1157,
-        "headings": 0,
-        "images": 0,
-        "tables": 1,
-        "inlineReferenceTargets": 4
-      },
-      "quality": {
-        "substance": "KURZ",
-        "genericTitle": false,
-        "genericSummary": false,
-        "relationGap": false,
-        "flags": [
-          "NO_VISUAL",
-          "NO_HEADINGS"
-        ],
-        "priority": 1
-      }
-    },
-    {
       "file": "OTA-SCI-0024-2026-EN.md",
       "signature": "OTA-SCI-0024-2026-EN",
       "series": "SCI",
@@ -21429,53 +21581,6 @@
         "headings": 26,
         "images": 0,
         "tables": 1,
-        "inlineReferenceTargets": 0
-      },
-      "quality": {
-        "substance": "SUBSTANZIELL",
-        "genericTitle": false,
-        "genericSummary": false,
-        "relationGap": false,
-        "flags": [
-          "NO_VISUAL"
-        ],
-        "priority": 0
-      }
-    },
-    {
-      "file": "OTA-SCI-0084-2026-DE.md",
-      "signature": "OTA-SCI-0084-2026-DE",
-      "series": "SCI",
-      "year": "2026",
-      "language": "DE",
-      "canonical": {
-        "title": "Kryoporöse Oberflächen auf Eiswelten — Hazard- und Explorationsdossier",
-        "summary": "Überträgt die experimentell belegte Bildung geschichteter, hochporöser Eisstrukturen unter Nahe-Vakuum-Bedingungen auf Exploration, Landung, Mobilität und Sensorik auf eisigen Welten. Trennt reale Evidenz, planetologische Extrapolation und NOXIA-Anwendung ausdrücklich.",
-        "relatedCount": 1
-      },
-      "extracted": {
-        "title": null,
-        "author": null,
-        "classification": null,
-        "excerpt": "Dieses Dokument beschreibt kryoporöse Oberflächen als eigenständige Explorations- und Gefahrenklasse. Ausgangspunkt ist der experimentell belegte Befund, dass niedrig salines Wasser unter Nahe-Vakuum-Bedingungen beim gekoppelten Sieden und Gefrieren eine ungewöhnliche, lamellare und stark poröse Eisstruktur bilden kann."
-      },
-      "titleReview": {
-        "tier": "OK",
-        "candidate": null,
-        "evidence": "canonical-title"
-      },
-      "candidates": {
-        "title": null,
-        "derivedTitle": null,
-        "summary": null,
-        "relations": [],
-        "count": 0
-      },
-      "metrics": {
-        "words": 1285,
-        "headings": 26,
-        "images": 0,
-        "tables": 0,
         "inlineReferenceTargets": 0
       },
       "quality": {
