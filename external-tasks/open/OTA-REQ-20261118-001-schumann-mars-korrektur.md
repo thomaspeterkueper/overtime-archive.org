@@ -6,6 +6,7 @@ Quelle: Begutachtung nach ECO-ARC-0037, Zuordnung nach ECO-ARC-0038 §2 (Claude)
 Prüfbericht: `kueper-ecosystem/reviews/2026-11-18-OTA-SCI-0009-2025-DE.md`
 Zuordnung: Teile nach KUE. Realteile §I (Schumann-Grundlagen), §II (Mars-Forschungsstand) und §IV (Zeitdilatation) gehen in ein neues KUE-Dokument (`kueper.com/external-tasks/open/EXT-OTA-KUE-20261118-001.md`); Erd-Grundlagen stehen schon in `KUE-SCI-0012-2026-DE`. AVI-Modell (§III), χ-Resonanzzeit (§V), Baumeister-Frequenz (§VI) und alle Kuratornotizen bleiben in OTA.
 Voraussetzung: Punkte A–C erst, wenn das neue KUE-Dokument aus EXT-OTA-KUE-20261118-001 in `kueper.com/main` gemergt ist (Signatur dort vergeben, im Folgenden `KUE-SCI-NNNN`). Punkt D hat keine Voraussetzung.
+Teilweise erledigt: 2026-11-21 – Punkt D umgesetzt in OTA-SCI-0009 v1.0.1 durch die Begutachtung (ECO-ARC-0038 §3b). Offen: A–C (warten auf das KUE-Dokument aus EXT-OTA-KUE-20261118-001), E (wartet auf Thomas).
 Bezug: Die Quellenfehler zu Haider et al. 2019 aus `OTA-REQ-20261106-quellenpruefung.md` sind hier mit erfasst.
 
 ## Anlass
