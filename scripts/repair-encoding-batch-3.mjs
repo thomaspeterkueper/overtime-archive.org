@@ -36,7 +36,7 @@ const reviews = [
       ['—“', '—'],
     ],
     forbiddenAfterRepair: ['œ', 'Ÿ', '—”', '—“'],
-    sentinels: ['DIE FÜNF EPOCHEN DES GEHIRNS', 'noχ¹ᐃ', 'große Diffusions-MRT-Kohorten', 'weißen Substanz', 'Überproduktion von Synapsen', 'größte Verschiebung', '— T.P.K.'],
+    sentinels: ['DIE FÜNF EPOCHEN DES GEHIRNS', 'noχ¹ᐃ', 'Vernetzungstopologie des Gehirns', 'DOC:KUE:KUE-SCI-0212-2026-DE', 'Größter topologischer Turning Point', 'stärkste natürliche Umstellung', '— T.P.K.'],
   },
   {
     signature: 'OTA-SCI-0023-2025-DE',
