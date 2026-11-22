@@ -132,7 +132,7 @@ OTA-SCI-0048-2031-DE enthält keine realen Literaturangaben (kein Befund).
 | OTA-TEC-0034-2026-DE | 1 im Browser zu prüfen |
 | OTA-TEC-0087-2026-DE | 1 nicht auffindbar |
 
-Im ersten Lauf nur nach Fachwissen belegte Korrekturen sind jetzt bis auf zwei OTA-Angaben (OTA-SCI-0023-2025-DE Hirsch 2002, OTA-SCI-0086-2026-DE Ronca) online belegt und können bei der Begutachtung übernommen werden.
+Im ersten Lauf nur nach Fachwissen belegte Korrekturen sind jetzt bis auf zwei OTA-Angaben (OTA-SCI-0023-2025-DE Hirsch 2002, OTA-SCI-0086-2026-DE Ronca) online belegt und können bei der Begutachtung übernommen werden. Ronca (OTA-SCI-0086 §18 Anker 4): Titel und PMID 15000095 online belegt, Jahrgang 2003, Band 32(8):1483–1490 mit DOI in OTA-SCI-0086 v1.4 übernommen (EXT-KG-OTA-20261121-001, 22.11.2026); offen bleibt nur der Abgleich mit dem Verlagseintrag (DOI-Seite nicht geöffnet).
 
 ### Weiterhin offen
 
