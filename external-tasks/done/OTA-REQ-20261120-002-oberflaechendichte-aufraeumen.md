@@ -1,12 +1,12 @@
 # OTA-REQ-20261120-002 – OTA-SCI-0095-2026-DE (Galaktische zentrale Oberflächendichte): Quellen ergänzen, Realteil nach KUE kürzen
 
-Status: open
+Status: done
 Teilweise erledigt: 2026-11-21 – Punkt A umgesetzt in OTA-SCI-0095-2026-DE v1.1 (Ökosystem-Kreislauf, Claude, Branch `claude/OTA-REQ-20261120-002`); scinexx-Meldung weiter nicht auffindbar, durch CHIP.pl ersetzt. B und C warten auf das KUE-Dokument aus EXT-OTA-KUE-20261120-002.
 Datum: 2026-11-20
 Quelle: Begutachtung nach ECO-ARC-0037, Zuordnung nach ECO-ARC-0038 §2 (Claude)
 Prüfbericht: `kueper-ecosystem/reviews/2026-11-20-OTA-SCI-0095-2026-DE.md`
 Zuordnung: Teile nach KUE – Befund und Einordnung (§1–§4) werden per `kueper.com/external-tasks/open/EXT-OTA-KUE-20261120-002.md` zu einem KUE-Dokument. Methodische Bedeutung (§5), AVI-Bezug, State-Completeness-Einordnung und AVI-Regel (§6–§8, eigenes Modell) sowie das OTA-Fazit (§10) bleiben unverändert.
-Voraussetzung: Punkt A sofort umsetzbar. Punkte B und C erst, wenn das neue KUE-Dokument aus EXT-OTA-KUE-20261120-002 in `kueper.com/main` gemergt ist (Signatur dort vergeben, im Folgenden `KUE-SCI-NNNN`).
+Voraussetzung: Punkt A sofort umsetzbar. Punkte B und C erst, wenn das neue KUE-Dokument aus EXT-OTA-KUE-20261120-002 in `kueper.com/main` gemergt ist (Signatur dort vergeben, im Folgenden `KUE-SCI-NNNN`, vergeben: `KUE-SCI-0215-2026-DE`).
 Erfasst die Punkte zu OTA-SCI-0095 aus `OTA-REQ-20261106-quellenpruefung.md` (Yoon 2026: Band fehlt; scinexx: URL fehlt).
 
 ## Anlass
@@ -31,3 +31,15 @@ C. **Mit B:** §9 Referenz auf „siehe `DOC:KUE:KUE-SCI-NNNN`“ plus Yoon-Eint
 - `kueper.com`: EXT-OTA-KUE-20261120-002 (neues Dokument).
 - `OTA-SCI-0037-2026-DE`, `OTA-SCI-0093-2026-DE`, `OTA-SCI-0094-2026-DE` (verwandte Dossiers) werden bei ihrer eigenen Begutachtung auf denselben KUE-Verweis geprüft.
 - `status/ota-kue-zuordnung.md` (kueper-ecosystem): Zeile OTA-SCI-0095 aktualisiert.
+
+## Erledigt
+
+2026-11-22 – Ökosystem-Kreislauf (Claude), Branch `claude/OTA-REQ-20261120-002-bc` (Punkt A am 2026-11-21 auf `claude/OTA-REQ-20261120-002`).
+
+## Umgesetzt
+
+- A: Quellen in §9 ergänzt (v1.1, 2026-11-21); scinexx-Meldung nicht auffindbar, durch CHIP.pl ersetzt.
+- B: §1–§4 durch „1. Befund (Grundinformation)“ mit Verweis auf `DOC:KUE:KUE-SCI-0215-2026-DE` ersetzt (KUE-Dokument aus EXT-OTA-KUE-20261120-002, gemergt in `kueper.com/main` am 2026-11-22); Methodische Bedeutung, AVI-Bezug, State-Completeness, AVI-Regel und Fazit wörtlich, neu nummeriert (§2–§5, §7).
+- C: Referenz auf Verweis plus gekürzten Yoon-Eintrag reduziert (§6); v1.2, Revisionsvermerk ergänzt.
+- Offen außerhalb OTA: `kueper-ecosystem/status/ota-kue-zuordnung.md`, Zeile OTA-SCI-0095 (Quelle der Wahrheit dort; nicht in diesem Repo geändert).
+
