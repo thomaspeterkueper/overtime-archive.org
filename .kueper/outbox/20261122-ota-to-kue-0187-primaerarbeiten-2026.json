@@ -1,0 +1,11 @@
+{
+  "target": "KUE",
+  "title": "KUE-SCI-0187: humane zelluläre Orbitdaten 2026 und fehlende Primärarbeiten einordnen",
+  "reason": "EXT-KG-OTA-20261121-002 (RES-20260913-B7A0B54E): OTA-SCI-0086 v1.6 fasst die Negativaussage jetzt endpunktgenau und führt in §18 neue Kurzanker. Nach ECO-ARC-0038 §1 gehört die inhaltliche Einordnung ins Realteil KUE-SCI-0187, das bisher nur Wakayama 2023 und Lyons/McPherson 2026 kennt.",
+  "requested_change": "In src/content/kue/sci/kue-sci-0187-2026-de.md (§II Human-Evidenz, §III frühe Embryonalentwicklung, §IV Fertilität, Quellen) ergänzen und vor Übernahme an Abstract/Verlag prüfen: (1) Li Y, Gao H, Xiong J, et al., Spaceflight multi-omics reveals vulnerabilities of human germ cell development, Science Advances 12(29):eaee0143 (2026), DOI 10.1126/sciadv.aee0143 – humane ESC-abgeleitete Keimzellmodelle auf Tiangong/Tianzhou-6, linienspezifische Effekte, Mikrogravitation und Strahlung nicht getrennt [R]. (2) Wakayama S, et al., PNAS 114(23):5988–5993 (2017), DOI 10.1073/pnas.1701425114 – gesunde Nachkommen aus 9 Monate auf der ISS gelagerten gefriergetrockneten Mausspermien [R]. (3) Palmer GA, et al., Reproductive BioMedicine Online 52(3):105431 (2026), DOI 10.1016/j.rbmo.2025.105431 (Review/Ethik). (4) Marin D, et al., J Clin Med 14(17):5975 (2025), DOI 10.3390/jcm14175975 (Review). (5) Tianzhou-10/Tiangong, Mai 2026: erstes humanes Blastoid-Experiment im Orbit, Ergebnisse unpubliziert – als [OFFEN] führen, Blastoide nicht als Embryonen bezeichnen. (6) In §II die Abgrenzung übernehmen: humane zelluläre Raumfahrtevidenz vorhanden, humane Schwangerschafts-/Geburtsevidenz weiterhin absent.",
+  "expected_result": "KUE-SCI-0187 trennt humane zelluläre Evidenz von Schwangerschafts-/Geburtsevidenz, führt die genannten Primärarbeiten mit geprüften bibliographischen Angaben und das Tianzhou-10-Experiment als [OFFEN]; die Kurzanker 10–15 in OTA-SCI-0086 §18 lösen im Realteil auf.",
+  "priority": "medium",
+  "parent_task": "EXT-KG-OTA-20261121-002",
+  "depth": 2,
+  "affects": ["KUE", "OTA"]
+}
