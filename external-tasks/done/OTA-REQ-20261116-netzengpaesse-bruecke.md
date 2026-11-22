@@ -1,6 +1,7 @@
 # OTA-REQ-20261116-001 – OTA-SCI-0109-2026-DE (Stromnetz-Engpässe): nach Umzug nach KUE zum schlanken Brückendokument kürzen
 
-Status: open
+Status: done
+Erledigt: 2026-11-22 – Punkte A–C umgesetzt in OTA-SCI-0109 v1.1 durch die Begutachtung (ECO-ARC-0038 §3b; KUE-SCI-0214 v0.1 in `kueper.com/main`).
 Datum: 2026-11-16
 Quelle: Begutachtung nach ECO-ARC-0037, Zuordnung nach ECO-ARC-0038 §2 (Claude)
 Prüfbericht: `kueper-ecosystem/reviews/2026-11-16-OTA-SCI-0109-2026-DE.md`
