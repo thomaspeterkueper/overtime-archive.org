@@ -6,7 +6,7 @@ Datum: 2026-11-16
 Quelle: Begutachtung nach ECO-ARC-0037, Zuordnung nach ECO-ARC-0038 §2 (Claude)
 Prüfbericht: `kueper-ecosystem/reviews/2026-11-16-OTA-SCI-0109-2026-DE.md`
 Zuordnung: ganz nach KUE (Inventur Gruppe A). Werkneutrales Evidenzdossier ([R]/[T]/[H]) ohne Werkbezug (`universe: []`, keine [F]/[W]/[S]); Werkanschluss nur über die NOXIA-Archivregel §14 und den Verweis aus OTA-SCI-0110. Neues KUE-Dokument per `kueper.com/external-tasks/open/EXT-OTA-KUE-20261116-001.md`.
-Voraussetzung: das neue KUE-Dokument aus EXT-OTA-KUE-20261116-001 ist in `kueper.com/main` gemergt (Signatur dort vergeben, im Folgenden `KUE-SCI-NNNN`). Erst danach umsetzen (Punkte A–C).
+Voraussetzung: das neue KUE-Dokument aus EXT-OTA-KUE-20261116-001 ist in `kueper.com/main` gemergt (Signatur dort vergeben: `KUE-SCI-0214-2026-DE`; im Folgenden `KUE-SCI-NNNN`). Erst danach umsetzen (Punkte A–C).
 
 ## Anlass
 
