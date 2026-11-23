@@ -1,21 +1,21 @@
 {
-  "generatedAt": "2026-11-23T14:50:25.380Z",
+  "generatedAt": "2026-11-23T17:48:37.922Z",
   "summary": {
-    "documents": 338,
-    "substantial": 195,
-    "short": 100,
+    "documents": 340,
+    "substantial": 196,
+    "short": 101,
     "fragments": 43,
     "genericTitles": 69,
     "genericSummaries": 42,
-    "relationGaps": 255,
-    "withoutVisuals": 332,
+    "relationGaps": 257,
+    "withoutVisuals": 334,
     "titleReviewA": 0,
     "titleReviewB": 3,
     "titleReviewC": 66,
-    "titleReviewOK": 269,
+    "titleReviewOK": 271,
     "safeTitleCandidates": 0,
     "summaryCandidates": 19,
-    "relationCandidates": 1070,
+    "relationCandidates": 1077,
     "safeRelationCandidates": 0
   },
   "documents": [
@@ -4211,16 +4211,21 @@
             "target": "OTA-SCI-0007-2026",
             "evidence": "inline-reference",
             "safe": false
+          },
+          {
+            "target": "OTA-REQ-20261106-",
+            "evidence": "inline-reference",
+            "safe": false
           }
         ],
-        "count": 2
+        "count": 3
       },
       "metrics": {
-        "words": 2586,
+        "words": 2652,
         "headings": 0,
         "images": 0,
         "tables": 0,
-        "inlineReferenceTargets": 2
+        "inlineReferenceTargets": 3
       },
       "quality": {
         "substance": "SUBSTANZIELL",
@@ -10126,6 +10131,70 @@
         "images": 0,
         "tables": 0,
         "inlineReferenceTargets": 2
+      },
+      "quality": {
+        "substance": "KURZ",
+        "genericTitle": false,
+        "genericSummary": false,
+        "relationGap": true,
+        "flags": [
+          "RELATION_GAP",
+          "NO_VISUAL"
+        ],
+        "priority": 4
+      }
+    },
+    {
+      "file": "OTA-SCI-0121-2026-DE.md",
+      "signature": "OTA-SCI-0121-2026-DE",
+      "series": "SCI",
+      "year": "2026",
+      "language": "DE",
+      "canonical": {
+        "title": "Magnetokalorische Kühlung – Kühlkreisläufe ohne Kältemittel",
+        "summary": "Realer Stand der magnetokalorischen Kühlung 2026: Prinzip des magnetokalorischen Effekts, Vorteile gegenüber Dampfkompression, Forschung an der TU Darmstadt, erste Supermarkt-Prototypen (Magnotherm), Anwendungen in Datenzentren und Wasserstoffverflüssigung sowie Grenzen.",
+        "relatedCount": 3
+      },
+      "extracted": {
+        "title": null,
+        "author": null,
+        "classification": null,
+        "excerpt": "# MAGNETOKALORISCHE KÜHLUNG ## Kühlkreisläufe ohne Kältemittel – Prinzip, Stand der Technik, Anwendungspotenzial"
+      },
+      "titleReview": {
+        "tier": "OK",
+        "candidate": null,
+        "evidence": "canonical-title"
+      },
+      "candidates": {
+        "title": null,
+        "derivedTitle": null,
+        "summary": null,
+        "relations": [
+          {
+            "target": "OTA-SCI-0122",
+            "evidence": "inline-reference",
+            "safe": false
+          },
+          {
+            "target": "OTA-SCI-0122-2026-DE",
+            "evidence": "inline-reference",
+            "safe": false
+          },
+          {
+            "target": "OTA-SCI-0084-2026-DE",
+            "evidence": "inline-reference",
+            "safe": false
+          }
+        ],
+        "count": 3
+      },
+      "metrics": {
+        "words": 551,
+        "headings": 12,
+        "images": 0,
+        "tables": 1,
+        "inlineReferenceTargets": 3
       },
       "quality": {
         "substance": "KURZ",
@@ -18563,6 +18632,70 @@
         "images": 0,
         "tables": 1,
         "inlineReferenceTargets": 10
+      },
+      "quality": {
+        "substance": "SUBSTANZIELL",
+        "genericTitle": false,
+        "genericSummary": false,
+        "relationGap": true,
+        "flags": [
+          "RELATION_GAP",
+          "NO_VISUAL"
+        ],
+        "priority": 2
+      }
+    },
+    {
+      "file": "OTA-SCI-0122-2026-DE.md",
+      "signature": "OTA-SCI-0122-2026-DE",
+      "series": "SCI",
+      "year": "2026",
+      "language": "DE",
+      "canonical": {
+        "title": "Magnetokalorische Materialien: Eigenschaften im Vergleich",
+        "summary": "Vergleich magnetokalorischer Materialklassen (Gadolinium, La(Fe,Si)13, (Mn,Fe)2(P,Si), Gd5Si2Ge2, FeRh, NiMn-Heusler) nach Kenngrößen, mechanischer Stabilität und Fertigungsverfahren; die vermutete Temenon-Verbindung bleibt ausdrücklich offen.",
+        "relatedCount": 4
+      },
+      "extracted": {
+        "title": null,
+        "author": null,
+        "classification": null,
+        "excerpt": "# MAGNETOKALORISCHE MATERIALIEN: EIGENSCHAFTEN IM VERGLEICH ## Gadolinium, La(Fe,Si)₁₃, (Mn,Fe)₂(P,Si) und verwandte Legierungssysteme"
+      },
+      "titleReview": {
+        "tier": "OK",
+        "candidate": null,
+        "evidence": "canonical-title"
+      },
+      "candidates": {
+        "title": null,
+        "derivedTitle": null,
+        "summary": null,
+        "relations": [
+          {
+            "target": "OTA-SCI-0121-2026-DE",
+            "evidence": "inline-reference",
+            "safe": false
+          },
+          {
+            "target": "OTA-SCI-0121",
+            "evidence": "inline-reference",
+            "safe": false
+          },
+          {
+            "target": "OTA-SCI-0085-2026-DE",
+            "evidence": "inline-reference",
+            "safe": false
+          }
+        ],
+        "count": 3
+      },
+      "metrics": {
+        "words": 959,
+        "headings": 17,
+        "images": 0,
+        "tables": 1,
+        "inlineReferenceTargets": 3
       },
       "quality": {
         "substance": "SUBSTANZIELL",

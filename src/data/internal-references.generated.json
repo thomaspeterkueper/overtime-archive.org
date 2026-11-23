@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-23T14:50:24.813Z",
+  "generatedAt": "2026-11-23T17:48:37.509Z",
   "documents": [
     {
       "signature": "OTA-ART-0001-2087-DE",
@@ -1556,6 +1556,18 @@
       "file": "src/content/documents/OTA-SCI-0120-2026-DE.md"
     },
     {
+      "signature": "OTA-SCI-0121-2026-DE",
+      "title": "Magnetokalorische Kühlung – Kühlkreisläufe ohne Kältemittel",
+      "summary": "Realer Stand der magnetokalorischen Kühlung 2026: Prinzip des magnetokalorischen Effekts, Vorteile gegenüber Dampfkompression, Forschung an der TU Darmstadt, erste Supermarkt-Prototypen (Magnotherm), Anwendungen in Datenzentren und Wasserstoffverflüssigung sowie Grenzen.",
+      "file": "src/content/documents/OTA-SCI-0121-2026-DE.md"
+    },
+    {
+      "signature": "OTA-SCI-0122-2026-DE",
+      "title": "Magnetokalorische Materialien: Eigenschaften im Vergleich",
+      "summary": "Vergleich magnetokalorischer Materialklassen (Gadolinium, La(Fe,Si)13, (Mn,Fe)2(P,Si), Gd5Si2Ge2, FeRh, NiMn-Heusler) nach Kenngrößen, mechanischer Stabilität und Fertigungsverfahren; die vermutete Temenon-Verbindung bleibt ausdrücklich offen.",
+      "file": "src/content/documents/OTA-SCI-0122-2026-DE.md"
+    },
+    {
       "signature": "OTA-SOC-0001-2076-DE",
       "title": "Kaiwu — Gesellschaft und kulturelle Formation 2076–2091",
       "summary": "Sozialhistorischer Arbeitsrahmen für Kaiwu von der chinesisch initiierten technischen Basis zur international zusammengesetzten Marsstadt. Trennt reale Kooperationsmuster von NOXIA-Fortschreibung und legt soziale Unterschiede zu Iterius Prime fest.",
@@ -2031,13 +2043,13 @@
     }
   ],
   "summary": {
-    "referenceCount": 1708,
-    "openReferenceCount": 243,
+    "referenceCount": 1714,
+    "openReferenceCount": 244,
     "openTargetCount": 129,
     "classifications": {
       "missing": 82,
       "shorthand-resolved": 10,
-      "base-id-resolved": 176,
+      "base-id-resolved": 178,
       "base-id-ambiguous": 19,
       "language-ambiguous": 1,
       "translation-missing": 2,
@@ -3010,7 +3022,7 @@
       "target": "OTA-SCI-0007-2026",
       "contexts": [
         "--- signature: \"OTA-SCI-0007-2026-Cuancoa\" validatorId: \"OTA-SCI-0007-2026-DE\" canonicalId: \"OTA-SCI-0007-2026-DE\" title: \"OTA-SCI-0007-2026-Cuancoa\" series: \"SCI\" seriesNumber: 7 yea",
-        ": \"OTA-SCI-0007-2026-Cuancoa\" validatorId: \"OTA-SCI-0007-2026-DE\" canonicalId: \"OTA-SCI-0007-2026-DE\" title: \"OTA-SCI-0007-2026-Cuancoa\" series: \"SCI\" seriesNumber: 7 year: 2026 language: \"DE\" version: \"v1.1\" status: \"AKTIV\" accessLevel: 0 epistemicStatus: [\"R\", \"T\", \"S\"] tags",
+        ": \"OTA-SCI-0007-2026-Cuancoa\" validatorId: \"OTA-SCI-0007-2026-DE\" canonicalId: \"OTA-SCI-0007-2026-DE\" title: \"OTA-SCI-0007-2026-Cuancoa\" series: \"SCI\" seriesNumber: 7 year: 2026 language: \"DE\" version: \"v1.2\" status: \"AKTIV\" accessLevel: 0 epistemicStatus: [\"R\", \"T\", \"S\"] tags",
         "on mit NOXIA-Universum-Einbindung [F].\" kg: schema: KXF-0.2 master: kueper-knowledge-graph documentId: \"OTA-SCI-0007-2026-Cuancoa\" graphId: \"DOC:OTA:OTA-SCI-0007-2026-Cuancoa\" system: SYS:OTA:overtimearchive sourceOfTruth: false knowledge: domains: - id: \"KD:",
         "chema: KXF-0.2 master: kueper-knowledge-graph documentId: \"OTA-SCI-0007-2026-Cuancoa\" graphId: \"DOC:OTA:OTA-SCI-0007-2026-Cuancoa\" system: SYS:OTA:overtimearchive sourceOfTruth: false knowledge: domains: - id: \"KD:PHYS-THERM:N1\" level: \"N1\" purpose:",
         "llenverzeichnis \\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-- **OTA-SCI-0007-2026** Erste Auflage: 2026 OverTime Archive Frankfurt am Main, Deutschland **Anmerkung des Kurators** Das vorliegende Dokument fasst den Wissensstand"
@@ -5689,6 +5701,54 @@
       "targetFile": null
     },
     {
+      "source": "OTA-SCI-0119-2026-DE",
+      "target": "OTA-SCI-0085-2026-DE",
+      "contexts": [
+        "A:OTA-SCI-0119-2026-DE\" system: SYS:OTA:overtimearchive sourceOfTruth: false migrationNote: \"Migriert von OTA-SCI-0085-2026-DE (Drive-Ordner 'Die Kette vom Hexenteich', separat vom Master-Bestand geführt). Nummer 0085 war im Master-Repo bereits an OTA-SCI-0085-2164-EN (Oral P"
+      ],
+      "status": "unresolved",
+      "classification": "temporal-mismatch",
+      "candidates": [
+        {
+          "signature": "OTA-SCI-0085-2164-EN",
+          "title": "Oral Pathobiont Translocation and Microglial Activation Under Chronic Temenon Exposure: Evidence for a Gut/Oral-Brain Inflammatory Axis",
+          "file": "src/content/documents/OTA-SCI-0085-2164-EN.md"
+        }
+      ],
+      "resolvedTarget": null,
+      "sourceCount": 2,
+      "priority": 2,
+      "title": "OTA-SCI-0085-2026-DE",
+      "description": "",
+      "descriptionStatus": null,
+      "targetFile": null
+    },
+    {
+      "source": "OTA-SCI-0122-2026-DE",
+      "target": "OTA-SCI-0085-2026-DE",
+      "contexts": [
+        "en.\" updatedAt: \"2026-11-23T18:00:00+01:00\" provenance: source: \"Google Drive, OTA (alt, bis Okt. 2026)/SCI/OTA-SCI-0085-2026-DE.md\" importedAt: \"2026-11-23T18:00:00+01:00\" reviewStatus: \"metadata-reviewed\" kg: schema: KXF-0.2 master: kueper-knowledge-graph documentId",
+        "e, unausgearbeitete Frage markiert. | | v1.1 | 2026-11-23 | Aus dem Drive-Altbestand übernommen (Drive-Datei `OTA-SCI-0085-2026-DE.md` vom 21.08.2026, https://drive.google.com/file/d/169YGpL7IrUYCUxGrXqQG_IN6uARNGG4T/view). Neue Signatur OTA-SCI-0122-2026-DE, weil OTA-SCI-0085-20",
+        "s://drive.google.com/file/d/169YGpL7IrUYCUxGrXqQG_IN6uARNGG4T/view). Neue Signatur OTA-SCI-0122-2026-DE, weil OTA-SCI-0085-2026-DE auf GitHub anders belegt ist; Querverweis 0084/0085 → 0121/0122 angepasst. Inhalt sonst unverändert; Quellen in diesem Schritt nicht neu geprüft. EXT"
+      ],
+      "status": "unresolved",
+      "classification": "temporal-mismatch",
+      "candidates": [
+        {
+          "signature": "OTA-SCI-0085-2164-EN",
+          "title": "Oral Pathobiont Translocation and Microglial Activation Under Chronic Temenon Exposure: Evidence for a Gut/Oral-Brain Inflammatory Axis",
+          "file": "src/content/documents/OTA-SCI-0085-2164-EN.md"
+        }
+      ],
+      "resolvedTarget": null,
+      "sourceCount": 2,
+      "priority": 2,
+      "title": "OTA-SCI-0085-2026-DE",
+      "description": "",
+      "descriptionStatus": null,
+      "targetFile": null
+    },
+    {
       "source": "OTA-CUL-0001-2025-DE",
       "target": "OTA-TEC-0002-2180-DE",
       "contexts": [
@@ -6434,8 +6494,8 @@
       "source": "OTA-SCI-0007-2026-Cuancoa",
       "target": "OTA-SCI-0007-2026-DE",
       "contexts": [
-        "--- signature: \"OTA-SCI-0007-2026-Cuancoa\" validatorId: \"OTA-SCI-0007-2026-DE\" canonicalId: \"OTA-SCI-0007-2026-DE\" title: \"OTA-SCI-0007-2026-Cuancoa\" series: \"SCI\" seriesNumber: 7 year: 2026 language: \"DE\" version: \"v1.1\" statu",
-        "--- signature: \"OTA-SCI-0007-2026-Cuancoa\" validatorId: \"OTA-SCI-0007-2026-DE\" canonicalId: \"OTA-SCI-0007-2026-DE\" title: \"OTA-SCI-0007-2026-Cuancoa\" series: \"SCI\" seriesNumber: 7 year: 2026 language: \"DE\" version: \"v1.1\" status: \"AKTIV\" accessLevel: 0 epistemicS",
+        "--- signature: \"OTA-SCI-0007-2026-Cuancoa\" validatorId: \"OTA-SCI-0007-2026-DE\" canonicalId: \"OTA-SCI-0007-2026-DE\" title: \"OTA-SCI-0007-2026-Cuancoa\" series: \"SCI\" seriesNumber: 7 year: 2026 language: \"DE\" version: \"v1.2\" statu",
+        "--- signature: \"OTA-SCI-0007-2026-Cuancoa\" validatorId: \"OTA-SCI-0007-2026-DE\" canonicalId: \"OTA-SCI-0007-2026-DE\" title: \"OTA-SCI-0007-2026-Cuancoa\" series: \"SCI\" seriesNumber: 7 year: 2026 language: \"DE\" version: \"v1.2\" status: \"AKTIV\" accessLevel: 0 epistemicS",
         "9779 b (Phasenkurven, Chemie-Asymmetrie); jährlich neue Befunde einarbeiten.\" abgeschlossen: false --- <!-- OTA-SCI-0007-2026-DE --> **THE OVERTIME ARCHIVE** *Scientific Publication Series* \\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-"
       ],
       "status": "unresolved",
@@ -6729,29 +6789,6 @@
       "sourceCount": 1,
       "priority": 1,
       "title": "OTA-SCI-0084-2164-EN",
-      "description": "",
-      "descriptionStatus": null,
-      "targetFile": null
-    },
-    {
-      "source": "OTA-SCI-0119-2026-DE",
-      "target": "OTA-SCI-0085-2026-DE",
-      "contexts": [
-        "A:OTA-SCI-0119-2026-DE\" system: SYS:OTA:overtimearchive sourceOfTruth: false migrationNote: \"Migriert von OTA-SCI-0085-2026-DE (Drive-Ordner 'Die Kette vom Hexenteich', separat vom Master-Bestand geführt). Nummer 0085 war im Master-Repo bereits an OTA-SCI-0085-2164-EN (Oral P"
-      ],
-      "status": "unresolved",
-      "classification": "temporal-mismatch",
-      "candidates": [
-        {
-          "signature": "OTA-SCI-0085-2164-EN",
-          "title": "Oral Pathobiont Translocation and Microglial Activation Under Chronic Temenon Exposure: Evidence for a Gut/Oral-Brain Inflammatory Axis",
-          "file": "src/content/documents/OTA-SCI-0085-2164-EN.md"
-        }
-      ],
-      "resolvedTarget": null,
-      "sourceCount": 1,
-      "priority": 1,
-      "title": "OTA-SCI-0085-2026-DE",
       "description": "",
       "descriptionStatus": null,
       "targetFile": null
@@ -28028,7 +28065,26 @@
       "classification": "existing",
       "candidates": [],
       "resolvedTarget": "OTA-SCI-0084-2026-DE",
-      "sourceCount": 1,
+      "sourceCount": 2,
+      "priority": 0,
+      "title": "Kryoporöse Oberflächen auf Eiswelten — Hazard- und Explorationsdossier",
+      "description": "Überträgt die experimentell belegte Bildung geschichteter, hochporöser Eisstrukturen unter Nahe-Vakuum-Bedingungen auf Exploration, Landung, Mobilität und Sensorik auf eisigen Welten. Trennt reale Evidenz, planetologische Extrapolation und NOXIA-Anwendung ausdrücklich.",
+      "descriptionStatus": "canonical",
+      "targetFile": "src/content/documents/OTA-SCI-0084-2026-DE.md"
+    },
+    {
+      "source": "OTA-SCI-0121-2026-DE",
+      "target": "OTA-SCI-0084-2026-DE",
+      "contexts": [
+        "en.\" updatedAt: \"2026-11-23T18:00:00+01:00\" provenance: source: \"Google Drive, OTA (alt, bis Okt. 2026)/SCI/OTA-SCI-0084-2026-DE.md\" importedAt: \"2026-11-23T18:00:00+01:00\" reviewStatus: \"metadata-reviewed\" kg: schema: KXF-0.2 master: kueper-knowledge-graph documentId",
+        "mentation, saga-quarantäne-konform. | | v1.1 | 2026-11-23 | Aus dem Drive-Altbestand übernommen (Drive-Datei `OTA-SCI-0084-2026-DE.md` vom 21.08.2026, https://drive.google.com/file/d/1Fdth-W3oP16DYMcbgBPTE9LJP0FfEVYl/view). Neue Signatur OTA-SCI-0121-2026-DE, weil OTA-SCI-0084-20",
+        "s://drive.google.com/file/d/1Fdth-W3oP16DYMcbgBPTE9LJP0FfEVYl/view). Neue Signatur OTA-SCI-0121-2026-DE, weil OTA-SCI-0084-2026-DE auf GitHub anders belegt ist; Querverweis 0084/0085 → 0121/0122 angepasst. Inhalt sonst unverändert; Quellen in diesem Schritt nicht neu geprüft. EXT"
+      ],
+      "status": "resolved",
+      "classification": "existing",
+      "candidates": [],
+      "resolvedTarget": "OTA-SCI-0084-2026-DE",
+      "sourceCount": 2,
       "priority": 0,
       "title": "Kryoporöse Oberflächen auf Eiswelten — Hazard- und Explorationsdossier",
       "description": "Überträgt die experimentell belegte Bildung geschichteter, hochporöser Eisstrukturen unter Nahe-Vakuum-Bedingungen auf Exploration, Landung, Mobilität und Sensorik auf eisigen Welten. Trennt reale Evidenz, planetologische Extrapolation und NOXIA-Anwendung ausdrücklich.",
@@ -29802,6 +29858,90 @@
       "description": "Realwissenschaftliche Materialbasis für Lodestone (Magnetit-Eisenstein) als natürlichen Permanentmagneten: Maghemit-Mikrostruktur, REM-Ratio, Blitz-Magnetisierung, Domänenphysik, Feldstärken, Drei-Träger-Vergleich des Sauerland-Clusters, Vorkommen und historische Nutzung. SCI-Basis des Hör-Steins (OTA-TEC-0123).",
       "descriptionStatus": "canonical",
       "targetFile": "src/content/documents/OTA-SCI-0119-2026-DE.md"
+    },
+    {
+      "source": "OTA-SCI-0122-2026-DE",
+      "target": "OTA-SCI-0121",
+      "contexts": [
+        "ankfurt am Main · August 2026 --- ## ANMERKUNG DES KURATORS Dieses Dokument vertieft die Materialebene von OTA-SCI-0121. Es ist bewusst detailliert gehalten – Legierungszusammensetzungen, Kennwerte, Fertigungsverfahren – da genau diese Ebene für eine mögliche technolog"
+      ],
+      "status": "resolved-base-id",
+      "classification": "base-id-resolved",
+      "candidates": [
+        {
+          "signature": "OTA-SCI-0121-2026-DE",
+          "title": "Magnetokalorische Kühlung – Kühlkreisläufe ohne Kältemittel",
+          "file": "src/content/documents/OTA-SCI-0121-2026-DE.md"
+        }
+      ],
+      "resolvedTarget": "OTA-SCI-0121-2026-DE",
+      "sourceCount": 1,
+      "priority": 0,
+      "title": "Magnetokalorische Kühlung – Kühlkreisläufe ohne Kältemittel",
+      "description": "Realer Stand der magnetokalorischen Kühlung 2026: Prinzip des magnetokalorischen Effekts, Vorteile gegenüber Dampfkompression, Forschung an der TU Darmstadt, erste Supermarkt-Prototypen (Magnotherm), Anwendungen in Datenzentren und Wasserstoffverflüssigung sowie Grenzen.",
+      "descriptionStatus": "canonical",
+      "targetFile": "src/content/documents/OTA-SCI-0121-2026-DE.md"
+    },
+    {
+      "source": "OTA-SCI-0122-2026-DE",
+      "target": "OTA-SCI-0121-2026-DE",
+      "contexts": [
+        "ler-Legierungen\", \"Materialwissenschaft\", \"Laser Powder Bed Fusion\", \"Temenon\"] relatedDocuments: [{ target: \"OTA-SCI-0121-2026-DE\", relation: \"prerequisite\", context: \"Grundprinzip, Primärdokument\" }] summary: \"Vergleich magnetokalorischer Materialklassen (Gadolinium, La(Fe,Si)1",
+        "raler Marker:** 2026 **Quellenmarker:** [R] Real – 100% **Version:** 1.1 **Status:** Aktiv **Voraussetzung:** OTA-SCI-0121-2026-DE (Grundprinzip) --- **Kurator:** Thomas Peter Küper · Frankfurt am Main · August 2026 --- ## ANMERKUNG DES KURATORS Dieses Dokument vertieft die",
+        "terials Research and Technology) --- ## VII. ARCHIV-QUERVERBINDUNGEN | Signatur | Verbindung | |---|---| | OTA-SCI-0121-2026-DE | Grundprinzip, Primärdokument | | [zu identifizieren] | Temenon-Technologie – Verbindung vermutet, nicht ausgearbeitet | | [zu identifizieren] | NOX"
+      ],
+      "status": "resolved",
+      "classification": "existing",
+      "candidates": [],
+      "resolvedTarget": "OTA-SCI-0121-2026-DE",
+      "sourceCount": 1,
+      "priority": 0,
+      "title": "Magnetokalorische Kühlung – Kühlkreisläufe ohne Kältemittel",
+      "description": "Realer Stand der magnetokalorischen Kühlung 2026: Prinzip des magnetokalorischen Effekts, Vorteile gegenüber Dampfkompression, Forschung an der TU Darmstadt, erste Supermarkt-Prototypen (Magnotherm), Anwendungen in Datenzentren und Wasserstoffverflüssigung sowie Grenzen.",
+      "descriptionStatus": "canonical",
+      "targetFile": "src/content/documents/OTA-SCI-0121-2026-DE.md"
+    },
+    {
+      "source": "OTA-SCI-0121-2026-DE",
+      "target": "OTA-SCI-0122",
+      "contexts": [
+        "reife) - Materialkosten und -verfügbarkeit sind ein limitierender Faktor (Gadolinium ist selten und teuer, s. OTA-SCI-0122 für Details) - Mechanische Stabilität der effizientesten Materialklassen (insbesondere La(Fe,Si)₁₃-Legierungen) ist ein aktives Forschungsproblem (s.",
+        "r effizientesten Materialklassen (insbesondere La(Fe,Si)₁₃-Legierungen) ist ein aktives Forschungsproblem (s. OTA-SCI-0122) --- ## V. QUELLEN - Beckmann, B. (TU Darmstadt) im Gespräch mit Eduard Bär, *detektor.fm*/Spektrum.de-Podcast \"Forschungsquartett: Kühlung durch"
+      ],
+      "status": "resolved-base-id",
+      "classification": "base-id-resolved",
+      "candidates": [
+        {
+          "signature": "OTA-SCI-0122-2026-DE",
+          "title": "Magnetokalorische Materialien: Eigenschaften im Vergleich",
+          "file": "src/content/documents/OTA-SCI-0122-2026-DE.md"
+        }
+      ],
+      "resolvedTarget": "OTA-SCI-0122-2026-DE",
+      "sourceCount": 1,
+      "priority": 0,
+      "title": "Magnetokalorische Materialien: Eigenschaften im Vergleich",
+      "description": "Vergleich magnetokalorischer Materialklassen (Gadolinium, La(Fe,Si)13, (Mn,Fe)2(P,Si), Gd5Si2Ge2, FeRh, NiMn-Heusler) nach Kenngrößen, mechanischer Stabilität und Fertigungsverfahren; die vermutete Temenon-Verbindung bleibt ausdrücklich offen.",
+      "descriptionStatus": "canonical",
+      "targetFile": "src/content/documents/OTA-SCI-0122-2026-DE.md"
+    },
+    {
+      "source": "OTA-SCI-0121-2026-DE",
+      "target": "OTA-SCI-0122-2026-DE",
+      "contexts": [
+        "ium\", \"TU Darmstadt\", \"Magnotherm\", \"Wasserstoffverflüssigung\", \"Datenzentren\"] relatedDocuments: [{ target: \"OTA-SCI-0122-2026-DE\", relation: \"extends\", context: \"Vertiefung: Materialien und Eigenschaften\" }] summary: \"Realer Stand der magnetokalorischen Kühlung 2026: Prinzip de",
+        "der Raumtemperatur-Magnetkühlung --- ## VI. ARCHIV-QUERVERBINDUNGEN | Signatur | Verbindung | |---|---| | OTA-SCI-0122-2026-DE | Vertiefung: Materialien und Eigenschaften | | [zu identifizieren] | NOXIA-Technologie – mögliche Anwendung, noch offen | --- ## VII. REVISIONSVER"
+      ],
+      "status": "resolved",
+      "classification": "existing",
+      "candidates": [],
+      "resolvedTarget": "OTA-SCI-0122-2026-DE",
+      "sourceCount": 1,
+      "priority": 0,
+      "title": "Magnetokalorische Materialien: Eigenschaften im Vergleich",
+      "description": "Vergleich magnetokalorischer Materialklassen (Gadolinium, La(Fe,Si)13, (Mn,Fe)2(P,Si), Gd5Si2Ge2, FeRh, NiMn-Heusler) nach Kenngrößen, mechanischer Stabilität und Fertigungsverfahren; die vermutete Temenon-Verbindung bleibt ausdrücklich offen.",
+      "descriptionStatus": "canonical",
+      "targetFile": "src/content/documents/OTA-SCI-0122-2026-DE.md"
     },
     {
       "source": "OTA-CHR-0001-2072-DE",
