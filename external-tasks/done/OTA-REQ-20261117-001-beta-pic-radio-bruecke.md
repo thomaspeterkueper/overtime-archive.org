@@ -1,6 +1,6 @@
 # OTA-REQ-20261117-001 – OTA-SCI-0111-2026-DE (β Pictoris b im Radio): nach Umzug nach KUE zum Brückendokument kürzen
 
-Status: open
+Status: done
 Datum: 2026-11-17
 Quelle: Begutachtung nach ECO-ARC-0037, Zuordnung nach ECO-ARC-0038 §2 (Claude)
 Prüfbericht: `kueper-ecosystem/reviews/2026-11-17-OTA-SCI-0111-2026-DE.md`
@@ -23,3 +23,16 @@ D. **Frontmatter und Kopf:** `summary` ersetzen durch „Brückendokument: NOXIA
 
 - `status/ota-kue-zuordnung.md` (kueper-ecosystem): Zeile OTA-SCI-0111 aktualisiert.
 - `noxiagame`/`solarsciencefoundation`: Verweise auf OTA-SCI-0111 bleiben gültig; für Realaussagen auf die KUE-Signatur verweisen (über EXT-OTA-KUE-20261117-001 gemeldet).
+
+## Erledigt
+
+2026-11-24 – Ökosystem-Kreislauf (Claude), Branch `claude/OTA-REQ-20261117-001`.
+
+## Umgesetzt
+
+- A: §1–12, 15 und 18 durch „1. Realgrundlage (Kurzfassung)“ mit Verweis auf `DOC:KUE:KUE-SCI-0217-2026-DE` ersetzt (KUE-Dokument aus EXT-OTA-KUE-20261117-001, gemergt in `kueper.com/main` am 2026-11-24); Archivregel-Zitat im Kopf bleibt.
+- B: NOXIA-Beobachtungsmodell, SSF-Evidenzset, Observatoriumsskizze und Archivregel wörtlich, neu nummeriert (§2–§4, §6); in Schritt 7 nur die zerfallene Formel zu `B ~ ν / (2,8 MHz/G)` korrigiert.
+- C: Quellen auf den Verweis reduziert (§5).
+- D: `summary`, `relatedDocuments`, `epistemicStatus` (ohne „OFFEN“), v1.1, Stand 24.11.2026, Revisionsvermerk in §7.
+- Prüfung: `npm run verify` grün (Linkprüfung 356 Seiten).
+- Offen außerhalb OTA: `kueper-ecosystem/status/ota-kue-zuordnung.md`, Zeile OTA-SCI-0111 (Quelle der Wahrheit dort; nicht in diesem Repo geändert).
