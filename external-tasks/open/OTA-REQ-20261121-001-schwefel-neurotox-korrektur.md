@@ -6,6 +6,7 @@ Quelle: Begutachtung nach ECO-ARC-0037, Zuordnung nach ECO-ARC-0038 §2 (Claude)
 Prüfbericht: `kueper-ecosystem/reviews/2026-11-21-OTA-SCI-0023-2025-DE.md`
 Zuordnung: Teile nach KUE – die [R]-Blöcke in §I (Geochemie) und §II (Neurotoxikologie H₂S/SO₂, Gasotransmitter) werden per `kueper.com/external-tasks/open/EXT-OTA-KUE-20261121-001.md` zu einem KUE-Dokument. Alle [I]-Blöcke, §III–§IV (Kaia, GANDHAKA, Omega-Schwefel-Modul), die Kuratoranmerkung und KN-5.1 bleiben in OTA.
 Voraussetzung: Punkt A sofort umsetzbar. Punkt C erst, wenn das neue KUE-Dokument aus EXT-OTA-KUE-20261121-001 in `kueper.com/main` gemergt ist (Signatur dort vergeben, im Folgenden `KUE-SCI-NNNN`). Punkt B wartet auf Thomas.
+Teilweise erledigt: 2026-11-23 – Punkt A umgesetzt in OTA-SCI-0023 v1.2 durch die Begutachtung (ECO-ARC-0038 §3b); bei A.4 und A.6 die Variante mit Zusatz „(Fundstelle nicht online bestätigt)“ gewählt. Offen: B (wartet auf Thomas), C (wartet auf das KUE-Dokument aus EXT-OTA-KUE-20261121-001).
 Erfasst die Punkte zu OTA-SCI-0023 aus `OTA-REQ-20261106-quellenpruefung.md` (Rumbeiha 2016, Hirsch 2002, Zare Mehrjerdi 2020/2018, Anantharam 2017, Jin 2013).
 
 ## Anlass
