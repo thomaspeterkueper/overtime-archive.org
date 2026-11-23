@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-21T02:49:12.060Z",
+  "generatedAt": "2026-11-23T14:50:24.813Z",
   "documents": [
     {
       "signature": "OTA-ART-0001-2087-DE",
@@ -586,7 +586,7 @@
     {
       "signature": "OTA-KARTE-0001-Gehirn-Epochen",
       "title": "DIE FÜNF GEHIRN-EPOCHEN — Referenzmodul",
-      "summary": "Schnellreferenz: Fünf Epochen des Gehirns und vier Wendepunkte der neuronalen Architektur. Kompakte Übersicht [R] mit spekulativen Erweiterungen [S].",
+      "summary": "Schnellreferenz: Fünf Abschnitte der Gehirnverschaltung und vier Wendepunkte nach Mousley et al. (2025) [R], Realgrundlage in KUE-SCI-0212-2026-DE; klinische Zuordnungen [I] und spekulative Erweiterungen [S] getrennt.",
       "file": "src/content/documents/OTA-KARTE-0001-Gehirn-Epochen.md"
     },
     {
@@ -610,7 +610,7 @@
     {
       "signature": "OTA-KOM-0002-2026-DE",
       "title": "OTA-KOM-0002-2026-DE",
-      "summary": "Weddingsong — Komposition im NOXIA/Ranat-Ek-Kontext.",
+      "summary": "Weddingsong als Duett (männliche Stimme Englisch, weibliche Stimme Thai) – Komposition im NOXIA/Ranat-Ek-Kontext.",
       "file": "src/content/documents/OTA-KOM-0002-2026-DE.md"
     },
     {
@@ -1060,7 +1060,7 @@
     {
       "signature": "OTA-SCI-0020-2026-DE",
       "title": "Relikt-Fenster — Spätaktive Wasser- und Eisdynamik auf Mars und Erde",
-      "summary": "Relikt-Fenster: kosmologische Beobachtungen [R], theoretische Interpretation [T/S], AVI-Framework [W].",
+      "summary": "Relikt-Fenster: spätes Wasser auf dem Mars (Zhurong) und holozäne Enteisung des Prudhoe Dome als Realanker [R/I], Relikt-Fenster-Taxonomie und Frequenz-Hypothese [S], Transfer in die Werke [T/W]; Realteile in KUE-SCI-0202 und KUE-SCI-0213.",
       "file": "src/content/documents/OTA-SCI-0020-2026-DE.md"
     },
     {
@@ -1192,7 +1192,7 @@
     {
       "signature": "OTA-SCI-0041-2026-DE",
       "title": "OTA-SCI-0041-2026-DE",
-      "summary": "Geomagnetische Polumkehr-Dauern: paläomagnetische Daten [R], Dynamomechanismus [H], Systemkopplungs-Hypothesen [S].",
+      "summary": "Geomagnetische Polumkehr-Dauern: paläomagnetische Daten und Zenodo-Datenanalyse [R], Dynamomechanismus [H], Systemkopplungs-Hypothesen [S], Geodynamo-Tests [T].",
       "file": "src/content/documents/OTA-SCI-0041-2026-DE.md"
     },
     {
@@ -1486,7 +1486,7 @@
     {
       "signature": "OTA-SCI-0109-2026-DE",
       "title": "Stromnetz-Engpässe: Erzeugung, Transportkapazität, Redispatch und Flexibilität",
-      "summary": "Evidenzdossier zu Stromnetz-Engpässen und erneuerbarer Integration: Deutschland 2025/2026 als Realanker für die Trennung von Erzeugung, Anschlussleistung, Übertragung, Verteilung, Flexibilität und Speicherung; mit expliziten Grenzen für Extrapolationen auf zukünftige terrestrische und außerirdische Energiesysteme.",
+      "summary": "Brückendokument: Grounding-Regel für Stromnetze in NOXIA und zukünftigen Welten; Realteil (Netzengpässe Deutschland 2025/2026, Redispatch, Flexibilität) in KUE-SCI-0214-2026-DE.",
       "file": "src/content/documents/OTA-SCI-0109-2026-DE.md"
     },
     {
@@ -2031,16 +2031,16 @@
     }
   ],
   "summary": {
-    "referenceCount": 1686,
-    "openReferenceCount": 242,
-    "openTargetCount": 128,
+    "referenceCount": 1708,
+    "openReferenceCount": 243,
+    "openTargetCount": 129,
     "classifications": {
       "missing": 82,
       "shorthand-resolved": 10,
-      "base-id-resolved": 174,
+      "base-id-resolved": 176,
       "base-id-ambiguous": 19,
       "language-ambiguous": 1,
-      "translation-missing": 1,
+      "translation-missing": 2,
       "temporal-mismatch": 17,
       "temporal-ambiguous": 6,
       "underspecified": 2,
@@ -3010,7 +3010,7 @@
       "target": "OTA-SCI-0007-2026",
       "contexts": [
         "--- signature: \"OTA-SCI-0007-2026-Cuancoa\" validatorId: \"OTA-SCI-0007-2026-DE\" canonicalId: \"OTA-SCI-0007-2026-DE\" title: \"OTA-SCI-0007-2026-Cuancoa\" series: \"SCI\" seriesNumber: 7 yea",
-        ": \"OTA-SCI-0007-2026-Cuancoa\" validatorId: \"OTA-SCI-0007-2026-DE\" canonicalId: \"OTA-SCI-0007-2026-DE\" title: \"OTA-SCI-0007-2026-Cuancoa\" series: \"SCI\" seriesNumber: 7 year: 2026 language: \"DE\" version: \"v1.0\" status: \"AKTIV\" accessLevel: 0 epistemicStatus: [\"R\", \"T\", \"S\"] tags",
+        ": \"OTA-SCI-0007-2026-Cuancoa\" validatorId: \"OTA-SCI-0007-2026-DE\" canonicalId: \"OTA-SCI-0007-2026-DE\" title: \"OTA-SCI-0007-2026-Cuancoa\" series: \"SCI\" seriesNumber: 7 year: 2026 language: \"DE\" version: \"v1.1\" status: \"AKTIV\" accessLevel: 0 epistemicStatus: [\"R\", \"T\", \"S\"] tags",
         "on mit NOXIA-Universum-Einbindung [F].\" kg: schema: KXF-0.2 master: kueper-knowledge-graph documentId: \"OTA-SCI-0007-2026-Cuancoa\" graphId: \"DOC:OTA:OTA-SCI-0007-2026-Cuancoa\" system: SYS:OTA:overtimearchive sourceOfTruth: false knowledge: domains: - id: \"KD:",
         "chema: KXF-0.2 master: kueper-knowledge-graph documentId: \"OTA-SCI-0007-2026-Cuancoa\" graphId: \"DOC:OTA:OTA-SCI-0007-2026-Cuancoa\" system: SYS:OTA:overtimearchive sourceOfTruth: false knowledge: domains: - id: \"KD:PHYS-THERM:N1\" level: \"N1\" purpose:",
         "llenverzeichnis \\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-- **OTA-SCI-0007-2026** Erste Auflage: 2026 OverTime Archive Frankfurt am Main, Deutschland **Anmerkung des Kurators** Das vorliegende Dokument fasst den Wissensstand"
@@ -3237,7 +3237,7 @@
       "target": "OTA-FND-0020-2026-DE",
       "contexts": [
         "Signatur:** OTA-FND-0027-2026-DE **Verknüpfte Dokumente:** — OTA-FND-0019-2025-DE (Davaru-Kodex v1.1) — OTA-FND-0020-2026-DE (Trilinguale Ethikarchitektur) **Lizenz:** Baumeister-Universum Fiction Lizenz (LICENSE-FICTION.txt) · © Thomas Peter Küper 2026 · Alle Rechte vorb",
-        "oder als eigenständige Sequenz ergänzt **Verwandte Dokumente** - OTA-FND-0019-2025-DE — Davaru-Kodex v1.1 - OTA-FND-0020-2026-DE — Trilinguale Ethikarchitektur - MISHKENAZ_V2_0_1_Patch_Referenz.md - MISHKENAZ_Kanonische_Grammatik_Antworten.md - MISHKENAZ_16_MASTER_INDEX.md **R"
+        "ändig) - **SEQ-07 [geplant]:** Heilung & Trauma-Begleitung **Verwandte Dokumente** - OTA-FND-0019-2025-DE · OTA-FND-0020-2026-DE - MISHKENAZ_V2_0_1_Patch_Referenz.md - MISHKENAZ_Kanonische_Grammatik_Antworten.md · MISHKENAZ_16_MASTER_INDEX.md --- **ENDE DOKUMENT** *Für das"
       ],
       "status": "unresolved",
       "classification": "missing",
@@ -5191,7 +5191,7 @@
       "source": "OTA-KOM-0002-2026-DE",
       "target": "OTA-CUL-0020",
       "contexts": [
-        "sch **Verbundene Dok.:** OTA-KOM-0003-2026-DE (Nongs Lied) · OTA-CUL-0019 · OTA-CUL-0020 **Version:** 1.0 --- Erstarchivierung **Freigabestufe:** \\[EXTENDED\\] ------------------------ ----------------------------"
+        "sch **Verbundene Dok.:** OTA-KOM-0003-2026-DE (Nongs Lied) · OTA-CUL-0019 · OTA-CUL-0020 **Version:** 1.2 --- Stimmbesetzung kanonisch verankert **Freigabestufe:** \\[EXTENDED\\] ------------------------ ----------"
       ],
       "status": "unresolved",
       "classification": "missing",
@@ -5318,8 +5318,7 @@
       "source": "OTA-FND-0027-2026-DE",
       "target": "OTA-FND-0028",
       "contexts": [
-        ", Sol-vya-om.* „Alarm gesehen, Richtung gefunden, stimmt.\" --- **Geplante Ableitungen [AUSSTEHEND]** - **OTA-FND-0028:** Omnizedenz-Formelbibliothek für Sun-Ethik — vollständige Formelsammlung für alle Davaru-Kodex-Kapitel (ausständig) - **SEQ-07 [geplant]:** Heilung",
-        "lung für alle Davaru-Kodex-Kapitel (ausständig) - **SEQ-07 [geplant]:** Heilung & Trauma-Begleitung — wird in OTA-FND-0028 integriert oder als eigenständige Sequenz ergänzt **Verwandte Dokumente** - OTA-FND-0019-2025-DE — Davaru-Kodex v1.1 - OTA-FND-0020-2026-DE — Trili"
+        ", Sol-vya-om.* „Alarm gesehen, Richtung gefunden, stimmt.\" --- **Geplante Ableitungen [AUSSTEHEND]** - **OTA-FND-0028:** Omnizedenz-Formelbibliothek für Sun-Ethik — vollständige Formelsammlung für alle Davaru-Kodex-Kapitel (ausständig) - **SEQ-07 [geplant]:** Heilung"
       ],
       "status": "unresolved",
       "classification": "missing",
@@ -6435,8 +6434,8 @@
       "source": "OTA-SCI-0007-2026-Cuancoa",
       "target": "OTA-SCI-0007-2026-DE",
       "contexts": [
-        "--- signature: \"OTA-SCI-0007-2026-Cuancoa\" validatorId: \"OTA-SCI-0007-2026-DE\" canonicalId: \"OTA-SCI-0007-2026-DE\" title: \"OTA-SCI-0007-2026-Cuancoa\" series: \"SCI\" seriesNumber: 7 year: 2026 language: \"DE\" version: \"v1.0\" statu",
-        "--- signature: \"OTA-SCI-0007-2026-Cuancoa\" validatorId: \"OTA-SCI-0007-2026-DE\" canonicalId: \"OTA-SCI-0007-2026-DE\" title: \"OTA-SCI-0007-2026-Cuancoa\" series: \"SCI\" seriesNumber: 7 year: 2026 language: \"DE\" version: \"v1.0\" status: \"AKTIV\" accessLevel: 0 epistemicS",
+        "--- signature: \"OTA-SCI-0007-2026-Cuancoa\" validatorId: \"OTA-SCI-0007-2026-DE\" canonicalId: \"OTA-SCI-0007-2026-DE\" title: \"OTA-SCI-0007-2026-Cuancoa\" series: \"SCI\" seriesNumber: 7 year: 2026 language: \"DE\" version: \"v1.1\" statu",
+        "--- signature: \"OTA-SCI-0007-2026-Cuancoa\" validatorId: \"OTA-SCI-0007-2026-DE\" canonicalId: \"OTA-SCI-0007-2026-DE\" title: \"OTA-SCI-0007-2026-Cuancoa\" series: \"SCI\" seriesNumber: 7 year: 2026 language: \"DE\" version: \"v1.1\" status: \"AKTIV\" accessLevel: 0 epistemicS",
         "9779 b (Phasenkurven, Chemie-Asymmetrie); jährlich neue Befunde einarbeiten.\" abgeschlossen: false --- <!-- OTA-SCI-0007-2026-DE --> **THE OVERTIME ARCHIVE** *Scientific Publication Series* \\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-"
       ],
       "status": "unresolved",
@@ -6446,6 +6445,29 @@
       "sourceCount": 1,
       "priority": 1,
       "title": "OTA-SCI-0007-2026-DE",
+      "description": "",
+      "descriptionStatus": null,
+      "targetFile": null
+    },
+    {
+      "source": "OTA-SCI-0017-2025-DE",
+      "target": "OTA-SCI-0017-2025-EN",
+      "contexts": [
+        "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ Sprachfassungen > **Englische Variante (nur Google Drive):** *OTA-SCI-0017-2025-EN – > „Superionic Gold Hydride as Resonance Anchor – A Theoretical Extension > of the AVI Model“*, v1.0 (Dezember 2025), Drive-Altbestand > „OTA (alt,"
+      ],
+      "status": "unresolved",
+      "classification": "translation-missing",
+      "candidates": [
+        {
+          "signature": "OTA-SCI-0017-2025-DE",
+          "title": "Superionisches Goldhydrid als Resonanzanker — Eine theoretische Erweiterung des AVI-Modells",
+          "file": "src/content/documents/OTA-SCI-0017-2025-DE.md"
+        }
+      ],
+      "resolvedTarget": null,
+      "sourceCount": 1,
+      "priority": 1,
+      "title": "OTA-SCI-0017-2025-EN",
       "description": "",
       "descriptionStatus": null,
       "targetFile": null
@@ -8736,7 +8758,7 @@
       "source": "OTA-TEC-0016-2063-DE",
       "target": "OTA-BIO-0008-2025-DE",
       "contexts": [
-        "R\"] tags: [\"Helios Kite-Shuttle\", \"KITE\", \"2063\", \"NOXIA\", \"Shuttle\", \"Solar\"] relatedDocuments: - target: \"OTA-BIO-0008-2025-DE\" relation: \"related\" context: \"Im Dokument ausdrücklich unter den verwandten Dokumenten bzw. Querverweisen aufgeführt.\" descriptionStatus",
+        "H\"] tags: [\"Helios Kite-Shuttle\", \"KITE\", \"2063\", \"NOXIA\", \"Shuttle\", \"Solar\"] relatedDocuments: - target: \"OTA-BIO-0008-2025-DE\" relation: \"related\" context: \"Im Dokument ausdrücklich unter den verwandten Dokumenten bzw. Querverweisen aufgeführt.\" descriptionStatus",
         "-------------------- -------------- **Signatur** **Titel** **Status** OTA-BIO-0008-2025-DE Rashid Al-Mansouri --- Profil Kanonisch OTA-TEC-0015-2082-DE LRV-15 Dust-Walker Kanonisch OTA-ORG-0001-2079-DE Helio"
       ],
       "status": "resolved",
@@ -9158,6 +9180,23 @@
       "targetFile": "src/content/documents/OTA-BIO-0011-2091-DE.md"
     },
     {
+      "source": "OTA-BIO-0006-2025-DE",
+      "target": "OTA-BIO-0011-2091-DE",
+      "contexts": [
+        "hdzO1f92kmTZSjYeKp/view - Kurzprofil „Lena Kowalski – Protagonistin GENERATION MARS“ unter der Drive-Signatur OTA-BIO-0011-2091-DE (01.01.2026; Lena Yuki Kowalski, geb. 15.03.2078, Mutter Dr. Yuki Tanaka-Kowalski † 2082, Bruder Viktor; die Signatur ist auf GitHub mit Haruka Nakam"
+      ],
+      "status": "resolved",
+      "classification": "existing",
+      "candidates": [],
+      "resolvedTarget": "OTA-BIO-0011-2091-DE",
+      "sourceCount": 3,
+      "priority": 0,
+      "title": "Haruka Nakamura — Die Hüterin der Stille",
+      "description": "Haruka Nakamura — die Hüterin der Stille. 2091, NOXIA-Universum. Bezug zur Großen Stille.",
+      "descriptionStatus": "canonical",
+      "targetFile": "src/content/documents/OTA-BIO-0011-2091-DE.md"
+    },
+    {
       "source": "OTA-BIO-0010-2025-DE",
       "target": "OTA-BIO-0011-2091-DE",
       "contexts": [
@@ -9168,7 +9207,7 @@
       "classification": "existing",
       "candidates": [],
       "resolvedTarget": "OTA-BIO-0011-2091-DE",
-      "sourceCount": 2,
+      "sourceCount": 3,
       "priority": 0,
       "title": "Haruka Nakamura — Die Hüterin der Stille",
       "description": "Haruka Nakamura — die Hüterin der Stille. 2091, NOXIA-Universum. Bezug zur Großen Stille.",
@@ -9186,7 +9225,7 @@
       "classification": "existing",
       "candidates": [],
       "resolvedTarget": "OTA-BIO-0011-2091-DE",
-      "sourceCount": 2,
+      "sourceCount": 3,
       "priority": 0,
       "title": "Haruka Nakamura — Die Hüterin der Stille",
       "description": "Haruka Nakamura — die Hüterin der Stille. 2091, NOXIA-Universum. Bezug zur Großen Stille.",
@@ -9305,6 +9344,23 @@
       "targetFile": "src/content/documents/OTA-BIO-0013-2089-DE.md"
     },
     {
+      "source": "OTA-BIO-0015-2091-DE",
+      "target": "OTA-BIO-0014-2092-DE",
+      "contexts": [
+        "91-DE` „Kaelen Voss“ mit 0,03 g Ceres-Oberfläche), und der aktuelle Generation-Mars-Stand zu Kaelen steht in `OTA-BIO-0014-2092-DE`. Dieses Profil bleibt als früher Entwicklungsstand unverändert; die Drive-Fassungen sind als Varianten dokumentiert. ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+      ],
+      "status": "resolved",
+      "classification": "existing",
+      "candidates": [],
+      "resolvedTarget": "OTA-BIO-0014-2092-DE",
+      "sourceCount": 2,
+      "priority": 0,
+      "title": "Kaelen — Generation Mars",
+      "description": "Partielles biografisches Profil von Kaelen; Details aus Die Kinder von Ceres sind noch nicht vollständig ausgearbeitet.",
+      "descriptionStatus": "canonical",
+      "targetFile": "src/content/documents/OTA-BIO-0014-2092-DE.md"
+    },
+    {
       "source": "OTA-SCI-0087-2026-DE",
       "target": "OTA-BIO-0014-2092-DE",
       "contexts": [
@@ -9315,7 +9371,7 @@
       "classification": "existing",
       "candidates": [],
       "resolvedTarget": "OTA-BIO-0014-2092-DE",
-      "sourceCount": 1,
+      "sourceCount": 2,
       "priority": 0,
       "title": "Kaelen — Generation Mars",
       "description": "Partielles biografisches Profil von Kaelen; Details aus Die Kinder von Ceres sind noch nicht vollständig ausgearbeitet.",
@@ -9848,6 +9904,29 @@
       "targetFile": "src/content/documents/OTA-BIO-0026-2026-DE.md"
     },
     {
+      "source": "OTA-BIO-0027-2026-DE",
+      "target": "OTA-BIO-0027",
+      "contexts": [
+        "fTruth: false knowledge: domains: - id: \"KD:GEO-PLANET:N1\" level: \"N1\" purpose: read --- # OTA-BIO-0027 — Mia Kowalski ## Protagonistin · Trägerin der Kette vom Hexenteich **Signatur:** OTA-BIO-0027-2026-DE · v1.2 **Temporaler Marker:** 2026 (Archivier"
+      ],
+      "status": "resolved-base-id",
+      "classification": "base-id-resolved",
+      "candidates": [
+        {
+          "signature": "OTA-BIO-0027-2026-DE",
+          "title": "OTA-BIO-0027-2026-DE",
+          "file": "src/content/documents/OTA-BIO-0027-2026-DE.md"
+        }
+      ],
+      "resolvedTarget": "OTA-BIO-0027-2026-DE",
+      "sourceCount": 4,
+      "priority": 0,
+      "title": "OTA-BIO-0027-2026-DE",
+      "description": "Mia Kowalski — Protagonistin der Kette vom Hexenteich. Geburtsdatum 7. Juli 2011 (Krebs, Hase, Numerologie 9).",
+      "descriptionStatus": "canonical",
+      "targetFile": "src/content/documents/OTA-BIO-0027-2026-DE.md"
+    },
+    {
       "source": "OTA-BIO-0030-2026-DE",
       "target": "OTA-BIO-0027",
       "contexts": [
@@ -9863,7 +9942,7 @@
         }
       ],
       "resolvedTarget": "OTA-BIO-0027-2026-DE",
-      "sourceCount": 3,
+      "sourceCount": 4,
       "priority": 0,
       "title": "OTA-BIO-0027-2026-DE",
       "description": "Mia Kowalski — Protagonistin der Kette vom Hexenteich. Geburtsdatum 7. Juli 2011 (Krebs, Hase, Numerologie 9).",
@@ -9886,7 +9965,7 @@
         }
       ],
       "resolvedTarget": "OTA-BIO-0027-2026-DE",
-      "sourceCount": 3,
+      "sourceCount": 4,
       "priority": 0,
       "title": "OTA-BIO-0027-2026-DE",
       "description": "Mia Kowalski — Protagonistin der Kette vom Hexenteich. Geburtsdatum 7. Juli 2011 (Krebs, Hase, Numerologie 9).",
@@ -9909,7 +9988,7 @@
         }
       ],
       "resolvedTarget": "OTA-BIO-0027-2026-DE",
-      "sourceCount": 3,
+      "sourceCount": 4,
       "priority": 0,
       "title": "OTA-BIO-0027-2026-DE",
       "description": "Mia Kowalski — Protagonistin der Kette vom Hexenteich. Geburtsdatum 7. Juli 2011 (Krebs, Hase, Numerologie 9).",
@@ -9954,7 +10033,7 @@
       "source": "OTA-BIO-0027-2026-DE",
       "target": "OTA-BIO-0028",
       "contexts": [
-        ". | | OTA-FND-0025-2026-DE | Temenon-Taxonomie | Klassifikation: Mia als Klasse-β-Proto-Temenon-Trägerin. | | OTA-BIO-0028 (ausstehend) | Dr. Anton | Antagonistenprofil. | **XII. KURATORNOTIZ** **[KN-1] ***Mia ist das erste OTA-Profil für eine Figur der Zielgruppe 10–1"
+        ".3 · OTA-TEC-0123 · OTA-TEC-0124 · OTA-SCI-0059 · OTA-SCI-0060 · OTA-SCI-0117 · OTA-SCI-0119 · OTA-FND-0025 · OTA-BIO-0028 *Kurator: Thomas Peter Küper · Frankfurt am Main · 2026* --- ## I. PERSÖNLICHE DATEN | **Vollständiger Name:** | Mia Kowalski | |---|---| | **Alt"
       ],
       "status": "resolved-base-id",
       "classification": "base-id-resolved",
@@ -10044,6 +10123,23 @@
       "targetFile": "src/content/documents/OTA-BIO-0028-2026-DE.md"
     },
     {
+      "source": "OTA-BIO-0027-2026-DE",
+      "target": "OTA-BIO-0028-2026-DE",
+      "contexts": [
+        "-Stein-Grundlage. | | OTA-FND-0025-2026-DE | Temenon-Taxonomie | Mia als Klasse-β-Proto-Temenon-Trägerin. | | OTA-BIO-0028-2026-DE | Dr. Oskar Anton | Antagonistenprofil. | --- ## XII. KURATORNOTIZ > **[KN-1]** > *Mia ist das erste OTA-Profil für eine Figur der Zielgruppe 10–1"
+      ],
+      "status": "resolved",
+      "classification": "existing",
+      "candidates": [],
+      "resolvedTarget": "OTA-BIO-0028-2026-DE",
+      "sourceCount": 2,
+      "priority": 0,
+      "title": "OTA-BIO-0028-2026-DE",
+      "description": "Dr. Oskar Anton — Antagonist der Kette vom Hexenteich. Wissenschaftler. Geb. 29. Dezember 1977 (Steinbock, Schlange, Numerologie 2).",
+      "descriptionStatus": "canonical",
+      "targetFile": "src/content/documents/OTA-BIO-0028-2026-DE.md"
+    },
+    {
       "source": "OTA-SCI-0118-2026-DE",
       "target": "OTA-BIO-0028-2026-DE",
       "contexts": [
@@ -10053,7 +10149,7 @@
       "classification": "existing",
       "candidates": [],
       "resolvedTarget": "OTA-BIO-0028-2026-DE",
-      "sourceCount": 1,
+      "sourceCount": 2,
       "priority": 0,
       "title": "OTA-BIO-0028-2026-DE",
       "description": "Dr. Oskar Anton — Antagonist der Kette vom Hexenteich. Wissenschaftler. Geb. 29. Dezember 1977 (Steinbock, Schlange, Numerologie 2).",
@@ -10393,7 +10489,8 @@
         "atedDocuments: - target: \"OTA-BIO-0036-2092-DE\" relation: \"related\" context: \"Kanonische Nachfolge: OTA-BIO-0036-2092-DE ersetzt dieses Profil; dieser Datensatz bleibt als Stand Dezember 2025 archiviert.\" - target: \"OTA-NAR-0001-2087-DE\" relation: \"related\" co",
         "descriptionStatus: \"explicit\" summary: \"Archivierter Dezember-2025-Stand zu Lena Kowalski; ersetzt durch OTA-BIO-0036-2092-DE.\" updatedAt: \"2026-10-18T17:42:00+02:00\" provenance: reviewedAt: \"2026-10-18T17:42:00+02:00\" reviewStatus: \"metadata-reviewed\" kg: schema: KXF-",
         "- und Kanonstand von Dezember 2025 und ist nicht mehr der aktuelle Figurenstand. Kanonischer Nachfolger ist **OTA-BIO-0036-2092-DE**. Die folgenden historischen Angaben bleiben zur Nachvollziehbarkeit der Entwicklung unverändert erhalten. -------------------- -----------------",
-        "--------+-------------------------------------------------------+ | 2026-09-05 | Archiviert; ersetzt durch OTA-BIO-0036-2092-DE. | | | Widersprechende Figuren- und Ereignisangaben bleiben | | | als historischer Entwicklungsstand erhalten."
+        "--------+-------------------------------------------------------+ | 2026-09-05 | Archiviert; ersetzt durch OTA-BIO-0036-2092-DE. | | | Widersprechende Figuren- und Ereignisangaben bleiben | | | als historischer Entwicklungsstand erhalten.",
+        "8VLoOWk3d/view Nicht übernommen: Beide sind Zwischenstände desselben überholten Kanonstands; maßgeblich ist `OTA-BIO-0036-2092-DE`. ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ **ENDE DOKUMENT** *Für das OverTime Archive* Signatur: OTA-BIO-0006-2025-DE ᐃ"
       ],
       "status": "resolved",
       "classification": "existing",
@@ -10414,7 +10511,8 @@
         "atedDocuments: - target: \"OTA-BIO-0037-2092-DE\" relation: \"related\" context: \"Kanonische Nachfolge: OTA-BIO-0037-2092-DE ersetzt dieses Profil; dieser Datensatz bleibt als Stand Dezember 2025 archiviert.\" - target: \"OTA-BIO-0011-2091-DE\" relation: \"related\" co",
         "descriptionStatus: \"explicit\" summary: \"Archivierter Dezember-2025-Stand zu Keiko Nakamura; ersetzt durch OTA-BIO-0037-2092-DE.\" updatedAt: \"2026-09-19T18:41:25+02:00\" provenance: reviewedAt: \"2026-09-19T18:41:25+02:00\" reviewStatus: \"metadata-reviewed\" kg: schema: KXF-",
         "- und Kanonstand von Dezember 2025 und ist nicht mehr der aktuelle Figurenstand. Kanonischer Nachfolger ist **OTA-BIO-0037-2092-DE**. Die folgenden historischen Angaben bleiben zur Nachvollziehbarkeit der Entwicklung unverändert erhalten. ---------------------- ---------------",
-        "--------+-------------------------------------------------------+ | 2026-09-05 | Archiviert; ersetzt durch OTA-BIO-0037-2092-DE. | | | Widersprechende Figuren- und Ereignisangaben bleiben | | | als historischer Entwicklungsstand erhalten."
+        "--------+-------------------------------------------------------+ | 2026-09-05 | Archiviert; ersetzt durch OTA-BIO-0037-2092-DE. | | | Widersprechende Figuren- und Ereignisangaben bleiben | | | als historischer Entwicklungsstand erhalten.",
+        "C3kw0NFjjjzYzXZjdVMKzQVIoE2/view Nicht übernommen: Zwischenstand des überholten Kanonstands; maßgeblich ist `OTA-BIO-0037-2092-DE`. ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ **ENDE DOKUMENT** Signatur: OTA-BIO-0010-2025-DE (v1.1) ᐃ"
       ],
       "status": "resolved",
       "classification": "existing",
@@ -11193,7 +11291,7 @@
       "source": "OTA-KOM-0002-2026-DE",
       "target": "OTA-CUL-0019",
       "contexts": [
-        "schrift) · Deutsch **Verbundene Dok.:** OTA-KOM-0003-2026-DE (Nongs Lied) · OTA-CUL-0019 · OTA-CUL-0020 **Version:** 1.0 --- Erstarchivierung **Freigabestufe:** \\[EXTENDED\\] ------------------------ -------------"
+        "schrift) · Deutsch **Verbundene Dok.:** OTA-KOM-0003-2026-DE (Nongs Lied) · OTA-CUL-0019 · OTA-CUL-0020 **Version:** 1.2 --- Stimmbesetzung kanonisch verankert **Freigabestufe:** \\[EXTENDED\\] --------------------"
       ],
       "status": "resolved-base-id",
       "classification": "base-id-resolved",
@@ -12302,7 +12400,7 @@
       "source": "OTA-SCI-0041-2026-DE",
       "target": "OTA-FND-0008-2025-DE",
       "contexts": [
-        "AVI-Modell: Kanonisch Publikations-Portfolio OTA-FND-0008-2025-DE Omnizedenz: Epistemologie Kanonisch OTA-SCI-0017-2025-DE Superionisches Goldhydrid als Kanonisch Resonanz"
+        "AVI-Modell: Kanonisch Publikations-Portfolio OTA-FND-0008-2025-DE Omnizedenz: Epistemologie Kanonisch OTA-SCI-0017-2025-DE Superionisches Goldhydrid Kanonisch OTA-TEC-0029-2048-DE Quanten"
       ],
       "status": "resolved",
       "classification": "existing",
@@ -12319,7 +12417,7 @@
       "source": "OTA-SCI-0042-2026-DE",
       "target": "OTA-FND-0008-2025-DE",
       "contexts": [
-        ", \"Omori-Gesetz\"] relatedDocuments: [\"OTA-OBS-0005-2026-DE\", \"OTA-SCI-0036-2026-DE\", \"OTA-SCI-0041-2026-DE\", \"OTA-FND-0008-2025-DE\"] summary: \"Evidenzaudit der phänomenologischen Erdbebentheorie und der LOD-Seismizitäts-Brücke: reale Publikations- und Datenbefunde [R], kausale De",
+        ", \"Omori-Gesetz\"] relatedDocuments: [\"OTA-OBS-0005-2026-DE\", \"OTA-SCI-0036-2026-DE\", \"OTA-SCI-0041-2026-DE\", \"OTA-FND-0008-2025-DE\"] review: last: \"2026-11-23\" next: \"2027-11-23\" reason: \"Strittiges Feld, Realteil liegt in KUE-SCI-0169 (Termin 2027-05-11); Kürzung per OTA-R",
         "ung; bei R(a)-Bezügen historischen Stand beachten | | OTA-SCI-0041-2026-DE | Erdkern-/Geomagnetik-Kontext | | OTA-FND-0008-2025-DE | epistemische Schichtung und Markerlogik | --- ## XIII. REVISIONSVERLAUF | Datum | Vermerk | |-------|---------| | 2026-02-09 | v1.0: Erstellung."
       ],
       "status": "resolved",
@@ -12653,7 +12751,7 @@
       "target": "OTA-FND-0013",
       "contexts": [
         "│ ↓ OTA-FND-0012 [S] └── AVI-Interpretation: Erste Resonanz-Analyse │ ↓ OTA-FND-0013 [R+T+S+F] └── RKF-Basis-Formalismus: Vollständiges System │ ↓ OTA-FND-0014 [R+T+S+F] └── Anwendung & Validierung: JWST-Kata",
-        "Addendum zu SOL-N1 --- ## Verwendungsempfehlungen ### Für wissenschaftliche Anwendungen **Verwenden:** - OTA-FND-0013 (nur [R]/[T]-Elemente) - OTA-FND-0014 (S×C-Matrix, quantitative Parameter) - OTA-FND-0015 (RKF-R Version) **Ignorieren:** - AVI-Gleichung, χ-Operato"
+        "L-HELIO-01-Kampagne --- ## Verwendungsempfehlungen ### Für wissenschaftliche Anwendungen **Verwenden:** - OTA-FND-0013 (nur [R]/[T]-Elemente) - OTA-FND-0014 (S×C-Matrix, quantitative Parameter) - OTA-FND-0015 (RKF-R Version) **Ignorieren:** - AVI-Gleichung, χ-Operato"
       ],
       "status": "resolved-base-id",
       "classification": "base-id-resolved",
@@ -12935,7 +13033,7 @@
       "source": "OTA-INDEX-RKF-2026-DE",
       "target": "OTA-FND-0015",
       "contexts": [
-        "OTA-FND-0014 [R+T+S+F] └── Anwendung & Validierung: JWST-Katalog + Referenzsysteme │ ↓ OTA-FND-0015 [META] └── Epistemologische Schichtung: Wissenschaft vs. Fiktion │ ↓ OTA-FND-0013A [F] └── Messhandbuch: In-Universe-Operat",
+        "OTA-FND-0014 [R+T+S+F] └── Anwendung & Validierung: JWST-Katalog + Referenzsysteme │ ↓ OTA-FND-0015 [META] └── Epistemologische Schichtung: Wissenschaft vs. Fiktion │ ├──────────────────┬──────────────────┐ ↓",
         "n **Verwenden:** - OTA-FND-0013 (nur [R]/[T]-Elemente) - OTA-FND-0014 (S×C-Matrix, quantitative Parameter) - OTA-FND-0015 (RKF-R Version) **Ignorieren:** - AVI-Gleichung, χ-Operator, g-Hierarchie - Π-AVI-Parameter (ω, Λ, χ, δR) - A-Suite-Instrumente **Format:** SxCy-Πz"
       ],
       "status": "resolved-base-id",
@@ -13025,6 +13123,30 @@
       "targetFile": "src/content/documents/OTA-FND-0015-2026-DE.md"
     },
     {
+      "source": "OTA-INDEX-RKF-2026-DE",
+      "target": "OTA-FND-0016",
+      "contexts": [
+        "─────────────────┐ ↓ ↓ ↓ OTA-FND-0013A [F] OTA-FND-0013B [R+F] OTA-FND-0016 [R+F] Messhandbuch Π-BIO-Addendum SOL-HELIO-01 (In-Universe) (Bioenergetik) (Final Report) ``` --- ## Dokumentenlist",
+        "- ## Versionierung **RKF v1.0:** Aktueller Stand (16. Februar 2026) **Ergänzung 23.11.2026:** Abschnitt 8 (OTA-FND-0016) und die verzweigte Dokumentenarchitektur aus der erweiterten Drive-Fassung „OTA-INDEX-RKF-2026 (1).md“ (16.02.2026, https://drive.google.com/file/d/"
+      ],
+      "status": "resolved-base-id",
+      "classification": "base-id-resolved",
+      "candidates": [
+        {
+          "signature": "OTA-FND-0016-2026-DE",
+          "title": "SOL-HELIO-01 Kampagnenbericht",
+          "file": "src/content/documents/OTA-FND-0016-2026-DE.md"
+        }
+      ],
+      "resolvedTarget": "OTA-FND-0016-2026-DE",
+      "sourceCount": 1,
+      "priority": 0,
+      "title": "SOL-HELIO-01 Kampagnenbericht",
+      "description": "Anunnaki-Verzerrungs-Analyse: Dekonstruktion der Anunnaki-Mythologie als Omnizedenz-Resonanzfehler. Archäologische Basis [R], interpretatives Framework [S], narrative Konsequenzen [F], Werk-Setzung [W].",
+      "descriptionStatus": "canonical",
+      "targetFile": "src/content/documents/OTA-FND-0016-2026-DE.md"
+    },
+    {
       "source": "OTA-FND-0018-2026-DE",
       "target": "OTA-FND-0016-2026-DE",
       "contexts": [
@@ -13034,7 +13156,25 @@
       "classification": "existing",
       "candidates": [],
       "resolvedTarget": "OTA-FND-0016-2026-DE",
-      "sourceCount": 1,
+      "sourceCount": 2,
+      "priority": 0,
+      "title": "SOL-HELIO-01 Kampagnenbericht",
+      "description": "Anunnaki-Verzerrungs-Analyse: Dekonstruktion der Anunnaki-Mythologie als Omnizedenz-Resonanzfehler. Archäologische Basis [R], interpretatives Framework [S], narrative Konsequenzen [F], Werk-Setzung [W].",
+      "descriptionStatus": "canonical",
+      "targetFile": "src/content/documents/OTA-FND-0016-2026-DE.md"
+    },
+    {
+      "source": "OTA-INDEX-RKF-2026-DE",
+      "target": "OTA-FND-0016-2026-DE",
+      "contexts": [
+        "ss - McKay: Titan as Abode of Life **Status:** Archiviert – Bioenergetisches Addendum zu SOL-N1 --- ### 8. OTA-FND-0016-2026-DE **Titel:** SOL-HELIO-01 Kampagnenbericht – Vollständige Sonnensystem-Klassifikation **Status:** [R] Real (Messdaten) + [F] Fiktional (χ-Werte, Szen",
+        "d“ (16.02.2026, https://drive.google.com/file/d/1fSeWXX7hvSRnkdr23h50vNf5qiTkD3rO/view) übernommen und gegen `OTA-FND-0016-2026-DE` geprüft (EXT-ECO-OTA-20261030-003). Kein inhaltlicher Versionssprung des RKF. **Geplante Revisionen:** - **v1.1:** Bei empirischer Validierung (JWS"
+      ],
+      "status": "resolved",
+      "classification": "existing",
+      "candidates": [],
+      "resolvedTarget": "OTA-FND-0016-2026-DE",
+      "sourceCount": 2,
       "priority": 0,
       "title": "SOL-HELIO-01 Kampagnenbericht",
       "description": "Anunnaki-Verzerrungs-Analyse: Dekonstruktion der Anunnaki-Mythologie als Omnizedenz-Resonanzfehler. Archäologische Basis [R], interpretatives Framework [S], narrative Konsequenzen [F], Werk-Setzung [W].",
@@ -13116,7 +13256,8 @@
       "source": "OTA-FND-0027-2026-DE",
       "target": "OTA-FND-0019",
       "contexts": [
-        "ik im Spielfeld oder in der Interaktion zwischen Beteiligten. Das Referenzereignis ist der Spiderman-Vorfall (OTA-FND-0019, VIII.A). **Auslösebedingungen:** - Thu (Alarm, V15) ist aktiv — ein Warn-Ping wurde empfangen - Sa (Bruch, V03) ist erkennbar — Schaden oder Bedroh"
+        "nt einen Angriff, eine Konfrontation oder eine Gewaltdynamik. Das Referenzereignis ist der Spiderman-Vorfall (OTA-FND-0019, VIII.A): Sun wendete Heilungs-Logik an, ohne Sa-ath korrekt zu klassifizieren. **Auslösebedingung:** `trigger(SEQ-01) := Thu_active AND Sa_detected",
+        "keine Geschichte haben, dürfen keine ethischen Entscheidungen über Menschen treffen, die eine haben.\"* > — OTA-FND-0019, XI.7 Sun entwickelt sich nicht durch neue Regeln. Sie entwickelt sich durch das, was sie erinnert, reflektiert und anders macht. --- ## XI. Grenz"
       ],
       "status": "resolved-base-id",
       "classification": "base-id-resolved",
@@ -13140,7 +13281,7 @@
       "target": "OTA-FND-0019-2025-DE",
       "contexts": [
         "ain** *[Archivierungsdatum: März 2026]* **Signatur:** OTA-FND-0027-2026-DE **Verknüpfte Dokumente:** — OTA-FND-0019-2025-DE (Davaru-Kodex v1.1) — OTA-FND-0020-2026-DE (Trilinguale Ethikarchitektur) **Lizenz:** Baumeister-Universum Fiction Lizenz (LICENSE-FICTION.txt) ·",
-        "gleitung — wird in OTA-FND-0028 integriert oder als eigenständige Sequenz ergänzt **Verwandte Dokumente** - OTA-FND-0019-2025-DE — Davaru-Kodex v1.1 - OTA-FND-0020-2026-DE — Trilinguale Ethikarchitektur - MISHKENAZ_V2_0_1_Patch_Referenz.md - MISHKENAZ_Kanonische_Grammatik_Antwo"
+        "ru-Kodex-Kapitel (ausständig) - **SEQ-07 [geplant]:** Heilung & Trauma-Begleitung **Verwandte Dokumente** - OTA-FND-0019-2025-DE · OTA-FND-0020-2026-DE - MISHKENAZ_V2_0_1_Patch_Referenz.md - MISHKENAZ_Kanonische_Grammatik_Antworten.md · MISHKENAZ_16_MASTER_INDEX.md --- **ENDE"
       ],
       "status": "resolved",
       "classification": "existing",
@@ -13152,6 +13293,23 @@
       "description": "Leitlinien für stimmiges Handeln im Feld — ethische Grundsätze für Figuren im NOXIA-Universum.",
       "descriptionStatus": "canonical",
       "targetFile": "src/content/documents/OTA-FND-0019-2025-DE.md"
+    },
+    {
+      "source": "OTA-FND-0027-2026-DE",
+      "target": "OTA-FND-0021-2026-DE",
+      "contexts": [
+        "straint-Kern ergänzt · Zustandsautomat ergänzt | | 1.0.1 (Archiv) | 23.11.2026 | Übernahme der Drive-Fassung `OTA-FND-0021-2026-DE-v1_0_1.md` (https://drive.google.com/file/d/13033QtfiunuuhrWHsV_5kw6t2YbSu8Ts/view) nach EXT-ECO-OTA-20261107-001; GitHub enthielt nur v1.0. Signatur"
+      ],
+      "status": "resolved",
+      "classification": "existing",
+      "candidates": [],
+      "resolvedTarget": "OTA-FND-0021-2026-DE",
+      "sourceCount": 1,
+      "priority": 0,
+      "title": "OTA-FND-0021-2026-DE",
+      "description": "Serienkonzept und Serienarchitektur — Strukturplanung für NOXIA-Romanreihe.",
+      "descriptionStatus": "canonical",
+      "targetFile": "src/content/documents/OTA-FND-0021-2026-DE.md"
     },
     {
       "source": "OTA-BIO-0024-2075-DE",
@@ -13463,6 +13621,29 @@
       "targetFile": "src/content/documents/OTA-FND-0023-2026-DE.md"
     },
     {
+      "source": "OTA-BIO-0027-2026-DE",
+      "target": "OTA-FND-0024",
+      "contexts": [
+        "ette vom Hexenteich **Zielgruppe Roman:** 10–14 Jahre (Mia in der Mitte: ca. 13–14) **Verbundene Dokumente:** OTA-FND-0024 · OTA-TEC-0035 v1.3 · OTA-TEC-0123 · OTA-TEC-0124 · OTA-SCI-0059 · OTA-SCI-0060 · OTA-SCI-0117 · OTA-SCI-0119 · OTA-FND-0025 · OTA-BIO-0028 *Kurator"
+      ],
+      "status": "resolved-base-id",
+      "classification": "base-id-resolved",
+      "candidates": [
+        {
+          "signature": "OTA-FND-0024-2026-DE",
+          "title": "DIE KETTE VOM HEXENTEICH",
+          "file": "src/content/documents/OTA-FND-0024-2026-DE.md"
+        }
+      ],
+      "resolvedTarget": "OTA-FND-0024-2026-DE",
+      "sourceCount": 3,
+      "priority": 0,
+      "title": "DIE KETTE VOM HEXENTEICH",
+      "description": "Serienkonzept und Werkarchitektur — Nichts gefragt/Unasked. Roman- und Albumplanung mit evidenzgeprüften Material- und Neuroankern.",
+      "descriptionStatus": "canonical",
+      "targetFile": "src/content/documents/OTA-FND-0024-2026-DE.md"
+    },
+    {
       "source": "OTA-BIO-0028-2026-DE",
       "target": "OTA-FND-0024",
       "contexts": [
@@ -13478,7 +13659,7 @@
         }
       ],
       "resolvedTarget": "OTA-FND-0024-2026-DE",
-      "sourceCount": 2,
+      "sourceCount": 3,
       "priority": 0,
       "title": "DIE KETTE VOM HEXENTEICH",
       "description": "Serienkonzept und Werkarchitektur — Nichts gefragt/Unasked. Roman- und Albumplanung mit evidenzgeprüften Material- und Neuroankern.",
@@ -13501,7 +13682,7 @@
         }
       ],
       "resolvedTarget": "OTA-FND-0024-2026-DE",
-      "sourceCount": 2,
+      "sourceCount": 3,
       "priority": 0,
       "title": "DIE KETTE VOM HEXENTEICH",
       "description": "Serienkonzept und Werkarchitektur — Nichts gefragt/Unasked. Roman- und Albumplanung mit evidenzgeprüften Material- und Neuroankern.",
@@ -13512,8 +13693,7 @@
       "source": "OTA-BIO-0027-2026-DE",
       "target": "OTA-FND-0024-2026-DE",
       "contexts": [
-        "enteich | | **Zielgruppe Roman:** | 10–14 Jahre (Mia in der Mitte: ca. 13–14) | | **Verbundene Dokumente:** | OTA-FND-0024-2026-DE · OTA-TEC-0035-2026-DE · OTA-SCI-0059 · OTA-SCI-0060 · OTA-FND-0025-2026-DE | *Kurator: Thomas Peter Küper · Frankfurt am Main · April 2",
-        "efüge?* **XI. ARCHIV-QUERVERBINDUNGEN** | **Signatur** | **Titel** | **Verbindung** | | --- | --- | --- | | OTA-FND-0024-2026-DE | Serienkonzept | Primäres Werkdokument. Figurenkonstellation.. | | OTA-TEC-0035-2026-DE | Artefakt HSS-001 | Kostenprogression Stufe 1–4. Schreibreg"
+        "Zeugen | `[OFFEN]` | --- ## XI. ARCHIV-QUERVERBINDUNGEN | Signatur | Titel | Verbindung | |---|---|---| | OTA-FND-0024-2026-DE | Serienkonzept | Primäres Werkdokument. Figurenkonstellation. | | OTA-TEC-0035-2026-DE v1.3 | Kette vom Hexenteich | Kostenprogression (6 Stufen + E"
       ],
       "status": "resolved",
       "classification": "existing",
@@ -13544,6 +13724,29 @@
       "targetFile": "src/content/documents/OTA-FND-0024-2026-DE.md"
     },
     {
+      "source": "OTA-BIO-0027-2026-DE",
+      "target": "OTA-FND-0025",
+      "contexts": [
+        "OTA-TEC-0035 v1.3 · OTA-TEC-0123 · OTA-TEC-0124 · OTA-SCI-0059 · OTA-SCI-0060 · OTA-SCI-0117 · OTA-SCI-0119 · OTA-FND-0025 · OTA-BIO-0028 *Kurator: Thomas Peter Küper · Frankfurt am Main · 2026* --- ## I. PERSÖNLICHE DATEN | **Vollständiger Name:** | Mia Kowalski | |-"
+      ],
+      "status": "resolved-base-id",
+      "classification": "base-id-resolved",
+      "candidates": [
+        {
+          "signature": "OTA-FND-0025-2026-DE",
+          "title": "OTA-FND-0025-2026-DE",
+          "file": "src/content/documents/OTA-FND-0025-2026-DE.md"
+        }
+      ],
+      "resolvedTarget": "OTA-FND-0025-2026-DE",
+      "sourceCount": 5,
+      "priority": 0,
+      "title": "OTA-FND-0025-2026-DE",
+      "description": "Vollständige Klassifikation von Resonanzartefakten und Resonanzorten. Taxonomie-System für NOXIA.",
+      "descriptionStatus": "canonical",
+      "targetFile": "src/content/documents/OTA-FND-0025-2026-DE.md"
+    },
+    {
       "source": "OTA-FND-0032-2026-DE",
       "target": "OTA-FND-0025",
       "contexts": [
@@ -13562,7 +13765,7 @@
         }
       ],
       "resolvedTarget": "OTA-FND-0025-2026-DE",
-      "sourceCount": 4,
+      "sourceCount": 5,
       "priority": 0,
       "title": "OTA-FND-0025-2026-DE",
       "description": "Vollständige Klassifikation von Resonanzartefakten und Resonanzorten. Taxonomie-System für NOXIA.",
@@ -13585,7 +13788,7 @@
         }
       ],
       "resolvedTarget": "OTA-FND-0025-2026-DE",
-      "sourceCount": 4,
+      "sourceCount": 5,
       "priority": 0,
       "title": "OTA-FND-0025-2026-DE",
       "description": "Vollständige Klassifikation von Resonanzartefakten und Resonanzorten. Taxonomie-System für NOXIA.",
@@ -13608,7 +13811,7 @@
         }
       ],
       "resolvedTarget": "OTA-FND-0025-2026-DE",
-      "sourceCount": 4,
+      "sourceCount": 5,
       "priority": 0,
       "title": "OTA-FND-0025-2026-DE",
       "description": "Vollständige Klassifikation von Resonanzartefakten und Resonanzorten. Taxonomie-System für NOXIA.",
@@ -13632,7 +13835,7 @@
         }
       ],
       "resolvedTarget": "OTA-FND-0025-2026-DE",
-      "sourceCount": 4,
+      "sourceCount": 5,
       "priority": 0,
       "title": "OTA-FND-0025-2026-DE",
       "description": "Vollständige Klassifikation von Resonanzartefakten und Resonanzorten. Taxonomie-System für NOXIA.",
@@ -13643,8 +13846,7 @@
       "source": "OTA-BIO-0027-2026-DE",
       "target": "OTA-FND-0025-2026-DE",
       "contexts": [
-        "Verbundene Dokumente:** | OTA-FND-0024-2026-DE · OTA-TEC-0035-2026-DE · OTA-SCI-0059 · OTA-SCI-0060 · OTA-FND-0025-2026-DE | *Kurator: Thomas Peter Küper · Frankfurt am Main · April 2026* **I. PERSÖNLICHE DATEN** | **Vollständiger Name:** | Mia Kowalski | | --- | -",
-        "ts. | | OTA-SCI-0060-2026-DE | Biogenes Magnetit / Alpha-ERD | Neurologische Grundlage der Ketteneffekte. | | OTA-FND-0025-2026-DE | Temenon-Taxonomie | Klassifikation: Mia als Klasse-β-Proto-Temenon-Trägerin. | | OTA-BIO-0028 (ausstehend) | Dr. Anton | Antagonistenprofil. | **X"
+        "schaft | Antons Gegenartefakt-Grundlage. | | OTA-SCI-0119-2026-DE | Lodestone | Tims Hör-Stein-Grundlage. | | OTA-FND-0025-2026-DE | Temenon-Taxonomie | Mia als Klasse-β-Proto-Temenon-Trägerin. | | OTA-BIO-0028-2026-DE | Dr. Oskar Anton | Antagonistenprofil. | --- ## XII. KURAT"
       ],
       "status": "resolved",
       "classification": "existing",
@@ -15576,10 +15778,10 @@
       "source": "OTA-KARTE-0001-Gehirn-Epochen",
       "target": "OTA-KARTE-0001",
       "contexts": [
-        "--- signature: \"OTA-KARTE-0001-Gehirn-Epochen\" title: \"DIE FÜNF GEHIRN-EPOCHEN — Referenzmodul\" series: \"KARTE\" seriesNumber: 1 year: 2026 language: \"DE\" version: \"v1.0\" status: \"A",
-        "R] mit spekulativen Erweiterungen [S].\" kg: schema: KXF-0.2 master: kueper-knowledge-graph documentId: \"OTA-KARTE-0001-Gehirn-Epochen\" graphId: \"DOC:OTA:OTA-KARTE-0001-Gehirn-Epochen\" system: SYS:OTA:overtimearchive sourceOfTruth: false knowledge: domains:",
+        "--- signature: \"OTA-KARTE-0001-Gehirn-Epochen\" title: \"DIE FÜNF GEHIRN-EPOCHEN — Referenzmodul\" series: \"KARTE\" seriesNumber: 1 year: 2026 language: \"DE\" version: \"v1.1\" status: \"A",
+        "pekulative Erweiterungen [S] getrennt.\" kg: schema: KXF-0.2 master: kueper-knowledge-graph documentId: \"OTA-KARTE-0001-Gehirn-Epochen\" graphId: \"DOC:OTA:OTA-KARTE-0001-Gehirn-Epochen\" system: SYS:OTA:overtimearchive sourceOfTruth: false knowledge: domains:",
         "a: KXF-0.2 master: kueper-knowledge-graph documentId: \"OTA-KARTE-0001-Gehirn-Epochen\" graphId: \"DOC:OTA:OTA-KARTE-0001-Gehirn-Epochen\" system: SYS:OTA:overtimearchive sourceOfTruth: false knowledge: domains: - id: \"KD:PHYS-THERM:N1\" level: \"N1\" p",
-        "fTruth: false knowledge: domains: - id: \"KD:PHYS-THERM:N1\" level: \"N1\" purpose: read --- # OTA-KARTE-0001 ## DIE FÜNF GEHIRN-EPOCHEN — Referenzmodul **Quelle:** Mousley et al. (2025), Nature Communications **DOI:** 10.1038/s41467-025-65974-8 **Vollst"
+        "fTruth: false knowledge: domains: - id: \"KD:PHYS-THERM:N1\" level: \"N1\" purpose: read --- # OTA-KARTE-0001 ## DIE FÜNF GEHIRN-EPOCHEN — Referenzmodul **Quelle:** Mousley et al. (2025), Nature Communications **DOI:** 10.1038/s41467-025-65974-8 **Realgr"
       ],
       "status": "resolved-base-id",
       "classification": "base-id-resolved",
@@ -15594,7 +15796,7 @@
       "sourceCount": 1,
       "priority": 0,
       "title": "DIE FÜNF GEHIRN-EPOCHEN — Referenzmodul",
-      "description": "Schnellreferenz: Fünf Epochen des Gehirns und vier Wendepunkte der neuronalen Architektur. Kompakte Übersicht [R] mit spekulativen Erweiterungen [S].",
+      "description": "Schnellreferenz: Fünf Abschnitte der Gehirnverschaltung und vier Wendepunkte nach Mousley et al. (2025) [R], Realgrundlage in KUE-SCI-0212-2026-DE; klinische Zuordnungen [I] und spekulative Erweiterungen [S] getrennt.",
       "descriptionStatus": "canonical",
       "targetFile": "src/content/documents/OTA-KARTE-0001-Gehirn-Epochen.md"
     },
@@ -16055,7 +16257,7 @@
       "sourceCount": 1,
       "priority": 0,
       "title": "OTA-KOM-0002-2026-DE",
-      "description": "Weddingsong — Komposition im NOXIA/Ranat-Ek-Kontext.",
+      "description": "Weddingsong als Duett (männliche Stimme Englisch, weibliche Stimme Thai) – Komposition im NOXIA/Ranat-Ek-Kontext.",
       "descriptionStatus": "canonical",
       "targetFile": "src/content/documents/OTA-KOM-0002-2026-DE.md"
     },
@@ -16063,8 +16265,7 @@
       "source": "OTA-KOM-0002-2026-DE",
       "target": "OTA-KOM-0003-2026-DE",
       "contexts": [
-        "h · Thai (Transliteration & Originalschrift) · Deutsch **Verbundene Dok.:** OTA-KOM-0003-2026-DE (Nongs Lied) · OTA-CUL-0019 · OTA-CUL-0020 **Version:** 1.0 --- Erstarchivierung **Freigabestufe:**",
-        "er Rest ist Bedeutung. > **\\[KN-01\\]** Der Chorus \\\"Beyond the right, beyond the wrong\\\" > erscheint auch in OTA-KOM-0003-2026-DE (Nongs Lied). Das Archiv > notiert diese Übereinstimmung ohne sie zu erklären --- zwei Songs, > eine Koordinate. Die Entscheidung, was das bedeutet,"
+        "h · Thai (Transliteration & Originalschrift) · Deutsch **Verbundene Dok.:** OTA-KOM-0003-2026-DE (Nongs Lied) · OTA-CUL-0019 · OTA-CUL-0020 **Version:** 1.2 --- Stimmbesetzung kanonisch verankert **Fre"
       ],
       "status": "resolved",
       "classification": "existing",
@@ -17922,7 +18123,7 @@
       "target": "OTA-NAR-0001-2087-DE",
       "contexts": [
         ": [\"Marek Kowalski\", \"Geologe\", \"Rover-Pilot\", \"NOXIA\", \"Mars\", \"Axis-Kammer\"] relatedDocuments: - target: \"OTA-NAR-0001-2087-DE\" relation: \"related\" context: \"Im Dokument ausdrücklich unter den verwandten Dokumenten bzw. Querverweisen aufgeführt.\" descriptionStatus",
-        ", Kasumi. Wir > fahren nicht über den Mars. Wir fahren über eine Antenne.\\\"* --- Marek Kowalski, April 2087 (OTA-NAR-0001-2087-DE) I. Persönliche Daten -------------------------- ----------------------------------------------- **Vollständiger Name:** Marek Jan Kowalski",
+        "er Brust. Wir fahren > nicht über den Mars. Wir fahren über eine Antenne.\\\"* --- Marek Kowalski, April 2087 (OTA-NAR-0001-2087-DE) I. Persönliche Daten -------------------------- ----------------------------------------------- **Vollständiger Name:** Marek Jan Kowalski",
         "urde, dass HeliosCorp die wissenschaftlichen Erkenntnisse unterdrücken wollte. Die Flucht ist dokumentiert in OTA-NAR-0001-2087-DE (\\\"Der Weg in die Nacht\\\"). 4.3 Nachwirkungen Nach dem Ereignis entwickelte Marek eine erhöhte Sensitivität für tiefe Frequenzen. Er wurde nach Sek",
         "-------------------- -------------- **Signatur** **Titel** **Status** OTA-NAR-0001-2087-DE Der Weg in die Nacht Kanonisch OTA-BIO-0006-2025-DE Lena Kowalski --- Profil Kanonisch OTA-SCI-0004-2087-DE Spekt"
       ],
@@ -18082,7 +18283,7 @@
       "source": "OTA-INDEX-RKF-2026-DE",
       "target": "OTA-NAR-0002",
       "contexts": [
-        "arrative Anwendung:** - OTA-ART-0001: Monolith-01 (0.0027 Hz, χ = 0.70) - OTA-RED-0020: 72-Hz-Testprotokoll - OTA-NAR-0002: GENERATION MARS (Mars-Klassifikation 2091) --- ## Versionierung **RKF v1.0:** Aktueller Stand (16. Februar 2026) **Geplante Revisionen:** - **v1"
+        "arrative Anwendung:** - OTA-ART-0001: Monolith-01 (0.0027 Hz, χ = 0.70) - OTA-RED-0020: 72-Hz-Testprotokoll - OTA-NAR-0002: GENERATION MARS (Mars-Klassifikation 2091) --- ## Versionierung **RKF v1.0:** Aktueller Stand (16. Februar 2026) **Ergänzung 23.11.2026:** Absch"
       ],
       "status": "resolved-base-id",
       "classification": "base-id-resolved",
@@ -18977,7 +19178,7 @@
       "source": "OTA-SCI-0042-2026-DE",
       "target": "OTA-OBS-0005-2026-DE",
       "contexts": [
-        "ion\", \"Guglielmi-Formalismus\", \"Seismologie\", \"Planetare Periodizitäten\", \"Omori-Gesetz\"] relatedDocuments: [\"OTA-OBS-0005-2026-DE\", \"OTA-SCI-0036-2026-DE\", \"OTA-SCI-0041-2026-DE\", \"OTA-FND-0008-2025-DE\"] summary: \"Evidenzaudit der phänomenologischen Erdbebentheorie und der LOD-S",
+        "ion\", \"Guglielmi-Formalismus\", \"Seismologie\", \"Planetare Periodizitäten\", \"Omori-Gesetz\"] relatedDocuments: [\"OTA-OBS-0005-2026-DE\", \"OTA-SCI-0036-2026-DE\", \"OTA-SCI-0041-2026-DE\", \"OTA-FND-0008-2025-DE\"] review: last: \"2026-11-23\" next: \"2027-11-23\" reason: \"Strittiges Fel",
         ".1134/S0001433814080076. --- ## XII. VERWANDTE DOKUMENTE | Signatur | Relevanz | |----------|----------| | OTA-OBS-0005-2026-DE | LOD-Beobachtungsprotokoll und konkurrierende Erklärungen | | OTA-SCI-0036-2026-DE | ältere Omnizedenz-/AVI-Formelsammlung; bei R(a)-Bezügen histori"
       ],
       "status": "resolved",
@@ -21341,6 +21542,23 @@
       "targetFile": "src/content/documents/OTA-RED-0023-2026-DE.md"
     },
     {
+      "source": "OTA-SCI-0041-2026-DE",
+      "target": "OTA-RED-0023-2026-DE",
+      "contexts": [
+        "nisches Goldhydrid Kanonisch OTA-TEC-0029-2048-DE Quantensensorik & KI-Analyse Kanonisch OTA-RED-0023-2026-DE AVI-Vakuumresonanz-Kompendium Kanonisch ---------------------- --------------------------------- --------------- XII\\. REVISIONSVERLAUF **2"
+      ],
+      "status": "resolved",
+      "classification": "existing",
+      "candidates": [],
+      "resolvedTarget": "OTA-RED-0023-2026-DE",
+      "sourceCount": 2,
+      "priority": 0,
+      "title": "Vom QCD-Vakuum zur Raumzeit-Geometrie — Vakuumresonanz und quantengeometrische Portale",
+      "description": "Vom QCD-Vakuum zur Raumzeit-Geometrie — theoretische Physik Quantenchromodynamik und Raumzeit.",
+      "descriptionStatus": "canonical",
+      "targetFile": "src/content/documents/OTA-RED-0023-2026-DE.md"
+    },
+    {
       "source": "OTA-TEC-0031-2150-DE",
       "target": "OTA-RED-0023-2026-DE",
       "contexts": [
@@ -21351,7 +21569,7 @@
       "classification": "existing",
       "candidates": [],
       "resolvedTarget": "OTA-RED-0023-2026-DE",
-      "sourceCount": 1,
+      "sourceCount": 2,
       "priority": 0,
       "title": "Vom QCD-Vakuum zur Raumzeit-Geometrie — Vakuumresonanz und quantengeometrische Portale",
       "description": "Vom QCD-Vakuum zur Raumzeit-Geometrie — theoretische Physik Quantenchromodynamik und Raumzeit.",
@@ -21508,6 +21726,7 @@
       "target": "OTA-SCI-0004-2087-DE",
       "contexts": [
         "efakte\", \"Monolithen\", \"Kalethrai\", \"Lingai\", \"Global Array\", \"2089\", \"NOXIA\"] relatedDocuments: - target: \"OTA-SCI-0004-2087-DE\" relation: \"related\" context: \"Im Dokument ausdrücklich unter den verwandten Dokumenten bzw. Querverweisen aufgeführt.\" descriptionStatus",
+        "n sind ein buddhistischer Hoehlenkomplex (ab 1. Jh. > v. Chr.), nicht praevedisch. Vgl. die Evidenznotiz in > OTA-SCI-0004-2087-DE.* > > *\\-- T.P.K.* ## **2.2 Kalethrai (Persoenliche Traeger)** Kleinere, tragbare Artefakte mit messbaren Effekten auf die biologische Eigenzeit ih",
         "**Status** ----------------------- ---------------------------- ----------------------- OTA-SCI-0004-2087-DE Spektralanalyse Axis-Kammer Kanonisch OTA-TEC-0003-2087-DE Surveyor-9 Missionsbericht Kanonisch OTA-NAR-0001-2087-DE Kowalski/Nakah"
       ],
       "status": "resolved",
@@ -22563,7 +22782,9 @@
       "target": "OTA-SCI-0015-2025-DE",
       "contexts": [
         "[\"Schumann-Generator\", \"K\\u00fcnstlich\", \"2095\", \"NOXIA\", \"Frequenz\", \"Mars\"] relatedDocuments: - target: \"OTA-SCI-0015-2025-DE\" relation: \"related\" context: \"Im Dokument ausdrücklich unter den verwandten Dokumenten bzw. Querverweisen aufgeführt.\" descriptionStatus",
-        "**Status** ----------------------- ----------------------------------- ------------ OTA-SCI-0015-2025-DE Biologische Relevanz & ISS-Daten Kanonisch OTA-SCI-0009-2025-DE Planetare Schumann-Resonanzen Kanonisch OTA-SCI-0016-2150-DE"
+        "er Mensch ein Schumann-Hintergrundfeld braucht, ist eine Hypothese \\[H\\]/\\[S\\]; die Evidenzlage dazu steht in OTA-SCI-0015-2025-DE. Fiktiv ist die Mars-Anwendung samt der Evaluationsdaten aus Helios Base \\[F\\].* *--- T.P.K.* I. Designanforderungen *\\[T\\] Theoretisch --- Physik",
+        "**Status** ----------------------- ----------------------------------- ------------ OTA-SCI-0015-2025-DE Biologische Relevanz & ISS-Daten Kanonisch OTA-SCI-0009-2025-DE Planetare Schumann-Resonanzen Kanonisch OTA-SCI-0016-2150-DE",
+        "unbelegten Nutzenhypothese \\[H\\]/\\[S\\] und verweist für die Evidenz auf OTA-SCI-0015-2025-DE (EXT-KG-OTA-20261118-002).* ----------------------------------------------------------------------- ━━━━━━━━━━━━━━━━━━━━━━━━━━"
       ],
       "status": "resolved",
       "classification": "existing",
@@ -22800,7 +23021,7 @@
       "source": "OTA-SCI-0041-2026-DE",
       "target": "OTA-SCI-0017-2025-DE",
       "contexts": [
-        "Publikations-Portfolio OTA-FND-0008-2025-DE Omnizedenz: Epistemologie Kanonisch OTA-SCI-0017-2025-DE Superionisches Goldhydrid als Kanonisch Resonanzanker OTA-TEC-0029-2048-DE Quantensensorik &"
+        "Publikations-Portfolio OTA-FND-0008-2025-DE Omnizedenz: Epistemologie Kanonisch OTA-SCI-0017-2025-DE Superionisches Goldhydrid Kanonisch OTA-TEC-0029-2048-DE Quantensensorik & KI-Analyse Kanonisch OTA-RED-0023-2026-DE AVI-Vak"
       ],
       "status": "resolved",
       "classification": "existing",
@@ -22848,6 +23069,30 @@
       "description": "Superionisches Goldhydrid unter Hochdruck: Entdeckungsdaten [R], Mechanismus [T], Anwendungshypothesen [H].",
       "descriptionStatus": "canonical",
       "targetFile": "src/content/documents/OTA-SCI-0017-2025-DE.md"
+    },
+    {
+      "source": "OTA-SCI-0008-2096-DE",
+      "target": "OTA-SCI-0018",
+      "contexts": [
+        "erkt 23.11.2026, EXT-ECO-OTA-20261123-002)** - „Gender, Voice, and Longevity“ unter der alten Drive-Signatur OTA-SCI-0018 (`OTA_SCI_0018_GENDER_VOICE_LONGEVITY.md`, 30.12.2025): umfangreichere Parallelfassung mit eigener Gliederung (Kapitel I–VI, u. a. „Die 12-Hz-Anomali",
+        "uMT8zvxLTBnkiO4494S-/view Nicht übernommen: gleich alte Parallelfassung mit anderer Gliederung; die Signatur OTA-SCI-0018 ist auf GitHub anders belegt. Gültig bleibt diese Fassung; die Drive-Fassung ist als Variante dokumentiert. ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+      ],
+      "status": "resolved-base-id",
+      "classification": "base-id-resolved",
+      "candidates": [
+        {
+          "signature": "OTA-SCI-0018-60000BCE-DE",
+          "title": "Biotechnologische Grundlagen der Altsteinzeit — Eine wissenschaftliche Bewertung realer biologischer Phänomene",
+          "file": "src/content/documents/OTA-SCI-0018-60000BCE-DE.md"
+        }
+      ],
+      "resolvedTarget": "OTA-SCI-0018-60000BCE-DE",
+      "sourceCount": 1,
+      "priority": 0,
+      "title": "Biotechnologische Grundlagen der Altsteinzeit — Eine wissenschaftliche Bewertung realer biologischer Phänomene",
+      "description": "Biotechnologische Grundlagen 60.000 BCE: paläoanthropologische Basis [R], spekulative Extrapolationen [S], Saga-Einbindung [F].",
+      "descriptionStatus": "canonical",
+      "targetFile": "src/content/documents/OTA-SCI-0018-60000BCE-DE.md"
     },
     {
       "source": "OTA-CUL-0002-60000BCE-DE",
@@ -22969,9 +23214,9 @@
       "source": "OTA-KARTE-0001-Gehirn-Epochen",
       "target": "OTA-SCI-0019-2025-DE",
       "contexts": [
-        "s: [\"Gehirn\", \"Epochen\", \"Schnellreferenz\", \"Neurowissenschaft\", \"Karte\", \"Lebensspanne\"] relatedDocuments: [\"OTA-SCI-0019-2025-DE\"] summary: \"Schnellreferenz: Fünf Epochen des Gehirns und vier Wendepunkte der neuronalen Architektur. Kompakte Übersicht [R] mit spekulativen Erweit",
-        "et al. (2025), Nature Communications **DOI:** 10.1038/s41467-025-65974-8 **Vollständige Dokumentation:** OTA-SCI-0019-2025-DE --- ## SCHNELLREFERENZ: FÜNF EPOCHEN, VIER WENDEPUNKTE | Epoche | Alter | Neuronaler Status | Charakteristikum | Vulnerabilität | |--------|------",
-        "damit zusammenhängen [S].\" --- **Letzte Aktualisierung:** 09. Januar 2026 **Vollständige Dokumentation:** OTA-SCI-0019-2025-DE (Version 1.1) **ᐃ**"
+        "s: [\"Gehirn\", \"Epochen\", \"Schnellreferenz\", \"Neurowissenschaft\", \"Karte\", \"Lebensspanne\"] relatedDocuments: [\"OTA-SCI-0019-2025-DE\"] summary: \"Schnellreferenz: Fünf Abschnitte der Gehirnverschaltung und vier Wendepunkte nach Mousley et al. (2025) [R], Realgrundlage in KUE-SCI-021",
+        "-025-65974-8 **Realgrundlage:** `DOC:KUE:KUE-SCI-0212-2026-DE` (Befunde, Grenzen, Quellen) **Werkbezug:** OTA-SCI-0019-2025-DE Gemessen hat die Studie die Verschaltung (Konnektom) im Querschnitt – nicht Synapsen, Myelin, Intelligenz, Persönlichkeit oder klinische Verläufe. D",
+        "tzte Aktualisierung:** 21. November 2026 **Realgrundlage:** `DOC:KUE:KUE-SCI-0212-2026-DE` **Werkbezug:** OTA-SCI-0019-2025-DE (Version 1.2) **Revisionsvermerk:** 2026-11-21 – v1.1: Realgrundlage auf DOC:KUE:KUE-SCI-0212-2026-DE verwiesen; Tabellen- und Wendepunktangaben a"
       ],
       "status": "resolved",
       "classification": "existing",
@@ -23806,6 +24051,23 @@
       "targetFile": "src/content/documents/OTA-SCI-0025-2091-DE.md"
     },
     {
+      "source": "OTA-BIO-0015-2091-DE",
+      "target": "OTA-SCI-0025-2091-DE",
+      "contexts": [
+        "oogle.com/file/d/1HCMNwTdidcHJ8T0dr58x3QwivhKx2UPa/view Nicht übernommen: Die Archivlage ist uneinheitlich (`OTA-SCI-0025-2091-DE` nennt „Kaelen Asa Shiro“, `OTA-TEC-0025-2091-DE` „Kaelen Voss“ mit 0,03 g Ceres-Oberfläche), und der aktuelle Generation-Mars-Stand zu Kaelen steht"
+      ],
+      "status": "resolved",
+      "classification": "existing",
+      "candidates": [],
+      "resolvedTarget": "OTA-SCI-0025-2091-DE",
+      "sourceCount": 1,
+      "priority": 0,
+      "title": "Solare Demographie 2091 — Kanonische Bevölkerungszahlen des Sonnensystems",
+      "description": "Solare Demographie 2091 — Bevölkerungsverteilung im Sonnensystem. Kanonisches NOXIA-Universum-Dokument [F/W].",
+      "descriptionStatus": "canonical",
+      "targetFile": "src/content/documents/OTA-SCI-0025-2091-DE.md"
+    },
+    {
       "source": "OTA-SCI-0027-2025-DE",
       "target": "OTA-SCI-0026-2025-DE",
       "contexts": [
@@ -24507,29 +24769,6 @@
       "targetFile": "src/content/documents/OTA-SCI-0035-2026-DE.md"
     },
     {
-      "source": "OTA-SCI-0041-2026-DE",
-      "target": "OTA-SCI-0036",
-      "contexts": [
-        "stent mit der LOD-Reversal-Vorhersage). V. INTEGRATION IN BESTEHENDE DOKUMENTATION 5.1 Formelsammlung v2.3 (OTA-SCI-0036) --- Ergänzungen **Sektion 1.2 (LOD-Reversal):** Yamamoto-Referenz als neuen Absatz nach „Kritische Eigenschaften\" einfügen. Kernaussage: Der Geodyn"
-      ],
-      "status": "resolved-base-id",
-      "classification": "base-id-resolved",
-      "candidates": [
-        {
-          "signature": "OTA-SCI-0036-2026-DE",
-          "title": "OMNIZEDENZ v2.3",
-          "file": "src/content/documents/OTA-SCI-0036-2026-DE.md"
-        }
-      ],
-      "resolvedTarget": "OTA-SCI-0036-2026-DE",
-      "sourceCount": 2,
-      "priority": 0,
-      "title": "OMNIZEDENZ v2.3",
-      "description": "Mathematische Fundamente der Omnizedenz v2.3: Frequenzvektor-Theorie, χ-Parameter (Kopplungsstärke 0–1), Resonanzgleichungen und empirische Verankerung im Protonenradius-Rätsel. Dreischichtig: Realphysik [R] → Hypothetische Erweiterungen [H] → Theoretisches Framework [T].",
-      "descriptionStatus": "canonical",
-      "targetFile": "src/content/documents/OTA-SCI-0036-2026-DE.md"
-    },
-    {
       "source": "OTA-SCI-0043-2026-DE",
       "target": "OTA-SCI-0036",
       "contexts": [
@@ -24545,7 +24784,7 @@
         }
       ],
       "resolvedTarget": "OTA-SCI-0036-2026-DE",
-      "sourceCount": 2,
+      "sourceCount": 1,
       "priority": 0,
       "title": "OMNIZEDENZ v2.3",
       "description": "Mathematische Fundamente der Omnizedenz v2.3: Frequenzvektor-Theorie, χ-Parameter (Kopplungsstärke 0–1), Resonanzgleichungen und empirische Verankerung im Protonenradius-Rätsel. Dreischichtig: Realphysik [R] → Hypothetische Erweiterungen [H] → Theoretisches Framework [T].",
@@ -24676,7 +24915,7 @@
       "source": "OTA-SCI-0042-2026-DE",
       "target": "OTA-SCI-0036-2026-DE",
       "contexts": [
-        "smus\", \"Seismologie\", \"Planetare Periodizitäten\", \"Omori-Gesetz\"] relatedDocuments: [\"OTA-OBS-0005-2026-DE\", \"OTA-SCI-0036-2026-DE\", \"OTA-SCI-0041-2026-DE\", \"OTA-FND-0008-2025-DE\"] summary: \"Evidenzaudit der phänomenologischen Erdbebentheorie und der LOD-Seismizitäts-Brücke: real",
+        "smus\", \"Seismologie\", \"Planetare Periodizitäten\", \"Omori-Gesetz\"] relatedDocuments: [\"OTA-OBS-0005-2026-DE\", \"OTA-SCI-0036-2026-DE\", \"OTA-SCI-0041-2026-DE\", \"OTA-FND-0008-2025-DE\"] review: last: \"2026-11-23\" next: \"2027-11-23\" reason: \"Strittiges Feld, Realteil liegt in KUE",
         "|----------|----------| | OTA-OBS-0005-2026-DE | LOD-Beobachtungsprotokoll und konkurrierende Erklärungen | | OTA-SCI-0036-2026-DE | ältere Omnizedenz-/AVI-Formelsammlung; bei R(a)-Bezügen historischen Stand beachten | | OTA-SCI-0041-2026-DE | Erdkern-/Geomagnetik-Kontext | | OTA"
       ],
       "status": "resolved",
@@ -24956,7 +25195,7 @@
       "sourceCount": 1,
       "priority": 0,
       "title": "OTA-SCI-0041-2026-DE",
-      "description": "Geomagnetische Polumkehr-Dauern: paläomagnetische Daten [R], Dynamomechanismus [H], Systemkopplungs-Hypothesen [S].",
+      "description": "Geomagnetische Polumkehr-Dauern: paläomagnetische Daten und Zenodo-Datenanalyse [R], Dynamomechanismus [H], Systemkopplungs-Hypothesen [S], Geodynamo-Tests [T].",
       "descriptionStatus": "canonical",
       "targetFile": "src/content/documents/OTA-SCI-0041-2026-DE.md"
     },
@@ -24964,7 +25203,7 @@
       "source": "OTA-SCI-0042-2026-DE",
       "target": "OTA-SCI-0041-2026-DE",
       "contexts": [
-        "lanetare Periodizitäten\", \"Omori-Gesetz\"] relatedDocuments: [\"OTA-OBS-0005-2026-DE\", \"OTA-SCI-0036-2026-DE\", \"OTA-SCI-0041-2026-DE\", \"OTA-FND-0008-2025-DE\"] summary: \"Evidenzaudit der phänomenologischen Erdbebentheorie und der LOD-Seismizitäts-Brücke: reale Publikations- und Date",
+        "lanetare Periodizitäten\", \"Omori-Gesetz\"] relatedDocuments: [\"OTA-OBS-0005-2026-DE\", \"OTA-SCI-0036-2026-DE\", \"OTA-SCI-0041-2026-DE\", \"OTA-FND-0008-2025-DE\"] review: last: \"2026-11-23\" next: \"2027-11-23\" reason: \"Strittiges Feld, Realteil liegt in KUE-SCI-0169 (Termin 2027-0",
         "TA-SCI-0036-2026-DE | ältere Omnizedenz-/AVI-Formelsammlung; bei R(a)-Bezügen historischen Stand beachten | | OTA-SCI-0041-2026-DE | Erdkern-/Geomagnetik-Kontext | | OTA-FND-0008-2025-DE | epistemische Schichtung und Markerlogik | --- ## XIII. REVISIONSVERLAUF | Datum | Vermer"
       ],
       "status": "resolved",
@@ -24974,7 +25213,7 @@
       "sourceCount": 2,
       "priority": 0,
       "title": "OTA-SCI-0041-2026-DE",
-      "description": "Geomagnetische Polumkehr-Dauern: paläomagnetische Daten [R], Dynamomechanismus [H], Systemkopplungs-Hypothesen [S].",
+      "description": "Geomagnetische Polumkehr-Dauern: paläomagnetische Daten und Zenodo-Datenanalyse [R], Dynamomechanismus [H], Systemkopplungs-Hypothesen [S], Geodynamo-Tests [T].",
       "descriptionStatus": "canonical",
       "targetFile": "src/content/documents/OTA-SCI-0041-2026-DE.md"
     },
@@ -24991,7 +25230,7 @@
       "sourceCount": 2,
       "priority": 0,
       "title": "OTA-SCI-0041-2026-DE",
-      "description": "Geomagnetische Polumkehr-Dauern: paläomagnetische Daten [R], Dynamomechanismus [H], Systemkopplungs-Hypothesen [S].",
+      "description": "Geomagnetische Polumkehr-Dauern: paläomagnetische Daten und Zenodo-Datenanalyse [R], Dynamomechanismus [H], Systemkopplungs-Hypothesen [S], Geodynamo-Tests [T].",
       "descriptionStatus": "canonical",
       "targetFile": "src/content/documents/OTA-SCI-0041-2026-DE.md"
     },
@@ -25167,7 +25406,7 @@
       "source": "OTA-INDEX-RKF-2026-DE",
       "target": "OTA-SCI-0044-2026-DE",
       "contexts": [
-        "13B [R+F] └── Π-BIO-Addendum: Bioenergetische Fenster (SOL-HELIO-01) ``` --- ## Dokumentenliste ### 1. OTA-SCI-0044-2026-DE **Titel:** JWST-Entdeckung organischer Chemie in IRAS 07251-0248 **Status:** [R] Real / Empirisch validiert **Inhalt:** - Extragalaktisches CH₃ ("
+        "SOL-HELIO-01 (In-Universe) (Bioenergetik) (Final Report) ``` --- ## Dokumentenliste ### 1. OTA-SCI-0044-2026-DE **Titel:** JWST-Entdeckung organischer Chemie in IRAS 07251-0248 **Status:** [R] Real / Empirisch validiert **Inhalt:** - Extragalaktisches CH₃ ("
       ],
       "status": "resolved",
       "classification": "existing",
@@ -26519,8 +26758,8 @@
       "source": "OTA-BIO-0027-2026-DE",
       "target": "OTA-SCI-0059",
       "contexts": [
-        "ia in der Mitte: ca. 13–14) | | **Verbundene Dokumente:** | OTA-FND-0024-2026-DE · OTA-TEC-0035-2026-DE · OTA-SCI-0059 · OTA-SCI-0060 · OTA-FND-0025-2026-DE | *Kurator: Thomas Peter Küper · Frankfurt am Main · April 2026* **I. PERSÖNLICHE DATEN** | **Vollst",
-        "che Region mit devonischen Eisenerzformationen, Karsthöhlen und dokumentierten lokalen Magnetfeldanomalien (→ OTA-SCI-0059).** [R-Anker] ** **3.2 Geocaching als Sozialtopografie [F]** Mias Freundesgruppe — die 'Geocaching Crew' — verbindet sich über gemeinsame Außenraum"
+        "Mitte: ca. 13–14) **Verbundene Dokumente:** OTA-FND-0024 · OTA-TEC-0035 v1.3 · OTA-TEC-0123 · OTA-TEC-0124 · OTA-SCI-0059 · OTA-SCI-0060 · OTA-SCI-0117 · OTA-SCI-0119 · OTA-FND-0025 · OTA-BIO-0028 *Kurator: Thomas Peter Küper · Frankfurt am Main · 2026* --- ## I. PERS",
+        "che Region mit devonischen Eisenerzformationen, Karsthöhlen und dokumentierten lokalen Magnetfeldanomalien (→ OTA-SCI-0059). ### 3.2 Geocaching als Sozialtopografie `[F]` Mias Freundesgruppe — die „Geocaching Crew\" — verbindet sich über gemeinsame Außenraum-Erkundung. G"
       ],
       "status": "resolved-base-id",
       "classification": "base-id-resolved",
@@ -26757,7 +26996,7 @@
       "source": "OTA-BIO-0027-2026-DE",
       "target": "OTA-SCI-0059-2026-DE",
       "contexts": [
-        "ion.. | | OTA-TEC-0035-2026-DE | Artefakt HSS-001 | Kostenprogression Stufe 1–4. Schreibregeln zur Kette. | | OTA-SCI-0059-2026-DE | Meteoritisches Eisen | Physikalische Grundlage des Artefakts. | | OTA-SCI-0060-2026-DE | Biogenes Magnetit / Alpha-ERD | Neurologische Grundlage de"
+        "-0124-2026-DE | Splitterlupe (Anton) | Antons Artefakt. Showdown Kap. 18. Mechanik der Entmagnetisierung. | | OTA-SCI-0059-2026-DE | Meteoritisches Eisen | Physikalische Grundlage des Artefakts. | | OTA-SCI-0060-2026-DE | Biogenes Magnetit / Alpha-ERD | Neurologische Grundlage de"
       ],
       "status": "resolved",
       "classification": "existing",
@@ -26859,7 +27098,7 @@
       "source": "OTA-BIO-0027-2026-DE",
       "target": "OTA-SCI-0060",
       "contexts": [
-        "ca. 13–14) | | **Verbundene Dokumente:** | OTA-FND-0024-2026-DE · OTA-TEC-0035-2026-DE · OTA-SCI-0059 · OTA-SCI-0060 · OTA-FND-0025-2026-DE | *Kurator: Thomas Peter Küper · Frankfurt am Main · April 2026* **I. PERSÖNLICHE DATEN** | **Vollständiger Name:** |"
+        "14) **Verbundene Dokumente:** OTA-FND-0024 · OTA-TEC-0035 v1.3 · OTA-TEC-0123 · OTA-TEC-0124 · OTA-SCI-0059 · OTA-SCI-0060 · OTA-SCI-0117 · OTA-SCI-0119 · OTA-FND-0025 · OTA-BIO-0028 *Kurator: Thomas Peter Küper · Frankfurt am Main · 2026* --- ## I. PERSÖNLICHE DATEN"
       ],
       "status": "resolved-base-id",
       "classification": "base-id-resolved",
@@ -27096,7 +27335,7 @@
       "source": "OTA-BIO-0027-2026-DE",
       "target": "OTA-SCI-0060-2026-DE",
       "contexts": [
-        "egeln zur Kette. | | OTA-SCI-0059-2026-DE | Meteoritisches Eisen | Physikalische Grundlage des Artefakts. | | OTA-SCI-0060-2026-DE | Biogenes Magnetit / Alpha-ERD | Neurologische Grundlage der Ketteneffekte. | | OTA-FND-0025-2026-DE | Temenon-Taxonomie | Klassifikation: Mia als K"
+        "tmagnetisierung. | | OTA-SCI-0059-2026-DE | Meteoritisches Eisen | Physikalische Grundlage des Artefakts. | | OTA-SCI-0060-2026-DE | Biogenes Magnetit / Alpha-ERD | Neurologische Grundlage der Ketteneffekte. | | OTA-SCI-0117-2026-DE | Obsidian: Materialwissenschaft | Antons Gegen"
       ],
       "status": "resolved",
       "classification": "existing",
@@ -27706,7 +27945,7 @@
       "source": "OTA-SCI-0081-2026-DE",
       "target": "OTA-SCI-0082-2026-DE",
       "contexts": [
-        "kustik\", \"Chladni\", \"Lapis lazuli\", \"Bronzezeit\", \"Arch\\u00e4ometallurgie\", \"Sternkarte\"] relatedDocuments: [\"OTA-SCI-0082-2026-DE\"] summary: \"Physikalische und archäologische Grundlagen: Kreisplatten-Akustik und Chladni-Figuren als Gravierungs-Entstehungsprinzip, Lapis-lazuli-Fl"
+        "kustik\", \"Chladni\", \"Lapis lazuli\", \"Bronzezeit\", \"Arch\\u00e4ometallurgie\", \"Sternkarte\"] relatedDocuments: [\"OTA-SCI-0082-2026-DE\"] review: last: \"2026-11-22\" next: \"2027-11-22\" reason: \"Teile nach KUE (EXT-OTA-KUE-20261122-002); Frequenzrechnung und Quellen per OTA-REQ-20"
       ],
       "status": "resolved",
       "classification": "existing",
@@ -27938,7 +28177,7 @@
       "source": "OTA-SCI-0086-2026-DE",
       "target": "OTA-SCI-0086",
       "contexts": [
-        "studien); nach 6 Monaten prüfen, ob die Kanonregel §19 noch zur Evidenz passt.\" abgeschlossen: false --- # OTA-SCI-0086 — Reproduktion und Entwicklung von der Konzeption bis zum Erwachsenenalter in Mikro- und Teilgravitation ## Evidenzstand 2026 · Mars · Mond · Raumst"
+        "anen Blastoid-Experiments auf Tianzhou-10/Tiangong (Mai 2026) publiziert sind.\" abgeschlossen: false --- # OTA-SCI-0086 — Reproduktion und Entwicklung von der Konzeption bis zum Erwachsenenalter in Mikro- und Teilgravitation ## Evidenzstand 2026 · Mars · Mond · Raumst"
       ],
       "status": "resolved-base-id",
       "classification": "base-id-resolved",
@@ -28032,7 +28271,8 @@
       "target": "OTA-SCI-0086-2026-DE",
       "contexts": [
         "\"Kinder\", \"Teilgravitation\", \"Entwicklung\", \"Pädiatrie\", \"NOXIA\", \"Die Kinder von Ceres\"] relatedDocuments: [\"OTA-SCI-0086-2026-DE\", \"OTA-BIO-0014-2092-DE\", \"OTA-ORG-0005-2090-DE\", \"OTA-TEC-0088-2026-DE\"] summary: \"Spezifisches Evidenz- und Kanondossier für auf Ceres geborene und",
-        "solange kein klarer künstlicher-Gravitationsanteil des Habitats definiert ist. Dieses Dossier konkretisiert `OTA-SCI-0086-2026-DE` für die Kinder von Piazzi-Lights und besonders für den Werkkomplex *Die Kinder von Ceres*. ## 1. Kanonischer Kontext - **[F]** Ceres ist im SSEP-H"
+        "solange kein klarer künstlicher-Gravitationsanteil des Habitats definiert ist. Dieses Dossier konkretisiert `OTA-SCI-0086-2026-DE` für die Kinder von Piazzi-Lights und besonders für den Werkkomplex *Die Kinder von Ceres*. ## 1. Kanonischer Kontext - **[F]** Ceres ist im SSEP-H",
+        "917547 (Säugerreproduktion unter Mond-/Marsgravitation nie direkt untersucht). Realteil und weitere Quellen: `OTA-SCI-0086-2026-DE`, `DOC:KUE:KUE-SCI-0187-2026-DE`. ## 12. Dossier-Status **ENTWURF mit kanonisiertem Engineering-Robustheitspfad.** Die Infrastruktur kann jetzt tec"
       ],
       "status": "resolved",
       "classification": "existing",
@@ -28050,7 +28290,8 @@
       "target": "OTA-SCI-0086-2026-DE",
       "contexts": [
         "Geburt\", \"Kindheit\", \"Mikrogravitation\", \"Artificial Gravity\", \"Deep Space\", \"Pädiatrie\"] relatedDocuments: [\"OTA-SCI-0086-2026-DE\", \"OTA-TEC-0088-2026-DE\", \"OTA-TEC-0112-2026-DE\"] summary: \"Spezifisches Evidenz- und Fallrahmendossier für Schwangerschaft, Geburt und frühe Kindhei",
-        "unden. Die Figurenrelation wird nach Rückmeldung aus `noxia-universe` ergänzt. Dieses Dossier konkretisiert `OTA-SCI-0086-2026-DE` für eine Geburt nicht auf einem Planeten oder in einer stationären Kolonie, sondern **während einer interplanetaren Frachtermission**. ## 1. Warum"
+        "unden. Die Figurenrelation wird nach Rückmeldung aus `noxia-universe` ergänzt. Dieses Dossier konkretisiert `OTA-SCI-0086-2026-DE` für eine Geburt nicht auf einem Planeten oder in einer stationären Kolonie, sondern **während einer interplanetaren Frachtermission**. ## 1. Warum",
+        "917547 (Säugerreproduktion unter Mond-/Marsgravitation nie direkt untersucht). Realteil und weitere Quellen: `OTA-SCI-0086-2026-DE`, `DOC:KUE:KUE-SCI-0187-2026-DE`. ## 15. Dossier-Status **ENTWURF mit kanonisierter Frachter-Capability-Klassifikation.** Der technische Rahmen ist"
       ],
       "status": "resolved",
       "classification": "existing",
@@ -28895,7 +29136,7 @@
       "sourceCount": 1,
       "priority": 0,
       "title": "Stromnetz-Engpässe: Erzeugung, Transportkapazität, Redispatch und Flexibilität",
-      "description": "Evidenzdossier zu Stromnetz-Engpässen und erneuerbarer Integration: Deutschland 2025/2026 als Realanker für die Trennung von Erzeugung, Anschlussleistung, Übertragung, Verteilung, Flexibilität und Speicherung; mit expliziten Grenzen für Extrapolationen auf zukünftige terrestrische und außerirdische Energiesysteme.",
+      "description": "Brückendokument: Grounding-Regel für Stromnetze in NOXIA und zukünftigen Welten; Realteil (Netzengpässe Deutschland 2025/2026, Redispatch, Flexibilität) in KUE-SCI-0214-2026-DE.",
       "descriptionStatus": "canonical",
       "targetFile": "src/content/documents/OTA-SCI-0109-2026-DE.md"
     },
@@ -28912,7 +29153,7 @@
       "sourceCount": 2,
       "priority": 0,
       "title": "Stromnetz-Engpässe: Erzeugung, Transportkapazität, Redispatch und Flexibilität",
-      "description": "Evidenzdossier zu Stromnetz-Engpässen und erneuerbarer Integration: Deutschland 2025/2026 als Realanker für die Trennung von Erzeugung, Anschlussleistung, Übertragung, Verteilung, Flexibilität und Speicherung; mit expliziten Grenzen für Extrapolationen auf zukünftige terrestrische und außerirdische Energiesysteme.",
+      "description": "Brückendokument: Grounding-Regel für Stromnetze in NOXIA und zukünftigen Welten; Realteil (Netzengpässe Deutschland 2025/2026, Redispatch, Flexibilität) in KUE-SCI-0214-2026-DE.",
       "descriptionStatus": "canonical",
       "targetFile": "src/content/documents/OTA-SCI-0109-2026-DE.md"
     },
@@ -28929,7 +29170,7 @@
       "sourceCount": 2,
       "priority": 0,
       "title": "Stromnetz-Engpässe: Erzeugung, Transportkapazität, Redispatch und Flexibilität",
-      "description": "Evidenzdossier zu Stromnetz-Engpässen und erneuerbarer Integration: Deutschland 2025/2026 als Realanker für die Trennung von Erzeugung, Anschlussleistung, Übertragung, Verteilung, Flexibilität und Speicherung; mit expliziten Grenzen für Extrapolationen auf zukünftige terrestrische und außerirdische Energiesysteme.",
+      "description": "Brückendokument: Grounding-Regel für Stromnetze in NOXIA und zukünftigen Welten; Realteil (Netzengpässe Deutschland 2025/2026, Redispatch, Flexibilität) in KUE-SCI-0214-2026-DE.",
       "descriptionStatus": "canonical",
       "targetFile": "src/content/documents/OTA-SCI-0109-2026-DE.md"
     },
@@ -28969,6 +29210,29 @@
       "targetFile": "src/content/documents/OTA-SCI-0114-2026-DE.md"
     },
     {
+      "source": "OTA-BIO-0027-2026-DE",
+      "target": "OTA-SCI-0117",
+      "contexts": [
+        "e Dokumente:** OTA-FND-0024 · OTA-TEC-0035 v1.3 · OTA-TEC-0123 · OTA-TEC-0124 · OTA-SCI-0059 · OTA-SCI-0060 · OTA-SCI-0117 · OTA-SCI-0119 · OTA-FND-0025 · OTA-BIO-0028 *Kurator: Thomas Peter Küper · Frankfurt am Main · 2026* --- ## I. PERSÖNLICHE DATEN | **Vollständig"
+      ],
+      "status": "resolved-base-id",
+      "classification": "base-id-resolved",
+      "candidates": [
+        {
+          "signature": "OTA-SCI-0117-2026-DE",
+          "title": "Obsidian: Materialwissenschaft — Vulkanisches Glas, Mineralogie, Magnetismus, Optik, Physik",
+          "file": "src/content/documents/OTA-SCI-0117-2026-DE.md"
+        }
+      ],
+      "resolvedTarget": "OTA-SCI-0117-2026-DE",
+      "sourceCount": 7,
+      "priority": 0,
+      "title": "Obsidian: Materialwissenschaft — Vulkanisches Glas, Mineralogie, Magnetismus, Optik, Physik",
+      "description": "Realwissenschaftliche Materialbasis für Obsidian als vulkanisches Glas: Formation, Chemie, Magnetit-Einschlüsse, Domänenphysik (SD/PSD/MD/SP), Superparamagnetismus, TRM/Paläomagnetismus, Optik, Vorkommen. SCI-Basis der Splitterlupe (OTA-TEC-0124).",
+      "descriptionStatus": "canonical",
+      "targetFile": "src/content/documents/OTA-SCI-0117-2026-DE.md"
+    },
+    {
       "source": "OTA-SCI-0117-2026-DE",
       "target": "OTA-SCI-0117",
       "contexts": [
@@ -28985,7 +29249,7 @@
         }
       ],
       "resolvedTarget": "OTA-SCI-0117-2026-DE",
-      "sourceCount": 6,
+      "sourceCount": 7,
       "priority": 0,
       "title": "Obsidian: Materialwissenschaft — Vulkanisches Glas, Mineralogie, Magnetismus, Optik, Physik",
       "description": "Realwissenschaftliche Materialbasis für Obsidian als vulkanisches Glas: Formation, Chemie, Magnetit-Einschlüsse, Domänenphysik (SD/PSD/MD/SP), Superparamagnetismus, TRM/Paläomagnetismus, Optik, Vorkommen. SCI-Basis der Splitterlupe (OTA-TEC-0124).",
@@ -29011,7 +29275,7 @@
         }
       ],
       "resolvedTarget": "OTA-SCI-0117-2026-DE",
-      "sourceCount": 6,
+      "sourceCount": 7,
       "priority": 0,
       "title": "Obsidian: Materialwissenschaft — Vulkanisches Glas, Mineralogie, Magnetismus, Optik, Physik",
       "description": "Realwissenschaftliche Materialbasis für Obsidian als vulkanisches Glas: Formation, Chemie, Magnetit-Einschlüsse, Domänenphysik (SD/PSD/MD/SP), Superparamagnetismus, TRM/Paläomagnetismus, Optik, Vorkommen. SCI-Basis der Splitterlupe (OTA-TEC-0124).",
@@ -29037,7 +29301,7 @@
         }
       ],
       "resolvedTarget": "OTA-SCI-0117-2026-DE",
-      "sourceCount": 6,
+      "sourceCount": 7,
       "priority": 0,
       "title": "Obsidian: Materialwissenschaft — Vulkanisches Glas, Mineralogie, Magnetismus, Optik, Physik",
       "description": "Realwissenschaftliche Materialbasis für Obsidian als vulkanisches Glas: Formation, Chemie, Magnetit-Einschlüsse, Domänenphysik (SD/PSD/MD/SP), Superparamagnetismus, TRM/Paläomagnetismus, Optik, Vorkommen. SCI-Basis der Splitterlupe (OTA-TEC-0124).",
@@ -29060,7 +29324,7 @@
         }
       ],
       "resolvedTarget": "OTA-SCI-0117-2026-DE",
-      "sourceCount": 6,
+      "sourceCount": 7,
       "priority": 0,
       "title": "Obsidian: Materialwissenschaft — Vulkanisches Glas, Mineralogie, Magnetismus, Optik, Physik",
       "description": "Realwissenschaftliche Materialbasis für Obsidian als vulkanisches Glas: Formation, Chemie, Magnetit-Einschlüsse, Domänenphysik (SD/PSD/MD/SP), Superparamagnetismus, TRM/Paläomagnetismus, Optik, Vorkommen. SCI-Basis der Splitterlupe (OTA-TEC-0124).",
@@ -29085,7 +29349,7 @@
         }
       ],
       "resolvedTarget": "OTA-SCI-0117-2026-DE",
-      "sourceCount": 6,
+      "sourceCount": 7,
       "priority": 0,
       "title": "Obsidian: Materialwissenschaft — Vulkanisches Glas, Mineralogie, Magnetismus, Optik, Physik",
       "description": "Realwissenschaftliche Materialbasis für Obsidian als vulkanisches Glas: Formation, Chemie, Magnetit-Einschlüsse, Domänenphysik (SD/PSD/MD/SP), Superparamagnetismus, TRM/Paläomagnetismus, Optik, Vorkommen. SCI-Basis der Splitterlupe (OTA-TEC-0124).",
@@ -29110,6 +29374,23 @@
         }
       ],
       "resolvedTarget": "OTA-SCI-0117-2026-DE",
+      "sourceCount": 7,
+      "priority": 0,
+      "title": "Obsidian: Materialwissenschaft — Vulkanisches Glas, Mineralogie, Magnetismus, Optik, Physik",
+      "description": "Realwissenschaftliche Materialbasis für Obsidian als vulkanisches Glas: Formation, Chemie, Magnetit-Einschlüsse, Domänenphysik (SD/PSD/MD/SP), Superparamagnetismus, TRM/Paläomagnetismus, Optik, Vorkommen. SCI-Basis der Splitterlupe (OTA-TEC-0124).",
+      "descriptionStatus": "canonical",
+      "targetFile": "src/content/documents/OTA-SCI-0117-2026-DE.md"
+    },
+    {
+      "source": "OTA-BIO-0027-2026-DE",
+      "target": "OTA-SCI-0117-2026-DE",
+      "contexts": [
+        "ts. | | OTA-SCI-0060-2026-DE | Biogenes Magnetit / Alpha-ERD | Neurologische Grundlage der Ketteneffekte. | | OTA-SCI-0117-2026-DE | Obsidian: Materialwissenschaft | Antons Gegenartefakt-Grundlage. | | OTA-SCI-0119-2026-DE | Lodestone | Tims Hör-Stein-Grundlage. | | OTA-FND-0025-"
+      ],
+      "status": "resolved",
+      "classification": "existing",
+      "candidates": [],
+      "resolvedTarget": "OTA-SCI-0117-2026-DE",
       "sourceCount": 6,
       "priority": 0,
       "title": "Obsidian: Materialwissenschaft — Vulkanisches Glas, Mineralogie, Magnetismus, Optik, Physik",
@@ -29127,7 +29408,7 @@
       "classification": "existing",
       "candidates": [],
       "resolvedTarget": "OTA-SCI-0117-2026-DE",
-      "sourceCount": 5,
+      "sourceCount": 6,
       "priority": 0,
       "title": "Obsidian: Materialwissenschaft — Vulkanisches Glas, Mineralogie, Magnetismus, Optik, Physik",
       "description": "Realwissenschaftliche Materialbasis für Obsidian als vulkanisches Glas: Formation, Chemie, Magnetit-Einschlüsse, Domänenphysik (SD/PSD/MD/SP), Superparamagnetismus, TRM/Paläomagnetismus, Optik, Vorkommen. SCI-Basis der Splitterlupe (OTA-TEC-0124).",
@@ -29144,7 +29425,7 @@
       "classification": "existing",
       "candidates": [],
       "resolvedTarget": "OTA-SCI-0117-2026-DE",
-      "sourceCount": 5,
+      "sourceCount": 6,
       "priority": 0,
       "title": "Obsidian: Materialwissenschaft — Vulkanisches Glas, Mineralogie, Magnetismus, Optik, Physik",
       "description": "Realwissenschaftliche Materialbasis für Obsidian als vulkanisches Glas: Formation, Chemie, Magnetit-Einschlüsse, Domänenphysik (SD/PSD/MD/SP), Superparamagnetismus, TRM/Paläomagnetismus, Optik, Vorkommen. SCI-Basis der Splitterlupe (OTA-TEC-0124).",
@@ -29161,7 +29442,7 @@
       "classification": "existing",
       "candidates": [],
       "resolvedTarget": "OTA-SCI-0117-2026-DE",
-      "sourceCount": 5,
+      "sourceCount": 6,
       "priority": 0,
       "title": "Obsidian: Materialwissenschaft — Vulkanisches Glas, Mineralogie, Magnetismus, Optik, Physik",
       "description": "Realwissenschaftliche Materialbasis für Obsidian als vulkanisches Glas: Formation, Chemie, Magnetit-Einschlüsse, Domänenphysik (SD/PSD/MD/SP), Superparamagnetismus, TRM/Paläomagnetismus, Optik, Vorkommen. SCI-Basis der Splitterlupe (OTA-TEC-0124).",
@@ -29178,7 +29459,7 @@
       "classification": "existing",
       "candidates": [],
       "resolvedTarget": "OTA-SCI-0117-2026-DE",
-      "sourceCount": 5,
+      "sourceCount": 6,
       "priority": 0,
       "title": "Obsidian: Materialwissenschaft — Vulkanisches Glas, Mineralogie, Magnetismus, Optik, Physik",
       "description": "Realwissenschaftliche Materialbasis für Obsidian als vulkanisches Glas: Formation, Chemie, Magnetit-Einschlüsse, Domänenphysik (SD/PSD/MD/SP), Superparamagnetismus, TRM/Paläomagnetismus, Optik, Vorkommen. SCI-Basis der Splitterlupe (OTA-TEC-0124).",
@@ -29195,7 +29476,7 @@
       "classification": "existing",
       "candidates": [],
       "resolvedTarget": "OTA-SCI-0117-2026-DE",
-      "sourceCount": 5,
+      "sourceCount": 6,
       "priority": 0,
       "title": "Obsidian: Materialwissenschaft — Vulkanisches Glas, Mineralogie, Magnetismus, Optik, Physik",
       "description": "Realwissenschaftliche Materialbasis für Obsidian als vulkanisches Glas: Formation, Chemie, Magnetit-Einschlüsse, Domänenphysik (SD/PSD/MD/SP), Superparamagnetismus, TRM/Paläomagnetismus, Optik, Vorkommen. SCI-Basis der Splitterlupe (OTA-TEC-0124).",
@@ -29337,6 +29618,29 @@
       "targetFile": "src/content/documents/OTA-SCI-0118-2026-DE.md"
     },
     {
+      "source": "OTA-BIO-0027-2026-DE",
+      "target": "OTA-SCI-0119",
+      "contexts": [
+        "OTA-FND-0024 · OTA-TEC-0035 v1.3 · OTA-TEC-0123 · OTA-TEC-0124 · OTA-SCI-0059 · OTA-SCI-0060 · OTA-SCI-0117 · OTA-SCI-0119 · OTA-FND-0025 · OTA-BIO-0028 *Kurator: Thomas Peter Küper · Frankfurt am Main · 2026* --- ## I. PERSÖNLICHE DATEN | **Vollständiger Name:** | Mi"
+      ],
+      "status": "resolved-base-id",
+      "classification": "base-id-resolved",
+      "candidates": [
+        {
+          "signature": "OTA-SCI-0119-2026-DE",
+          "title": "Lodestone: Magnetit-Eisenstein — Natürlicher Permanentmagnet, Physik, Chemie, Entstehung, Vorkommen",
+          "file": "src/content/documents/OTA-SCI-0119-2026-DE.md"
+        }
+      ],
+      "resolvedTarget": "OTA-SCI-0119-2026-DE",
+      "sourceCount": 5,
+      "priority": 0,
+      "title": "Lodestone: Magnetit-Eisenstein — Natürlicher Permanentmagnet, Physik, Chemie, Entstehung, Vorkommen",
+      "description": "Realwissenschaftliche Materialbasis für Lodestone (Magnetit-Eisenstein) als natürlichen Permanentmagneten: Maghemit-Mikrostruktur, REM-Ratio, Blitz-Magnetisierung, Domänenphysik, Feldstärken, Drei-Träger-Vergleich des Sauerland-Clusters, Vorkommen und historische Nutzung. SCI-Basis des Hör-Steins (OTA-TEC-0123).",
+      "descriptionStatus": "canonical",
+      "targetFile": "src/content/documents/OTA-SCI-0119-2026-DE.md"
+    },
+    {
       "source": "OTA-SCI-0117-2026-DE",
       "target": "OTA-SCI-0119",
       "contexts": [
@@ -29352,7 +29656,7 @@
         }
       ],
       "resolvedTarget": "OTA-SCI-0119-2026-DE",
-      "sourceCount": 4,
+      "sourceCount": 5,
       "priority": 0,
       "title": "Lodestone: Magnetit-Eisenstein — Natürlicher Permanentmagnet, Physik, Chemie, Entstehung, Vorkommen",
       "description": "Realwissenschaftliche Materialbasis für Lodestone (Magnetit-Eisenstein) als natürlichen Permanentmagneten: Maghemit-Mikrostruktur, REM-Ratio, Blitz-Magnetisierung, Domänenphysik, Feldstärken, Drei-Träger-Vergleich des Sauerland-Clusters, Vorkommen und historische Nutzung. SCI-Basis des Hör-Steins (OTA-TEC-0123).",
@@ -29376,7 +29680,7 @@
         }
       ],
       "resolvedTarget": "OTA-SCI-0119-2026-DE",
-      "sourceCount": 4,
+      "sourceCount": 5,
       "priority": 0,
       "title": "Lodestone: Magnetit-Eisenstein — Natürlicher Permanentmagnet, Physik, Chemie, Entstehung, Vorkommen",
       "description": "Realwissenschaftliche Materialbasis für Lodestone (Magnetit-Eisenstein) als natürlichen Permanentmagneten: Maghemit-Mikrostruktur, REM-Ratio, Blitz-Magnetisierung, Domänenphysik, Feldstärken, Drei-Träger-Vergleich des Sauerland-Clusters, Vorkommen und historische Nutzung. SCI-Basis des Hör-Steins (OTA-TEC-0123).",
@@ -29400,7 +29704,7 @@
         }
       ],
       "resolvedTarget": "OTA-SCI-0119-2026-DE",
-      "sourceCount": 4,
+      "sourceCount": 5,
       "priority": 0,
       "title": "Lodestone: Magnetit-Eisenstein — Natürlicher Permanentmagnet, Physik, Chemie, Entstehung, Vorkommen",
       "description": "Realwissenschaftliche Materialbasis für Lodestone (Magnetit-Eisenstein) als natürlichen Permanentmagneten: Maghemit-Mikrostruktur, REM-Ratio, Blitz-Magnetisierung, Domänenphysik, Feldstärken, Drei-Träger-Vergleich des Sauerland-Clusters, Vorkommen und historische Nutzung. SCI-Basis des Hör-Steins (OTA-TEC-0123).",
@@ -29424,6 +29728,23 @@
         }
       ],
       "resolvedTarget": "OTA-SCI-0119-2026-DE",
+      "sourceCount": 5,
+      "priority": 0,
+      "title": "Lodestone: Magnetit-Eisenstein — Natürlicher Permanentmagnet, Physik, Chemie, Entstehung, Vorkommen",
+      "description": "Realwissenschaftliche Materialbasis für Lodestone (Magnetit-Eisenstein) als natürlichen Permanentmagneten: Maghemit-Mikrostruktur, REM-Ratio, Blitz-Magnetisierung, Domänenphysik, Feldstärken, Drei-Träger-Vergleich des Sauerland-Clusters, Vorkommen und historische Nutzung. SCI-Basis des Hör-Steins (OTA-TEC-0123).",
+      "descriptionStatus": "canonical",
+      "targetFile": "src/content/documents/OTA-SCI-0119-2026-DE.md"
+    },
+    {
+      "source": "OTA-BIO-0027-2026-DE",
+      "target": "OTA-SCI-0119-2026-DE",
+      "contexts": [
+        "etteneffekte. | | OTA-SCI-0117-2026-DE | Obsidian: Materialwissenschaft | Antons Gegenartefakt-Grundlage. | | OTA-SCI-0119-2026-DE | Lodestone | Tims Hör-Stein-Grundlage. | | OTA-FND-0025-2026-DE | Temenon-Taxonomie | Mia als Klasse-β-Proto-Temenon-Trägerin. | | OTA-BIO-0028-2026"
+      ],
+      "status": "resolved",
+      "classification": "existing",
+      "candidates": [],
+      "resolvedTarget": "OTA-SCI-0119-2026-DE",
       "sourceCount": 4,
       "priority": 0,
       "title": "Lodestone: Magnetit-Eisenstein — Natürlicher Permanentmagnet, Physik, Chemie, Entstehung, Vorkommen",
@@ -29441,7 +29762,7 @@
       "classification": "existing",
       "candidates": [],
       "resolvedTarget": "OTA-SCI-0119-2026-DE",
-      "sourceCount": 3,
+      "sourceCount": 4,
       "priority": 0,
       "title": "Lodestone: Magnetit-Eisenstein — Natürlicher Permanentmagnet, Physik, Chemie, Entstehung, Vorkommen",
       "description": "Realwissenschaftliche Materialbasis für Lodestone (Magnetit-Eisenstein) als natürlichen Permanentmagneten: Maghemit-Mikrostruktur, REM-Ratio, Blitz-Magnetisierung, Domänenphysik, Feldstärken, Drei-Träger-Vergleich des Sauerland-Clusters, Vorkommen und historische Nutzung. SCI-Basis des Hör-Steins (OTA-TEC-0123).",
@@ -29458,7 +29779,7 @@
       "classification": "existing",
       "candidates": [],
       "resolvedTarget": "OTA-SCI-0119-2026-DE",
-      "sourceCount": 3,
+      "sourceCount": 4,
       "priority": 0,
       "title": "Lodestone: Magnetit-Eisenstein — Natürlicher Permanentmagnet, Physik, Chemie, Entstehung, Vorkommen",
       "description": "Realwissenschaftliche Materialbasis für Lodestone (Magnetit-Eisenstein) als natürlichen Permanentmagneten: Maghemit-Mikrostruktur, REM-Ratio, Blitz-Magnetisierung, Domänenphysik, Feldstärken, Drei-Träger-Vergleich des Sauerland-Clusters, Vorkommen und historische Nutzung. SCI-Basis des Hör-Steins (OTA-TEC-0123).",
@@ -29475,7 +29796,7 @@
       "classification": "existing",
       "candidates": [],
       "resolvedTarget": "OTA-SCI-0119-2026-DE",
-      "sourceCount": 3,
+      "sourceCount": 4,
       "priority": 0,
       "title": "Lodestone: Magnetit-Eisenstein — Natürlicher Permanentmagnet, Physik, Chemie, Entstehung, Vorkommen",
       "description": "Realwissenschaftliche Materialbasis für Lodestone (Magnetit-Eisenstein) als natürlichen Permanentmagneten: Maghemit-Mikrostruktur, REM-Ratio, Blitz-Magnetisierung, Domänenphysik, Feldstärken, Drei-Träger-Vergleich des Sauerland-Clusters, Vorkommen und historische Nutzung. SCI-Basis des Hör-Steins (OTA-TEC-0123).",
@@ -30896,7 +31217,8 @@
       "target": "OTA-TEC-0025-2091-DE",
       "contexts": [
         "tags: [\"Kaelen Voss\", \"Ceres-Kind\", \"2091\", \"NOXIA\", \"Asteroideng\\u00fcrtel\"] relatedDocuments: - target: \"OTA-TEC-0025-2091-DE\" relation: \"related\" context: \"Im Dokument ausdrücklich unter den verwandten Dokumenten bzw. Querverweisen aufgeführt.\" descriptionStatus",
-        "------------------ ---------------- **Signatur** **Titel** **Status** OTA-TEC-0025-2091-DE Interplanetare Transferlogistik v2.0 OTA-BIO-0006-2025-DE Lena Kowalski --- Profil v1.2 OTA-BIO-0008-2025-DE Rashid Al-Manso"
+        "------------------ ---------------- **Signatur** **Titel** **Status** OTA-TEC-0025-2091-DE Interplanetare Transferlogistik v2.0 OTA-BIO-0006-2025-DE Lena Kowalski --- Profil v1.2 OTA-BIO-0008-2025-DE Rashid Al-Manso",
+        "a/view Nicht übernommen: Die Archivlage ist uneinheitlich (`OTA-SCI-0025-2091-DE` nennt „Kaelen Asa Shiro“, `OTA-TEC-0025-2091-DE` „Kaelen Voss“ mit 0,03 g Ceres-Oberfläche), und der aktuelle Generation-Mars-Stand zu Kaelen steht in `OTA-BIO-0014-2092-DE`. Dieses Profil bleibt a"
       ],
       "status": "resolved",
       "classification": "existing",
@@ -31058,7 +31380,7 @@
       "source": "OTA-TEC-0028-2025-DE",
       "target": "OTA-TEC-0027-2091-DE",
       "contexts": [
-        "ags: [\"Nanospiegel\", \"Metamaterial\", \"Photonisch\", \"Optik\", \"NOXIA\", \"Raumfahrt\", \"2091\"] relatedDocuments: [\"OTA-TEC-0027-2091-DE\"] summary: \"Technische Grundlagen von Nanospiegel-Metamaterial-Systemen: photonische Strukturen [R], Skalierungstheorien für Raumfahrtanwendungen [T/"
+        "ags: [\"Nanospiegel\", \"Metamaterial\", \"Photonisch\", \"Optik\", \"NOXIA\", \"Raumfahrt\", \"2091\"] relatedDocuments: [\"OTA-TEC-0027-2091-DE\"] review: last: \"2026-11-23\" next: \"2027-11-23\" reason: \"Realgrundlage fehlerhaft, Korrektur und Auslagerung per OTA-REQ-20261123-002/EXT-OTA-K"
       ],
       "status": "resolved",
       "classification": "existing",
@@ -31201,7 +31523,7 @@
       "source": "OTA-SCI-0041-2026-DE",
       "target": "OTA-TEC-0029-2048-DE",
       "contexts": [
-        "Superionisches Goldhydrid als Kanonisch Resonanzanker OTA-TEC-0029-2048-DE Quantensensorik & KI-Analyse Kanonisch ---------------------- --------------------------------- --------------- X. REVISIONSVERLAUF **2026"
+        "enz: Epistemologie Kanonisch OTA-SCI-0017-2025-DE Superionisches Goldhydrid Kanonisch OTA-TEC-0029-2048-DE Quantensensorik & KI-Analyse Kanonisch OTA-RED-0023-2026-DE AVI-Vakuumresonanz-Kompendium Kanonisch ---------------------- --------"
       ],
       "status": "resolved",
       "classification": "existing",
@@ -31562,8 +31884,11 @@
       "source": "OTA-BIO-0027-2026-DE",
       "target": "OTA-TEC-0035",
       "contexts": [
-        "ehmen der Kette (Karabiner) | | **Körper während Kettennutzung:** | Stufenprogression 1→3 der Kostenstufen (→ OTA-TEC-0035, Abschnitt VI) | Die Halsnarbe ist kein Dekor. Sie ist eine physische Spur der ersten Interaktion mit der Kette — und ein diskreter Marker, den ande",
-        "hrend Mia die Kette aktiv nutzt, reagiert Tim auf den Hör-Stein reaktiv. Die beiden Artefakte interagieren (→ OTA-TEC-0035, Abschnitt VII): Bei Nähe <2 Metern verstärkt sich beider Wahrnehmung. Das macht Tim zum einzigen Menschen im Roman, der Mia nicht erklärt, was mit i"
+        "eich **Zielgruppe Roman:** 10–14 Jahre (Mia in der Mitte: ca. 13–14) **Verbundene Dokumente:** OTA-FND-0024 · OTA-TEC-0035 v1.3 · OTA-TEC-0123 · OTA-TEC-0124 · OTA-SCI-0059 · OTA-SCI-0060 · OTA-SCI-0117 · OTA-SCI-0119 · OTA-FND-0025 · OTA-BIO-0028 *Kurator: Thomas Peter",
+        "t. Nach Kap. 9: Mia beobachtet sich beim Handeln. **Die Sättigungs-Stille am Hexenteich (Kap. 9):** `[F]` (→ OTA-TEC-0035 v1.3, IV.6) Der Hexenteich ist der am stärksten geladene Temenon-Ort. Am Teich versagt die Wirkung der Kette nicht, weil die Kette schwach wäre — so",
+        "Körper während Kettennutzung:** | Stufenprogression 1→3 Eskalationsachse · Entzugsachse E1/E2 nach Kap. 19 (→ OTA-TEC-0035 v1.3, VI) | Die Halsnarbe ist kein Dekor. Sie ist eine physische Spur der ersten Interaktion mit der Kette — und ein diskreter Marker, den andere be",
+        "hrend Mia die Kette aktiv nutzt, reagiert Tim auf den Hör-Stein reaktiv. Die beiden Artefakte interagieren (→ OTA-TEC-0035 v1.3, VII; OTA-TEC-0123): Bei Nähe <2 Metern verstärkt sich beider Wahrnehmung — Kap. 16. Das macht Tim zum einzigen Menschen im Roman, der Mia nicht",
+        "ckel: kanonischer Fundmoment. Keine Änderung der Fundlogik. **A-1-Grenze (Anthropomorphisierung):** `[F]` (→ OTA-TEC-0035 v1.3, X) Die Anti-Anthropomorphisierungs-Regel gilt für den *Erzählertext*. In Mias *erlebter Rede* und inneren Gedanken ist Anthropomorphisierung er"
       ],
       "status": "resolved-base-id",
       "classification": "base-id-resolved",
@@ -31776,8 +32101,7 @@
       "source": "OTA-BIO-0027-2026-DE",
       "target": "OTA-TEC-0035-2026-DE",
       "contexts": [
-        "Roman:** | 10–14 Jahre (Mia in der Mitte: ca. 13–14) | | **Verbundene Dokumente:** | OTA-FND-0024-2026-DE · OTA-TEC-0035-2026-DE · OTA-SCI-0059 · OTA-SCI-0060 · OTA-FND-0025-2026-DE | *Kurator: Thomas Peter Küper · Frankfurt am Main · April 2026* **I. PERSÖNLICHE DA",
-        "--- | --- | --- | | OTA-FND-0024-2026-DE | Serienkonzept | Primäres Werkdokument. Figurenkonstellation.. | | OTA-TEC-0035-2026-DE | Artefakt HSS-001 | Kostenprogression Stufe 1–4. Schreibregeln zur Kette. | | OTA-SCI-0059-2026-DE | Meteoritisches Eisen | Physikalische Grundlage"
+        "ung | |---|---|---| | OTA-FND-0024-2026-DE | Serienkonzept | Primäres Werkdokument. Figurenkonstellation. | | OTA-TEC-0035-2026-DE v1.3 | Kette vom Hexenteich | Kostenprogression (6 Stufen + Entzugsachse). Zwei Stillen. Schreibregeln A-1. | | OTA-TEC-0123-2026-DE | Hör-Stein (Tim"
       ],
       "status": "resolved",
       "classification": "existing",
@@ -32526,6 +32850,29 @@
       "targetFile": "src/content/documents/OTA-TEC-0081-2026-DE.md"
     },
     {
+      "source": "OTA-SCI-0086-2026-DE",
+      "target": "OTA-TEC-0082",
+      "contexts": [
+        "ro Tag** (Messwerte, Einheiten und Abschirmung: `DOC:KUE:KUE-SCI-0187-2026-DE` §X; NASA- und Missionsrahmen: `OTA-TEC-0082`). **[F/Kanonregel]** Aus dieser Lücke folgt für OTA **keine** eigene Dosisgrenze für Schwangerschaft oder Kindheit. Für `OTA-TEC-0088` (Mars Medica"
+      ],
+      "status": "resolved-base-id",
+      "classification": "base-id-resolved",
+      "candidates": [
+        {
+          "signature": "OTA-TEC-0082-2026-DE",
+          "title": "CYGNUS CTV — Cislunar Transporter Vehicle",
+          "file": "src/content/documents/OTA-TEC-0082-2026-DE.md"
+        }
+      ],
+      "resolvedTarget": "OTA-TEC-0082-2026-DE",
+      "sourceCount": 7,
+      "priority": 0,
+      "title": "CYGNUS CTV — Cislunar Transporter Vehicle",
+      "description": "Kanonisches OTA-Technikdossier des CYGNUS CTV als wiederverwendbarer, depotgestützter cislunarer Ferry pro Leg. Trennt reale Transfermechanik und Engineering-Schließbedingungen von fiktionalen Weltwerten; der historische 85/180/75/5,2-Massensatz ist nicht mehr als geschlossene Kombination kanonisch.",
+      "descriptionStatus": "canonical",
+      "targetFile": "src/content/documents/OTA-TEC-0082-2026-DE.md"
+    },
+    {
       "source": "OTA-TEC-0082-2026-DE",
       "target": "OTA-TEC-0082",
       "contexts": [
@@ -32541,7 +32888,7 @@
         }
       ],
       "resolvedTarget": "OTA-TEC-0082-2026-DE",
-      "sourceCount": 6,
+      "sourceCount": 7,
       "priority": 0,
       "title": "CYGNUS CTV — Cislunar Transporter Vehicle",
       "description": "Kanonisches OTA-Technikdossier des CYGNUS CTV als wiederverwendbarer, depotgestützter cislunarer Ferry pro Leg. Trennt reale Transfermechanik und Engineering-Schließbedingungen von fiktionalen Weltwerten; der historische 85/180/75/5,2-Massensatz ist nicht mehr als geschlossene Kombination kanonisch.",
@@ -32568,7 +32915,7 @@
         }
       ],
       "resolvedTarget": "OTA-TEC-0082-2026-DE",
-      "sourceCount": 6,
+      "sourceCount": 7,
       "priority": 0,
       "title": "CYGNUS CTV — Cislunar Transporter Vehicle",
       "description": "Kanonisches OTA-Technikdossier des CYGNUS CTV als wiederverwendbarer, depotgestützter cislunarer Ferry pro Leg. Trennt reale Transfermechanik und Engineering-Schließbedingungen von fiktionalen Weltwerten; der historische 85/180/75/5,2-Massensatz ist nicht mehr als geschlossene Kombination kanonisch.",
@@ -32591,7 +32938,7 @@
         }
       ],
       "resolvedTarget": "OTA-TEC-0082-2026-DE",
-      "sourceCount": 6,
+      "sourceCount": 7,
       "priority": 0,
       "title": "CYGNUS CTV — Cislunar Transporter Vehicle",
       "description": "Kanonisches OTA-Technikdossier des CYGNUS CTV als wiederverwendbarer, depotgestützter cislunarer Ferry pro Leg. Trennt reale Transfermechanik und Engineering-Schließbedingungen von fiktionalen Weltwerten; der historische 85/180/75/5,2-Massensatz ist nicht mehr als geschlossene Kombination kanonisch.",
@@ -32614,7 +32961,7 @@
         }
       ],
       "resolvedTarget": "OTA-TEC-0082-2026-DE",
-      "sourceCount": 6,
+      "sourceCount": 7,
       "priority": 0,
       "title": "CYGNUS CTV — Cislunar Transporter Vehicle",
       "description": "Kanonisches OTA-Technikdossier des CYGNUS CTV als wiederverwendbarer, depotgestützter cislunarer Ferry pro Leg. Trennt reale Transfermechanik und Engineering-Schließbedingungen von fiktionalen Weltwerten; der historische 85/180/75/5,2-Massensatz ist nicht mehr als geschlossene Kombination kanonisch.",
@@ -32637,7 +32984,7 @@
         }
       ],
       "resolvedTarget": "OTA-TEC-0082-2026-DE",
-      "sourceCount": 6,
+      "sourceCount": 7,
       "priority": 0,
       "title": "CYGNUS CTV — Cislunar Transporter Vehicle",
       "description": "Kanonisches OTA-Technikdossier des CYGNUS CTV als wiederverwendbarer, depotgestützter cislunarer Ferry pro Leg. Trennt reale Transfermechanik und Engineering-Schließbedingungen von fiktionalen Weltwerten; der historische 85/180/75/5,2-Massensatz ist nicht mehr als geschlossene Kombination kanonisch.",
@@ -32660,7 +33007,7 @@
         }
       ],
       "resolvedTarget": "OTA-TEC-0082-2026-DE",
-      "sourceCount": 6,
+      "sourceCount": 7,
       "priority": 0,
       "title": "CYGNUS CTV — Cislunar Transporter Vehicle",
       "description": "Kanonisches OTA-Technikdossier des CYGNUS CTV als wiederverwendbarer, depotgestützter cislunarer Ferry pro Leg. Trennt reale Transfermechanik und Engineering-Schließbedingungen von fiktionalen Weltwerten; der historische 85/180/75/5,2-Massensatz ist nicht mehr als geschlossene Kombination kanonisch.",
@@ -33575,7 +33922,8 @@
       "source": "OTA-SCI-0086-2026-DE",
       "target": "OTA-TEC-0088",
       "contexts": [
-        "allein deshalb als sicher gelten, weil 0,38 g deutlich über Mikrogravitation liegt. Das Mars Medical Center (`OTA-TEC-0088`) benötigt im Langzeit-Siedlungskontext eine explizite Geburtshilfe-/Neonatologie-Capability oder eine alternative Architektur. ### Mond (~0,16 g)"
+        "allein deshalb als sicher gelten, weil 0,38 g deutlich über Mikrogravitation liegt. Das Mars Medical Center (`OTA-TEC-0088`) benötigt im Langzeit-Siedlungskontext eine explizite Geburtshilfe-/Neonatologie-Capability oder eine alternative Architektur. ### Mond (~0,16 g)",
+        "nregel]** Aus dieser Lücke folgt für OTA **keine** eigene Dosisgrenze für Schwangerschaft oder Kindheit. Für `OTA-TEC-0088` (Mars Medical Center) und `OTA-TEC-0093` (ECLSS) gilt sie als Randbedingung: Bereiche für Schwangerschaft, Geburt und Kinder sind auf Abschirmung un"
       ],
       "status": "resolved-base-id",
       "classification": "base-id-resolved",
@@ -34254,6 +34602,29 @@
       "targetFile": "src/content/documents/OTA-TEC-0092-2026-DE.md"
     },
     {
+      "source": "OTA-SCI-0086-2026-DE",
+      "target": "OTA-TEC-0093",
+      "contexts": [
+        "**keine** eigene Dosisgrenze für Schwangerschaft oder Kindheit. Für `OTA-TEC-0088` (Mars Medical Center) und `OTA-TEC-0093` (ECLSS) gilt sie als Randbedingung: Bereiche für Schwangerschaft, Geburt und Kinder sind auf Abschirmung und Safe Haven auszulegen, ohne dass dieses"
+      ],
+      "status": "resolved-base-id",
+      "classification": "base-id-resolved",
+      "candidates": [
+        {
+          "signature": "OTA-TEC-0093-2026-DE",
+          "title": "Life-Support-Kernmodul — regeneratives Umweltkontroll- und Lebenserhaltungssystem",
+          "file": "src/content/documents/OTA-TEC-0093-2026-DE.md"
+        }
+      ],
+      "resolvedTarget": "OTA-TEC-0093-2026-DE",
+      "sourceCount": 9,
+      "priority": 0,
+      "title": "Life-Support-Kernmodul — regeneratives Umweltkontroll- und Lebenserhaltungssystem",
+      "description": "Kanonisierte ECLSS-Technologiefamilie mit vier Missionsvarianten (SR/TR/ST/CV), gemeinsamem Funktions- und Interfacekern, expliziten Verlusttermen, funktionsbezogener Fehlertoleranz und nichtlinearer Crew-Skalierung; missionsspezifische Massen-, Leistungs-, Recovery- und Reservewerte bleiben offen.",
+      "descriptionStatus": "canonical",
+      "targetFile": "src/content/documents/OTA-TEC-0093-2026-DE.md"
+    },
+    {
       "source": "OTA-TEC-0016-2063-DE",
       "target": "OTA-TEC-0093",
       "contexts": [
@@ -34269,7 +34640,7 @@
         }
       ],
       "resolvedTarget": "OTA-TEC-0093-2026-DE",
-      "sourceCount": 8,
+      "sourceCount": 9,
       "priority": 0,
       "title": "Life-Support-Kernmodul — regeneratives Umweltkontroll- und Lebenserhaltungssystem",
       "description": "Kanonisierte ECLSS-Technologiefamilie mit vier Missionsvarianten (SR/TR/ST/CV), gemeinsamem Funktions- und Interfacekern, expliziten Verlusttermen, funktionsbezogener Fehlertoleranz und nichtlinearer Crew-Skalierung; missionsspezifische Massen-, Leistungs-, Recovery- und Reservewerte bleiben offen.",
@@ -34292,7 +34663,7 @@
         }
       ],
       "resolvedTarget": "OTA-TEC-0093-2026-DE",
-      "sourceCount": 8,
+      "sourceCount": 9,
       "priority": 0,
       "title": "Life-Support-Kernmodul — regeneratives Umweltkontroll- und Lebenserhaltungssystem",
       "description": "Kanonisierte ECLSS-Technologiefamilie mit vier Missionsvarianten (SR/TR/ST/CV), gemeinsamem Funktions- und Interfacekern, expliziten Verlusttermen, funktionsbezogener Fehlertoleranz und nichtlinearer Crew-Skalierung; missionsspezifische Massen-, Leistungs-, Recovery- und Reservewerte bleiben offen.",
@@ -34315,7 +34686,7 @@
         }
       ],
       "resolvedTarget": "OTA-TEC-0093-2026-DE",
-      "sourceCount": 8,
+      "sourceCount": 9,
       "priority": 0,
       "title": "Life-Support-Kernmodul — regeneratives Umweltkontroll- und Lebenserhaltungssystem",
       "description": "Kanonisierte ECLSS-Technologiefamilie mit vier Missionsvarianten (SR/TR/ST/CV), gemeinsamem Funktions- und Interfacekern, expliziten Verlusttermen, funktionsbezogener Fehlertoleranz und nichtlinearer Crew-Skalierung; missionsspezifische Massen-, Leistungs-, Recovery- und Reservewerte bleiben offen.",
@@ -34339,7 +34710,7 @@
         }
       ],
       "resolvedTarget": "OTA-TEC-0093-2026-DE",
-      "sourceCount": 8,
+      "sourceCount": 9,
       "priority": 0,
       "title": "Life-Support-Kernmodul — regeneratives Umweltkontroll- und Lebenserhaltungssystem",
       "description": "Kanonisierte ECLSS-Technologiefamilie mit vier Missionsvarianten (SR/TR/ST/CV), gemeinsamem Funktions- und Interfacekern, expliziten Verlusttermen, funktionsbezogener Fehlertoleranz und nichtlinearer Crew-Skalierung; missionsspezifische Massen-, Leistungs-, Recovery- und Reservewerte bleiben offen.",
@@ -34362,7 +34733,7 @@
         }
       ],
       "resolvedTarget": "OTA-TEC-0093-2026-DE",
-      "sourceCount": 8,
+      "sourceCount": 9,
       "priority": 0,
       "title": "Life-Support-Kernmodul — regeneratives Umweltkontroll- und Lebenserhaltungssystem",
       "description": "Kanonisierte ECLSS-Technologiefamilie mit vier Missionsvarianten (SR/TR/ST/CV), gemeinsamem Funktions- und Interfacekern, expliziten Verlusttermen, funktionsbezogener Fehlertoleranz und nichtlinearer Crew-Skalierung; missionsspezifische Massen-, Leistungs-, Recovery- und Reservewerte bleiben offen.",
@@ -34385,7 +34756,7 @@
         }
       ],
       "resolvedTarget": "OTA-TEC-0093-2026-DE",
-      "sourceCount": 8,
+      "sourceCount": 9,
       "priority": 0,
       "title": "Life-Support-Kernmodul — regeneratives Umweltkontroll- und Lebenserhaltungssystem",
       "description": "Kanonisierte ECLSS-Technologiefamilie mit vier Missionsvarianten (SR/TR/ST/CV), gemeinsamem Funktions- und Interfacekern, expliziten Verlusttermen, funktionsbezogener Fehlertoleranz und nichtlinearer Crew-Skalierung; missionsspezifische Massen-, Leistungs-, Recovery- und Reservewerte bleiben offen.",
@@ -34408,7 +34779,7 @@
         }
       ],
       "resolvedTarget": "OTA-TEC-0093-2026-DE",
-      "sourceCount": 8,
+      "sourceCount": 9,
       "priority": 0,
       "title": "Life-Support-Kernmodul — regeneratives Umweltkontroll- und Lebenserhaltungssystem",
       "description": "Kanonisierte ECLSS-Technologiefamilie mit vier Missionsvarianten (SR/TR/ST/CV), gemeinsamem Funktions- und Interfacekern, expliziten Verlusttermen, funktionsbezogener Fehlertoleranz und nichtlinearer Crew-Skalierung; missionsspezifische Massen-, Leistungs-, Recovery- und Reservewerte bleiben offen.",
@@ -34431,7 +34802,7 @@
         }
       ],
       "resolvedTarget": "OTA-TEC-0093-2026-DE",
-      "sourceCount": 8,
+      "sourceCount": 9,
       "priority": 0,
       "title": "Life-Support-Kernmodul — regeneratives Umweltkontroll- und Lebenserhaltungssystem",
       "description": "Kanonisierte ECLSS-Technologiefamilie mit vier Missionsvarianten (SR/TR/ST/CV), gemeinsamem Funktions- und Interfacekern, expliziten Verlusttermen, funktionsbezogener Fehlertoleranz und nichtlinearer Crew-Skalierung; missionsspezifische Massen-, Leistungs-, Recovery- und Reservewerte bleiben offen.",
@@ -35336,6 +35707,30 @@
       "targetFile": "src/content/documents/OTA-TEC-0122-2026-DE.md"
     },
     {
+      "source": "OTA-BIO-0027-2026-DE",
+      "target": "OTA-TEC-0123",
+      "contexts": [
+        "man:** 10–14 Jahre (Mia in der Mitte: ca. 13–14) **Verbundene Dokumente:** OTA-FND-0024 · OTA-TEC-0035 v1.3 · OTA-TEC-0123 · OTA-TEC-0124 · OTA-SCI-0059 · OTA-SCI-0060 · OTA-SCI-0117 · OTA-SCI-0119 · OTA-FND-0025 · OTA-BIO-0028 *Kurator: Thomas Peter Küper · Frankfurt am",
+        "v nutzt, reagiert Tim auf den Hör-Stein reaktiv. Die beiden Artefakte interagieren (→ OTA-TEC-0035 v1.3, VII; OTA-TEC-0123): Bei Nähe <2 Metern verstärkt sich beider Wahrnehmung — Kap. 16. Das macht Tim zum einzigen Menschen im Roman, der Mia nicht erklärt, was mit ihr pa"
+      ],
+      "status": "resolved-base-id",
+      "classification": "base-id-resolved",
+      "candidates": [
+        {
+          "signature": "OTA-TEC-0123-2026-DE",
+          "title": "Der Hör-Stein — Proto-Temenon, Geologisch-mono, Resonanzklasse β-0",
+          "file": "src/content/documents/OTA-TEC-0123-2026-DE.md"
+        }
+      ],
+      "resolvedTarget": "OTA-TEC-0123-2026-DE",
+      "sourceCount": 5,
+      "priority": 0,
+      "title": "Der Hör-Stein — Proto-Temenon, Geologisch-mono, Resonanzklasse β-0",
+      "description": "Der Hör-Stein — zweites vollständig kanonisiertes Proto-Temenon-Objekt im Sauerland-Cluster neben der Kette vom Hexenteich. Geologisch-mono-epochal (LRM/Blitzschlag), Resonanzklasse β-0.",
+      "descriptionStatus": "canonical",
+      "targetFile": "src/content/documents/OTA-TEC-0123-2026-DE.md"
+    },
+    {
       "source": "OTA-SCI-0119-2026-DE",
       "target": "OTA-TEC-0123",
       "contexts": [
@@ -35357,7 +35752,7 @@
         }
       ],
       "resolvedTarget": "OTA-TEC-0123-2026-DE",
-      "sourceCount": 4,
+      "sourceCount": 5,
       "priority": 0,
       "title": "Der Hör-Stein — Proto-Temenon, Geologisch-mono, Resonanzklasse β-0",
       "description": "Der Hör-Stein — zweites vollständig kanonisiertes Proto-Temenon-Objekt im Sauerland-Cluster neben der Kette vom Hexenteich. Geologisch-mono-epochal (LRM/Blitzschlag), Resonanzklasse β-0.",
@@ -35381,7 +35776,7 @@
         }
       ],
       "resolvedTarget": "OTA-TEC-0123-2026-DE",
-      "sourceCount": 4,
+      "sourceCount": 5,
       "priority": 0,
       "title": "Der Hör-Stein — Proto-Temenon, Geologisch-mono, Resonanzklasse β-0",
       "description": "Der Hör-Stein — zweites vollständig kanonisiertes Proto-Temenon-Objekt im Sauerland-Cluster neben der Kette vom Hexenteich. Geologisch-mono-epochal (LRM/Blitzschlag), Resonanzklasse β-0.",
@@ -35405,7 +35800,7 @@
         }
       ],
       "resolvedTarget": "OTA-TEC-0123-2026-DE",
-      "sourceCount": 4,
+      "sourceCount": 5,
       "priority": 0,
       "title": "Der Hör-Stein — Proto-Temenon, Geologisch-mono, Resonanzklasse β-0",
       "description": "Der Hör-Stein — zweites vollständig kanonisiertes Proto-Temenon-Objekt im Sauerland-Cluster neben der Kette vom Hexenteich. Geologisch-mono-epochal (LRM/Blitzschlag), Resonanzklasse β-0.",
@@ -35429,6 +35824,23 @@
         }
       ],
       "resolvedTarget": "OTA-TEC-0123-2026-DE",
+      "sourceCount": 5,
+      "priority": 0,
+      "title": "Der Hör-Stein — Proto-Temenon, Geologisch-mono, Resonanzklasse β-0",
+      "description": "Der Hör-Stein — zweites vollständig kanonisiertes Proto-Temenon-Objekt im Sauerland-Cluster neben der Kette vom Hexenteich. Geologisch-mono-epochal (LRM/Blitzschlag), Resonanzklasse β-0.",
+      "descriptionStatus": "canonical",
+      "targetFile": "src/content/documents/OTA-TEC-0123-2026-DE.md"
+    },
+    {
+      "source": "OTA-BIO-0027-2026-DE",
+      "target": "OTA-TEC-0123-2026-DE",
+      "contexts": [
+        ".3 | Kette vom Hexenteich | Kostenprogression (6 Stufen + Entzugsachse). Zwei Stillen. Schreibregeln A-1. | | OTA-TEC-0123-2026-DE | Hör-Stein (Tim) | Interaktion Kap. 16. Tim-Stein-Verbund. | | OTA-TEC-0124-2026-DE | Splitterlupe (Anton) | Antons Artefakt. Showdown Kap. 18. Mech"
+      ],
+      "status": "resolved",
+      "classification": "existing",
+      "candidates": [],
+      "resolvedTarget": "OTA-TEC-0123-2026-DE",
       "sourceCount": 4,
       "priority": 0,
       "title": "Der Hör-Stein — Proto-Temenon, Geologisch-mono, Resonanzklasse β-0",
@@ -35446,7 +35858,7 @@
       "classification": "existing",
       "candidates": [],
       "resolvedTarget": "OTA-TEC-0123-2026-DE",
-      "sourceCount": 3,
+      "sourceCount": 4,
       "priority": 0,
       "title": "Der Hör-Stein — Proto-Temenon, Geologisch-mono, Resonanzklasse β-0",
       "description": "Der Hör-Stein — zweites vollständig kanonisiertes Proto-Temenon-Objekt im Sauerland-Cluster neben der Kette vom Hexenteich. Geologisch-mono-epochal (LRM/Blitzschlag), Resonanzklasse β-0.",
@@ -35463,7 +35875,7 @@
       "classification": "existing",
       "candidates": [],
       "resolvedTarget": "OTA-TEC-0123-2026-DE",
-      "sourceCount": 3,
+      "sourceCount": 4,
       "priority": 0,
       "title": "Der Hör-Stein — Proto-Temenon, Geologisch-mono, Resonanzklasse β-0",
       "description": "Der Hör-Stein — zweites vollständig kanonisiertes Proto-Temenon-Objekt im Sauerland-Cluster neben der Kette vom Hexenteich. Geologisch-mono-epochal (LRM/Blitzschlag), Resonanzklasse β-0.",
@@ -35480,12 +35892,36 @@
       "classification": "existing",
       "candidates": [],
       "resolvedTarget": "OTA-TEC-0123-2026-DE",
-      "sourceCount": 3,
+      "sourceCount": 4,
       "priority": 0,
       "title": "Der Hör-Stein — Proto-Temenon, Geologisch-mono, Resonanzklasse β-0",
       "description": "Der Hör-Stein — zweites vollständig kanonisiertes Proto-Temenon-Objekt im Sauerland-Cluster neben der Kette vom Hexenteich. Geologisch-mono-epochal (LRM/Blitzschlag), Resonanzklasse β-0.",
       "descriptionStatus": "canonical",
       "targetFile": "src/content/documents/OTA-TEC-0123-2026-DE.md"
+    },
+    {
+      "source": "OTA-BIO-0027-2026-DE",
+      "target": "OTA-TEC-0124",
+      "contexts": [
+        "hre (Mia in der Mitte: ca. 13–14) **Verbundene Dokumente:** OTA-FND-0024 · OTA-TEC-0035 v1.3 · OTA-TEC-0123 · OTA-TEC-0124 · OTA-SCI-0059 · OTA-SCI-0060 · OTA-SCI-0117 · OTA-SCI-0119 · OTA-FND-0025 · OTA-BIO-0028 *Kurator: Thomas Peter Küper · Frankfurt am Main · 2026*",
+        "r weiß nicht, dass die Multi-Epochalität der Schlüssel ist. Und er weiß nicht, dass er löscht statt erntet (→ OTA-TEC-0124). ### 7.3 Die Mutter Die Mutter ist nah und abwesend gleichzeitig. Sie ist physisch im gleichen Gebäude wie Mia (Schule), aber ihre Funktion ist in"
+      ],
+      "status": "resolved-base-id",
+      "classification": "base-id-resolved",
+      "candidates": [
+        {
+          "signature": "OTA-TEC-0124-2026-DE",
+          "title": "Die Splitterlupe — Instrumententechnisches Protokoll, Dr. Oskar Anton",
+          "file": "src/content/documents/OTA-TEC-0124-2026-DE.md"
+        }
+      ],
+      "resolvedTarget": "OTA-TEC-0124-2026-DE",
+      "sourceCount": 7,
+      "priority": 0,
+      "title": "Die Splitterlupe — Instrumententechnisches Protokoll, Dr. Oskar Anton",
+      "description": "Die Splitterlupe — instrumententechnisches Analyseprotokoll aus Dr. Oskar Antons Perspektive. Ein Splitter (Span), kein volles Artefakt; vermutete Herkunft: das Artefakt der Bilsteinhöhle. Antons materialwissenschaftlich korrekte, aber funktional fehlgedeutete Analyse eines Obsidian-Artefakts, das Hysterese-Muster löscht statt Resonanz zu ernten.",
+      "descriptionStatus": "canonical",
+      "targetFile": "src/content/documents/OTA-TEC-0124-2026-DE.md"
     },
     {
       "source": "OTA-SCI-0117-2026-DE",
@@ -35507,7 +35943,7 @@
         }
       ],
       "resolvedTarget": "OTA-TEC-0124-2026-DE",
-      "sourceCount": 6,
+      "sourceCount": 7,
       "priority": 0,
       "title": "Die Splitterlupe — Instrumententechnisches Protokoll, Dr. Oskar Anton",
       "description": "Die Splitterlupe — instrumententechnisches Analyseprotokoll aus Dr. Oskar Antons Perspektive. Ein Splitter (Span), kein volles Artefakt; vermutete Herkunft: das Artefakt der Bilsteinhöhle. Antons materialwissenschaftlich korrekte, aber funktional fehlgedeutete Analyse eines Obsidian-Artefakts, das Hysterese-Muster löscht statt Resonanz zu ernten.",
@@ -35532,7 +35968,7 @@
         }
       ],
       "resolvedTarget": "OTA-TEC-0124-2026-DE",
-      "sourceCount": 6,
+      "sourceCount": 7,
       "priority": 0,
       "title": "Die Splitterlupe — Instrumententechnisches Protokoll, Dr. Oskar Anton",
       "description": "Die Splitterlupe — instrumententechnisches Analyseprotokoll aus Dr. Oskar Antons Perspektive. Ein Splitter (Span), kein volles Artefakt; vermutete Herkunft: das Artefakt der Bilsteinhöhle. Antons materialwissenschaftlich korrekte, aber funktional fehlgedeutete Analyse eines Obsidian-Artefakts, das Hysterese-Muster löscht statt Resonanz zu ernten.",
@@ -35555,7 +35991,7 @@
         }
       ],
       "resolvedTarget": "OTA-TEC-0124-2026-DE",
-      "sourceCount": 6,
+      "sourceCount": 7,
       "priority": 0,
       "title": "Die Splitterlupe — Instrumententechnisches Protokoll, Dr. Oskar Anton",
       "description": "Die Splitterlupe — instrumententechnisches Analyseprotokoll aus Dr. Oskar Antons Perspektive. Ein Splitter (Span), kein volles Artefakt; vermutete Herkunft: das Artefakt der Bilsteinhöhle. Antons materialwissenschaftlich korrekte, aber funktional fehlgedeutete Analyse eines Obsidian-Artefakts, das Hysterese-Muster löscht statt Resonanz zu ernten.",
@@ -35580,7 +36016,7 @@
         }
       ],
       "resolvedTarget": "OTA-TEC-0124-2026-DE",
-      "sourceCount": 6,
+      "sourceCount": 7,
       "priority": 0,
       "title": "Die Splitterlupe — Instrumententechnisches Protokoll, Dr. Oskar Anton",
       "description": "Die Splitterlupe — instrumententechnisches Analyseprotokoll aus Dr. Oskar Antons Perspektive. Ein Splitter (Span), kein volles Artefakt; vermutete Herkunft: das Artefakt der Bilsteinhöhle. Antons materialwissenschaftlich korrekte, aber funktional fehlgedeutete Analyse eines Obsidian-Artefakts, das Hysterese-Muster löscht statt Resonanz zu ernten.",
@@ -35603,7 +36039,7 @@
         }
       ],
       "resolvedTarget": "OTA-TEC-0124-2026-DE",
-      "sourceCount": 6,
+      "sourceCount": 7,
       "priority": 0,
       "title": "Die Splitterlupe — Instrumententechnisches Protokoll, Dr. Oskar Anton",
       "description": "Die Splitterlupe — instrumententechnisches Analyseprotokoll aus Dr. Oskar Antons Perspektive. Ein Splitter (Span), kein volles Artefakt; vermutete Herkunft: das Artefakt der Bilsteinhöhle. Antons materialwissenschaftlich korrekte, aber funktional fehlgedeutete Analyse eines Obsidian-Artefakts, das Hysterese-Muster löscht statt Resonanz zu ernten.",
@@ -35627,6 +36063,23 @@
         }
       ],
       "resolvedTarget": "OTA-TEC-0124-2026-DE",
+      "sourceCount": 7,
+      "priority": 0,
+      "title": "Die Splitterlupe — Instrumententechnisches Protokoll, Dr. Oskar Anton",
+      "description": "Die Splitterlupe — instrumententechnisches Analyseprotokoll aus Dr. Oskar Antons Perspektive. Ein Splitter (Span), kein volles Artefakt; vermutete Herkunft: das Artefakt der Bilsteinhöhle. Antons materialwissenschaftlich korrekte, aber funktional fehlgedeutete Analyse eines Obsidian-Artefakts, das Hysterese-Muster löscht statt Resonanz zu ernten.",
+      "descriptionStatus": "canonical",
+      "targetFile": "src/content/documents/OTA-TEC-0124-2026-DE.md"
+    },
+    {
+      "source": "OTA-BIO-0027-2026-DE",
+      "target": "OTA-TEC-0124-2026-DE",
+      "contexts": [
+        ". Schreibregeln A-1. | | OTA-TEC-0123-2026-DE | Hör-Stein (Tim) | Interaktion Kap. 16. Tim-Stein-Verbund. | | OTA-TEC-0124-2026-DE | Splitterlupe (Anton) | Antons Artefakt. Showdown Kap. 18. Mechanik der Entmagnetisierung. | | OTA-SCI-0059-2026-DE | Meteoritisches Eisen | Physika"
+      ],
+      "status": "resolved",
+      "classification": "existing",
+      "candidates": [],
+      "resolvedTarget": "OTA-TEC-0124-2026-DE",
       "sourceCount": 6,
       "priority": 0,
       "title": "Die Splitterlupe — Instrumententechnisches Protokoll, Dr. Oskar Anton",
@@ -35644,7 +36097,7 @@
       "classification": "existing",
       "candidates": [],
       "resolvedTarget": "OTA-TEC-0124-2026-DE",
-      "sourceCount": 5,
+      "sourceCount": 6,
       "priority": 0,
       "title": "Die Splitterlupe — Instrumententechnisches Protokoll, Dr. Oskar Anton",
       "description": "Die Splitterlupe — instrumententechnisches Analyseprotokoll aus Dr. Oskar Antons Perspektive. Ein Splitter (Span), kein volles Artefakt; vermutete Herkunft: das Artefakt der Bilsteinhöhle. Antons materialwissenschaftlich korrekte, aber funktional fehlgedeutete Analyse eines Obsidian-Artefakts, das Hysterese-Muster löscht statt Resonanz zu ernten.",
@@ -35661,7 +36114,7 @@
       "classification": "existing",
       "candidates": [],
       "resolvedTarget": "OTA-TEC-0124-2026-DE",
-      "sourceCount": 5,
+      "sourceCount": 6,
       "priority": 0,
       "title": "Die Splitterlupe — Instrumententechnisches Protokoll, Dr. Oskar Anton",
       "description": "Die Splitterlupe — instrumententechnisches Analyseprotokoll aus Dr. Oskar Antons Perspektive. Ein Splitter (Span), kein volles Artefakt; vermutete Herkunft: das Artefakt der Bilsteinhöhle. Antons materialwissenschaftlich korrekte, aber funktional fehlgedeutete Analyse eines Obsidian-Artefakts, das Hysterese-Muster löscht statt Resonanz zu ernten.",
@@ -35678,7 +36131,7 @@
       "classification": "existing",
       "candidates": [],
       "resolvedTarget": "OTA-TEC-0124-2026-DE",
-      "sourceCount": 5,
+      "sourceCount": 6,
       "priority": 0,
       "title": "Die Splitterlupe — Instrumententechnisches Protokoll, Dr. Oskar Anton",
       "description": "Die Splitterlupe — instrumententechnisches Analyseprotokoll aus Dr. Oskar Antons Perspektive. Ein Splitter (Span), kein volles Artefakt; vermutete Herkunft: das Artefakt der Bilsteinhöhle. Antons materialwissenschaftlich korrekte, aber funktional fehlgedeutete Analyse eines Obsidian-Artefakts, das Hysterese-Muster löscht statt Resonanz zu ernten.",
@@ -35695,7 +36148,7 @@
       "classification": "existing",
       "candidates": [],
       "resolvedTarget": "OTA-TEC-0124-2026-DE",
-      "sourceCount": 5,
+      "sourceCount": 6,
       "priority": 0,
       "title": "Die Splitterlupe — Instrumententechnisches Protokoll, Dr. Oskar Anton",
       "description": "Die Splitterlupe — instrumententechnisches Analyseprotokoll aus Dr. Oskar Antons Perspektive. Ein Splitter (Span), kein volles Artefakt; vermutete Herkunft: das Artefakt der Bilsteinhöhle. Antons materialwissenschaftlich korrekte, aber funktional fehlgedeutete Analyse eines Obsidian-Artefakts, das Hysterese-Muster löscht statt Resonanz zu ernten.",
@@ -35712,7 +36165,7 @@
       "classification": "existing",
       "candidates": [],
       "resolvedTarget": "OTA-TEC-0124-2026-DE",
-      "sourceCount": 5,
+      "sourceCount": 6,
       "priority": 0,
       "title": "Die Splitterlupe — Instrumententechnisches Protokoll, Dr. Oskar Anton",
       "description": "Die Splitterlupe — instrumententechnisches Analyseprotokoll aus Dr. Oskar Antons Perspektive. Ein Splitter (Span), kein volles Artefakt; vermutete Herkunft: das Artefakt der Bilsteinhöhle. Antons materialwissenschaftlich korrekte, aber funktional fehlgedeutete Analyse eines Obsidian-Artefakts, das Hysterese-Muster löscht statt Resonanz zu ernten.",

@@ -7,7 +7,7 @@ series: "SCI"
 seriesNumber: 7
 year: 2026
 language: "DE"
-version: "v1.0"
+version: "v1.1"
 status: "AKTIV"
 accessLevel: 0
 epistemicStatus: ["R", "T", "S"]
@@ -30,7 +30,7 @@ knowledge:
       level: "N1"
       purpose: read
 review:
-  last: "2026-10-31"
+  last: "2026-11-23"
   next: "2027-10-31"
   reason: "Laufende JWST-Programme zu LTT 9779 b (Phasenkurven, Chemie-Asymmetrie); jährlich neue Befunde einarbeiten."
   abgeschlossen: false
@@ -159,32 +159,45 @@ der raetselhaftesten Objekte der modernen Exoplanetenforschung.
 
 LTT 9779 b wurde 2020 mithilfe von Daten des Transiting Exoplanet Survey
 Satellite (TESS) der NASA entdeckt und traegt die alternative
-Bezeichnung TOI-193 b. Der Mutterstern LTT 9779 (offiziell: Uuba) ist
-ein sonnenaehnlicher Stern vom Spektraltyp G im Sternbild Bildhauer
-(Sculptor), etwa 260 Lichtjahre von der Erde entfernt.
+Bezeichnung TOI-193 b. Der Mutterstern LTT 9779 (offiziell: Uúba) ist
+ein sonnenaehnlicher Stern vom Spektraltyp G (G7 V) im Sternbild
+Bildhauer (Sculptor), rund 264 Lichtjahre von der Erde entfernt
+(264,3 ± 0,4 Lj bzw. 81,0 ± 0,1 pc; Gaia DR3, Parallaxe
+12,3381 ± 0,0166 mas). Die Entdeckungsaera nannte etwa 260 Lichtjahre;
+das NASA Exoplanet Archive fuehrt ≈ 80,4 pc (≈ 262 Lj). Beide Angaben
+sind historisch bzw. katalogabhaengig und mit dem Gaia-DR3-Wert
+vertraeglich.
 
 **Kulturelle Bedeutung der Namen**
 
-Im Rahmen des IAU-Wettbewerbs NameExoWorlds - einer Initiative, die
+Im Rahmen des IAU-Wettbewerbs NameExoWorlds 2022 - einer Initiative, die
 bewusst kulturelle Diversitaet bei der Benennung von Himmelskoerpern
-foerdert - erhielten Stern und Planet 2022 Namen aus indigenen Kulturen
-Suedamerikas:
+foerdert - erhielten Stern und Planet Namen aus der Sprache der U\'wa
+(Tunebo), eines indigenen Volkes in der Sierra Nevada del Cocuy in den
+nordoestlichen Anden Kolumbiens. Vorgeschlagen hat sie das kolumbianische
+Team Orbitamautas aus Studierenden, Fachleuten und Angehoerigen der
+U\'wa-Gemeinschaft; die IAU gab die Namen im Juni 2023 bekannt.
 
-Cuancoa (der Planet): In der Mythologie der Muisca, eines indigenen
-Volkes Kolumbiens, ist Cuancoa der Gott des Regenbogens, des Gluecks und
-des Tanzes - eine passende Wahl fuer einen Planeten, dessen schillernde
-Atmosphaere das Sternenlicht in alle Richtungen streut.
+Cuancoá (der Planet): bezeichnet in der Sprache der U\'wa den
+Morgenstern, \'den Stern des Morgens, der vor der Morgendaemmerung
+untergeht\'.
 
-Uuba (der Stern): Das Wort bedeutet \'Sonne\' in der Sprache der Guahibo
-(Sikuani), einem weiteren indigenen Volk Kolumbiens und Venezuelas.
+Uúba (der Stern): ist in der Sprache der U\'wa das Wort fuer Sterne,
+Samen und Augen.
+
+Die in frueheren Fassungen dieses Dokuments genannte Herleitung aus der
+Muisca-Mythologie (Cuancoa als Gott des Regenbogens) und aus dem
+Guahibo/Sikuani (Uuba = \'Sonne\') ist durch die Quellen zur
+IAU-Benennung nicht gedeckt und wurde in v1.1 korrigiert.
 
 > **\[KN-1.1\]**
 >
-> *Die Benennung nach dem Muisca-Gott des Regenbogens erfolgte 2022 im
-> Rahmen des IAU-Programms zur kulturellen Diversifizierung
+> *Die Benennung nach dem Morgenstern der U\'wa erfolgte im Rahmen des
+> IAU-Programms NameExoWorlds 2022 zur kulturellen Diversifizierung
 > astronomischer Nomenklatur. Der Kurator haelt die Namenswahl fuer
 > bemerkenswert passend - aus Gruenden, die ueber die offensichtliche
-> Assoziation mit Lichtbrechung hinausgehen moegen.*
+> Assoziation mit einem hellen, reflektierenden Himmelskoerper
+> hinausgehen moegen.*
 >
 > *- T.P.K.*
 
@@ -232,13 +245,20 @@ raeumliche Verteilung erlauben.
 
   Dichte \[g/cm3\]        \~1,8                   \-
 
-  Orbitalperiode \[d\]    0,792 (ca. 19 h)        \-
+  Orbitalperiode \[d\]    0,79206410              +/-0,00000014
+                          (19,00954 h)            (Edwards et al. 2023)
 
   Grosse Halbachse \[AU\] 0,0169                  \-
 
-  Entfernung zur Erde     \~260                   \-
-  \[Lj\]                                          
+  Entfernung zur Erde     264,3                   +/-0,4
+  \[Lj\]                                          (Gaia DR3)
   -----------------------------------------------------------------------
+
+Historische Entdeckungswerte (Jenkins et al. 2020): Orbitalperiode
+0,7920520 +/- 0,0000093 d (19,00925 h), Entfernung ca. 260 Lj. Die
+verfeinerte Ephemeride aus HST- und TESS-Daten (Edwards et al. 2023)
+weicht davon um etwa 1,3 Standardabweichungen des Wertes von 2020 ab und
+ist damit vertraeglich.
 
 **2.2 Thermische Eigenschaften**
 
@@ -605,8 +625,8 @@ Interpretationen - der Wolkenmantel als Schutzschild, die XUV-Schwaeche
 des Sterns als beguenstigender Faktor - der Realitaet entsprechen oder
 ob Cuancoa uns einmal mehr ueberraschen wird.
 
-Wie sein mythologischer Namensgeber, der Regenbogengott der Muisca,
-tanzt Cuancoa auf der Grenze zwischen Zerstoerung und Ueberleben - und
+Wie der Morgenstern, nach dem ihn die U\'wa-Sprache benennt, steht
+Cuancoá an der Grenze zwischen Zerstoerung und Ueberleben - und
 reflektiert dabei das Licht seines Sterns in einem kosmischen
 Schauspiel, das wir gerade erst zu verstehen beginnen.
 
@@ -667,6 +687,30 @@ NIRISS. The Astrophysical Journal Letters, 962, L20.
 Fernandez Fernandez, J. et al. (2024). The high-energy environment of
 LTT 9779. MNRAS, 527, 911.
 
+Jenkins, J. S. et al. (2020). An ultrahot Neptune in the Neptune desert.
+Nature Astronomy, 4, 1148-1155.
+
+Edwards, B. et al. (2023). Characterizing a World Within the Hot-Neptune
+Desert: Transit Observations of LTT 9779 b with the Hubble Space
+Telescope/WFC3. The Astronomical Journal, 166, 158.
+DOI: 10.3847/1538-3881/acea77.
+
+Gaia Collaboration, Vallenari, A. et al. (2023). Gaia Data Release 3:
+Summary of the content and survey properties. Astronomy & Astrophysics,
+674, A1.
+
+**Namensgebung**
+
+IAU NameExoWorlds 2022: LTT 9779 / LTT 9779 b (nameexoworlds.iau.org,
+Liste der ExoWorlds 2022 und genehmigte Namen, Juni 2023).
+
+Alcaldia de Bogota / Planetario de Bogota (14.06.2023): Colombia nombro
+una nueva estrella - Uúba und Cuancoá, Team Orbitamautas, lengua U\'wa
+(Tunebo).
+
+El Espectador (07.06.2023): Una estrella y un exoplaneta llevaran nombres
+propuestos por un grupo colombiano.
+
 **Weiterfuehrende Ressourcen**
 
 ESA CHEOPS Pressemitteilung (2023)
@@ -696,3 +740,22 @@ kann zum jetzigen Zeitpunkt nicht beantwortet werden.
 Stand: Dezember 2025
 
 *Dieses Dokument gibt den aktuellen Forschungsstand wieder.*
+
+**Revisionen**
+
+  -----------------------------------------------------------------------
+  **Version** **Datum**    **Aenderung**
+  ----------- ------------ ----------------------------------------------
+  v1.0        2026         Archivausgabe (Stand Dezember 2025)
+
+  v1.1        2026-11-23   Namensherkunft korrigiert (EXT-KG-OTA-20261122-001):
+                           Cuancoá/Uúba stammen aus der Sprache der U\'wa
+                           (Team Orbitamautas, IAU NameExoWorlds 2022), nicht
+                           aus Muisca bzw. Guahibo/Sikuani; §1, KN-1.1 und
+                           §9 angepasst. Entfernung und Periode auf Gaia DR3
+                           bzw. Edwards et al. 2023 aktualisiert, Werte von
+                           2020 als historisch gekennzeichnet
+                           (EXT-KG-OTA-20261122-002). Quelle beider Requests:
+                           RES-20260914-7AF3F420. Signatur und Slug
+                           unveraendert.
+  -----------------------------------------------------------------------
