@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-23T17:48:37.922Z",
+  "generatedAt": "2026-11-23T20:54:13.288Z",
   "summary": {
     "documents": 340,
     "substantial": 196,
@@ -17808,8 +17808,8 @@
         "count": 5
       },
       "metrics": {
-        "words": 1682,
-        "headings": 15,
+        "words": 2140,
+        "headings": 16,
         "images": 0,
         "tables": 1,
         "inlineReferenceTargets": 5
