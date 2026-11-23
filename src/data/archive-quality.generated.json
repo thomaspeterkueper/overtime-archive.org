@@ -1,21 +1,21 @@
 {
-  "generatedAt": "2026-11-21T02:49:12.568Z",
+  "generatedAt": "2026-11-23T14:50:25.380Z",
   "summary": {
     "documents": 338,
     "substantial": 195,
-    "short": 101,
-    "fragments": 42,
+    "short": 100,
+    "fragments": 43,
     "genericTitles": 69,
-    "genericSummaries": 43,
-    "relationGaps": 250,
-    "withoutVisuals": 333,
+    "genericSummaries": 42,
+    "relationGaps": 255,
+    "withoutVisuals": 332,
     "titleReviewA": 0,
-    "titleReviewB": 2,
-    "titleReviewC": 67,
+    "titleReviewB": 3,
+    "titleReviewC": 66,
     "titleReviewOK": 269,
     "safeTitleCandidates": 0,
     "summaryCandidates": 19,
-    "relationCandidates": 1039,
+    "relationCandidates": 1070,
     "safeRelationCandidates": 0
   },
   "documents": [
@@ -425,78 +425,6 @@
       }
     },
     {
-      "file": "OTA-KOM-0002-2026-DE.md",
-      "signature": "OTA-KOM-0002-2026-DE",
-      "series": "KOM",
-      "year": "2026",
-      "language": "DE",
-      "canonical": {
-        "title": "OTA-KOM-0002-2026-DE",
-        "summary": "Weddingsong — Komposition im NOXIA/Ranat-Ek-Kontext.",
-        "relatedCount": 0
-      },
-      "extracted": {
-        "title": null,
-        "author": null,
-        "classification": null,
-        "excerpt": "------------------------ ---------------------------------------------- **Dokumenttyp:** KOM --- Kompositionsdokument · Song"
-      },
-      "titleReview": {
-        "tier": "C",
-        "candidate": null,
-        "evidence": "editorial-decision-required"
-      },
-      "candidates": {
-        "title": null,
-        "derivedTitle": null,
-        "summary": null,
-        "relations": [
-          {
-            "target": "OTA-NAR-XXXX",
-            "evidence": "inline-reference",
-            "safe": false
-          },
-          {
-            "target": "OTA-KOM-0003-2026-DE",
-            "evidence": "inline-reference",
-            "safe": false
-          },
-          {
-            "target": "OTA-CUL-0019",
-            "evidence": "inline-reference",
-            "safe": false
-          },
-          {
-            "target": "OTA-CUL-0020",
-            "evidence": "inline-reference",
-            "safe": false
-          }
-        ],
-        "count": 4
-      },
-      "metrics": {
-        "words": 843,
-        "headings": 0,
-        "images": 0,
-        "tables": 0,
-        "inlineReferenceTargets": 4
-      },
-      "quality": {
-        "substance": "KURZ",
-        "genericTitle": true,
-        "genericSummary": true,
-        "relationGap": true,
-        "flags": [
-          "GENERIC_TITLE",
-          "GENERIC_SUMMARY",
-          "RELATION_GAP",
-          "NO_VISUAL",
-          "NO_HEADINGS"
-        ],
-        "priority": 10
-      }
-    },
-    {
       "file": "OTA-NAR-0003-2026-DE.md",
       "signature": "OTA-NAR-0003-2026-DE",
       "series": "NAR",
@@ -574,68 +502,6 @@
           "RELATION_GAP",
           "NO_VISUAL",
           "NO_HEADINGS"
-        ],
-        "priority": 10
-      }
-    },
-    {
-      "file": "OTA-SCI-0004-2087-DE.md",
-      "signature": "OTA-SCI-0004-2087-DE",
-      "series": "SCI",
-      "year": "2087",
-      "language": "DE",
-      "canonical": {
-        "title": "Spektralanalyse Axis-Kammer-Anomalie",
-        "summary": "Wissenschaftliches Dokument 2087, NOXIA-Universum. Futuristische Forschung im Generation-Mars-Kontext.",
-        "relatedCount": 0
-      },
-      "extracted": {
-        "title": "Spektralanalyse Axis-Kammer-Anomalie",
-        "author": "Dr. Kasumi Nakahara (Xenoarchäologie)",
-        "classification": "WISSENSCHAFTLICHE ANALYSE / LABORPROTOKOLL",
-        "excerpt": "----------------------- ----------------------------------------------- **DOC-ID** OTA-SCI-0004-2087-DE"
-      },
-      "titleReview": {
-        "tier": "OK",
-        "candidate": null,
-        "evidence": "canonical-title"
-      },
-      "candidates": {
-        "title": null,
-        "derivedTitle": null,
-        "summary": null,
-        "relations": [
-          {
-            "target": "OTA-TEC-0003-2087-DE",
-            "evidence": "inline-reference",
-            "safe": false
-          },
-          {
-            "target": "OTA-TEC-0005-2085-DE",
-            "evidence": "inline-reference",
-            "safe": false
-          }
-        ],
-        "count": 2
-      },
-      "metrics": {
-        "words": 252,
-        "headings": 0,
-        "images": 0,
-        "tables": 0,
-        "inlineReferenceTargets": 2
-      },
-      "quality": {
-        "substance": "FRAGMENT",
-        "genericTitle": false,
-        "genericSummary": true,
-        "relationGap": true,
-        "flags": [
-          "GENERIC_SUMMARY",
-          "RELATION_GAP",
-          "NO_VISUAL",
-          "NO_HEADINGS",
-          "LOW_SUBSTANCE"
         ],
         "priority": 10
       }
@@ -1429,6 +1295,101 @@
       }
     },
     {
+      "file": "OTA-SCI-0041-2026-DE.md",
+      "signature": "OTA-SCI-0041-2026-DE",
+      "series": "SCI",
+      "year": "2026",
+      "language": "DE",
+      "canonical": {
+        "title": "OTA-SCI-0041-2026-DE",
+        "summary": "Geomagnetische Polumkehr-Dauern: paläomagnetische Daten und Zenodo-Datenanalyse [R], Dynamomechanismus [H], Systemkopplungs-Hypothesen [S], Geodynamo-Tests [T].",
+        "relatedCount": 0
+      },
+      "extracted": {
+        "title": null,
+        "author": "**Institution** **Beitrag** **Fachgebiet**",
+        "classification": null,
+        "excerpt": "------------------------- --------------------------------------------- **Dokumenttyp:** [R+H+S+T] Geschichtet --- Real → Hypothetisch → Spekulativ → Testbar"
+      },
+      "titleReview": {
+        "tier": "C",
+        "candidate": null,
+        "evidence": "editorial-decision-required"
+      },
+      "candidates": {
+        "title": null,
+        "derivedTitle": null,
+        "summary": null,
+        "relations": [
+          {
+            "target": "OTA-SCI-0041-2026-DE-",
+            "evidence": "inline-reference",
+            "safe": false
+          },
+          {
+            "target": "OTA-SCI-0036-2026-DE",
+            "evidence": "inline-reference",
+            "safe": false
+          },
+          {
+            "target": "OTA-SCI-0037-2026-DE",
+            "evidence": "inline-reference",
+            "safe": false
+          },
+          {
+            "target": "OTA-OBS-0005-2026-DE",
+            "evidence": "inline-reference",
+            "safe": false
+          },
+          {
+            "target": "OTA-FND-0005-2025-DE",
+            "evidence": "inline-reference",
+            "safe": false
+          },
+          {
+            "target": "OTA-FND-0008-2025-DE",
+            "evidence": "inline-reference",
+            "safe": false
+          },
+          {
+            "target": "OTA-SCI-0017-2025-DE",
+            "evidence": "inline-reference",
+            "safe": false
+          },
+          {
+            "target": "OTA-TEC-0029-2048-DE",
+            "evidence": "inline-reference",
+            "safe": false
+          },
+          {
+            "target": "OTA-RED-0023-2026-DE",
+            "evidence": "inline-reference",
+            "safe": false
+          }
+        ],
+        "count": 9
+      },
+      "metrics": {
+        "words": 491,
+        "headings": 0,
+        "images": 1,
+        "tables": 1,
+        "inlineReferenceTargets": 9
+      },
+      "quality": {
+        "substance": "KURZ",
+        "genericTitle": true,
+        "genericSummary": false,
+        "relationGap": true,
+        "flags": [
+          "GENERIC_TITLE",
+          "RELATION_GAP",
+          "NO_HEADINGS"
+        ],
+        "priority": 9
+      }
+    },
+    {
       "file": "OTA-SCI-0060-2026-DE.md",
       "signature": "OTA-SCI-0060-2026-DE",
       "series": "SCI",
@@ -1547,71 +1508,6 @@
           "LOW_SUBSTANCE"
         ],
         "priority": 9
-      }
-    },
-    {
-      "file": "OTA-BIO-0006-2025-DE.md",
-      "signature": "OTA-BIO-0006-2025-DE",
-      "series": "BIO",
-      "year": "2025",
-      "language": "DE",
-      "canonical": {
-        "title": "Lena Kowalski — Frequenz-Sensitive der Zweiten Generation",
-        "summary": "Archivierter Dezember-2025-Stand zu Lena Kowalski; ersetzt durch OTA-BIO-0036-2092-DE.",
-        "relatedCount": 5
-      },
-      "extracted": {
-        "title": null,
-        "author": null,
-        "classification": null,
-        "excerpt": "> **Archivhinweis (2026-09-05):** Dieses Profil dokumentiert den Arbeits- und Kanonstand von Dezember 2025 und ist nicht mehr der aktuelle Figurenstand. Kanonischer Nachfolger ist **OTA-BIO-0036-2092-DE**. Die folgenden historischen Angaben bleiben zur Nachvollziehbarkeit der Entwicklung unverändert erhalten."
-      },
-      "titleReview": {
-        "tier": "OK",
-        "candidate": null,
-        "evidence": "canonical-title"
-      },
-      "candidates": {
-        "title": null,
-        "derivedTitle": null,
-        "summary": {
-          "value": "> **Archivhinweis (2026-09-05):** Dieses Profil dokumentiert den Arbeits- und Kanonstand von Dezember 2025 und ist nicht mehr der aktuelle Figurenstand. Kanonischer Nachfolger ist **OTA-BIO-0036-2092-DE**. Die folgenden historischen Angaben bleiben zur Nachvollziehbarkeit der Entwicklung unverändert erhalten.",
-          "evidence": "first-substantive-paragraph",
-          "safe": false
-        },
-        "relations": [
-          {
-            "target": "OTA-RED-0016",
-            "evidence": "inline-reference",
-            "safe": false
-          },
-          {
-            "target": "OTA-LOC-0001-2091-DE",
-            "evidence": "inline-reference",
-            "safe": false
-          }
-        ],
-        "count": 3
-      },
-      "metrics": {
-        "words": 650,
-        "headings": 0,
-        "images": 0,
-        "tables": 1,
-        "inlineReferenceTargets": 7
-      },
-      "quality": {
-        "substance": "KURZ",
-        "genericTitle": false,
-        "genericSummary": true,
-        "relationGap": true,
-        "flags": [
-          "GENERIC_SUMMARY",
-          "RELATION_GAP",
-          "NO_VISUAL",
-          "NO_HEADINGS"
-        ],
-        "priority": 8
       }
     },
     {
@@ -1736,6 +1632,67 @@
         "images": 0,
         "tables": 0,
         "inlineReferenceTargets": 8
+      },
+      "quality": {
+        "substance": "KURZ",
+        "genericTitle": false,
+        "genericSummary": true,
+        "relationGap": true,
+        "flags": [
+          "GENERIC_SUMMARY",
+          "RELATION_GAP",
+          "NO_VISUAL",
+          "NO_HEADINGS"
+        ],
+        "priority": 8
+      }
+    },
+    {
+      "file": "OTA-SCI-0004-2087-DE.md",
+      "signature": "OTA-SCI-0004-2087-DE",
+      "series": "SCI",
+      "year": "2087",
+      "language": "DE",
+      "canonical": {
+        "title": "Spektralanalyse Axis-Kammer-Anomalie",
+        "summary": "Wissenschaftliches Dokument 2087, NOXIA-Universum. Futuristische Forschung im Generation-Mars-Kontext.",
+        "relatedCount": 0
+      },
+      "extracted": {
+        "title": "Spektralanalyse Axis-Kammer-Anomalie",
+        "author": "Dr. Kasumi Nakahara (Xenoarchäologie)",
+        "classification": "WISSENSCHAFTLICHE ANALYSE / LABORPROTOKOLL",
+        "excerpt": "----------------------- ----------------------------------------------- **DOC-ID** OTA-SCI-0004-2087-DE"
+      },
+      "titleReview": {
+        "tier": "OK",
+        "candidate": null,
+        "evidence": "canonical-title"
+      },
+      "candidates": {
+        "title": null,
+        "derivedTitle": null,
+        "summary": null,
+        "relations": [
+          {
+            "target": "OTA-TEC-0003-2087-DE",
+            "evidence": "inline-reference",
+            "safe": false
+          },
+          {
+            "target": "OTA-TEC-0005-2085-DE",
+            "evidence": "inline-reference",
+            "safe": false
+          }
+        ],
+        "count": 2
+      },
+      "metrics": {
+        "words": 546,
+        "headings": 0,
+        "images": 0,
+        "tables": 0,
+        "inlineReferenceTargets": 2
       },
       "quality": {
         "substance": "KURZ",
@@ -1994,16 +1951,21 @@
             "target": "OTA-RED-0015-2156",
             "evidence": "inline-reference",
             "safe": false
+          },
+          {
+            "target": "OTA-BIO-DIANA-BELLMANN",
+            "evidence": "inline-reference",
+            "safe": false
           }
         ],
-        "count": 3
+        "count": 4
       },
       "metrics": {
-        "words": 891,
+        "words": 967,
         "headings": 0,
         "images": 0,
         "tables": 0,
-        "inlineReferenceTargets": 3
+        "inlineReferenceTargets": 4
       },
       "quality": {
         "substance": "KURZ",
@@ -2328,102 +2290,6 @@
         "images": 0,
         "tables": 1,
         "inlineReferenceTargets": 3
-      },
-      "quality": {
-        "substance": "SUBSTANZIELL",
-        "genericTitle": true,
-        "genericSummary": false,
-        "relationGap": true,
-        "flags": [
-          "GENERIC_TITLE",
-          "RELATION_GAP",
-          "NO_VISUAL",
-          "NO_HEADINGS"
-        ],
-        "priority": 7
-      }
-    },
-    {
-      "file": "OTA-BIO-0027-2026-DE.md",
-      "signature": "OTA-BIO-0027-2026-DE",
-      "series": "BIO",
-      "year": "2026",
-      "language": "DE",
-      "canonical": {
-        "title": "OTA-BIO-0027-2026-DE",
-        "summary": "Mia Kowalski — Protagonistin der Kette vom Hexenteich. Geburtsdatum 7. Juli 2011 (Krebs, Hase, Numerologie 9).",
-        "relatedCount": 0
-      },
-      "extracted": {
-        "title": null,
-        "author": null,
-        "classification": null,
-        "excerpt": "| **Dokumenttyp:** | Biographical Documentation | | --- | --- | | **Signatur:** | OTA-BIO-0027-2026-DE | | **Temporaler Marker:** | 2026 (Archivierung) · Handlung: Gegenwart | | **Epistemol. Marker:** | [F] Fiktiv durchgehend | | **Version:** | 1.0 Erstarchivierung | | **Status:** | Kanonisch | | **Serie:** | Die Kette vom Hexenteich | | **Zielgruppe Roma…"
-      },
-      "titleReview": {
-        "tier": "C",
-        "candidate": null,
-        "evidence": "editorial-decision-required"
-      },
-      "candidates": {
-        "title": null,
-        "derivedTitle": null,
-        "summary": null,
-        "relations": [
-          {
-            "target": "OTA-FND-0024-2026-DE",
-            "evidence": "inline-reference",
-            "safe": false
-          },
-          {
-            "target": "OTA-TEC-0035-2026-DE",
-            "evidence": "inline-reference",
-            "safe": false
-          },
-          {
-            "target": "OTA-SCI-0059",
-            "evidence": "inline-reference",
-            "safe": false
-          },
-          {
-            "target": "OTA-SCI-0060",
-            "evidence": "inline-reference",
-            "safe": false
-          },
-          {
-            "target": "OTA-FND-0025-2026-DE",
-            "evidence": "inline-reference",
-            "safe": false
-          },
-          {
-            "target": "OTA-TEC-0035",
-            "evidence": "inline-reference",
-            "safe": false
-          },
-          {
-            "target": "OTA-SCI-0059-2026-DE",
-            "evidence": "inline-reference",
-            "safe": false
-          },
-          {
-            "target": "OTA-SCI-0060-2026-DE",
-            "evidence": "inline-reference",
-            "safe": false
-          },
-          {
-            "target": "OTA-BIO-0028",
-            "evidence": "inline-reference",
-            "safe": false
-          }
-        ],
-        "count": 9
-      },
-      "metrics": {
-        "words": 1612,
-        "headings": 0,
-        "images": 0,
-        "tables": 1,
-        "inlineReferenceTargets": 9
       },
       "quality": {
         "substance": "SUBSTANZIELL",
@@ -3884,6 +3750,82 @@
       }
     },
     {
+      "file": "OTA-KOM-0002-2026-DE.md",
+      "signature": "OTA-KOM-0002-2026-DE",
+      "series": "KOM",
+      "year": "2026",
+      "language": "DE",
+      "canonical": {
+        "title": "OTA-KOM-0002-2026-DE",
+        "summary": "Weddingsong als Duett (männliche Stimme Englisch, weibliche Stimme Thai) – Komposition im NOXIA/Ranat-Ek-Kontext.",
+        "relatedCount": 0
+      },
+      "extracted": {
+        "title": null,
+        "author": null,
+        "classification": null,
+        "excerpt": "------------------------ ---------------------------------------------- **Dokumenttyp:** KOM --- Kompositionsdokument · Song · Duett-Partitur"
+      },
+      "titleReview": {
+        "tier": "C",
+        "candidate": null,
+        "evidence": "editorial-decision-required"
+      },
+      "candidates": {
+        "title": null,
+        "derivedTitle": null,
+        "summary": null,
+        "relations": [
+          {
+            "target": "OTA-NAR-XXXX",
+            "evidence": "inline-reference",
+            "safe": false
+          },
+          {
+            "target": "OTA-KOM-0003-2026-DE",
+            "evidence": "inline-reference",
+            "safe": false
+          },
+          {
+            "target": "OTA-CUL-0019",
+            "evidence": "inline-reference",
+            "safe": false
+          },
+          {
+            "target": "OTA-CUL-0020",
+            "evidence": "inline-reference",
+            "safe": false
+          },
+          {
+            "target": "OTA-KOM-0002-2026-DE-",
+            "evidence": "inline-reference",
+            "safe": false
+          }
+        ],
+        "count": 5
+      },
+      "metrics": {
+        "words": 1444,
+        "headings": 0,
+        "images": 0,
+        "tables": 1,
+        "inlineReferenceTargets": 5
+      },
+      "quality": {
+        "substance": "SUBSTANZIELL",
+        "genericTitle": true,
+        "genericSummary": false,
+        "relationGap": true,
+        "flags": [
+          "GENERIC_TITLE",
+          "RELATION_GAP",
+          "NO_VISUAL",
+          "NO_HEADINGS"
+        ],
+        "priority": 7
+      }
+    },
+    {
       "file": "OTA-KOM-0003-2026-DE.md",
       "signature": "OTA-KOM-0003-2026-DE",
       "series": "KOM",
@@ -4274,7 +4216,7 @@
         "count": 2
       },
       "metrics": {
-        "words": 2217,
+        "words": 2586,
         "headings": 0,
         "images": 0,
         "tables": 0,
@@ -4350,19 +4292,24 @@
             "target": "OTA-FND-0001",
             "evidence": "inline-reference",
             "safe": false
+          },
+          {
+            "target": "OTA-SCI-0018",
+            "evidence": "inline-reference",
+            "safe": false
           }
         ],
-        "count": 6
+        "count": 7
       },
       "metrics": {
-        "words": 1151,
+        "words": 1225,
         "headings": 0,
         "images": 0,
         "tables": 0,
-        "inlineReferenceTargets": 6
+        "inlineReferenceTargets": 7
       },
       "quality": {
-        "substance": "KURZ",
+        "substance": "SUBSTANZIELL",
         "genericTitle": true,
         "genericSummary": false,
         "relationGap": true,
@@ -4436,97 +4383,6 @@
         "images": 0,
         "tables": 0,
         "inlineReferenceTargets": 5
-      },
-      "quality": {
-        "substance": "SUBSTANZIELL",
-        "genericTitle": true,
-        "genericSummary": false,
-        "relationGap": true,
-        "flags": [
-          "GENERIC_TITLE",
-          "RELATION_GAP",
-          "NO_VISUAL",
-          "NO_HEADINGS"
-        ],
-        "priority": 7
-      }
-    },
-    {
-      "file": "OTA-SCI-0041-2026-DE.md",
-      "signature": "OTA-SCI-0041-2026-DE",
-      "series": "SCI",
-      "year": "2026",
-      "language": "DE",
-      "canonical": {
-        "title": "OTA-SCI-0041-2026-DE",
-        "summary": "Geomagnetische Polumkehr-Dauern: paläomagnetische Daten [R], Dynamomechanismus [H], Systemkopplungs-Hypothesen [S].",
-        "relatedCount": 0
-      },
-      "extracted": {
-        "title": null,
-        "author": "**Institution** **Beitrag** **Fachgebiet**",
-        "classification": null,
-        "excerpt": "------------------------- --------------------------------------------- **Dokumenttyp:** [R+H+S+T] Geschichtet --- Real → Hypothetisch → Spekulativ → Testbar"
-      },
-      "titleReview": {
-        "tier": "C",
-        "candidate": null,
-        "evidence": "editorial-decision-required"
-      },
-      "candidates": {
-        "title": null,
-        "derivedTitle": null,
-        "summary": null,
-        "relations": [
-          {
-            "target": "OTA-SCI-0036",
-            "evidence": "inline-reference",
-            "safe": false
-          },
-          {
-            "target": "OTA-SCI-0036-2026-DE",
-            "evidence": "inline-reference",
-            "safe": false
-          },
-          {
-            "target": "OTA-SCI-0037-2026-DE",
-            "evidence": "inline-reference",
-            "safe": false
-          },
-          {
-            "target": "OTA-OBS-0005-2026-DE",
-            "evidence": "inline-reference",
-            "safe": false
-          },
-          {
-            "target": "OTA-FND-0005-2025-DE",
-            "evidence": "inline-reference",
-            "safe": false
-          },
-          {
-            "target": "OTA-FND-0008-2025-DE",
-            "evidence": "inline-reference",
-            "safe": false
-          },
-          {
-            "target": "OTA-SCI-0017-2025-DE",
-            "evidence": "inline-reference",
-            "safe": false
-          },
-          {
-            "target": "OTA-TEC-0029-2048-DE",
-            "evidence": "inline-reference",
-            "safe": false
-          }
-        ],
-        "count": 8
-      },
-      "metrics": {
-        "words": 1224,
-        "headings": 0,
-        "images": 0,
-        "tables": 0,
-        "inlineReferenceTargets": 8
       },
       "quality": {
         "substance": "SUBSTANZIELL",
@@ -5128,6 +4984,76 @@
       }
     },
     {
+      "file": "OTA-BIO-0006-2025-DE.md",
+      "signature": "OTA-BIO-0006-2025-DE",
+      "series": "BIO",
+      "year": "2025",
+      "language": "DE",
+      "canonical": {
+        "title": "Lena Kowalski — Frequenz-Sensitive der Zweiten Generation",
+        "summary": "Archivierter Dezember-2025-Stand zu Lena Kowalski; ersetzt durch OTA-BIO-0036-2092-DE.",
+        "relatedCount": 5
+      },
+      "extracted": {
+        "title": null,
+        "author": null,
+        "classification": null,
+        "excerpt": "> **Archivhinweis (2026-09-05):** Dieses Profil dokumentiert den Arbeits- und Kanonstand von Dezember 2025 und ist nicht mehr der aktuelle Figurenstand. Kanonischer Nachfolger ist **OTA-BIO-0036-2092-DE**. Die folgenden historischen Angaben bleiben zur Nachvollziehbarkeit der Entwicklung unverändert erhalten."
+      },
+      "titleReview": {
+        "tier": "OK",
+        "candidate": null,
+        "evidence": "canonical-title"
+      },
+      "candidates": {
+        "title": null,
+        "derivedTitle": null,
+        "summary": {
+          "value": "> **Archivhinweis (2026-09-05):** Dieses Profil dokumentiert den Arbeits- und Kanonstand von Dezember 2025 und ist nicht mehr der aktuelle Figurenstand. Kanonischer Nachfolger ist **OTA-BIO-0036-2092-DE**. Die folgenden historischen Angaben bleiben zur Nachvollziehbarkeit der Entwicklung unverändert erhalten.",
+          "evidence": "first-substantive-paragraph",
+          "safe": false
+        },
+        "relations": [
+          {
+            "target": "OTA-RED-0016",
+            "evidence": "inline-reference",
+            "safe": false
+          },
+          {
+            "target": "OTA-LOC-0001-2091-DE",
+            "evidence": "inline-reference",
+            "safe": false
+          },
+          {
+            "target": "OTA-BIO-0011-2091-DE",
+            "evidence": "inline-reference",
+            "safe": false
+          }
+        ],
+        "count": 4
+      },
+      "metrics": {
+        "words": 721,
+        "headings": 0,
+        "images": 0,
+        "tables": 1,
+        "inlineReferenceTargets": 8
+      },
+      "quality": {
+        "substance": "KURZ",
+        "genericTitle": false,
+        "genericSummary": true,
+        "relationGap": true,
+        "flags": [
+          "GENERIC_SUMMARY",
+          "RELATION_GAP",
+          "NO_VISUAL",
+          "NO_HEADINGS"
+        ],
+        "priority": 6
+      }
+    },
+    {
       "file": "OTA-BIO-0010-2025-DE.md",
       "signature": "OTA-BIO-0010-2025-DE",
       "series": "BIO",
@@ -5161,7 +5087,7 @@
         "count": 1
       },
       "metrics": {
-        "words": 635,
+        "words": 667,
         "headings": 0,
         "images": 0,
         "tables": 1,
@@ -5176,6 +5102,170 @@
           "GENERIC_SUMMARY",
           "NO_VISUAL",
           "NO_HEADINGS"
+        ],
+        "priority": 6
+      }
+    },
+    {
+      "file": "OTA-BIO-0027-2026-DE.md",
+      "signature": "OTA-BIO-0027-2026-DE",
+      "series": "BIO",
+      "year": "2026",
+      "language": "DE",
+      "canonical": {
+        "title": "OTA-BIO-0027-2026-DE",
+        "summary": "Mia Kowalski — Protagonistin der Kette vom Hexenteich. Geburtsdatum 7. Juli 2011 (Krebs, Hase, Numerologie 9).",
+        "relatedCount": 0
+      },
+      "extracted": {
+        "title": null,
+        "author": null,
+        "classification": null,
+        "excerpt": "**Signatur:** OTA-BIO-0027-2026-DE · v1.2 **Temporaler Marker:** 2026 (Archivierung) · Handlung: Gegenwart **Epistemologische Marker:** `[F]` Fiktiv durchgehend · `[R-Anker]` wo angegeben **Version:** 1.2 — Aktualisiert auf TEC-0035 v1.3 Canon (Kostenprogression 6 Stufen/Entzugsachse, Zwei Stillen, Kap. 20–22, Querverbindungen ergänzt, A-1-Grenze) **Statu…"
+      },
+      "titleReview": {
+        "tier": "B",
+        "candidate": "Protagonistin · Trägerin der Kette vom Hexenteich",
+        "evidence": "first-non-structural-heading"
+      },
+      "candidates": {
+        "title": null,
+        "derivedTitle": {
+          "value": "Protagonistin · Trägerin der Kette vom Hexenteich",
+          "evidence": "first-non-structural-heading",
+          "safe": false
+        },
+        "summary": null,
+        "relations": [
+          {
+            "target": "OTA-BIO-0027",
+            "evidence": "inline-reference",
+            "safe": false
+          },
+          {
+            "target": "OTA-FND-0024",
+            "evidence": "inline-reference",
+            "safe": false
+          },
+          {
+            "target": "OTA-TEC-0035",
+            "evidence": "inline-reference",
+            "safe": false
+          },
+          {
+            "target": "OTA-TEC-0123",
+            "evidence": "inline-reference",
+            "safe": false
+          },
+          {
+            "target": "OTA-TEC-0124",
+            "evidence": "inline-reference",
+            "safe": false
+          },
+          {
+            "target": "OTA-SCI-0059",
+            "evidence": "inline-reference",
+            "safe": false
+          },
+          {
+            "target": "OTA-SCI-0060",
+            "evidence": "inline-reference",
+            "safe": false
+          },
+          {
+            "target": "OTA-SCI-0117",
+            "evidence": "inline-reference",
+            "safe": false
+          },
+          {
+            "target": "OTA-SCI-0119",
+            "evidence": "inline-reference",
+            "safe": false
+          },
+          {
+            "target": "OTA-FND-0025",
+            "evidence": "inline-reference",
+            "safe": false
+          },
+          {
+            "target": "OTA-BIO-0028",
+            "evidence": "inline-reference",
+            "safe": false
+          },
+          {
+            "target": "OTA-FND-0024-2026-DE",
+            "evidence": "inline-reference",
+            "safe": false
+          },
+          {
+            "target": "OTA-TEC-0035-2026-DE",
+            "evidence": "inline-reference",
+            "safe": false
+          },
+          {
+            "target": "OTA-TEC-0123-2026-DE",
+            "evidence": "inline-reference",
+            "safe": false
+          },
+          {
+            "target": "OTA-TEC-0124-2026-DE",
+            "evidence": "inline-reference",
+            "safe": false
+          },
+          {
+            "target": "OTA-SCI-0059-2026-DE",
+            "evidence": "inline-reference",
+            "safe": false
+          },
+          {
+            "target": "OTA-SCI-0060-2026-DE",
+            "evidence": "inline-reference",
+            "safe": false
+          },
+          {
+            "target": "OTA-SCI-0117-2026-DE",
+            "evidence": "inline-reference",
+            "safe": false
+          },
+          {
+            "target": "OTA-SCI-0119-2026-DE",
+            "evidence": "inline-reference",
+            "safe": false
+          },
+          {
+            "target": "OTA-FND-0025-2026-DE",
+            "evidence": "inline-reference",
+            "safe": false
+          },
+          {
+            "target": "OTA-BIO-0028-2026-DE",
+            "evidence": "inline-reference",
+            "safe": false
+          },
+          {
+            "target": "OTA-BIO-0027-2026-DE-",
+            "evidence": "inline-reference",
+            "safe": false
+          }
+        ],
+        "count": 23
+      },
+      "metrics": {
+        "words": 1304,
+        "headings": 25,
+        "images": 0,
+        "tables": 1,
+        "inlineReferenceTargets": 22
+      },
+      "quality": {
+        "substance": "SUBSTANZIELL",
+        "genericTitle": true,
+        "genericSummary": false,
+        "relationGap": true,
+        "flags": [
+          "GENERIC_TITLE",
+          "RELATION_GAP",
+          "NO_VISUAL"
         ],
         "priority": 6
       }
@@ -5216,7 +5306,7 @@
         "count": 1
       },
       "metrics": {
-        "words": 1880,
+        "words": 1956,
         "headings": 2,
         "images": 0,
         "tables": 1,
@@ -5927,59 +6017,6 @@
       }
     },
     {
-      "file": "OTA-RED-0017-2091-DE.md",
-      "signature": "OTA-RED-0017-2091-DE",
-      "series": "RED",
-      "year": "2091",
-      "language": "DE",
-      "canonical": {
-        "title": "Die vier Ausfälle — Untersuchungsbericht zum Solar Student Exchange Program 2091",
-        "summary": "Klassifiziertes Dokument 2091 — NOXIA-Universum.",
-        "relatedCount": 4
-      },
-      "extracted": {
-        "title": null,
-        "author": null,
-        "classification": null,
-        "excerpt": "+-----------------------------------------------------------------------+ | **▓▓ KLASSIFIZIERT ▓▓** | | | | Freigabestufe: [CURATOR] | +-----------------------------------------------------------------------+"
-      },
-      "titleReview": {
-        "tier": "OK",
-        "candidate": null,
-        "evidence": "canonical-title"
-      },
-      "candidates": {
-        "title": null,
-        "derivedTitle": null,
-        "summary": {
-          "value": "+-----------------------------------------------------------------------+ | **▓▓ KLASSIFIZIERT ▓▓** | | | | Freigabestufe: [CURATOR] | +-----------------------------------------------------------------------+",
-          "evidence": "first-substantive-paragraph",
-          "safe": false
-        },
-        "relations": [],
-        "count": 1
-      },
-      "metrics": {
-        "words": 638,
-        "headings": 0,
-        "images": 0,
-        "tables": 1,
-        "inlineReferenceTargets": 4
-      },
-      "quality": {
-        "substance": "KURZ",
-        "genericTitle": false,
-        "genericSummary": true,
-        "relationGap": false,
-        "flags": [
-          "GENERIC_SUMMARY",
-          "NO_VISUAL",
-          "NO_HEADINGS"
-        ],
-        "priority": 6
-      }
-    },
-    {
       "file": "OTA-RED-0018-2091-DE.md",
       "signature": "OTA-RED-0018-2091-DE",
       "series": "RED",
@@ -6071,6 +6108,62 @@
         "relationGap": false,
         "flags": [
           "GENERIC_SUMMARY",
+          "NO_VISUAL",
+          "NO_HEADINGS"
+        ],
+        "priority": 6
+      }
+    },
+    {
+      "file": "OTA-SCI-0024-2026-DE.md",
+      "signature": "OTA-SCI-0024-2026-DE",
+      "series": "SCI",
+      "year": "2026",
+      "language": "DE",
+      "canonical": {
+        "title": "Ein skalares Feldmediator-Modell für Neutrino-Dunkle-Materie-Wechselwirkungen",
+        "summary": "Skalares Feldmediator-Modell: theoretische Physik [T/H], AVI-Integration [W/S].",
+        "relatedCount": 3
+      },
+      "extracted": {
+        "title": null,
+        "author": null,
+        "classification": null,
+        "excerpt": "-------------------------- -------------------------------------------- **Dokumenttyp:** Wissenschaftliche Publikation"
+      },
+      "titleReview": {
+        "tier": "OK",
+        "candidate": null,
+        "evidence": "canonical-title"
+      },
+      "candidates": {
+        "title": null,
+        "derivedTitle": null,
+        "summary": null,
+        "relations": [
+          {
+            "target": "OTA-REQ-20261121-002",
+            "evidence": "inline-reference",
+            "safe": false
+          }
+        ],
+        "count": 1
+      },
+      "metrics": {
+        "words": 1483,
+        "headings": 0,
+        "images": 0,
+        "tables": 1,
+        "inlineReferenceTargets": 4
+      },
+      "quality": {
+        "substance": "SUBSTANZIELL",
+        "genericTitle": false,
+        "genericSummary": true,
+        "relationGap": true,
+        "flags": [
+          "GENERIC_SUMMARY",
+          "RELATION_GAP",
           "NO_VISUAL",
           "NO_HEADINGS"
         ],
@@ -6217,6 +6310,61 @@
           "GENERIC_TITLE",
           "RELATION_GAP",
           "NO_VISUAL"
+        ],
+        "priority": 6
+      }
+    },
+    {
+      "file": "OTA-SCI-0095-2026-DE.md",
+      "signature": "OTA-SCI-0095-2026-DE",
+      "series": "SCI",
+      "year": "2026",
+      "language": "DE",
+      "canonical": {
+        "title": "Galaktische zentrale Oberflächendichte — emergente Gravitation als Modell-Diskriminationsfall",
+        "summary": "Evidenzdossier zur galaktischen zentralen Oberflächendichte als Modell-Diskriminationsfall für emergente Gravitation, MOND und Dunkle-Materie-Halos; numerische Übereinstimmung wird ausdrücklich nicht als eindeutige Modellidentifikation behandelt.",
+        "relatedCount": 3
+      },
+      "extracted": {
+        "title": null,
+        "author": null,
+        "classification": null,
+        "excerpt": "# Galaktische zentrale Oberflächendichte — emergente Gravitation als Modell-Diskriminationsfall"
+      },
+      "titleReview": {
+        "tier": "OK",
+        "candidate": null,
+        "evidence": "canonical-title"
+      },
+      "candidates": {
+        "title": null,
+        "derivedTitle": null,
+        "summary": null,
+        "relations": [
+          {
+            "target": "OTA-REQ-20261120-002",
+            "evidence": "inline-reference",
+            "safe": false
+          }
+        ],
+        "count": 1
+      },
+      "metrics": {
+        "words": 241,
+        "headings": 9,
+        "images": 0,
+        "tables": 0,
+        "inlineReferenceTargets": 1
+      },
+      "quality": {
+        "substance": "FRAGMENT",
+        "genericTitle": false,
+        "genericSummary": false,
+        "relationGap": true,
+        "flags": [
+          "RELATION_GAP",
+          "NO_VISUAL",
+          "LOW_SUBSTANCE"
         ],
         "priority": 6
       }
@@ -6382,6 +6530,61 @@
         "images": 0,
         "tables": 0,
         "inlineReferenceTargets": 2
+      },
+      "quality": {
+        "substance": "FRAGMENT",
+        "genericTitle": false,
+        "genericSummary": false,
+        "relationGap": true,
+        "flags": [
+          "RELATION_GAP",
+          "NO_VISUAL",
+          "LOW_SUBSTANCE"
+        ],
+        "priority": 6
+      }
+    },
+    {
+      "file": "OTA-SCI-0109-2026-DE.md",
+      "signature": "OTA-SCI-0109-2026-DE",
+      "series": "SCI",
+      "year": "2026",
+      "language": "DE",
+      "canonical": {
+        "title": "Stromnetz-Engpässe: Erzeugung, Transportkapazität, Redispatch und Flexibilität",
+        "summary": "Brückendokument: Grounding-Regel für Stromnetze in NOXIA und zukünftigen Welten; Realteil (Netzengpässe Deutschland 2025/2026, Redispatch, Flexibilität) in KUE-SCI-0214-2026-DE.",
+        "relatedCount": 0
+      },
+      "extracted": {
+        "title": null,
+        "author": null,
+        "classification": null,
+        "excerpt": "**Stand:** 22. November 2026 **Status:** wissenschaftlich-technisches Evidenzdossier **Anlass:** `EXT-ENG-OTA-20260925-grid-congestion-curtailment-dossier`"
+      },
+      "titleReview": {
+        "tier": "OK",
+        "candidate": null,
+        "evidence": "canonical-title"
+      },
+      "candidates": {
+        "title": null,
+        "derivedTitle": null,
+        "summary": null,
+        "relations": [
+          {
+            "target": "OTA-REQ-20261116-001",
+            "evidence": "inline-reference",
+            "safe": false
+          }
+        ],
+        "count": 1
+      },
+      "metrics": {
+        "words": 203,
+        "headings": 5,
+        "images": 0,
+        "tables": 0,
+        "inlineReferenceTargets": 1
       },
       "quality": {
         "substance": "FRAGMENT",
@@ -6842,7 +7045,7 @@
         "count": 3
       },
       "metrics": {
-        "words": 807,
+        "words": 835,
         "headings": 18,
         "images": 0,
         "tables": 1,
@@ -6891,7 +7094,7 @@
         "count": 0
       },
       "metrics": {
-        "words": 487,
+        "words": 561,
         "headings": 0,
         "images": 0,
         "tables": 0,
@@ -8063,6 +8266,11 @@
             "safe": false
           },
           {
+            "target": "OTA-FND-0021-2026-DE-",
+            "evidence": "inline-reference",
+            "safe": false
+          },
+          {
             "target": "OTA-FND-0019",
             "evidence": "inline-reference",
             "safe": false
@@ -8073,14 +8281,14 @@
             "safe": false
           }
         ],
-        "count": 5
+        "count": 6
       },
       "metrics": {
-        "words": 1297,
-        "headings": 28,
+        "words": 1237,
+        "headings": 39,
         "images": 0,
         "tables": 1,
-        "inlineReferenceTargets": 4
+        "inlineReferenceTargets": 5
       },
       "quality": {
         "substance": "SUBSTANZIELL",
@@ -9026,14 +9234,14 @@
       "language": "DE",
       "canonical": {
         "title": "DIE FÜNF GEHIRN-EPOCHEN — Referenzmodul",
-        "summary": "Schnellreferenz: Fünf Epochen des Gehirns und vier Wendepunkte der neuronalen Architektur. Kompakte Übersicht [R] mit spekulativen Erweiterungen [S].",
+        "summary": "Schnellreferenz: Fünf Abschnitte der Gehirnverschaltung und vier Wendepunkte nach Mousley et al. (2025) [R], Realgrundlage in KUE-SCI-0212-2026-DE; klinische Zuordnungen [I] und spekulative Erweiterungen [S] getrennt.",
         "relatedCount": 1
       },
       "extracted": {
         "title": null,
         "author": null,
         "classification": null,
-        "excerpt": "**Quelle:** Mousley et al. (2025), Nature Communications **DOI:** 10.1038/s41467-025-65974-8 **Vollständige Dokumentation:** OTA-SCI-0019-2025-DE"
+        "excerpt": "**Quelle:** Mousley et al. (2025), Nature Communications **DOI:** 10.1038/s41467-025-65974-8 **Realgrundlage:** `DOC:KUE:KUE-SCI-0212-2026-DE` (Befunde, Grenzen, Quellen) **Werkbezug:** OTA-SCI-0019-2025-DE"
       },
       "titleReview": {
         "tier": "OK",
@@ -9054,7 +9262,7 @@
         "count": 1
       },
       "metrics": {
-        "words": 540,
+        "words": 666,
         "headings": 16,
         "images": 0,
         "tables": 1,
@@ -9376,6 +9584,59 @@
       }
     },
     {
+      "file": "OTA-RED-0017-2091-DE.md",
+      "signature": "OTA-RED-0017-2091-DE",
+      "series": "RED",
+      "year": "2091",
+      "language": "DE",
+      "canonical": {
+        "title": "Die vier Ausfälle — Untersuchungsbericht zum Solar Student Exchange Program 2091",
+        "summary": "Klassifiziertes Dokument 2091 — NOXIA-Universum.",
+        "relatedCount": 4
+      },
+      "extracted": {
+        "title": null,
+        "author": null,
+        "classification": null,
+        "excerpt": "+-----------------------------------------------------------------------+ | **▓▓ KLASSIFIZIERT ▓▓** | | | | Freigabestufe: [CURATOR] | +-----------------------------------------------------------------------+"
+      },
+      "titleReview": {
+        "tier": "OK",
+        "candidate": null,
+        "evidence": "canonical-title"
+      },
+      "candidates": {
+        "title": null,
+        "derivedTitle": null,
+        "summary": {
+          "value": "+-----------------------------------------------------------------------+ | **▓▓ KLASSIFIZIERT ▓▓** | | | | Freigabestufe: [CURATOR] | +-----------------------------------------------------------------------+",
+          "evidence": "first-substantive-paragraph",
+          "safe": false
+        },
+        "relations": [],
+        "count": 1
+      },
+      "metrics": {
+        "words": 718,
+        "headings": 0,
+        "images": 0,
+        "tables": 1,
+        "inlineReferenceTargets": 4
+      },
+      "quality": {
+        "substance": "KURZ",
+        "genericTitle": false,
+        "genericSummary": true,
+        "relationGap": false,
+        "flags": [
+          "GENERIC_SUMMARY",
+          "NO_VISUAL",
+          "NO_HEADINGS"
+        ],
+        "priority": 4
+      }
+    },
+    {
       "file": "OTA-SCI-0015-2025-DE.md",
       "signature": "OTA-SCI-0015-2025-DE",
       "series": "SCI",
@@ -9474,55 +9735,6 @@
         "flags": [
           "RELATION_GAP",
           "NO_VISUAL"
-        ],
-        "priority": 4
-      }
-    },
-    {
-      "file": "OTA-SCI-0024-2026-DE.md",
-      "signature": "OTA-SCI-0024-2026-DE",
-      "series": "SCI",
-      "year": "2026",
-      "language": "DE",
-      "canonical": {
-        "title": "Ein skalares Feldmediator-Modell für Neutrino-Dunkle-Materie-Wechselwirkungen",
-        "summary": "Skalares Feldmediator-Modell: theoretische Physik [T/H], AVI-Integration [W/S].",
-        "relatedCount": 3
-      },
-      "extracted": {
-        "title": null,
-        "author": null,
-        "classification": null,
-        "excerpt": "-------------------------- -------------------------------------------- **Dokumenttyp:** Wissenschaftliche Publikation"
-      },
-      "titleReview": {
-        "tier": "OK",
-        "candidate": null,
-        "evidence": "canonical-title"
-      },
-      "candidates": {
-        "title": null,
-        "derivedTitle": null,
-        "summary": null,
-        "relations": [],
-        "count": 0
-      },
-      "metrics": {
-        "words": 1470,
-        "headings": 0,
-        "images": 0,
-        "tables": 1,
-        "inlineReferenceTargets": 3
-      },
-      "quality": {
-        "substance": "SUBSTANZIELL",
-        "genericTitle": false,
-        "genericSummary": true,
-        "relationGap": false,
-        "flags": [
-          "GENERIC_SUMMARY",
-          "NO_VISUAL",
-          "NO_HEADINGS"
         ],
         "priority": 4
       }
@@ -10685,7 +10897,7 @@
         "count": 2
       },
       "metrics": {
-        "words": 776,
+        "words": 860,
         "headings": 0,
         "images": 0,
         "tables": 1,
@@ -10849,6 +11061,66 @@
         "genericSummary": false,
         "relationGap": false,
         "flags": [
+          "NO_VISUAL",
+          "NO_HEADINGS"
+        ],
+        "priority": 3
+      }
+    },
+    {
+      "file": "OTA-BIO-0015-2091-DE.md",
+      "signature": "OTA-BIO-0015-2091-DE",
+      "series": "BIO",
+      "year": "2091",
+      "language": "DE",
+      "canonical": {
+        "title": "Kaelen Voss — Das Ceres-Kind",
+        "summary": "Kaelen Voss — das Ceres-Kind. 2091, NOXIA-Universum. Aufgewachsen im Asteroidengürtel.",
+        "relatedCount": 5
+      },
+      "extracted": {
+        "title": null,
+        "author": null,
+        "classification": null,
+        "excerpt": "--------------------- ------------------------------------------------- **Dokumenttyp:** Biographisches Profil"
+      },
+      "titleReview": {
+        "tier": "OK",
+        "candidate": null,
+        "evidence": "canonical-title"
+      },
+      "candidates": {
+        "title": null,
+        "derivedTitle": null,
+        "summary": null,
+        "relations": [
+          {
+            "target": "OTA-SCI-0025-2091-DE",
+            "evidence": "inline-reference",
+            "safe": false
+          },
+          {
+            "target": "OTA-BIO-0014-2092-DE",
+            "evidence": "inline-reference",
+            "safe": false
+          }
+        ],
+        "count": 2
+      },
+      "metrics": {
+        "words": 1391,
+        "headings": 0,
+        "images": 0,
+        "tables": 1,
+        "inlineReferenceTargets": 7
+      },
+      "quality": {
+        "substance": "SUBSTANZIELL",
+        "genericTitle": false,
+        "genericSummary": false,
+        "relationGap": true,
+        "flags": [
+          "RELATION_GAP",
           "NO_VISUAL",
           "NO_HEADINGS"
         ],
@@ -12182,16 +12454,21 @@
             "target": "OTA-FND-0001",
             "evidence": "inline-reference",
             "safe": false
+          },
+          {
+            "target": "OTA-SCI-0017-2025-EN",
+            "evidence": "inline-reference",
+            "safe": false
           }
         ],
-        "count": 1
+        "count": 2
       },
       "metrics": {
-        "words": 1030,
+        "words": 1106,
         "headings": 0,
         "images": 0,
         "tables": 0,
-        "inlineReferenceTargets": 3
+        "inlineReferenceTargets": 4
       },
       "quality": {
         "substance": "KURZ",
@@ -12322,6 +12599,61 @@
       }
     },
     {
+      "file": "OTA-SCI-0024-2026-EN.md",
+      "signature": "OTA-SCI-0024-2026-EN",
+      "series": "SCI",
+      "year": "2026",
+      "language": "EN",
+      "canonical": {
+        "title": "A Scalar Field Mediator for Neutrino-Dark Matter Interactions — Resolving the S₈ and Hubble Tensions",
+        "summary": "Scalar field mediator model: theoretical physics [T/H], AVI integration [W/S]. English version.",
+        "relatedCount": 3
+      },
+      "extracted": {
+        "title": null,
+        "author": null,
+        "classification": null,
+        "excerpt": "-------------------------- -------------------------------------------- **Document Type:** Scientific Publication"
+      },
+      "titleReview": {
+        "tier": "OK",
+        "candidate": null,
+        "evidence": "canonical-title"
+      },
+      "candidates": {
+        "title": null,
+        "derivedTitle": null,
+        "summary": null,
+        "relations": [
+          {
+            "target": "OTA-REQ-20261121-002",
+            "evidence": "inline-reference",
+            "safe": false
+          }
+        ],
+        "count": 1
+      },
+      "metrics": {
+        "words": 1666,
+        "headings": 0,
+        "images": 0,
+        "tables": 1,
+        "inlineReferenceTargets": 4
+      },
+      "quality": {
+        "substance": "SUBSTANZIELL",
+        "genericTitle": false,
+        "genericSummary": false,
+        "relationGap": true,
+        "flags": [
+          "RELATION_GAP",
+          "NO_VISUAL",
+          "NO_HEADINGS"
+        ],
+        "priority": 3
+      }
+    },
+    {
       "file": "OTA-SCI-0025-2091-DE.md",
       "signature": "OTA-SCI-0025-2091-DE",
       "series": "SCI",
@@ -12420,7 +12752,7 @@
         "count": 4
       },
       "metrics": {
-        "words": 991,
+        "words": 1151,
         "headings": 0,
         "images": 0,
         "tables": 1,
@@ -13962,7 +14294,7 @@
         "count": 5
       },
       "metrics": {
-        "words": 1224,
+        "words": 1274,
         "headings": 24,
         "images": 0,
         "tables": 1,
@@ -14041,7 +14373,7 @@
         "count": 6
       },
       "metrics": {
-        "words": 1375,
+        "words": 1417,
         "headings": 26,
         "images": 0,
         "tables": 1,
@@ -14221,6 +14553,11 @@
             "safe": false
           },
           {
+            "target": "OTA-FND-0016",
+            "evidence": "inline-reference",
+            "safe": false
+          },
+          {
             "target": "OTA-SCI-0044-2026-DE",
             "evidence": "inline-reference",
             "safe": false
@@ -14232,6 +14569,11 @@
           },
           {
             "target": "OTA-FND-0013B-2026-DE",
+            "evidence": "inline-reference",
+            "safe": false
+          },
+          {
+            "target": "OTA-FND-0016-2026-DE",
             "evidence": "inline-reference",
             "safe": false
           },
@@ -14271,14 +14613,14 @@
             "safe": false
           }
         ],
-        "count": 18
+        "count": 20
       },
       "metrics": {
-        "words": 1846,
-        "headings": 21,
+        "words": 2177,
+        "headings": 22,
         "images": 0,
         "tables": 1,
-        "inlineReferenceTargets": 22
+        "inlineReferenceTargets": 24
       },
       "quality": {
         "substance": "SUBSTANZIELL",
@@ -15486,7 +15828,7 @@
       "language": "DE",
       "canonical": {
         "title": "Relikt-Fenster — Spätaktive Wasser- und Eisdynamik auf Mars und Erde",
-        "summary": "Relikt-Fenster: kosmologische Beobachtungen [R], theoretische Interpretation [T/S], AVI-Framework [W].",
+        "summary": "Relikt-Fenster: spätes Wasser auf dem Mars (Zhurong) und holozäne Enteisung des Prudhoe Dome als Realanker [R/I], Relikt-Fenster-Taxonomie und Frequenz-Hypothese [S], Transfer in die Werke [T/W]; Realteile in KUE-SCI-0202 und KUE-SCI-0213.",
         "relatedCount": 6
       },
       "extracted": {
@@ -15529,7 +15871,7 @@
         "count": 4
       },
       "metrics": {
-        "words": 2859,
+        "words": 2600,
         "headings": 26,
         "images": 0,
         "tables": 0,
@@ -15588,16 +15930,21 @@
             "target": "OTA-TEC-0028-2070-DE",
             "evidence": "inline-reference",
             "safe": false
+          },
+          {
+            "target": "OTA-REQ-20261121-001",
+            "evidence": "inline-reference",
+            "safe": false
           }
         ],
-        "count": 3
+        "count": 4
       },
       "metrics": {
-        "words": 2648,
+        "words": 2854,
         "headings": 29,
         "images": 0,
         "tables": 1,
-        "inlineReferenceTargets": 5
+        "inlineReferenceTargets": 6
       },
       "quality": {
         "substance": "SUBSTANZIELL",
@@ -16485,7 +16832,7 @@
         "count": 16
       },
       "metrics": {
-        "words": 1358,
+        "words": 1419,
         "headings": 12,
         "images": 0,
         "tables": 1,
@@ -17374,19 +17721,29 @@
             "safe": false
           },
           {
+            "target": "OTA-TEC-0082",
+            "evidence": "inline-reference",
+            "safe": false
+          },
+          {
+            "target": "OTA-TEC-0093",
+            "evidence": "inline-reference",
+            "safe": false
+          },
+          {
             "target": "OTA-REQ-20261105-002",
             "evidence": "inline-reference",
             "safe": false
           }
         ],
-        "count": 3
+        "count": 5
       },
       "metrics": {
-        "words": 1048,
+        "words": 1682,
         "headings": 15,
         "images": 0,
         "tables": 1,
-        "inlineReferenceTargets": 3
+        "inlineReferenceTargets": 5
       },
       "quality": {
         "substance": "SUBSTANZIELL",
@@ -17441,8 +17798,8 @@
         "count": 2
       },
       "metrics": {
-        "words": 1102,
-        "headings": 13,
+        "words": 1402,
+        "headings": 14,
         "images": 0,
         "tables": 0,
         "inlineReferenceTargets": 5
@@ -17505,8 +17862,8 @@
         "count": 3
       },
       "metrics": {
-        "words": 1110,
-        "headings": 16,
+        "words": 1345,
+        "headings": 17,
         "images": 0,
         "tables": 1,
         "inlineReferenceTargets": 5
@@ -17747,53 +18104,6 @@
         "relationGap": true,
         "flags": [
           "RELATION_GAP",
-          "NO_VISUAL"
-        ],
-        "priority": 2
-      }
-    },
-    {
-      "file": "OTA-SCI-0095-2026-DE.md",
-      "signature": "OTA-SCI-0095-2026-DE",
-      "series": "SCI",
-      "year": "2026",
-      "language": "DE",
-      "canonical": {
-        "title": "Galaktische zentrale Oberflächendichte — emergente Gravitation als Modell-Diskriminationsfall",
-        "summary": "Evidenzdossier zur galaktischen zentralen Oberflächendichte als Modell-Diskriminationsfall für emergente Gravitation, MOND und Dunkle-Materie-Halos; numerische Übereinstimmung wird ausdrücklich nicht als eindeutige Modellidentifikation behandelt.",
-        "relatedCount": 3
-      },
-      "extracted": {
-        "title": null,
-        "author": null,
-        "classification": null,
-        "excerpt": "# Galaktische zentrale Oberflächendichte — emergente Gravitation als Modell-Diskriminationsfall"
-      },
-      "titleReview": {
-        "tier": "OK",
-        "candidate": null,
-        "evidence": "canonical-title"
-      },
-      "candidates": {
-        "title": null,
-        "derivedTitle": null,
-        "summary": null,
-        "relations": [],
-        "count": 0
-      },
-      "metrics": {
-        "words": 398,
-        "headings": 11,
-        "images": 0,
-        "tables": 0,
-        "inlineReferenceTargets": 0
-      },
-      "quality": {
-        "substance": "KURZ",
-        "genericTitle": false,
-        "genericSummary": false,
-        "relationGap": false,
-        "flags": [
           "NO_VISUAL"
         ],
         "priority": 2
@@ -18356,7 +18666,7 @@
         "count": 1
       },
       "metrics": {
-        "words": 938,
+        "words": 1022,
         "headings": 13,
         "images": 1,
         "tables": 0,
@@ -20458,54 +20768,6 @@
       }
     },
     {
-      "file": "OTA-BIO-0015-2091-DE.md",
-      "signature": "OTA-BIO-0015-2091-DE",
-      "series": "BIO",
-      "year": "2091",
-      "language": "DE",
-      "canonical": {
-        "title": "Kaelen Voss — Das Ceres-Kind",
-        "summary": "Kaelen Voss — das Ceres-Kind. 2091, NOXIA-Universum. Aufgewachsen im Asteroidengürtel.",
-        "relatedCount": 5
-      },
-      "extracted": {
-        "title": null,
-        "author": null,
-        "classification": null,
-        "excerpt": "--------------------- ------------------------------------------------- **Dokumenttyp:** Biographisches Profil"
-      },
-      "titleReview": {
-        "tier": "OK",
-        "candidate": null,
-        "evidence": "canonical-title"
-      },
-      "candidates": {
-        "title": null,
-        "derivedTitle": null,
-        "summary": null,
-        "relations": [],
-        "count": 0
-      },
-      "metrics": {
-        "words": 1307,
-        "headings": 0,
-        "images": 0,
-        "tables": 1,
-        "inlineReferenceTargets": 5
-      },
-      "quality": {
-        "substance": "SUBSTANZIELL",
-        "genericTitle": false,
-        "genericSummary": false,
-        "relationGap": false,
-        "flags": [
-          "NO_VISUAL",
-          "NO_HEADINGS"
-        ],
-        "priority": 1
-      }
-    },
-    {
       "file": "OTA-CUL-0002-60000BCE-DE.md",
       "signature": "OTA-CUL-0002-60000BCE-DE",
       "series": "CUL",
@@ -20735,54 +20997,6 @@
       },
       "quality": {
         "substance": "KURZ",
-        "genericTitle": false,
-        "genericSummary": false,
-        "relationGap": false,
-        "flags": [
-          "NO_VISUAL",
-          "NO_HEADINGS"
-        ],
-        "priority": 1
-      }
-    },
-    {
-      "file": "OTA-SCI-0024-2026-EN.md",
-      "signature": "OTA-SCI-0024-2026-EN",
-      "series": "SCI",
-      "year": "2026",
-      "language": "EN",
-      "canonical": {
-        "title": "A Scalar Field Mediator for Neutrino-Dark Matter Interactions — Resolving the S₈ and Hubble Tensions",
-        "summary": "Scalar field mediator model: theoretical physics [T/H], AVI integration [W/S]. English version.",
-        "relatedCount": 3
-      },
-      "extracted": {
-        "title": null,
-        "author": null,
-        "classification": null,
-        "excerpt": "-------------------------- -------------------------------------------- **Document Type:** Scientific Publication"
-      },
-      "titleReview": {
-        "tier": "OK",
-        "candidate": null,
-        "evidence": "canonical-title"
-      },
-      "candidates": {
-        "title": null,
-        "derivedTitle": null,
-        "summary": null,
-        "relations": [],
-        "count": 0
-      },
-      "metrics": {
-        "words": 1650,
-        "headings": 0,
-        "images": 0,
-        "tables": 1,
-        "inlineReferenceTargets": 3
-      },
-      "quality": {
-        "substance": "SUBSTANZIELL",
         "genericTitle": false,
         "genericSummary": false,
         "relationGap": false,
@@ -21436,7 +21650,7 @@
         "count": 0
       },
       "metrics": {
-        "words": 4879,
+        "words": 5098,
         "headings": 88,
         "images": 0,
         "tables": 1,
@@ -21483,7 +21697,7 @@
         "count": 0
       },
       "metrics": {
-        "words": 5162,
+        "words": 5217,
         "headings": 54,
         "images": 0,
         "tables": 1,
@@ -21671,8 +21885,8 @@
         "count": 0
       },
       "metrics": {
-        "words": 803,
-        "headings": 15,
+        "words": 911,
+        "headings": 16,
         "images": 0,
         "tables": 0,
         "inlineReferenceTargets": 0
@@ -21770,53 +21984,6 @@
         "images": 0,
         "tables": 0,
         "inlineReferenceTargets": 2
-      },
-      "quality": {
-        "substance": "SUBSTANZIELL",
-        "genericTitle": false,
-        "genericSummary": false,
-        "relationGap": false,
-        "flags": [
-          "NO_VISUAL"
-        ],
-        "priority": 0
-      }
-    },
-    {
-      "file": "OTA-SCI-0109-2026-DE.md",
-      "signature": "OTA-SCI-0109-2026-DE",
-      "series": "SCI",
-      "year": "2026",
-      "language": "DE",
-      "canonical": {
-        "title": "Stromnetz-Engpässe: Erzeugung, Transportkapazität, Redispatch und Flexibilität",
-        "summary": "Evidenzdossier zu Stromnetz-Engpässen und erneuerbarer Integration: Deutschland 2025/2026 als Realanker für die Trennung von Erzeugung, Anschlussleistung, Übertragung, Verteilung, Flexibilität und Speicherung; mit expliziten Grenzen für Extrapolationen auf zukünftige terrestrische und außerirdische Energiesysteme.",
-        "relatedCount": 0
-      },
-      "extracted": {
-        "title": null,
-        "author": null,
-        "classification": null,
-        "excerpt": "**Stand:** 18. Oktober 2026 **Status:** wissenschaftlich-technisches Evidenzdossier **Anlass:** `EXT-ENG-OTA-20260925-grid-congestion-curtailment-dossier`"
-      },
-      "titleReview": {
-        "tier": "OK",
-        "candidate": null,
-        "evidence": "canonical-title"
-      },
-      "candidates": {
-        "title": null,
-        "derivedTitle": null,
-        "summary": null,
-        "relations": [],
-        "count": 0
-      },
-      "metrics": {
-        "words": 1923,
-        "headings": 42,
-        "images": 0,
-        "tables": 1,
-        "inlineReferenceTargets": 0
       },
       "quality": {
         "substance": "SUBSTANZIELL",
