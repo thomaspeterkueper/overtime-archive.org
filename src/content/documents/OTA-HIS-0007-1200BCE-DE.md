@@ -308,6 +308,14 @@ Die Shu-Zivilisation in Sanxingdui (Sichuan, China) erlebte um ~1100 BCE einen e
 
 ---
 
+**Drive-Variante (vermerkt 23.11.2026, EXT-ECO-OTA-20261103-001)**
+
+- `OTA-HIS-0007-1200BCE-DE (1).md` (04.02.2026): Parallelfassung vom selben Tag mit anderer Gliederung, Delphi als Synthese-Ort, Chronologie und Wissensfragmenten – https://drive.google.com/file/d/1dVYbc6w5OSCcOTWznl3XJNxb0_mzyKRB/view
+
+Nicht übernommen: gleich alte Parallelfassung ohne erkennbare Versionsfolge. Gültig bleibt diese Fassung; die Drive-Fassung ist als Variante dokumentiert.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
 **ENDE DOKUMENT**
 
 *Für das OverTime Archive*

@@ -344,6 +344,14 @@ Der Sprung von Göbekli Tepe (9500 BCE) zu den Megalith-Traditionen Westeuropas 
 
 ---
 
+**Drive-Variante (vermerkt 23.11.2026, EXT-ECO-OTA-20261103-001)**
+
+- „Der Ur-Tempel und das Baumeister-Paradoxon“ (`OTA-HIS-0006-9500BCE-DE (1).md`, 04.02.2026): Parallelfassung vom selben Tag mit Abschnitten zum Baumeister-Paradoxon, Ikonographie als Code, Transferrouten und offenen Forschungsfragen – https://drive.google.com/file/d/1_l9cgiUluJHGlwXOEuvVDTppvkfyFvi_/view
+
+Nicht übernommen: gleich alte Parallelfassung ohne erkennbare Versionsfolge. Gültig bleibt diese Fassung; die Drive-Fassung ist als Variante dokumentiert.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
 **ENDE DOKUMENT**
 
 *Für das OverTime Archive*
