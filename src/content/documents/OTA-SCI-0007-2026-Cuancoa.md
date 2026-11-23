@@ -7,7 +7,7 @@ series: "SCI"
 seriesNumber: 7
 year: 2026
 language: "DE"
-version: "v1.1"
+version: "v1.2"
 status: "AKTIV"
 accessLevel: 0
 epistemicStatus: ["R", "T", "S"]
@@ -681,11 +681,14 @@ dayside of an exo-Neptune. Nature Astronomy.
 Ramirez Reyes, R. et al. (2025). A closer look at LTT 9779b: The
 ESPRESSO endeavour. Astronomy & Astrophysics, 695, A26.
 
-Radica, M. et al. (2024). Atmospheric analysis of LTT 9779 b with JWST
-NIRISS. The Astrophysical Journal Letters, 962, L20.
+Radica, M. et al. (2024). Muted Features in the JWST NIRISS Transmission
+Spectrum of Hot Neptune LTT 9779b. The Astrophysical Journal Letters,
+962, L20. arXiv:2401.15548.
 
-Fernandez Fernandez, J. et al. (2024). The high-energy environment of
-LTT 9779. MNRAS, 527, 911.
+Fernandez Fernandez, J., Wheatley, P. J., King, G. W., Jenkins, J. S.
+(2024). Survival in the Neptune desert: LTT 9779 b kept its atmosphere
+thanks to an unusually X-ray faint host star. MNRAS, 527, 911.
+arXiv:2310.13171.
 
 Jenkins, J. S. et al. (2020). An ultrahot Neptune in the Neptune desert.
 Nature Astronomy, 4, 1148-1155.
@@ -713,7 +716,8 @@ propuestos por un grupo colombiano.
 
 **Weiterfuehrende Ressourcen**
 
-ESA CHEOPS Pressemitteilung (2023)
+ESA: Cheops shows scorching exoplanet acts like a mirror.
+Pressemitteilung, 10.07.2023 (esa.int)
 
 NASA Exoplanet Archive: LTT 9779 b
 
@@ -758,4 +762,11 @@ Stand: Dezember 2025
                            (EXT-KG-OTA-20261122-002). Quelle beider Requests:
                            RES-20260914-7AF3F420. Signatur und Slug
                            unveraendert.
+
+  v1.2        2026-11-23   Bibliographie nach Quellenpruefung 2026-11
+                           (OTA-REQ-20261106-quellenpruefung): Titel von
+                           Radica et al. 2024 und Fernandez Fernandez et
+                           al. 2024 korrigiert, Autoren und arXiv
+                           ergaenzt; ESA-Pressemitteilung mit Titel und
+                           Datum. Inhalt unveraendert.
   -----------------------------------------------------------------------

@@ -145,3 +145,7 @@ OTA-SCI-0043, -0044, -0045, -0047, -0048-2031, -0057, -0058, -0059, -0060, -0061
 ## Wirkung
 
 Nur OTA-intern. Wo ein KUE-Gegenstück dieselbe Angabe trägt, prüft die Begutachtung dort mit.
+
+## Fortschritt
+
+- 2026-11-23 – OTA-SCI-0007-2026-Cuancoa v1.2 (Ökosystem-Kreislauf, Claude, Branch `claude/OTA-REQ-20261106-quellenpruefung-sci0007`): Radica 2024 und Fernández Fernández 2024 korrigiert, ESA-Pressemitteilung präzisiert (Cheops shows scorching exoplanet acts like a mirror, 10.07.2023). Befunde des Dokuments erledigt.
