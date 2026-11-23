@@ -2,6 +2,7 @@
 
 Updated: 2026-08-29
 Status: canonical schema for technical object dossiers
+Related: `docs/ota-tec-object-dossier-schema-v1.5.md` (German 22-point content structure, v1.5 FROZEN), `docs/ota-tec-instance-schema.md` (instance references)
 
 ## Purpose and ownership
 
