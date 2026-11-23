@@ -24,7 +24,7 @@ relatedDocuments:
     relation: "related"
     context: "Bereits in der Legacy-Inline-Liste des Ausgangsdokuments als relatedDocuments hinterlegt; beim Encoding-Pass erhalten."
 summary: "Vollständiger Dokumentationsindex des Resonanzklassifikations-Formalismus RKF: Architekturübersicht aller RKF-Dokumente von SCI-0044 bis FND-0016. Metadokument mit Verweisstruktur."
-updatedAt: "2026-09-25T09:31:12+02:00"
+updatedAt: "2026-11-23T10:30:00+01:00"
 provenance:
   reviewedAt: "2026-09-25T09:31:12+02:00"
   reviewStatus: "metadata-reviewed"
@@ -83,13 +83,11 @@ OTA-FND-0014 [R+T+S+F]
 OTA-FND-0015 [META]
     └── Epistemologische Schichtung: Wissenschaft vs. Fiktion
          │
-         ↓
-OTA-FND-0013A [F]
-    └── Messhandbuch: In-Universe-Operationalisierung
-         │
-         ↓
-OTA-FND-0013B [R+F]
-    └── Π-BIO-Addendum: Bioenergetische Fenster (SOL-HELIO-01)
+         ├──────────────────┬──────────────────┐
+         ↓                  ↓                  ↓
+OTA-FND-0013A [F]    OTA-FND-0013B [R+F]  OTA-FND-0016 [R+F]
+  Messhandbuch         Π-BIO-Addendum       SOL-HELIO-01
+  (In-Universe)        (Bioenergetik)       (Final Report)
 ```
 
 ---
@@ -439,6 +437,91 @@ OTA-FND-0013B [R+F]
 
 ---
 
+### 8. OTA-FND-0016-2026-DE
+**Titel:** SOL-HELIO-01 Kampagnenbericht – Vollständige Sonnensystem-Klassifikation  
+**Status:** [R] Real (Messdaten) + [F] Fiktional (χ-Werte, Szenarien)  
+**Inhalt:**
+
+**Executive Summary:**
+- Ein dominanter E/F-Knoten (Erde)
+- Drei E-Nischen-Kandidaten: Enceladus 🥇, Europa 🥈, Titan 🥉
+- χ-Topologie: Stark punktförmig, SOL = S2-D/E-System
+- Haupterkenntnis: E-Übergang ist Ψ-limitiert, nicht Φ-limitiert
+
+**Vollständige Körper-Klassifikation:**
+
+**Inneres System:**
+- Merkur (S1-B, χ~10⁻¹⁰), Venus (S1-D, χ~6×10⁻⁶)
+- **Erde (S1-E/F, χ~1.0)** – Referenzanker
+- Mond (S1-B, χ~10⁻¹¹), Mars (S1-B/C, χ~1.7×10⁻¹⁰)
+
+**Asteroidengürtel:**
+- Population (S2-C, χ~9×10⁻⁹)
+- Ceres (S1-C/D), Vesta (S1-B)
+
+**Jupiter-System:**
+- Jupiter (S1-D, χ~3×10⁻⁶), Io (S1-D, χ~5×10⁻⁷)
+- **Europa (S1-C/D, χ~1.7×10⁻⁷)** – E-Nische plausibel
+- Ganymed (S1-C), Callisto (S1-B)
+
+**Saturn-System:**
+- Saturn (S1-D, χ~2.5×10⁻⁶)
+- **Enceladus (S1-C/D, χ~1.6×10⁻⁷)** – Beste E-Nische
+- **Titan (S1-C/D, χ~1.9×10⁻⁷)** – Dual-Szenario (SURF/SUB)
+
+**Äußeres System:**
+- Uranus (S1-C/D, χ~1.4×10⁻⁶), Neptun (S1-D, χ~2×10⁻⁶)
+- Triton (S1-C/D, χ~1.7×10⁻⁷)
+- Kuipergürtel (S2-B/C), Pluto (S1-C/D), Oort (S2-A/B)
+
+**Gesamtsystem:**
+- **SOL: S2-D/E-Π_SOLSYS-R3** (D-System mit E/F-Insel)
+
+**χ-Hierarchie (vollständig):**
+```
+10⁰  │ ████ Erde (E/F)
+10⁻² │ ▓▓ Erdorbit (Halo)
+10⁻⁶ │ ▒▒ Venus, Jupiter, Saturn, Neptun (D-Welten)
+10⁻⁷ │ ░░ Titan, Europa, Enceladus, Triton (E-Kandidaten)
+10⁻⁹ │ · Gürtel-Populationen
+10⁻¹⁰│ · Mars, Merkur, Mond
+```
+
+**Bioenergetische Analyse:**
+- Ampel-Tafel (Φ-Fähigkeit, N/P-Gate, Ψ-Skalierbarkeit)
+- E-Kandidaten-Ranking mit Begründung
+- Limitierende Faktoren: Transport, Nährstoffe, Skalierung
+
+**Missionsempfehlungen:**
+1. **Enceladus** (Plume-Sampling, höchste Priorität)
+2. **Europa** (Penetrator, Ozean-Verifikation)
+3. **Titan** (Dragonfly + Subsurface-Mission)
+
+**Terraforming-Strategien:**
+- Mars-Pfad (D→E): Atmosphäre, Hydrosphäre, Schumann-Netz, Biosphären-Seeding
+- Eiswelt-Pfad (C/D→E-Nische): Energie, Transport, Nährstoffe
+- RFG-Limit als harte Grenze: Eiswelten = E-Nischen-Parks, keine zweiten Erden
+
+**Kuratorische Erkenntnisse:**
+- SOL ist kohärenzarm mit singulärem χ-Peak
+- E-Übergang ist Ψ-limitiert (Transport + Nährstoffe + Zeit)
+- Globales E auf Eiswelten bleibt unerreichbar (RFG-Volumen-Limit)
+- Mars vs. Eiswelten haben unterschiedliche Terraforming-Ziele
+
+**Anhänge:**
+- Vollständige RKF-Adressen-Liste (alle Körper)
+- Missionszeitplan 2024–2050+
+- χ-Topologie-Visualisierung
+
+**Epistemologie:**
+- [R]: Π-MIN-Werte, Φ-Berechnungen, Molekülnachweise
+- [S]: η_chem, N/P-Klassen, Mix-Effizienz, Subsurface-Ozeane
+- [F]: χ-Werte, AVI-Parameter, Terraforming-Hebel, Resonanzanker
+
+**Status:** Final Report – Vollständige SOL-HELIO-01-Kampagne
+
+---
+
 ## Verwendungsempfehlungen
 
 ### Für wissenschaftliche Anwendungen
@@ -505,6 +588,8 @@ OTA-FND-0013B [R+F]
 ## Versionierung
 
 **RKF v1.0:** Aktueller Stand (16. Februar 2026)
+
+**Ergänzung 23.11.2026:** Abschnitt 8 (OTA-FND-0016) und die verzweigte Dokumentenarchitektur aus der erweiterten Drive-Fassung „OTA-INDEX-RKF-2026 (1).md“ (16.02.2026, https://drive.google.com/file/d/1fSeWXX7hvSRnkdr23h50vNf5qiTkD3rO/view) übernommen und gegen `OTA-FND-0016-2026-DE` geprüft (EXT-ECO-OTA-20261030-003). Kein inhaltlicher Versionssprung des RKF.
 
 **Geplante Revisionen:**
 - **v1.1:** Bei empirischer Validierung (JWST-Biosignaturen, Mars-Schumann)
