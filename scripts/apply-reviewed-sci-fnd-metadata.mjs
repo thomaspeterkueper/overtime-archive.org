@@ -162,6 +162,25 @@ function epistemicYaml(values) {
   return `epistemicStatus: [${values.map(value => `"${value}"`).join(', ')}]`;
 }
 
+function parseVersion(value) {
+  const match = String(value).match(/^v?(\d+(?:\.\d+)*)$/);
+  return match ? match[1].split('.').map(Number) : null;
+}
+
+// Eine spätere, redaktionell vergebene Revision (z. B. v2.1 nach geprüfter v2.0)
+// gilt als bereits kuratiert und wird nicht zurückgesetzt.
+function isLaterRevision(fm, reviewedVersion) {
+  const current = fm.match(/^version:\s*"([^"]+)"/m);
+  const a = current ? parseVersion(current[1]) : null;
+  const b = parseVersion(reviewedVersion);
+  if (!a || !b) return false;
+  for (let i = 0; i < Math.max(a.length, b.length); i += 1) {
+    const diff = (a[i] || 0) - (b[i] || 0);
+    if (diff !== 0) return diff > 0;
+  }
+  return false;
+}
+
 function patchFrontmatter(raw, review) {
   const match = raw.match(/^---\s*\r?\n([\s\S]*?)\r?\n---\s*\r?\n?/);
   if (!match) throw new Error(`${review.signature}: missing frontmatter`);
@@ -185,7 +204,7 @@ function patchFrontmatter(raw, review) {
     if (fm.includes(expectedLine)) {
       fm = fm.replace(expectedLine, desiredLine);
       semanticChanged = true;
-    } else if (!fm.includes(desiredLine)) {
+    } else if (!fm.includes(desiredLine) && !isLaterRevision(fm, review.version)) {
       throw new Error(`${review.signature}: version changed since review; refusing to overwrite`);
     }
   }
