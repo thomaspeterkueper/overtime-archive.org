@@ -171,7 +171,7 @@ function patchMetadata(raw) {
   if (fm.includes(expectedVersion)) {
     fm = fm.replace(expectedVersion, desiredVersion);
     changed = true;
-  } else if (!fm.includes(desiredVersion)) {
+  } else if (!fm.includes(desiredVersion) && !isLaterVersion(fm)) {
     throw new Error(`${TARGET_SIGNATURE}: version changed since review; refusing to overwrite`);
   }
 
@@ -225,10 +225,23 @@ function validateTargets() {
   }
 }
 
+// A later curated revision (e.g. v1.2 after OTA-REQ-20261029-001) counts as
+// already repaired; older or malformed versions still abort.
+function isLaterVersion(text) {
+  const m = text.match(/^version:\s*"v(\d+)\.(\d+)"/m);
+  const c = CANONICAL_VERSION.match(/^v(\d+)\.(\d+)$/);
+  if (!m || !c) return false;
+  const [maj, min] = [Number(m[1]), Number(m[2])];
+  const [cMaj, cMin] = [Number(c[1]), Number(c[2])];
+  return maj > cMaj || (maj === cMaj && min > cMin);
+}
+
 function validateCandidate(text) {
+  if (!text.includes(`version: "${CANONICAL_VERSION}"`) && !isLaterVersion(text)) {
+    throw new Error(`${TARGET_SIGNATURE}: repaired candidate missing sentinel: version: "${CANONICAL_VERSION}"`);
+  }
   const required = [
     `title: "${CANONICAL_TITLE}"`,
-    `version: "${CANONICAL_VERSION}"`,
     EXPECTED_EPISTEMIC,
     `reviewedAt: "${REVIEWED_AT}"`,
     'Größe vergleichbar mit der Venus',
