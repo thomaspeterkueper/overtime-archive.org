@@ -58,7 +58,8 @@ const reviews = [
       { target: 'OTA-SCI-0035-2026-DE', relation: 'related', evidence: 'explicit-related-section' },
       { target: 'OTA-SCI-0030-2025-DE', relation: 'related', evidence: 'explicit-related-section' },
     ],
-    sentinels: ['CH₃', 'außerhalb der Milchstraße', 'z ≈ 0.08', '10¹² L☉', '10⁶ cm⁻³', '3–5 µm', '✓', '2–10×'],
+    // v1.1 (OTA-REQ-20261122-001 A): Rotverschiebung, NIRSpec-Bereich und Modellfaktor korrigiert; Sentinels angepasst.
+    sentinels: ['CH₃', 'außerhalb der Milchstraße', 'z = 0,0878', '10¹² L☉', '10⁶ cm⁻³', '2,87–5,27 µm', '✓', 'R ≈ 2700'],
   },
   {
     signature: 'OTA-FND-0013-2026-DE',
