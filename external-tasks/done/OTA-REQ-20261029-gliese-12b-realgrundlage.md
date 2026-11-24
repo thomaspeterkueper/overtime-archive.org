@@ -1,6 +1,7 @@
 # OTA-REQ-20261029-001 – OTA-SCI-0031-2024-DE (Gliese 12 b): Realgrundlage aktualisieren
 
-Status: open
+Status: done
+Erledigt: 2026-11-24 – Ökosystem-Kreislauf (Claude), Branch `claude/OTA-REQ-20261029-001`.
 Datum: 2026-10-29
 Quelle: Begutachtung nach ECO-ARC-0037 (Claude)
 Prüfbericht: `kueper-ecosystem/reviews/2026-10-29-OTA-SCI-0031-2024-DE.md`
@@ -25,3 +26,19 @@ Betrifft: nur [R]/[T]-Abschnitte (I, II, V, VII, X, Quellen). Fiktion/Setzung (V
 `OTA-SCI-0030-2025-DE` enthält dieselben falschen Signaturen (`OTA-SCI-0031-2025-DE`, `OTA-SCI-0032-2025-DE`) und „Gliese-12 … 42 °C“ – bei dessen Begutachtung mit erledigen.
 
 Wirkung auf andere Repos: KG-Datensätze zu Gliese 12 b, falls vorhanden (nicht prüfbar, kein Zugriff in diesem Lauf).
+
+## Umgesetzt
+
+OTA-SCI-0031-2024-DE v1.2 (nur [R]/[T]-Abschnitte und Kernaussagen; VI.2, VIII, IX unverändert bis auf die Temperaturangabe in 9.1):
+
+1. Masse 0,95 (+0,26/−0,27) M⊕ und Dichte 7,0 (+2,3/−2,1) g/cm³ nach Turner et al. (2025, MNRAS 545, arXiv:2506.20564 v2 – die veröffentlichte Fassung nennt K = 0,70 m/s und 3,6σ, nicht 0,67 m/s/3,2σ/6,4 g/cm³ wie im Request) sowie 0,71 ± 0,12 M⊕ nach Brady et al. (2025); KN-02 auf „mit Erde und Venus verträglich“ abgeschwächt.
+2. Sternparameter: ≈ 0,24 M☉, ≈ 0,26 R☉, Alter ≈ 7 (+2,8/−2,2) Gyr, Rotation ≈ 85 d, ⟨log R′HK⟩ ≈ −5,62.
+3. „~42 °C“ überall (Summary, Kuratoranmerkung, 2.2, 6.1, 9.1, X) als Gleichgewichtstemperatur 315 K bei Albedo 0 gefasst; ≈ 220 K bei venusartiger Albedo; Lage knapp innerhalb der inneren HZ-Grenze ergänzt.
+4. Radius vereinheitlicht: 0,90 R⊕ (Turner et al. 2025), Entdeckungsarbeiten ≈ 0,96 R⊕.
+5. JWST-Status: Stand November 2026 keine veröffentlichten Ergebnisse (am 2026-11-24 nachgeprüft); Vergleich GJ 357 b ergänzt.
+6. Quellen korrigiert: Dholakia, Palethorpe et al. (MNRAS 531), Kuzuhara et al. (ApJL 967, L21); Turner, Brady, Adams Redai ergänzt.
+7. Revisionsverlauf: Datum des v1.1-Eintrags als unplausibel vermerkt.
+
+Nebenbei: die „1,6—“-Zeichenfehler zu „1,6-fach“ korrigiert; `scripts/repair-sci0031-encoding.mjs` wertet eine spätere kuratierte Version (v1.2) nicht mehr als Konflikt.
+
+Offen (kein Auftrag dieses Requests): `OTA-SCI-0030-2025-DE` enthält dieselben falschen Signaturen und „42 °C“ – bei dessen Begutachtung mit erledigen. Brady et al. (2025) nur nach Sekundärzusammenstellung zitiert.
