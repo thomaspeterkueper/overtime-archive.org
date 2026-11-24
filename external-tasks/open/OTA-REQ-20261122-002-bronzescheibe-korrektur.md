@@ -6,6 +6,7 @@ Quelle: Begutachtung nach ECO-ARC-0037, Zuordnung nach ECO-ARC-0038 §2 (Claude)
 Prüfbericht: `kueper-ecosystem/reviews/2026-11-22-OTA-SCI-0081-2026-DE.md`
 Zuordnung: Teile nach KUE – Plattenakustik (§1.1, §1.2) und Lapis-lazuli-Mineralogie/Lumineszenz (§2.1, §2.2 ohne „Narrativer Anker“) werden per `kueper.com/external-tasks/open/EXT-OTA-KUE-20261122-002.md` zu KUE-Dokumenten; Astronomie (§5.1) hat mit `DOC:KUE:KUE-SCI-0207-2026-DE` bereits ein KUE-Gegenstück. §1.3, „Narrativer Anker“ in §2.2, §2.3, §III, §IV, §5.2, alle KN-Notizen und §VI bleiben in OTA.
 Voraussetzung: Punkt A sofort umsetzbar. Punkt C erst, wenn die KUE-Dokumente aus EXT-OTA-KUE-20261122-002 in `kueper.com/main` gemergt sind (Signaturen dort vergeben, im Folgenden `KUE-SCI-PPPP` für Plattenakustik und `KUE-SCI-LLLL` für Lapis lazuli). Punkt B wartet auf Thomas.
+Teilweise erledigt: 2026-11-24 – Punkt A umgesetzt in OTA-SCI-0081 v1.3 durch die Begutachtung (ECO-ARC-0038 §3b); bei A.3 die Variante „Absatz streichen“ gewählt (keine Quelle für die Tingsha-Werte gefunden). Hinweis: Die alte Frequenzangabe „~1.000–3.000 Hz“ steht weiter in §3.3 (Teil von B.2) und in der Tabelle von §VI (Zeile Eigenfrequenz) – von A nicht erfasst. Offen: B (wartet auf Thomas), C (wartet auf die KUE-Dokumente aus EXT-OTA-KUE-20261122-002).
 Erfasst die Punkte zu OTA-SCI-0081 aus `OTA-REQ-20261106-quellenpruefung.md`.
 
 ## Anlass
