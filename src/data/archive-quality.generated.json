@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-25T14:48:48.204Z",
+  "generatedAt": "2026-11-25T14:50:11.966Z",
   "summary": {
     "documents": 340,
     "substantial": 193,
@@ -7,7 +7,7 @@
     "fragments": 44,
     "genericTitles": 69,
     "genericSummaries": 42,
-    "relationGaps": 261,
+    "relationGaps": 262,
     "withoutVisuals": 334,
     "titleReviewA": 0,
     "titleReviewB": 3,
@@ -15,7 +15,7 @@
     "titleReviewOK": 271,
     "safeTitleCandidates": 0,
     "summaryCandidates": 19,
-    "relationCandidates": 1087,
+    "relationCandidates": 1088,
     "safeRelationCandidates": 0
   },
   "documents": [
@@ -1570,6 +1570,62 @@
         "images": 0,
         "tables": 0,
         "inlineReferenceTargets": 8
+      },
+      "quality": {
+        "substance": "KURZ",
+        "genericTitle": false,
+        "genericSummary": true,
+        "relationGap": true,
+        "flags": [
+          "GENERIC_SUMMARY",
+          "RELATION_GAP",
+          "NO_VISUAL",
+          "NO_HEADINGS"
+        ],
+        "priority": 8
+      }
+    },
+    {
+      "file": "OTA-RED-0018-2091-DE.md",
+      "signature": "OTA-RED-0018-2091-DE",
+      "series": "RED",
+      "year": "2091",
+      "language": "DE",
+      "canonical": {
+        "title": "STUFE-OMEGA — Auditive Kontamination & Frequenz-Exposition",
+        "summary": "STUFE-OMEGA — höchststufiges klassifiziertes Dokument 2091, NOXIA-Universum.",
+        "relatedCount": 4
+      },
+      "extracted": {
+        "title": null,
+        "author": null,
+        "classification": null,
+        "excerpt": "---------------------- ------------------------------------------------ **Dokumenttyp:** Sicherheitsprotokoll"
+      },
+      "titleReview": {
+        "tier": "OK",
+        "candidate": null,
+        "evidence": "canonical-title"
+      },
+      "candidates": {
+        "title": null,
+        "derivedTitle": null,
+        "summary": null,
+        "relations": [
+          {
+            "target": "OTA-SCI-0013-2025-DE",
+            "evidence": "inline-reference",
+            "safe": false
+          }
+        ],
+        "count": 1
+      },
+      "metrics": {
+        "words": 615,
+        "headings": 0,
+        "images": 0,
+        "tables": 1,
+        "inlineReferenceTargets": 5
       },
       "quality": {
         "substance": "KURZ",
@@ -5946,55 +6002,6 @@
       },
       "metrics": {
         "words": 614,
-        "headings": 0,
-        "images": 0,
-        "tables": 1,
-        "inlineReferenceTargets": 4
-      },
-      "quality": {
-        "substance": "KURZ",
-        "genericTitle": false,
-        "genericSummary": true,
-        "relationGap": false,
-        "flags": [
-          "GENERIC_SUMMARY",
-          "NO_VISUAL",
-          "NO_HEADINGS"
-        ],
-        "priority": 6
-      }
-    },
-    {
-      "file": "OTA-RED-0018-2091-DE.md",
-      "signature": "OTA-RED-0018-2091-DE",
-      "series": "RED",
-      "year": "2091",
-      "language": "DE",
-      "canonical": {
-        "title": "STUFE-OMEGA — Auditive Kontamination & Frequenz-Exposition",
-        "summary": "STUFE-OMEGA — höchststufiges klassifiziertes Dokument 2091, NOXIA-Universum.",
-        "relatedCount": 4
-      },
-      "extracted": {
-        "title": null,
-        "author": null,
-        "classification": null,
-        "excerpt": "---------------------- ------------------------------------------------ **Dokumenttyp:** Sicherheitsprotokoll"
-      },
-      "titleReview": {
-        "tier": "OK",
-        "candidate": null,
-        "evidence": "canonical-title"
-      },
-      "candidates": {
-        "title": null,
-        "derivedTitle": null,
-        "summary": null,
-        "relations": [],
-        "count": 0
-      },
-      "metrics": {
-        "words": 447,
         "headings": 0,
         "images": 0,
         "tables": 1,
