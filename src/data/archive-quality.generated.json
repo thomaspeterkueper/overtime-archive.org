@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-11-23T20:54:13.288Z",
+  "generatedAt": "2026-11-25T11:47:46.755Z",
   "summary": {
     "documents": 340,
-    "substantial": 196,
-    "short": 101,
-    "fragments": 43,
+    "substantial": 193,
+    "short": 103,
+    "fragments": 44,
     "genericTitles": 69,
     "genericSummaries": 42,
-    "relationGaps": 257,
+    "relationGaps": 260,
     "withoutVisuals": 334,
     "titleReviewA": 0,
     "titleReviewB": 3,
@@ -15,7 +15,7 @@
     "titleReviewOK": 271,
     "safeTitleCandidates": 0,
     "summaryCandidates": 19,
-    "relationCandidates": 1077,
+    "relationCandidates": 1086,
     "safeRelationCandidates": 0
   },
   "documents": [
@@ -547,68 +547,6 @@
         "images": 0,
         "tables": 0,
         "inlineReferenceTargets": 1
-      },
-      "quality": {
-        "substance": "FRAGMENT",
-        "genericTitle": false,
-        "genericSummary": true,
-        "relationGap": true,
-        "flags": [
-          "GENERIC_SUMMARY",
-          "RELATION_GAP",
-          "NO_VISUAL",
-          "NO_HEADINGS",
-          "LOW_SUBSTANCE"
-        ],
-        "priority": 10
-      }
-    },
-    {
-      "file": "OTA-TEC-0015-2082-DE.md",
-      "signature": "OTA-TEC-0015-2082-DE",
-      "series": "TEC",
-      "year": "2082",
-      "language": "DE",
-      "canonical": {
-        "title": "HeliosCorp LRV-15 \\\"Dust-Walker\\\" (Fahrzeug-ID: V-402)",
-        "summary": "Technisches Dokument 2082 — NOXIA-Universum. Mars-Technologie.",
-        "relatedCount": 0
-      },
-      "extracted": {
-        "title": "HeliosCorp LRV-15 \"Dust-Walker\" (Fahrzeug-ID: V-402)",
-        "author": null,
-        "classification": "TECHNISCHE SPEZIFIKATION / FAHRZEUG",
-        "excerpt": "----------------------- ----------------------------------------------- **DOC-ID** OTA-TEC-0015-2082-DE"
-      },
-      "titleReview": {
-        "tier": "OK",
-        "candidate": null,
-        "evidence": "canonical-title"
-      },
-      "candidates": {
-        "title": null,
-        "derivedTitle": null,
-        "summary": null,
-        "relations": [
-          {
-            "target": "OTA-NAR-0001-2087-DE",
-            "evidence": "inline-reference",
-            "safe": false
-          },
-          {
-            "target": "OTA-BIO-XXXX",
-            "evidence": "inline-reference",
-            "safe": false
-          }
-        ],
-        "count": 2
-      },
-      "metrics": {
-        "words": 312,
-        "headings": 0,
-        "images": 0,
-        "tables": 0,
-        "inlineReferenceTargets": 2
       },
       "quality": {
         "substance": "FRAGMENT",
@@ -3208,16 +3146,21 @@
             "target": "OTA-FND-0001-",
             "evidence": "inline-reference",
             "safe": false
+          },
+          {
+            "target": "OTA-FND-0019-2025-DE-",
+            "evidence": "inline-reference",
+            "safe": false
           }
         ],
-        "count": 7
+        "count": 8
       },
       "metrics": {
-        "words": 1383,
+        "words": 2856,
         "headings": 0,
         "images": 0,
         "tables": 1,
-        "inlineReferenceTargets": 7
+        "inlineReferenceTargets": 8
       },
       "quality": {
         "substance": "SUBSTANZIELL",
@@ -6245,6 +6188,71 @@
       }
     },
     {
+      "file": "OTA-SCI-0044-2026-DE.md",
+      "signature": "OTA-SCI-0044-2026-DE",
+      "series": "SCI",
+      "year": "2026",
+      "language": "DE",
+      "canonical": {
+        "title": "Extragalaktische organische Chemie: JWST-Befunde in IRAS 07251-0248",
+        "summary": "Brückendokument: JWST-Befund organischer Moleküle in IRAS 07251-0248 als Realanker für die AVI-Übertragung in OTA-FND-0012; Realteil in KUE-SCI-0218.",
+        "relatedCount": 3
+      },
+      "extracted": {
+        "title": null,
+        "author": null,
+        "classification": null,
+        "excerpt": "**Dokumenttyp:** Scientific **Signatur:** OTA-SCI-0044-2026-DE **Status:** Kanonisch **Version:** 1.2 · Realteil ausgelagert 2026-11-25 **Datum:** 2026-02-16 **Kurator:** The OverTime Archive"
+      },
+      "titleReview": {
+        "tier": "OK",
+        "candidate": null,
+        "evidence": "canonical-title"
+      },
+      "candidates": {
+        "title": null,
+        "derivedTitle": null,
+        "summary": null,
+        "relations": [
+          {
+            "target": "OTA-FND-0012-2026-DE",
+            "evidence": "inline-reference",
+            "safe": false
+          },
+          {
+            "target": "OTA-SCI-0019-2025-DE",
+            "evidence": "inline-reference",
+            "safe": false
+          },
+          {
+            "target": "OTA-REQ-20261122-001",
+            "evidence": "inline-reference",
+            "safe": false
+          }
+        ],
+        "count": 3
+      },
+      "metrics": {
+        "words": 344,
+        "headings": 8,
+        "images": 0,
+        "tables": 1,
+        "inlineReferenceTargets": 5
+      },
+      "quality": {
+        "substance": "FRAGMENT",
+        "genericTitle": false,
+        "genericSummary": false,
+        "relationGap": true,
+        "flags": [
+          "RELATION_GAP",
+          "NO_VISUAL",
+          "LOW_SUBSTANCE"
+        ],
+        "priority": 6
+      }
+    },
+    {
       "file": "OTA-SCI-0080-2026-DE.md",
       "signature": "OTA-SCI-0080-2026-DE",
       "series": "SCI",
@@ -6415,6 +6423,61 @@
         "images": 0,
         "tables": 0,
         "inlineReferenceTargets": 1
+      },
+      "quality": {
+        "substance": "FRAGMENT",
+        "genericTitle": false,
+        "genericSummary": false,
+        "relationGap": true,
+        "flags": [
+          "RELATION_GAP",
+          "NO_VISUAL",
+          "LOW_SUBSTANCE"
+        ],
+        "priority": 6
+      }
+    },
+    {
+      "file": "OTA-SCI-0103-2026-DE.md",
+      "signature": "OTA-SCI-0103-2026-DE",
+      "series": "SCI",
+      "year": "2026",
+      "language": "DE",
+      "canonical": {
+        "title": "Longitudinale Gehirngesundheit — Lebenslauf-Risiken, Prävention und Biomarker",
+        "summary": "Brückendokument: longitudinale Gehirngesundheit als OTA-Anschlussknoten zu OTA-SCI-0019 und OTA-SCI-0102; Realteil in KUE-SCI-0220.",
+        "relatedCount": 2
+      },
+      "extracted": {
+        "title": null,
+        "author": null,
+        "classification": null,
+        "excerpt": "**Version:** 1.1 **Stand:** 25. November 2026 **Status:** wissenschaftliches Evidenzdossier"
+      },
+      "titleReview": {
+        "tier": "OK",
+        "candidate": null,
+        "evidence": "canonical-title"
+      },
+      "candidates": {
+        "title": null,
+        "derivedTitle": null,
+        "summary": null,
+        "relations": [
+          {
+            "target": "OTA-REQ-20261115-001",
+            "evidence": "inline-reference",
+            "safe": false
+          }
+        ],
+        "count": 1
+      },
+      "metrics": {
+        "words": 172,
+        "headings": 6,
+        "images": 0,
+        "tables": 0,
+        "inlineReferenceTargets": 3
       },
       "quality": {
         "substance": "FRAGMENT",
@@ -6944,6 +7007,87 @@
       },
       "quality": {
         "substance": "SUBSTANZIELL",
+        "genericTitle": false,
+        "genericSummary": true,
+        "relationGap": true,
+        "flags": [
+          "GENERIC_SUMMARY",
+          "RELATION_GAP",
+          "NO_VISUAL",
+          "NO_HEADINGS"
+        ],
+        "priority": 6
+      }
+    },
+    {
+      "file": "OTA-TEC-0015-2082-DE.md",
+      "signature": "OTA-TEC-0015-2082-DE",
+      "series": "TEC",
+      "year": "2082",
+      "language": "DE",
+      "canonical": {
+        "title": "HeliosCorp LRV-15 \\\"Dust-Walker\\\" (Fahrzeug-ID: V-402)",
+        "summary": "Technisches Dokument 2082 — NOXIA-Universum. Mars-Technologie.",
+        "relatedCount": 0
+      },
+      "extracted": {
+        "title": "HeliosCorp LRV-15 \"Dust-Walker\" (Fahrzeug-ID: V-402)",
+        "author": null,
+        "classification": "TECHNISCHE SPEZIFIKATION / FAHRZEUG",
+        "excerpt": "----------------------- ----------------------------------------------- **DOC-ID** OTA-TEC-0015-2082-DE"
+      },
+      "titleReview": {
+        "tier": "OK",
+        "candidate": null,
+        "evidence": "canonical-title"
+      },
+      "candidates": {
+        "title": null,
+        "derivedTitle": null,
+        "summary": null,
+        "relations": [
+          {
+            "target": "OTA-NAR-0001-2087-DE",
+            "evidence": "inline-reference",
+            "safe": false
+          },
+          {
+            "target": "OTA-BIO-XXXX",
+            "evidence": "inline-reference",
+            "safe": false
+          },
+          {
+            "target": "OTA-ORG-0001",
+            "evidence": "inline-reference",
+            "safe": false
+          },
+          {
+            "target": "OTA-BIO-0007",
+            "evidence": "inline-reference",
+            "safe": false
+          },
+          {
+            "target": "OTA-TEC-0004",
+            "evidence": "inline-reference",
+            "safe": false
+          },
+          {
+            "target": "OTA-TEC-0016",
+            "evidence": "inline-reference",
+            "safe": false
+          }
+        ],
+        "count": 6
+      },
+      "metrics": {
+        "words": 843,
+        "headings": 0,
+        "images": 0,
+        "tables": 0,
+        "inlineReferenceTargets": 6
+      },
+      "quality": {
+        "substance": "KURZ",
         "genericTitle": false,
         "genericSummary": true,
         "relationGap": true,
@@ -10018,6 +10162,60 @@
         "images": 0,
         "tables": 1,
         "inlineReferenceTargets": 8
+      },
+      "quality": {
+        "substance": "KURZ",
+        "genericTitle": false,
+        "genericSummary": false,
+        "relationGap": true,
+        "flags": [
+          "RELATION_GAP",
+          "NO_VISUAL"
+        ],
+        "priority": 4
+      }
+    },
+    {
+      "file": "OTA-SCI-0111-2026-DE.md",
+      "signature": "OTA-SCI-0111-2026-DE",
+      "series": "SCI",
+      "year": "2026",
+      "language": "DE",
+      "canonical": {
+        "title": "β Pictoris b im Radio: Aurorale Emission, Magnetfeld-Inferenz und Exoplaneten-Fernerkundung",
+        "summary": "Brückendokument: NOXIA-Beobachtungsmodell, SSF-Lernpunkte und Archivregel zur Radioemission von β Pictoris b; Realteil (Preprint-Audit, ECMI-Deutung, Magnetfeld-Untergrenze) in KUE-SCI-0217-2026-DE.",
+        "relatedCount": 1
+      },
+      "extracted": {
+        "title": null,
+        "author": null,
+        "classification": null,
+        "excerpt": "**Stand:** 24. November 2026 **Status:** wissenschaftliches Evidenzdossier / **Preprint-Audit** **Anlass:** `EXT-NOXIA-OTA-20260925-beta-pictoris-radio-remote-sensing.md`"
+      },
+      "titleReview": {
+        "tier": "OK",
+        "candidate": null,
+        "evidence": "canonical-title"
+      },
+      "candidates": {
+        "title": null,
+        "derivedTitle": null,
+        "summary": null,
+        "relations": [
+          {
+            "target": "OTA-REQ-20261117-001",
+            "evidence": "inline-reference",
+            "safe": false
+          }
+        ],
+        "count": 1
+      },
+      "metrics": {
+        "words": 500,
+        "headings": 17,
+        "images": 0,
+        "tables": 1,
+        "inlineReferenceTargets": 1
       },
       "quality": {
         "substance": "KURZ",
@@ -16299,19 +16497,9 @@
             "target": "OTA-SCI-0007-2026-",
             "evidence": "inline-reference",
             "safe": false
-          },
-          {
-            "target": "OTA-SCI-0031-2025-DE",
-            "evidence": "inline-reference",
-            "safe": false
-          },
-          {
-            "target": "OTA-SCI-0032-2025-DE",
-            "evidence": "inline-reference",
-            "safe": false
           }
         ],
-        "count": 5
+        "count": 3
       },
       "metrics": {
         "words": 1907,
@@ -16340,7 +16528,7 @@
       "language": "DE",
       "canonical": {
         "title": "Gliese-12b — Die stille Exo-Venus",
-        "summary": "Kompilationsdokument zu Gliese-12b (entdeckt Mai 2024, 40 Lichtjahre): terrestrialer Exoplanet im Goldilocks-Bereich mit ~42°C Oberflächentemperatur, Transit-Observable für JWST-Spektroskopie. Analyse von Entdeckungsdaten, Stern-Charakterisierung und Habitabilitätspotenzial.",
+        "summary": "Kompilationsdokument zu Gliese-12b (entdeckt Mai 2024, 40 Lichtjahre): terrestrialer Exoplanet im Goldilocks-Bereich mit 315 K Gleichgewichtstemperatur (Albedo 0), Transit-Observable für JWST-Spektroskopie. Analyse von Entdeckungsdaten, Stern-Charakterisierung und Habitabilitätspotenzial.",
         "relatedCount": 5
       },
       "extracted": {
@@ -16368,16 +16556,21 @@
             "target": "OTA-SCI-0007-2026-",
             "evidence": "inline-reference",
             "safe": false
+          },
+          {
+            "target": "OTA-REQ-20261029-001",
+            "evidence": "inline-reference",
+            "safe": false
           }
         ],
-        "count": 2
+        "count": 3
       },
       "metrics": {
-        "words": 1780,
+        "words": 2177,
         "headings": 33,
         "images": 0,
         "tables": 1,
-        "inlineReferenceTargets": 5
+        "inlineReferenceTargets": 6
       },
       "quality": {
         "substance": "SUBSTANZIELL",
@@ -16658,6 +16851,60 @@
       }
     },
     {
+      "file": "OTA-SCI-0042-2026-DE.md",
+      "signature": "OTA-SCI-0042-2026-DE",
+      "series": "SCI",
+      "year": "2026",
+      "language": "DE",
+      "canonical": {
+        "title": "PHÄNOMENOLOGISCHE ERDBEBENTHEORIE UND DIE LOD-SEISMIZITÄTS-BRÜCKE",
+        "summary": "Evidenzaudit der phänomenologischen Erdbebentheorie und der LOD-Seismizitäts-Brücke: reale Publikations- und Datenbefunde [R], kausale Deutungen als Hypothesen [H], werkinterne AVI-/Omnizedenz-Anschlüsse ausschließlich als Spekulation [S].",
+        "relatedCount": 4
+      },
+      "extracted": {
+        "title": null,
+        "author": null,
+        "classification": null,
+        "excerpt": "*Guglielmi (2025), Dumont et al. (2025), Doglioni (2026) und die Frage externer Modulation seismischer Prozesse*"
+      },
+      "titleReview": {
+        "tier": "OK",
+        "candidate": null,
+        "evidence": "canonical-title"
+      },
+      "candidates": {
+        "title": null,
+        "derivedTitle": null,
+        "summary": null,
+        "relations": [
+          {
+            "target": "OTA-REQ-20261123-001",
+            "evidence": "inline-reference",
+            "safe": false
+          }
+        ],
+        "count": 1
+      },
+      "metrics": {
+        "words": 878,
+        "headings": 16,
+        "images": 0,
+        "tables": 1,
+        "inlineReferenceTargets": 5
+      },
+      "quality": {
+        "substance": "SUBSTANZIELL",
+        "genericTitle": false,
+        "genericSummary": false,
+        "relationGap": true,
+        "flags": [
+          "RELATION_GAP",
+          "NO_VISUAL"
+        ],
+        "priority": 2
+      }
+    },
+    {
       "file": "OTA-SCI-0043-2026-DE.md",
       "signature": "OTA-SCI-0043-2026-DE",
       "series": "SCI",
@@ -16718,65 +16965,6 @@
         "images": 0,
         "tables": 1,
         "inlineReferenceTargets": 6
-      },
-      "quality": {
-        "substance": "SUBSTANZIELL",
-        "genericTitle": false,
-        "genericSummary": false,
-        "relationGap": true,
-        "flags": [
-          "RELATION_GAP",
-          "NO_VISUAL"
-        ],
-        "priority": 2
-      }
-    },
-    {
-      "file": "OTA-SCI-0044-2026-DE.md",
-      "signature": "OTA-SCI-0044-2026-DE",
-      "series": "SCI",
-      "year": "2026",
-      "language": "DE",
-      "canonical": {
-        "title": "Extragalaktische organische Chemie: JWST-Befunde in IRAS 07251-0248",
-        "summary": "Analyse der JWST-Spektroskopie-Daten für IRAS 07251-0248: erstmaliger extragalaktischer Nachweis von CH3, Benzol, Acetylen und Diacetylenen. Bedeutung für Astrochemie und chemische Evolution der frühen Erde.",
-        "relatedCount": 3
-      },
-      "extracted": {
-        "title": null,
-        "author": null,
-        "classification": null,
-        "excerpt": "**Dokumenttyp:** Scientific **Signatur:** OTA-SCI-0044-2026-DE **Status:** Kanonisch **Version:** 1.0 **Datum:** 2026-02-16 **Kurator:** The OverTime Archive"
-      },
-      "titleReview": {
-        "tier": "OK",
-        "candidate": null,
-        "evidence": "canonical-title"
-      },
-      "candidates": {
-        "title": null,
-        "derivedTitle": null,
-        "summary": null,
-        "relations": [
-          {
-            "target": "OTA-FND-0012-2026-DE",
-            "evidence": "inline-reference",
-            "safe": false
-          },
-          {
-            "target": "OTA-SCI-0019-2025-DE",
-            "evidence": "inline-reference",
-            "safe": false
-          }
-        ],
-        "count": 2
-      },
-      "metrics": {
-        "words": 1123,
-        "headings": 30,
-        "images": 0,
-        "tables": 1,
-        "inlineReferenceTargets": 4
       },
       "quality": {
         "substance": "SUBSTANZIELL",
@@ -17424,16 +17612,21 @@
             "target": "OTA-TEC-0081-2026-DE",
             "evidence": "inline-reference",
             "safe": false
+          },
+          {
+            "target": "OTA-REQ-20261122-002",
+            "evidence": "inline-reference",
+            "safe": false
           }
         ],
-        "count": 5
+        "count": 6
       },
       "metrics": {
-        "words": 3098,
+        "words": 3131,
         "headings": 25,
         "images": 0,
         "tables": 1,
-        "inlineReferenceTargets": 5
+        "inlineReferenceTargets": 6
       },
       "quality": {
         "substance": "SUBSTANZIELL",
@@ -21074,7 +21267,7 @@
         "count": 0
       },
       "metrics": {
-        "words": 719,
+        "words": 1087,
         "headings": 0,
         "images": 0,
         "tables": 1,
@@ -21848,53 +22041,6 @@
       }
     },
     {
-      "file": "OTA-SCI-0042-2026-DE.md",
-      "signature": "OTA-SCI-0042-2026-DE",
-      "series": "SCI",
-      "year": "2026",
-      "language": "DE",
-      "canonical": {
-        "title": "PHÄNOMENOLOGISCHE ERDBEBENTHEORIE UND DIE LOD-SEISMIZITÄTS-BRÜCKE",
-        "summary": "Evidenzaudit der phänomenologischen Erdbebentheorie und der LOD-Seismizitäts-Brücke: reale Publikations- und Datenbefunde [R], kausale Deutungen als Hypothesen [H], werkinterne AVI-/Omnizedenz-Anschlüsse ausschließlich als Spekulation [S].",
-        "relatedCount": 4
-      },
-      "extracted": {
-        "title": null,
-        "author": null,
-        "classification": null,
-        "excerpt": "*Guglielmi (2025), Dumont et al. (2025), Doglioni (2026) und die Frage externer Modulation seismischer Prozesse*"
-      },
-      "titleReview": {
-        "tier": "OK",
-        "candidate": null,
-        "evidence": "canonical-title"
-      },
-      "candidates": {
-        "title": null,
-        "derivedTitle": null,
-        "summary": null,
-        "relations": [],
-        "count": 0
-      },
-      "metrics": {
-        "words": 2587,
-        "headings": 40,
-        "images": 0,
-        "tables": 1,
-        "inlineReferenceTargets": 4
-      },
-      "quality": {
-        "substance": "SUBSTANZIELL",
-        "genericTitle": false,
-        "genericSummary": false,
-        "relationGap": false,
-        "flags": [
-          "NO_VISUAL"
-        ],
-        "priority": 0
-      }
-    },
-    {
       "file": "OTA-SCI-0061-2026-DE.md",
       "signature": "OTA-SCI-0061-2026-DE",
       "series": "SCI",
@@ -22069,100 +22215,6 @@
         "headings": 12,
         "images": 0,
         "tables": 0,
-        "inlineReferenceTargets": 0
-      },
-      "quality": {
-        "substance": "SUBSTANZIELL",
-        "genericTitle": false,
-        "genericSummary": false,
-        "relationGap": false,
-        "flags": [
-          "NO_VISUAL"
-        ],
-        "priority": 0
-      }
-    },
-    {
-      "file": "OTA-SCI-0103-2026-DE.md",
-      "signature": "OTA-SCI-0103-2026-DE",
-      "series": "SCI",
-      "year": "2026",
-      "language": "DE",
-      "canonical": {
-        "title": "Longitudinale Gehirngesundheit — Lebenslauf-Risiken, Prävention und Biomarker",
-        "summary": "Provenienzorientiertes Evidenzdossier zur Gehirngesundheit über den Lebenslauf. Verknüpft die 14 modifizierbaren Risikofaktoren der Lancet Commission 2024 mit den WHO-Leitlinien 2026 und trennt populationsbezogene Prävention von Interventionsbelegen, Mechanismen und emerging Biomarkern wie Schlaf- und Sprachsignalen.",
-        "relatedCount": 2
-      },
-      "extracted": {
-        "title": null,
-        "author": null,
-        "classification": null,
-        "excerpt": "Dieses Dossier bündelt Evidenz zu Gehirngesundheit und Demenzrisiko über den gesamten Lebenslauf. Es verbindet zwei zentrale Referenzrahmen:"
-      },
-      "titleReview": {
-        "tier": "OK",
-        "candidate": null,
-        "evidence": "canonical-title"
-      },
-      "candidates": {
-        "title": null,
-        "derivedTitle": null,
-        "summary": null,
-        "relations": [],
-        "count": 0
-      },
-      "metrics": {
-        "words": 2130,
-        "headings": 38,
-        "images": 0,
-        "tables": 0,
-        "inlineReferenceTargets": 2
-      },
-      "quality": {
-        "substance": "SUBSTANZIELL",
-        "genericTitle": false,
-        "genericSummary": false,
-        "relationGap": false,
-        "flags": [
-          "NO_VISUAL"
-        ],
-        "priority": 0
-      }
-    },
-    {
-      "file": "OTA-SCI-0111-2026-DE.md",
-      "signature": "OTA-SCI-0111-2026-DE",
-      "series": "SCI",
-      "year": "2026",
-      "language": "DE",
-      "canonical": {
-        "title": "β Pictoris b im Radio: Aurorale Emission, Magnetfeld-Inferenz und Exoplaneten-Fernerkundung",
-        "summary": "Quellen- und Evidenzdossier zum September-2026-Preprint über mit MeerKAT räumlich β Pictoris b zugeordnete Radioemission: direkte Beobachtungen, ECMI-Interpretation und daraus abgeleitete Magnetfeld-Untergrenze werden strikt getrennt und in den Kontext anderer Exoplaneten-Fernerkundungsmethoden gestellt.",
-        "relatedCount": 0
-      },
-      "extracted": {
-        "title": null,
-        "author": null,
-        "classification": null,
-        "excerpt": "**Stand:** 18. Oktober 2026 **Status:** wissenschaftliches Evidenzdossier / **Preprint-Audit** **Anlass:** `EXT-NOXIA-OTA-20260925-beta-pictoris-radio-remote-sensing.md`"
-      },
-      "titleReview": {
-        "tier": "OK",
-        "candidate": null,
-        "evidence": "canonical-title"
-      },
-      "candidates": {
-        "title": null,
-        "derivedTitle": null,
-        "summary": null,
-        "relations": [],
-        "count": 0
-      },
-      "metrics": {
-        "words": 2060,
-        "headings": 59,
-        "images": 0,
-        "tables": 1,
         "inlineReferenceTargets": 0
       },
       "quality": {

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-23T20:54:12.807Z",
+  "generatedAt": "2026-11-25T11:47:46.306Z",
   "documents": [
     {
       "signature": "OTA-ART-0001-2087-DE",
@@ -1150,7 +1150,7 @@
     {
       "signature": "OTA-SCI-0031-2024-DE",
       "title": "Gliese-12b — Die stille Exo-Venus",
-      "summary": "Kompilationsdokument zu Gliese-12b (entdeckt Mai 2024, 40 Lichtjahre): terrestrialer Exoplanet im Goldilocks-Bereich mit ~42°C Oberflächentemperatur, Transit-Observable für JWST-Spektroskopie. Analyse von Entdeckungsdaten, Stern-Charakterisierung und Habitabilitätspotenzial.",
+      "summary": "Kompilationsdokument zu Gliese-12b (entdeckt Mai 2024, 40 Lichtjahre): terrestrialer Exoplanet im Goldilocks-Bereich mit 315 K Gleichgewichtstemperatur (Albedo 0), Transit-Observable für JWST-Spektroskopie. Analyse von Entdeckungsdaten, Stern-Charakterisierung und Habitabilitätspotenzial.",
       "file": "src/content/documents/OTA-SCI-0031-2024-DE.md"
     },
     {
@@ -1210,7 +1210,7 @@
     {
       "signature": "OTA-SCI-0044-2026-DE",
       "title": "Extragalaktische organische Chemie: JWST-Befunde in IRAS 07251-0248",
-      "summary": "Analyse der JWST-Spektroskopie-Daten für IRAS 07251-0248: erstmaliger extragalaktischer Nachweis von CH3, Benzol, Acetylen und Diacetylenen. Bedeutung für Astrochemie und chemische Evolution der frühen Erde.",
+      "summary": "Brückendokument: JWST-Befund organischer Moleküle in IRAS 07251-0248 als Realanker für die AVI-Übertragung in OTA-FND-0012; Realteil in KUE-SCI-0218.",
       "file": "src/content/documents/OTA-SCI-0044-2026-DE.md"
     },
     {
@@ -1450,7 +1450,7 @@
     {
       "signature": "OTA-SCI-0103-2026-DE",
       "title": "Longitudinale Gehirngesundheit — Lebenslauf-Risiken, Prävention und Biomarker",
-      "summary": "Provenienzorientiertes Evidenzdossier zur Gehirngesundheit über den Lebenslauf. Verknüpft die 14 modifizierbaren Risikofaktoren der Lancet Commission 2024 mit den WHO-Leitlinien 2026 und trennt populationsbezogene Prävention von Interventionsbelegen, Mechanismen und emerging Biomarkern wie Schlaf- und Sprachsignalen.",
+      "summary": "Brückendokument: longitudinale Gehirngesundheit als OTA-Anschlussknoten zu OTA-SCI-0019 und OTA-SCI-0102; Realteil in KUE-SCI-0220.",
       "file": "src/content/documents/OTA-SCI-0103-2026-DE.md"
     },
     {
@@ -1498,7 +1498,7 @@
     {
       "signature": "OTA-SCI-0111-2026-DE",
       "title": "β Pictoris b im Radio: Aurorale Emission, Magnetfeld-Inferenz und Exoplaneten-Fernerkundung",
-      "summary": "Quellen- und Evidenzdossier zum September-2026-Preprint über mit MeerKAT räumlich β Pictoris b zugeordnete Radioemission: direkte Beobachtungen, ECMI-Interpretation und daraus abgeleitete Magnetfeld-Untergrenze werden strikt getrennt und in den Kontext anderer Exoplaneten-Fernerkundungsmethoden gestellt.",
+      "summary": "Brückendokument: NOXIA-Beobachtungsmodell, SSF-Lernpunkte und Archivregel zur Radioemission von β Pictoris b; Realteil (Preprint-Audit, ECMI-Deutung, Magnetfeld-Untergrenze) in KUE-SCI-0217-2026-DE.",
       "file": "src/content/documents/OTA-SCI-0111-2026-DE.md"
     },
     {
@@ -2043,17 +2043,17 @@
     }
   ],
   "summary": {
-    "referenceCount": 1714,
-    "openReferenceCount": 244,
-    "openTargetCount": 129,
+    "referenceCount": 1720,
+    "openReferenceCount": 242,
+    "openTargetCount": 127,
     "classifications": {
       "missing": 82,
       "shorthand-resolved": 10,
-      "base-id-resolved": 178,
+      "base-id-resolved": 182,
       "base-id-ambiguous": 19,
       "language-ambiguous": 1,
       "translation-missing": 2,
-      "temporal-mismatch": 17,
+      "temporal-mismatch": 15,
       "temporal-ambiguous": 6,
       "underspecified": 2,
       "ambiguous-base": 0,
@@ -6586,52 +6586,6 @@
       "targetFile": null
     },
     {
-      "source": "OTA-SCI-0030-2025-DE",
-      "target": "OTA-SCI-0031-2025-DE",
-      "contexts": [
-        "(exzentrische Eigenschaften) | | OTA-SCI-0022-2025-DE | Mars-Habitabilitätsfenster | Episodisches Wasser | | OTA-SCI-0031-2025-DE | Gliese-12b | 20-Lj-Kohorte | | OTA-SCI-0032-2025-DE | GJ 251 c | 20-Lj-Kohorte | | OTA-RED-0012-2171-DE | AVI-Theorie | Kosmisches Schweigen | | OT"
-      ],
-      "status": "unresolved",
-      "classification": "temporal-mismatch",
-      "candidates": [
-        {
-          "signature": "OTA-SCI-0031-2024-DE",
-          "title": "Gliese-12b — Die stille Exo-Venus",
-          "file": "src/content/documents/OTA-SCI-0031-2024-DE.md"
-        }
-      ],
-      "resolvedTarget": null,
-      "sourceCount": 1,
-      "priority": 1,
-      "title": "OTA-SCI-0031-2025-DE",
-      "description": "",
-      "descriptionStatus": null,
-      "targetFile": null
-    },
-    {
-      "source": "OTA-SCI-0030-2025-DE",
-      "target": "OTA-SCI-0032-2025-DE",
-      "contexts": [
-        "| Mars-Habitabilitätsfenster | Episodisches Wasser | | OTA-SCI-0031-2025-DE | Gliese-12b | 20-Lj-Kohorte | | OTA-SCI-0032-2025-DE | GJ 251 c | 20-Lj-Kohorte | | OTA-RED-0012-2171-DE | AVI-Theorie | Kosmisches Schweigen | | OTA-BIO-0010-2025-DE | Mars-Demographie 2042-2092 | GENE"
-      ],
-      "status": "unresolved",
-      "classification": "temporal-mismatch",
-      "candidates": [
-        {
-          "signature": "OTA-SCI-0032-2024-DE",
-          "title": "GJ 251 c — Die kosmische Nachbarin in der habitablen Zone",
-          "file": "src/content/documents/OTA-SCI-0032-2024-DE.md"
-        }
-      ],
-      "resolvedTarget": null,
-      "sourceCount": 1,
-      "priority": 1,
-      "title": "OTA-SCI-0032-2025-DE",
-      "description": "",
-      "descriptionStatus": null,
-      "targetFile": null
-    },
-    {
       "source": "OTA-SCI-0036-2026-DE",
       "target": "OTA-SCI-0038-2026-DE",
       "contexts": [
@@ -8587,6 +8541,29 @@
       "targetFile": "src/content/documents/OTA-BIO-0006-2025-DE.md"
     },
     {
+      "source": "OTA-TEC-0015-2082-DE",
+      "target": "OTA-BIO-0007",
+      "contexts": [
+        "fällt, weil der Text es nirgends verwendet (zuvor [\"F\", \"T\", \"R\"]). Die Einträge „Kanonisch“ in OTA-ORG-0001, OTA-BIO-0007, OTA-TEC-0004 und OTA-TEC-0016 bezeichnen den Werkkanon (Fahrzeug existiert in der Saga), nicht den Evidenzstatus der Basis-Specs; diese bleiben [S]."
+      ],
+      "status": "resolved-base-id",
+      "classification": "base-id-resolved",
+      "candidates": [
+        {
+          "signature": "OTA-BIO-0007-2025-DE",
+          "title": "Marek Kowalski — Der Mann, der den Stein hörte",
+          "file": "src/content/documents/OTA-BIO-0007-2025-DE.md"
+        }
+      ],
+      "resolvedTarget": "OTA-BIO-0007-2025-DE",
+      "sourceCount": 1,
+      "priority": 0,
+      "title": "Marek Kowalski — Der Mann, der den Stein hörte",
+      "description": "Marek Kowalski — der Mann, der den Stein hörte. Geologe und Rover-Pilot, Zeuge der Axis-Kammer. NOXIA-Universum.",
+      "descriptionStatus": "canonical",
+      "targetFile": "src/content/documents/OTA-BIO-0007-2025-DE.md"
+    },
+    {
       "source": "OTA-BIO-0006-2025-DE",
       "target": "OTA-BIO-0007-2025-DE",
       "contexts": [
@@ -9143,7 +9120,7 @@
       "target": "OTA-BIO-0010-2025-DE",
       "contexts": [
         "nter den verwandten Dokumenten bzw. Querverweisen aufgeführt.\" descriptionStatus: \"explicit\" - target: \"OTA-BIO-0010-2025-DE\" relation: \"related\" context: \"Im Dokument ausdrücklich unter den verwandten Dokumenten bzw. Querverweisen aufgeführt.\" descriptionStatus",
-        "SCI-0032-2025-DE | GJ 251 c | 20-Lj-Kohorte | | OTA-RED-0012-2171-DE | AVI-Theorie | Kosmisches Schweigen | | OTA-BIO-0010-2025-DE | Mars-Demographie 2042-2092 | GENERATION MARS-Kontext | --- ## **REVISIONSVERLAUF** | Datum | Vermerk | |-------|---------| | 2025-01-30 | Erstel"
+        "SCI-0032-2024-DE | GJ 251 c | 20-Lj-Kohorte | | OTA-RED-0012-2171-DE | AVI-Theorie | Kosmisches Schweigen | | OTA-BIO-0010-2025-DE | Mars-Demographie 2042-2092 | GENERATION MARS-Kontext | --- ## **REVISIONSVERLAUF** | Datum | Vermerk | |-------|---------| | 2025-01-30 | Erstel"
       ],
       "status": "resolved",
       "classification": "existing",
@@ -10180,7 +10157,7 @@
       "source": "OTA-SCI-0118-2026-DE",
       "target": "OTA-BIO-0028-2026-DE",
       "contexts": [
-        "dDocuments: [\"OTA-SCI-0117-2026-DE\", \"OTA-TEC-0124-2026-DE\", \"OTA-SCI-0119-2026-DE\", \"OTA-SCI-0059-2026-DE\", \"OTA-BIO-0028-2026-DE\"] summary: \"Realwissenschaftliche Basis der Obsidian-Archäometrie: XRF-Provenienz (Rb/Sr/Zr/Y/Nb), europäische Quellen, Hydratationsdatierung (FTIR),"
+        "dDocuments: [\"OTA-SCI-0117-2026-DE\", \"OTA-TEC-0124-2026-DE\", \"OTA-SCI-0119-2026-DE\", \"OTA-SCI-0059-2026-DE\", \"OTA-BIO-0028-2026-DE\"] review: last: \"2026-11-25\" next: \"2027-11-25\" reason: \"Archäometrische Methodik stabil, Provenienzstudien kommen laufend hinzu; Korrektur und"
       ],
       "status": "resolved",
       "classification": "existing",
@@ -12455,7 +12432,7 @@
       "target": "OTA-FND-0008-2025-DE",
       "contexts": [
         ", \"Omori-Gesetz\"] relatedDocuments: [\"OTA-OBS-0005-2026-DE\", \"OTA-SCI-0036-2026-DE\", \"OTA-SCI-0041-2026-DE\", \"OTA-FND-0008-2025-DE\"] review: last: \"2026-11-23\" next: \"2027-11-23\" reason: \"Strittiges Feld, Realteil liegt in KUE-SCI-0169 (Termin 2027-05-11); Kürzung per OTA-R",
-        "ung; bei R(a)-Bezügen historischen Stand beachten | | OTA-SCI-0041-2026-DE | Erdkern-/Geomagnetik-Kontext | | OTA-FND-0008-2025-DE | epistemische Schichtung und Markerlogik | --- ## XIII. REVISIONSVERLAUF | Datum | Vermerk | |-------|---------| | 2026-02-09 | v1.0: Erstellung."
+        "ung; bei R(a)-Bezügen historischen Stand beachten | | OTA-SCI-0041-2026-DE | Erdkern-/Geomagnetik-Kontext | | OTA-FND-0008-2025-DE | epistemische Schichtung und Markerlogik | --- ## VIII. REVISIONSVERLAUF | Datum | Vermerk | |-------|---------| | 2026-02-09 | v1.0: Erstellung."
       ],
       "status": "resolved",
       "classification": "existing",
@@ -12633,7 +12610,31 @@
         }
       ],
       "resolvedTarget": "OTA-FND-0012-2026-DE",
-      "sourceCount": 1,
+      "sourceCount": 2,
+      "priority": 0,
+      "title": "Resonanz-Level-Analyse extragalaktischer organischer Chemie — IRAS 07251-0248 als empirisches Modell für kosmische Informations-Modulierung",
+      "description": "Resonanz-Level-Analyse extragalaktischer organischer Chemie (IRAS 07251-0248) im AVI-Framework: JWST-Befunde [R] als Anker für das Omnizedenz-Modell [W/S].",
+      "descriptionStatus": "canonical",
+      "targetFile": "src/content/documents/OTA-FND-0012-2026-DE.md"
+    },
+    {
+      "source": "OTA-SCI-0044-2026-DE",
+      "target": "OTA-FND-0012",
+      "contexts": [
+        "JWST-Folgearbeiten zu IRAS 07251−0248 verfolgen); Kürzung per OTA-REQ-20261122-001 C – OTA-Rest (Anschluss an OTA-FND-0012) stabil, 12 Monate. Punkt B (Statuszeile, Referenz OTA-SCI-0019) wartet auf Thomas.\" abgeschlossen: false summary: \"Brückendokument: JWST-Befund or",
+        "Brückendokument: JWST-Befund organischer Moleküle in IRAS 07251-0248 als Realanker für die AVI-Übertragung in OTA-FND-0012; Realteil in KUE-SCI-0218.\" updatedAt: \"2026-09-25T09:39:24+02:00\" provenance: reviewedAt: \"2026-09-25T09:39:24+02:00\" reviewStatus: \"metadata-re"
+      ],
+      "status": "resolved-base-id",
+      "classification": "base-id-resolved",
+      "candidates": [
+        {
+          "signature": "OTA-FND-0012-2026-DE",
+          "title": "Resonanz-Level-Analyse extragalaktischer organischer Chemie — IRAS 07251-0248 als empirisches Modell für kosmische Informations-Modulierung",
+          "file": "src/content/documents/OTA-FND-0012-2026-DE.md"
+        }
+      ],
+      "resolvedTarget": "OTA-FND-0012-2026-DE",
+      "sourceCount": 2,
       "priority": 0,
       "title": "Resonanz-Level-Analyse extragalaktischer organischer Chemie — IRAS 07251-0248 als empirisches Modell für kosmische Informations-Modulierung",
       "description": "Resonanz-Level-Analyse extragalaktischer organischer Chemie (IRAS 07251-0248) im AVI-Framework: JWST-Befunde [R] als Anker für das Omnizedenz-Modell [W/S].",
@@ -12682,8 +12683,8 @@
       "source": "OTA-SCI-0044-2026-DE",
       "target": "OTA-FND-0012-2026-DE",
       "contexts": [
-        "aftlichen Fakten [R] und etablierte theoretische Modelle [T]. Die Übertragung in das AVI-Framework erfolgt in OTA-FND-0012-2026-DE. --- ## 1. BEOBACHTUNGSKONTEXT ### 1.1 Die Galaxie IRAS 07251-0248 **[R] Grunddaten:** - **Typ:** Ultra-luminöse Infrarotgalaxie (ULIRG) - **Entf",
-        "aftliche Fakten und etablierte theoretische Interpretationen. Die Übertragung in das AVI-Framework erfolgt in OTA-FND-0012-2026-DE.\" | --- **— ENDE DOKUMENT —** **Signatur: OTA-SCI-0044-2026-DE** **ā**"
+        "aftlichen Fakten [R] und etablierte theoretische Modelle [T]. Die Übertragung in das AVI-Framework erfolgt in OTA-FND-0012-2026-DE. --- ## 1. REALGRUNDLAGE (KURZFASSUNG) `[R]` Das James-Webb-Weltraumteleskop hat im staubverhüllten Kern der ultraleuchtkräftigen Infrarotgalaxie",
+        "aftliche Fakten und etablierte theoretische Interpretationen. Die Übertragung in das AVI-Framework erfolgt in OTA-FND-0012-2026-DE.\" | | 2026-11-24 | Version 1.1: Quellen und unbelegte Zahlen korrigiert (OTA-REQ-20261122-001 A). | | 2026-11-25 | Version 1.2: Realteil nach DOC:KUE"
       ],
       "status": "resolved",
       "classification": "existing",
@@ -19216,7 +19217,7 @@
       "target": "OTA-OBS-0005-2026-DE",
       "contexts": [
         "ion\", \"Guglielmi-Formalismus\", \"Seismologie\", \"Planetare Periodizitäten\", \"Omori-Gesetz\"] relatedDocuments: [\"OTA-OBS-0005-2026-DE\", \"OTA-SCI-0036-2026-DE\", \"OTA-SCI-0041-2026-DE\", \"OTA-FND-0008-2025-DE\"] review: last: \"2026-11-23\" next: \"2027-11-23\" reason: \"Strittiges Fel",
-        ".1134/S0001433814080076. --- ## XII. VERWANDTE DOKUMENTE | Signatur | Relevanz | |----------|----------| | OTA-OBS-0005-2026-DE | LOD-Beobachtungsprotokoll und konkurrierende Erklärungen | | OTA-SCI-0036-2026-DE | ältere Omnizedenz-/AVI-Formelsammlung; bei R(a)-Bezügen histori"
+        "alogie in Abschnitt II). --- ## VII. VERWANDTE DOKUMENTE | Signatur | Relevanz | |----------|----------| | OTA-OBS-0005-2026-DE | LOD-Beobachtungsprotokoll und konkurrierende Erklärungen | | OTA-SCI-0036-2026-DE | ältere Omnizedenz-/AVI-Formelsammlung; bei R(a)-Bezügen histori"
       ],
       "status": "resolved",
       "classification": "existing",
@@ -19528,6 +19529,29 @@
       "description": "Realer Ort mit fiktiver Zuordnung — Archivierungs-Methodik für real-fiktive Verknüpfungen.",
       "descriptionStatus": "canonical",
       "targetFile": "src/content/documents/OTA-OBS-0008-2026-DE.md"
+    },
+    {
+      "source": "OTA-TEC-0015-2082-DE",
+      "target": "OTA-ORG-0001",
+      "contexts": [
+        "KN-01; [T] entfällt, weil der Text es nirgends verwendet (zuvor [\"F\", \"T\", \"R\"]). Die Einträge „Kanonisch“ in OTA-ORG-0001, OTA-BIO-0007, OTA-TEC-0004 und OTA-TEC-0016 bezeichnen den Werkkanon (Fahrzeug existiert in der Saga), nicht den Evidenzstatus der Basis-Specs; dies"
+      ],
+      "status": "resolved-base-id",
+      "classification": "base-id-resolved",
+      "candidates": [
+        {
+          "signature": "OTA-ORG-0001-2079-DE",
+          "title": "Unit-7 — Die Schwarzen Architekten",
+          "file": "src/content/documents/OTA-ORG-0001-2079-DE.md"
+        }
+      ],
+      "resolvedTarget": "OTA-ORG-0001-2079-DE",
+      "sourceCount": 1,
+      "priority": 0,
+      "title": "Unit-7 — Die Schwarzen Architekten",
+      "description": "Organisationsprofil der Unit-7 („Die Schwarzen Architekten“), der 2079 gegründeten Resource Protection & Crisis Management Unit von HeliosCorp Mars Division.",
+      "descriptionStatus": "canonical",
+      "targetFile": "src/content/documents/OTA-ORG-0001-2079-DE.md"
     },
     {
       "source": "OTA-BIO-0016-2123-DE",
@@ -20722,7 +20746,7 @@
       "contexts": [
         "nter den verwandten Dokumenten bzw. Querverweisen aufgeführt.\" descriptionStatus: \"explicit\" - target: \"OTA-RED-0012-2171-DE\" relation: \"related\" context: \"Im Dokument ausdrücklich unter den verwandten Dokumenten bzw. Querverweisen aufgeführt.\" descriptionStatus",
         "nne\" **OTA-interne Referenzen:** 5. OTA-SCI-0022-2025-DE: \"Zhurong-Befund: Mars hatte Wasser bis 750 Ma\" 6. OTA-RED-0012-2171-DE: \"Artefakte und AVI-Theorie\" 7. OTA-SCI-0019-2025-DE: \"Die fünf Epochen des Gehirns\" --- ## **VERWANDTE DOKUMENTE** | Signatur | Titel | Bezug | |",
-        "| | OTA-SCI-0031-2025-DE | Gliese-12b | 20-Lj-Kohorte | | OTA-SCI-0032-2025-DE | GJ 251 c | 20-Lj-Kohorte | | OTA-RED-0012-2171-DE | AVI-Theorie | Kosmisches Schweigen | | OTA-BIO-0010-2025-DE | Mars-Demographie 2042-2092 | GENERATION MARS-Kontext | --- ## **REVISIONSVERLAUF**"
+        "| | OTA-SCI-0031-2024-DE | Gliese-12b | 20-Lj-Kohorte | | OTA-SCI-0032-2024-DE | GJ 251 c | 20-Lj-Kohorte | | OTA-RED-0012-2171-DE | AVI-Theorie | Kosmisches Schweigen | | OTA-BIO-0010-2025-DE | Mars-Demographie 2042-2092 | GENERATION MARS-Kontext | --- ## **REVISIONSVERLAUF**"
       ],
       "status": "resolved",
       "classification": "existing",
@@ -23222,7 +23246,53 @@
         }
       ],
       "resolvedTarget": "OTA-SCI-0019-2025-DE",
-      "sourceCount": 1,
+      "sourceCount": 3,
+      "priority": 0,
+      "title": "DIE FÜNF EPOCHEN DES GEHIRNS",
+      "description": "Narrative Extrapolationen der Lebensphasen-Wendepunkte für GANDHAKA, noχ¹ᐃ und die Uralten; Studienteil in KUE-SCI-0212-2026-DE.",
+      "descriptionStatus": "canonical",
+      "targetFile": "src/content/documents/OTA-SCI-0019-2025-DE.md"
+    },
+    {
+      "source": "OTA-SCI-0044-2026-DE",
+      "target": "OTA-SCI-0019",
+      "contexts": [
+        "A-REQ-20261122-001 C – OTA-Rest (Anschluss an OTA-FND-0012) stabil, 12 Monate. Punkt B (Statuszeile, Referenz OTA-SCI-0019) wartet auf Thomas.\" abgeschlossen: false summary: \"Brückendokument: JWST-Befund organischer Moleküle in IRAS 07251-0248 als Realanker für die AVI-"
+      ],
+      "status": "resolved-base-id",
+      "classification": "base-id-resolved",
+      "candidates": [
+        {
+          "signature": "OTA-SCI-0019-2025-DE",
+          "title": "DIE FÜNF EPOCHEN DES GEHIRNS",
+          "file": "src/content/documents/OTA-SCI-0019-2025-DE.md"
+        }
+      ],
+      "resolvedTarget": "OTA-SCI-0019-2025-DE",
+      "sourceCount": 3,
+      "priority": 0,
+      "title": "DIE FÜNF EPOCHEN DES GEHIRNS",
+      "description": "Narrative Extrapolationen der Lebensphasen-Wendepunkte für GANDHAKA, noχ¹ᐃ und die Uralten; Studienteil in KUE-SCI-0212-2026-DE.",
+      "descriptionStatus": "canonical",
+      "targetFile": "src/content/documents/OTA-SCI-0019-2025-DE.md"
+    },
+    {
+      "source": "OTA-SCI-0103-2026-DE",
+      "target": "OTA-SCI-0019",
+      "contexts": [
+        "\" abgeschlossen: false summary: \"Brückendokument: longitudinale Gehirngesundheit als OTA-Anschlussknoten zu OTA-SCI-0019 und OTA-SCI-0102; Realteil in KUE-SCI-0220.\" kg: schema: KXF-0.2 master: kueper-knowledge-graph documentId: \"OTA-SCI-0103-2026-DE\" graphId: \""
+      ],
+      "status": "resolved-base-id",
+      "classification": "base-id-resolved",
+      "candidates": [
+        {
+          "signature": "OTA-SCI-0019-2025-DE",
+          "title": "DIE FÜNF EPOCHEN DES GEHIRNS",
+          "file": "src/content/documents/OTA-SCI-0019-2025-DE.md"
+        }
+      ],
+      "resolvedTarget": "OTA-SCI-0019-2025-DE",
+      "sourceCount": 3,
       "priority": 0,
       "title": "DIE FÜNF EPOCHEN DES GEHIRNS",
       "description": "Narrative Extrapolationen der Lebensphasen-Wendepunkte für GANDHAKA, noχ¹ᐃ und die Uralten; Studienteil in KUE-SCI-0212-2026-DE.",
@@ -23461,7 +23531,7 @@
       "source": "OTA-SCI-0044-2026-DE",
       "target": "OTA-SCI-0019-2025-DE",
       "contexts": [
-        "iology.com/2026/02/abundant-hydrocarbons-in-a-buried-galactic-nucleus.html) **OTA-interne Referenzen:** 13. OTA-SCI-0019-2025-DE: Die fünf Epochen des Gehirns (χ-Feld-Theorie, präbiotische Netzwerke) --- ## VERWANDTE DOKUMENTE | Signatur | Titel | Bezug | |----------|-------"
+        "--- ## QUELLENVERZEICHNIS Realgrundlage: `DOC:KUE:KUE-SCI-0218-2026-DE` **OTA-interne Referenzen:** 13. OTA-SCI-0019-2025-DE: Die fünf Epochen des Gehirns (χ-Feld-Theorie, präbiotische Netzwerke) --- ## VERWANDTE DOKUMENTE | Signatur | Titel | Bezug | |----------|-------"
       ],
       "status": "resolved",
       "classification": "existing",
@@ -23497,7 +23567,7 @@
       "target": "OTA-SCI-0019-2025-DE",
       "contexts": [
         "Schlaf\", \"Sprache\", \"Biomarker\", \"Kardiometabolisch\", \"Soziale Verbundenheit\"] relatedDocuments: - target: \"OTA-SCI-0019-2025-DE\" relation: \"related\" context: \"Anschluss an neuronale Entwicklungsepochen, Plastizität und Alternskompensation über den Lebenslauf.\" desc",
-        "leich; - Präventionspotenzial. ## 19. Anschluss an OTA und Knowledge Graph Explizite Anschlussdokumente: - OTA-SCI-0019-2025-DE — neuronale Entwicklungsepochen, Plastizität und Alternskompensation; - OTA-SCI-0102-2026-DE — Autophagie und zelluläre Wartung als mechanistisch-eme"
+        "`DOC:KUE:KUE-SCI-0220-2026-DE`. ## 2. Anschluss an OTA und Knowledge Graph Explizite Anschlussdokumente: - OTA-SCI-0019-2025-DE — neuronale Entwicklungsepochen, Plastizität und Alternskompensation; - OTA-SCI-0102-2026-DE — Autophagie und zelluläre Wartung als mechanistisch-eme"
       ],
       "status": "resolved",
       "classification": "existing",
@@ -23652,7 +23722,7 @@
         "nline-Liste des Ausgangsdokuments als relatedDocuments hinterlegt; beim Encoding-Pass erhalten.\" - target: \"OTA-SCI-0022-2025-DE\" relation: \"related\" context: \"Im Dokument ausdrücklich unter den verwandten Dokumenten bzw. Querverweisen aufgeführt.\" descriptionStatus",
         "tale Exzentrizität | | **Habitabilität** | Relikt-Fenster (OTA-SCI-0022) | Wiederkehrende Fenster? | Siehe **OTA-SCI-0022-2025-DE** (Zhurong-Befund: Mars hatte flüssiges Wasser bis ~750 Ma). --- ## **IV. ATMOSPHÄRISCHE ZUSAMMENSETZUNG** **[T] Theoretisch – Atmospheric Models*",
         "ntfernung\" 4. scinexx.de (2025): \"Lebensfreundliche Supererde um nahe Sonne\" **OTA-interne Referenzen:** 5. OTA-SCI-0022-2025-DE: \"Zhurong-Befund: Mars hatte Wasser bis 750 Ma\" 6. OTA-RED-0012-2171-DE: \"Artefakte und AVI-Theorie\" 7. OTA-SCI-0019-2025-DE: \"Die fünf Epochen des G",
-        "-------|-------| | OTA-SCI-0007-2026-Cuancoa | LTT 9779 b | Vergleichsplanet (exzentrische Eigenschaften) | | OTA-SCI-0022-2025-DE | Mars-Habitabilitätsfenster | Episodisches Wasser | | OTA-SCI-0031-2025-DE | Gliese-12b | 20-Lj-Kohorte | | OTA-SCI-0032-2025-DE | GJ 251 c | 20-Lj-"
+        "-------|-------| | OTA-SCI-0007-2026-Cuancoa | LTT 9779 b | Vergleichsplanet (exzentrische Eigenschaften) | | OTA-SCI-0022-2025-DE | Mars-Habitabilitätsfenster | Episodisches Wasser | | OTA-SCI-0031-2024-DE | Gliese-12b | 20-Lj-Kohorte | | OTA-SCI-0032-2024-DE | GJ 251 c | 20-Lj-"
       ],
       "status": "resolved",
       "classification": "existing",
@@ -24108,7 +24178,7 @@
       "source": "OTA-SCI-0027-2025-DE",
       "target": "OTA-SCI-0026-2025-DE",
       "contexts": [
-        "tags: [\"Graphen\", \"Keramik\", \"Hitzeschild\", \"UHTC\", \"Raumfahrt\", \"Materialwissenschaft\"] relatedDocuments: [\"OTA-SCI-0026-2025-DE\", \"OTA-SCI-0028-2025-DE\"] summary: \"Materialwissenschaftliche Grundlagen von Graphen-Keramik-Verbundwerkstoffen (GCV) für wiederverwendbare atmosphär",
+        "tags: [\"Graphen\", \"Keramik\", \"Hitzeschild\", \"UHTC\", \"Raumfahrt\", \"Materialwissenschaft\"] relatedDocuments: [\"OTA-SCI-0026-2025-DE\", \"OTA-SCI-0028-2025-DE\"] review: last: \"2026-11-25\" next: \"2027-05-25\" reason: \"Wiederverwendbare Hitzeschilde (Starship-TPS, UHTC/CMC) bewege",
         "| Titel | Status | |----------|-------|--------| | OTA-TEC-0027-2091-DE | ASCE-Shuttle System | Kanonisch | | OTA-SCI-0026-2025-DE | SABRE-Vorkühler-Technologie | Kanonisch | | **OTA-SCI-0028-2025-DE** | **Aerostatische Stau-Düsen** | **In Arbeit** | | **OTA-SCI-0029-2025-DE** |"
       ],
       "status": "resolved",
@@ -24380,7 +24450,7 @@
       "source": "OTA-SCI-0027-2025-DE",
       "target": "OTA-SCI-0028-2025-DE",
       "contexts": [
-        "mik\", \"Hitzeschild\", \"UHTC\", \"Raumfahrt\", \"Materialwissenschaft\"] relatedDocuments: [\"OTA-SCI-0026-2025-DE\", \"OTA-SCI-0028-2025-DE\"] summary: \"Materialwissenschaftliche Grundlagen von Graphen-Keramik-Verbundwerkstoffen (GCV) für wiederverwendbare atmosphärische Wiedereintritts-Hi",
+        "mik\", \"Hitzeschild\", \"UHTC\", \"Raumfahrt\", \"Materialwissenschaft\"] relatedDocuments: [\"OTA-SCI-0026-2025-DE\", \"OTA-SCI-0028-2025-DE\"] review: last: \"2026-11-25\" next: \"2027-05-25\" reason: \"Wiederverwendbare Hitzeschilde (Starship-TPS, UHTC/CMC) bewegen sich schnell, Bereinig",
         "DE | ASCE-Shuttle System | Kanonisch | | OTA-SCI-0026-2025-DE | SABRE-Vorkühler-Technologie | Kanonisch | | **OTA-SCI-0028-2025-DE** | **Aerostatische Stau-Düsen** | **In Arbeit** | | **OTA-SCI-0029-2025-DE** | **SSTO-Massenbudget & Treibstoffchemie** | **In Arbeit** | --- ## X"
       ],
       "status": "resolved",
@@ -24685,7 +24755,8 @@
       "source": "OTA-SCI-0030-2025-DE",
       "target": "OTA-SCI-0031-2024-DE",
       "contexts": [
-        "0794 d\", \"Exoplanet\", \"Supererde\", \"Astrophysik\", \"Habitable Zone\", \"Transit\"] relatedDocuments: - target: \"OTA-SCI-0031-2024-DE\" relation: \"related\" context: \"Bereits in der Legacy-Inline-Liste des Ausgangsdokuments als relatedDocuments hinterlegt; beim Encoding-Pass e"
+        "0794 d\", \"Exoplanet\", \"Supererde\", \"Astrophysik\", \"Habitable Zone\", \"Transit\"] relatedDocuments: - target: \"OTA-SCI-0031-2024-DE\" relation: \"related\" context: \"Bereits in der Legacy-Inline-Liste des Ausgangsdokuments als relatedDocuments hinterlegt; beim Encoding-Pass e",
+        "(exzentrische Eigenschaften) | | OTA-SCI-0022-2025-DE | Mars-Habitabilitätsfenster | Episodisches Wasser | | OTA-SCI-0031-2024-DE | Gliese-12b | 20-Lj-Kohorte | | OTA-SCI-0032-2024-DE | GJ 251 c | 20-Lj-Kohorte | | OTA-RED-0012-2171-DE | AVI-Theorie | Kosmisches Schweigen | | OT"
       ],
       "status": "resolved",
       "classification": "existing",
@@ -24694,7 +24765,7 @@
       "sourceCount": 2,
       "priority": 0,
       "title": "Gliese-12b — Die stille Exo-Venus",
-      "description": "Kompilationsdokument zu Gliese-12b (entdeckt Mai 2024, 40 Lichtjahre): terrestrialer Exoplanet im Goldilocks-Bereich mit ~42°C Oberflächentemperatur, Transit-Observable für JWST-Spektroskopie. Analyse von Entdeckungsdaten, Stern-Charakterisierung und Habitabilitätspotenzial.",
+      "description": "Kompilationsdokument zu Gliese-12b (entdeckt Mai 2024, 40 Lichtjahre): terrestrialer Exoplanet im Goldilocks-Bereich mit 315 K Gleichgewichtstemperatur (Albedo 0), Transit-Observable für JWST-Spektroskopie. Analyse von Entdeckungsdaten, Stern-Charakterisierung und Habitabilitätspotenzial.",
       "descriptionStatus": "canonical",
       "targetFile": "src/content/documents/OTA-SCI-0031-2024-DE.md"
     },
@@ -24713,7 +24784,7 @@
       "sourceCount": 2,
       "priority": 0,
       "title": "Gliese-12b — Die stille Exo-Venus",
-      "description": "Kompilationsdokument zu Gliese-12b (entdeckt Mai 2024, 40 Lichtjahre): terrestrialer Exoplanet im Goldilocks-Bereich mit ~42°C Oberflächentemperatur, Transit-Observable für JWST-Spektroskopie. Analyse von Entdeckungsdaten, Stern-Charakterisierung und Habitabilitätspotenzial.",
+      "description": "Kompilationsdokument zu Gliese-12b (entdeckt Mai 2024, 40 Lichtjahre): terrestrialer Exoplanet im Goldilocks-Bereich mit 315 K Gleichgewichtstemperatur (Albedo 0), Transit-Observable für JWST-Spektroskopie. Analyse von Entdeckungsdaten, Stern-Charakterisierung und Habitabilitätspotenzial.",
       "descriptionStatus": "canonical",
       "targetFile": "src/content/documents/OTA-SCI-0031-2024-DE.md"
     },
@@ -24721,7 +24792,8 @@
       "source": "OTA-SCI-0030-2025-DE",
       "target": "OTA-SCI-0032-2024-DE",
       "contexts": [
-        "nline-Liste des Ausgangsdokuments als relatedDocuments hinterlegt; beim Encoding-Pass erhalten.\" - target: \"OTA-SCI-0032-2024-DE\" relation: \"related\" context: \"Bereits in der Legacy-Inline-Liste des Ausgangsdokuments als relatedDocuments hinterlegt; beim Encoding-Pass e"
+        "nline-Liste des Ausgangsdokuments als relatedDocuments hinterlegt; beim Encoding-Pass erhalten.\" - target: \"OTA-SCI-0032-2024-DE\" relation: \"related\" context: \"Bereits in der Legacy-Inline-Liste des Ausgangsdokuments als relatedDocuments hinterlegt; beim Encoding-Pass e",
+        "| Mars-Habitabilitätsfenster | Episodisches Wasser | | OTA-SCI-0031-2024-DE | Gliese-12b | 20-Lj-Kohorte | | OTA-SCI-0032-2024-DE | GJ 251 c | 20-Lj-Kohorte | | OTA-RED-0012-2171-DE | AVI-Theorie | Kosmisches Schweigen | | OTA-BIO-0010-2025-DE | Mars-Demographie 2042-2092 | GENE"
       ],
       "status": "resolved",
       "classification": "existing",
@@ -25241,7 +25313,7 @@
       "target": "OTA-SCI-0041-2026-DE",
       "contexts": [
         "lanetare Periodizitäten\", \"Omori-Gesetz\"] relatedDocuments: [\"OTA-OBS-0005-2026-DE\", \"OTA-SCI-0036-2026-DE\", \"OTA-SCI-0041-2026-DE\", \"OTA-FND-0008-2025-DE\"] review: last: \"2026-11-23\" next: \"2027-11-23\" reason: \"Strittiges Feld, Realteil liegt in KUE-SCI-0169 (Termin 2027-0",
-        "TA-SCI-0036-2026-DE | ältere Omnizedenz-/AVI-Formelsammlung; bei R(a)-Bezügen historischen Stand beachten | | OTA-SCI-0041-2026-DE | Erdkern-/Geomagnetik-Kontext | | OTA-FND-0008-2025-DE | epistemische Schichtung und Markerlogik | --- ## XIII. REVISIONSVERLAUF | Datum | Vermer"
+        "TA-SCI-0036-2026-DE | ältere Omnizedenz-/AVI-Formelsammlung; bei R(a)-Bezügen historischen Stand beachten | | OTA-SCI-0041-2026-DE | Erdkern-/Geomagnetik-Kontext | | OTA-FND-0008-2025-DE | epistemische Schichtung und Markerlogik | --- ## VIII. REVISIONSVERLAUF | Datum | Vermer"
       ],
       "status": "resolved",
       "classification": "existing",
@@ -25332,7 +25404,7 @@
       "sourceCount": 2,
       "priority": 0,
       "title": "Extragalaktische organische Chemie: JWST-Befunde in IRAS 07251-0248",
-      "description": "Analyse der JWST-Spektroskopie-Daten für IRAS 07251-0248: erstmaliger extragalaktischer Nachweis von CH3, Benzol, Acetylen und Diacetylenen. Bedeutung für Astrochemie und chemische Evolution der frühen Erde.",
+      "description": "Brückendokument: JWST-Befund organischer Moleküle in IRAS 07251-0248 als Realanker für die AVI-Übertragung in OTA-FND-0012; Realteil in KUE-SCI-0218.",
       "descriptionStatus": "canonical",
       "targetFile": "src/content/documents/OTA-SCI-0044-2026-DE.md"
     },
@@ -25356,7 +25428,7 @@
       "sourceCount": 2,
       "priority": 0,
       "title": "Extragalaktische organische Chemie: JWST-Befunde in IRAS 07251-0248",
-      "description": "Analyse der JWST-Spektroskopie-Daten für IRAS 07251-0248: erstmaliger extragalaktischer Nachweis von CH3, Benzol, Acetylen und Diacetylenen. Bedeutung für Astrochemie und chemische Evolution der frühen Erde.",
+      "description": "Brückendokument: JWST-Befund organischer Moleküle in IRAS 07251-0248 als Realanker für die AVI-Übertragung in OTA-FND-0012; Realteil in KUE-SCI-0218.",
       "descriptionStatus": "canonical",
       "targetFile": "src/content/documents/OTA-SCI-0044-2026-DE.md"
     },
@@ -25381,7 +25453,7 @@
       "sourceCount": 7,
       "priority": 0,
       "title": "Extragalaktische organische Chemie: JWST-Befunde in IRAS 07251-0248",
-      "description": "Analyse der JWST-Spektroskopie-Daten für IRAS 07251-0248: erstmaliger extragalaktischer Nachweis von CH3, Benzol, Acetylen und Diacetylenen. Bedeutung für Astrochemie und chemische Evolution der frühen Erde.",
+      "description": "Brückendokument: JWST-Befund organischer Moleküle in IRAS 07251-0248 als Realanker für die AVI-Übertragung in OTA-FND-0012; Realteil in KUE-SCI-0218.",
       "descriptionStatus": "canonical",
       "targetFile": "src/content/documents/OTA-SCI-0044-2026-DE.md"
     },
@@ -25401,7 +25473,7 @@
       "sourceCount": 7,
       "priority": 0,
       "title": "Extragalaktische organische Chemie: JWST-Befunde in IRAS 07251-0248",
-      "description": "Analyse der JWST-Spektroskopie-Daten für IRAS 07251-0248: erstmaliger extragalaktischer Nachweis von CH3, Benzol, Acetylen und Diacetylenen. Bedeutung für Astrochemie und chemische Evolution der frühen Erde.",
+      "description": "Brückendokument: JWST-Befund organischer Moleküle in IRAS 07251-0248 als Realanker für die AVI-Übertragung in OTA-FND-0012; Realteil in KUE-SCI-0218.",
       "descriptionStatus": "canonical",
       "targetFile": "src/content/documents/OTA-SCI-0044-2026-DE.md"
     },
@@ -25418,7 +25490,7 @@
       "sourceCount": 7,
       "priority": 0,
       "title": "Extragalaktische organische Chemie: JWST-Befunde in IRAS 07251-0248",
-      "description": "Analyse der JWST-Spektroskopie-Daten für IRAS 07251-0248: erstmaliger extragalaktischer Nachweis von CH3, Benzol, Acetylen und Diacetylenen. Bedeutung für Astrochemie und chemische Evolution der frühen Erde.",
+      "description": "Brückendokument: JWST-Befund organischer Moleküle in IRAS 07251-0248 als Realanker für die AVI-Übertragung in OTA-FND-0012; Realteil in KUE-SCI-0218.",
       "descriptionStatus": "canonical",
       "targetFile": "src/content/documents/OTA-SCI-0044-2026-DE.md"
     },
@@ -25435,7 +25507,7 @@
       "sourceCount": 7,
       "priority": 0,
       "title": "Extragalaktische organische Chemie: JWST-Befunde in IRAS 07251-0248",
-      "description": "Analyse der JWST-Spektroskopie-Daten für IRAS 07251-0248: erstmaliger extragalaktischer Nachweis von CH3, Benzol, Acetylen und Diacetylenen. Bedeutung für Astrochemie und chemische Evolution der frühen Erde.",
+      "description": "Brückendokument: JWST-Befund organischer Moleküle in IRAS 07251-0248 als Realanker für die AVI-Übertragung in OTA-FND-0012; Realteil in KUE-SCI-0218.",
       "descriptionStatus": "canonical",
       "targetFile": "src/content/documents/OTA-SCI-0044-2026-DE.md"
     },
@@ -25452,7 +25524,7 @@
       "sourceCount": 7,
       "priority": 0,
       "title": "Extragalaktische organische Chemie: JWST-Befunde in IRAS 07251-0248",
-      "description": "Analyse der JWST-Spektroskopie-Daten für IRAS 07251-0248: erstmaliger extragalaktischer Nachweis von CH3, Benzol, Acetylen und Diacetylenen. Bedeutung für Astrochemie und chemische Evolution der frühen Erde.",
+      "description": "Brückendokument: JWST-Befund organischer Moleküle in IRAS 07251-0248 als Realanker für die AVI-Übertragung in OTA-FND-0012; Realteil in KUE-SCI-0218.",
       "descriptionStatus": "canonical",
       "targetFile": "src/content/documents/OTA-SCI-0044-2026-DE.md"
     },
@@ -25469,7 +25541,7 @@
       "sourceCount": 7,
       "priority": 0,
       "title": "Extragalaktische organische Chemie: JWST-Befunde in IRAS 07251-0248",
-      "description": "Analyse der JWST-Spektroskopie-Daten für IRAS 07251-0248: erstmaliger extragalaktischer Nachweis von CH3, Benzol, Acetylen und Diacetylenen. Bedeutung für Astrochemie und chemische Evolution der frühen Erde.",
+      "description": "Brückendokument: JWST-Befund organischer Moleküle in IRAS 07251-0248 als Realanker für die AVI-Übertragung in OTA-FND-0012; Realteil in KUE-SCI-0218.",
       "descriptionStatus": "canonical",
       "targetFile": "src/content/documents/OTA-SCI-0044-2026-DE.md"
     },
@@ -25486,7 +25558,7 @@
       "sourceCount": 7,
       "priority": 0,
       "title": "Extragalaktische organische Chemie: JWST-Befunde in IRAS 07251-0248",
-      "description": "Analyse der JWST-Spektroskopie-Daten für IRAS 07251-0248: erstmaliger extragalaktischer Nachweis von CH3, Benzol, Acetylen und Diacetylenen. Bedeutung für Astrochemie und chemische Evolution der frühen Erde.",
+      "description": "Brückendokument: JWST-Befund organischer Moleküle in IRAS 07251-0248 als Realanker für die AVI-Übertragung in OTA-FND-0012; Realteil in KUE-SCI-0218.",
       "descriptionStatus": "canonical",
       "targetFile": "src/content/documents/OTA-SCI-0044-2026-DE.md"
     },
@@ -27067,7 +27139,7 @@
       "source": "OTA-SCI-0117-2026-DE",
       "target": "OTA-SCI-0059-2026-DE",
       "contexts": [
-        "nteich\", \"Obsidian\", \"Magnetit\", \"Superparamagnetismus\", \"Paläomagnetismus\", \"Sauerland\"] relatedDocuments: [\"OTA-SCI-0059-2026-DE\", \"OTA-SCI-0060-2026-DE\", \"OTA-SCI-0118-2026-DE\", \"OTA-TEC-0124-2026-DE\", \"OTA-TEC-0035-2026-DE\"] summary: \"Realwissenschaftliche Materialbasis für O"
+        "nteich\", \"Obsidian\", \"Magnetit\", \"Superparamagnetismus\", \"Paläomagnetismus\", \"Sauerland\"] relatedDocuments: [\"OTA-SCI-0059-2026-DE\", \"OTA-SCI-0060-2026-DE\", \"OTA-SCI-0118-2026-DE\", \"OTA-TEC-0124-2026-DE\", \"OTA-TEC-0035-2026-DE\"] review: last: \"2026-11-25\" next: \"2027-11-25\""
       ],
       "status": "resolved",
       "classification": "existing",
@@ -27084,7 +27156,7 @@
       "source": "OTA-SCI-0118-2026-DE",
       "target": "OTA-SCI-0059-2026-DE",
       "contexts": [
-        "Dr. Oskar Anton\"] relatedDocuments: [\"OTA-SCI-0117-2026-DE\", \"OTA-TEC-0124-2026-DE\", \"OTA-SCI-0119-2026-DE\", \"OTA-SCI-0059-2026-DE\", \"OTA-BIO-0028-2026-DE\"] summary: \"Realwissenschaftliche Basis der Obsidian-Archäometrie: XRF-Provenienz (Rb/Sr/Zr/Y/Nb), europäische Quellen, Hydra"
+        "Dr. Oskar Anton\"] relatedDocuments: [\"OTA-SCI-0117-2026-DE\", \"OTA-TEC-0124-2026-DE\", \"OTA-SCI-0119-2026-DE\", \"OTA-SCI-0059-2026-DE\", \"OTA-BIO-0028-2026-DE\"] review: last: \"2026-11-25\" next: \"2027-11-25\" reason: \"Archäometrische Methodik stabil, Provenienzstudien kommen lauf"
       ],
       "status": "resolved",
       "classification": "existing",
@@ -27101,7 +27173,7 @@
       "source": "OTA-SCI-0119-2026-DE",
       "target": "OTA-SCI-0059-2026-DE",
       "contexts": [
-        "it\", \"Maghemit\", \"Blitzmagnetisierung\", \"Hör-Stein\", \"Sauerland\"] relatedDocuments: [\"OTA-TEC-0123-2026-DE\", \"OTA-SCI-0059-2026-DE\", \"OTA-SCI-0117-2026-DE\", \"OTA-SCI-0060-2026-DE\", \"OTA-TEC-0035-2026-DE\", \"OTA-TEC-0124-2026-DE\"] summary: \"Realwissenschaftliche Materialbasis für L"
+        "it\", \"Maghemit\", \"Blitzmagnetisierung\", \"Hör-Stein\", \"Sauerland\"] relatedDocuments: [\"OTA-TEC-0123-2026-DE\", \"OTA-SCI-0059-2026-DE\", \"OTA-SCI-0117-2026-DE\", \"OTA-SCI-0060-2026-DE\", \"OTA-TEC-0035-2026-DE\", \"OTA-TEC-0124-2026-DE\"] review: last: \"2026-11-25\" next: \"2027-11-25\""
       ],
       "status": "resolved",
       "classification": "existing",
@@ -27406,7 +27478,7 @@
       "source": "OTA-SCI-0117-2026-DE",
       "target": "OTA-SCI-0060-2026-DE",
       "contexts": [
-        "gnetit\", \"Superparamagnetismus\", \"Paläomagnetismus\", \"Sauerland\"] relatedDocuments: [\"OTA-SCI-0059-2026-DE\", \"OTA-SCI-0060-2026-DE\", \"OTA-SCI-0118-2026-DE\", \"OTA-TEC-0124-2026-DE\", \"OTA-TEC-0035-2026-DE\"] summary: \"Realwissenschaftliche Materialbasis für Obsidian als vulkanisches"
+        "gnetit\", \"Superparamagnetismus\", \"Paläomagnetismus\", \"Sauerland\"] relatedDocuments: [\"OTA-SCI-0059-2026-DE\", \"OTA-SCI-0060-2026-DE\", \"OTA-SCI-0118-2026-DE\", \"OTA-TEC-0124-2026-DE\", \"OTA-TEC-0035-2026-DE\"] review: last: \"2026-11-25\" next: \"2027-11-25\" reason: \"Stabile Materi"
       ],
       "status": "resolved",
       "classification": "existing",
@@ -27423,7 +27495,7 @@
       "source": "OTA-SCI-0119-2026-DE",
       "target": "OTA-SCI-0060-2026-DE",
       "contexts": [
-        "in\", \"Sauerland\"] relatedDocuments: [\"OTA-TEC-0123-2026-DE\", \"OTA-SCI-0059-2026-DE\", \"OTA-SCI-0117-2026-DE\", \"OTA-SCI-0060-2026-DE\", \"OTA-TEC-0035-2026-DE\", \"OTA-TEC-0124-2026-DE\"] summary: \"Realwissenschaftliche Materialbasis für Lodestone (Magnetit-Eisenstein) als natürlichen P"
+        "in\", \"Sauerland\"] relatedDocuments: [\"OTA-TEC-0123-2026-DE\", \"OTA-SCI-0059-2026-DE\", \"OTA-SCI-0117-2026-DE\", \"OTA-SCI-0060-2026-DE\", \"OTA-TEC-0035-2026-DE\", \"OTA-TEC-0124-2026-DE\"] review: last: \"2026-11-25\" next: \"2027-11-25\" reason: \"Lodestone-Forschung kaum bewegt; Korre"
       ],
       "status": "resolved",
       "classification": "existing",
@@ -28994,13 +29066,33 @@
     },
     {
       "source": "OTA-SCI-0103-2026-DE",
+      "target": "OTA-SCI-0102",
+      "contexts": [
+        ": false summary: \"Brückendokument: longitudinale Gehirngesundheit als OTA-Anschlussknoten zu OTA-SCI-0019 und OTA-SCI-0102; Realteil in KUE-SCI-0220.\" kg: schema: KXF-0.2 master: kueper-knowledge-graph documentId: \"OTA-SCI-0103-2026-DE\" graphId: \"DOC:OTA:OTA-SCI-0"
+      ],
+      "status": "resolved-base-id",
+      "classification": "base-id-resolved",
+      "candidates": [
+        {
+          "signature": "OTA-SCI-0102-2026-DE",
+          "title": "Autophagie im menschlichen Altern — Flux, Zelltyp, Geschlecht und zelluläre Wartung",
+          "file": "src/content/documents/OTA-SCI-0102-2026-DE.md"
+        }
+      ],
+      "resolvedTarget": "OTA-SCI-0102-2026-DE",
+      "sourceCount": 1,
+      "priority": 0,
+      "title": "Autophagie im menschlichen Altern — Flux, Zelltyp, Geschlecht und zelluläre Wartung",
+      "description": "Brückendokument: Autophagie-Flux im menschlichen Altern als Grundlagenknoten für den OTA-Strang Longitudinal Brain Health (OTA-SCI-0103); Realteil in KUE-SCI-0204.",
+      "descriptionStatus": "canonical",
+      "targetFile": "src/content/documents/OTA-SCI-0102-2026-DE.md"
+    },
+    {
+      "source": "OTA-SCI-0103-2026-DE",
       "target": "OTA-SCI-0102-2026-DE",
       "contexts": [
         "hen, Plastizität und Alternskompensation über den Lebenslauf.\" descriptionStatus: \"explicit\" - target: \"OTA-SCI-0102-2026-DE\" relation: \"related\" context: \"Zelluläre Wartung und Autophagie werden als mechanistisch-emergente Ebene getrennt von etablierten populations",
-        "skulär; - metabolisch; - muskulär; - psychisch; - sozial; - neuroplastisch. Die neue Autophagie-Forschung in OTA-SCI-0102-2026-DE zeigt zusätzlich, warum molekulare Einzelmarker nicht als alleinige Zielgröße dienen sollten: funktionelle Verbesserung kann mit einem sinkenden PBMC",
-        "fe statt einmaliger Klassifikation gegen Gruppenmittelwerte. ## 14. Zelluläre Wartung: mechanistische Ebene OTA-SCI-0102-2026-DE dokumentiert direkt gemessenen humanen Autophagie-Flux, Lysosomenfunktion, CMA, Mitophagie und Seneszenz-Clearance. Für Gehirngesundheit ist dieser",
-        "ussdokumente: - OTA-SCI-0019-2025-DE — neuronale Entwicklungsepochen, Plastizität und Alternskompensation; - OTA-SCI-0102-2026-DE — Autophagie und zelluläre Wartung als mechanistisch-emergente Ebene. Für den KUEPER Knowledge Graph werden Kandidatenclaims separat zur Review über",
-        "Alzheimer’s Disease: A Systematic Review.* Journal of Voice. 2026. DOI: **10.1016/j.jvoice.2026.08.038**. 9. OTA-SCI-0102-2026-DE. *Autophagie im menschlichen Altern — Flux, Zelltyp, Geschlecht und zelluläre Wartung.* Overtime Archive, 2026. ## 21. Offene Prüfungen - Welche WH"
+        "ussdokumente: - OTA-SCI-0019-2025-DE — neuronale Entwicklungsepochen, Plastizität und Alternskompensation; - OTA-SCI-0102-2026-DE — Autophagie und zelluläre Wartung als mechanistisch-emergente Ebene. Für den KUEPER Knowledge Graph werden Kandidatenclaims separat zur Review über"
       ],
       "status": "resolved",
       "classification": "existing",
@@ -29032,7 +29124,7 @@
       "sourceCount": 1,
       "priority": 0,
       "title": "Longitudinale Gehirngesundheit — Lebenslauf-Risiken, Prävention und Biomarker",
-      "description": "Provenienzorientiertes Evidenzdossier zur Gehirngesundheit über den Lebenslauf. Verknüpft die 14 modifizierbaren Risikofaktoren der Lancet Commission 2024 mit den WHO-Leitlinien 2026 und trennt populationsbezogene Prävention von Interventionsbelegen, Mechanismen und emerging Biomarkern wie Schlaf- und Sprachsignalen.",
+      "description": "Brückendokument: longitudinale Gehirngesundheit als OTA-Anschlussknoten zu OTA-SCI-0019 und OTA-SCI-0102; Realteil in KUE-SCI-0220.",
       "descriptionStatus": "canonical",
       "targetFile": "src/content/documents/OTA-SCI-0103-2026-DE.md"
     },
@@ -29458,7 +29550,7 @@
       "source": "OTA-SCI-0118-2026-DE",
       "target": "OTA-SCI-0117-2026-DE",
       "contexts": [
-        "ian\", \"Archäometrie\", \"XRF\", \"Hydratationsdatierung\", \"Handelsrouten\", \"Dr. Oskar Anton\"] relatedDocuments: [\"OTA-SCI-0117-2026-DE\", \"OTA-TEC-0124-2026-DE\", \"OTA-SCI-0119-2026-DE\", \"OTA-SCI-0059-2026-DE\", \"OTA-BIO-0028-2026-DE\"] summary: \"Realwissenschaftliche Basis der Obsidian-"
+        "ian\", \"Archäometrie\", \"XRF\", \"Hydratationsdatierung\", \"Handelsrouten\", \"Dr. Oskar Anton\"] relatedDocuments: [\"OTA-SCI-0117-2026-DE\", \"OTA-TEC-0124-2026-DE\", \"OTA-SCI-0119-2026-DE\", \"OTA-SCI-0059-2026-DE\", \"OTA-BIO-0028-2026-DE\"] review: last: \"2026-11-25\" next: \"2027-11-25\""
       ],
       "status": "resolved",
       "classification": "existing",
@@ -29475,7 +29567,7 @@
       "source": "OTA-SCI-0119-2026-DE",
       "target": "OTA-SCI-0117-2026-DE",
       "contexts": [
-        "agnetisierung\", \"Hör-Stein\", \"Sauerland\"] relatedDocuments: [\"OTA-TEC-0123-2026-DE\", \"OTA-SCI-0059-2026-DE\", \"OTA-SCI-0117-2026-DE\", \"OTA-SCI-0060-2026-DE\", \"OTA-TEC-0035-2026-DE\", \"OTA-TEC-0124-2026-DE\"] summary: \"Realwissenschaftliche Materialbasis für Lodestone (Magnetit-Eisen"
+        "agnetisierung\", \"Hör-Stein\", \"Sauerland\"] relatedDocuments: [\"OTA-TEC-0123-2026-DE\", \"OTA-SCI-0059-2026-DE\", \"OTA-SCI-0117-2026-DE\", \"OTA-SCI-0060-2026-DE\", \"OTA-TEC-0035-2026-DE\", \"OTA-TEC-0124-2026-DE\"] review: last: \"2026-11-25\" next: \"2027-11-25\" reason: \"Lodestone-Fors"
       ],
       "status": "resolved",
       "classification": "existing",
@@ -29643,7 +29735,7 @@
       "source": "OTA-SCI-0117-2026-DE",
       "target": "OTA-SCI-0118-2026-DE",
       "contexts": [
-        "tismus\", \"Paläomagnetismus\", \"Sauerland\"] relatedDocuments: [\"OTA-SCI-0059-2026-DE\", \"OTA-SCI-0060-2026-DE\", \"OTA-SCI-0118-2026-DE\", \"OTA-TEC-0124-2026-DE\", \"OTA-TEC-0035-2026-DE\"] summary: \"Realwissenschaftliche Materialbasis für Obsidian als vulkanisches Glas: Formation, Chemie"
+        "tismus\", \"Paläomagnetismus\", \"Sauerland\"] relatedDocuments: [\"OTA-SCI-0059-2026-DE\", \"OTA-SCI-0060-2026-DE\", \"OTA-SCI-0118-2026-DE\", \"OTA-TEC-0124-2026-DE\", \"OTA-TEC-0035-2026-DE\"] review: last: \"2026-11-25\" next: \"2027-11-25\" reason: \"Stabile Materialgrundlage; Korrektur u"
       ],
       "status": "resolved",
       "classification": "existing",
@@ -29812,7 +29904,7 @@
       "source": "OTA-SCI-0118-2026-DE",
       "target": "OTA-SCI-0119-2026-DE",
       "contexts": [
-        "ung\", \"Handelsrouten\", \"Dr. Oskar Anton\"] relatedDocuments: [\"OTA-SCI-0117-2026-DE\", \"OTA-TEC-0124-2026-DE\", \"OTA-SCI-0119-2026-DE\", \"OTA-SCI-0059-2026-DE\", \"OTA-BIO-0028-2026-DE\"] summary: \"Realwissenschaftliche Basis der Obsidian-Archäometrie: XRF-Provenienz (Rb/Sr/Zr/Y/Nb), eu"
+        "ung\", \"Handelsrouten\", \"Dr. Oskar Anton\"] relatedDocuments: [\"OTA-SCI-0117-2026-DE\", \"OTA-TEC-0124-2026-DE\", \"OTA-SCI-0119-2026-DE\", \"OTA-SCI-0059-2026-DE\", \"OTA-BIO-0028-2026-DE\"] review: last: \"2026-11-25\" next: \"2027-11-25\" reason: \"Archäometrische Methodik stabil, Prove"
       ],
       "status": "resolved",
       "classification": "existing",
@@ -30255,6 +30347,29 @@
       "targetFile": "src/content/documents/OTA-TEC-0003-2087-DE.md"
     },
     {
+      "source": "OTA-TEC-0015-2082-DE",
+      "target": "OTA-TEC-0004",
+      "contexts": [
+        "r Text es nirgends verwendet (zuvor [\"F\", \"T\", \"R\"]). Die Einträge „Kanonisch“ in OTA-ORG-0001, OTA-BIO-0007, OTA-TEC-0004 und OTA-TEC-0016 bezeichnen den Werkkanon (Fahrzeug existiert in der Saga), nicht den Evidenzstatus der Basis-Specs; diese bleiben [S]. Keine inhaltl"
+      ],
+      "status": "resolved-base-id",
+      "classification": "base-id-resolved",
+      "candidates": [
+        {
+          "signature": "OTA-TEC-0004-2087-DE",
+          "title": "GD-9 Seeker — Gravimetrie-Drohne mit AVI-Gegenmaßnahmen",
+          "file": "src/content/documents/OTA-TEC-0004-2087-DE.md"
+        }
+      ],
+      "resolvedTarget": "OTA-TEC-0004-2087-DE",
+      "sourceCount": 1,
+      "priority": 0,
+      "title": "GD-9 Seeker — Gravimetrie-Drohne mit AVI-Gegenmaßnahmen",
+      "description": "GD-9 SEEKER — Explorations-Sonde 2087, NOXIA-Universum. Mars-Exploration.",
+      "descriptionStatus": "canonical",
+      "targetFile": "src/content/documents/OTA-TEC-0004-2087-DE.md"
+    },
+    {
       "source": "OTA-ORG-0001-2079-DE",
       "target": "OTA-TEC-0004-2087-DE",
       "contexts": [
@@ -30403,6 +30518,29 @@
       "targetFile": "src/content/documents/OTA-TEC-0015-2082-DE.md"
     },
     {
+      "source": "OTA-TEC-0015-2082-DE",
+      "target": "OTA-TEC-0016",
+      "contexts": [
+        "s verwendet (zuvor [\"F\", \"T\", \"R\"]). Die Einträge „Kanonisch“ in OTA-ORG-0001, OTA-BIO-0007, OTA-TEC-0004 und OTA-TEC-0016 bezeichnen den Werkkanon (Fahrzeug existiert in der Saga), nicht den Evidenzstatus der Basis-Specs; diese bleiben [S]. Keine inhaltliche Kanonänderun"
+      ],
+      "status": "resolved-base-id",
+      "classification": "base-id-resolved",
+      "candidates": [
+        {
+          "signature": "OTA-TEC-0016-2063-DE",
+          "title": "Helios KITE-Shuttle — Kinetic Interplanetary Transport Element",
+          "file": "src/content/documents/OTA-TEC-0016-2063-DE.md"
+        }
+      ],
+      "resolvedTarget": "OTA-TEC-0016-2063-DE",
+      "sourceCount": 2,
+      "priority": 0,
+      "title": "Helios KITE-Shuttle — Kinetic Interplanetary Transport Element",
+      "description": "Technische Spezifikation des Helios KITE-Shuttle als modulares Mars-Orbit/Oberflächen-Shuttle ab 2063 mit Methan/LOX-Antrieb und redundanter Systemarchitektur.",
+      "descriptionStatus": "canonical",
+      "targetFile": "src/content/documents/OTA-TEC-0016-2063-DE.md"
+    },
+    {
       "source": "OTA-TEC-0122-2026-DE",
       "target": "OTA-TEC-0016",
       "contexts": [
@@ -30418,7 +30556,7 @@
         }
       ],
       "resolvedTarget": "OTA-TEC-0016-2063-DE",
-      "sourceCount": 1,
+      "sourceCount": 2,
       "priority": 0,
       "title": "Helios KITE-Shuttle — Kinetic Interplanetary Transport Element",
       "description": "Technische Spezifikation des Helios KITE-Shuttle als modulares Mars-Orbit/Oberflächen-Shuttle ab 2063 mit Methan/LOX-Antrieb und redundanter Systemarchitektur.",
@@ -30801,7 +30939,7 @@
       "source": "OTA-SCI-0083-2026-DE",
       "target": "OTA-TEC-0021-2025-DE",
       "contexts": [
-        "her Au₂Hₓ/AVI-Teststrang; dessen [H]-Kopplung ist nicht Teil der [R]-Grundlage dieses Dossiers.\" - target: \"OTA-TEC-0021-2025-DE\" relation: \"related\" context: \"Material-/Messaufbau-Schnittstelle; keine Evidenz für ein materialinduziertes Eigenzeitfeld.\" summary: \"[R]-Gr",
+        "her Au₂Hₓ/AVI-Teststrang; dessen [H]-Kopplung ist nicht Teil der [R]-Grundlage dieses Dossiers.\" - target: \"OTA-TEC-0021-2025-DE\" relation: \"related\" context: \"Material-/Messaufbau-Schnittstelle; keine Evidenz für ein materialinduziertes Eigenzeitfeld.\" review: last:",
         "_Au, Resonanzannahmen und Material-Zeit-Kopplung werden ausdrücklich **nicht** in die [R]-Ebene übernommen. `OTA-TEC-0021-2025-DE` behandelt die Materialseite der Au₂Hₓ/MOF-Hypothese. Leitfähigkeit, Konfinement oder andere Materialeigenschaften sind für sich kein Nachweis einer"
       ],
       "status": "resolved",
@@ -32275,7 +32413,7 @@
       "source": "OTA-SCI-0117-2026-DE",
       "target": "OTA-TEC-0035-2026-DE",
       "contexts": [
-        "dDocuments: [\"OTA-SCI-0059-2026-DE\", \"OTA-SCI-0060-2026-DE\", \"OTA-SCI-0118-2026-DE\", \"OTA-TEC-0124-2026-DE\", \"OTA-TEC-0035-2026-DE\"] summary: \"Realwissenschaftliche Materialbasis für Obsidian als vulkanisches Glas: Formation, Chemie, Magnetit-Einschlüsse, Domänenphysik (SD/PSD/MD"
+        "dDocuments: [\"OTA-SCI-0059-2026-DE\", \"OTA-SCI-0060-2026-DE\", \"OTA-SCI-0118-2026-DE\", \"OTA-TEC-0124-2026-DE\", \"OTA-TEC-0035-2026-DE\"] review: last: \"2026-11-25\" next: \"2027-11-25\" reason: \"Stabile Materialgrundlage; Korrektur und Teilumzug nach KUE laufen über OTA-REQ-202611"
       ],
       "status": "resolved",
       "classification": "existing",
@@ -32292,7 +32430,7 @@
       "source": "OTA-SCI-0119-2026-DE",
       "target": "OTA-TEC-0035-2026-DE",
       "contexts": [
-        "dDocuments: [\"OTA-TEC-0123-2026-DE\", \"OTA-SCI-0059-2026-DE\", \"OTA-SCI-0117-2026-DE\", \"OTA-SCI-0060-2026-DE\", \"OTA-TEC-0035-2026-DE\", \"OTA-TEC-0124-2026-DE\"] summary: \"Realwissenschaftliche Materialbasis für Lodestone (Magnetit-Eisenstein) als natürlichen Permanentmagneten: Maghem"
+        "dDocuments: [\"OTA-TEC-0123-2026-DE\", \"OTA-SCI-0059-2026-DE\", \"OTA-SCI-0117-2026-DE\", \"OTA-SCI-0060-2026-DE\", \"OTA-TEC-0035-2026-DE\", \"OTA-TEC-0124-2026-DE\"] review: last: \"2026-11-25\" next: \"2027-11-25\" reason: \"Lodestone-Forschung kaum bewegt; Korrektur und Teilumzug nach"
       ],
       "status": "resolved",
       "classification": "existing",
@@ -35992,7 +36130,7 @@
       "source": "OTA-SCI-0119-2026-DE",
       "target": "OTA-TEC-0123-2026-DE",
       "contexts": [
-        "h\", \"Lodestone\", \"Magnetit\", \"Maghemit\", \"Blitzmagnetisierung\", \"Hör-Stein\", \"Sauerland\"] relatedDocuments: [\"OTA-TEC-0123-2026-DE\", \"OTA-SCI-0059-2026-DE\", \"OTA-SCI-0117-2026-DE\", \"OTA-SCI-0060-2026-DE\", \"OTA-TEC-0035-2026-DE\", \"OTA-TEC-0124-2026-DE\"] summary: \"Realwissenschaftl"
+        "h\", \"Lodestone\", \"Magnetit\", \"Maghemit\", \"Blitzmagnetisierung\", \"Hör-Stein\", \"Sauerland\"] relatedDocuments: [\"OTA-TEC-0123-2026-DE\", \"OTA-SCI-0059-2026-DE\", \"OTA-SCI-0117-2026-DE\", \"OTA-SCI-0060-2026-DE\", \"OTA-TEC-0035-2026-DE\", \"OTA-TEC-0124-2026-DE\"] review: last: \"2026-11-25"
       ],
       "status": "resolved",
       "classification": "existing",
@@ -36231,7 +36369,7 @@
       "source": "OTA-SCI-0117-2026-DE",
       "target": "OTA-TEC-0124-2026-DE",
       "contexts": [
-        "us\", \"Sauerland\"] relatedDocuments: [\"OTA-SCI-0059-2026-DE\", \"OTA-SCI-0060-2026-DE\", \"OTA-SCI-0118-2026-DE\", \"OTA-TEC-0124-2026-DE\", \"OTA-TEC-0035-2026-DE\"] summary: \"Realwissenschaftliche Materialbasis für Obsidian als vulkanisches Glas: Formation, Chemie, Magnetit-Einschlüsse,"
+        "us\", \"Sauerland\"] relatedDocuments: [\"OTA-SCI-0059-2026-DE\", \"OTA-SCI-0060-2026-DE\", \"OTA-SCI-0118-2026-DE\", \"OTA-TEC-0124-2026-DE\", \"OTA-TEC-0035-2026-DE\"] review: last: \"2026-11-25\" next: \"2027-11-25\" reason: \"Stabile Materialgrundlage; Korrektur und Teilumzug nach KUE la"
       ],
       "status": "resolved",
       "classification": "existing",
@@ -36248,7 +36386,7 @@
       "source": "OTA-SCI-0118-2026-DE",
       "target": "OTA-TEC-0124-2026-DE",
       "contexts": [
-        "RF\", \"Hydratationsdatierung\", \"Handelsrouten\", \"Dr. Oskar Anton\"] relatedDocuments: [\"OTA-SCI-0117-2026-DE\", \"OTA-TEC-0124-2026-DE\", \"OTA-SCI-0119-2026-DE\", \"OTA-SCI-0059-2026-DE\", \"OTA-BIO-0028-2026-DE\"] summary: \"Realwissenschaftliche Basis der Obsidian-Archäometrie: XRF-Proven"
+        "RF\", \"Hydratationsdatierung\", \"Handelsrouten\", \"Dr. Oskar Anton\"] relatedDocuments: [\"OTA-SCI-0117-2026-DE\", \"OTA-TEC-0124-2026-DE\", \"OTA-SCI-0119-2026-DE\", \"OTA-SCI-0059-2026-DE\", \"OTA-BIO-0028-2026-DE\"] review: last: \"2026-11-25\" next: \"2027-11-25\" reason: \"Archäometrisch"
       ],
       "status": "resolved",
       "classification": "existing",
@@ -36265,7 +36403,7 @@
       "source": "OTA-SCI-0119-2026-DE",
       "target": "OTA-TEC-0124-2026-DE",
       "contexts": [
-        "23-2026-DE\", \"OTA-SCI-0059-2026-DE\", \"OTA-SCI-0117-2026-DE\", \"OTA-SCI-0060-2026-DE\", \"OTA-TEC-0035-2026-DE\", \"OTA-TEC-0124-2026-DE\"] summary: \"Realwissenschaftliche Materialbasis für Lodestone (Magnetit-Eisenstein) als natürlichen Permanentmagneten: Maghemit-Mikrostruktur, REM-Ra"
+        "23-2026-DE\", \"OTA-SCI-0059-2026-DE\", \"OTA-SCI-0117-2026-DE\", \"OTA-SCI-0060-2026-DE\", \"OTA-TEC-0035-2026-DE\", \"OTA-TEC-0124-2026-DE\"] review: last: \"2026-11-25\" next: \"2027-11-25\" reason: \"Lodestone-Forschung kaum bewegt; Korrektur und Teilumzug nach KUE über OTA-REQ-2026112"
       ],
       "status": "resolved",
       "classification": "existing",
