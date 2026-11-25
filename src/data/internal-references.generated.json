@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-25T14:48:47.734Z",
+  "generatedAt": "2026-11-25T14:50:11.401Z",
   "documents": [
     {
       "signature": "OTA-ART-0001-2087-DE",
@@ -2043,7 +2043,7 @@
     }
   ],
   "summary": {
-    "referenceCount": 1721,
+    "referenceCount": 1722,
     "openReferenceCount": 242,
     "openTargetCount": 127,
     "classifications": {
@@ -22531,7 +22531,7 @@
       "classification": "existing",
       "candidates": [],
       "resolvedTarget": "OTA-SCI-0013-2025-DE",
-      "sourceCount": 3,
+      "sourceCount": 4,
       "priority": 0,
       "title": "Frequenz-Sensitivität bei Mars-Kindern der zweiten Generation",
       "description": "Frequenz-Sensitivität: biomedizinische Grundlagen [R], Λ-Haplogruppe-Theorie [T/S], Archiv-Setzung [W].",
@@ -22549,7 +22549,24 @@
       "classification": "existing",
       "candidates": [],
       "resolvedTarget": "OTA-SCI-0013-2025-DE",
-      "sourceCount": 3,
+      "sourceCount": 4,
+      "priority": 0,
+      "title": "Frequenz-Sensitivität bei Mars-Kindern der zweiten Generation",
+      "description": "Frequenz-Sensitivität: biomedizinische Grundlagen [R], Λ-Haplogruppe-Theorie [T/S], Archiv-Setzung [W].",
+      "descriptionStatus": "canonical",
+      "targetFile": "src/content/documents/OTA-SCI-0013-2025-DE.md"
+    },
+    {
+      "source": "OTA-RED-0018-2091-DE",
+      "target": "OTA-SCI-0013-2025-DE",
+      "contexts": [
+        "hwellensteigung um 20 kHz nur etwa > ± 0,3 dB, und oberhalb 16 kHz gibt es keine Bezugsnorm (siehe KN-04 in > OTA-SCI-0013-2025-DE). Angaben nach Research Candidate > RES-20260915-D7465012; die Resonatorlänge ist nachgerechnet. Die > Erzählung – STUFE-OMEGA, Kriterien, Fälle, Per"
+      ],
+      "status": "resolved",
+      "classification": "existing",
+      "candidates": [],
+      "resolvedTarget": "OTA-SCI-0013-2025-DE",
+      "sourceCount": 4,
       "priority": 0,
       "title": "Frequenz-Sensitivität bei Mars-Kindern der zweiten Generation",
       "description": "Frequenz-Sensitivität: biomedizinische Grundlagen [R], Λ-Haplogruppe-Theorie [T/S], Archiv-Setzung [W].",
@@ -22567,7 +22584,7 @@
       "classification": "existing",
       "candidates": [],
       "resolvedTarget": "OTA-SCI-0013-2025-DE",
-      "sourceCount": 3,
+      "sourceCount": 4,
       "priority": 0,
       "title": "Frequenz-Sensitivität bei Mars-Kindern der zweiten Generation",
       "description": "Frequenz-Sensitivität: biomedizinische Grundlagen [R], Λ-Haplogruppe-Theorie [T/S], Archiv-Setzung [W].",
