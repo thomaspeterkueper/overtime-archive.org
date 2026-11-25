@@ -17,13 +17,16 @@ Stand: 2026-11-24 · Status: **Arbeitsfassungen / nicht-kanonisch**
 | TEM-025 | Resonanz-Feldsensor, isolierter Prototyp | https://docs.google.com/document/d/1ewRWHTZaIa_iJV9P-5rhSBqVMLORruuZQnTtagCaj2o/edit |
 | TEM-026 | Blindmessung / Forschungsfortsetzung | https://docs.google.com/document/d/1J5hLsngfHb8BZO6hCdGlcSgo8-0n3cXxM9h1QhN4x1s/edit |
 | TEM-027 | Scheinkorrelation bei gemeinsamem Zeitgeber | https://docs.google.com/document/d/1tp-ZgJO6n4FvUFLS0h9YDSnQdn2jGh5ijNtAqIZqABo/edit |
+| TEM-028 | Zweikanal-Intervention, gemeinsame Störursachen | https://docs.google.com/document/d/13rcUZ5AMTaYFqZ2CiyyE60x9VYgS_Djt1oJNekGwlsY/edit |
 
 Drive-Sammelordner: https://drive.google.com/drive/folders/1NTHoNwJboWQiDur6BDoGp-VtEEoxA-Zm
 
 ## Code und Testreferenzen
 - noχ¹ᐃ Draft-PR #921: https://github.com/thomaspeterkueper/noxiagame/pull/921 — tatsächlicher TEM-026 Schätzer und Tests + TEM-027 Forschungsnotiz.
 - noχ¹ᐃ Issue #920: https://github.com/thomaspeterkueper/noxiagame/issues/920 — Temenon-Institut, Wissenschaftler-/Erfinder-/Techniker-NPCs, TEM-025 Spezifikation und Produkt-Pipeline.
-- TEM-025 **TypeScript-Dateien und Testdatei** sowie TEM-SIM v0.1 liegen derzeit nur in vorher erzeugten ZIP-Artefakten im Chat/Arbeitsbereich. **Noch keine bestätigte Git/Drive-Quellcodekopie.** Der TEM-025 Bericht wurde jedoch separat gespiegelt.
+- TEM-025-Quellcode und Tests sind auf NOXIA-Forschungsbranch PR #921 gesichert.
+- TEM-SIM-v0.1-Quellcode ist als eigenständiger Forschungsprototyp auf NOXIA PR #921 gesichert. Die vollständigen ZIP-Snapshots von TEM-025, TEM-SIM-v0.1 und TEM-028 liegen im Drive-Sammelordner.
+- TEM-028 Code und Tests liegen auf NOXIA PR #921; lokale Testserie: 13/13 bestanden, 400 Fälle über vier synthetische Klassen, darunter 100/100 falsche positive bei gekoppeltem Störmechanismus.
 - Keine Fertigungs- oder Live-Freigabe, keine DB-Migration.
 
 ## Schutz vor Doppellungen
@@ -32,7 +35,7 @@ Drive-Sammelordner: https://drive.google.com/drive/folders/1NTHoNwJboWQiDur6BDoG
 - TEM-001/002/003 sind **neue Registerkennungen für bestehende November-Entwürfe**, keine rückdatierte offizielle OTA-Klassifikation.
 
 ## Offene Arbeit
-1. Exakte Quellcode-/ZIP-Spiegelung für TEM-025 und TEM-SIM v0.1 vervollständigen.
+1. Die gebackupten Quellcodes und ZIPs in PR #921 auf Build- und Review-Kompatibilität prüfen.
 2. OTA-Originalfassungen/FTB- und Editionsfehler G1 vollumfänglich abgleichen.
-3. TEM-028: Mehrkanal-, verblindete Referenzmessungen und gemeinsame-Zeitgeber-Kontrollen.
+3. TEM-029: verblindete Mehrgeräte-Interventionen, Sham-Kontrollen und unabhängig variierte gemeinsame Störursachen.
 4. NOXIA Core G0: Inventar/Prototypherstellung/Forschung/NPC-Rollen/Autorität und Persistenz integrieren, erst danach produktives Gerät.
