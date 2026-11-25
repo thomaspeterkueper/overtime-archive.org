@@ -1,7 +1,8 @@
 # OTA-REQ-20261123-001 – OTA-SCI-0042-2026-DE (Phänomenologische Erdbebentheorie und LOD-Seismizitäts-Brücke): Realteil auf Verweis DOC:KUE:KUE-SCI-0169 kürzen
 
-Status: open
+Status: done
 Datum: 2026-11-23
+Erledigt: 2026-11-25 – Punkte A–D umgesetzt in OTA-SCI-0042 v1.6 durch die Begutachtung (ECO-ARC-0038 §3b; KUE-SCI-0169 v0.3 in `kueper.com/main`). Abschnitte VII–XIII als II–VIII neu nummeriert, Unterabschnitte 7.x → 2.x; Überschrift „Test T4“ unverändert.
 Quelle: Begutachtung nach ECO-ARC-0037, Zuordnung nach ECO-ARC-0038 §2 (Claude)
 Prüfbericht: `kueper-ecosystem/reviews/2026-11-23-OTA-SCI-0042-2026-DE.md`
 Zuordnung: KUE-Gegenstück vorhanden – `DOC:KUE:KUE-SCI-0169-2026-DE` (v0.2, begutachtet 2026-11-11) enthält Dumont et al. 2025, Doglioni 2026, Le Mouël et al. (inkl. Fassung v3 vom 20.09.2026) und Guglielmi/Zotov vollständiger und aktueller als OTA. Die Inventur führte das Dokument in Gruppe T („eigene Erdbebentheorie“); die Theorie stammt aber von Guglielmi und Mitarbeitern, eigenes Modell von Thomas ist nur der AVI-Anschluss in §VII – der bleibt.
