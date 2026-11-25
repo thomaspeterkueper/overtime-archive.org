@@ -1,7 +1,8 @@
 # OTA-REQ-20261115-001 – OTA-SCI-0103-2026-DE (Longitudinale Gehirngesundheit): nach Umzug nach KUE zum schlanken Brückendokument kürzen
 
-Status: open
+Status: done
 Datum: 2026-11-15
+Erledigt: 2026-11-25 – Punkte A–C umgesetzt in OTA-SCI-0103 v1.1 durch die Begutachtung (ECO-ARC-0038 §3b; KUE-SCI-0220-2026-DE in `kueper.com/main`, Signatur damit nachgetragen – vgl. EXT-KUE-OTA-20261125-001). Kein früherer Revisionsabschnitt vorhanden; Revisionsvermerk als neuer Abschnitt am Dokumentende.
 Quelle: Begutachtung nach ECO-ARC-0037, Zuordnung nach ECO-ARC-0038 §2 (Claude)
 Prüfbericht: `kueper-ecosystem/reviews/2026-11-15-OTA-SCI-0103-2026-DE.md`
 Zuordnung: ganz nach KUE (Inventur Gruppe A). Reines Realdossier ohne Setzung (`universe: []`, keine [F]/[W]/[S], keine eigene Hypothese von Thomas); einziger System-/Werkbezug ist Abschnitt 19 (Anschluss an OTA-SCI-0019, OTA-SCI-0102 und KG-Kandidatenclaims). Neues KUE-Dokument per `kueper.com/external-tasks/open/EXT-OTA-KUE-20261115-001.md`.
