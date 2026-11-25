@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-25T11:47:46.306Z",
+  "generatedAt": "2026-11-25T14:48:47.734Z",
   "documents": [
     {
       "signature": "OTA-ART-0001-2087-DE",
@@ -2043,7 +2043,7 @@
     }
   ],
   "summary": {
-    "referenceCount": 1720,
+    "referenceCount": 1721,
     "openReferenceCount": 242,
     "openTargetCount": 127,
     "classifications": {
@@ -21379,7 +21379,24 @@
       "classification": "existing",
       "candidates": [],
       "resolvedTarget": "OTA-RED-0018-2091-DE",
-      "sourceCount": 1,
+      "sourceCount": 2,
+      "priority": 0,
+      "title": "STUFE-OMEGA — Auditive Kontamination & Frequenz-Exposition",
+      "description": "STUFE-OMEGA — höchststufiges klassifiziertes Dokument 2091, NOXIA-Universum.",
+      "descriptionStatus": "canonical",
+      "targetFile": "src/content/documents/OTA-RED-0018-2091-DE.md"
+    },
+    {
+      "source": "OTA-SCI-0013-2025-DE",
+      "target": "OTA-RED-0018-2091-DE",
+      "contexts": [
+        "F\\] ist die Werksetzung, nicht eine > reale Unmöglichkeit. Das STUFE-OMEGA-Kriterium '21.500 Hz (± 50 Hz)' > (OTA-RED-0018-2091-DE) ist Archivkonvention \\[W\\], kein reproduzierbares > Messkriterium: Ohne Prüfpegel, Wandler und Kalibrierung ist ein > 'Hörbereich' nicht definiert,"
+      ],
+      "status": "resolved",
+      "classification": "existing",
+      "candidates": [],
+      "resolvedTarget": "OTA-RED-0018-2091-DE",
+      "sourceCount": 2,
       "priority": 0,
       "title": "STUFE-OMEGA — Auditive Kontamination & Frequenz-Exposition",
       "description": "STUFE-OMEGA — höchststufiges klassifiziertes Dokument 2091, NOXIA-Universum.",

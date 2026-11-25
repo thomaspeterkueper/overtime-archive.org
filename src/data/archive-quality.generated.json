@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-25T11:47:46.755Z",
+  "generatedAt": "2026-11-25T14:48:48.204Z",
   "summary": {
     "documents": 340,
     "substantial": 193,
@@ -7,7 +7,7 @@
     "fragments": 44,
     "genericTitles": 69,
     "genericSummaries": 42,
-    "relationGaps": 260,
+    "relationGaps": 261,
     "withoutVisuals": 334,
     "titleReviewA": 0,
     "titleReviewB": 3,
@@ -15,7 +15,7 @@
     "titleReviewOK": 271,
     "safeTitleCandidates": 0,
     "summaryCandidates": 19,
-    "relationCandidates": 1086,
+    "relationCandidates": 1087,
     "safeRelationCandidates": 0
   },
   "documents": [
@@ -6039,23 +6039,30 @@
         "title": null,
         "derivedTitle": null,
         "summary": null,
-        "relations": [],
-        "count": 0
+        "relations": [
+          {
+            "target": "OTA-RED-0018-2091-DE",
+            "evidence": "inline-reference",
+            "safe": false
+          }
+        ],
+        "count": 1
       },
       "metrics": {
-        "words": 596,
+        "words": 1155,
         "headings": 0,
         "images": 0,
         "tables": 1,
-        "inlineReferenceTargets": 4
+        "inlineReferenceTargets": 5
       },
       "quality": {
         "substance": "KURZ",
         "genericTitle": false,
         "genericSummary": true,
-        "relationGap": false,
+        "relationGap": true,
         "flags": [
           "GENERIC_SUMMARY",
+          "RELATION_GAP",
           "NO_VISUAL",
           "NO_HEADINGS"
         ],
