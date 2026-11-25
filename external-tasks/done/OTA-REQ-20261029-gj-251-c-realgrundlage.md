@@ -1,6 +1,7 @@
 # OTA-REQ-20261029-002 – OTA-SCI-0032-2024-DE (GJ 251 c): Realgrundlage aktualisieren
 
-Status: open
+Status: done
+Erledigt: 2026-11-25 – Ökosystem-Kreislauf (Claude), Branch `claude/OTA-REQ-20261029-gj-251-c-realgrundlage`.
 Datum: 2026-10-29
 Quelle: Begutachtung nach ECO-ARC-0037 (Claude)
 Prüfbericht: `kueper-ecosystem/reviews/2026-10-29-OTA-SCI-0032-2024-DE.md`
@@ -21,3 +22,19 @@ Betrifft: nur [R]/[T]-Abschnitte (I, II, IV, V, X, Quellen). Fiktion/Setzung (VI
 `OTA-SCI-0030-2025-DE` verweist auf `OTA-SCI-0032-2025-DE` (richtig: `-2024-DE`).
 
 Wirkung auf andere Repos: KG-Datensätze zu GJ 251, falls vorhanden; NOXIA-Bezüge („20-Lichtjahre-Kohorte“) nur, falls dort Realdaten übernommen wurden (nicht prüfbar, kein Zugriff in diesem Lauf).
+
+## Umgesetzt
+
+OTA-SCI-0032-2024-DE v1.2 (25.11.2026):
+
+1. Veröffentlichung Oktober 2025 (Kuratoranmerkung, 1.2), Erstautor Beard, Quellenangabe Beard et al. (2025), AJ 170, 279, arXiv:2510.19956 – geprüft an arXiv und Sci.News (23.10.2025). Kopfvermerk „Terrestrische Quellen, Oktober 2024“ und Signatur bleiben als Setzung.
+2. Status „Kandidat“ zu Beginn von Abschnitt I und in Kernaussage 1.
+3. GJ 251 b (14,24 d, m sin i ≈ 3,85 M⊕, bekannt seit 2020) in 1.2 ergänzt.
+4. Periode 1.3 auf 53,647 d; Amplitude nach dem Paper K ≈ 1,2 m/s statt 2,5 m/s (Tabellenwert aus einer Zusammenfassung des PDF, im Dokument als „am Original zu bestätigen“ markiert), KN-01 angepasst.
+5. Nachbarschaftsaussage berichtigt (HD 20794 d ist weiter entfernt).
+6. TMT-Perspektive in 4.2, KN-04, 5.1 und Kernaussage 5 auf Stand November 2026 (NSF für GMT 2025; TMT-Partner lehnen La Palma ab, Physics World 23.09.2026), TMT als Autorenaussage.
+7. Frontmatter-Version auf v1.2 (Revisionsverlauf nannte bereits 1.1).
+
+Hinweis zu OTA-SCI-0030: Der Verweis zeigt auf `main` bereits auf `OTA-SCI-0032-2024-DE`.
+
+Zugleich erledigt: Befunde der Quellenprüfung 2026-11 zu OTA-SCI-0032 (OTA-REQ-20261106-quellenpruefung) – Penn-State-Meldung korrigiert, Grenzwissenschaft Aktuell und UC Irvine als nicht nachweisbar vermerkt.
