@@ -149,3 +149,4 @@ Nur OTA-intern. Wo ein KUE-Gegenstück dieselbe Angabe trägt, prüft die Beguta
 ## Fortschritt
 
 - 2026-11-23 – OTA-SCI-0007-2026-Cuancoa v1.2 (Ökosystem-Kreislauf, Claude, Branch `claude/OTA-REQ-20261106-quellenpruefung-sci0007`): Radica 2024 und Fernández Fernández 2024 korrigiert, ESA-Pressemitteilung präzisiert (Cheops shows scorching exoplanet acts like a mirror, 10.07.2023). Befunde des Dokuments erledigt.
+- 2026-11-25 – OTA-SCI-0009-2025-DE v1.0.2, OTA-SCI-0017-2025-DE v1.1.1, OTA-SCI-0031-2024-DE v1.3 (Ökosystem-Kreislauf, Claude, Branch `claude/OTA-REQ-20261106-quellenpruefung-sci0009-0017-0031`): Haider et al. 2019 (Titel, Heft 7, S. 2260–2266, DOI 10.1016/j.asr.2018.12.006), Frost et al. 2025 (Originaltitel, Angew. Chem. Int. Ed. 64(38)), NASA-Meldung zu Gliese 12 b (Titel, 23.05.2024) korrigiert; ESA- und scinexx-Angabe in SCI-0031 nicht nachweisbar und als Befund im Dokument vermerkt. Befunde dieser drei Dokumente erledigt.
