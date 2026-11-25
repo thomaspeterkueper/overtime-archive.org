@@ -59,7 +59,8 @@ const reviews = [
       { target: 'OTA-SCI-0030-2025-DE', relation: 'related', evidence: 'explicit-related-section' },
     ],
     // v1.1 (OTA-REQ-20261122-001 A): Rotverschiebung, NIRSpec-Bereich und Modellfaktor korrigiert; Sentinels angepasst.
-    sentinels: ['CH₃', 'außerhalb der Milchstraße', 'z = 0,0878', '10¹² L☉', '10⁶ cm⁻³', '2,87–5,27 µm', '✓', 'R ≈ 2700'],
+    // v1.2 (OTA-REQ-20261122-001 C): Realteil nach KUE-SCI-0218 ausgelagert; Sentinels auf die Brückenfassung umgestellt.
+    sentinels: ['CH₃', 'außerhalb der Milchstraße', 'z ≈ 0,088', 'IRAS 07251−0248', 'Weltraumteleskop', 'Kuratorische Notiz', 'DOC:KUE:KUE-SCI-0218-2026-DE', '160 km/s'],
   },
   {
     signature: 'OTA-FND-0013-2026-DE',
