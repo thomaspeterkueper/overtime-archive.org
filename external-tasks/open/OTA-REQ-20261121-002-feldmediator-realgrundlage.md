@@ -6,6 +6,7 @@ Quelle: Begutachtung nach ECO-ARC-0037, Zuordnung nach ECO-ARC-0038 §2 (Claude)
 Prüfberichte: `kueper-ecosystem/reviews/2026-11-21-OTA-SCI-0024-2026-DE.md`, `kueper-ecosystem/reviews/2026-11-21-OTA-SCI-0024-2026-EN.md`
 Zuordnung: Entscheidung Thomas – das Dokument ist Thomas' eigener Modellvorschlag (χ-Feld); es wandert nicht nach KUE. Der werkneutrale Forschungsstand zur S₈-Spannung soll per `kueper.com/external-tasks/open/EXT-OTA-KUE-20261121-002.md` in KUE dokumentiert werden.
 Voraussetzung: Punkt A sofort umsetzbar (in DE und EN gleich). Punkt C erst, wenn das KUE-Dokument aus EXT-OTA-KUE-20261121-002 in `kueper.com/main` gemergt ist.
+KUE-Dokument: `KUE-SCI-0219-2026-DE` (Die S₈-Spannung, `kueper.com/src/content/kue/sci/kue-sci-0219-2026-de.md`, in `main` seit 2026-11-24) – Voraussetzung für Punkt C erfüllt, Signatur eingetragen am 2026-11-26 (EXT-KUE-OTA-20261125-002). Punkt C wartet weiter auf Thomas.
 Claude-Status: wartet auf Thomas (Punkte B und C – Modellaussagen und Motivation des χ-Feld-Vorschlags)
 Teilweise erledigt: 2026-11-23 – Punkt A umgesetzt in OTA-SCI-0024 DE v1.1 und EN v2.1 durch die Begutachtung (ECO-ARC-0038 §3b). Offen: B und C (warten auf Thomas bzw. auf das KUE-Dokument aus EXT-OTA-KUE-20261121-002).
 Erfasst die Punkte zu OTA-SCI-0024 DE/EN aus `OTA-REQ-20261106-quellenpruefung.md`.
@@ -38,7 +39,7 @@ B. **Claude-Status: wartet auf Thomas** – Modellaussagen:
    4. III.A: Mit ε = 0,30, ω = 9,06, φ = π/2 ergibt sich R(1/1100) ≈ 1,173, nicht 1,136; der Exponent β ist nicht angegeben. Rechnung und Verhältnis 0,940 prüfen.
    5. IV.A: „Operativ seit Juli 2023“ → „Start 1. Juli 2023, Routinebetrieb seit Februar 2024“; „Erste Datenveröffentlichung: erwartet Q2–Q3 2027“ → „DR1-Foundation am 12.11.2026 ohne Kosmologie; vollständiges DR1 mit Weak-Lensing-Produkten Mitte 2027“.
 
-C. **Mit KUE-Dokument (wartet auf Thomas):** Unter I.A einen Satz „Forschungsstand zur S₈-Spannung: `DOC:KUE:KUE-SCI-NNNN`“ ergänzen.
+C. **Mit KUE-Dokument (wartet auf Thomas):** Unter I.A einen Satz „Forschungsstand zur S₈-Spannung: `DOC:KUE:KUE-SCI-0219-2026-DE`“ ergänzen.
 
 ## Wirkung
 
