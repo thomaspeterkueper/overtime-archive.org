@@ -13,7 +13,7 @@ Für denselben Sensor und dasselbe Simulationsmodell werden Kontroll- und Interv
 Ergebnis (lokal ausgeführt): Signal 100/100 Kandidaten, Null 0/100, gemeinsamer Takt 0/100, **gekoppelte Störursache 100/100 falsch-positive** Kandidaten. 13/13 Verhaltenstests grün.
 
 ## Erkenntnis
-Eine Mehrkanalmessung kann den *spezifischen* Fehler des TEM-027-Tests vermeiden, ist aber **kein kausaler Beweis**. Ein anderer Mechanismus, der beide Kanäle beeinflusst, imitiert das gewünschte Muster. Ein "candidate-intervention-effect ist daher kein "verified-temenon-field und darf weder automatisch den Kanon ändern noch ein Produkt freischalten.
+Eine Mehrkanalmessung kann den *spezifischen* Fehler des TEM-027-Tests vermeiden, ist aber **kein kausaler Beweis**. Ein anderer Mechanismus, der beide Kanäle beeinflusst, imitiert das gewünschte Muster. Ein „candidate-intervention-effect“ ist daher kein „verified-temenon-field“ und darf weder automatisch den Kanon ändern noch ein Produkt freischalten.
 
 ## TEM-029
 Mehrere unabhängige Sensorgeräte, Blind-Randomisierung, Sham-Interventionen, getrennte Umwelt-/Instrumentenvariablen, Cross-site-Replications, vorregistrierte Entscheidungsregeln, Unsicherheits- und Driftmessung. Die Bedingungen für die Kontrolle sind experimentell und in der fiktionalen Simulationswelt zu spezifizieren.
