@@ -57,3 +57,7 @@ Do not construct an individual "dementia percentage" by summing Lancet PAFs.
 ## Hinweis 2026-11-15 (Begutachtung nach ECO-ARC-0037/0038)
 
 OTA-SCI-0103-2026-DE zieht nach kueper.com um (`kueper.com/external-tasks/open/EXT-OTA-KUE-20261115-001.md`; OTA-Kürzung `OTA-REQ-20261115-001`). Die Kandidatenclaims sollen danach auf das neue KUE-Dokument als Quelle zeigen. Präzisierungen aus der Begutachtung: Erstautor der J-Neurol-Metaanalyse zu Schlafstörungen ist Zhang J. (nicht Liu Y.); die WHO-Leitlinien 2026 halten die Evidenz für Interventionen bei Sehverlust und Schlaf-Wach-Störungen für unzureichend – das stützt Claim 4 (Schlaf relevant, aber kein Lancet-Faktor und keine WHO-Empfehlung). Prüfbericht: `kueper-ecosystem/reviews/2026-11-15-OTA-SCI-0103-2026-DE.md`.
+
+## Hinweis 2026-11-26 (Realgrundlage in KUE)
+
+Der Umzug ist erfolgt: Realgrundlage der Kandidatenclaims 1–6 ist jetzt `DOC:KUE:KUE-SCI-0220-2026-DE` (kueper.com, `src/content/kue/sci/kue-sci-0220-2026-de.md`). OTA-SCI-0103-2026-DE ist seit v1.1 Brückendokument und verweist dorthin (OTA-REQ-20261115-001, erledigt). Für die KG-Prüfung gelten Quellen und Evidenzgrenzen des KUE-Dokuments; die Primärquellen oben bleiben als Fundstellen stehen. Umsetzung von EXT-KUE-OTA-20261125-001.
