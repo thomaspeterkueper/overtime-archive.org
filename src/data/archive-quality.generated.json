@@ -1,21 +1,21 @@
 {
-  "generatedAt": "2026-11-25T14:50:11.966Z",
+  "generatedAt": "2026-11-26T05:54:54.631Z",
   "summary": {
-    "documents": 340,
+    "documents": 341,
     "substantial": 193,
-    "short": 103,
+    "short": 104,
     "fragments": 44,
     "genericTitles": 69,
-    "genericSummaries": 42,
-    "relationGaps": 262,
-    "withoutVisuals": 334,
+    "genericSummaries": 41,
+    "relationGaps": 264,
+    "withoutVisuals": 335,
     "titleReviewA": 0,
     "titleReviewB": 3,
     "titleReviewC": 66,
-    "titleReviewOK": 271,
+    "titleReviewOK": 272,
     "safeTitleCandidates": 0,
     "summaryCandidates": 19,
-    "relationCandidates": 1088,
+    "relationCandidates": 1096,
     "safeRelationCandidates": 0
   },
   "documents": [
@@ -9390,6 +9390,60 @@
       }
     },
     {
+      "file": "OTA-HIS-0004-2021-DE.md",
+      "signature": "OTA-HIS-0004-2021-DE",
+      "series": "HIS",
+      "year": "2021",
+      "language": "DE",
+      "canonical": {
+        "title": "Von Zhurong nach Utopia — chinesische Marsinfrastruktur 2021–2087",
+        "summary": "Historischer Entwicklungspfad von realen chinesischen Marsmissionen und der Raumfahrtstrategie bis zur fiktionalen, chinesisch initiierten Mars-Siedlung Kaiwu in Utopia Planitia im NOXIA-Universum.",
+        "relatedCount": 4
+      },
+      "extracted": {
+        "title": null,
+        "author": null,
+        "classification": null,
+        "excerpt": "Wie kann aus realer chinesischer Marsforschung plausibel eine dauerhafte, später internationale Mars-Siedlung entstehen, ohne einen heutigen Plan zur Marskolonisierung zu erfinden?"
+      },
+      "titleReview": {
+        "tier": "OK",
+        "candidate": null,
+        "evidence": "canonical-title"
+      },
+      "candidates": {
+        "title": null,
+        "derivedTitle": null,
+        "summary": null,
+        "relations": [
+          {
+            "target": "OTA-REQ-20261106-",
+            "evidence": "inline-reference",
+            "safe": false
+          }
+        ],
+        "count": 1
+      },
+      "metrics": {
+        "words": 439,
+        "headings": 12,
+        "images": 0,
+        "tables": 1,
+        "inlineReferenceTargets": 2
+      },
+      "quality": {
+        "substance": "KURZ",
+        "genericTitle": false,
+        "genericSummary": false,
+        "relationGap": true,
+        "flags": [
+          "RELATION_GAP",
+          "NO_VISUAL"
+        ],
+        "priority": 4
+      }
+    },
+    {
       "file": "OTA-KARTE-0001-Gehirn-Epochen.md",
       "signature": "OTA-KARTE-0001-Gehirn-Epochen",
       "series": "KARTE",
@@ -9788,55 +9842,6 @@
       },
       "quality": {
         "substance": "KURZ",
-        "genericTitle": false,
-        "genericSummary": true,
-        "relationGap": false,
-        "flags": [
-          "GENERIC_SUMMARY",
-          "NO_VISUAL",
-          "NO_HEADINGS"
-        ],
-        "priority": 4
-      }
-    },
-    {
-      "file": "OTA-SCI-0015-2025-DE.md",
-      "signature": "OTA-SCI-0015-2025-DE",
-      "series": "SCI",
-      "year": "2025",
-      "language": "DE",
-      "canonical": {
-        "title": "Schumann-Resonanz: Biologische Relevanz und ISS-Referenzdaten",
-        "summary": "Schumann-Resonanz: Grundlagen, Messdaten [R], biologische Wirkungshypothesen [T/S].",
-        "relatedCount": 4
-      },
-      "extracted": {
-        "title": null,
-        "author": null,
-        "classification": null,
-        "excerpt": "---------------------- ------------------------------------------------ **Dokumenttyp:** Wissenschaftliches Referenzdokument"
-      },
-      "titleReview": {
-        "tier": "OK",
-        "candidate": null,
-        "evidence": "canonical-title"
-      },
-      "candidates": {
-        "title": null,
-        "derivedTitle": null,
-        "summary": null,
-        "relations": [],
-        "count": 0
-      },
-      "metrics": {
-        "words": 1392,
-        "headings": 0,
-        "images": 0,
-        "tables": 0,
-        "inlineReferenceTargets": 4
-      },
-      "quality": {
-        "substance": "SUBSTANZIELL",
         "genericTitle": false,
         "genericSummary": true,
         "relationGap": false,
@@ -12097,16 +12102,21 @@
             "target": "OTA-SCI-0026-2026",
             "evidence": "inline-reference",
             "safe": false
+          },
+          {
+            "target": "OTA-REQ-20261106-",
+            "evidence": "inline-reference",
+            "safe": false
           }
         ],
-        "count": 1
+        "count": 2
       },
       "metrics": {
-        "words": 832,
+        "words": 860,
         "headings": 0,
         "images": 0,
         "tables": 0,
-        "inlineReferenceTargets": 5
+        "inlineReferenceTargets": 6
       },
       "quality": {
         "substance": "KURZ",
@@ -12523,7 +12533,7 @@
       "canonical": {
         "title": "Planetare Schumann-Resonanzen und AVI-Kopplung",
         "summary": "Planetare Schumann-Resonanzen: reale Messgrundlagen [R], planetare Vergleiche [T], Omnizedenz-Einbindung [W/S].",
-        "relatedCount": 6
+        "relatedCount": 8
       },
       "extracted": {
         "title": null,
@@ -12555,16 +12565,21 @@
             "target": "OTA-REQ-20261118-001",
             "evidence": "inline-reference",
             "safe": false
+          },
+          {
+            "target": "OTA-REQ-20261106-",
+            "evidence": "inline-reference",
+            "safe": false
           }
         ],
-        "count": 3
+        "count": 4
       },
       "metrics": {
-        "words": 2198,
+        "words": 1704,
         "headings": 0,
         "images": 0,
         "tables": 0,
-        "inlineReferenceTargets": 9
+        "inlineReferenceTargets": 10
       },
       "quality": {
         "substance": "SUBSTANZIELL",
@@ -12633,6 +12648,61 @@
       },
       "quality": {
         "substance": "SUBSTANZIELL",
+        "genericTitle": false,
+        "genericSummary": false,
+        "relationGap": true,
+        "flags": [
+          "RELATION_GAP",
+          "NO_VISUAL",
+          "NO_HEADINGS"
+        ],
+        "priority": 3
+      }
+    },
+    {
+      "file": "OTA-SCI-0015-2025-DE.md",
+      "signature": "OTA-SCI-0015-2025-DE",
+      "series": "SCI",
+      "year": "2025",
+      "language": "DE",
+      "canonical": {
+        "title": "Schumann-Resonanz: Biologische Relevanz und ISS-Referenzdaten",
+        "summary": "Brücke: Hayashi-Frequenzhierarchie und Mars-Szenarien auf Basis der (schwachen) realen Evidenz zu Schumann-Bioeffekten; Realteil in KUE-SCI-0223-2026-DE.",
+        "relatedCount": 5
+      },
+      "extracted": {
+        "title": null,
+        "author": null,
+        "classification": null,
+        "excerpt": "---------------------- ------------------------------------------------ **Dokumenttyp:** Wissenschaftliches Referenzdokument"
+      },
+      "titleReview": {
+        "tier": "OK",
+        "candidate": null,
+        "evidence": "canonical-title"
+      },
+      "candidates": {
+        "title": null,
+        "derivedTitle": null,
+        "summary": null,
+        "relations": [
+          {
+            "target": "OTA-REQ-20261118-002",
+            "evidence": "inline-reference",
+            "safe": false
+          }
+        ],
+        "count": 1
+      },
+      "metrics": {
+        "words": 1094,
+        "headings": 0,
+        "images": 0,
+        "tables": 0,
+        "inlineReferenceTargets": 5
+      },
+      "quality": {
+        "substance": "KURZ",
         "genericTitle": false,
         "genericSummary": false,
         "relationGap": true,
@@ -12740,16 +12810,21 @@
             "target": "OTA-SCI-0017-2025-EN",
             "evidence": "inline-reference",
             "safe": false
+          },
+          {
+            "target": "OTA-REQ-20261106-",
+            "evidence": "inline-reference",
+            "safe": false
           }
         ],
-        "count": 2
+        "count": 3
       },
       "metrics": {
-        "words": 1106,
+        "words": 1165,
         "headings": 0,
         "images": 0,
         "tables": 0,
-        "inlineReferenceTargets": 4
+        "inlineReferenceTargets": 5
       },
       "quality": {
         "substance": "KURZ",
@@ -14319,53 +14394,6 @@
         "relationGap": true,
         "flags": [
           "RELATION_GAP",
-          "NO_VISUAL"
-        ],
-        "priority": 2
-      }
-    },
-    {
-      "file": "OTA-HIS-0004-2021-DE.md",
-      "signature": "OTA-HIS-0004-2021-DE",
-      "series": "HIS",
-      "year": "2021",
-      "language": "DE",
-      "canonical": {
-        "title": "Von Zhurong nach Utopia — chinesische Marsinfrastruktur 2021–2087",
-        "summary": "Historischer Entwicklungspfad von realen chinesischen Marsmissionen und der Raumfahrtstrategie bis zur fiktionalen, chinesisch initiierten Mars-Siedlung Kaiwu in Utopia Planitia im NOXIA-Universum.",
-        "relatedCount": 4
-      },
-      "extracted": {
-        "title": null,
-        "author": null,
-        "classification": null,
-        "excerpt": "Wie kann aus realer chinesischer Marsforschung plausibel eine dauerhafte, später internationale Mars-Siedlung entstehen, ohne einen heutigen Plan zur Marskolonisierung zu erfinden?"
-      },
-      "titleReview": {
-        "tier": "OK",
-        "candidate": null,
-        "evidence": "canonical-title"
-      },
-      "candidates": {
-        "title": null,
-        "derivedTitle": null,
-        "summary": null,
-        "relations": [],
-        "count": 0
-      },
-      "metrics": {
-        "words": 405,
-        "headings": 12,
-        "images": 0,
-        "tables": 1,
-        "inlineReferenceTargets": 1
-      },
-      "quality": {
-        "substance": "KURZ",
-        "genericTitle": false,
-        "genericSummary": false,
-        "relationGap": false,
-        "flags": [
           "NO_VISUAL"
         ],
         "priority": 2
@@ -16575,16 +16603,21 @@
             "target": "OTA-REQ-20261029-001",
             "evidence": "inline-reference",
             "safe": false
+          },
+          {
+            "target": "OTA-REQ-20261106-",
+            "evidence": "inline-reference",
+            "safe": false
           }
         ],
-        "count": 3
+        "count": 4
       },
       "metrics": {
-        "words": 2177,
+        "words": 2266,
         "headings": 33,
         "images": 0,
         "tables": 1,
-        "inlineReferenceTargets": 6
+        "inlineReferenceTargets": 7
       },
       "quality": {
         "substance": "SUBSTANZIELL",
@@ -16629,16 +16662,26 @@
             "target": "OTA-SCI-0007-2026-",
             "evidence": "inline-reference",
             "safe": false
+          },
+          {
+            "target": "OTA-REQ-20261029-002",
+            "evidence": "inline-reference",
+            "safe": false
+          },
+          {
+            "target": "OTA-REQ-20261106-",
+            "evidence": "inline-reference",
+            "safe": false
           }
         ],
-        "count": 1
+        "count": 3
       },
       "metrics": {
-        "words": 2078,
+        "words": 2426,
         "headings": 35,
         "images": 0,
         "tables": 1,
-        "inlineReferenceTargets": 5
+        "inlineReferenceTargets": 7
       },
       "quality": {
         "substance": "SUBSTANZIELL",
@@ -17636,8 +17679,8 @@
         "count": 6
       },
       "metrics": {
-        "words": 3131,
-        "headings": 25,
+        "words": 2546,
+        "headings": 23,
         "images": 0,
         "tables": 1,
         "inlineReferenceTargets": 6
@@ -21854,6 +21897,53 @@
         "images": 0,
         "tables": 1,
         "inlineReferenceTargets": 0
+      },
+      "quality": {
+        "substance": "SUBSTANZIELL",
+        "genericTitle": false,
+        "genericSummary": false,
+        "relationGap": false,
+        "flags": [
+          "NO_VISUAL"
+        ],
+        "priority": 0
+      }
+    },
+    {
+      "file": "OTA-OBS-0010-2026-DE.md",
+      "signature": "OTA-OBS-0010-2026-DE",
+      "series": "OBS",
+      "year": "2026",
+      "language": "DE",
+      "canonical": {
+        "title": "HAGIA SOPHIA – UNTERGRUND",
+        "summary": "Beobachtungsdossier zu den unterirdischen Strukturen der Hagia Sophia: Befunde der Reinigung unter dem Atrium 2025 (Diker 2026), frühere Dokumentation (Diker 2023) und Pressemeldungen vom November 2026 – Befund, Deutung und ungeprüfte Angaben getrennt.",
+        "relatedCount": 1
+      },
+      "extracted": {
+        "title": null,
+        "author": null,
+        "classification": null,
+        "excerpt": "| | | |---|---| | **Dokumenttyp:** | Beobachtetes Ereignis | | **Signatur:** | OTA-OBS-0010-2026-DE | | **Temporaler Status:** | Retrospektiv [4.–6. Jh.] und Gegenwart [Reinigung seit 2025] | | **Quellenmarker:** | [R] Befund · [T] Deutung der Autoren | | **Version:** | 0.1 | | **Status:** | Entwurf | | **Primärquelle:** | Diker, Open Archaeology 12(1), 2…"
+      },
+      "titleReview": {
+        "tier": "OK",
+        "candidate": null,
+        "evidence": "canonical-title"
+      },
+      "candidates": {
+        "title": null,
+        "derivedTitle": null,
+        "summary": null,
+        "relations": [],
+        "count": 0
+      },
+      "metrics": {
+        "words": 972,
+        "headings": 13,
+        "images": 0,
+        "tables": 1,
+        "inlineReferenceTargets": 1
       },
       "quality": {
         "substance": "SUBSTANZIELL",
