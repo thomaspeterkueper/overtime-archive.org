@@ -6,6 +6,7 @@ Quelle: Begutachtung nach ECO-ARC-0037, Zuordnung nach ECO-ARC-0038 §2 (Claude)
 Prüfbericht: `kueper-ecosystem/reviews/2026-11-18-OTA-SCI-0015-2025-DE.md`
 Zuordnung: Teile nach KUE (Inventur Gruppe B bestätigt). Realteile §I (Bio-Hypothesen und Evidenz) und §II (ISS- und Antarktisdaten) gehen in das neue KUE-Dokument aus `kueper.com/external-tasks/open/EXT-OTA-KUE-20261118-001.md`. Hayashi-Rahmen [HAY] (§III), Kuratornotizen und Werkbezug bleiben in OTA.
 Voraussetzung: Punkte A–C erst, wenn das neue KUE-Dokument aus EXT-OTA-KUE-20261118-001 in `kueper.com/main` gemergt ist (Signatur dort vergeben, im Folgenden `KUE-SCI-NNNN`).
+Teilweise erledigt: 2026-11-26 – Punkte A–C umgesetzt in OTA-SCI-0015 v1.1 durch die Begutachtung (ECO-ARC-0038 §3b; KUE-SCI-0223-2026-DE v0.1 in `kueper.com/main`, `KUE-SCI-NNNN` = KUE-SCI-0223). Offen bleibt nur Punkt D (wartet auf Thomas).
 Bezug: Die drei Befunde zu OTA-SCI-0015 aus `OTA-REQ-20261106-quellenpruefung.md` (Wever, Barger, Basner) sind hier mit erfasst.
 
 ## Anlass
