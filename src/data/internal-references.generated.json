@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-25T14:50:11.401Z",
+  "generatedAt": "2026-11-26T05:54:54.094Z",
   "documents": [
     {
       "signature": "OTA-ART-0001-2087-DE",
@@ -842,6 +842,12 @@
       "file": "src/content/documents/OTA-OBS-0009-2026-DE.md"
     },
     {
+      "signature": "OTA-OBS-0010-2026-DE",
+      "title": "HAGIA SOPHIA – UNTERGRUND",
+      "summary": "Beobachtungsdossier zu den unterirdischen Strukturen der Hagia Sophia: Befunde der Reinigung unter dem Atrium 2025 (Diker 2026), frühere Dokumentation (Diker 2023) und Pressemeldungen vom November 2026 – Befund, Deutung und ungeprüfte Angaben getrennt.",
+      "file": "src/content/documents/OTA-OBS-0010-2026-DE.md"
+    },
+    {
       "signature": "OTA-ORG-0001-2079-DE",
       "title": "Unit-7 — Die Schwarzen Architekten",
       "summary": "Organisationsprofil der Unit-7 („Die Schwarzen Architekten“), der 2079 gegründeten Resource Protection & Crisis Management Unit von HeliosCorp Mars Division.",
@@ -1030,7 +1036,7 @@
     {
       "signature": "OTA-SCI-0015-2025-DE",
       "title": "Schumann-Resonanz: Biologische Relevanz und ISS-Referenzdaten",
-      "summary": "Schumann-Resonanz: Grundlagen, Messdaten [R], biologische Wirkungshypothesen [T/S].",
+      "summary": "Brücke: Hayashi-Frequenzhierarchie und Mars-Szenarien auf Basis der (schwachen) realen Evidenz zu Schumann-Bioeffekten; Realteil in KUE-SCI-0223-2026-DE.",
       "file": "src/content/documents/OTA-SCI-0015-2025-DE.md"
     },
     {
@@ -2043,7 +2049,7 @@
     }
   ],
   "summary": {
-    "referenceCount": 1722,
+    "referenceCount": 1723,
     "openReferenceCount": 242,
     "openTargetCount": 127,
     "classifications": {
@@ -18881,7 +18887,7 @@
       "classification": "existing",
       "candidates": [],
       "resolvedTarget": "OTA-OBS-0004-2026-DE",
-      "sourceCount": 9,
+      "sourceCount": 10,
       "priority": 0,
       "title": "GÖBEKLI TEPE",
       "description": "Archäologische Dokumentation der DAI-Grabungen am Göbekli Tepe (1995–laufend): älteste bekannte Monumentalarchitektur der Menschheit, ~9600–8000 BCE. Monumentalbau vor der Sesshaftwerdung widerlegt das Modell der neolithischen Revolution.",
@@ -18899,7 +18905,7 @@
       "classification": "existing",
       "candidates": [],
       "resolvedTarget": "OTA-OBS-0004-2026-DE",
-      "sourceCount": 9,
+      "sourceCount": 10,
       "priority": 0,
       "title": "GÖBEKLI TEPE",
       "description": "Archäologische Dokumentation der DAI-Grabungen am Göbekli Tepe (1995–laufend): älteste bekannte Monumentalarchitektur der Menschheit, ~9600–8000 BCE. Monumentalbau vor der Sesshaftwerdung widerlegt das Modell der neolithischen Revolution.",
@@ -18920,7 +18926,7 @@
       "classification": "existing",
       "candidates": [],
       "resolvedTarget": "OTA-OBS-0004-2026-DE",
-      "sourceCount": 9,
+      "sourceCount": 10,
       "priority": 0,
       "title": "GÖBEKLI TEPE",
       "description": "Archäologische Dokumentation der DAI-Grabungen am Göbekli Tepe (1995–laufend): älteste bekannte Monumentalarchitektur der Menschheit, ~9600–8000 BCE. Monumentalbau vor der Sesshaftwerdung widerlegt das Modell der neolithischen Revolution.",
@@ -18937,7 +18943,7 @@
       "classification": "existing",
       "candidates": [],
       "resolvedTarget": "OTA-OBS-0004-2026-DE",
-      "sourceCount": 9,
+      "sourceCount": 10,
       "priority": 0,
       "title": "GÖBEKLI TEPE",
       "description": "Archäologische Dokumentation der DAI-Grabungen am Göbekli Tepe (1995–laufend): älteste bekannte Monumentalarchitektur der Menschheit, ~9600–8000 BCE. Monumentalbau vor der Sesshaftwerdung widerlegt das Modell der neolithischen Revolution.",
@@ -18955,7 +18961,7 @@
       "classification": "existing",
       "candidates": [],
       "resolvedTarget": "OTA-OBS-0004-2026-DE",
-      "sourceCount": 9,
+      "sourceCount": 10,
       "priority": 0,
       "title": "GÖBEKLI TEPE",
       "description": "Archäologische Dokumentation der DAI-Grabungen am Göbekli Tepe (1995–laufend): älteste bekannte Monumentalarchitektur der Menschheit, ~9600–8000 BCE. Monumentalbau vor der Sesshaftwerdung widerlegt das Modell der neolithischen Revolution.",
@@ -18972,7 +18978,7 @@
       "classification": "existing",
       "candidates": [],
       "resolvedTarget": "OTA-OBS-0004-2026-DE",
-      "sourceCount": 9,
+      "sourceCount": 10,
       "priority": 0,
       "title": "GÖBEKLI TEPE",
       "description": "Archäologische Dokumentation der DAI-Grabungen am Göbekli Tepe (1995–laufend): älteste bekannte Monumentalarchitektur der Menschheit, ~9600–8000 BCE. Monumentalbau vor der Sesshaftwerdung widerlegt das Modell der neolithischen Revolution.",
@@ -18990,7 +18996,7 @@
       "classification": "existing",
       "candidates": [],
       "resolvedTarget": "OTA-OBS-0004-2026-DE",
-      "sourceCount": 9,
+      "sourceCount": 10,
       "priority": 0,
       "title": "GÖBEKLI TEPE",
       "description": "Archäologische Dokumentation der DAI-Grabungen am Göbekli Tepe (1995–laufend): älteste bekannte Monumentalarchitektur der Menschheit, ~9600–8000 BCE. Monumentalbau vor der Sesshaftwerdung widerlegt das Modell der neolithischen Revolution.",
@@ -19007,7 +19013,25 @@
       "classification": "existing",
       "candidates": [],
       "resolvedTarget": "OTA-OBS-0004-2026-DE",
-      "sourceCount": 9,
+      "sourceCount": 10,
+      "priority": 0,
+      "title": "GÖBEKLI TEPE",
+      "description": "Archäologische Dokumentation der DAI-Grabungen am Göbekli Tepe (1995–laufend): älteste bekannte Monumentalarchitektur der Menschheit, ~9600–8000 BCE. Monumentalbau vor der Sesshaftwerdung widerlegt das Modell der neolithischen Revolution.",
+      "descriptionStatus": "canonical",
+      "targetFile": "src/content/documents/OTA-OBS-0004-2026-DE.md"
+    },
+    {
+      "source": "OTA-OBS-0010-2026-DE",
+      "target": "OTA-OBS-0004-2026-DE",
+      "contexts": [
+        "Konstantinopel\", \"Atrium\", \"Substruktionen\", \"Tunnel\", \"Zisterne\", \"Byzanz\", \"Laserscan\"] relatedDocuments: [\"OTA-OBS-0004-2026-DE\"] summary: \"Beobachtungsdossier zu den unterirdischen Strukturen der Hagia Sophia: Befunde der Reinigung unter dem Atrium 2025 (Diker 2026), frühere",
+        "e SUB-001). --- ## VIII. VERWANDTE DOKUMENTE | Signatur | Titel | Status | |----------|-------|--------| | OTA-OBS-0004-2026-DE | Göbekli Tepe (Vorbild Beobachtungsdossier) | Kanonisch | Anwendung außerhalb des Archivs: `noxiagame/docs/world/chronomap-erde/gegenden/konstantin"
+      ],
+      "status": "resolved",
+      "classification": "existing",
+      "candidates": [],
+      "resolvedTarget": "OTA-OBS-0004-2026-DE",
+      "sourceCount": 10,
       "priority": 0,
       "title": "GÖBEKLI TEPE",
       "description": "Archäologische Dokumentation der DAI-Grabungen am Göbekli Tepe (1995–laufend): älteste bekannte Monumentalarchitektur der Menschheit, ~9600–8000 BCE. Monumentalbau vor der Sesshaftwerdung widerlegt das Modell der neolithischen Revolution.",
@@ -19024,7 +19048,7 @@
       "classification": "existing",
       "candidates": [],
       "resolvedTarget": "OTA-OBS-0004-2026-DE",
-      "sourceCount": 9,
+      "sourceCount": 10,
       "priority": 0,
       "title": "GÖBEKLI TEPE",
       "description": "Archäologische Dokumentation der DAI-Grabungen am Göbekli Tepe (1995–laufend): älteste bekannte Monumentalarchitektur der Menschheit, ~9600–8000 BCE. Monumentalbau vor der Sesshaftwerdung widerlegt das Modell der neolithischen Revolution.",
@@ -22792,7 +22816,7 @@
       "sourceCount": 2,
       "priority": 0,
       "title": "Schumann-Resonanz: Biologische Relevanz und ISS-Referenzdaten",
-      "description": "Schumann-Resonanz: Grundlagen, Messdaten [R], biologische Wirkungshypothesen [T/S].",
+      "description": "Brücke: Hayashi-Frequenzhierarchie und Mars-Szenarien auf Basis der (schwachen) realen Evidenz zu Schumann-Bioeffekten; Realteil in KUE-SCI-0223-2026-DE.",
       "descriptionStatus": "canonical",
       "targetFile": "src/content/documents/OTA-SCI-0015-2025-DE.md"
     },
@@ -22815,7 +22839,7 @@
       "sourceCount": 2,
       "priority": 0,
       "title": "Schumann-Resonanz: Biologische Relevanz und ISS-Referenzdaten",
-      "description": "Schumann-Resonanz: Grundlagen, Messdaten [R], biologische Wirkungshypothesen [T/S].",
+      "description": "Brücke: Hayashi-Frequenzhierarchie und Mars-Szenarien auf Basis der (schwachen) realen Evidenz zu Schumann-Bioeffekten; Realteil in KUE-SCI-0223-2026-DE.",
       "descriptionStatus": "canonical",
       "targetFile": "src/content/documents/OTA-SCI-0015-2025-DE.md"
     },
@@ -22832,7 +22856,7 @@
       "sourceCount": 5,
       "priority": 0,
       "title": "Schumann-Resonanz: Biologische Relevanz und ISS-Referenzdaten",
-      "description": "Schumann-Resonanz: Grundlagen, Messdaten [R], biologische Wirkungshypothesen [T/S].",
+      "description": "Brücke: Hayashi-Frequenzhierarchie und Mars-Szenarien auf Basis der (schwachen) realen Evidenz zu Schumann-Bioeffekten; Realteil in KUE-SCI-0223-2026-DE.",
       "descriptionStatus": "canonical",
       "targetFile": "src/content/documents/OTA-SCI-0015-2025-DE.md"
     },
@@ -22849,7 +22873,7 @@
       "sourceCount": 5,
       "priority": 0,
       "title": "Schumann-Resonanz: Biologische Relevanz und ISS-Referenzdaten",
-      "description": "Schumann-Resonanz: Grundlagen, Messdaten [R], biologische Wirkungshypothesen [T/S].",
+      "description": "Brücke: Hayashi-Frequenzhierarchie und Mars-Szenarien auf Basis der (schwachen) realen Evidenz zu Schumann-Bioeffekten; Realteil in KUE-SCI-0223-2026-DE.",
       "descriptionStatus": "canonical",
       "targetFile": "src/content/documents/OTA-SCI-0015-2025-DE.md"
     },
@@ -22868,7 +22892,7 @@
       "sourceCount": 5,
       "priority": 0,
       "title": "Schumann-Resonanz: Biologische Relevanz und ISS-Referenzdaten",
-      "description": "Schumann-Resonanz: Grundlagen, Messdaten [R], biologische Wirkungshypothesen [T/S].",
+      "description": "Brücke: Hayashi-Frequenzhierarchie und Mars-Szenarien auf Basis der (schwachen) realen Evidenz zu Schumann-Bioeffekten; Realteil in KUE-SCI-0223-2026-DE.",
       "descriptionStatus": "canonical",
       "targetFile": "src/content/documents/OTA-SCI-0015-2025-DE.md"
     },
@@ -22888,7 +22912,7 @@
       "sourceCount": 5,
       "priority": 0,
       "title": "Schumann-Resonanz: Biologische Relevanz und ISS-Referenzdaten",
-      "description": "Schumann-Resonanz: Grundlagen, Messdaten [R], biologische Wirkungshypothesen [T/S].",
+      "description": "Brücke: Hayashi-Frequenzhierarchie und Mars-Szenarien auf Basis der (schwachen) realen Evidenz zu Schumann-Bioeffekten; Realteil in KUE-SCI-0223-2026-DE.",
       "descriptionStatus": "canonical",
       "targetFile": "src/content/documents/OTA-SCI-0015-2025-DE.md"
     },
@@ -22906,7 +22930,7 @@
       "sourceCount": 5,
       "priority": 0,
       "title": "Schumann-Resonanz: Biologische Relevanz und ISS-Referenzdaten",
-      "description": "Schumann-Resonanz: Grundlagen, Messdaten [R], biologische Wirkungshypothesen [T/S].",
+      "description": "Brücke: Hayashi-Frequenzhierarchie und Mars-Szenarien auf Basis der (schwachen) realen Evidenz zu Schumann-Bioeffekten; Realteil in KUE-SCI-0223-2026-DE.",
       "descriptionStatus": "canonical",
       "targetFile": "src/content/documents/OTA-SCI-0015-2025-DE.md"
     },
@@ -23489,7 +23513,7 @@
       "contexts": [
         "m Dokument ausdrücklich unter VERWANDTE DOKUMENTE aufgeführt.\" descriptionStatus: \"explicit\" - target: \"OTA-SCI-0019-2025-DE\" relation: \"related\" context: \"Im Dokument ausdrücklich unter VERWANDTE DOKUMENTE aufgeführt.\" descriptionStatus: \"explicit\" - target:",
         "heoretisch – NOXIA Integration** ### **8.1 Hypothese: Atmosphärische Resonanzen** Falls die χ-Feld-Theorie (OTA-SCI-0019-2025-DE) korrekt ist, sollten Planeten mit Atmosphären als Frequenz-Resonatoren wirken. **Voraussetzungen für messbare Resonanzen:** 1. Atmosphäre > 0,1 bar",
-        "sit\" 5. scinexx.de (2024): \"Potenziell lebensfreundliche Exo-Venus entdeckt\" **OTA-interne Referenzen:** 6. OTA-SCI-0019-2025-DE: \"Die fünf Epochen des Gehirns\" (χ-Feld-Theorie) 7. OTA-SCI-0030-2025-DE: \"HD 20794 d\" (Vergleichsplanet) 8. OTA-RED-0012-2171-DE: \"AVI-Theorie und A",
+        "r (Titel bei scinexx nicht gefunden); inhaltlich gedeckt durch Nr. 1 und 2.* **OTA-interne Referenzen:** 6. OTA-SCI-0019-2025-DE: \"Die fünf Epochen des Gehirns\" (χ-Feld-Theorie) 7. OTA-SCI-0030-2025-DE: \"HD 20794 d\" (Vergleichsplanet) 8. OTA-RED-0012-2171-DE: \"AVI-Theorie und A",
         "024-DE | GJ 251 c | 20-Lj-Kohorte | | OTA-SCI-0007-2026-Cuancoa | LTT 9779 b | Vergleichsplanet (Transit) | | OTA-SCI-0019-2025-DE | χ-Feld-Theorie | Atmosphärische Resonanzen | | OTA-RED-0012-2171-DE | AVI-Theorie | Kosmisches Schweigen | --- ## **REVISIONSVERLAUF** | Datum |"
       ],
       "status": "resolved",
@@ -24734,7 +24758,7 @@
       "target": "OTA-SCI-0030-2025-DE",
       "contexts": [
         "iste des Ausgangsdokuments als relatedDocuments hinterlegt; im SCI-0031-Reparaturpass erhalten.\" - target: \"OTA-SCI-0030-2025-DE\" relation: \"related\" context: \"Im Dokument ausdrücklich unter VERWANDTE DOKUMENTE aufgeführt.\" descriptionStatus: \"explicit\" - target:",
-        "kt\" **OTA-interne Referenzen:** 6. OTA-SCI-0019-2025-DE: \"Die fünf Epochen des Gehirns\" (χ-Feld-Theorie) 7. OTA-SCI-0030-2025-DE: \"HD 20794 d\" (Vergleichsplanet) 8. OTA-RED-0012-2171-DE: \"AVI-Theorie und Artefakte\" --- ## **VERWANDTE DOKUMENTE** | Signatur | Titel | Bezug |",
+        "2.* **OTA-interne Referenzen:** 6. OTA-SCI-0019-2025-DE: \"Die fünf Epochen des Gehirns\" (χ-Feld-Theorie) 7. OTA-SCI-0030-2025-DE: \"HD 20794 d\" (Vergleichsplanet) 8. OTA-RED-0012-2171-DE: \"AVI-Theorie und Artefakte\" --- ## **VERWANDTE DOKUMENTE** | Signatur | Titel | Bezug |",
         "und Artefakte\" --- ## **VERWANDTE DOKUMENTE** | Signatur | Titel | Bezug | |----------|-------|-------| | OTA-SCI-0030-2025-DE | HD 20794 d | 20-Lj-Kohorte | | OTA-SCI-0032-2024-DE | GJ 251 c | 20-Lj-Kohorte | | OTA-SCI-0007-2026-Cuancoa | LTT 9779 b | Vergleichsplanet (Trans"
       ],
       "status": "resolved",
@@ -24753,7 +24777,7 @@
       "target": "OTA-SCI-0030-2025-DE",
       "contexts": [
         "nline-Liste des Ausgangsdokuments als relatedDocuments hinterlegt; beim Encoding-Pass erhalten.\" - target: \"OTA-SCI-0030-2025-DE\" relation: \"related\" context: \"Bereits in der Legacy-Inline-Liste des Ausgangsdokuments als relatedDocuments hinterlegt; beim Encoding-Pass e",
-        "lifornia Irvine (2024): \"Ein Planet wie die Erde – und fast zum Greifen nah\" **OTA-interne Referenzen:** 5. OTA-SCI-0030-2025-DE: \"HD 20794 d\" (Vergleichsplanet) 6. OTA-SCI-0031-2024-DE: \"Gliese-12b\" (Vergleichsplanet) 7. OTA-SCI-0019-2025-DE: \"χ-Feld-Theorie\" 8. OTA-RED-0012-2",
+        "9.2026): \"Thirty Meter Telescope rejects La Palma as alternative host site.\" **OTA-interne Referenzen:** 5. OTA-SCI-0030-2025-DE: \"HD 20794 d\" (Vergleichsplanet) 6. OTA-SCI-0031-2024-DE: \"Gliese-12b\" (Vergleichsplanet) 7. OTA-SCI-0019-2025-DE: \"χ-Feld-Theorie\" 8. OTA-RED-0012-2",
         "ches Schweigen\" --- ## **VERWANDTE DOKUMENTE** | Signatur | Titel | Bezug | |----------|-------|-------| | OTA-SCI-0030-2025-DE | HD 20794 d | 20-Lj-Kohorte | | OTA-SCI-0031-2024-DE | Gliese-12b | Vergleichsplanet (Roter Zwerg) | | OTA-SCI-0007-2026-Cuancoa | LTT 9779 b | Anom"
       ],
       "status": "resolved",
@@ -24808,7 +24832,7 @@
       "target": "OTA-SCI-0031-2024-DE",
       "contexts": [
         "\"GJ 251 c\", \"Exoplanet\", \"Habitable Zone\", \"M-Zwerg\", \"Astrobiologie\", \"JWST\"] relatedDocuments: - target: \"OTA-SCI-0031-2024-DE\" relation: \"related\" context: \"Bereits in der Legacy-Inline-Liste des Ausgangsdokuments als relatedDocuments hinterlegt; beim Encoding-Pass e",
-        "st zum Greifen nah\" **OTA-interne Referenzen:** 5. OTA-SCI-0030-2025-DE: \"HD 20794 d\" (Vergleichsplanet) 6. OTA-SCI-0031-2024-DE: \"Gliese-12b\" (Vergleichsplanet) 7. OTA-SCI-0019-2025-DE: \"χ-Feld-Theorie\" 8. OTA-RED-0012-2171-DE: \"AVI-Theorie und kosmisches Schweigen\" --- ## *",
+        "rnative host site.\" **OTA-interne Referenzen:** 5. OTA-SCI-0030-2025-DE: \"HD 20794 d\" (Vergleichsplanet) 6. OTA-SCI-0031-2024-DE: \"Gliese-12b\" (Vergleichsplanet) 7. OTA-SCI-0019-2025-DE: \"χ-Feld-Theorie\" 8. OTA-RED-0012-2171-DE: \"AVI-Theorie und kosmisches Schweigen\" --- ## *",
         "gnatur | Titel | Bezug | |----------|-------|-------| | OTA-SCI-0030-2025-DE | HD 20794 d | 20-Lj-Kohorte | | OTA-SCI-0031-2024-DE | Gliese-12b | Vergleichsplanet (Roter Zwerg) | | OTA-SCI-0007-2026-Cuancoa | LTT 9779 b | Anomalie-Planeten | | OTA-SCI-0019-2025-DE | χ-Feld-Theori"
       ],
       "status": "resolved",
@@ -33077,7 +33101,7 @@
       "target": "OTA-TEC-0081",
       "contexts": [
         "ständig übertragbar | | **Saga-Quarantäne:** | Aktiv — kein fiktionaler Inhalt | | **Verwandte Dokumente:** | OTA-TEC-0081 · OTA-SCI-0080 · OTA-SCI-HSS-A · OTA-SCI-HSS-B | ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ **Kurator:** Thomas Peter Küper Frankfurt a",
-        "oberflächlich ähnlich aussieht, ist fundamental anders. Die fiktionale Anwendung aller Grundlagen erfolgt in `OTA-TEC-0081`. Kein fiktionaler Inhalt in diesem Dokument. --- ## I. FREIE KREISPLATTEN: SCHWINGUNGSMODEN UND EIGENFREQUENZEN ### 1.1 Grundlagen der Plattenaku"
+        "oberflächlich ähnlich aussieht, ist fundamental anders. Die fiktionale Anwendung aller Grundlagen erfolgt in `OTA-TEC-0081`. Kein fiktionaler Inhalt in diesem Dokument. --- ## I. FREIE KREISPLATTEN: SCHWINGUNGSMODEN UND EIGENFREQUENZEN ### 1.1–1.2 Plattenakustik und Ei"
       ],
       "status": "resolved-base-id",
       "classification": "base-id-resolved",
