@@ -5,8 +5,9 @@ Datum: 2026-11-22
 Quelle: Begutachtung nach ECO-ARC-0037, Zuordnung nach ECO-ARC-0038 §2 (Claude)
 Prüfbericht: `kueper-ecosystem/reviews/2026-11-22-OTA-SCI-0081-2026-DE.md`
 Zuordnung: Teile nach KUE – Plattenakustik (§1.1, §1.2) und Lapis-lazuli-Mineralogie/Lumineszenz (§2.1, §2.2 ohne „Narrativer Anker“) werden per `kueper.com/external-tasks/open/EXT-OTA-KUE-20261122-002.md` zu KUE-Dokumenten; Astronomie (§5.1) hat mit `DOC:KUE:KUE-SCI-0207-2026-DE` bereits ein KUE-Gegenstück. §1.3, „Narrativer Anker“ in §2.2, §2.3, §III, §IV, §5.2, alle KN-Notizen und §VI bleiben in OTA.
-Voraussetzung: Punkt A sofort umsetzbar. Punkt C erst, wenn die KUE-Dokumente aus EXT-OTA-KUE-20261122-002 in `kueper.com/main` gemergt sind (Signaturen dort vergeben, im Folgenden `KUE-SCI-PPPP` für Plattenakustik und `KUE-SCI-LLLL` für Lapis lazuli). Punkt B wartet auf Thomas.
+Voraussetzung: Punkt A sofort umsetzbar. Punkt C erst, wenn die KUE-Dokumente aus EXT-OTA-KUE-20261122-002 in `kueper.com/main` gemergt sind (Signaturen dort vergeben: `KUE-SCI-0221-2026-DE` für Plattenakustik und `KUE-SCI-0222-2026-DE` für Lapis lazuli, beide in `main` seit 2026-11-25). Punkt B wartet auf Thomas.
 Teilweise erledigt: 2026-11-24 – Punkt A umgesetzt in OTA-SCI-0081 v1.3 durch die Begutachtung (ECO-ARC-0038 §3b); bei A.3 die Variante „Absatz streichen“ gewählt (keine Quelle für die Tingsha-Werte gefunden). Hinweis: Die alte Frequenzangabe „~1.000–3.000 Hz“ steht weiter in §3.3 (Teil von B.2) und in der Tabelle von §VI (Zeile Eigenfrequenz) – von A nicht erfasst. Offen: B (wartet auf Thomas), C (wartet auf die KUE-Dokumente aus EXT-OTA-KUE-20261122-002).
+Teilweise erledigt: 2026-11-26 – Signaturen KUE-SCI-0221-2026-DE und KUE-SCI-0222-2026-DE eingetragen, C.2 bei der Lumineszenz nach KUE-SCI-0222 Abschnitt III präzisiert (EXT-KUE-OTA-20261125-003); Punkt C umgesetzt in OTA-SCI-0081 v1.4 (Ökosystem-Kreislauf, Claude). Offen: B (wartet auf Thomas).
 Erfasst die Punkte zu OTA-SCI-0081 aus `OTA-REQ-20261106-quellenpruefung.md`.
 
 ## Anlass
@@ -42,13 +43,13 @@ B. **Claude-Status: wartet auf Thomas** – berührt Werkbezug und kuratorische 
 
 C. **Mit KUE-Dokumenten (ECO-ARC-0038 §3a):**
    1. §1.1 und §1.2 (nach Punkt A) ersetzen durch:
-      > `[R]` Eine freie Kreisplatte schwingt in Moden mit Knotendurchmessern und Knotenkreisen; aufgestreuter Sand macht sie als Chladni-Figuren sichtbar. `[T]` Für eine Scheibe aus Arsenbronze von etwa 7 cm Durchmesser und 3,5 mm Dicke liegt der tiefste Modus nach der Plattentheorie bei etwa 2–3 kHz, der Modus mit einem Knotenkreis bei etwa 4–5 kHz. Rechnung, Eigenwerte und Grenzen: `DOC:KUE:KUE-SCI-PPPP`.
+      > `[R]` Eine freie Kreisplatte schwingt in Moden mit Knotendurchmessern und Knotenkreisen; aufgestreuter Sand macht sie als Chladni-Figuren sichtbar. `[T]` Für eine Scheibe aus Arsenbronze von etwa 7 cm Durchmesser und 3,5 mm Dicke liegt der tiefste Modus nach der Plattentheorie bei etwa 2–3 kHz, der Modus mit einem Knotenkreis bei etwa 4–5 kHz. Rechnung, Eigenwerte und Grenzen: `DOC:KUE:KUE-SCI-0221-2026-DE`.
    2. §2.1 und §2.2 bis vor „**Narrativer Anker**“ ersetzen durch:
-      > `[R]` Lapis lazuli ist ein Gestein aus Lazurit (blau, Farbe durch Schwefelradikalanionen wie S₃⁻), Calcit und Pyrit; Hauptquelle der Antike war Badachschan in Afghanistan. Unter UV-Licht lumineszieren Proben uneinheitlich, meist orange bis gelblich (vor allem Begleitminerale); eine deutlich blaue Emission ist nicht der Normalfall. Einzelheiten und Quellen: `DOC:KUE:KUE-SCI-LLLL`.
+      > `[R]` Lapis lazuli ist ein Gestein aus Lazurit (blau, Farbe durch Schwefelradikalanionen wie S₃⁻), Calcit und Pyrit, dazu Diopsid und weitere Begleitminerale; Hauptquelle der Antike war Badachschan in Afghanistan. Unter UV-, Elektronen- oder Ionenanregung leuchten Proben uneinheitlich und überwiegend über die Begleitminerale: in der Kathodolumineszenz Calcit orange-rot, Diopsid und Wollastonit weiß-gelb; blaue Emission (Kalifeldspat) ist Merkmal bestimmter Lagerstätten (Sibirien), Lazurit selbst leuchtet kaum. Eine deutlich blaue Emission ist damit nicht der Normalfall. Einzelheiten und Quellen: `DOC:KUE:KUE-SCI-0222-2026-DE`.
       „Narrativer Anker“ und die beiden folgenden Absätze bleiben wörtlich.
    3. §5.1, Aufzählung „Navigation nach Sternen …“ und Thuban-Zeile: Verweis „Einzelheiten: `DOC:KUE:KUE-SCI-0207-2026-DE`“ ergänzen; die Tabelle bleibt (Werkanker Amara/Qatna).
-   4. Quellen „Plattenakustik“ und „Lapis lazuli“ durch „Realgrundlage: `DOC:KUE:KUE-SCI-PPPP`, `DOC:KUE:KUE-SCI-LLLL`“ ersetzen; die übrigen Quellenblöcke bleiben.
-   Versionssprung v1.4, Revisionsvermerk „<Datum>: Realteile nach DOC:KUE:KUE-SCI-PPPP und DOC:KUE:KUE-SCI-LLLL ausgelagert (OTA-REQ-20261122-002 C).“ Nicht stärker kennzeichnen als KUE.
+   4. Quellen „Plattenakustik“ und „Lapis lazuli“ durch „Realgrundlage: `DOC:KUE:KUE-SCI-0221-2026-DE`, `DOC:KUE:KUE-SCI-0222-2026-DE`“ ersetzen; die übrigen Quellenblöcke bleiben.
+   Versionssprung v1.4, Revisionsvermerk „<Datum>: Realteile nach DOC:KUE:KUE-SCI-0221-2026-DE und DOC:KUE:KUE-SCI-0222-2026-DE ausgelagert (OTA-REQ-20261122-002 C).“ Nicht stärker kennzeichnen als KUE.
 
 ## Wirkung
 
