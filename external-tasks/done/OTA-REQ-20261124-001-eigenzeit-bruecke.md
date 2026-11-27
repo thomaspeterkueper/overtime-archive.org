@@ -1,6 +1,7 @@
 # OTA-REQ-20261124-001 – OTA-SCI-0083-2026-DE (Eigenzeit, optische Atomuhren, Ausschlusslogik): Quelle präzisieren, danach zum Brückendokument kürzen
 
-Status: open
+Status: done
+Erledigt: 2026-11-27 – Punkte A und B umgesetzt in OTA-SCI-0083 v1.1/v1.2 durch die Begutachtung (ECO-ARC-0038 §3b; KUE-SCI-0177-2026-DE v0.3 mit Abschnitt VI c in `kueper.com/main`).
 Datum: 2026-11-24
 Quelle: Begutachtung nach ECO-ARC-0037, Zuordnung nach ECO-ARC-0038 §2 (Claude)
 Prüfbericht: `kueper-ecosystem/reviews/2026-11-24-OTA-SCI-0083-2026-DE.md`
