@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-11-26T05:54:54.631Z",
+  "generatedAt": "2026-11-27T05:49:46.851Z",
   "summary": {
     "documents": 341,
-    "substantial": 193,
-    "short": 104,
+    "substantial": 192,
+    "short": 105,
     "fragments": 44,
     "genericTitles": 69,
     "genericSummaries": 41,
@@ -15,7 +15,7 @@
     "titleReviewOK": 272,
     "safeTitleCandidates": 0,
     "summaryCandidates": 19,
-    "relationCandidates": 1096,
+    "relationCandidates": 1099,
     "safeRelationCandidates": 0
   },
   "documents": [
@@ -9915,7 +9915,7 @@
       "language": "DE",
       "canonical": {
         "title": "Λ_Struktur und Gold-Geometrie: Korngrenzenkontrollierte χ-Feld-Kopplung",
-        "summary": "HD 20794 d aus der Perspektive 2090: prospektive Weiterentwicklung im NOXIA-Universum. Reale Astrophysik [R], Extrapolationen [T/S], narrative Einbindung [F].",
+        "summary": "Λ_Struktur und strukturabhängige χ-Feld-Kopplung in Gold aus der Perspektive 2090 (NOXIA): Kapitelübersicht mit realen Material- und Archäologieankern [R] (Korngrenzen, inverser Hall-Petch-Effekt, Kanazawa-Blattgold, etruskische Granulation), fiktivem ISS-Experiment 2088–2090 [T/F] und Extrapolationen [S].",
         "relatedCount": 1
       },
       "extracted": {
@@ -9963,6 +9963,70 @@
         "images": 0,
         "tables": 1,
         "inlineReferenceTargets": 4
+      },
+      "quality": {
+        "substance": "KURZ",
+        "genericTitle": false,
+        "genericSummary": false,
+        "relationGap": true,
+        "flags": [
+          "RELATION_GAP",
+          "NO_VISUAL"
+        ],
+        "priority": 4
+      }
+    },
+    {
+      "file": "OTA-SCI-0083-2026-DE.md",
+      "signature": "OTA-SCI-0083-2026-DE",
+      "series": "SCI",
+      "year": "2026",
+      "language": "DE",
+      "canonical": {
+        "title": "Eigenzeit, optische Atomuhren und relativistische Ausschlusslogik",
+        "summary": "Brückendokument: [R]-Trennlinie für behauptete lokale Eigenzeitanomalien (AVI/Au₂Hₓ, EIGENZEIT, NOXIA); Realteil in KUE-SCI-0177.",
+        "relatedCount": 2
+      },
+      "extracted": {
+        "title": null,
+        "author": null,
+        "classification": null,
+        "excerpt": "**Dokumenttyp:** Brückendokument zur relativistischen Zeitmetrologie **Epistemischer Status:** **[R]** **Stand:** 2026"
+      },
+      "titleReview": {
+        "tier": "OK",
+        "candidate": null,
+        "evidence": "canonical-title"
+      },
+      "candidates": {
+        "title": null,
+        "derivedTitle": null,
+        "summary": null,
+        "relations": [
+          {
+            "target": "OTA-SCI-0017",
+            "evidence": "inline-reference",
+            "safe": false
+          },
+          {
+            "target": "OTA-TEC-0021",
+            "evidence": "inline-reference",
+            "safe": false
+          },
+          {
+            "target": "OTA-REQ-20261124-001",
+            "evidence": "inline-reference",
+            "safe": false
+          }
+        ],
+        "count": 3
+      },
+      "metrics": {
+        "words": 420,
+        "headings": 8,
+        "images": 0,
+        "tables": 0,
+        "inlineReferenceTargets": 5
       },
       "quality": {
         "substance": "KURZ",
@@ -16539,16 +16603,21 @@
             "target": "OTA-SCI-0007-2026-",
             "evidence": "inline-reference",
             "safe": false
+          },
+          {
+            "target": "OTA-REQ-20261124-002",
+            "evidence": "inline-reference",
+            "safe": false
           }
         ],
-        "count": 3
+        "count": 4
       },
       "metrics": {
-        "words": 1907,
-        "headings": 28,
+        "words": 1766,
+        "headings": 26,
         "images": 0,
         "tables": 1,
-        "inlineReferenceTargets": 8
+        "inlineReferenceTargets": 9
       },
       "quality": {
         "substance": "SUBSTANZIELL",
@@ -17752,65 +17821,6 @@
         "headings": 16,
         "images": 0,
         "tables": 1,
-        "inlineReferenceTargets": 4
-      },
-      "quality": {
-        "substance": "SUBSTANZIELL",
-        "genericTitle": false,
-        "genericSummary": false,
-        "relationGap": true,
-        "flags": [
-          "RELATION_GAP",
-          "NO_VISUAL"
-        ],
-        "priority": 2
-      }
-    },
-    {
-      "file": "OTA-SCI-0083-2026-DE.md",
-      "signature": "OTA-SCI-0083-2026-DE",
-      "series": "SCI",
-      "year": "2026",
-      "language": "DE",
-      "canonical": {
-        "title": "Eigenzeit, optische Atomuhren und relativistische Ausschlusslogik",
-        "summary": "[R]-Grundlage zu Eigenzeit, kinematischer und gravitativer Zeitdilatation, optischen Atomuhren, relativistischer Geodäsie und der experimentellen Ausschlusslogik für behauptete lokale Eigenzeitanomalien.",
-        "relatedCount": 2
-      },
-      "extracted": {
-        "title": null,
-        "author": null,
-        "classification": null,
-        "excerpt": "**Dokumenttyp:** Realwissenschaftliches Grundlagendossier **Epistemischer Status:** **[R]** **Stand:** 2026"
-      },
-      "titleReview": {
-        "tier": "OK",
-        "candidate": null,
-        "evidence": "canonical-title"
-      },
-      "candidates": {
-        "title": null,
-        "derivedTitle": null,
-        "summary": null,
-        "relations": [
-          {
-            "target": "OTA-SCI-0017",
-            "evidence": "inline-reference",
-            "safe": false
-          },
-          {
-            "target": "OTA-TEC-0021",
-            "evidence": "inline-reference",
-            "safe": false
-          }
-        ],
-        "count": 2
-      },
-      "metrics": {
-        "words": 1058,
-        "headings": 17,
-        "images": 0,
-        "tables": 0,
         "inlineReferenceTargets": 4
       },
       "quality": {
@@ -19196,16 +19206,21 @@
             "target": "OTA-ARC-0003",
             "evidence": "inline-reference",
             "safe": false
+          },
+          {
+            "target": "OTA-REQ-20261123-002",
+            "evidence": "inline-reference",
+            "safe": false
           }
         ],
-        "count": 6
+        "count": 7
       },
       "metrics": {
-        "words": 1476,
-        "headings": 25,
+        "words": 1377,
+        "headings": 24,
         "images": 0,
         "tables": 1,
-        "inlineReferenceTargets": 6
+        "inlineReferenceTargets": 7
       },
       "quality": {
         "substance": "SUBSTANZIELL",
