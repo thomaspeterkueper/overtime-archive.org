@@ -6,6 +6,7 @@ Quelle: Begutachtung nach ECO-ARC-0037, Zuordnung nach ECO-ARC-0038 §2 (Claude)
 Prüfbericht: `kueper-ecosystem/reviews/2026-11-24-OTA-SCI-0030-2025-DE.md`
 Zuordnung: Teile nach KUE – I, II.1, 3.1 (HZ-Grenzen), V (Instrumente) und VIII sind werkneutrales Realwissen; III–VII (episodische Habitabilität, NOXIA-Hypothesen, χ-Feld, GENERATION MARS) und die Kuratornotizen bleiben. Neues KUE-Dokument per `kueper.com/external-tasks/open/EXT-OTA-KUE-20261124-002.md`.
 Voraussetzung: Punkt A sofort umsetzbar. Punkt C erst, wenn das neue KUE-Dokument aus EXT-OTA-KUE-20261124-002 in `kueper.com/main` gemergt ist (Signatur dort vergeben, im Folgenden `KUE-SCI-NNNN`). Punkt B wartet auf Thomas.
+Teilweise erledigt: 2026-11-27 – Punkte A und C umgesetzt in OTA-SCI-0030-2025-DE v1.2/v1.3 (Ökosystem-Kreislauf, Claude; EXT-KUE-OTA-20261126-002): `KUE-SCI-NNNN` = KUE-SCI-0225-2026-DE (v0.1 in `kueper.com/main`). Die A-Korrekturen in §I, §3.1 (HZ-Zahlen), §5.1/5.2 und den Quellen sind durch C wieder entfallen; erhalten bleiben §2.1, §2.2 und die Revisionsvermerke. Bei C.3 blieb die Bedingungsliste des ersten Absatzes stehen, die HZ-Grenzen stehen als Verweis im Satz „Problem: …“. Offen bleibt nur Punkt B (wartet auf Thomas).
 Erfasst den Punkt zu OTA-SCI-0030-2025 aus `OTA-REQ-20261106-quellenpruefung.md` (Pressequellen).
 
 ## Anlass
