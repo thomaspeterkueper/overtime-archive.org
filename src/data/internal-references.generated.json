@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-26T05:54:54.094Z",
+  "generatedAt": "2026-11-27T05:49:46.305Z",
   "documents": [
     {
       "signature": "OTA-ART-0001-2087-DE",
@@ -1150,7 +1150,7 @@
     {
       "signature": "OTA-SCI-0030-2090-DE",
       "title": "Λ_Struktur und Gold-Geometrie: Korngrenzenkontrollierte χ-Feld-Kopplung",
-      "summary": "HD 20794 d aus der Perspektive 2090: prospektive Weiterentwicklung im NOXIA-Universum. Reale Astrophysik [R], Extrapolationen [T/S], narrative Einbindung [F].",
+      "summary": "Λ_Struktur und strukturabhängige χ-Feld-Kopplung in Gold aus der Perspektive 2090 (NOXIA): Kapitelübersicht mit realen Material- und Archäologieankern [R] (Korngrenzen, inverser Hall-Petch-Effekt, Kanazawa-Blattgold, etruskische Granulation), fiktivem ISS-Experiment 2088–2090 [T/F] und Extrapolationen [S].",
       "file": "src/content/documents/OTA-SCI-0030-2090-DE.md"
     },
     {
@@ -1330,7 +1330,7 @@
     {
       "signature": "OTA-SCI-0083-2026-DE",
       "title": "Eigenzeit, optische Atomuhren und relativistische Ausschlusslogik",
-      "summary": "[R]-Grundlage zu Eigenzeit, kinematischer und gravitativer Zeitdilatation, optischen Atomuhren, relativistischer Geodäsie und der experimentellen Ausschlusslogik für behauptete lokale Eigenzeitanomalien.",
+      "summary": "Brückendokument: [R]-Trennlinie für behauptete lokale Eigenzeitanomalien (AVI/Au₂Hₓ, EIGENZEIT, NOXIA); Realteil in KUE-SCI-0177.",
       "file": "src/content/documents/OTA-SCI-0083-2026-DE.md"
     },
     {
@@ -20769,7 +20769,7 @@
       "target": "OTA-RED-0012-2171-DE",
       "contexts": [
         "nter den verwandten Dokumenten bzw. Querverweisen aufgeführt.\" descriptionStatus: \"explicit\" - target: \"OTA-RED-0012-2171-DE\" relation: \"related\" context: \"Im Dokument ausdrücklich unter den verwandten Dokumenten bzw. Querverweisen aufgeführt.\" descriptionStatus",
-        "nne\" **OTA-interne Referenzen:** 5. OTA-SCI-0022-2025-DE: \"Zhurong-Befund: Mars hatte Wasser bis 750 Ma\" 6. OTA-RED-0012-2171-DE: \"Artefakte und AVI-Theorie\" 7. OTA-SCI-0019-2025-DE: \"Die fünf Epochen des Gehirns\" --- ## **VERWANDTE DOKUMENTE** | Signatur | Titel | Bezug | |",
+        "-DE` **OTA-interne Referenzen:** 1. OTA-SCI-0022-2025-DE: \"Zhurong-Befund: Mars hatte Wasser bis 750 Ma\" 2. OTA-RED-0012-2171-DE: \"Artefakte und AVI-Theorie\" 3. OTA-SCI-0019-2025-DE: \"Die fünf Epochen des Gehirns\" --- ## **VERWANDTE DOKUMENTE** | Signatur | Titel | Bezug | |",
         "| | OTA-SCI-0031-2024-DE | Gliese-12b | 20-Lj-Kohorte | | OTA-SCI-0032-2024-DE | GJ 251 c | 20-Lj-Kohorte | | OTA-RED-0012-2171-DE | AVI-Theorie | Kosmisches Schweigen | | OTA-BIO-0010-2025-DE | Mars-Demographie 2042-2092 | GENERATION MARS-Kontext | --- ## **REVISIONSVERLAUF**"
       ],
       "status": "resolved",
@@ -23052,7 +23052,7 @@
       "source": "OTA-SCI-0083-2026-DE",
       "target": "OTA-SCI-0017",
       "contexts": [
-        "eue Kopplungen an die Uhr oder den Messaufbau müssen weiterhin ausgeschlossen werden. ## 8. Schnittstelle zu OTA-SCI-0017 und OTA-TEC-0021 `OTA-SCI-0017-2025-DE` enthält einen hypothetischen Au₂Hₓ/AVI-Teststrang mit vorgeschlagenen optischen Atomuhren. Das vorliegende D"
+        "g repliziert ist. Einzelheiten, Prüfpfad und Quellen: `DOC:KUE:KUE-SCI-0177-2026-DE`. ## 3. Schnittstelle zu OTA-SCI-0017 und OTA-TEC-0021 `OTA-SCI-0017-2025-DE` enthält einen hypothetischen Au₂Hₓ/AVI-Teststrang mit vorgeschlagenen optischen Atomuhren. Das vorliegende D"
       ],
       "status": "resolved-base-id",
       "classification": "base-id-resolved",
@@ -23158,7 +23158,7 @@
       "target": "OTA-SCI-0017-2025-DE",
       "contexts": [
         "tomuhren\", \"Frequenzvergleich\", \"relativistische Geodäsie\", \"Ausschlusslogik\"] relatedDocuments: - target: \"OTA-SCI-0017-2025-DE\" relation: \"related\" context: \"Hypothetischer Au₂Hₓ/AVI-Teststrang; dessen [H]-Kopplung ist nicht Teil der [R]-Grundlage dieses Dossiers.\"",
-        "en Messaufbau müssen weiterhin ausgeschlossen werden. ## 8. Schnittstelle zu OTA-SCI-0017 und OTA-TEC-0021 `OTA-SCI-0017-2025-DE` enthält einen hypothetischen Au₂Hₓ/AVI-Teststrang mit vorgeschlagenen optischen Atomuhren. Das vorliegende Dossier liefert dafür die unabhängige **["
+        "Prüfpfad und Quellen: `DOC:KUE:KUE-SCI-0177-2026-DE`. ## 3. Schnittstelle zu OTA-SCI-0017 und OTA-TEC-0021 `OTA-SCI-0017-2025-DE` enthält einen hypothetischen Au₂Hₓ/AVI-Teststrang mit vorgeschlagenen optischen Atomuhren. Das vorliegende Dossier liefert dafür die unabhängige **["
       ],
       "status": "resolved",
       "classification": "existing",
@@ -23494,7 +23494,7 @@
       "source": "OTA-SCI-0030-2025-DE",
       "target": "OTA-SCI-0019-2025-DE",
       "contexts": [
-        "25-DE: \"Zhurong-Befund: Mars hatte Wasser bis 750 Ma\" 6. OTA-RED-0012-2171-DE: \"Artefakte und AVI-Theorie\" 7. OTA-SCI-0019-2025-DE: \"Die fünf Epochen des Gehirns\" --- ## **VERWANDTE DOKUMENTE** | Signatur | Titel | Bezug | |----------|-------|-------| | OTA-SCI-0007-2026-Cuanc"
+        "25-DE: \"Zhurong-Befund: Mars hatte Wasser bis 750 Ma\" 2. OTA-RED-0012-2171-DE: \"Artefakte und AVI-Theorie\" 3. OTA-SCI-0019-2025-DE: \"Die fünf Epochen des Gehirns\" --- ## **VERWANDTE DOKUMENTE** | Signatur | Titel | Bezug | |----------|-------|-------| | OTA-SCI-0007-2026-Cuanc"
       ],
       "status": "resolved",
       "classification": "existing",
@@ -23779,7 +23779,7 @@
       "contexts": [
         "nline-Liste des Ausgangsdokuments als relatedDocuments hinterlegt; beim Encoding-Pass erhalten.\" - target: \"OTA-SCI-0022-2025-DE\" relation: \"related\" context: \"Im Dokument ausdrücklich unter den verwandten Dokumenten bzw. Querverweisen aufgeführt.\" descriptionStatus",
         "tale Exzentrizität | | **Habitabilität** | Relikt-Fenster (OTA-SCI-0022) | Wiederkehrende Fenster? | Siehe **OTA-SCI-0022-2025-DE** (Zhurong-Befund: Mars hatte flüssiges Wasser bis ~750 Ma). --- ## **IV. ATMOSPHÄRISCHE ZUSAMMENSETZUNG** **[T] Theoretisch – Atmospheric Models*",
-        "ntfernung\" 4. scinexx.de (2025): \"Lebensfreundliche Supererde um nahe Sonne\" **OTA-interne Referenzen:** 5. OTA-SCI-0022-2025-DE: \"Zhurong-Befund: Mars hatte Wasser bis 750 Ma\" 6. OTA-RED-0012-2171-DE: \"Artefakte und AVI-Theorie\" 7. OTA-SCI-0019-2025-DE: \"Die fünf Epochen des G",
+        ". Warum? --- ## **QUELLEN** Realgrundlage: `DOC:KUE:KUE-SCI-0225-2026-DE` **OTA-interne Referenzen:** 1. OTA-SCI-0022-2025-DE: \"Zhurong-Befund: Mars hatte Wasser bis 750 Ma\" 2. OTA-RED-0012-2171-DE: \"Artefakte und AVI-Theorie\" 3. OTA-SCI-0019-2025-DE: \"Die fünf Epochen des G",
         "-------|-------| | OTA-SCI-0007-2026-Cuancoa | LTT 9779 b | Vergleichsplanet (exzentrische Eigenschaften) | | OTA-SCI-0022-2025-DE | Mars-Habitabilitätsfenster | Episodisches Wasser | | OTA-SCI-0031-2024-DE | Gliese-12b | 20-Lj-Kohorte | | OTA-SCI-0032-2024-DE | GJ 251 c | 20-Lj-"
       ],
       "status": "resolved",
@@ -24740,7 +24740,7 @@
       "source": "OTA-SCI-0030-2090-DE",
       "target": "OTA-SCI-0030-2025-DE",
       "contexts": [
-        "ags: [\"HD 20794 d\", \"Exoplanet\", \"2090\", \"NOXIA\", \"Prospektiv\", \"Astrophysik\"] relatedDocuments: - target: \"OTA-SCI-0030-2025-DE\" relation: \"related\" context: \"Bereits in der Legacy-Inline-Liste des Ausgangsdokuments als relatedDocuments hinterlegt; beim Encoding-Pass e"
+        "\", \"Etruskische Granulation\", \"2090\", \"NOXIA\", \"Prospektiv\", \"Materialphysik\"] relatedDocuments: - target: \"OTA-SCI-0030-2025-DE\" relation: \"related\" context: \"Bereits in der Legacy-Inline-Liste des Ausgangsdokuments als relatedDocuments hinterlegt; beim Encoding-Pass e"
       ],
       "status": "resolved",
       "classification": "existing",
@@ -28162,7 +28162,7 @@
       "sourceCount": 1,
       "priority": 0,
       "title": "Eigenzeit, optische Atomuhren und relativistische Ausschlusslogik",
-      "description": "[R]-Grundlage zu Eigenzeit, kinematischer und gravitativer Zeitdilatation, optischen Atomuhren, relativistischer Geodäsie und der experimentellen Ausschlusslogik für behauptete lokale Eigenzeitanomalien.",
+      "description": "Brückendokument: [R]-Trennlinie für behauptete lokale Eigenzeitanomalien (AVI/Au₂Hₓ, EIGENZEIT, NOXIA); Realteil in KUE-SCI-0177.",
       "descriptionStatus": "canonical",
       "targetFile": "src/content/documents/OTA-SCI-0083-2026-DE.md"
     },
@@ -28180,7 +28180,7 @@
       "sourceCount": 1,
       "priority": 0,
       "title": "Eigenzeit, optische Atomuhren und relativistische Ausschlusslogik",
-      "description": "[R]-Grundlage zu Eigenzeit, kinematischer und gravitativer Zeitdilatation, optischen Atomuhren, relativistischer Geodäsie und der experimentellen Ausschlusslogik für behauptete lokale Eigenzeitanomalien.",
+      "description": "Brückendokument: [R]-Trennlinie für behauptete lokale Eigenzeitanomalien (AVI/Au₂Hₓ, EIGENZEIT, NOXIA); Realteil in KUE-SCI-0177.",
       "descriptionStatus": "canonical",
       "targetFile": "src/content/documents/OTA-SCI-0083-2026-DE.md"
     },
@@ -30914,7 +30914,7 @@
       "source": "OTA-SCI-0083-2026-DE",
       "target": "OTA-TEC-0021",
       "contexts": [
-        "die Uhr oder den Messaufbau müssen weiterhin ausgeschlossen werden. ## 8. Schnittstelle zu OTA-SCI-0017 und OTA-TEC-0021 `OTA-SCI-0017-2025-DE` enthält einen hypothetischen Au₂Hₓ/AVI-Teststrang mit vorgeschlagenen optischen Atomuhren. Das vorliegende Dossier liefert da"
+        "Einzelheiten, Prüfpfad und Quellen: `DOC:KUE:KUE-SCI-0177-2026-DE`. ## 3. Schnittstelle zu OTA-SCI-0017 und OTA-TEC-0021 `OTA-SCI-0017-2025-DE` enthält einen hypothetischen Au₂Hₓ/AVI-Teststrang mit vorgeschlagenen optischen Atomuhren. Das vorliegende Dossier liefert da"
       ],
       "status": "resolved-base-id",
       "classification": "base-id-resolved",
