@@ -6,6 +6,7 @@ Quelle: Begutachtung nach ECO-ARC-0037, Zuordnung nach ECO-ARC-0038 §2 (Claude)
 Prüfbericht: `kueper-ecosystem/reviews/2026-11-23-OTA-TEC-0028-2025-DE.md`
 Zuordnung: Teile nach KUE – die [R]-Teile von §II (2.1–2.4) werden per `kueper.com/external-tasks/open/EXT-OTA-KUE-20261123-002.md` zu einem KUE-Dokument (aus Primärquellen neu aufgebaut). Die [S→T]-/[S]-Blöcke in §II, §III–§VI, alle Kuratornotizen KN-01 bis KN-06 und das Zitat bleiben in OTA.
 Voraussetzung: Punkt A sofort umsetzbar. Punkt C erst, wenn das KUE-Dokument aus EXT-OTA-KUE-20261123-002 in `kueper.com/main` gemergt ist (Signatur dort vergeben, im Folgenden `KUE-SCI-NNNN`). Punkt B wartet auf Thomas.
+Teilweise erledigt: 2026-11-27 – Punkte A und C umgesetzt in OTA-TEC-0028-2025 v1.1/v1.2 durch die Begutachtung (ECO-ARC-0038 §3b; KUE-SCI-0224-2026-DE v0.1 in `kueper.com/main`, `KUE-SCI-NNNN` = KUE-SCI-0224). Die A-Korrekturen in §2.2–2.4 sind durch C wieder entfallen; erhalten bleiben die Revisionsvermerke. Offen bleibt nur Punkt B (wartet auf Thomas).
 Erfasst die Punkte zu OTA-TEC-0028-2025 aus `OTA-REQ-20261106-quellenpruefung.md` (Alam et al. 2020, Yang et al. 2025).
 
 ## Anlass
