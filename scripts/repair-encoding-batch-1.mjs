@@ -37,7 +37,8 @@ const reviews = [
     epistemicStatus: '["R", "T", "S"]',
     legacyRelations: ['OTA-SCI-0031-2024-DE', 'OTA-SCI-0032-2024-DE'],
     explicitRelations: ['OTA-SCI-0022-2025-DE', 'OTA-RED-0012-2171-DE', 'OTA-BIO-0010-2025-DE'],
-    sentinels: ['außergewöhnlich', 'Instituto de Astrofísica de Canarias', 'M⊕', '0,40–0,45', '≈'],
+    // v1.3 (OTA-REQ-20261124-002 A/C): Realteil nach KUE-SCI-0225-2026-DE ausgelagert; IAC-Nennung und M⊕ entfallen, Sentinels angepasst.
+    sentinels: ['außergewöhnlich', 'KUE-SCI-0225-2026-DE', '5,8 Erdmassen', '0,40–0,45', 'e ≈ 0,45'],
   },
   {
     signature: 'OTA-FND-0012-2026-DE',
