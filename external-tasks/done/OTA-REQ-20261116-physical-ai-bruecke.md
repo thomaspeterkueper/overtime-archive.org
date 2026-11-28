@@ -1,6 +1,7 @@
 # OTA-REQ-20261116-002 – OTA-SCI-0110-2026-DE (Adaptive Fertigung und Physical AI): nach Umzug nach KUE zum Brückendokument kürzen
 
-Status: open
+Status: done
+Erledigt: 2026-11-28 – Punkte A–D umgesetzt in OTA-SCI-0110 v1.1 durch die Begutachtung (ECO-ARC-0038 §3b; KUE-SCI-0229-2026-DE v0.1 in `kueper.com/main`, `KUE-SCI-NNNN` = KUE-SCI-0229). §12 „Distributed Robotics / MiniNodes“ nach Punkt B erhalten (Punkt A nannte ihn im Ersetzungsbereich 9–13). Abschnitte neu nummeriert (1 Realgrundlage, 2 NOXIA-Anschluss, 3 Autoritätsstufen, 4 MiniNodes, 5 NOXIA-Ableitungen, 6 Quellen, 7 Archivregel, 8 Versionshistorie).
 Datum: 2026-11-16
 Quelle: Begutachtung nach ECO-ARC-0037, Zuordnung nach ECO-ARC-0038 §2 (Claude)
 Prüfbericht: `kueper-ecosystem/reviews/2026-11-16-OTA-SCI-0110-2026-DE.md`
