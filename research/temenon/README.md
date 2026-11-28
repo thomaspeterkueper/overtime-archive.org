@@ -39,3 +39,10 @@ Drive-Sammelordner: https://drive.google.com/drive/folders/1NTHoNwJboWQiDur6BDoG
 2. OTA-Originalfassungen/FTB- und Editionsfehler G1 vollumfänglich abgleichen.
 3. TEM-029: verblindete Mehrgeräte-Interventionen, Sham-Kontrollen und unabhängig variierte gemeinsame Störursachen.
 4. NOXIA Core G0: Inventar/Prototypherstellung/Forschung/NPC-Rollen/Autorität und Persistenz integrieren, erst danach produktives Gerät.
+
+## TEM-029 – Stand 28.11.2026
+- **Replikation und Störkanäle:** 3 Instrumente, Sham-/Aktiv-Kontraste und 1 Störkanal; 1000 synthetische Testfälle (5 × 200). Eine verborgene selektive Störung führt weiterhin zu **200/200 falsch-positiven Ursachenzuschreibungen**. Das Ergebnis ist ausdrücklich **kein kausaler Temenon-Nachweis**.
+- Forschungsdossier: [TEM-029](TEM-029-replicated-contrasts.md)
+- Drive: https://docs.google.com/document/d/14CcyvJSeOktEXSrLPISuMDVKmwwWl-qMgeUOZLC8-nU/edit
+- Code/Tests: NOXIA Draft-PR #921; **nicht nach main gemergt**.
+- Nächste Hypothesenprüfung: TEM-030 mit orthogonalen Mechanismus-Interventionen und konkurrierenden Kausalmodellen.
